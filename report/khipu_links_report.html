@@ -1,0 +1,187 @@
+<title>Arithmetic Links Between Khipus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: single reading column (~68ch) with full-width data tables in scroll containers; findings as numbered cases because they are cited by number in the letter. */
+:root{
+  --paper:#f5f6f3; --panel:#ffffff; --ink:#1c222a; --muted:#59626d; --rule:#d7dbd9;
+  --indigo:#2d4e8e; --madder:#9e3f2b; --moss:#3f6b4a; --ochre:#8a6a1f;
+  --display:"Spectral", Georgia, "Times New Roman", serif;
+  --body:"Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#13171c; --panel:#1a2027; --ink:#e4e8ec; --muted:#9aa4ae; --rule:#2c343d;
+  --indigo:#93b1f2; --madder:#e39a84; --moss:#8cc49a; --ochre:#d8b765; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#13171c; --panel:#1a2027; --ink:#e4e8ec; --muted:#9aa4ae; --rule:#2c343d;
+  --indigo:#93b1f2; --madder:#e39a84; --moss:#8cc49a; --ochre:#d8b765; color-scheme:dark; }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;padding-inline:20px;padding-block:32px 64px}
+main{max-width:72ch;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:2.2rem;font-weight:700}
+h2{font-size:1.5rem;font-weight:600;padding-top:.4rem;border-top:1px solid var(--rule)}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:.9rem;min-width:0}
+.meta{color:var(--muted);font-size:.95rem}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.1rem}
+code,.num{font-family:var(--mono);font-size:.88em;font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;font-variant-numeric:tabular-nums}
+th,td{padding:.45rem .7rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+th{font-weight:700;color:var(--muted);font-size:.8rem;letter-spacing:.03em;text-transform:uppercase}
+tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+.case{display:flex;flex-direction:column;gap:.8rem;min-width:0}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem}
+.tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:.12rem .45rem;border-radius:3px;border:1px solid currentColor}
+.new{color:var(--madder)} .ok{color:var(--moss)} .neg{color:var(--muted)} .hyp{color:var(--ochre)}
+ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem}
+.note{color:var(--muted);font-size:.93rem}
+.eq{font-family:var(--mono);font-size:.9rem;background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:.7rem .9rem;overflow-x:auto;white-space:pre;line-height:1.55}
+a{color:var(--indigo)}
+a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem}
+.summary div{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:.8rem .9rem;display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.summary b{font-family:var(--display);font-size:1.02rem}
+</style>
+
+<main>
+<header style="display:flex;flex-direction:column;gap:.7rem">
+  <p class="eyebrow">Independent computational study · open data (OKR, KFG) · September 2026</p>
+  <h1>Arithmetic Links Between Khipus</h1>
+  <p class="lede">A corpus-wide search for copies, summaries and hierarchies <em>between</em> khipus in the Open Khipu Repository and the Khipu Field Guide database, with every result tested against shuffled-corpus baselines and against relations already known in the literature.</p>
+  <p class="meta">Data: KFG companion data (Khosla &amp; Medrano, Zenodo 10.5281/zenodo.8125718; 678 khipus), OKR <code>khipu.db</code> (609 khipus) and 19 khipus added to OKR after 2017. Numbers below are knot values as recorded in these databases.</p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <div class="summary">
+    <div><span class="tag new">new</span><b>1 · Berlin AS149 → AS143</b><span class="note">Two groups of one khipu sum exactly into a group of another (5 of 5 positions, values up to 41,883). Links two khipus the Aschers analysed together but could not connect.</span></div>
+    <div><span class="tag new">new</span><b>2 · Lima → Gothenburg</b><span class="note">KH0362 (Nordenskiöld, Nasca) is a physical copy of one branch of KH0049's account: the subtotal group and its three addends.</span></div>
+    <div><span class="tag new">new</span><b>3 · Folded copies</b><span class="note">Two independent cases (Incahuasi; Waterfall set) where a separate cord in one copy is a subsidiary in the other.</span></div>
+    <div><span class="tag ok">tested</span><b>4 · Subsidiaries in sums</b><span class="note">Across 422 khipus, group sums hold on pendant values <em>without</em> subsidiaries; adding or subtracting them does worse.</span></div>
+    <div><span class="tag hyp">hypothesis</span><b>5 · Huacones-Vilcahuasi archive</b><span class="note">JC024–JC034 transcribed from the OKR record-sheet photos; khipu totals recur as cords on the next khipu in the bundle.</span></div>
+    <div><span class="tag neg">checks</span><b>6 · Validations and negatives</b><span class="note">Detectors recover AS069/AS070, Santa Valley structure and known duplicates; colonial documents, a sign convention and two published claims are not supported.</span></div>
+  </div>
+</section>
+
+<section class="case" id="berlin">
+  <div class="head"><span class="tag new">new</span><h2 style="border:none;padding:0">1. Berlin: AS149 groups 1 + 2 = AS143 group 4</h2></div>
+  <p><b>AS143</b> = KH0159 = UR1143 (Ethnologisches Museum VA47096, “Ica”) and <b>AS149</b> = KH0165 = UR1149 (VA44866C in KFG, “Ocucaje”; VA44866 group AS147–149). Both entered the Berlin museum in 1907. Pendant values:</p>
+  <div class="eq">AS143 group 4 = AS149 group 1 + AS149 group 2
+ 17436 =  8653 +  8783
+  8220 =  4049 +  4171
+ 41883 = 20640 + 21243
+  1350 =   660 +   690
+  9528 =  4741 +  4787</div>
+  <ul>
+    <li>Combined with the internal sums described by the Aschers for each khipu separately, this gives five levels on two khipus: AS149 part 3 (9 groups) → first group of each subpart of part 2 → AS149 part 1 groups 1 and 2 → <b>AS143 group 4</b> → AS143 group 1 (sum of groups 2–5).</li>
+    <li>In every position AS149 group 1 is almost exactly half of the combined value (0.496, 0.493, 0.493, 0.489, 0.498).</li>
+    <li>Detector (<code>sumscan.py</code>, cross mode, 0.2% tolerance, only positions where both addends are non-zero and the sum ≥ 100): this is the only cross-khipu “group = group + group” relation in the corpus apart from the three records of KH0049. Shuffled corpora give zero such relations.</li>
+    <li>Literature check: Ascher &amp; Ascher 1981 (<i>Code of the Quipu</i>, pp. 144–149) treat AS120, AS143 and AS149 together (examples 7.5, 7.6, 5.3) through consistent ratios, and write (p. 146) that there is insufficient data “to either confirm or deny that they are related to one quipumaker”. Their databook entries for AS143, AS147 (comparison of AS147–149), AS149 and AS100 do not state the equality above. Pereyra (1996) sets AS149 aside as a different type. Later work (Urton, Brezine 2005–2011) was only partly checked.</li>
+    <li>The remaining addends of AS143 (groups 2, 3, 5) and the counterpart of AS149 group 2 were not found anywhere in the corpus.</li>
+  </ul>
+</section>
+
+<section class="case" id="lima">
+  <div class="head"><span class="tag new">new</span><h2 style="border:none;padding:0">2. Lima → Gothenburg: a copy of one branch</h2></div>
+  <p><b>Lima</b>: KH0049 = HP036 = AS038 (MNAAHP 3550; AS038 “Museo Nacional 3884-147”), primary cord 31 cm (38.5 cm in AS038), 108 pendants. Aschers’ observation 6: group 1 = group 2 + group 3; group 2 = groups 4 + 5 + 6 (18 pendants each).<br><b>Gothenburg</b>: KH0362 = UR122 (Museum of World Culture 1938.45.0228, Nasca, dept. Ica), primary cord 51.5 cm, 72 pendants in four groups of 18. Carlotta record: deposited by Erland Nordenskiöld in 1924 (old no. 1924.06.0117), bought from his estate in 1938, documented by Gary Urton in June 2005.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Gothenburg group</th><th>Lima group (Ascher numbering)</th><th class="n">intact Gothenburg cords</th><th class="n">exactly equal</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>2 (subtotal of 4 + 5 + 6)</td><td class="n">6</td><td class="n">5</td></tr>
+      <tr><td>2</td><td>4</td><td class="n">4</td><td class="n">4</td></tr>
+      <tr><td>3</td><td>5</td><td class="n">13</td><td class="n">10</td></tr>
+      <tr><td>4</td><td>6</td><td class="n">8</td><td class="n">8</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><b>27 of 31 intact Gothenburg pendants equal their Lima counterparts exactly</b> (e.g. 15652, 6197, 6485, 2967, 2578, 1856). Of the other four, 1510/151 and 1036/136 are the same knots read with or without an empty register; 1605/1615 differs by one ten-knot; 3432/333 is unexplained, and Lima’s internal sum (3432 + 885 = 4317) supports 3432.</li>
+    <li>All other differences follow from breakage: 41 of 72 Gothenburg pendants are broken (termination B). 18 broke above all knots (value 0); 6 lost lower registers (4130→4000, 932→900, 1034→1000, 1016→1000, 3848→3840, 1074→1070); 4 broke inside a knot cluster; on 4 the surviving top knots were recorded one register lower (10643→100, 2263→200, 2711→270, 2166→210).</li>
+    <li>Recording-noise baseline: the two independent recordings of the Lima khipu (AS038, HP036) differ in 8 of the same 72 positions, each by one digit. Gothenburg’s intact cords differ from Lima at about that rate; the case for two different objects rests on the physical evidence (cord length, pendant count, missing groups 1 and 3, intact versus broken cords, Gothenburg accession since 1924/1938).</li>
+    <li>Subsidiaries under equal pendants often carry the same values in a different order, with additions (6197: Lima [10, 17, 47, 149, 177, 4, 1]; Gothenburg [4, 17, 1, 47, 177, 10, 0, 0, 0, 40, 25]).</li>
+    <li>Detector (<code>nearlinks.py</code>, values ≥ 100 within ±2%): 19 near-equal values in one window where the shuffled-corpus maximum is 5; at the aligning offset 26 near-equal pairs, at every other offset at most 5 (mean 0.3). KFG’s “Similar Khipu” navigation already places KH0362 next to KH0049; no description of the pair was found.</li>
+    <li>Colours differ between the recordings (W, W:KB, AB versus AB, MB), which may reflect recorders’ conventions; photographs of both khipus would settle it.</li>
+  </ul>
+</section>
+
+<section class="case" id="folded">
+  <div class="head"><span class="tag new">new</span><h2 style="border:none;padding:0">3. Folded copies: separate cord ↔ subsidiary</h2></div>
+  <h3>Incahuasi: UR270 ↔ UR278</h3>
+  <p>UR270 = KH0507 (Proyecto Incahuasi 13830) and UR278 = KH0517 (13833-2014). On 15 consecutive positions (UR270 pendants 18–32 ↔ UR278 pendants 196–210) each UR270 value is a pendant plus one subsidiary, and UR278 carries the sum on a single pendant without subsidiaries.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>UR270 pendant + subsidiary</th><th class="n">UR278 pendant</th></tr></thead>
+    <tbody>
+      <tr><td class="num">175 + 110</td><td class="n">285</td></tr>
+      <tr><td class="num">150 + 58</td><td class="n">208</td></tr>
+      <tr><td class="num">186 + 61</td><td class="n">247</td></tr>
+      <tr><td class="num">151 + 54</td><td class="n">205</td></tr>
+      <tr><td class="num">130 + 73</td><td class="n">203</td></tr>
+      <tr><td class="note">… 10 more consecutive positions</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Waterfall set: UR053B ↔ UR053C</h3>
+  <p>UR053B = KH0284 and UR053C = KH0285 (BCRP ATE 3517). C records triads (AB, W, R); B records pairs (W, R) with one subsidiary on R. Rule: a B record is (W, R, and the AB pendant of the following C triad as R’s subsidiary). Example: C triad 53/W, 13/RL followed by 3/AB ↔ B 53/W, 13+3/RL. On the best alignment 35 fields match (13 W, 11 R, 11 subsidiary); 2,000 shuffles of C’s records give at most 19. Chirinos (KFG blog, 2 Feb 2026) reports that B and C nearly duplicate each other; the packing rule is our addition.</p>
+  <p class="note">Our order-sensitive copy scans miss both pairs (small values; reordered cords break the diagonal). A record-based detector (<code>records.py</code>: colour period, record totals, shuffled-order baseline) recovers UR270/UR278 on its own (166 bits against a threshold of 90) but scores UR053B/C below threshold (57 bits), because many record totals differ by one.</p>
+</section>
+
+<section class="case" id="subs">
+  <div class="head"><span class="tag ok">tested</span><h2 style="border:none;padding:0">4. Subsidiaries do not enter pendant sums</h2></div>
+  <p>For 422 khipus with subsidiaries we counted relations “pendant (≥ 100) = sum of a whole cluster of other pendants” involving at least one cord with subsidiaries, under three readings, against a baseline with values shuffled across positions (cluster boundaries kept, 30 shuffles per khipu).</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Reading</th><th class="n">sums found</th><th class="n">baseline</th><th class="n">excess</th><th class="n">z</th></tr></thead>
+    <tbody>
+      <tr><td><b>pendant only (ignore subsidiaries)</b></td><td class="n">70</td><td class="n">42.3</td><td class="n">+27.7</td><td class="n">2.8</td></tr>
+      <tr><td>pendant + subsidiaries</td><td class="n">47</td><td class="n">38.3</td><td class="n">+8.7</td><td class="n">1.1</td></tr>
+      <tr><td>pendant − subsidiaries</td><td class="n">17</td><td class="n">18.9</td><td class="n">−1.9</td><td class="n">−0.3</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Consistent with KH0049 (sums hold on pendant values; the Aschers found subsidiaries summing separately, colour by colour) and with K-CAT phase 10 (parent = sum of children in only 6.6% of groups). The folded copies in case 3 show that a subsidiary can be merged into the pendant when an account is rewritten.</p>
+</section>
+
+<section class="case" id="huacones">
+  <div class="head"><span class="tag hyp">hypothesis</span><h2 style="border:none;padding:0">5. Huacones-Vilcahuasi: totals on the next khipu</h2></div>
+  <p>KH0653–KH0663 (JC024–JC034) exist in OKR only as photographs of handwritten record sheets. We transcribed all eleven (written values checked against the knot descriptions; 2 low-confidence cells). All come from one context: Sector F, unit 8, layer A-1, Elemento 11, lot 97, inventory 782–792, local numbers Quipu 1–11 (Barraza Lescano et al. 2022 report eleven khipus found rolled together in Patio 2 of the North Complex).</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Total of</th><th class="n">value</th><th>appears as</th></tr></thead>
+    <tbody>
+      <tr><td>Quipu 1 (JC034): 1 + 2 + 17 + 17</td><td class="n">37</td><td>pendant 4 of Quipu 7 (JC025)</td></tr>
+      <tr><td>Quipu 7 (JC025): 17 + 26 + 39 + 37</td><td class="n">119</td><td>pendant 1 of Quipu 8 (JC024)</td></tr>
+      <tr><td>Quipu 2 (JC030)</td><td class="n">27</td><td>pendant 10 of Quipu 4 (JC027)</td></tr>
+      <tr><td>Quipu 3 (JC033)</td><td class="n">23</td><td>pendant 9 of Quipu 4 (JC027)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">4 matches against a mean of 0.65 over 2,000 shuffles (p ≈ 0.013). The test type was chosen after the chain was noticed, the numbers are small, and the values come from handwriting, so this is a lead for checking on the objects. Three of the four links point to the next khipu in the local numbering.</p>
+</section>
+
+<section class="case" id="checks">
+  <div class="head"><span class="tag neg">checks</span><h2 style="border:none;padding:0">6. Validations and negative results</h2></div>
+  <h3>Known relations recovered</h3>
+  <ul>
+    <li><b>AS069/AS070 (Thompson 2024).</b> A segment-sum detector that is not told where the groups are (<code>segsum.py</code>) splits AS069’s 216 clusters into segments of 20, 10, 20, 21, 24, 24, 25, 23, 24, 25 (Thompson: 18, 10, 22, 21, 23, 25, 25, 24, 24, 25); its first row reproduces Table 7A (63, 28, 56, 24, 56, 29, 24, 18, 0, 5). Error 7.5 against 15.8 for the best of 200 cluster shuffles. In a scan of 2,419 khipu pairs it ranks first, with the other recordings of the same khipu (KH0083, UR035) fourth and fifth.</li>
+    <li>Duplicate recordings of one object (KH0081 = UR281, KH0083 = UR035 = AS070, KH0049 = HP036 = AS038, KH0001 = UR176 and others), AS114/AS123 (Urton 2005), UR267A/UR255 (Urton &amp; Chu 2019), Puruchuco UR066/UR067.</li>
+    <li><b>Santa Valley (FitzPatrick, KFG blog 4 Jan 2026).</b> From OKR we get 133 six-cord groups, 63 recto / 69 verso (published 63 / 70), first cords ≈ 1 on recto groups and larger on verso groups. The sum of first cords is 749, not 367 (three large values on KH0326: 203, 102, 105). A detector matching pachaca sizes (18, 23, 9, 7, 41, 32) to runs of groups cut at visible boundaries accepts the real sizes and also 74–100% of random size sets, so the match rests on the total and the moiety split.</li>
+  </ul>
+  <h3>Not supported</h3>
+  <ul>
+    <li><b>Colonial documents.</b> About 2,300 numbers from roughly 70 open-access transcriptions (Jauja 1570; <i>El quipu colonial</i> 2013 materials; Sisicaya 1588; Arica/Tarapacá 1540–1570; Chachapoyas 1555–1593) against OKR and KFG, by value, by table structure and by household sequence, including regional pairings (Lurín valley, Arica/Lluta, Leymebamba): no match survives the baselines. Three apparent hits were artefacts (round tribute numbers, runs of zeros, runs of single-person households) and disappeared under matched baselines.</li>
+    <li><b>A sign convention.</b> Neither attachment side nor colour marks negative cords (circular-shift baseline, p = 0.35–0.92).</li>
+    <li><b>Waterfall E → B sums</b> (Chirinos 2026): the best split of E part IV into four subparts resembles four B/C records, but random sets of E records do about as well (p = 0.07–0.33).</li>
+    <li>No arithmetic links involving the post-2017 OKR khipus (Khipus Enlazados RT-16905, British Museum Am1937,0213.84, SH001, R4303); their values are mostly single digits. Nothing beyond Medrano &amp; Khosla 2024 for UR231 (Monte Sierpe).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Methods in brief</h2>
+  <ul>
+    <li>Cord value = sum of <code>knot_value_type</code>; subtree value adds all subsidiaries. Values are compared on pendants only, on subtrees, or both, as stated per test.</li>
+    <li>Every detector has a baseline built from the corpus itself: values shuffled within each khipu, record order shuffled, cluster order shuffled, or annotation shifted circularly, chosen so that the baseline keeps the structure the test is not about. Thresholds are the maximum over shuffled corpora unless a p-value is given.</li>
+    <li>Each detector was run on known cases before being applied to the corpus; the known-case results are in section 6.</li>
+  </ul>
+  <p class="note">Code (Python, standard library) and derived tables, including the Huacones transcriptions, can be shared on request.</p>
+</section>
+</main>

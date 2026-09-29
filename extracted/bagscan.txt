@@ -1,0 +1,46 @@
+пар кипу: 36406; порог (перемешанный корпус, 2 раз): 193.9 бит
+**  196.8         AS038[4] ~ HP036       [4]          "Museo Nacional, Lima, #3884-147 || Museo Nacional de Arqu #MNAAHP3550
+**  196.8         AS038[4] ~ KH0049      [4]          "Museo Nacional, Lima, #3884-147 || Museo Nacional de Arqu #MNAAHP3550
+**  196.8         HP036[4] ~ KH0049      [4] тот же № Museo Nacional de Arqu #MNAAHP3550 || Museo Nacional de Arqu #MNAAHP3550
+**  193.9         AS125[0] ~ UR247       [0]          "Museum für Völkerkund #VA42670 || "Ethnologisches Museum #VA 42610
+    193.6         UR281[112] ~ KH0081      [112] тот же № Museo Nac., Pueblo Lib #1745 || Museo Nac., Pueblo Lib #1745
+    173.7         AS068[12] ~ UR281       [12]          "Museo Nacional, Lima, #3882 || Museo Nac., Pueblo Lib #1745
+    173.7         AS068[12] ~ KH0081      [12]          "Museo Nacional, Lima, #3882 || Museo Nac., Pueblo Lib #1745
+    140.6         UR176[80] ~ KH0001      [80] тот же № "American Museum of Na #B/8705 || American Museum of Nat #B/8705
+    112.2         UR163[0] ~ KH0067      [0] тот же № Valle de Ica Hacienda  #03993-02 || Valle de Ica Hacienda  #03993-02
+    103.6          LL01[56] ~ UR176       [80]          "American Museum of Na #"No. 4, B-8705" || "American Museum of Na #B/8705
+    103.6          LL01[56] ~ KH0001      [80]          "American Museum of Na #"No. 4, B-8705" || American Museum of Nat #B/8705
+    100.2        UR1118[4] ~ UR218       [4]          "Museum für Völkerkund #VA42601 || "Ethnologisches Museum #VA 42559
+     99.2         AS056[0] ~ UR163       [0]          "Museo de Ica, Ica, Pe #4B || Valle de Ica Hacienda  #03993-02
+     99.2         AS056[0] ~ KH0067      [0]          "Museo de Ica, Ica, Pe #4B || Valle de Ica Hacienda  #03993-02
+     86.9         UR255[44] ~ UR267A      [44]          Projecto Incahuasi #9228-13 || Proyecto Incahuasi #13092
+     78.0         UR256[100] ~ UR267B      [112]          Proyecto Incahuasi #9228-13 || Proyecto Incahuasi #13092
+     77.3         UR113[28] ~ UR271       [4]          "Museum for World Cult #1931.37.0001 || Proyecto Incahuasi #13842
+     76.1        UR1107[4] ~ UR237       [8]          "Museum für Völkerkund #VA24370(B) || "Ethnologisches Museum #VA 66834
+     71.4         UR236[16] ~ KH0197      [16] тот же № "Ethnologisches Museum #VA 66832 || Ethnologisches Museum, #VA66832
+     68.2         UR266[28] ~ UR275       [4]          Proyecto Incahuasi #13829 || Proyecto Incahuasi #13836-2014
+     68.2        UR1109[244] ~ UR271       [8]          "Museum für Völkerkund #VA47069 || Proyecto Incahuasi #13842
+     68.0         HP036[272] ~ UR122       [136]          Museo Nacional de Arqu #MNAAHP3550 || "Museum of Worldcultur #1938.45.0228
+     68.0         UR122[136] ~ KH0049      [272]          "Museum of Worldcultur #1938.45.0228 || Museo Nacional de Arqu #MNAAHP3550
+     67.8         UR035[540] ~ KH0083      [540] тот же № Museo Chileno de Arte  #780 || Museo Chileno de Arte  #780
+     62.7         AS070[116] ~ UR035       [116]          "owner Percy Dauelsber #1 || Museo Chileno de Arte  #780
+     62.7         AS070[116] ~ KH0083      [116]          "owner Percy Dauelsber #1 || Museo Chileno de Arte  #780
+     61.9         AS181[16] ~ UR236       [16]          "Museum für Völkerkund #unnumbered || "Ethnologisches Museum #VA 66832
+     61.9         AS181[16] ~ KH0197      [16]          "Museum für Völkerkund #unnumbered || Ethnologisches Museum, #VA66832
+     61.4   AS067/MA029[112] ~ KH0080      [112] тот же № "O. Nunez del Prado, C #No. 1 || O. Nunez del Prado, Cu #No. 1
+     61.1         AS038[260] ~ UR122       [116]          "Museo Nacional, Lima, #3884-147 || "Museum of Worldcultur #1938.45.0228
+     59.9      AS090/N2[8] ~ UR200       [32]          "Museum Fur Volkerkund #G3319 || "Ethnologisches Museum #VA42597(B)
+     55.2        UR1084[72] ~ HP055       [76]          "Musee Quai Branly, Pa #71.1930.19.470 || Museo Nacional de Arqu #MNAAHP 29934
+     51.3         AS128[172] ~ QU003       [28]          "Museum für Völkerkund #VA63042(B) || Dallas Museum of Art #T41299.24
+     50.8        UR1099[20] ~ UR1109      [132]          "Museum für Völkerkund #VA42526 || "Museum für Völkerkund #VA47069
+     49.7        UR1031[8] ~ KH0033      [8]          "Peabody Museum, Harva #32-70-30/F851 || Peabody Museum, Harvar #32.70.30/F851
+     49.7        UR1031[8] ~ UR044       [8]          "Peabody Museum, Harva #32-70-30/F851 || Peabody Museum, Harvar #32.70.30/F851
+     49.7        KH0033[8] ~ UR044       [8] тот же № Peabody Museum, Harvar #32.70.30/F851 || Peabody Museum, Harvar #32.70.30/F851
+     49.0         UR085[136] ~ UR1113      [64]          Museo Temple Radicati #unnumbered || "Museum für Völkerkund #VA16140
+     47.1        UR1148[4] ~ UR200       [44]          "Museum für Völkerkund #VA44866B || "Ethnologisches Museum #VA42597(B)
+     46.8          LL01[56] ~ QU005       [32]          "American Museum of Na #"No. 4, B-8705" || Dallas Museum of Art #B377/T41299.26
+     44.3         HP011[0] ~ UR162       [0]          Museo de Sitio de Pach #MSP 1397/RN 43378 || Museo Regional de Ica #03992-02
+     44.2         AS172[8] ~ QU013       [88]          "Museum für Völkerkund #VA16145(A) || Dallas Museum of Art #B369/T41299.33.A-B
+     44.1        UR1109[200] ~ UR270       [36]          "Museum für Völkerkund #VA47069 || Proyecto Incahuasi #13830
+     43.9        UR1113[16] ~ AS008       [20]          "Museum für Völkerkund #VA16140 || Pitt Rivers Museum, Un #VIII. 502
+     43.8        UR053B[0] ~ UR053C      [8] тот же № Banco Central de la Re #ATE 3517 || Banco Central de la Re #ATE 3517

@@ -1,0 +1,46 @@
+периоды: Counter({1: 617, 2: 51, 3: 15, 4: 14})
+  UR053B: период 2
+  UR053C: период 3
+  UR270: период 1
+  UR278: период 1
+порог (перемешанный порядок записей, 2 раз): 89.5 бит
+** 1635.9 бит 194 зап.        KH0081(p1,φ0) ~ UR281       (p1,φ0) сдвиг +0  тот же № Museo Nac., Pueblo L || Museo Nac., Pueblo L
+** 1298.2 бит 102 зап.         HP036(p1,φ0) ~ KH0049      (p1,φ0) сдвиг +0  тот же № Museo Nacional de Ar || Museo Nacional de Ar
+** 1047.8 бит  83 зап.         AS038(p1,φ0) ~ HP036       (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nacional de Ar
+** 1047.8 бит  83 зап.         AS038(p1,φ0) ~ KH0049      (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nacional de Ar
+**  548.3 бит  78 зап.         AS047(p1,φ0) ~ KH0058      (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nacional de Ar
+**  512.4 бит  48 зап.        KH0001(p2,φ0) ~ UR176       (p2,φ0) сдвиг +0  тот же № American Museum of N || "American Museum of 
+**  509.0 бит  67 зап.         AS068(p1,φ0) ~ KH0081      (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nac., Pueblo L
+**  509.0 бит  67 зап.         AS068(p1,φ0) ~ UR281       (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nac., Pueblo L
+**  504.1 бит  50 зап.        KH0083(p1,φ0) ~ UR035       (p1,φ0) сдвиг +0  тот же № Museo Chileno de Art || Museo Chileno de Art
+**  212.4 бит  19 зап.        KH0197(p2,φ0) ~ UR236       (p2,φ0) сдвиг +0  тот же № Ethnologisches Museu || "Ethnologisches Muse
+**  195.2 бит  26 зап.   AS067/MA029(p1,φ0) ~ KH0080      (p1,φ0) сдвиг +0  тот же № "O. Nunez del Prado, || O. Nunez del Prado, 
+**  188.9 бит  14 зап.         AS125(p1,φ0) ~ UR247       (p1,φ0) сдвиг +0           "Museum für Völkerku || "Ethnologisches Muse
+**  187.0 бит  31 зап.        KH0227(p1,φ0) ~ UR083       (p1,φ0) сдвиг +0  тот же № Museum fur Volkerkun || "Museum fur Volkerku
+**  165.8 бит  15 зап.         UR270(p1,φ0) ~ UR278       (p1,φ0) сдвиг +178           Proyecto Incahuasi || Proyecto Incahuasi
+**  152.2 бит  22 зап.        KH0032(p1,φ0) ~ UR043       (p1,φ0) сдвиг +0  тот же № Peabody Museum, Harv || "Peabody Museum, Har
+**  129.9 бит  19 зап.         HP041(p1,φ0) ~ KH0057      (p1,φ0) сдвиг +0  тот же № Museo Nacional de Ar || Museo Nacional de Ar
+**  117.9 бит  29 зап.         UR047(p1,φ0) ~ UR211       (p1,φ0) сдвиг +47           Museo Larco || "Ethnologisches Muse
+**  114.2 бит  17 зап.         AS046(p1,φ0) ~ HP041       (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nacional de Ar
+**  114.2 бит  17 зап.         AS046(p1,φ0) ~ KH0057      (p1,φ0) сдвиг +0           "Museo Nacional, Lim || Museo Nacional de Ar
+**  102.7 бит  15 зап.         AS086(p1,φ0) ~ MM1086      (p1,φ0) сдвиг +1           "Museum fur Volkerku || Museum der Kulturen 
+     87.7 бит   7 зап.        KH0067(p1,φ0) ~ UR163       (p1,φ0) сдвиг +0  тот же № Valle de Ica Haciend || Valle de Ica Haciend
+     78.7 бит   8 зап.         AS181(p2,φ1) ~ KH0197      (p2,φ1) сдвиг +0           "Museum für Völkerku || Ethnologisches Museu
+     78.7 бит   8 зап.         AS181(p2,φ1) ~ UR236       (p2,φ1) сдвиг +0           "Museum für Völkerku || "Ethnologisches Muse
+     76.3 бит   9 зап.        KH0033(p2,φ0) ~ UR044       (p2,φ0) сдвиг +0  тот же № Peabody Museum, Harv || Peabody Museum, Harv
+     74.1 бит   6 зап.         AS056(p1,φ0) ~ KH0067      (p1,φ0) сдвиг +0           "Museo de Ica, Ica,  || Valle de Ica Haciend
+     74.1 бит   6 зап.         AS056(p1,φ0) ~ UR163       (p1,φ0) сдвиг +0           "Museo de Ica, Ica,  || Valle de Ica Haciend
+     70.4 бит   9 зап.         HP055(p1,φ0) ~ UR1084      (p1,φ0) сдвиг -3           Museo Nacional de Ar || "Musee Quai Branly, 
+     68.7 бит   6 зап.        KH0267(p1,φ0) ~ UR036       (p1,φ0) сдвиг +0           Museo Chileno de Art || Museo Chileno de Art
+     68.7 бит   6 зап.        KH0267(p1,φ0) ~ UR133       (p1,φ0) сдвиг +0  тот же № Museo Chileno de Art || Museo Chileno de Art
+     68.7 бит   6 зап.         UR036(p1,φ0) ~ UR133       (p1,φ0) сдвиг +0           Museo Chileno de Art || Museo Chileno de Art
+     66.0 бит  10 зап.        UR1114(p1,φ0) ~ UR1123      (p1,φ0) сдвиг +1           "Museum für Völkerku || "Museum für Völkerku
+     64.1 бит   8 зап.         UR066(p1,φ0) ~ UR067       (p1,φ0) сдвиг +0           Puruchuco Museum || Unknown
+     56.6 бит   6 зап.        UR053B(p2,φ0) ~ UR053C      (p3,φ1) сдвиг +3  тот же № Banco Central de la  || Banco Central de la 
+     55.5 бит   6 зап.        KH0033(p2,φ0) ~ UR1031      (p2,φ0) сдвиг +0           Peabody Museum, Harv || "Peabody Museum, Har
+     55.5 бит   6 зап.         UR044(p2,φ0) ~ UR1031      (p2,φ0) сдвиг +0           Peabody Museum, Harv || "Peabody Museum, Har
+     54.4 бит  10 зап.        KH0350(p1,φ0) ~ UR115       (p1,φ0) сдвиг +0  тот же № Museum of Worldcultu || "Museum of Worldcult
+     54.4 бит  10 зап.        KH0350(p1,φ0) ~ UR126       (p1,φ0) сдвиг +0  тот же № Museum of Worldcultu || "Museum of Worldcult
+     54.4 бит  10 зап.         UR115(p1,φ0) ~ UR126       (p1,φ0) сдвиг +0  тот же № "Museum of Worldcult || "Museum of Worldcult
+     48.6 бит   5 зап.         AS128(p1,φ0) ~ QU003       (p1,φ0) сдвиг -126           "Museum für Völkerku || Dallas Museum of Art
+     46.9 бит  10 зап.         UR211(p1,φ0) ~ UR228       (p1,φ0) сдвиг -61           "Ethnologisches Muse || "Ethnologisches Muse

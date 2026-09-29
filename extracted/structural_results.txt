@@ -1,0 +1,19 @@
+== J1.j Хауха 1570: 12 принсипалов: 12×5  p=0.149  (null z95=5.35)
+   z= 4.82 r= 0.61 n=50 KH0469/UR232 layout=A start=9 dir=-1 drop=2 [coca_partidas→2, coca_cestos→1, ropa_partidas→4, ganado_partidas→5, ganado→3]
+   z= 4.12 r= 0.54 n=50 KH0535/HP003 layout=A start=0 dir=-1 drop=2 [coca_partidas→4, coca_cestos→3, ropa_partidas→1, ganado_partidas→5, ganado→2]
+   z= 3.88 r= 0.51 n=50 KH0192/UR1175 layout=A start=32 dir=-1 drop=None [coca_partidas→4, coca_cestos→1, ropa_partidas→2, ganado_partidas→5, ganado→3]
+   z= 3.28 r= 0.50 n=39 KH0111/UR1098 layout=A start=0 dir=-1 drop=1 [coca_partidas→5, coca_cestos→2, ropa_partidas→3, ganado_partidas→4, ganado→1]
+   z= 3.11 r= 0.42 n=50 KH0123/UR1109 layout=A start=14 dir=-1 drop=None [coca_partidas→5, coca_cestos→3, ropa_partidas→4, ganado_partidas→2, ganado→1]
+== C4.a Гуанчак 8 лет: 8×4  p=0.821  (null z95=5.39)
+   z= 3.85 r= 0.61 n=32 KH0192/UR1175 layout=A start=9 dir=-1 drop=2 [maiz→4, diezmo→3, sal→2, uchuy→1]
+   z= 3.64 r= 0.59 n=32 KH0123/UR1109 layout=A start=11 dir=-1 drop=4 [maiz→1, diezmo→3, sal→2, uchuy→4]
+   z= 3.58 r= 0.58 n=32 KH0446/UR208 layout=A start=5 dir=1 drop=0 [maiz→4, diezmo→1, sal→2, uchuy→3]
+   z= 3.29 r= 0.55 n=32 KH0436/UR198 layout=A start=2 dir=-1 drop=None [maiz→1, diezmo→4, sal→2, uchuy→3]
+   z= 2.95 r= 0.50 n=32 KH0608/JC001 layout=A start=0 dir=1 drop=1 [maiz→4, diezmo→3, sal→2, uchuy→1]
+== C6.j Тульпо 1611 стада: 10×4  p=0.403  (null z95=5.29)
+   z= 4.82 r= 0.95 n=10 KH0454/UR216 layout=B start=7 dir=1 drop=3 [madres→1, padres→2, crias→4, total→3]
+   z= 4.50 r= 0.67 n=34 KH0192/UR1175 layout=A start=10 dir=1 drop=3 [madres→2, padres→4, crias→3, total→1]
+   z= 3.86 r= 0.60 n=34 KH0123/UR1109 layout=A start=2 dir=1 drop=3 [madres→4, padres→2, crias→1, total→3]
+   z= 3.48 r= 0.56 n=34 KH0101/UR1088 layout=A start=1 dir=-1 drop=0 [madres→2, padres→3, crias→1, total→4]
+   z= 3.34 r= 0.54 n=34 KH0247/UR011 layout=A start=1 dir=1 drop=2 [madres→4, padres→2, crias→3, total→1]
+-- C1.b Лукана 1581 трети: пропуск (меньше 3 категорий)

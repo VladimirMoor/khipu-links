@@ -1,0 +1,6 @@
+doc,khipu_id,okr,inv,score,n_hits,lcs_ge10,hits,p_best,null_q95,n_doc_values,n_distinct,title
+J1.j,1000020,KH0239,UR003,2.15,18,2,2 3 4 5 6 7 8 9 10 11 12 14 15 19 21 29 37 40,0.1569,2.35,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000045,KH0258,UR022,1.1,24,9,2 3 4 5 6 7 8 9 10 11 12 14 15 19 23 25 30 35 36 37 40 48 72 368,0.1569,2.35,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000018,KH0252,UR016,0.54,23,7,2 3 4 5 6 7 8 9 10 11 12 14 15 19 21 23 25 30 36 37 40 72 84,0.1569,2.35,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000019,KH0245,UR009,0.46,13,3,2 3 4 5 6 7 8 9 10 11 12 14 187,0.1569,2.35,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000022,KH0257,UR021,0.05,14,2,2 3 4 5 6 7 8 9 10 11 14 19 21 35,0.1569,2.35,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 

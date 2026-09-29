@@ -1,0 +1,51 @@
+doc,khipu_id,okr,inv,score,n_hits,lcs_ge10,hits,p_best,null_q95,n_doc_values,n_distinct,title
+S1.a,1000133,KH0174,AS158,1.3,1,0,149,0.3293,1.9,2,2,Provisión del virrey conde del Villar para revisitar Sisicaya (a pedido de don D
+S1.a,1000451,KH0564,HP032,1.19,1,0,149,0.3293,1.9,2,2,Provisión del virrey conde del Villar para revisitar Sisicaya (a pedido de don D
+S1.a,1000054,KH0124,AS110,0.99,1,0,149,0.3293,1.9,2,2,Provisión del virrey conde del Villar para revisitar Sisicaya (a pedido de don D
+S1.a,1000432,KH0545,HP013,0.62,1,0,35,0.3293,1.9,2,2,Provisión del virrey conde del Villar para revisitar Sisicaya (a pedido de don D
+S1.a,1000161,KH0206,AS188,0.53,1,1,35,0.3293,1.9,2,2,Provisión del virrey conde del Villar para revisitar Sisicaya (a pedido de don D
+S1.b,1000550,KH0481,UR245,0.74,1,1,11,0.7585,1.26,1,1,"Decreto virreinal sobre la rebaja, Callao 10/17-VI-1605 (f.2r)"
+S1.b,1000133,KH0174,AS158,0.69,1,1,11,0.7585,1.26,1,1,"Decreto virreinal sobre la rebaja, Callao 10/17-VI-1605 (f.2r)"
+S1.b,1000039,KH0110,UR1097,0.69,1,0,11,0.7585,1.26,1,1,"Decreto virreinal sobre la rebaja, Callao 10/17-VI-1605 (f.2r)"
+S1.b,1000451,KH0564,HP032,0.57,1,0,11,0.7585,1.26,1,1,"Decreto virreinal sobre la rebaja, Callao 10/17-VI-1605 (f.2r)"
+S1.b,1000441,KH0554,HP022,0.46,1,1,11,0.7585,1.26,1,1,"Decreto virreinal sobre la rebaja, Callao 10/17-VI-1605 (f.2r)"
+S1.c,1000055,KH0125,AS111,0.8,1,1,40,0.8363,1.16,1,1,"Petición de don Diego Chauca Guaman, cacique de Sisicaya, y decreto de 11-VII-15"
+S1.c,1000114,KH0155,AS139,0.76,1,1,40,0.8363,1.16,1,1,"Petición de don Diego Chauca Guaman, cacique de Sisicaya, y decreto de 11-VII-15"
+S1.c,1000092,KH0150,AS134,0.76,1,0,40,0.8363,1.16,1,1,"Petición de don Diego Chauca Guaman, cacique de Sisicaya, y decreto de 11-VII-15"
+S1.c,1000325,KH0364,UR124,0.72,1,1,40,0.8363,1.16,1,1,"Petición de don Diego Chauca Guaman, cacique de Sisicaya, y decreto de 11-VII-15"
+S1.c,1000046,KH0116,UR1102,0.72,1,1,40,0.8363,1.16,1,1,"Petición de don Diego Chauca Guaman, cacique de Sisicaya, y decreto de 11-VII-15"
+S1.d,1000114,KH0155,AS139,0.9,1,1,100,0.9621,1.52,1,1,"Peticiones de don Diego Chauca Guaman para que se haga la revisita, 1587-1588, L"
+S1.d,1000092,KH0150,AS134,0.9,1,0,100,0.9621,1.52,1,1,"Peticiones de don Diego Chauca Guaman para que se haga la revisita, 1587-1588, L"
+S1.d,1000044,KH0115,AS101 - Part 2,0.8,1,0,100,0.9621,1.52,1,1,"Peticiones de don Diego Chauca Guaman para que se haga la revisita, 1587-1588, L"
+S1.d,1000043,KH0114,AS101 - Part 1,0.8,1,0,100,0.9621,1.52,1,1,"Peticiones de don Diego Chauca Guaman para que se haga la revisita, 1587-1588, L"
+S1.d,1000131,KH0172,AS156,0.67,1,0,100,0.9621,1.52,1,1,"Peticiones de don Diego Chauca Guaman para que se haga la revisita, 1587-1588, L"
+S1.e,1000550,KH0481,UR245,0.61,1,0,4,0.4431,0.71,1,1,"Autos de la revisita de Sisicaya por el corregidor Cristóbal Xuárez de Angulo, f"
+S1.e,1000438,KH0551,HP019,0.56,1,0,4,0.4431,0.71,1,1,"Autos de la revisita de Sisicaya por el corregidor Cristóbal Xuárez de Angulo, f"
+S1.e,1000435,KH0548,HP016,0.56,1,0,4,0.4431,0.71,1,1,"Autos de la revisita de Sisicaya por el corregidor Cristóbal Xuárez de Angulo, f"
+S1.e,1000039,KH0110,UR1097,0.56,1,0,4,0.4431,0.71,1,1,"Autos de la revisita de Sisicaya por el corregidor Cristóbal Xuárez de Angulo, f"
+S1.e,1000443,KH0556,HP024,0.52,1,0,4,0.4431,0.71,1,1,"Autos de la revisita de Sisicaya por el corregidor Cristóbal Xuárez de Angulo, f"
+S1.f,1000512,KH0439,UR201,1.24,5,2,3 4 37 155 643,0.3333,2.28,9,9,"Resumen de la revisita de San Francisco de Sisicaya, 1588 (f.55r-55v), Cristóbal"
+S1.f,6000090,KH0489,UR253,0.87,4,0,3 4 153 155,0.3333,2.28,9,9,"Resumen de la revisita de San Francisco de Sisicaya, 1588 (f.55r-55v), Cristóbal"
+S1.f,1000141,KH0184,UR1167,-0.25,1,1,194,0.3333,2.28,9,9,"Resumen de la revisita de San Francisco de Sisicaya, 1588 (f.55r-55v), Cristóbal"
+S1.f,1000511,KH0438,UR200,-0.32,2,1,37 157,0.3333,2.28,9,9,"Resumen de la revisita de San Francisco de Sisicaya, 1588 (f.55r-55v), Cristóbal"
+S1.f,1000436,KH0549,HP017,-0.38,4,2,3 4 37 155,0.3333,2.28,9,9,"Resumen de la revisita de San Francisco de Sisicaya, 1588 (f.55r-55v), Cristóbal"
+S1.g,1000550,KH0481,UR245,0.6,1,0,2,0.6228,0.71,1,1,Peticiones posteriores de don Diego Chauca Guaman sobre tributarios muertos tras
+S1.g,1000438,KH0551,HP019,0.55,1,0,2,0.6228,0.71,1,1,Peticiones posteriores de don Diego Chauca Guaman sobre tributarios muertos tras
+S1.g,1000435,KH0548,HP016,0.55,1,0,2,0.6228,0.71,1,1,Peticiones posteriores de don Diego Chauca Guaman sobre tributarios muertos tras
+S1.g,1000039,KH0110,UR1097,0.55,1,0,2,0.6228,0.71,1,1,Peticiones posteriores de don Diego Chauca Guaman sobre tributarios muertos tras
+S1.g,1000432,KH0545,HP013,0.43,1,0,2,0.6228,0.71,1,1,Peticiones posteriores de don Diego Chauca Guaman sobre tributarios muertos tras
+S1.h,1000147,KH0192,UR1175,-4.39,18,8,4 14 18 19 20 21 35 39 49 52 66 95 100 102 120 177 192 216,0.4451,-1.84,56,48,"Quenta de la retasa de Guadocheri y Sisicaya por Luis de Morales Figueroa, Lima "
+S1.h,1000422,KH0535,HP003,-6.03,8,4,4 20 35 52 66 100 237 466,0.4451,-1.84,56,48,"Quenta de la retasa de Guadocheri y Sisicaya por Luis de Morales Figueroa, Lima "
+S1.h,1000523,KH0450,UR212,-6.16,10,4,4 14 18 20 21 35 49 102 237 659,0.4451,-1.84,56,48,"Quenta de la retasa de Guadocheri y Sisicaya por Luis de Morales Figueroa, Lima "
+S1.h,1000421,KH0534,HP002,-6.22,6,5,20 52 66 100 120 1723,0.4451,-1.84,56,48,"Quenta de la retasa de Guadocheri y Sisicaya por Luis de Morales Figueroa, Lima "
+S1.h,1000089,KH0147,UR1131,-6.86,14,9,4 14 18 19 20 21 35 38 39 49 52 66 118 192,0.4451,-1.84,56,48,"Quenta de la retasa de Guadocheri y Sisicaya por Luis de Morales Figueroa, Lima "
+S1.i,1000147,KH0192,UR1175,-4.26,18,9,4 14 18 19 20 21 30 35 39 49 52 66 95 100 102 120 177 216,0.7425,-0.95,52,45,"Provisión de retasa del virrey conde del Villar para Guadocheri y Sisicaya, Lima"
+S1.i,1000422,KH0535,HP003,-4.84,9,4,4 20 30 35 52 66 100 237 466,0.7425,-0.95,52,45,"Provisión de retasa del virrey conde del Villar para Guadocheri y Sisicaya, Lima"
+S1.i,1000523,KH0450,UR212,-4.99,10,4,4 14 18 20 21 35 49 102 237 659,0.7425,-0.95,52,45,"Provisión de retasa del virrey conde del Villar para Guadocheri y Sisicaya, Lima"
+S1.i,1000421,KH0534,HP002,-5.17,6,5,20 52 66 100 120 1723,0.7425,-0.95,52,45,"Provisión de retasa del virrey conde del Villar para Guadocheri y Sisicaya, Lima"
+S1.i,1000519,KH0446,UR208,-6.2,9,5,4 20 30 38 52 66 100 120 216,0.7425,-0.95,52,45,"Provisión de retasa del virrey conde del Villar para Guadocheri y Sisicaya, Lima"
+S1.z,1000536,KH0463,UR226,-0.2,10,5,4 5 12 20 23 57 60 70 246 647,0.8822,2.46,42,34,"Cuadro 1: Los ayllus de Sisicaya y su población tributaria, 1579 y 1588 (Salomon"
+S1.z,1000436,KH0549,HP017,-0.7,13,4,2 3 4 5 23 29 30 62 63 70 71 83 86,0.8822,2.46,42,34,"Cuadro 1: Los ayllus de Sisicaya y su población tributaria, 1579 y 1588 (Salomon"
+S1.z,1000147,KH0192,UR1175,-0.73,23,8,2 3 4 5 6 7 11 12 17 19 20 21 23 29 30 48 60 62 70 71 83 86 177,0.8822,2.46,42,34,"Cuadro 1: Los ayllus de Sisicaya y su población tributaria, 1579 y 1588 (Salomon"
+S1.z,1000089,KH0147,UR1131,-1.52,23,10,2 3 4 5 6 7 11 12 17 19 20 21 23 29 30 48 57 60 62 63 70 71 86,0.8822,2.46,42,34,"Cuadro 1: Los ayllus de Sisicaya y su población tributaria, 1579 y 1588 (Salomon"
+S1.z,1000524,KH0451,UR213,-1.54,16,6,2 3 4 5 6 7 11 12 17 19 20 21 30 60 245 246,0.8822,2.46,42,34,"Cuadro 1: Los ayllus de Sisicaya y su población tributaria, 1579 y 1588 (Salomon"

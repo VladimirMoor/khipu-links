@@ -1,0 +1,19 @@
+C1.a     n= 26 best=KH0120/UR1106 score=1.9 (null95=3.1) p=0.419 hits=2 3 4 23 24 30 40 100 653
+C1.b     n=  4 best=KH0180/UR1163 score=1.4 (null95=2.8) p=0.874 hits=274
+C2.b     n= 14 best=KH0186/AS169 score=3.5 (null95=3.8) p=0.153 hits=2 3 4 5 6 8 9 13
+C2.c     n= 38 best=KH0548/HP016 score=2.7 (null95=4.0) p=0.575 hits=2 3 4 5 7 10 12
+C3.a     n= 21 best=KH0149/AS133 score=0.7 (null95=2.3) p=0.512 hits=20 40 50 290 292
+C4.a     n= 38 best=KH0168/UR1152 score=1.0 (null95=3.1) p=0.920 hits=2 4 7 10 12 29 40 72 275 400 608
+C4.c     n= 20 best=KH0440/UR202 score=2.3 (null95=3.0) p=0.379 hits=5 6 20 30 70 100 150 225
+C6.e     n=  1 best=KH0196/UR1179 score=1.8 (null95=2.7) p=0.728 hits=4000
+C6.f     n=  5 best=KH0196/UR1179 score=1.3 (null95=2.9) p=0.967 hits=4000
+C6.j     n= 48 best=/AS038 score=-2.5 (null95=2.9) p=1.000 hits=2 6 7 9 10 11 12 13 20 849 932 976 1093
+C6.k     n= 58 best=KH0083/KH0083 score=-1.0 (null95=3.9) p=0.983 hits=3 5 7 10 11 19 20 28 29 30 39 40 64 76 128 186 547 580 611 6
+C6.l     n= 37 best=KH0083/KH0083 score=-1.6 (null95=2.3) p=0.993 hits=3 22 30 34 35 48 50 76 120 211 345 374 611
+C6.m     n= 16 best=KH0425/UR187 score=0.9 (null95=3.3) p=0.907 hits=9 10 19 539 854
+C6.n     n= 26 best=KH0381/UR141 score=-0.2 (null95=3.2) p=0.993 hits=29 30 240 622
+C6.o     n= 27 best=KH0507/UR270 score=0.2 (null95=2.8) p=0.963 hits=14 20 26 30 35 38 50 54 64 71 74 117 171 175 724
+J1.b     n= 11 best=KH0487/UR251 score=1.8 (null95=2.7) p=0.465 hits=3 4 5 49 205
+J1.g     n=  9 best=KH0300/UR063 score=2.1 (null95=2.9) p=0.349 hits=2 6 1439
+J1.i     n=  2 best=KH0158/AS142 score=2.0 (null95=2.3) p=0.136 hits=3 145
+J1.j     n= 49 best=KH0203/AS185 score=3.1 (null95=3.6) p=0.156 hits=2 3 4 5 6 7 8 9 10 15 19 23 25 29 35 37 40 48

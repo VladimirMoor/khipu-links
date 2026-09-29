@@ -1,0 +1,40 @@
+khipu,cord,parent,spin_ply_attach,knots_raw,knots_value_check,length_cm,termination,color,value,subsidiaries_raw,confidence,notes
+JC030,1,,Z/S/R,"5L(12.0,z)d",5,36.0,k,YB(0-19)/RO(19-21)/YB(21-36),5,,high,value circled; RO written small above a blotted colour code
+JC030,2,,Z/S/R,"6L(12.0,z)d",6,38.0,k,YB(0-31)/RO(31-33)/YB(33-38),6,,high,value circled; RO end digit overwritten (31-33 read)
+JC030,3,,Z/S/R,"1s(12.2,z)",10,41.0,k,YB,10,,medium,"single S knot at 12.2 cm (same height as long knots on other cords, i.e. units zone); recorder reads 10 (single knot = ten, units empty); strictly positional reading would give 1"
+JC030,4,,Z/S/R,"4L(12.5,z)d",4,43.5,k,YB(0-18)/RO(18-21.5)/YB(21.5-43.5),4,,high,colour entry heavily overwritten/blotted; RO end 21.5 written small
+JC030,5,,Z/S/R,"2L(12.5,z)d",2,41.0,k,YB(0-24)/RO(24-26)/YB(26-41),2,,high,first colour segment crossed out and rewritten as YB(0-24)
+JC031,1,,Z/S/R,"2L(11.5,z)d, 9L(19.5,z)",11,41.0,k,YB(0-17.5)/RO(17.5-21.5)/YB(21.5-41.0),11,,medium,"two long knots at different heights; value 11 = 2+9 (sum of turns), non-standard decimal placement"
+JC031,2,,Z/S/R,"1E(12.0,z)",1,49.0,k,YB(0-19)/RO(19-22.0)/YB(22.0-48.5),1,(1:6.0),high,blot (crossed-out mark) before subsidiary entry; last colour segment ends 48.5 vs length 49.0
+JC031,2s1,2,Z/S,"1E(5.0,z)",1,40.0,k,YB(0-12)/RO(12-17)/YB(17-40),1,,high,
+JC031,3,,Z/S/R,"4L(10.5,z)d",4,49.0,k,YB(0-20)/RO(20-22)/YB(22-49),4,,high,
+JC031,4,,Z/S/R,"2L(11.0,z), 6L(20.5,z)d",8,44.0,k,YB,8,(1:6.0),medium,two long knots at different heights; value 8 = 2+6 (sum of turns)
+JC031,4s1,4,Z/S,"2L(5.0,z)d, 1E(14.5,z)",3,53.0,k,YB,3,,medium,long + figure-eight knot at different heights; value 3 = 2+1; subsidiary (53.0) longer than its pendant (44.0)
+JC031,5,,Z/S/R,,,52.5,k,YB,,,high,no knots
+JC031,6,,Z/S/R,,,53.0,k,YB(0-21.5)/RO(21.5-23.5)/YB(23.5-53.0),,,high,no knots
+JC031,7,,Z/S/R,,,49.0,k,YB,,,high,no knots
+JC031,8,,Z/S/R,,,48.0,r,YB,,,medium,no knots; a character between 48.0 and r is blotted out (termination likely corrected to r)
+JC031,9,,Z/S/V,"4L(4.0,z)d, 5L(10.0,z)d",9,43.0,k,MB,9,,medium,two long knots at different heights; value 9 = 4+5 (sum of turns); verso attachment; separate group
+JC032,1,,Z/S/V,"1s(6.5,z), 3s(9.5,z), 8L(13.5,z)d",138,22.0,k,YB(0-9.5)/RO(9.5-12.0)/YB(12-22.0),139,(1:0.5),low,"written value '13?9' with the third character blotted, read as 139; knots give 138 (8L clearly written). Note 1s1+1s1s1 = 78+61 = 139. Attachment letter partly blotted, V legible"
+JC032,1s1,1,Z/S,"7s(4.0,z), 8L(8.5,z)",78,12.5,k,YB,78,(1:1.0),high,
+JC032,1s1s1,1s1,Z/S,"6s(2.5,z), 1E(7.5,s)",61,13.0,k,YB(0-9.5)/RO(9.5-13.0),61,,high,E knot S-direction
+JC032,2,,Z/S/R,"5s(6.0,z), 6L(14.0,z)d, 3L(18.0,z)d",59,24.0,r,YB(0-11)/RO(11-14)/YB(14-24),59,,medium,two long knots in units zone; 59 = 50+6+3; length 24.0r written squeezed above the row line
+JC032,3,,Z/S/R,"6s(5.5,z), 9L(11.5,z)d",69,18.5,k,YB(0-10)/RO(10-11)/YB(11-18.5),69,,high,blot after cord number 3
+JC032,4,,Z/S/R,"1s(5.0,z), 3L(10,z)d, 5L(12.0,z)d",18,14.5,k,YB(0-10)/RO(10-14.5),18,,medium,two long knots in units zone; 18 = 10+3+5
+JC032,5,,Z/S/R,"9s(4.0,z), 7L(11.0,z)d",97,22.5,k,YB(0-18)/RO(18-19)/YB(19-22.5),97,,high,
+JC032,6(T),,Z/S/V,"3s(4.5,z), 8L(12.5,z)d",38,32.5,k,YB(0-26)/RO(26-27)/YB(27-32.5),38,,high,top cord; attach note '*flipped up because top'; the 8 of 8L is overwritten
+JC033,1,,Z/S/V,,,5.0,b,YB,,,high,no knots; broken stub
+JC033,2,,Z/S/V,,,7.5,b,YB,,,high,no knots; broken stub
+JC033,3,,Z/S/V,,,4.5,b,YB,,,high,no knots; broken stub
+JC033,4,,Z/S/V,,,5.0,b,YB,,,high,no knots; broken stub
+JC033,5(T),,Z/S/V,"1E(14.5,s)",1,37.0,r,YB,1,,high,top cord; E knot S-direction
+JC033,6,,Z/S/R,"4L(14.0,z)",4,33.5,k,YB(0-21.5)/RO(21.5-23)/YB(23-33.5),4,,medium,last colour segment partly blotted
+JC033,7,,Z/S/V,"4L(13.5,z)",4,35.5,k,YB(0-20.5)/RO(20.5-21.5)/YB(21.5-35.5),4,,high,
+JC033,8,,Z/S/V,"1s(5.0,z), 4L(5.0,z)",14,41.0,k,YB(0-20.5)/RO(20.5-24.0)/YB(24-41),14,,medium,both knots recorded at 5.0 cm (likely a position slip for one of them)
+JC034,1,,Z/S/R,"1E(20.5,z)",1,38.0,k,RO,1,"(2:7.0,7.2)",high,RO recorded where red pigment on YB (see notes)
+JC034,1s1,1,Z/S,,,8.5,b,MB,,,high,no knots; broken
+JC034,1s2,1,Z/S,"7L(13.0,z)d",7,28.5,k,RO,7,,high,
+JC034,2,,Z/S/R,"1E(19.5,z), 1E(24.5,z)",2,39.0,k,RO,2,(1:7.6),medium,two figure-eight knots at different heights; value 2 = 1+1; subsidiary position digit 6 overwritten
+JC034,2s1,2,Z/S,"7L(11.5,z)d",7,20.0,k,RO,7,,high,
+JC034,3,,Z/S/R,"1s(9.0,z), 7L(20.0,z)",17,37.5,r,RO,17,,high,7 of 7L overwritten; blot after 37.5r
+JC034,4,,Z/S/R,"1s(9.0,z), 7L(20.0,z)",17,37.0,k,RO,17,,high,

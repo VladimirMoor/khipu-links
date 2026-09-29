@@ -1,0 +1,46 @@
+порог (макс. по перемешанному корпусу, 3 раз): 5 почти-совпадений
+** 101        KH0049 [0:107] ~ HP036        сдвиг   +0  тот же №  Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur || Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur
+**  97        KH0049 [0:107] ~ AS038        сдвиг   +0            Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur || "Museo Nacional, Lima, Per #3884-147 | Unknown
+**  97         HP036 [0:107] ~ AS038        сдвиг   +0            Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur || "Museo Nacional, Lima, Per #3884-147 | Unknown
+**  43         UR176 [0:81] ~ KH0001       сдвиг   +0  тот же №  "American Museum of Natura #B/8705 | Chuquitanta || American Museum of Natural #B/8705 | Chuquitanta
+**  34         UR281 [0:40] ~ KH0081       сдвиг   +0  тот же №  Museo Nac., Pueblo Libre #1745 | Monte de Cacatilla || Museo Nac., Pueblo Libre #1745 | Monte de Cacatilla
+**  31         UR035 [12:61] ~ KH0083       сдвиг   +0  тот же №  Museo Chileno de Arte Prec #780 | Mollepampa || Museo Chileno de Arte Prec #780 | Mollepampa
+**  29         UR281 [0:37] ~ AS068        сдвиг   +0            Museo Nac., Pueblo Libre #1745 | Monte de Cacatilla || "Museo Nacional, Lima, Per #3882 | Unknown
+**  29        KH0081 [0:37] ~ AS068        сдвиг   +0            Museo Nac., Pueblo Libre #1745 | Monte de Cacatilla || "Museo Nacional, Lima, Per #3882 | Unknown
+**  26         UR035 [12:60] ~ AS070        сдвиг   +0            Museo Chileno de Arte Prec #780 | Mollepampa || "owner Percy Dauelsberg, A #1 | Lluta Valley
+**  26        KH0083 [12:60] ~ AS070        сдвиг   +0            Museo Chileno de Arte Prec #780 | Mollepampa || "owner Percy Dauelsberg, A #1 | Lluta Valley
+**  22         UR236 [0:32] ~ KH0197       сдвиг   +0  тот же №  "Ethnologisches Museum, Be #VA 66832 | Unknown || Ethnologisches Museum, Ber #VA66832 | Unknown
+**  19         UR278 [213:239] ~ UR270        сдвиг -168            Proyecto Incahuasi #13833-2014 | Incahuasi || Proyecto Incahuasi #13830 | Incahuasi
+**  19         UR122 [36:62] ~ KH0049       сдвиг  +36            "Museum of Worldculture, G #1938.45.0228 | Nazca || Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur
+**  19         UR122 [36:62] ~ HP036        сдвиг  +36            "Museum of Worldculture, G #1938.45.0228 | Nazca || Museo Nacional de Arqueolo #MNAAHP3550 | Costa Sur
+**  19         UR122 [36:62] ~ AS038        сдвиг  +36            "Museum of Worldculture, G #1938.45.0228 | Nazca || "Museo Nacional, Lima, Per #3884-147 | Unknown
+**  17         UR236 [0:32] ~ AS181        сдвиг   +0            "Ethnologisches Museum, Be #VA 66832 | Unknown || "Museum für Völkerkunde, B #unnumbered | Unknown
+**  17        KH0197 [0:32] ~ AS181        сдвиг   +0            Ethnologisches Museum, Ber #VA66832 | Unknown || "Museum für Völkerkunde, B #unnumbered | Unknown
+**  14         UR247 [0:14] ~ AS125        сдвиг   +0            "Ethnologisches Museum, Be #VA 42610 | Pachacamac || "Museum für Völkerkunde, B #VA42670 | Pachacamac
+**   8         UR218 [6:13] ~ UR1118       сдвиг   -5            "Ethnologisches Museum, Be #VA 42559 | Pachacamac || "Museum für Völkerkunde, B #VA42601 | Pachacamac
+**   7         UR163 [0:6] ~ KH0067       сдвиг   +0  тот же №  Valle de Ica Hacienda Call #03993-02 | Unknown || Valle de Ica Hacienda Call #03993-02 | Unknown
+**   7         UR163 [0:6] ~ AS056        сдвиг   +0            Valle de Ica Hacienda Call #03993-02 | Unknown || "Museo de Ica, Ica, Peru" #4B | Hacienda Ullujalla
+**   7        KH0067 [0:6] ~ AS056        сдвиг   +0            Valle de Ica Hacienda Call #03993-02 | Unknown || "Museo de Ica, Ica, Peru" #4B | Hacienda Ullujalla
+**   6        UR267A [44:59] ~ UR255        сдвиг   +5            Proyecto Incahuasi #13092 | Incahuasi || Projecto Incahuasi #9228-13 | Incahuasi
+**   6         UR208 [13:35] ~ UR1109       сдвиг +150            "Ethnologisches Museum, Be #42549 | Pachacamac || "Museum für Völkerkunde, B #VA47069 | Ica
+**   6        UR1175 [2:22] ~ UR1109       сдвиг +183            "Museum für Völkerkunde, B #VA42518 | Pachacamac || "Museum für Völkerkunde, B #VA47069 | Ica
+**   6         UR133 [0:6] ~ UR036        сдвиг   +0            Museo Chileno de Arte Prec #CMBE 0901 | "Playa Miller #6,  || Museo Chileno de Arte Prec #CMBE 901/PE-16 | Unknown
+**   6        UR1109 [172:180] ~ UR032        сдвиг -144            "Museum für Völkerkunde, B #VA47069 | Ica || Phoebe Hearst Museum of An #TM 4/5446 | Unknown
+**   6         UR133 [0:6] ~ KH0267       сдвиг   +0  тот же №  Museo Chileno de Arte Prec #CMBE 0901 | "Playa Miller #6,  || Museo Chileno de Arte Prec #CMBE 0901 | Playa Miller #6, A
+**   6         UR036 [0:6] ~ KH0267       сдвиг   +0            Museo Chileno de Arte Prec #CMBE 901/PE-16 | Unknown || Museo Chileno de Arte Prec #CMBE 0901 | Playa Miller #6, A
+**   6        UR1109 [160:170] ~ AS101 - Part 2 сдвиг -155            "Museum für Völkerkunde, B #VA47069 | Ica || "Museum für Völkerkunde, B #VA42528 | Pachacamac
+     5         UR208 [13:33] ~ UR1175       сдвиг  -11            "Ethnologisches Museum, Be #42549 | Pachacamac || "Museum für Völkerkunde, B #VA42518 | Pachacamac
+     5         UR278 [205:218] ~ AS115        сдвиг -172            Proyecto Incahuasi #13833-2014 | Incahuasi || "Museum für Völkerkunde, B #VA47089 | Ica
+     5        UR1109 [167:177] ~ AS004        сдвиг -160            "Museum für Völkerkunde, B #VA47069 | Ica || Museum of the American Ind #17/8821 | Unknown
+     5        UR1099 [23:28] ~ AS004        сдвиг  -15            "Museum für Völkerkunde, B #VA42526 | Pachacamac || Museum of the American Ind #17/8821 | Unknown
+     4         UR278 [33:42] ~ UR200        сдвиг  +37            Proyecto Incahuasi #13833-2014 | Incahuasi || "Ethnologisches Museum, Be #VA42597(B) | Pachacamac
+     4         UR278 [74:83] ~ UR1180       сдвиг  -64            Proyecto Incahuasi #13833-2014 | Incahuasi || "Museum für Völkerkunde, B #VA47126 | Ica
+     4        UR1179 [0:3] ~ UR1149       сдвиг  +27            "Museum für Völkerkunde, B #VA47123 | Ica || "Museum für Völkerkunde, B #VA44866C | Ocucaje
+     4         UR278 [172:186] ~ UR113        сдвиг -130            Proyecto Incahuasi #13833-2014 | Incahuasi || "Museum for World Culture, #1931.37.0001 | Nazca
+     4         UR270 [78:88] ~ UR1109       сдвиг +101            Proyecto Incahuasi #13830 | Incahuasi || "Museum für Völkerkunde, B #VA47069 | Ica
+     4         UR219 [8:12] ~ UR1109       сдвиг +186            "Ethnologisches Museum, Be #VA 47084 | Ica || "Museum für Völkerkunde, B #VA47069 | Ica
+     4        UR1109 [205:211] ~ UR1107       сдвиг -192            "Museum für Völkerkunde, B #VA47069 | Ica || "Museum für Völkerkunde, B #VA24370(B) | Marquez
+     4         UR234 [83:88] ~ UR1104       сдвиг  -69            "Ethnologisches Museum, Be #VA 66837 | Unknown || "Ethnologisches Museum, Be #VA42527 | Pachacamac
+     4        UR1109 [5:17] ~ UR1099       сдвиг  +14            "Museum für Völkerkunde, B #VA47069 | Ica || "Museum für Völkerkunde, B #VA42526 | Pachacamac
+     4         UR278 [50:55] ~ UR049        сдвиг  +50            Proyecto Incahuasi #13833-2014 | Incahuasi || Museo Larco ##5 | Unknown
+     4        UR1031 [2:13] ~ UR044        сдвиг   +0            "Peabody Museum, Harvard U #32-70-30/F851 | Unknown || Peabody Museum, Harvard Un #32.70.30/F851 | La puntilla, betwe

@@ -1,0 +1,63 @@
+khipu,cord,parent,spin_ply_attach,knots_raw,knots_value_check,length_cm,termination,color,value,subsidiaries_raw,confidence,notes
+JC024,1,,Z/S/V,"1s(3.5,z), 1s(9,z), 9L(17,z) d",119,42.0,k,W,119,"(1,2.0)",high,
+JC024,1s1,1,Z/S,"3s(7,z), 4L(15,z) d",34,24,r,W,34,,high,
+JC024,2(T),,Z/S/V,"2s(9,z), 9L(17,z) d",29,32,k,W(0-21.5)/RD(21.5-27.5)/W(27.5-32),29,"(1,5.0)",medium,Position of 2s partially blotted (read 9); 9L position 17 written above a blotted value; RD end 27.5 written below a '?'; value 29 written above the line
+JC024,2s1,2(T),Z/S,"5L(11.5,z) d",5,17,r,W,5,,high,Cord label 2s1 has overwritten digit; ink blot after knot entry
+JC024,3,,Z/S/V,"2s(8.0,z), 9L(15.5,z)",29,40,r,W(0-18.5)/RD(18.5-23.0)/W(23-40),29,"(1,5.0)",medium,Last color segment start read as 23 (could be 27); RD letter overwritten; value 29 written above the line
+JC024,3s1,3,Z/S,,,4,b,W,,,high,No knots
+JC024,4,,Z/S/V,"1s(8.5,z), 9L(16.5,z) d",19,29.5,k,NB: W(0-9)/W(9-20)/RD(20-24)/W(24-29.5),19,"(1,5.5)",medium,Color note prefixed 'NB:'; small writing
+JC024,4s1,4,Z/S,,,9.0,b,W,,,high,Blotted-out entry before W in color column
+JC024,5,,Z/S/V,"1s(8.5,z)",10,13.0,b,NB,10,"(1,5.5)",high,
+JC024,5s1,5,Z/S,,,8.5,b,W,,,high,
+JC024,6,,Z/S/V,"1s(8.0,z), 9L(16.0,z) d",19,32.0,k,NB: W(0-23.5)/RD(23.5-25)/W(25-32),19,"(1,5.5)",high,Cord number has ink blot; length written '320k' (=32.0k)
+JC024,6s1,6,Z/S,,,5.5,b,W,,,high,
+JC024,7,,Z/S/V,"5L(15,z) d",5,27.5,k,W(0-21)/RD(22-24),5,"(1,5.5)",medium,"Color ranges leave gaps (21-22, 24-27.5) as written"
+JC024,7s1,7,Z/S,,,9.7,b,W,,,low,"Length: digit after decimal blotted, 7 written next to it; read 9.7 (could be 9.0)"
+JC024,8,,Z/S/V,"4L(16,z) d",4,29.0,b,W(0-24)/RD(24-29),4,"(1,6.0)?",medium,"Length first digits overwritten (28/29), 29.0 consistent with colors; subsidiary written '(1,6.0)' on 8s1 row with '?' above"
+JC024,8s1,8,Z/S,,,8.0,b,W,,,high,
+JC025,1,,Z/S/R,"1s(7.5,z), 7L(18.5,z) d",17,23.5,b,NB,17,,high,
+JC025,2,,Z/S/R,"2s(7,z), 6L(18,z) d",26,23.5,b,NB,26,,high,
+JC025,3,,Z/S/R,"3s(7.5,z), 9L(19,z) d",39,33.0,r,NB,39,"(3: 3.2, 3.4, 3.6)",high,
+JC025,3s1,3,Z/S,"1E(15.0,z)",1,24.0,r,NB,1,,high,
+JC025,3s2,3,Z/S,"1s(6,z), 4L(14,z) d",14,32.0,k,W,14,,high,
+JC025,3s3,3,Z/S,"1s(4.5,z), 5L(14,z)",15,20.0,k,W,15,,high,
+JC025,4,,Z/S,"3s(7.5,z), 7L(19,z) d",37,23.0,b,NB,37,"(3: 2.7, 3.0, 3.2)",medium,Attachment not recorded for cord 4 (only Z/S written)
+JC025,4s1,4,Z/S,"1E(13.7,z)",1,30.0,k,W,1,,high,
+JC025,4s2,4,Z/S,"1s(4.5,z), 3L(15,z)",13,35.5,k,W,13,,high,
+JC025,4s3,4,Z/S,"2s(3.5,z), 9L(12.5,z) d",29,29.5,r,W,29,,high,
+JC026,1,,Z/S/V,,,26.0,twisted,W,,,high,No knots; termination written '(twisted)'; ink blot after attachment
+JC026,2,,Z/S/V,,,27.0,k,W(0-24.5)/RD(24.5-27.0),,,high,No knots; ink blot after attachment
+JC027,1,,Z/S/V,"2s(2.5,z), 5s(6.0,z), 9L(8.7,z) d",259,14.5,k,W,259,,high,Ink blot before '5s' (overwrite; 5 legible); 'd' runs into length
+JC027,2,,Z/S/V,"5s(4.5,z), 6L(13.0,z) d",56,27.0,r,W,56,,high,
+JC027,3,,Z/S/V,"2s(5.0,z), 4L(13.0,z) d",24,31.5,r,W,24,,high,Ink blot before '2s'
+JC027,4,,Z/S/V,"2s(5.0,z), 4L(12.5,z) d",24,28.5,r,W,24,,high,
+JC027,5,,Z/S/V,"6s(5.0,z)",60,34.0,r,W,60,,high,
+JC027,6,,Z/S/V,"1s(5.0,z), 2L(13.0,z) d",12,26.0,b,W,12,,high,
+JC027,7,,Z/S/V,"1s(4.5,z), 4L(12.0,z) d",14,31.0,r,W,14,,high,
+JC027,8,,Z/S/V,"2s(5.5,z), 1E(13.0,z)",21,33.5,r,W,21,,high,
+JC027,9,,Z/S/V,"2s(5.5,z), 3L(12.0,z)",23,29.0,r,W,23,,high,
+JC027,10,,Z/S/V,"2s(5.5,z), 7L(11.5,z)",27,26.5,r,W,27,,high,
+JC027,11,,Z/S/V,"5s(5.5,z), 6L(11.5,z) d",56,14.0,b,W,56,,high,
+JC027,12,,Z/S/V,"1s(5.5,z), 7L(12.0,z) d",17,28.0,r,W,17,,high,
+JC028,1,,Z/S/V,"1s(3.5,z), 1E(5,s), 4L(8.5,z), 3L(12.5,z), 4L(15.5,z)",22,16.5,b,YB,22,,medium,"Multiple knot clusters; written value 22 equals simple sum of all knots (10+1+4+3+4), not a standard decimal reading; E knot marked S-direction; ink blot before first knot; length 16.5b written circled above row; color first letter overwritten (read YB, could be NB)"
+JC028,2,,Z/S/V,"4s(4.0,z), 5L(9.5,z)",45,29.0,k,YB(0-14.5)/RD(14.5-19)/YB(19-29),45,,medium,YB written over blotted original color code in both YB segments
+JC028,3,,Z/S/R,"5s(5.5,z), 4L(13.5,z)",54,35.0,k,NB(0-19)/RD(19-21.5)/NB(21.5-35),54,,medium,Value digit 5 overwritten; RD overwritten; color segments partly blotted
+JC028,4,,Z/S/R,"5s(?,z), 6L(13.5,z), 4L(21.5,z) d",60,30,k,LC,60,,medium,Position of 5s blotted/overwritten (possibly 4 or 5); value 60 = 50+6+4 (sum of clusters)
+JC028,5,,Z/S/R,"4L(5,z) d, 2L(10,z) d, 3L(1?,z) d, 5L(18,z) d",14,26,k,YB(0-15)/RD(15-16)/YB(16-26),12,,low,Written value 12 but knots sum to 14 (4+2+3+5); the '3' of 3L is written above an overwritten digit (if original was 1L the sum is 12); position of 3L blotted (1?); YB written over blotted originals
+JC028,6,,Z/S/R,"3s(5,z), 2L(8,z) d, 4L(14,z) d, 5L(18,z) d",41,23,k,YB,41,,medium,"'3' of 3s written above blotted digit; turn count of third knot blotted, read 4 (implied by value 41 = 30+2+4+5); color entry largely blotted (only YB legible)"
+JC028,7,,Z/S/R,"4s(5.0,z), 8L(10.5,z) d",48,30.5,k,YB(0-18)/RD(18-20)/YB(20-30.5),48,"(2: 2.2, 2.5)",high,YB over blotted originals
+JC028,7s1,7,Z/S,"9L(6.5,z) d",9,11,b,MB,9,,high,Color read MB (could be NB)
+JC028,7s2,7,Z/S,"2L(7.5,z) d",2,16.5,k,NB,2,,high,
+JC028,8,,Z/S/R,"4s(5,z), 6L(9.5,z) d",46,30.0,k,YB(0-14.5)/RD(14.5-16.5)/YB(16.5-30),46,"(2: 2.5, 2.7)",high,YB over blotted originals
+JC028,8s1,8,Z/S,"1s(2.0,z), 7L(7.0,z) d",17,29.5,k,MB,17,,high,Color read MB (could be NB)
+JC028,8s2,8,Z/S,"3L(6.5,z) d",3,14.5,k,NB,3,,high,
+JC029,1,,Z/S/R,"4s(4.5,z), 6L(9.5,z) d",46,16.5,k,YB,46,(1: 2.2),high,
+JC029,1s1,1,Z/S,"3s(3.0,z)",30,17,k,YB,30,,high,Ink blot inside knot position before 3.0
+JC029,2,,Z/S/R,"5s(3.5,z)",50,21.5,k,YB,50,(1: 2.0),high,
+JC029,2s1,2,Z/S,"3s(2.5,z)",30,16.0,k,YB,30,,high,
+JC029,3,,Z/S/R,"4s(4.0,z), 1E(9.5,z)",41,23.0,k,YB,41,(1: 2.0),high,
+JC029,3s1,3,Z/S,"2s(2.0,z)",20,17.5,k,YB,20,,high,Ink blot between knots and length columns
+JC029,4,,Z/S/R,"3s(4.0,z), 4L(9.5,z) d",34,23.5,k,YB,34,(1: 2.0),high,
+JC029,4s1,4,Z/S,"4s(2.5,z)",40,10.0,k,YB,40,,high,
+JC029,5(T),,Z/S/R,,,34.0,r,YB,,,high,No knots; top cord (T)
+JC029,6,,Z/S/R,,,7.5,k,YB,,,high,No knots

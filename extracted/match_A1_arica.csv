@@ -1,0 +1,71 @@
+doc,khipu_id,okr,inv,score,n_hits,lcs_ge10,hits,p_best,null_q95,n_doc_values,n_distinct,title
+A1.a,1000316,KH0369,UR130,0.31,15,7,4 6 10 12 15 18 20 25 26 27 30 35 40 50 70,0.4012,1.38,29,23,Cédula de encomienda de Francisco Pizarro a Lucas Martínez Vegazo (tributarios p
+A1.a,1000302,KH0372,UR131C,-0.44,11,8,4 6 10 12 15 20 30 40 50 70 194,0.4012,1.38,29,23,Cédula de encomienda de Francisco Pizarro a Lucas Martínez Vegazo (tributarios p
+A1.a,1000298,KH0294,UR058A,-1.11,13,9,4 6 10 12 14 15 20 25 30 35 40 50 70,0.4012,1.38,29,23,Cédula de encomienda de Francisco Pizarro a Lucas Martínez Vegazo (tributarios p
+A1.a,1000096,KH0082,AS069,-1.19,18,13,4 6 10 12 14 15 18 20 25 26 27 30 35 40 50 70 100 120,0.4012,1.38,29,23,Cédula de encomienda de Francisco Pizarro a Lucas Martínez Vegazo (tributarios p
+A1.a,6000023,KH0083,KH0083,-1.23,18,11,4 6 10 12 14 15 18 20 25 26 27 30 35 40 50 70 100 120,0.4012,1.38,29,23,Cédula de encomienda de Francisco Pizarro a Lucas Martínez Vegazo (tributarios p
+A1.b,6000026,KH0267,KH0267,1.73,4,3,111 200 600 800,0.0958,2.24,23,17,Otras cédulas de encomienda de enero 1540 a vecinos de Arequipa (Arica/Tacna y r
+A1.b,1000318,,UR133,1.73,4,3,111 200 600 800,0.0958,2.24,23,17,Otras cédulas de encomienda de enero 1540 a vecinos de Arequipa (Arica/Tacna y r
+A1.b,6000023,KH0083,KH0083,-0.64,7,3,12 26 40 41 111 149 881,0.0958,2.24,23,17,Otras cédulas de encomienda de enero 1540 a vecinos de Arequipa (Arica/Tacna y r
+A1.b,1000279,,UR035,-0.64,7,3,12 26 40 41 111 149 881,0.0958,2.24,23,17,Otras cédulas de encomienda de enero 1540 a vecinos de Arequipa (Arica/Tacna y r
+A1.b,1000302,KH0372,UR131C,-1.47,4,2,12 40 111 194,0.0958,2.24,23,17,Otras cédulas de encomienda de enero 1540 a vecinos de Arequipa (Arica/Tacna y r
+A1.c,1000301,KH0371,UR131B,0.89,1,1,249,0.2934,1.51,2,2,Variaciones de la encomienda: Cochuna (cédula 1538 s/Cúneo Vidal; encomienda de 
+A1.c,1000096,KH0082,AS069,0.4,1,0,135,0.2934,1.51,2,2,Variaciones de la encomienda: Cochuna (cédula 1538 s/Cúneo Vidal; encomienda de 
+A1.c,1000095,,AS070,-0.51,0,0,,0.2934,1.51,2,2,Variaciones de la encomienda: Cochuna (cédula 1538 s/Cúneo Vidal; encomienda de 
+A1.c,6000023,KH0083,KH0083,-0.51,0,0,,0.2934,1.51,2,2,Variaciones de la encomienda: Cochuna (cédula 1538 s/Cúneo Vidal; encomienda de 
+A1.c,1000279,,UR035,-0.51,0,0,,0.2934,1.51,2,2,Variaciones de la encomienda: Cochuna (cédula 1538 s/Cúneo Vidal; encomienda de 
+A1.d,1000316,KH0369,UR130,-0.06,1,1,50,0.998,0.8,2,2,Provisión del virrey marqués de Cañete a petición de los caciques de Chucuito pa
+A1.d,1000298,KH0294,UR058A,-0.11,1,1,50,0.998,0.8,2,2,Provisión del virrey marqués de Cañete a petición de los caciques de Chucuito pa
+A1.d,1000302,KH0372,UR131C,-0.14,1,1,50,0.998,0.8,2,2,Provisión del virrey marqués de Cañete a petición de los caciques de Chucuito pa
+A1.d,1000301,KH0371,UR131B,-0.14,1,1,50,0.998,0.8,2,2,Provisión del virrey marqués de Cañete a petición de los caciques de Chucuito pa
+A1.d,1000300,KH0370,UR131A,-0.14,1,1,50,0.998,0.8,2,2,Provisión del virrey marqués de Cañete a petición de los caciques de Chucuito pa
+A1.e,6000026,KH0267,KH0267,0.4,3,2,10 100 800,0.3553,1.13,15,12,"Tasa de La Gasca para el repartimiento de Tarapacá, aprobada Lima 1 mar. 1550 (L"
+A1.e,1000318,,UR133,0.4,3,2,10 100 800,0.3553,1.13,15,12,"Tasa de La Gasca para el repartimiento de Tarapacá, aprobada Lima 1 mar. 1550 (L"
+A1.e,1000316,KH0369,UR130,-0.87,6,6,10 12 15 20 40 80,0.3553,1.13,15,12,"Tasa de La Gasca para el repartimiento de Tarapacá, aprobada Lima 1 mar. 1550 (L"
+A1.e,1000319,KH0320,UR084,-0.99,3,3,10 20 100,0.3553,1.13,15,12,"Tasa de La Gasca para el repartimiento de Tarapacá, aprobada Lima 1 mar. 1550 (L"
+A1.e,1000298,KH0294,UR058A,-1.07,6,6,10 12 15 20 40 80,0.3553,1.13,15,12,"Tasa de La Gasca para el repartimiento de Tarapacá, aprobada Lima 1 mar. 1550 (L"
+A1.f,1000319,KH0320,UR084,2.79,7,3,2 10 20 100 200 300 400,0.0978,3.16,20,17,"Tasa de La Gasca para el repartimiento de Arica, aprobada Lima 1 mar. 1550 (Loay"
+A1.f,6000026,KH0267,KH0267,1.75,7,4,2 3 10 30 100 200 600,0.0978,3.16,20,17,"Tasa de La Gasca para el repartimiento de Arica, aprobada Lima 1 mar. 1550 (Loay"
+A1.f,1000318,,UR133,1.75,7,4,2 3 10 30 100 200 600,0.0978,3.16,20,17,"Tasa de La Gasca para el repartimiento de Arica, aprobada Lima 1 mar. 1550 (Loay"
+A1.f,1000317,KH0373,UR132,1.04,7,5,2 10 12 20 25 200 400,0.0978,3.16,20,17,"Tasa de La Gasca para el repartimiento de Arica, aprobada Lima 1 mar. 1550 (Loay"
+A1.f,1000302,KH0372,UR131C,-0.45,9,5,2 3 10 12 20 30 36 40 400,0.0978,3.16,20,17,"Tasa de La Gasca para el repartimiento de Arica, aprobada Lima 1 mar. 1550 (Loay"
+A1.g,1000319,KH0320,UR084,3.73,7,3,2 10 20 100 200 300 400,0.0399,3.65,17,13,"Tasa de La Gasca para el repartimiento de Ilo, aprobada Lima 1 mar. 1550 (Loayza"
+A1.g,1000317,KH0373,UR132,1.47,7,4,2 6 8 10 20 200 400,0.0399,3.65,17,13,"Tasa de La Gasca para el repartimiento de Ilo, aprobada Lima 1 mar. 1550 (Loayza"
+A1.g,6000026,KH0267,KH0267,-0.11,4,4,2 10 100 200,0.0399,3.65,17,13,"Tasa de La Gasca para el repartimiento de Ilo, aprobada Lima 1 mar. 1550 (Loayza"
+A1.g,1000318,,UR133,-0.11,4,4,2 10 100 200,0.0399,3.65,17,13,"Tasa de La Gasca para el repartimiento de Ilo, aprobada Lima 1 mar. 1550 (Loayza"
+A1.g,1000302,KH0372,UR131C,-0.38,7,4,2 6 8 10 20 80 400,0.0399,3.65,17,13,"Tasa de La Gasca para el repartimiento de Ilo, aprobada Lima 1 mar. 1550 (Loayza"
+A1.h,1000319,KH0320,UR084,1.46,5,4,10 20 100 200 300,0.1098,1.87,19,14,"Tasa de La Gasca para el repartimiento de Carumas, aprobada Lima 1 mar. 1550 (Lo"
+A1.h,1000316,KH0369,UR130,-0.03,9,6,10 12 15 18 20 25 30 50 60,0.1098,1.87,19,14,"Tasa de La Gasca para el repartimiento de Carumas, aprobada Lima 1 mar. 1550 (Lo"
+A1.h,1000317,KH0373,UR132,-0.04,5,4,10 12 20 25 200,0.1098,1.87,19,14,"Tasa de La Gasca para el repartimiento de Carumas, aprobada Lima 1 mar. 1550 (Lo"
+A1.h,6000026,KH0267,KH0267,-0.1,4,3,10 30 100 200,0.1098,1.87,19,14,"Tasa de La Gasca para el repartimiento de Carumas, aprobada Lima 1 mar. 1550 (Lo"
+A1.h,1000318,,UR133,-0.1,4,3,10 30 100 200,0.1098,1.87,19,14,"Tasa de La Gasca para el repartimiento de Carumas, aprobada Lima 1 mar. 1550 (Lo"
+A1.i,1000095,,AS070,-2.2,23,14,5 6 9 10 11 15 17 20 27 32 47 50 55 60 67 74 80 90 100 120 127 247 287,0.6068,0.78,68,45,"Cuentas de Gonzalo de Valencia, mayordomo de Lucas Martínez, rendidas en Arica a"
+A1.i,6000023,KH0083,KH0083,-2.54,23,14,5 6 9 10 11 15 17 20 27 32 47 50 55 60 67 72 74 80 90 100 120 247 281,0.6068,0.78,68,45,"Cuentas de Gonzalo de Valencia, mayordomo de Lucas Martínez, rendidas en Arica a"
+A1.i,1000279,,UR035,-2.54,23,14,5 6 9 10 11 15 17 20 27 32 47 50 55 60 67 72 74 80 90 100 120 247 281,0.6068,0.78,68,45,"Cuentas de Gonzalo de Valencia, mayordomo de Lucas Martínez, rendidas en Arica a"
+A1.i,1000096,KH0082,AS069,-2.95,22,16,5 6 9 10 11 15 17 20 27 32 47 50 55 60 61 72 74 80 100 120 238 254,0.6068,0.78,68,45,"Cuentas de Gonzalo de Valencia, mayordomo de Lucas Martínez, rendidas en Arica a"
+A1.i,1000316,KH0369,UR130,-4.81,14,10,5 6 10 11 15 20 27 32 47 50 55 60 72 80,0.6068,0.78,68,45,"Cuentas de Gonzalo de Valencia, mayordomo de Lucas Martínez, rendidas en Arica a"
+A1.j,1000096,KH0082,AS069,-1.6,35,15,2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 26 27 28 30 32 42 48 50 54 60 63 70 73 100 111 112 120 238 333 356,0.485,1.02,112,57,Cuentas de Gonzalo de Valencia ca. 1565: cargo y data de pesos de plata (corrien
+A1.j,1000095,,AS070,-2.71,33,16,2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 26 27 28 30 32 48 50 54 60 70 73 85 90 100 111 120 247 287,0.485,1.02,112,57,Cuentas de Gonzalo de Valencia ca. 1565: cargo y data de pesos de plata (corrien
+A1.j,6000023,KH0083,KH0083,-3.66,33,17,2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 26 27 28 30 32 48 50 54 60 63 70 73 85 90 100 111 120 247,0.485,1.02,112,57,Cuentas de Gonzalo de Valencia ca. 1565: cargo y data de pesos de plata (corrien
+A1.j,1000279,,UR035,-3.66,33,17,2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 26 27 28 30 32 48 50 54 60 63 70 73 85 90 100 111 120 247,0.485,1.02,112,57,Cuentas de Gonzalo de Valencia ca. 1565: cargo y data de pesos de plata (corrien
+A1.j,1000302,KH0372,UR131C,-4.79,19,7,2 3 4 6 7 8 10 12 16 20 24 30 42 50 54 63 70 111 265,0.485,1.02,112,57,Cuentas de Gonzalo de Valencia ca. 1565: cargo y data de pesos de plata (corrien
+A1.k,1000316,KH0369,UR130,0.3,1,1,60,0.523,0.45,1,1,"Declaración de quipus hecha por los curacas de Arica, presentada por Gonzalo de "
+A1.k,1000298,KH0294,UR058A,0.25,1,1,60,0.523,0.45,1,1,"Declaración de quipus hecha por los curacas de Arica, presentada por Gonzalo de "
+A1.k,6000023,KH0083,KH0083,0.0,1,1,60,0.523,0.45,1,1,"Declaración de quipus hecha por los curacas de Arica, presentada por Gonzalo de "
+A1.k,1000279,,UR035,0.0,1,1,60,0.523,0.45,1,1,"Declaración de quipus hecha por los curacas de Arica, presentada por Gonzalo de "
+A1.k,1000096,KH0082,AS069,0.0,1,1,60,0.523,0.45,1,1,"Declaración de quipus hecha por los curacas de Arica, presentada por Gonzalo de "
+A1.l,1000095,,AS070,-0.71,0,0,,0.9142,1.36,3,3,Declaración jurada de los caciques del repartimiento de Tarapacá que 'visto y ex
+A1.l,6000023,KH0083,KH0083,-0.71,0,0,,0.9142,1.36,3,3,Declaración jurada de los caciques del repartimiento de Tarapacá que 'visto y ex
+A1.l,1000279,,UR035,-0.71,0,0,,0.9142,1.36,3,3,Declaración jurada de los caciques del repartimiento de Tarapacá que 'visto y ex
+A1.l,1000096,KH0082,AS069,-0.74,0,0,,0.9142,1.36,3,3,Declaración jurada de los caciques del repartimiento de Tarapacá que 'visto y ex
+A1.l,1000300,KH0370,UR131A,-0.82,0,0,,0.9142,1.36,3,3,Declaración jurada de los caciques del repartimiento de Tarapacá que 'visto y ex
+A1.m,6000023,KH0083,KH0083,-4.47,24,9,2 3 4 10 12 15 18 20 30 37 50 54 56 60 72 79 80 109 130 186 379 385 683 761,0.2595,-2.29,67,64,"Visita General y Tasa del virrey Francisco de Toledo, repartimientos de la antig"
+A1.m,1000279,,UR035,-4.47,24,9,2 3 4 10 12 15 18 20 30 37 50 54 56 60 72 79 80 109 130 186 379 385 683 761,0.2595,-2.29,67,64,"Visita General y Tasa del virrey Francisco de Toledo, repartimientos de la antig"
+A1.m,1000095,,AS070,-6.41,23,9,2 3 4 10 12 15 18 20 30 37 50 54 56 60 79 80 109 127 130 134 186 379 761,0.2595,-2.29,67,64,"Visita General y Tasa del virrey Francisco de Toledo, repartimientos de la antig"
+A1.m,1000096,KH0082,AS069,-7.82,22,10,2 3 4 10 12 15 18 20 30 37 42 50 54 56 60 72 80 109 130 205 230 582,0.2595,-2.29,67,64,"Visita General y Tasa del virrey Francisco de Toledo, repartimientos de la antig"
+A1.m,1000302,KH0372,UR131C,-10.85,14,6,2 3 4 10 12 15 20 30 42 50 54 80 134 264,0.2595,-2.29,67,64,"Visita General y Tasa del virrey Francisco de Toledo, repartimientos de la antig"
+A1.n,1000316,KH0369,UR130,-0.68,1,1,50,0.9381,1.2,4,4,Documento de 1578 (Barriga 1940a: 74-75) y visita de Manuel Enríquez ca. 1584 (A
+A1.n,1000298,KH0294,UR058A,-0.73,1,1,50,0.9381,1.2,4,4,Documento de 1578 (Barriga 1940a: 74-75) y visita de Manuel Enríquez ca. 1584 (A
+A1.n,1000302,KH0372,UR131C,-0.76,1,1,50,0.9381,1.2,4,4,Documento de 1578 (Barriga 1940a: 74-75) y visita de Manuel Enríquez ca. 1584 (A
+A1.n,1000301,KH0371,UR131B,-0.76,1,1,50,0.9381,1.2,4,4,Documento de 1578 (Barriga 1940a: 74-75) y visita de Manuel Enríquez ca. 1584 (A
+A1.n,1000300,KH0370,UR131A,-0.77,1,1,50,0.9381,1.2,4,4,Documento de 1578 (Barriga 1940a: 74-75) y visita de Manuel Enríquez ca. 1584 (A

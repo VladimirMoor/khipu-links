@@ -1,0 +1,16 @@
+# сторонние данные (скачиваются из первоисточников, см. README)
+data/
+# чужие публикации (авторское право)
+sources/
+# производные полного корпуса OKR/KFG (пересобираются скриптами)
+extracted/okr_cords.csv
+extracted/kfg_cords.csv
+extracted/plus_cords.csv
+extracted/*_khipus.json
+# личное
+report/letter_*.txt
+# служебное
+__pycache__/
+*.pyc
+.DS_Store
+.claude/

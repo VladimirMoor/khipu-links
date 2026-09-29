@@ -1,0 +1,71 @@
+doc,khipu_id,okr,inv,score,n_hits,lcs_ge10,hits,p_best,null_q95,n_doc_values,n_distinct,title
+H1.a,1000006,KH0243,UR007,1.36,3,0,3 5 6,0.6507,2.38,8,4,"Testimonio de una información sobre curacazgos en la visita de Leimebamba, visit"
+H1.a,1000019,KH0245,UR009,1.06,4,0,3 5 6 9,0.6507,2.38,8,4,"Testimonio de una información sobre curacazgos en la visita de Leimebamba, visit"
+H1.a,1000011,KH0250,UR014,1.0,4,0,3 5 6 9,0.6507,2.38,8,4,"Testimonio de una información sobre curacazgos en la visita de Leimebamba, visit"
+H1.a,1000022,KH0257,UR021,0.87,4,0,3 5 6 9,0.6507,2.38,8,4,"Testimonio de una información sobre curacazgos en la visita de Leimebamba, visit"
+H1.a,1000020,KH0239,UR003,0.76,4,0,3 5 6 9,0.6507,2.38,8,4,"Testimonio de una información sobre curacazgos en la visita de Leimebamba, visit"
+H1.d,1000006,KH0243,UR007,0.51,1,0,3,0.517,0.59,1,1,Escrito de don Francisco Guamán en respuesta a don Cristóbal Chuillaxa; Leimebam
+H1.d,1000000,KH0255,UR019,0.35,1,0,3,0.517,0.59,1,1,Escrito de don Francisco Guamán en respuesta a don Cristóbal Chuillaxa; Leimebam
+H1.d,1000019,KH0245,UR009,0.21,1,0,3,0.517,0.59,1,1,Escrito de don Francisco Guamán en respuesta a don Cristóbal Chuillaxa; Leimebam
+H1.d,1000011,KH0250,UR014,0.2,1,0,3,0.517,0.59,1,1,Escrito de don Francisco Guamán en respuesta a don Cristóbal Chuillaxa; Leimebam
+H1.d,1000022,KH0257,UR021,0.17,1,0,3,0.517,0.59,1,1,Escrito de don Francisco Guamán en respuesta a don Cristóbal Chuillaxa; Leimebam
+H1.e,1000006,KH0243,UR007,1.25,3,1,3 4 10,0.501,2.07,7,4,"Información de oficio sobre el curacazgo de Leimebamba y Cochabamba, visitador D"
+H1.e,1000022,KH0257,UR021,0.96,4,1,3 4 10 50,0.501,2.07,7,4,"Información de oficio sobre el curacazgo de Leimebamba y Cochabamba, visitador D"
+H1.e,1000008,KH0249,UR013,0.75,4,1,3 4 10 50,0.501,2.07,7,4,"Información de oficio sobre el curacazgo de Leimebamba y Cochabamba, visitador D"
+H1.e,1000019,KH0245,UR009,0.38,3,1,3 4 10,0.501,2.07,7,4,"Información de oficio sobre el curacazgo de Leimebamba y Cochabamba, visitador D"
+H1.e,1000000,KH0255,UR019,0.24,2,1,3 10,0.501,2.07,7,4,"Información de oficio sobre el curacazgo de Leimebamba y Cochabamba, visitador D"
+H1.f,1000006,KH0243,UR007,0.2,1,0,2,0.7685,0.28,2,2,Memorial de alegaciones de la parte de don Alonso Chuquimis (procurador Juan Sán
+H1.f,1000000,KH0255,UR019,0.05,1,0,2,0.7685,0.28,2,2,Memorial de alegaciones de la parte de don Alonso Chuquimis (procurador Juan Sán
+H1.f,1000019,KH0245,UR009,-0.09,1,0,2,0.7685,0.28,2,2,Memorial de alegaciones de la parte de don Alonso Chuquimis (procurador Juan Sán
+H1.f,1000011,KH0250,UR014,-0.11,1,0,2,0.7685,0.28,2,2,Memorial de alegaciones de la parte de don Alonso Chuquimis (procurador Juan Sán
+H1.f,1000022,KH0257,UR021,-0.14,1,0,2,0.7685,0.28,2,2,Memorial de alegaciones de la parte de don Alonso Chuquimis (procurador Juan Sán
+H1.g,1000006,KH0243,UR007,2.97,7,1,2 3 4 5 6 10 11,0.006,2.43,22,10,Información sobre los curacazgos de Leimebamba y Cochabamba por don Diego de Viz
+H1.g,1000019,KH0245,UR009,1.97,9,2,2 3 4 5 6 8 10 11 12,0.006,2.43,22,10,Información sobre los curacazgos de Leimebamba y Cochabamba por don Diego de Viz
+H1.g,1000020,KH0239,UR003,1.3,9,2,2 3 4 5 6 8 10 11 12,0.006,2.43,22,10,Información sobre los curacazgos de Leimebamba y Cochabamba por don Diego de Viz
+H1.g,1000022,KH0257,UR021,1.08,8,1,2 3 4 5 6 8 10 11,0.006,2.43,22,10,Información sobre los curacazgos de Leimebamba y Cochabamba por don Diego de Viz
+H1.g,1000011,KH0250,UR014,0.97,7,2,2 3 5 6 8 10 11,0.006,2.43,22,10,Información sobre los curacazgos de Leimebamba y Cochabamba por don Diego de Viz
+H1.h,1000001,KH0244,UR008,1.3,1,1,200,0.1936,1.3,1,1,"Memoria de las cosas primeras que acontecieron en Los Chachapoyas, de don Juan d"
+H1.h,1000003,KH0254,UR018,0.66,1,1,200,0.1936,1.3,1,1,"Memoria de las cosas primeras que acontecieron en Los Chachapoyas, de don Juan d"
+H1.h,6000072,KH0237,UR001,0.12,1,1,200,0.1936,1.3,1,1,"Memoria de las cosas primeras que acontecieron en Los Chachapoyas, de don Juan d"
+H1.h,1000007,KH0247,UR011,-0.05,0,0,,0.1936,1.3,1,1,"Memoria de las cosas primeras que acontecieron en Los Chachapoyas, de don Juan d"
+H1.h,6000073,KH0240,UR004,-0.16,0,0,,0.1936,1.3,1,1,"Memoria de las cosas primeras que acontecieron en Los Chachapoyas, de don Juan d"
+H1.i,1000007,KH0247,UR011,-14.8,26,7,2 3 4 25 30 41 52 61 74 87 94 95 105 108 120 124 128 129 144 154 161 199 216 278 1500 2000,0.9481,-7.77,143,114,"Cristóbal de Miranda, Relación de los oficios que se proveen en el Reino del Per"
+H1.i,6000072,KH0237,UR001,-16.55,17,7,2 3 4 30 41 52 87 94 105 150 199 250 353 600 855 1004 1610,0.9481,-7.77,143,114,"Cristóbal de Miranda, Relación de los oficios que se proveen en el Reino del Per"
+H1.i,1000045,KH0258,UR022,-17.75,20,4,2 3 4 25 30 39 61 66 74 78 87 91 98 99 128 129 144 160 161 173,0.9481,-7.77,143,114,"Cristóbal de Miranda, Relación de los oficios que se proveen en el Reino del Per"
+H1.i,6000073,KH0240,UR004,-20.45,17,6,2 3 4 25 30 39 41 42 52 61 89 91 108 144 154 191 329,0.9481,-7.77,143,114,"Cristóbal de Miranda, Relación de los oficios que se proveen en el Reino del Per"
+H1.i,1000018,KH0252,UR016,-21.7,12,4,2 3 4 25 30 66 74 89 91 99 530 1239,0.9481,-7.77,143,114,"Cristóbal de Miranda, Relación de los oficios que se proveen en el Reino del Per"
+H1.j,1000020,KH0239,UR003,1.01,5,0,12 13 19 40 45,0.4731,1.86,9,9,Renta situada y consignada para la paga de la guarda de a pie de los virreyes: C
+H1.j,1000009,KH0248,UR012,0.48,6,4,12 13 19 32 40 103,0.4731,1.86,9,9,Renta situada y consignada para la paga de la guarda de a pie de los virreyes: C
+H1.j,6000072,KH0237,UR001,0.48,6,2,13 19 32 45 81 103,0.4731,1.86,9,9,Renta situada y consignada para la paga de la guarda de a pie de los virreyes: C
+H1.j,1000025,KH0242,UR006,0.33,6,4,12 13 19 32 40 76,0.4731,1.86,9,9,Renta situada y consignada para la paga de la guarda de a pie de los virreyes: C
+H1.j,1000007,KH0247,UR011,0.17,6,4,12 13 19 32 76 81,0.4731,1.86,9,9,Renta situada y consignada para la paga de la guarda de a pie de los virreyes: C
+H1.k,1000007,KH0247,UR011,0.69,1,1,1500,0.1816,1.58,2,2,"Probanza/declaración sobre los caciques de la encomienda de Alonso de Alvarado, "
+H1.k,6000072,KH0237,UR001,0.2,1,1,1000,0.1816,1.58,2,2,"Probanza/declaración sobre los caciques de la encomienda de Alonso de Alvarado, "
+H1.k,6000073,KH0240,UR004,-0.53,0,0,,0.1816,1.58,2,2,"Probanza/declaración sobre los caciques de la encomienda de Alonso de Alvarado, "
+H1.k,1000012,KH0238,UR002,-0.54,0,0,,0.1816,1.58,2,2,"Probanza/declaración sobre los caciques de la encomienda de Alonso de Alvarado, "
+H1.k,1000045,KH0258,UR022,-0.54,0,0,,0.1816,1.58,2,2,"Probanza/declaración sobre los caciques de la encomienda de Alonso de Alvarado, "
+H1.l,1000007,KH0247,UR011,0.69,2,1,5 1500,0.1816,1.58,3,3,Disminución de los tributarios de la parcialidad de los Chilchos (documento colo
+H1.l,6000072,KH0237,UR001,0.2,2,1,5 1000,0.1816,1.58,3,3,Disminución de los tributarios de la parcialidad de los Chilchos (documento colo
+H1.l,1000001,KH0244,UR008,-0.01,1,0,5,0.1816,1.58,3,3,Disminución de los tributarios de la parcialidad de los Chilchos (documento colo
+H1.l,1000006,KH0243,UR007,-0.05,1,0,5,0.1816,1.58,3,3,Disminución de los tributarios de la parcialidad de los Chilchos (documento colo
+H1.l,1000019,KH0245,UR009,-0.35,1,0,5,0.1816,1.58,3,3,Disminución de los tributarios de la parcialidad de los Chilchos (documento colo
+H1.m,6000072,KH0237,UR001,0.62,6,4,2 20 46 50 150 2800,0.1836,1.42,11,11,"Tributos exigidos a la encomienda de Chilcho y Laya por Juan Pérez de Guevara, 1"
+H1.m,1000012,KH0238,UR002,0.5,5,2,2 20 33 150 1054,0.1836,1.42,11,11,"Tributos exigidos a la encomienda de Chilcho y Laya por Juan Pérez de Guevara, 1"
+H1.m,1000025,KH0242,UR006,-0.4,5,1,2 20 33 46 150,0.1836,1.42,11,11,"Tributos exigidos a la encomienda de Chilcho y Laya por Juan Pérez de Guevara, 1"
+H1.m,1000008,KH0249,UR013,-1.09,3,2,2 33 50,0.1836,1.42,11,11,"Tributos exigidos a la encomienda de Chilcho y Laya por Juan Pérez de Guevara, 1"
+H1.m,1000022,KH0257,UR021,-1.36,3,1,2 20 50,0.1836,1.42,11,11,"Tributos exigidos a la encomienda de Chilcho y Laya por Juan Pérez de Guevara, 1"
+H1.n,1000012,KH0238,UR002,-1.27,1,1,394,0.9062,1.19,12,12,Total de tributos recogidos por Juan Pérez de Guevara de Chilchos y Laya 'en eso
+H1.n,1000001,KH0244,UR008,-1.92,1,1,200,0.9062,1.19,12,12,Total de tributos recogidos por Juan Pérez de Guevara de Chilchos y Laya 'en eso
+H1.n,1000010,KH0251,UR015,-2.08,3,2,6 60 90,0.9062,1.19,12,12,Total de tributos recogidos por Juan Pérez de Guevara de Chilchos y Laya 'en eso
+H1.n,1000003,KH0254,UR018,-2.13,2,1,6 200,0.9062,1.19,12,12,Total de tributos recogidos por Juan Pérez de Guevara de Chilchos y Laya 'en eso
+H1.n,1000008,KH0249,UR013,-2.27,1,1,90,0.9062,1.19,12,12,Total de tributos recogidos por Juan Pérez de Guevara de Chilchos y Laya 'en eso
+H1.o,1000000,KH0255,UR019,0.77,1,0,100,0.5449,1.3,1,1,Pleito de los caciques de Leymebamba y Los Chilchos contra el encomendero Juan P
+H1.o,1000002,KH0256,UR020,0.38,1,1,100,0.5449,1.3,1,1,Pleito de los caciques de Leymebamba y Los Chilchos contra el encomendero Juan P
+H1.o,1000003,KH0254,UR018,0.36,1,1,100,0.5449,1.3,1,1,Pleito de los caciques de Leymebamba y Los Chilchos contra el encomendero Juan P
+H1.o,1000009,KH0248,UR012,0.2,1,1,100,0.5449,1.3,1,1,Pleito de los caciques de Leymebamba y Los Chilchos contra el encomendero Juan P
+H1.o,1000010,KH0251,UR015,0.13,1,1,100,0.5449,1.3,1,1,Pleito de los caciques de Leymebamba y Los Chilchos contra el encomendero Juan P
+H1.p,1000018,KH0252,UR016,1.38,11,7,3 7 9 10 11 12 16 22 26 56 91,0.501,2.5,15,12,"Libro de visitas del arzobispo Toribio de Mogrovejo, segunda visita pastoral, 15"
+H1.p,6000074,KH0253,UR017,1.26,10,5,3 7 9 10 11 16 22 26 28 56,0.501,2.5,15,12,"Libro de visitas del arzobispo Toribio de Mogrovejo, segunda visita pastoral, 15"
+H1.p,1000019,KH0245,UR009,0.87,7,3,3 7 9 10 11 12 16,0.501,2.5,15,12,"Libro de visitas del arzobispo Toribio de Mogrovejo, segunda visita pastoral, 15"
+H1.p,1000000,KH0255,UR019,0.71,5,2,3 9 10 12 28,0.501,2.5,15,12,"Libro de visitas del arzobispo Toribio de Mogrovejo, segunda visita pastoral, 15"
+H1.p,1000012,KH0238,UR002,0.51,11,5,3 7 9 10 11 12 16 22 26 28 91,0.501,2.5,15,12,"Libro de visitas del arzobispo Toribio de Mogrovejo, segunda visita pastoral, 15"

@@ -1,0 +1,96 @@
+doc,khipu_id,okr,inv,score,n_hits,lcs_ge10,hits,p_best,null_q95,n_doc_values,n_distinct,title
+C1.a,1000050,KH0120,UR1106,1.85,9,5,2 3 4 23 24 30 40 100 653,0.4186,3.14,26,17,Declaración de caciques y quipocamayos de Lucanas-Laramati (pareados) ante el co
+C1.a,1000359,KH0347,UR111,1.25,10,2,2 3 4 5 7 23 24 40 100 300,0.4186,3.14,26,17,Declaración de caciques y quipocamayos de Lucanas-Laramati (pareados) ante el co
+C1.a,1000239,KH0278,UR048,0.88,8,0,2 3 4 5 7 16 24 530,0.4186,3.14,26,17,Declaración de caciques y quipocamayos de Lucanas-Laramati (pareados) ante el co
+C1.a,1000108,KH0038,UR1033D,0.71,8,2,2 3 4 5 7 16 24 30,0.4186,3.14,26,17,Declaración de caciques y quipocamayos de Lucanas-Laramati (pareados) ante el co
+C1.a,1000620,KH0515,UR276,0.68,7,1,3 4 5 7 16 23 24,0.4186,3.14,26,17,Declaración de caciques y quipocamayos de Lucanas-Laramati (pareados) ante el co
+C1.b,1000137,KH0180,UR1163,1.44,1,0,274,0.8738,2.82,4,3,Petición de los curacas y principales del repartimiento de los Lucanas (encomend
+C1.b,1000357,KH0344,UR108,1.36,1,1,275,0.8738,2.82,4,3,Petición de los curacas y principales del repartimiento de los Lucanas (encomend
+C1.b,6000084,KH0395,UR155,1.33,1,0,274,0.8738,2.82,4,3,Petición de los curacas y principales del repartimiento de los Lucanas (encomend
+C1.b,1000536,KH0463,UR226,1.24,2,2,23 274,0.8738,2.82,4,3,Petición de los curacas y principales del repartimiento de los Lucanas (encomend
+C1.b,1000529,KH0456,UR218,1.18,2,2,23 275,0.8738,2.82,4,3,Petición de los curacas y principales del repartimiento de los Lucanas (encomend
+C2.b,1000143,KH0186,AS169,3.47,8,0,2 3 4 5 6 8 9 13,0.1528,3.83,14,9,Escrito de los caciques principales sobre el tributo adelantado a don Luis de To
+C2.b,1000227,KH0107,AS094,3.33,8,0,2 3 4 5 6 8 9 16,0.1528,3.83,14,9,Escrito de los caciques principales sobre el tributo adelantado a don Luis de To
+C2.b,1000567,KH0568,HP038,3.21,9,0,2 3 4 5 6 8 9 13 16,0.1528,3.83,14,9,Escrito de los caciques principales sobre el tributo adelantado a don Luis de To
+C2.b,1000438,KH0551,HP019,3.02,6,0,2 3 4 6 9 16,0.1528,3.83,14,9,Escrito de los caciques principales sobre el tributo adelantado a don Luis de To
+C2.b,1000171,KH0071,AS060,2.89,7,0,2 3 4 5 6 8 9,0.1528,3.83,14,9,Escrito de los caciques principales sobre el tributo adelantado a don Luis de To
+C2.c,1000435,KH0548,HP016,2.71,7,0,2 3 4 5 7 10 12,0.5748,3.98,38,12,Cuenta de la tercia parte de los tributos de los angaraes perteneciente a Pero G
+C2.c,1000405,KH0390,UR150,2.22,9,3,2 3 4 5 7 10 12 25 50,0.5748,3.98,38,12,Cuenta de la tercia parte de los tributos de los angaraes perteneciente a Pero G
+C2.c,1000000,KH0255,UR019,1.93,6,1,2 3 10 12 48 100,0.5748,3.98,38,12,Cuenta de la tercia parte de los tributos de los angaraes perteneciente a Pero G
+C2.c,1000527,KH0454,UR216,1.81,7,1,2 3 4 5 7 48 50,0.5748,3.98,38,12,Cuenta de la tercia parte de los tributos de los angaraes perteneciente a Pero G
+C2.c,1000239,KH0278,UR048,1.77,9,6,2 3 4 5 7 10 12 25 48,0.5748,3.98,38,12,Cuenta de la tercia parte de los tributos de los angaraes perteneciente a Pero G
+C3.a,1000091,KH0149,AS133,0.73,5,3,20 40 50 290 292,0.5116,2.35,21,16,Averiguación del corregidor Polo de Ondegardo sobre lo que Martín de Robles llev
+C3.a,1000554,KH0476,UR240,0.12,6,3,20 40 50 100 162 292,0.5116,2.35,21,16,Averiguación del corregidor Polo de Ondegardo sobre lo que Martín de Robles llev
+C3.a,1000519,KH0446,UR208,-0.32,7,6,8 20 40 50 100 240 290,0.5116,2.35,21,16,Averiguación del corregidor Polo de Ondegardo sobre lo que Martín de Robles llev
+C3.a,1000051,KH0121,UR1107,-0.32,4,3,40 50 100 800,0.5116,2.35,21,16,Averiguación del corregidor Polo de Ondegardo sobre lo que Martín de Robles llev
+C3.a,1000280,KH0321,UR085,-0.34,7,3,8 20 50 100 162 240 292,0.5116,2.35,21,16,Averiguación del corregidor Polo de Ondegardo sobre lo que Martín de Robles llev
+C4.a,1000127,KH0168,UR1152,1.02,11,5,2 4 7 10 12 29 40 72 275 400 608,0.9203,3.14,38,28,"Declaración de Lorenzo Astuya, yanacona y contador (quipucamayoc) en las haciend"
+C4.a,1000079,KH0137,UR1123,0.97,12,8,10 12 20 22 30 32 34 40 72 83 380 400,0.9203,3.14,38,28,"Declaración de Lorenzo Astuya, yanacona y contador (quipucamayoc) en las haciend"
+C4.a,1000280,KH0321,UR085,0.78,18,10,2 4 7 10 12 14 20 22 23 27 29 30 34 72 83 216 282 380,0.9203,3.14,38,28,"Declaración de Lorenzo Astuya, yanacona y contador (quipucamayoc) en las haciend"
+C4.a,1000238,KH0279,UR049,0.54,13,8,2 7 10 12 14 20 23 30 34 40 216 230 608,0.9203,3.14,38,28,"Declaración de Lorenzo Astuya, yanacona y contador (quipucamayoc) en las haciend"
+C4.a,1000593,KH0569,HP039,0.43,11,6,7 10 14 22 23 27 29 34 230 282 400,0.9203,3.14,38,28,"Declaración de Lorenzo Astuya, yanacona y contador (quipucamayoc) en las haciend"
+C4.c,1000513,KH0440,UR202,2.28,8,5,5 6 20 30 70 100 150 225,0.3787,2.97,20,13,Información presentada por Pedro de Berrio Manrique sobre la poca participación 
+C4.c,1000051,KH0121,UR1107,2.19,6,3,6 30 70 80 100 145,0.3787,2.97,20,13,Información presentada por Pedro de Berrio Manrique sobre la poca participación 
+C4.c,1000537,KH0464,UR227,1.94,5,2,20 30 70 80 100,0.3787,2.97,20,13,Información presentada por Pedro de Berrio Manrique sobre la poca participación 
+C4.c,6000054,QU005,QU005,1.57,7,3,5 20 30 80 150 200 225,0.3787,2.97,20,13,Información presentada por Pedro de Berrio Manrique sobre la poca participación 
+C4.c,1000538,KH0465,UR228,1.47,5,3,20 30 70 80 100,0.3787,2.97,20,13,Información presentada por Pedro de Berrio Manrique sobre la poca participación 
+C6.e,1000151,KH0196,UR1179,1.76,1,1,4000,0.7276,2.68,1,1,Entrega de las estancias de Tulpo y Yamobamba por José Ruiz de Arana: testimonio
+C6.e,1000201,KH0031,AS029,1.22,1,1,4000,0.7276,2.68,1,1,Entrega de las estancias de Tulpo y Yamobamba por José Ruiz de Arana: testimonio
+C6.e,1000512,KH0439,UR201,1.2,1,1,4000,0.7276,2.68,1,1,Entrega de las estancias de Tulpo y Yamobamba por José Ruiz de Arana: testimonio
+C6.e,1000619,KH0514,UR275,1.16,1,0,4000,0.7276,2.68,1,1,Entrega de las estancias de Tulpo y Yamobamba por José Ruiz de Arana: testimonio
+C6.e,1000323,KH0362,UR122,1.15,1,1,4000,0.7276,2.68,1,1,Entrega de las estancias de Tulpo y Yamobamba por José Ruiz de Arana: testimonio
+C6.f,1000151,KH0196,UR1179,1.29,1,1,4000,0.9668,2.89,5,4,"Entrega de las estancias de Tulpo y Yamobamba: testimonio de Agustín Guacaspoma,"
+C6.f,1000393,KH0402,UR162,1.28,1,1,1500,0.9668,2.89,5,4,"Entrega de las estancias de Tulpo y Yamobamba: testimonio de Agustín Guacaspoma,"
+C6.f,6000040,MM013,MM013,1.22,2,0,2 6,0.9668,2.89,5,4,"Entrega de las estancias de Tulpo y Yamobamba: testimonio de Agustín Guacaspoma,"
+C6.f,1000430,KH0543,HP011,1.2,2,1,2 1500,0.9668,2.89,5,4,"Entrega de las estancias de Tulpo y Yamobamba: testimonio de Agustín Guacaspoma,"
+C6.f,1000146,KH0189,AS172,1.11,2,1,6 1500,0.9668,2.89,5,4,"Entrega de las estancias de Tulpo y Yamobamba: testimonio de Agustín Guacaspoma,"
+C6.j,1000334,,AS038,-2.53,13,8,2 6 7 9 10 11 12 13 20 849 932 976 1093,1.0,2.94,48,39,"Cuadro 2: Pedro Cerón entrega las cuentas de ganado a José Altamirano, Tulpo, 9-"
+C6.j,6000017,KH0049,KH0049,-2.57,14,7,2 6 7 9 10 11 12 13 20 100 849 932 976 1093,1.0,2.94,48,39,"Cuadro 2: Pedro Cerón entrega las cuentas de ganado a José Altamirano, Tulpo, 9-"
+C6.j,1000565,,HP036,-2.57,14,7,2 6 7 9 10 11 12 13 20 100 849 932 976 1093,1.0,2.94,48,39,"Cuadro 2: Pedro Cerón entrega las cuentas de ganado a José Altamirano, Tulpo, 9-"
+C6.j,1000608,KH0503,UR267A,-3.11,5,2,91 95 100 206 412,1.0,2.94,48,39,"Cuadro 2: Pedro Cerón entrega las cuentas de ganado a José Altamirano, Tulpo, 9-"
+C6.j,1000297,KH0292,UR056C,-3.41,10,3,2 6 7 9 10 11 12 13 20 179,1.0,2.94,48,39,"Cuadro 2: Pedro Cerón entrega las cuentas de ganado a José Altamirano, Tulpo, 9-"
+C6.k,6000023,KH0083,KH0083,-0.96,21,10,3 5 7 10 11 19 20 28 29 30 39 40 64 76 128 186 547 580 611 619 641,0.9834,3.89,58,50,"Cuadro 3: Memoria del conteo ante el juez Jerónimo de Espinosa, cuentas de Tulpo"
+C6.k,1000279,,UR035,-0.96,21,10,3 5 7 10 11 19 20 28 29 30 39 40 64 76 128 186 547 580 611 619 641,0.9834,3.89,58,50,"Cuadro 3: Memoria del conteo ante el juez Jerónimo de Espinosa, cuentas de Tulpo"
+C6.k,1000238,KH0279,UR049,-1.85,16,8,3 5 7 10 11 20 28 30 40 64 77 278 390 574 588 610,0.9834,3.89,58,50,"Cuadro 3: Memoria del conteo ante el juez Jerónimo de Espinosa, cuentas de Tulpo"
+C6.k,1000095,,AS070,-1.97,21,10,3 5 7 10 11 19 20 28 29 30 40 59 64 76 77 128 186 547 580 611 641,0.9834,3.89,58,50,"Cuadro 3: Memoria del conteo ante el juez Jerónimo de Espinosa, cuentas de Tulpo"
+C6.k,1000607,KH0502,UR266,-2.31,11,4,5 11 19 20 30 265 332 342 611 641 685,0.9834,3.89,58,50,"Cuadro 3: Memoria del conteo ante el juez Jerónimo de Espinosa, cuentas de Tulpo"
+C6.l,6000023,KH0083,KH0083,-1.61,13,6,3 22 30 34 35 48 50 76 120 211 345 374 611,0.9934,2.33,37,34,Cuadro 4: Conteo del ganado a entregar a Diego Casolín de Arratia por Francisco 
+C6.l,1000279,,UR035,-1.61,13,6,3 22 30 34 35 48 50 76 120 211 345 374 611,0.9934,2.33,37,34,Cuadro 4: Conteo del ganado a entregar a Diego Casolín de Arratia por Francisco 
+C6.l,1000598,KH0492,UR256,-1.85,8,3,3 35 50 59 76 535 610 620,0.9934,2.33,37,34,Cuadro 4: Conteo del ganado a entregar a Diego Casolín de Arratia por Francisco 
+C6.l,1000095,,AS070,-2.1,14,7,3 22 30 34 35 43 48 50 59 76 120 345 374 611,0.9934,2.33,37,34,Cuadro 4: Conteo del ganado a entregar a Diego Casolín de Arratia por Francisco 
+C6.l,6000060,QU011,QU011,-2.29,8,3,3 22 35 43 76 345 500 826,0.9934,2.33,37,34,Cuadro 4: Conteo del ganado a entregar a Diego Casolín de Arratia por Francisco 
+C6.m,1000495,KH0425,UR187,0.91,5,2,9 10 19 539 854,0.907,3.31,16,15,"Cuadro 5: Recibo del ganado del ahijadero de Yamobamba, 4 mayo 1626, ARC, leg. 1"
+C6.m,1000617,KH0512,UR274A,0.76,3,2,10 591 671,0.907,3.31,16,15,"Cuadro 5: Recibo del ganado del ahijadero de Yamobamba, 4 mayo 1626, ARC, leg. 1"
+C6.m,1000095,,AS070,0.62,8,4,9 10 19 43 48 50 580 671,0.907,3.31,16,15,"Cuadro 5: Recibo del ganado del ahijadero de Yamobamba, 4 mayo 1626, ARC, leg. 1"
+C6.m,1000127,KH0168,UR1152,0.46,5,2,9 10 50 600 631,0.907,3.31,16,15,"Cuadro 5: Recibo del ganado del ahijadero de Yamobamba, 4 mayo 1626, ARC, leg. 1"
+C6.m,1000541,KH0468,UR231,0.17,7,6,10 19 43 48 50 141 539,0.907,3.31,16,15,"Cuadro 5: Recibo del ganado del ahijadero de Yamobamba, 4 mayo 1626, ARC, leg. 1"
+C6.n,1000409,KH0381,UR141,-0.24,4,3,29 30 240 622,0.9934,3.21,26,23,"Cuadro 6: Entrega del ganado a Diego Melgarejo, Yamobamba, 28 noviembre 1631, AR"
+C6.n,1000201,KH0031,AS029,-0.24,6,3,3 30 41 600 745 795,0.9934,3.21,26,23,"Cuadro 6: Entrega del ganado a Diego Melgarejo, Yamobamba, 28 noviembre 1631, AR"
+C6.n,6000070,QU021,QU021,-0.36,7,1,3 30 40 55 56 65 795,0.9934,3.21,26,23,"Cuadro 6: Entrega del ganado a Diego Melgarejo, Yamobamba, 28 noviembre 1631, AR"
+C6.n,1000127,KH0168,UR1152,-0.7,7,2,3 29 40 56 122 600 782,0.9934,3.21,26,23,"Cuadro 6: Entrega del ganado a Diego Melgarejo, Yamobamba, 28 noviembre 1631, AR"
+C6.n,6000072,KH0237,UR001,-0.81,8,3,3 29 30 41 122 240 504 600,0.9934,3.21,26,23,"Cuadro 6: Entrega del ganado a Diego Melgarejo, Yamobamba, 28 noviembre 1631, AR"
+C6.o,1000612,KH0507,UR270,0.21,15,8,14 20 26 30 35 38 50 54 64 71 74 117 171 175 724,0.9635,2.83,27,26,"Cuadro 7: Entrega del ganado a Diego Melgarejo, Tulpo, 1-4 diciembre 1631, ARC, "
+C6.o,1000127,KH0168,UR1152,-0.2,7,3,2 4 26 50 54 369 853,0.9635,2.83,27,26,"Cuadro 7: Entrega del ganado a Diego Melgarejo, Tulpo, 1-4 diciembre 1631, ARC, "
+C6.o,6000064,QU015,QU015,-0.49,9,3,2 4 14 20 26 30 54 493 579,0.9635,2.83,27,26,"Cuadro 7: Entrega del ganado a Diego Melgarejo, Tulpo, 1-4 diciembre 1631, ARC, "
+C6.o,1000164,KH0217,AS199,-0.96,8,2,2 14 30 50 54 64 71 493,0.9635,2.83,27,26,"Cuadro 7: Entrega del ganado a Diego Melgarejo, Tulpo, 1-4 diciembre 1631, ARC, "
+C6.o,6000022,KH0081,KH0081,-0.97,13,8,2 14 20 26 30 35 38 39 50 64 117 175 1043,0.9635,2.83,27,26,"Cuadro 7: Entrega del ganado a Diego Melgarejo, Tulpo, 1-4 diciembre 1631, ARC, "
+J1.b,1000589,KH0487,UR251,1.8,5,0,3 4 5 49 205,0.4651,2.7,11,10,"Declaración de don Carlos Limaylla, cacique principal de Luringuanca (encomienda"
+J1.b,1000012,KH0238,UR002,1.21,6,1,3 4 5 19 117 1543,0.4651,2.7,11,10,"Declaración de don Carlos Limaylla, cacique principal de Luringuanca (encomienda"
+J1.b,1000028,KH0223,AS205,1.02,4,0,3 4 5 19,0.4651,2.7,11,10,"Declaración de don Carlos Limaylla, cacique principal de Luringuanca (encomienda"
+J1.b,1000403,KH0393,UR153,0.87,1,1,978,0.4651,2.7,11,10,"Declaración de don Carlos Limaylla, cacique principal de Luringuanca (encomienda"
+J1.b,1000544,KH0471,UR234,0.81,1,0,7070,0.4651,2.7,11,10,"Declaración de don Carlos Limaylla, cacique principal de Luringuanca (encomienda"
+J1.g,1000259,KH0300,UR063,2.07,3,0,2 6 1439,0.3488,2.92,9,7,"Declaración de don Lorenço Quiquinpomaca, principal del repartimiento de Hanangu"
+J1.g,1000209,KH0052,AS041,1.71,5,2,2 14 40 59 300,0.3488,2.92,9,7,"Declaración de don Lorenço Quiquinpomaca, principal del repartimiento de Hanangu"
+J1.g,1000283,KH0353,UR116B,1.62,4,1,2 14 40 59,0.3488,2.92,9,7,"Declaración de don Lorenço Quiquinpomaca, principal del repartimiento de Hanangu"
+J1.g,1000291,KH0357,UR117D,1.04,4,1,2 6 14 40,0.3488,2.92,9,7,"Declaración de don Lorenço Quiquinpomaca, principal del repartimiento de Hanangu"
+J1.g,1000097,,UR1031,1.01,5,2,2 6 40 59 300,0.3488,2.92,9,7,"Declaración de don Lorenço Quiquinpomaca, principal del repartimiento de Hanangu"
+J1.i,1000117,KH0158,AS142,2.03,2,0,3 145,0.1362,2.26,2,2,"Declaración de don Antonio Çuniguacara, cacique de guaranga del repartimiento de"
+J1.i,1000060,KH0191,AS174,1.47,2,0,3 145,0.1362,2.26,2,2,"Declaración de don Antonio Çuniguacara, cacique de guaranga del repartimiento de"
+J1.i,1000183,KH0068,UR1057,1.25,2,1,3 145,0.1362,2.26,2,2,"Declaración de don Antonio Çuniguacara, cacique de guaranga del repartimiento de"
+J1.i,1000091,KH0149,AS133,1.25,2,1,3 145,0.1362,2.26,2,2,"Declaración de don Antonio Çuniguacara, cacique de guaranga del repartimiento de"
+J1.i,1000506,KH0433,UR195,1.21,2,0,3 145,0.1362,2.26,2,2,"Declaración de don Antonio Çuniguacara, cacique de guaranga del repartimiento de"
+J1.j,1000158,KH0203,AS185,3.14,18,4,2 3 4 5 6 7 8 9 10 15 19 23 25 29 35 37 40 48,0.1561,3.56,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000145,KH0188,AS171,2.63,16,3,3 4 5 6 7 10 12 14 15 19 23 25 30 35 48 72,0.1561,3.56,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,6000075,KH0271,UR039,2.18,19,7,4 5 6 7 8 9 10 11 12 14 15 25 29 30 35 36 37 40 44,0.1561,3.56,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000020,KH0239,UR003,2.15,18,2,2 3 4 5 6 7 8 9 10 11 12 14 15 19 21 29 37 40,0.1561,3.56,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 
+J1.j,1000413,KH0389,UR149,1.89,26,8,2 3 4 5 6 7 8 9 10 11 12 14 15 19 21 23 25 29 30 35 36 37 48 72 84 187,0.1561,3.56,49,30,Testimonio del escribano Melchor Pérez de Maridiena de las partidas de gasto en 

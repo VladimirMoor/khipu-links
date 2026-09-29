@@ -1,0 +1,249 @@
+seq,ayllu,pueblo,head_name,tributarios,viejos_reservados,ausentes,mujeres_adultas,viudas,muchachos,muchachas,ninos_ninas_sin_sexo,total_personas,page,confidence,notes
+1,(casa del cacique principal),San Francisco de Sisicaya,don Diego Chauca Guaman,1,,,1,,3,2,,7,125,high,"[casados] cacique principal 42.5 a.; 2a mujer dona Luisa Maclla; hijos Martin 13, Francisco 1, Graviel 2.5; hijas Luisa Maclla, Ana Cuca Yauya; sin marca {1} al margen; contado como tributario porque el resumen dice ""153 tributarios con el cacique""; exento de tasa como cacique; marca {1} al margen: no"
+2,Chillaco,San Francisco de Sisicaya,Felipe Chauca Livia,,1,,1,,,,,2,125,high,[casados] 57.5 a.; sin marca {1}; marca {1} al margen: no
+3,Chillaco,San Francisco de Sisicaya,Diego Chumbi Guaringa,1,,,1,,2,,,4,125,high,"[casados] hijo del anterior, 23.5; hijos 5.5, 1.5; entrada anterior ""anton chanca"" testada (no contada); marca {1} al margen: si"
+4,Chillaco,San Francisco de Sisicaya,Joan Caxa Vilca,1,,,1,,,,,2,125,high,[casados] 42.5; marca {1} al margen: si
+5,Chillaco,San Francisco de Sisicaya,Diego Chauca,,1,,1,,,,,2,125,high,[casados] 56.5; 2a mujer; marca {1} al margen: no
+6,Chillaco,San Francisco de Sisicaya,Cristoval Llongucha,1,,,1,,2,,,4,126,high,"[casados] hijo del anterior, 26.5; hijos 7.5, 2; marca {1} al margen: si"
+7,Chillaco,San Francisco de Sisicaya,Joan Tello Julca,1,,,1,,1,,,3,126,high,[casados] 23.5; hijo 6 meses; marca {1} al margen: si
+8,Chillaco,San Francisco de Sisicaya,Cristoval Choque Yalli,,1,,1,,,2,,4,126,high,[casados] 51.5; marca {1} al margen: no
+9,Chillaco,San Francisco de Sisicaya,Diego Llongo,1,,,1,,,,,2,126,medium,"[casados] hijo del anterior, 18.5, casado; sin marca {1} visible (fin de folio); marca {1} al margen: no"
+10,Chillaco,San Francisco de Sisicaya,Pedro Llonga Yauri,1,,,1,,,1,,3,126,high,[casados] 48.5; 2a mujer; marca {1} al margen: si
+11,Chillaco,San Francisco de Sisicaya,Diego Llacxa Yauri,1,,,1,,1,1,,4,126,high,"[casados] entenado, 24.5; hijo 1; marca {1} al margen: si"
+12,Chillaco,San Francisco de Sisicaya,Cristoval Curaca,1,,,1,,2,1,,5,126,high,"[casados] 42.5, lamparones; hijos Alonso 5, Francisco 6 meses, hija Maria; un hijo de la visita pasada muerto (no contado); marca {1} al margen: si"
+13,Chillaco,San Francisco de Sisicaya,Miguel Curaca,1,,,1,,1,,,3,127,high,"[casados] hijo del anterior, 19.5; hijo 10 dias; marca {1} al margen: si"
+14,Chillaco,San Francisco de Sisicaya,Cristoval Curacacha,1,,,1,,1,,,3,127,high,[casados] 21.5; hijo 2 meses; marca {1} al margen: si
+15,Chillaco,San Francisco de Sisicaya,Miguel Poma Yauri,,1,,1,,,1,,3,127,high,[casados] 58.5; marca {1} al margen: no
+16,Chillaco,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,,1,,3,127,high,[casados] 27.5; marca {1} al margen: si
+17,Chillaco,San Francisco de Sisicaya,Cristoval Curacache,,1,,1,,,,,2,127,high,"[casados] 24.5, cojo, reservado de tributo con consentimiento de don Sebastian; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+18,Chillaco,San Francisco de Sisicaya,Garcia Julca Chumbi,1,,,1,,,,,2,128,high,[casados] 22.5; marca {1} al margen: si
+19,Andapocro,San Francisco de Sisicaya,Cristoval Chumbi Caxa,,1,,1,,,2,,4,128,medium,"[casados] principal del ayllu, 44.5; marca {1} pero ""rreservose de tributo"" (anadido en letra apretada); hijo por bautizar muerto; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: si"
+20,Andapocro,San Francisco de Sisicaya,Alonso Chauca,1,,,1,,1,2,,5,129,high,[casados] 40.5; hijo Martin tullido 12; marca {1} al margen: si
+21,Andapocro,San Francisco de Sisicaya,Pedro Chauca,,1,,1,,1,,,3,129,medium,"[casados] 41.5, cojo, reservado; ""dexo su muger ynes pile"" (manca) - contada como presente; hijo 12; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+22,Andapocro,San Francisco de Sisicaya,Cristoval Lungo,1,,,1,,1,,,3,129,high,[casados] 20.5; hijo 1; marca {1} al margen: si
+23,Llangacapa,San Francisco de Sisicaya,Martyn Vilca Rocssi,1,,,1,,,,,2,129,high,"[casados] hijo de don Antonio Poma Llongo (principal difunto), 22.5; marca {1} al margen: si"
+24,Llangacapa,San Francisco de Sisicaya,don Gonzalo Caxa Sirve,,1,,1,,1,,,3,130,high,[casados] 54.5; hijo Gonzalo 6; otro hijo muerto; marca {1} al margen: no
+25,Llangacapa,San Francisco de Sisicaya,Diego Anche Caxa,1,,,1,,,,,2,130,high,"[casados] hijo del anterior, 21.5; marca {1} al margen: si"
+26,Llangacapa,San Francisco de Sisicaya,Marcos Caxa Sirve,,1,,1,,,1,,3,130,high,[casados] 55.5; marca {1} al margen: no
+27,Llangacapa,San Francisco de Sisicaya,Sebastian Ruricha,1,,,1,,1,,,3,130,high,"[casados] hijo del anterior, 18.5; hijo 3 meses; marca {1} al margen: si"
+28,Llangacapa,San Francisco de Sisicaya,Cristoval Caxa Vilca,1,,,1,,1,,,3,130,high,[casados] 22.5; hijo 1.5; marca {1} al margen: si
+29,Llangacapa,San Francisco de Sisicaya,Cristoval Curaca,1,,,1,,1,2,,5,130,high,[casados] 27.5; hijo 4; marca {1} al margen: si
+30,Llangacapa,San Francisco de Sisicaya,Pedro Caxa Guaman,1,,,1,,,,,2,131,high,[casados] 44.5; 3a mujer; marca {1} al margen: si
+31,Llangacapa,San Francisco de Sisicaya,Sebastian Curaca,1,,,1,,,,,2,131,high,"[casados] hijo del anterior, 19.5; marca {1} al margen: si"
+32,Llangacapa,San Francisco de Sisicaya,Lorenzo Curaca,1,,,1,,,,,2,131,high,[casados] 18.5; marca {1} al margen: si
+33,Llangacapa,San Francisco de Sisicaya,Joan Cancho Sirve,1,,,1,,3,1,,6,131,high,"[casados] 48.5; hijos 13, 9, 1; marca {1} al margen: si"
+34,Llangacapa,San Francisco de Sisicaya,Lorenzo Caya Yauri,1,,,1,,3,1,,6,131,high,"[casados] 42.5; hijos 12, 8, 4; marca {1} al margen: si"
+35,Llangacapa,San Francisco de Sisicaya,Martyn Coca Mania,,1,,1,,,,,2,131,high,[casados] 57.5; marca {1} al margen: no
+36,Llangacapa,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,1,1,,4,132,high,[casados] 41.5; hijo 4; marca {1} al margen: si
+37,Llangacapa,San Francisco de Sisicaya,Baltasar Curaca,1,,,1,,,,,2,132,high,"[casados] hijo del anterior, 15.5 pero casado y marcado {1}; marca {1} al margen: si"
+38,Llangacapa,San Francisco de Sisicaya,Joan Caxa Llungo,,1,,1,,,1,,3,132,high,[casados] 57.5; marca {1} al margen: no
+39,Llangacapa,San Francisco de Sisicaya,Joan Caxa Yauri,1,,,1,,,1,,3,132,high,[casados] 39.5; marca {1} al margen: si
+40,Llangacapa,San Francisco de Sisicaya,Cristoval Chumbi Llungo,1,,,1,,,2,,4,132,high,[casados] 32.5; marca {1} al margen: si
+41,Llangacapa,San Francisco de Sisicaya,Cristoval Curaca,1,,,1,,,,,2,132,high,[casados] 22.5; marca {1} al margen: si
+42,Llangacapa,San Francisco de Sisicaya,Alonso Micher,,1,1,1,,,,,2,132,medium,"[casados] edad no puesta; ""mas de cinquenta"" (margen {50}); anda cimarron; marca {1} al margen: no"
+43,Llangacapa,San Francisco de Sisicaya,Bartolome Curaca,1,,,1,,1,,,3,133,high,"[casados] 41.5; hijo 4; siguiente entrada ""niculas caraca"" testada; marca {1} al margen: si"
+44,Llangacapa,San Francisco de Sisicaya,Joan Julca,1,,,1,,,,,2,133,high,[casados] 42.5; hijo Marcos muerto; marca {1} al margen: si
+45,Llangacapa,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,,,,2,133,high,"[casados] hijo del anterior, 15.5, casado, marcado {1}; marca {1} al margen: si"
+46,Llangacapa,San Francisco de Sisicaya,Sebastian Llata,1,,,1,,2,2,,6,133,high,"[casados] 44.5; hijos 10, 8; marca {1} al margen: si"
+47,Llangacapa,San Francisco de Sisicaya,Myguel [apellido omitido],1,,,1,,1,1,,4,133,high,[casados] 25.5; hijo 7 meses; marca {1} al margen: si
+48,Llangacapa,San Francisco de Sisicaya,Cristoval Maserure,1,,,1,,2,,,4,133,high,"[casados] 32.5 (despues interprete de la revisita); hijos 6, 1; marca {1} al margen: si"
+49,Llangacapa,San Francisco de Sisicaya,Joan Coca Mania,1,,,1,,1,3,,6,134,high,[casados] 41.5; hijo 8; marca {1} al margen: si
+50,Llangacapa,San Francisco de Sisicaya,Cristoval Cancho Sirve,1,,,1,,1,,,3,134,high,[casados] 39.5; hijo 1; marca {1} al margen: si
+51,Llangacapa,San Francisco de Sisicaya,Joan Colque Chauca,1,,,1,,2,,,4,134,high,"[casados] 42.5; hijos 8, 1 mes; marca {1} al margen: si"
+52,Llangacapa,San Francisco de Sisicaya,Miguel Llungo,1,,,1,,,,,2,134,high,[casados] 21.5; marca {1} al margen: si
+53,Llangacapa,San Francisco de Sisicaya,Domingo Curaca,1,,,1,,3,1,,6,134,high,"[casados] 39.5; hijos 15, 5, 3; marca {1} al margen: si"
+54,Llangacapa,San Francisco de Sisicaya,Martyn Llungo,1,,,1,,2,1,,5,135,high,"[casados] 34.5; hijo de el 7, hijo de ella 4; marca {1} al margen: si"
+55,Llangacapa,San Francisco de Sisicaya,Cristoval Julca,1,,,1,,,,,2,135,high,[casados] 23.5; marca {1} al margen: si
+56,Llangacapa,San Francisco de Sisicaya,Martyn Llata,,1,,1,,,,,2,135,high,[casados] 50.5; marca {1} al margen: no
+57,Llangacapa,San Francisco de Sisicaya,Martin Pacariche,1,,,1,,,,,2,135,high,"[casados] hijo del anterior, 26.5; marca {1} al margen: si"
+58,Llangacapa,San Francisco de Sisicaya,Hernando Chauca,1,,,1,,,,,2,135,high,[casados] 34.5; marca {1} al margen: si
+59,Llangacapa,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,1,,,3,135,high,[casados] 32.5; hijo 6; marca {1} al margen: si
+60,Llangacapa,San Francisco de Sisicaya,Joan Llunco,1,,,1,,,1,,3,135,high,[casados] 38.5; marca {1} al margen: si
+61,Llangacapa,San Francisco de Sisicaya,Baltasar Guaman Yauri,1,,,1,,,,,2,136,high,[casados] 20.5; marca {1} al margen: si
+62,Llangacapa,San Francisco de Sisicaya,Joan Valencia,1,,,1,,,,,2,136,high,[casados] 25.5; nombre de la mujer no puesto; marca {1} al margen: si
+63,Llangacapa,San Francisco de Sisicaya,Cristoval Chumbi Llivia,1,,,1,,,,,2,136,high,[casados] 28.5; marca {1} al margen: si
+64,Llangacapa,San Francisco de Sisicaya,Miguel Curaca,,1,,1,,,1,,3,136,high,[casados] 69.5; marca {1} al margen: no
+65,Llangacapa,San Francisco de Sisicaya,Martin Xulca,1,,,1,,3,,,5,136,high,"[casados] 26.5; hijos 8, 6, 1; f.28r sin marcas {1} en ninguna entrada; marca {1} al margen: no"
+66,Llangacapa,San Francisco de Sisicaya,Ximon Quispi Yauri,1,,,1,,,,,2,136,high,[casados] 28.5; sin marca {1} (f.28r); marca {1} al margen: no
+67,Llangacapa,San Francisco de Sisicaya,Francisco Guatui Yunco,1,,,1,,,,,2,136,high,"[casados] hermano del anterior, 21.5; sin marca {1}; marca {1} al margen: no"
+68,Llangacapa,San Francisco de Sisicaya,Diego Colque,1,,,1,,,,,2,137,high,[casados] 20.5; sin marca {1}; marca {1} al margen: no
+69,Llangacapa,San Francisco de Sisicaya,Alonso Chauca,1,,,1,,,,,2,137,high,[casados] 47.5; sin marca {1}; marca {1} al margen: no
+70,Llangacapa,San Francisco de Sisicaya,Cristoval (hijo de Anton Curaca),1,,1,,,,,,1,137,medium,"[casados] 18.5, soltero, cimarron; asentado en la lista de casados; sin marca; marca {1} al margen: no"
+71,Sisicaya,San Francisco de Sisicaya,Juan Curaca,1,,,1,,1,,,3,137,high,[casados] 26.5; hijo 2; marca {1} al margen: si
+72,Sisicaya,San Francisco de Sisicaya,Diego Chauca,1,,,1,,,,,2,137,high,[casados] 22.5; marca {1} al margen: si
+73,Sisicaya,San Francisco de Sisicaya,Alonso Paico Vilca,,1,,1,,,2,,4,138,high,[casados] 63.5; marca {1} al margen: no
+74,Sisicaya,San Francisco de Sisicaya,Juan Chauca,,1,,1,,,,,2,138,high,[casados] 54.5; marca {1} al margen: no
+75,Sisicaya,San Francisco de Sisicaya,Alonso Curacaxe,1,,,1,,1,,,3,138,high,"[casados] hijo del anterior, 28.5; hijo 2; marca {1} al margen: si"
+76,Sisicaya,San Francisco de Sisicaya,Cristoval Julca,,1,,1,,1,,,3,138,high,"[casados] 46.5, cojo, reservado por decreto del virrey Toledo; hijo 7; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+77,Sisicaya,San Francisco de Sisicaya,Francisco Chachan Yauri,1,,,1,,,,,2,138,high,[casados] 22.5; marca {1} al margen: si
+78,Sisicaya,San Francisco de Sisicaya,Domingo Ami,1,,,1,,4,,,6,138,high,"[casados] 33.5; hijos 15, 5, 2.5, 1; marca {1} al margen: si"
+79,Sisicaya,San Francisco de Sisicaya,Alonsso Amicha,,1,,1,,,1,,3,139,high,[casados] 61.5; nieta Juana Maclla; marca {1} al margen: no
+80,Sisicaya,San Francisco de Sisicaya,Juan Curaca,1,,,1,,3,1,,6,139,high,"[casados] 41.5; hijos 6, 4, 1; marca {1} al margen: si"
+81,Sisicaya,San Francisco de Sisicaya,Miguel Suyuri,1,,,1,,,2,,4,139,high,[casados] 47.5; hijos Martin y Diego muertos; marca {1} al margen: si
+82,Sisicaya,San Francisco de Sisicaya,Pedro Naxa Rocsi,1,,,1,,,1,,3,139,high,"[casados] hijo del anterior, 21.5; marca {1} al margen: si"
+83,Sisicaya,San Francisco de Sisicaya,Miguel Coca Yalli,,1,,1,,,,,2,139,high,[casados] 58.5; marca {1} al margen: no
+84,Sisicaya,San Francisco de Sisicaya,Martyn Naxa Rica,1,,,1,,,,,2,139,high,"[casados] hijo del anterior, 22.5; marca {1} al margen: si"
+85,Sisicaya,San Francisco de Sisicaya,Diego Chauca,1,,,1,,2,1,,5,139,high,"[casados] 40.5; hijos 7, 6 y una hija son hijos de Cristoval Colque Poma (principal difunto); marca {1} al margen: si"
+86,Sisicaya,San Francisco de Sisicaya,Hernando Julca,1,,,1,,,,,2,140,high,[casados] 42.5; hijos de la visita pasada muertos; marca {1} al margen: si
+87,Sisicaya,San Francisco de Sisicaya,Joan Caxa Vilca,1,,,1,,1,1,,4,140,high,[casados] 33.5; hijos del marido: 5 y una hija; marca {1} al margen: si
+88,Sisicaya,San Francisco de Sisicaya,Diego Curacaxe,,1,,1,,,,,2,140,high,[casados] 58.5; marca {1} al margen: no
+89,Sisicaya,San Francisco de Sisicaya,Baltasar Chauca,1,,,1,,,1,,3,140,high,"[casados] hijo del anterior, 27.5; marca {1} al margen: si"
+90,Sisicaya,San Francisco de Sisicaya,Andres Julca,1,,,1,,,1,,3,140,high,"[casados] hermano del anterior, 25.5; marca {1} al margen: si"
+91,Sisicaya,San Francisco de Sisicaya,Joan Xulca,1,,,1,,1,,,3,141,high,[casados] 21.5; hijo de ella 1.5; marca {1} al margen: si
+92,Sisicaya,San Francisco de Sisicaya,Diego Cancho Caxa,1,,,1,,,,,2,141,high,"[casados] hermano del anterior, 20.5; marca {1} al margen: si"
+93,Sisicaya,San Francisco de Sisicaya,Juan Julca Yauri,1,,,1,,,3,,5,141,high,[casados] 32.5; hijo muerto; marca {1} al margen: si
+94,Sisicaya,San Francisco de Sisicaya,Martyn Chauca,1,,,1,,,,,2,141,high,[casados] 23.5; marca {1} al margen: si
+95,Sisicaya,San Francisco de Sisicaya,Pedro Llungo,1,,,1,,1,1,,4,141,high,[casados] 48.5; 3a mujer; hijo 6; marca {1} al margen: si
+96,Sisicaya,San Francisco de Sisicaya,Juan Colque Mone,2,,,1,,,2,,5,141,medium,[casados] 41.5; incluye hijo soltero Juan Chauca de 18.5 (no en margen) contado como tributario por edad; una sola marca {1}; marca {1} al margen: si
+97,Sisicaya,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,,1,,3,142,high,"[casados] 40.5; mujer Ana Coca Suyo (""ynes poco"" testado); marca {1} al margen: si"
+98,Sisicaya,San Francisco de Sisicaya,Anton Llongo,1,,,1,,2,,,4,142,high,"[casados] 37.5; hijos 10, 3; marca {1} al margen: si"
+99,Sisicaya,San Francisco de Sisicaya,Hernando Chauca,,1,,1,,,1,,3,142,high,[casados] 51.5; marca {1} al margen: no
+100,Sisicaya,San Francisco de Sisicaya,Alonsso Llata,1,,,1,,,,,2,142,high,"[casados] hijo del anterior, 15, casado, marcado {1}; marca {1} al margen: si"
+101,Sisicaya,San Francisco de Sisicaya,Joan Colque Muny,1,,,1,,4,1,,7,142,high,"[casados] 41.5; hijos 15.5 y 4, hija; sobrinos 4 y 1; marca {1} al margen: si"
+102,Sisicaya,San Francisco de Sisicaya,Melchior Curaca,,1,,1,,3,1,,6,142,high,"[casados] 52.5; hijo 12, nieto 4, hijo 1, Felipa Maclla; marca {1} al margen: no"
+103,Sisicaya,San Francisco de Sisicaya,Diego Llaxa Yauri,1,,,1,,1,,,3,143,high,"[casados] hijo del anterior, 22.5; hijo 0.5; marca {1} al margen: si"
+104,Sisicaya,San Francisco de Sisicaya,Joan Caxa Mania,1,,,1,,2,,,4,143,high,"[casados] 41.5; hijos 15 (cojea), 0.5; marca {1} al margen: si"
+105,Sisicaya,San Francisco de Sisicaya,Alonsso Colque Curi,,1,,1,,1,,,3,143,high,[casados] 53.5; hijo 4; marca {1} al margen: no
+106,Sisicaya,San Francisco de Sisicaya,Cristoval Curaca,1,,,1,,2,,,4,143,high,"[casados] hijo del anterior, 31.5; hijo 3 y bastardo de Juan Curacache 4; marca {1} al margen: si"
+107,Sisicaya,San Francisco de Sisicaya,Juan Colque Rayco,1,,,1,,1,2,,5,143,high,[casados] 28.5; hijo 7; marca {1} al margen: si
+108,Sisicaya,San Francisco de Sisicaya,Joan Coca Caxa,1,,,1,,,,,2,143,high,"[casados] edad no puesta, por su aspecto 40; marca {1} al margen: si"
+109,Sisicaya,San Francisco de Sisicaya,Alonso Chauca,,1,,1,,2,1,,5,143,high,"[casados] 52.5; hijos 6, 5; marca {1} al margen: no"
+110,Sisicaya,San Francisco de Sisicaya,Martyn Chauca,1,,,1,,,,,2,144,high,"[casados] hijo del anterior, 23.5; marca {1} al margen: si"
+111,Sisicaya,San Francisco de Sisicaya,Martyn Taco,1,,1,1,,1,,,3,144,high,[casados] 37.5; mujer Ysabel Arco reside en Omas de los Yauyos; hijo 12; sin marca {1}; marca {1} al margen: no
+112,Sisicaya,San Francisco de Sisicaya,Anton Chauca,1,,,1,,,,,2,144,high,[casados] 24.5; marca {1} al margen: si
+113,Sisicaya,San Francisco de Sisicaya,Cristoval Julca,1,,,1,,1,,,3,144,high,[casados] 23.5; hijo 1; marca {1} al margen: si
+114,Sisicaya,San Francisco de Sisicaya,Cristoval Curacache,1,,,1,,1,2,,5,144,high,[casados] 38.5; hijo 0.5; marca {1} al margen: si
+115,Sisicaya,San Francisco de Sisicaya,Cristoval Asto Yauri,1,,,1,,2,,,4,144,high,"[casados] 37.5; hijos 12, 0.5; marca {1} al margen: si"
+116,Sisicaya,San Francisco de Sisicaya,Francisco Coca Mania,,1,,1,,2,3,,7,145,high,"[casados] 52.5; hijos 12, 8; marca {1} al margen: no"
+117,Sisicaya,San Francisco de Sisicaya,Juan Julca,1,,,1,,1,2,,5,145,high,[casados] 32.5; hijo 7; marca {1} al margen: si
+118,Sisicaya,San Francisco de Sisicaya,Marcos Julca,1,,,1,,1,2,,5,145,high,[casados] 34.5; hijo 1; marca {1} al margen: si
+119,Sisicaya,San Francisco de Sisicaya,Alonsso Culu,1,,,1,,1,,,3,145,high,[casados] 34.5; hijo 8; marca {1} al margen: si
+120,Sisicaya,San Francisco de Sisicaya,Alonso Suti,1,,1,1,,,,,2,145,high,[casados] 33.5; mujer Ynes reside en Omas de los Yauyos; marca {1} al margen: si
+121,Sisicaya,San Francisco de Sisicaya,Juan Curo,1,,1,,,,,,1,145,high,"[casados] 44.5, soltero, reside en Omas (asentado en lista de casados); marca {1} al margen: si"
+122,Sisicaya,San Francisco de Sisicaya,Agustin Curaca,1,,2,1,,,,,2,145,high,[casados] 39.5; el y su mujer Francisca residen en el Cercado de Lima; marca {1} al margen: si
+123,Sisicaya,San Francisco de Sisicaya,Garcia Chauca,1,,,1,,,1,,3,146,high,[casados] 20.5; marca {1} al margen: si
+124,Sisicaya,San Francisco de Sisicaya,Cristoval Llunco,1,,,1,,1,,,3,146,high,[casados] 29.5; hijo 1; marca {1} al margen: si
+125,Sisicaya,San Francisco de Sisicaya,Martin Julca Caxa,1,,,1,,1,,,3,146,high,[casados] 23.5; hijo 1; marca {1} al margen: si
+126,Sisicaya,San Francisco de Sisicaya,Diego Llunco Misa,1,,,1,,,1,,3,146,high,[casados] 29.5; marca {1} al margen: si
+127,Sisicaya,San Francisco de Sisicaya,Martin Gomez Mormo Vilca,1,,,1,,,1,,3,146,high,[casados] 23.5; marca {1} al margen: si
+128,Checa,San Francisco de Sisicaya,Anton Colque Mania,,1,1,1,,1,1,,4,147,high,[casados] 53; hijo Diego Choque 12 ausente; marca {1} al margen: no
+129,Checa,San Francisco de Sisicaya,Anton Ancacha,,1,,1,,,1,,3,147,high,"[casados] hijo del anterior, 18.5, cojo, reservado con consentimiento de don Sebastian; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+130,Checa,San Francisco de Sisicaya,Miguel Cancho Caca,1,,,1,,1,,,3,147,medium,[casados] 39.5; hijo Felipe muerto; hijo vivo Alonsso Julca 9 (margen {39 1/2// 5} y {9}); marca {1} al margen: si
+131,Checa,San Francisco de Sisicaya,Cristoval Llongucha,1,,1,1,,1,2,,5,147,high,[casados] 41.5 (corregido de treinta); hijo Diego 15.5 ausente en Santa Ines; marca {1} al margen: si
+132,Checa,San Francisco de Sisicaya,Francisco Curaca,,1,3,1,,,1,,3,148,medium,"[casados] 60.5; ""sus hijas leonor capacha ausentes que rresiden en santa ynes"" - leido como una hija (Leonor Capacha); ausentes interpretado como toda la casa; marca {1} al margen: no"
+133,Checa,San Francisco de Sisicaya,Agustin Chauca,1,,2,1,,,,,2,148,high,"[casados] hijo de Cristoval Chumbi Llivia difunto, 19.5; mujer sin nombre ""por estar ausentes""; marca {1} al margen: si"
+134,Checa,San Francisco de Sisicaya,Miguel Lluncuchi,1,,3,1,,,1,,3,148,high,"[casados] 40.5; ""estan en chichima""; marca {1} al margen: si"
+135,Checa,San Francisco de Sisicaya,Miguel Chiquia Muny,1,,,1,,2,1,,5,148,high,"[casados] 37.5; hijos 12, 8; marca {1} al margen: si"
+136,Checa,San Francisco de Sisicaya,Joan Chumbi Yauri,1,,,1,,1,,,3,148,high,[casados] 37.5; hijo 5; marca {1} al margen: si
+137,Checa,San Francisco de Sisicaya,Diego Chauca,,1,,1,,,,,2,148,medium,"[casados] 27.5, pie hinchado; el visitador lo juzga apto y lo remite al virrey; nota marginal: tiene decreto de su excelencia para no pagar tributo -> reservado; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+138,Checa,San Francisco de Sisicaya,Domingo Curacache,,1,,1,,,,,2,149,medium,"[casados] manifestado despues; 20 a. en la visita pasada; cojo y manco, reservado; dado por muerto; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+139,Lupo,San Francisco de Sisicaya,Diego Curacache,1,,,1,,1,,,3,149,high,[casados] 21.5; hermano Alonso Llongo 5; marca {1} al margen: si
+140,Quinti,San Francisco de Sisicaya,Juan Curacache,1,,,1,,2,,,4,150,high,"[casados] hijo de Cristoval Asto Rocsi difunto, 22.5; hijos 4, 1; marca {1} al margen: si"
+141,Quinti,San Francisco de Sisicaya,Diego Chaucacha,1,,,1,,2,,,4,150,medium,"[casados] 34.5; hijo Alonso 15 muerto; otro Alonso 14 y Martyn Julca 4 (margen 14, 4); marca {1} al margen: si"
+142,Quinti,San Francisco de Sisicaya,Cristoval Chauca,1,,,1,,1,,,3,150,high,"[casados] estaba en Santa Ines, parecio; edad por aspecto 38; hijo 11; tambien asentado como ausente en viudos y solteros (duplicado, no contado alli); marca {1} al margen: si"
+143,Quinti,San Francisco de Sisicaya,Cristoval Llungo,1,,1,1,,,,,2,150,high,"[casados] hermano del anterior, 34 por aspecto; ""agora lo esta"" ausente; marca {1} al margen: si"
+144,Papano,San Francisco de Sisicaya,Lorenzo Cancho Guaman,1,,,1,,,1,,3,151,high,[casados] 21.5; marca {1} al margen: si
+145,Papano,San Francisco de Sisicaya,Cristoval Paucar Yauri,,1,,1,,1,,,3,151,medium,[casados] 59.5; hijo Mateo Yauri Vilca sin edad; dos hijos muertos; marca {1} al margen: no
+146,Papano,San Francisco de Sisicaya,Joan Vilca Paico,1,,,1,,,,,2,151,high,"[casados] hijo del anterior, 21.5; hermano muerto; marca {1} al margen: si"
+147,Papano,San Francisco de Sisicaya,Francisco Cancho Poma,,1,,1,,1,,,3,152,high,[casados] 51.5; hijo cojo 3; marca {1} al margen: no
+148,Papano,San Francisco de Sisicaya,Tomas Pinagua,1,,2,1,,,,,2,152,medium,"[casados] hijo del anterior, 31.5, casado en Santa Olalla, nombre de la mujer no se sabe; ausencia inferida; marca {1} al margen: si"
+149,Papano,San Francisco de Sisicaya,Francisco Cancho Curi,,1,,1,,,,,2,152,high,[casados] 53.5; 2a mujer; hijos muertos; marca {1} al margen: no
+150,Papano,San Francisco de Sisicaya,Martyn Tanta Yauri,1,,,1,,1,,,3,152,high,[casados] 21.5; hijo 4; marca {1} al margen: si
+151,Papano,San Francisco de Sisicaya,Juan Asto Paico,,1,,,,2,3,,6,152,high,"[casados] 43.5, ciego, reservado mientras dure; viudo; hijos 12, 5; hijo muerto; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: si"
+152,Papano,San Francisco de Sisicaya,Cristoval Chequia Vilca,1,,,1,,,1,,3,153,high,[casados] 40.5; marca {1} al margen: si
+153,Papano,San Francisco de Sisicaya,Francisco Caxa Rayco,,1,,1,,2,1,,5,153,high,"[casados] 51.5; hijos 13, 8; marca {1} al margen: no"
+154,Papano,San Francisco de Sisicaya,Domingo Chauca,1,,,1,,,,,2,153,high,"[casados] hijo del anterior, 21.5; marca {1} al margen: si"
+155,Papano,San Francisco de Sisicaya,Miguel Chumbi Livia,1,,,1,,1,1,,4,153,high,"[casados] 41.5, corto de vista: paga medio tributo; hijo 1; marca {1} al margen: si"
+156,Papano,San Francisco de Sisicaya,Agustin Vilca Yauri,1,,,1,,,,,2,154,high,[casados] 20.5; marca {1} al margen: si
+157,Papano,San Francisco de Sisicaya,Goncalo Asto Manya,1,,2,1,,,,,2,154,high,"[casados] 34.5, manco: medio tributo; mujer sin nombre ""por estar ausentes""; marca {1} al margen: no"
+158,Papano,San Francisco de Sisicaya,Alonsso Caxa Poma,,1,,1,,,,,2,154,high,[casados] 69.5; marca {1} al margen: no
+159,Papano,San Francisco de Sisicaya,Joan Chauca,,1,,1,,,,,2,154,high,[casados] 66; marca {1} al margen: no
+160,Papano,San Francisco de Sisicaya,Diego Julca,1,,,1,,,2,,4,154,high,"[casados] hijo del anterior, 28.5; marca {1} al margen: si"
+161,Papano,San Francisco de Sisicaya,Joan Cancho Guaman,1,,,1,,1,2,,5,154,high,"[casados] 29.5, cojo; no reservado de tributo (solo de mitas); hijo 1; marca {1} al margen: si"
+162,Papano,San Francisco de Sisicaya,Cristoval Puipo Vilca,1,,2,1,,,,,2,154,high,"[casados] 20.5, ausente en San Lorenzo de Quinti; mujer sin nombre; marca {1} al margen: si"
+163,Yampilla,San Francisco de Sisicaya,Joan Chauca,1,,,1,,1,,,3,155,high,[casados] 42.5; hijo 2; marca {1} al margen: si
+164,Chaucarima,San Francisco de Sisicaya,Diego Chauca,1,,,1,,1,1,,4,155,high,[casados] 44.5; hijo --yauricha 4; marca {1} al margen: si
+165,Chillaco,San Francisco de Sisicaya,Anton Chauca,1,,,,,1,,,2,155,high,[viudos y solteros y huerfanos] 40.5; hijo 14 (edad por aspecto); marca {1} al margen: no
+166,Chillaco,San Francisco de Sisicaya,Alonso Llongo,1,,,,,1,,,2,156,high,[viudos y solteros y huerfanos] 33.5; hijo 6; marca {1} al margen: si
+167,Chillaco,San Francisco de Sisicaya,Cristoval Caxa Yauri,1,,,,,,,,1,156,high,[viudos y solteros y huerfanos] 18.5; marca {1} al margen: si
+168,Chillaco,San Francisco de Sisicaya,Miguel Cancho Yana,,,,,,1,,,1,156,high,"[viudos y solteros y huerfanos] 13.5, hijo de Sebastian Chauca difunto; marca {1} al margen: no"
+169,Chillaco,San Francisco de Sisicaya,Joan Chauca,1,,,,,,,,1,156,high,"[viudos y solteros y huerfanos] 18.5, hijo de Miguel Tida difunto; marca {1} al margen: si"
+170,Chillaco,San Francisco de Sisicaya,Lorenco Julca,,,,,,2,,,2,156,high,"[viudos y solteros y huerfanos] 9, huerfano; hermano 6; marca {1} al margen: no"
+171,Andapocro,San Francisco de Sisicaya,Joan Curaca,1,,,,,2,,,3,156,high,"[viudos y solteros y huerfanos] 44.5; hijos 15, 8; marca {1} al margen: si"
+172,Llangacapa,San Francisco de Sisicaya,Sebastian Poma Llongo,,,,,,2,,,2,157,high,"[viudos y solteros y huerfanos] 12, hijo de Diego Guaman Quispe; hermano 8; marca {1} al margen: no"
+173,Llangacapa,San Francisco de Sisicaya,Bartolome Cancho Paico,,1,,,,,,,1,157,high,"[viudos y solteros y huerfanos] 57.5; siguiente entrada ""cristoval hijo de"" testada; marca {1} al margen: no"
+174,Llangacapa,San Francisco de Sisicaya,Anton Llacxa Sirve,1,,,,,1,,,2,157,high,[viudos y solteros y huerfanos] 47.5; hijo 12; marca {1} al margen: si
+175,Llangacapa,San Francisco de Sisicaya,Alonso (hijo de Baltasar Pasa Curi),1,,1,,,,,,1,157,high,"[viudos y solteros y huerfanos] 18.5, cimarron hace diez anos; marca {1} al margen: si"
+176,Llangacapa,San Francisco de Sisicaya,Joan Julca,,,1,,,1,,,1,157,high,"[viudos y solteros y huerfanos] hermano del anterior, 12, cimarron con su madre (madre no asentada); marca {1} al margen: no"
+177,Llangacapa,San Francisco de Sisicaya,Domingo Chauca,1,,,,,,,,1,157,high,[viudos y solteros y huerfanos] 19.5; marca {1} al margen: si
+178,Llangacapa,San Francisco de Sisicaya,Maria [sic] Curaca,1,,,,,,1,,2,158,low,"[viudos y solteros y huerfanos] ""maria curaca de quarenta y dos anos y medio"" en lista de viudos (varones), con edad: tomado como varon (nombre probablemente errado); hija Catalina Coca Xacxa; marca {1} al margen: no"
+179,Llangacapa,San Francisco de Sisicaya,Cristoval Casa Chauca,,1,,,,1,,,2,158,high,[viudos y solteros y huerfanos] 52.5; hijo 6; otros hijos muertos; marca {1} al margen: no
+180,Llangacapa,San Francisco de Sisicaya,Agustin Llungo,,1,,,,,,,1,158,high,[viudos y solteros y huerfanos] 57.5; marca {1} al margen: no
+181,Llangacapa,San Francisco de Sisicaya,Martyn Chauca,,,,,,1,,,1,158,high,"[viudos y solteros y huerfanos] 15.5, hijo de Juan Chumbi Curi; marca {1} al margen: no"
+182,Llangacapa,San Francisco de Sisicaya,Martyn Anche Llungo,,1,,,,,,,1,158,high,[viudos y solteros y huerfanos] 84.5; marca {1} al margen: no
+183,Llangacapa,San Francisco de Sisicaya,Cristoval Llata,,,,,,1,,,1,158,high,"[viudos y solteros y huerfanos] 14 a. 9 meses, hijo de Juan Curaca; marca {1} al margen: no"
+184,Llangacapa,San Francisco de Sisicaya,Juan Curacacha,,,,,,1,,,1,158,high,"[viudos y solteros y huerfanos] 7, huerfano; marca {1} al margen: no"
+185,Llangacapa,San Francisco de Sisicaya,Cristoval Julca,,,,,,2,,,2,158,high,"[viudos y solteros y huerfanos] 6, huerfano; hermano 5; marca {1} al margen: no"
+186,Sisicaya,San Francisco de Sisicaya,Juan Julca (hijo de Cristoval Colque Poma),1,,1,,,,,,1,158,high,"[viudos y solteros y huerfanos] 21.5, cimarron; marca {1} al margen: si"
+187,Sisicaya,San Francisco de Sisicaya,Agustin Curacacha,1,,,,,,,,1,159,high,[viudos y solteros y huerfanos] 42.5; marca {1} al margen: si
+188,Sisicaya,San Francisco de Sisicaya,Myguel Curacache,,1,,,,,,,1,159,high,"[viudos y solteros y huerfanos] 32.5, ""tonto enfermo e insensato"", reservado; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+189,Sisicaya,San Francisco de Sisicaya,Martin Llongo,,,,,,1,,,1,159,high,"[viudos y solteros y huerfanos] 13, hijo de Pedro Chauca difunto; marca {1} al margen: no"
+190,Sisicaya,San Francisco de Sisicaya,Juan Julca,,,,,,1,,,1,159,high,"[viudos y solteros y huerfanos] 10, hijo de Sebastian Chauca difunto; marca {1} al margen: no"
+191,Sisicaya,San Francisco de Sisicaya,Diego Guaman Yauri,1,,,,,1,1,,3,159,high,[viudos y solteros y huerfanos] 38.5; hijo 12; marca {1} al margen: si
+192,Sisicaya,San Francisco de Sisicaya,Felipe Quispe,,1,,,,2,,,3,159,high,"[viudos y solteros y huerfanos] 53.5; hijos 15, 7; marca {1} al margen: no"
+193,Sisicaya,San Francisco de Sisicaya,Martyn Chauca Colque,1,,,,,,,,1,159,high,[viudos y solteros y huerfanos] 20 por aspecto; marca {1} al margen: si
+194,Sisicaya,San Francisco de Sisicaya,don Diego Vilca Yauri,,1,,,,,1,,2,160,high,"[viudos y solteros y huerfanos] 52.5, principal; marca {1} al margen: no"
+195,Sisicaya,San Francisco de Sisicaya,Joan Yache,1,,1,,,,,,1,160,high,"[viudos y solteros y huerfanos] 44.5, reside en Omas de los Yauyos; marca {1} al margen: si"
+196,Sisicaya,San Francisco de Sisicaya,Cristoval Cancho Poma,1,,1,,,,,,1,160,high,"[viudos y solteros y huerfanos] 48.5, no saben donde esta; siguiente entrada ""cristoval ch"" testada; marca {1} al margen: si"
+197,Sisicaya,San Francisco de Sisicaya,Miguel Chequia Guarenca,,1,,,,1,1,,3,160,high,[viudos y solteros y huerfanos] 54.5; hijo 11; marca {1} al margen: no
+198,Sisicaya,San Francisco de Sisicaya,Diego Tanta Cancho,1,,,,,,,,1,160,high,"[viudos y solteros y huerfanos] 19.5, hijo de don Diego Curaca Poma; marca {1} al margen: si"
+199,Sisicaya,San Francisco de Sisicaya,Felipe Lorenzo Llungo,,,,,,1,,,1,160,high,"[viudos y solteros y huerfanos] 12, hijo de Joan Tello Chauca; marca {1} al margen: no"
+200,Sisicaya,San Francisco de Sisicaya,Martin Llacxa Vilca,1,,,,,,,,1,160,high,"[viudos y solteros y huerfanos] 19.5, hijo de Hernando Caxa Yauri; marca {1} al margen: si"
+201,Sisicaya,San Francisco de Sisicaya,Joan Paico Caxa,,,,,,1,,,1,160,high,"[viudos y solteros y huerfanos] 6 meses, hijo de Cristoval Tanta Cancho difunto; marca {1} al margen: no"
+202,Checa,San Francisco de Sisicaya,Gaspar Palacha,1,,3,,,2,,,3,161,medium,"[viudos y solteros y huerfanos] 33.5; hijos 10, 5; ""son ausentes"" (interpretado como los tres); marca {1} al margen: si"
+203,Checa,San Francisco de Sisicaya,Joan Curaca,,,,,,1,,,1,161,high,"[viudos y solteros y huerfanos] 4, hijo de Diego Julca difunto; marca {1} al margen: no"
+204,Checa,San Francisco de Sisicaya,Melchior Chaucacha,1,,1,,,,,,1,161,high,"[viudos y solteros y huerfanos] 36.5, esta en Chichima; marca {1} al margen: si"
+205,Checa,San Francisco de Sisicaya,Joan Ancacha (hijo de Martyn Arancache),1,,1,,,,,,1,161,high,"[viudos y solteros y huerfanos] 23.5, ausente en Chichima; marca {1} al margen: si"
+206,Checa,San Francisco de Sisicaya,Joan Ancacha (hijo de Cristoval Vilca Caca),1,,1,,,,,,1,161,high,"[viudos y solteros y huerfanos] 40.5, ausente, no saben donde; marca {1} al margen: si"
+207,Checa,San Francisco de Sisicaya,Martyn Julcacha,1,,1,,,,,,1,161,low,"[viudos y solteros y huerfanos] sin edad en la visita pasada, hijo de Baltasar Suquiacha, en el Cercado, no dan razon; sin marca; categoria supuesta; marca {1} al margen: no"
+208,Checa,San Francisco de Sisicaya,Pedro Amiche,1,,,1,,,,,2,161,high,"[viudos y solteros y huerfanos] 27.5, estaba ausente, parecio y dijo ser casado con Ynes Hipacha; marca {1} al margen: si"
+209,Lupo,San Francisco de Sisicaya,Diego (hijo de Martyn Llaxa Vilca),,,,,,1,,,1,162,high,[viudos y solteros y huerfanos] 14.5; marca {1} al margen: no
+210,Lupo,San Francisco de Sisicaya,Pedro Yana Livia,1,,,,,,,,1,162,high,[viudos y solteros y huerfanos] 34.5; sin marca {1}; marca {1} al margen: no
+211,Quinti,San Francisco de Sisicaya,Martin Curacache,,,,,,1,,,1,162,high,"[viudos y solteros y huerfanos] 12, hijo de Miguel Curacacha; (antes, Cristoval Chauca ausente = duplicado del casado, no contado); marca {1} al margen: no"
+212,Papano,San Francisco de Sisicaya,Martin Vilca Mania,,,,,,1,,,1,162,high,"[viudos y solteros y huerfanos] 3, hijo de Martyn Curacache; marca {1} al margen: no"
+213,Papano,San Francisco de Sisicaya,Joan Paico Vilca,1,,,,,2,,,3,163,high,"[viudos y solteros y huerfanos] 39.5; hijos 16.5, 13; siguiente ""joan cancho guarnan"" testado; marca {1} al margen: si"
+214,Papano,San Francisco de Sisicaya,Cristoval Paya Mania,,1,,,,,,,1,163,high,[viudos y solteros y huerfanos] 51.5; marca {1} al margen: no
+215,Papano,San Francisco de Sisicaya,Felipe Julcacha,1,,1,,,,,,1,163,high,"[viudos y solteros y huerfanos] 21.5, hijo de Martyn Chumbi Llongo, ausente; marca {1} al margen: si"
+216,Chaucarima,San Francisco de Sisicaya,Domingo Curacache,,1,,,,,,,1,163,high,"[viudos y solteros y huerfanos] 17.5, manco y cojo, reservado de tributo; 1 reservado(s)/impedido(s) <50 en viejos_reservados; marca {1} al margen: no"
+217,Andapocro,San Francisco de Sisicaya,Joana Maclla,,,,,1,,,,1,164,high,[viudas y solteras] sin estado; marca {1} al margen: no
+218,Llangacapa,San Francisco de Sisicaya,Ynes Maclla,,,,,1,,1,,2,164,high,[viudas y solteras] sin estado; hija Maria Anacha; marca {1} al margen: no
+219,Llangacapa,San Francisco de Sisicaya,Ynes Monci Sacssa,,,,,1,,,,1,164,high,[viudas y solteras] viuda; marca {1} al margen: no
+220,Llangacapa,San Francisco de Sisicaya,Catalina Curi Sacsa,,,,,1,,,,1,164,high,[viudas y solteras] viuda; marca {1} al margen: no
+221,Llangacapa,San Francisco de Sisicaya,Catalina Llacxa Carva,,,,,1,,,,1,164,high,[viudas y solteras] viuda; marca {1} al margen: no
+222,Llangacapa,San Francisco de Sisicaya,Ysabel Coca Chumbi,,,,,1,,,,1,164,high,[viudas y solteras] viuda; marca {1} al margen: no
+223,Llangacapa,San Francisco de Sisicaya,Maria Coca Chumbi,,,,,1,,,,1,164,high,[viudas y solteras] viuda; marca {1} al margen: no
+224,Llangacapa,San Francisco de Sisicaya,Maria Coca Xacxa,,,,1,1,,1,,3,164,medium,"[viudas y solteras] sin estado; ""sus hijas ynes maclla"" + ""hermana de esta maria coca, maria piri"" (hermana contada en mujeres_adultas); marca {1} al margen: no"
+225,Llangacapa,San Francisco de Sisicaya,Francisca Maclla,,,,,,,1,,1,164,high,"[viudas y solteras] ""huerfana nyna"" (contada como muchacha, cabeza); marca {1} al margen: no"
+226,Sisicaya,San Francisco de Sisicaya,Luisa Anche Puipo,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+227,Sisicaya,San Francisco de Sisicaya,Ana Maclla,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+228,Sisicaya,San Francisco de Sisicaya,dona Ana Pili,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+229,Sisicaya,San Francisco de Sisicaya,Ynes Pili,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+230,Sisicaya,San Francisco de Sisicaya,Ynes Coca Colque,,,,,1,,,,1,165,high,[viudas y solteras] sin estado; marca {1} al margen: no
+231,Sisicaya,San Francisco de Sisicaya,Maria Chumbi Xaxa,,,,,1,,1,,2,165,high,[viudas y solteras] sin estado; nieta Juana Valcha Nacsa; marca {1} al margen: no
+232,Sisicaya,San Francisco de Sisicaya,Francisca Maclla,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+233,Sisicaya,San Francisco de Sisicaya,Francisca Ambo,,,,,1,,1,,2,165,high,[viudas y solteras] viuda; hija Catalina Rande Colque; marca {1} al margen: no
+234,Sisicaya,San Francisco de Sisicaya,Marta Ambo,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+235,Sisicaya,San Francisco de Sisicaya,Yssabel Chumbi Llacxa,,,,,1,,,,1,165,high,[viudas y solteras] viuda; marca {1} al margen: no
+236,Checa,San Francisco de Sisicaya,Ynes Carva,,,,,1,,,,1,165,high,[viudas y solteras] hija de Francisco Cancho Sana (soltera/huerfana); marca {1} al margen: no
+237,Checa,San Francisco de Sisicaya,Costanca Anpucha,,,,,1,,,,1,165,high,[viudas y solteras] hija de Martyn Lampucha (soltera/huerfana); marca {1} al margen: no
+238,Checa,San Francisco de Sisicaya,Leonor Maclla,,,,,1,,,,1,165,high,[viudas y solteras] hija de Cristoval Cancho Vilca (soltera/huerfana); marca {1} al margen: no
+239,Quinti,San Francisco de Sisicaya,Luzia Pili,,,,,1,,1,,2,166,medium,"[viudas y solteras] viuda; hija Luissa Anacha; encabezados {ayllo lupo}{ayllo quinte} juntos, asignada a Quinti (Lupo sin viudas); marca {1} al margen: no"
+240,Papano,San Francisco de Sisicaya,Ynes Paltacha,,,,,1,,,,1,166,high,"[viudas y solteras] viuda; la siguiente ""ynes ticlla carva difunta viuda"" no contada (difunta); marca {1} al margen: no"
+241,Papano,San Francisco de Sisicaya,Ysabel Ticla Choco,,,,,1,,1,,2,166,medium,"[viudas y solteras] viuda; incluye la entrada siguiente ""ysabel carva hija de ysabel ticlla choco"" como hija; marca {1} al margen: no"
+242,Papano,San Francisco de Sisicaya,Leonor Caxa Ticlla,,,2,,1,,2,,3,166,high,[viudas y solteras] viuda; hijas Ysabel y Maria ausentes en San Lorenzo; marca {1} al margen: no
+243,Papano,San Francisco de Sisicaya,Maria Anchi Llacxa,,,,,1,,,,1,166,high,[viudas y solteras] hija de Miguel Guamanache difunto (soltera/huerfana); marca {1} al margen: no
+244,Checa,San Francisco de Sisicaya,Cristoval Guascacha,1,,,1,,,1,,3,179,medium,"[muertos sin recaudo (declarados tributarios)] ""checa chontay""; lista de muertos sin recaudo f.52r (fol. 48); 40.5; mujer Ynes Pilicha, hija Yana 6 meses; declarado tributario por auto 1-IX-1588 al no traerse recaudo; marca {1} al margen: no"
+245,Checa,San Francisco de Sisicaya,Cristoval Cancho Tacma,1,,,1,,,,,2,180,medium,"[muertos sin recaudo (declarados tributarios)] checa chontay, muerto sin recaudo f.52v; 42.5; declarado tributario 1-IX-1588; marca {1} al margen: no"
+246,Checa,San Francisco de Sisicaya,Domingo Curacache,2,,1,1,,,,,3,180,medium,"[muertos sin recaudo (declarados tributarios)] checa chontay, muerto sin recaudo f.52v; 34.5; hijo Diego 19.5 en Santa Ines (contado tributario por edad); declarado tributario 1-IX-1588; marca {1} al margen: no"
+247,Quinti,San Francisco de Sisicaya,Juan Llungo,1,,,1,,,,,2,180,medium,[muertos sin recaudo (declarados tributarios)] muerto sin recaudo f.52v; 44.5; declarado tributario 1-IX-1588; marca {1} al margen: no
+248,Yampilla,San Francisco de Sisicaya,Anton Julcacha,1,,1,,,,,,1,181,low,"[muertos sin recaudo (declarados tributarios)] muerto sin recaudo f.53r (fol. 49), sin edad, en Santa Ines; declarado tributario 1-IX-1588 (auto lo llama ""del ayllo llanpilla""); marca {1} al margen: no"
