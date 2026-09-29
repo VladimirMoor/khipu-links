@@ -1,0 +1,55 @@
+точные: 1 (фон [0, 2, 0, 0, 0]); с одной ошибкой: 50 (фон [17, 28, 11, 24, 16])
+
+точные:
+  UR1143 г4 [17436, 8220, 41883, 1350, 9528] = UR1149 сумма г1–г2   | Ica / Ocucaje
+с одной ошибкой:
+  AS066 г9 [16, 15, 24] ≈ HP051 B сумма г7,9,11 [16, 15, 14]   | Unknown / Unknown
+  AS066 г9 [16, 15, 24] ≈ HP051 B сумма г5,8,11 [16, 15, 14]   | Unknown / Unknown
+  AS066 г9 [16, 15, 24] ≈ HP051 B сумма г3,7,11 [16, 15, 14]   | Unknown / Unknown
+  AS066 г32 [15, 15, 15, 6] ≈ QU007 сумма г2,4,6,8,10,12 [15, 15, 59, 6]   | Unknown / Unknown
+  AS066 г37 [13, 12, 13, 12] ≈ UR284 сумма г3–г4 [19, 12, 13, 12]   | Unknown / Armatambo, Huaca San Pedro
+  AS085 г4 [689, 20, 10] ≈ UR152 сумма г2–г4 [171, 20, 10]   | Unknown / Hacienda Ullujalla y Callengo
+  AS085 г4 [689, 20, 10] ≈ UR152 сумма г2,4 [91, 20, 10]   | Unknown / Hacienda Ullujalla y Callengo
+  AS085 г4 [689, 20, 10] ≈ UR152 сумма г2,6 [191, 20, 10]   | Unknown / Hacienda Ullujalla y Callengo
+  AS092 г10 [21, 17, 12] ≈ HP018 сумма г4,8 [21, 22, 12]   | Peru / Pachacamac
+  UR028 г2 [29, 13, 12] ≈ AS046 сумма г20–г27 [44, 13, 12]   | Atarco / Unknown
+  UR028 г2 [29, 13, 12] ≈ AS046 сумма г21–г27 [42, 13, 12]   | Atarco / Unknown
+  UR028 г2 [29, 13, 12] ≈ AS046 сумма г22–г27 [36, 13, 12]   | Atarco / Unknown
+  UR028 г2 [29, 13, 12] ≈ AS046 сумма г23–г27 [31, 13, 12]   | Atarco / Unknown
+  UR028 г2 [29, 13, 12] ≈ UR1088 сумма г16–г20 [12, 13, 12]   | Atarco / Huacho
+  UR034 г16 [11, 14, 12] ≈ UR1088 сумма г16–г21 [14, 14, 12]   | Unknown / Huacho
+  UR035 г1 [0, 0, 22, 33, 10, 0, 0, 0, 0, 0, 0] ≈ AS070 сумма г1,4 [0, 0, 22, 33, 10, 2, 0, 0, 0, 0, 0]   | Mollepampa / Lluta Valley
+  UR049 г20 [12, 13, 20] ≈ UR1088 сумма г16–г20 [12, 13, 12]   | Unknown / Huacho
+  UR1031 г2 [8, 132, 13, 16, 158, 11, 8, 100] ≈ KH0033 сумма г2,5 [8, 132, 13, 16, 158, 11, 8, 10]   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г2 [8, 132, 13, 16, 158, 11, 8, 100] ≈ KH0033 сумма г2,6 [8, 132, 13, 16, 158, 11, 8, 10]   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г2 [8, 132, 13, 16, 158, 11, 8, 100] ≈ UR044 сумма г2,5 [8, 132, 13, 16, 158, 11, 8, 10]   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г2 [8, 132, 13, 16, 158, 11, 8, 100] ≈ UR044 сумма г2,6 [8, 132, 13, 16, 158, 11, 8, 10]   | Unknown / La puntilla, between Paracas and Pisco
+  UR1102 г1 [10, 20, 20] ≈ UR152 сумма г2,4,6 [201, 20, 20]   | Pachacamac / Hacienda Ullujalla y Callengo
+  UR1102 г1 [10, 20, 20] ≈ UR211 сумма г5,7 [20, 20, 20]   | Pachacamac / Ica/Pisco
+  UR1102 г1 [10, 20, 20] ≈ UR211 сумма г4–г5 [10, 10, 20]   | Pachacamac / Ica/Pisco
+  UR1102 г1 [10, 20, 20] ≈ UR211 сумма г4,7 [10, 10, 20]   | Pachacamac / Ica/Pisco
+  UR1102 г1 [10, 20, 20] ≈ UR250 сумма г3–г4 [10, 10, 20]   | Pachacamac / Ica
+  UR189 г6 [11, 16, 105] ≈ HP051 B сумма г6–г9 [11, 16, 24]   | Unknown / Unknown
+  UR189 г6 [11, 16, 105] ≈ HP051 B сумма г7–г10 [11, 16, 24]   | Unknown / Unknown
+  UR211 г5 [10, 10, 10] ≈ AS079 сумма г11–г13 [10, 13, 10]   | Ica/Pisco / Unknown
+  UR211 г5 [10, 10, 10] ≈ AS079 сумма г11–г14 [10, 15, 10]   | Ica/Pisco / Unknown
+  UR211 г5 [10, 10, 10] ≈ UR243 сумма г7–г9 [10, 73, 10]   | Ica/Pisco / Pachacamac
+  UR211 г5 [10, 10, 10] ≈ UR034 сумма г11–г12 [10, 10, 27]   | Ica/Pisco / Unknown
+  UR211 г5 [10, 10, 10] ≈ UR250 сумма г3–г4 [10, 10, 20]   | Ica/Pisco / Ica
+  UR211 г7 [10, 10, 10] ≈ AS079 сумма г11–г13 [10, 13, 10]   | Ica/Pisco / Unknown
+  UR211 г7 [10, 10, 10] ≈ AS079 сумма г11–г14 [10, 15, 10]   | Ica/Pisco / Unknown
+  UR211 г7 [10, 10, 10] ≈ UR243 сумма г7–г9 [10, 73, 10]   | Ica/Pisco / Pachacamac
+  UR211 г7 [10, 10, 10] ≈ UR034 сумма г11–г12 [10, 10, 27]   | Ica/Pisco / Unknown
+  UR211 г7 [10, 10, 10] ≈ UR250 сумма г3–г4 [10, 10, 20]   | Ica/Pisco / Ica
+  UR211 г14 [10, 10, 10, 10, 10, 10, 10] ≈ MM001 сумма г9–г10 [10, 11, 10, 10, 10, 10, 10]   | Ica/Pisco / Huacho?
+  UR211 г15 [10, 10, 10, 10, 10, 10, 10] ≈ MM001 сумма г9–г10 [10, 11, 10, 10, 10, 10, 10]   | Ica/Pisco / Huacho?
+  UR267A г1 [106, 15, 91] ≈ UR255 сумма г1,3 [106, 15, 15]   | Incahuasi / Incahuasi
+  UR274A г6 [1020, 970, 30] ≈ UR256 сумма г21–г24 [1000, 970, 30]   | Incahuasi / Incahuasi
+  UR274A г6 [1020, 970, 30] ≈ UR256 сумма г16,20,24 [837, 970, 30]   | Incahuasi / Incahuasi
+  KH0083 г1 [0, 0, 22, 33, 10, 0, 0, 0, 0, 0, 0] ≈ AS070 сумма г1,4 [0, 0, 22, 33, 10, 2, 0, 0, 0, 0, 0]   | Mollepampa / Lluta Valley
+  QU015 г24 [25, 23, 18] ≈ UR1033B сумма г2–г6 [25, 23, 42]   | Unknown / Unknown
+  QU019 г23 [10, 11, 17] ≈ UR1033B сумма г3,6 [10, 11, 12]   | Unknown / Unknown
+  QU019 г23 [10, 11, 17] ≈ UR1088 сумма г16–г19 [10, 11, 12]   | Unknown / Huacho
+  QU019 г24 [13, 11, 70] ≈ UR1033B сумма г2,4,6 [13, 11, 30]   | Unknown / Unknown
+  QU019 г26 [11, 11, 30] ≈ UR1033B сумма г2,4,6 [13, 11, 30]   | Unknown / Unknown
+  ENL10 г2 [18, 14, 32] ≈ UR1033B сумма г3–г6 [18, 17, 32]   | Khipus Enlazados MNAAHP RT-16905 (decomiso) / Unknown
