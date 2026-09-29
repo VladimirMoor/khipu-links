@@ -106,3 +106,36 @@ if __name__ == "__main__":
     with open(OUT, "a") as f:
         f.write("\n".join(L) + "\n")
     print("\n".join(L))
+
+
+def part2_report():
+    """Часть 2 AS175 = суммы трёх «столбцов» наборов части 3 — по AS175 и по UR232."""
+    rows = defaultdict(list)
+    for r in csv.DictReader(open(ROOT / "extracted/kfg_cords.csv")):
+        if r["inv_num"] in ("UR1175", "UR232"):
+            rows[r["inv_num"]].append(r)
+    A = [g[0] for g in groups("UR1175", rows)]
+    H = [h[:3] + h[4:] if len(h) == 6 else h for h, _, _ in groups("UR232", rows)]
+    lines = ["Часть 2 AS175 (г22–24) против сумм части 3 (7 наборов × 3 группы):"]
+    ea = eh = da = dh = 0
+    for k in range(3):
+        sa = [sum(A[24 + 3 * s + k][p] for s in range(7)) for p in range(5)]
+        sh = [sum(H[3 * s + k][p] for s in range(7)) for p in range(5)]
+        t = A[21 + k]
+        ea += sum(x == y for x, y in zip(t, sa))
+        eh += sum(x == y for x, y in zip(t, sh))
+        for x, a, h in zip(t, sa, sh):
+            if a != h:
+                da += abs(a - x) < abs(h - x)
+                dh += abs(h - x) < abs(a - x)
+        lines.append(f"  г{22 + k} {t}  сумма по AS175 {sa}  сумма по UR232 {sh}")
+    lines.append(f"  точно: по AS175 {ea}/15, по UR232 {eh}/15; где версии расходятся, ближе к части 2: "
+                 f"AS175 {da}, UR232 {dh}")
+    return lines
+
+
+if __name__ == "__main__":
+    L = part2_report()
+    with open(OUT, "a") as f:
+        f.write("\n".join(L) + "\n")
+    print("\n".join(L))

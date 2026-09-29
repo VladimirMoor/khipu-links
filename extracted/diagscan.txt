@@ -1,0 +1,92 @@
+кипу: 533; пар с диагональю ≥ 8: 106
+     z    D    c макс. проч.  пара
+ 154.0   77   -2           0  AS038 ~ KH0049   | Unknown #3884-147 / Costa Sur #MNAAHP3550
+ 154.0   77   -2           0  AS038 ~ HP036   | Unknown #3884-147 / Costa Sur #MNAAHP3550
+  82.1   70   -1           2  AS047 ~ KH0058   | Unknown #3882 / Unknown #MNAAHP1748
+  68.0   34   +1           0  AS038 ~ UR122   | Unknown #3884-147 / Nazca #1938.45.0228
+  66.0   33   +2           0  KH0049 ~ UR122   | Costa Sur #MNAAHP3550 / Nazca #1938.45.0228
+  66.0   33   +2           0  HP036 ~ UR122   | Costa Sur #MNAAHP3550 / Nazca #1938.45.0228
+  51.9   26   -1           2  AS181 ~ UR236   | Unknown #unnumbered / Unknown #VA 66832
+  51.9   26   -1           2  AS181 ~ KH0197   | Unknown #unnumbered / Unknown #VA66832
+  46.5  129   -4          21  AS068 ~ UR281   | Unknown #3882 / Monte de Cacatilla, Valle de Nazca #1745
+  46.5  129   -4          21  AS068 ~ KH0081   | Unknown #3882 / Monte de Cacatilla, Valle de Nazca #1745
+  28.0   14   -1           0  AS125 ~ UR247   | Pachacamac #VA42670 / Pachacamac #VA 42610
+  24.2   47  +23           7  UR1175 ~ UR232   | Pachacamac #VA42518 / Huacho #VA63038(B)
+  21.1   13   -1           2  UR044 ~ UR1031   | La puntilla, between Paracas and Pisco #32.70.30/F851 / Unknown #32-70-30/F851
+  21.1   13   -1           2  KH0033 ~ UR1031   | La puntilla, between Paracas and Pisco #32.70.30/F851 / Unknown #32-70-30/F851
+  19.0   59   -3          15  UR1175 ~ UR233   | Pachacamac #VA42518 / Huacho #VA 63038 b
+  17.8    9  +35           2  AS207A ~ AS214   | Unknown #C14459 / Unknown #43-4-8575
+  16.0    8   -1           0  UR1118 ~ UR218   | Pachacamac #VA42601 / Pachacamac #VA 42559
+  14.6    8 +152           3  UR055 ~ UR228   | Unknown #4117-789-1014 203/INC-88 / Pisco #VA 44677 a(b)
+  13.8    9  +11           5  AS207A ~ UR034   | Unknown #C14459 / Unknown #T5730 / 26865
+  13.6   37   -1           9  UR255 ~ UR267A   | Incahuasi #9228-13 / Incahuasi #13092
+  12.3    8  +34           3  AS207A ~ JC001   | Unknown #C14459 / Incahuasi #PAI-001-2016
+  11.7    8   -1           2  UR051 ~ UR223   | Unknown #ATE3567 / Ica #VA 47077
+  10.6    9  +26           3  UR1109 ~ UR269   | Ica #VA47069 / Incahuasi #13828
+  10.4    8   +4           3  UR1136 ~ UR194   | Nazca #VA16635 / Ica #47082
+   9.6    8   +2           3  AS068 ~ UR264   | Unknown #3882 / Incahuasi #12703-2014
+   9.6   11  +19           4  AS207A ~ UR208   | Unknown #C14459 / Pachacamac #42549
+   8.9   13  -29           5  UR211 ~ UR264   | Ica/Pisco #16141 b / Incahuasi #12703-2014
+   8.7   10   +3           4  MM001 ~ MM004   | Huacho? #Grü-209 / Unknown (not from Gaffron collections) #Unknown
+   8.7    8  +13           3  UR113 ~ UR211   | Nazca #1931.37.0001 / Ica/Pisco #16141 b
+   8.6    9  -11           4  QU019 ~ UR1136   | Unknown #B371/T41299.38 / Nazca #VA16635
+   8.3    8  +11           3  UR113 ~ UR195   | Nazca #1931.37.0001 / Huacho #63040
+   8.1   11 -102           6  UR054 ~ UR055   | Unknown #unnumbered / Unknown #4117-789-1014 203/INC-88
+   8.0   13   +4           7  UR054 ~ UR144   | Unknown #unnumbered / Valle de Pisco #820
+   7.9    9   -4           3  UR1140 ~ UR277   | Nazca #VA16636 / Incahuasi #13834-2014
+   7.9   12   +2           6  UR195 ~ UR211   | Huacho #63040 / Ica/Pisco #16141 b
+   7.8    9  +21           4  UR1109 ~ UR270   | Ica #VA47069 / Incahuasi #13830
+   7.7    8  +33           4  UR144 ~ UR228   | Valle de Pisco #820 / Pisco #VA 44677 a(b)
+   7.7   16  +35           7  UR050 ~ UR052   | Unknown #s/n / Unknown #25868
+   7.6   11  +23           5  UR1109 ~ UR233   | Ica #VA47069 / Huacho #VA 63038 b
+   7.6   12  +29           6  AS207A ~ MM001   | Unknown #C14459 / Huacho? #Grü-209
+   7.5    8  +26           3  UR052 ~ UR1141   | Unknown #25868 / Ica #VA47124A
+   7.4   14   +9           6  UR1175 ~ UR208   | Pachacamac #VA42518 / Pachacamac #42549
+   7.2    8   -6           3  HP051 B ~ UR228   | Unknown #MNAAHP 5726 B / Pisco #VA 44677 a(b)
+   7.2   10   -8           5  UR232 ~ UR233   | Huacho #VA63038(B) / Huacho #VA 63038 b
+   7.2    9  +26           4  UR1109 ~ UR1175   | Ica #VA47069 / Pachacamac #VA42518
+   7.1   10   +0           4  AS156 ~ UR227   | Pachacamac #VA42535 / Pisco #VA44677a(B)
+   7.1    8   +6           3  AS156 ~ UR1147   | Pachacamac #VA42535 / Ocucaje #VA44866A
+   7.1    8   -8           4  UR195 ~ UR208   | Huacho #63040 / Pachacamac #42549
+   7.1    8  -27           4  UR110 ~ UR144   | Unknown #unnumbered / Valle de Pisco #820
+   7.0    9   -4           4  HP003 ~ UR233   | Pachacamac #MSP 1389/RN 43370 / Huacho #VA 63038 b
+   6.8   21  +26          14  AS207A ~ UR211   | Unknown #C14459 / Ica/Pisco #16141 b
+   6.8   14  -12           7  UR208 ~ UR233   | Pachacamac #42549 / Huacho #VA 63038 b
+   6.6   13   +0           6  HP052 ~ UR228   | Unknown #MNAAHP 6345 / Pisco #VA 44677 a(b)
+   6.6    9   -1           5  UR1098 ~ UR195   | Between Ica and Pisco #VA16136 / Huacho #63040
+   6.5   12  -20           6  UR052 ~ UR054   | Unknown #25868 / Unknown #unnumbered
+   6.4    8  -16           4  UR208 ~ UR264   | Pachacamac #42549 / Incahuasi #12703-2014
+   6.3    9   -7           4  KH0058 ~ UR1136   | Unknown #MNAAHP1748 / Nazca #VA16635
+   6.3    9   -7           4  AS047 ~ UR1136   | Unknown #3882 / Nazca #VA16635
+   6.3    9  +11           5  UR228 ~ UR274A   | Pisco #VA 44677 a(b) / Incahuasi #13832-2014
+   6.2    8  -33           4  HP003 ~ UR1109   | Pachacamac #MSP 1389/RN 43370 / Ica #VA47069
+Перестановочный тест (порядок групп второго кипу, 300 раз):
+  UR1175 ~ UR232: D = 47, p = 0.003
+  UR1175 ~ UR233: D = 59, p = 0.003
+  UR1118 ~ UR218: D = 8, p = 0.359
+  AS207A ~ AS214: D = 9, p = 0.355
+  UR055 ~ UR228: D = 8, p = 0.003
+  AS207A ~ UR034: D = 9, p = 0.292
+  UR255 ~ UR267A: D = 37, p = 0.003
+  AS207A ~ JC001: D = 8, p = 0.189
+  UR051 ~ UR223: D = 8, p = 0.120
+  UR1109 ~ UR269: D = 9, p = 0.017
+  UR1136 ~ UR194: D = 8, p = 0.060
+  AS068 ~ UR264: D = 8, p = 0.093
+  AS207A ~ UR208: D = 11, p = 0.342
+  UR211 ~ UR264: D = 13, p = 0.037
+  MM001 ~ MM004: D = 10, p = 0.023
+  UR113 ~ UR211: D = 8, p = 0.199
+  QU019 ~ UR1136: D = 9, p = 0.153
+  UR113 ~ UR195: D = 8, p = 0.013
+  UR054 ~ UR055: D = 11, p = 0.030
+  UR054 ~ UR144: D = 13, p = 0.179
+  UR1140 ~ UR277: D = 9, p = 0.359
+  UR195 ~ UR211: D = 12, p = 0.130
+  UR1109 ~ UR270: D = 9, p = 0.472
+  UR144 ~ UR228: D = 8, p = 0.047
+  UR050 ~ UR052: D = 16, p = 0.223
+  UR1109 ~ UR233: D = 11, p = 0.243
+  UR1175 ~ UR208: D = 14, p = 0.100
+  AS156 ~ UR227: D = 10, p = 0.462
+  UR232 ~ UR233: D = 10, p = 0.123
