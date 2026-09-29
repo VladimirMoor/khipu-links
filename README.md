@@ -19,6 +19,7 @@ Full write-up with tables, methods and caveats: [`report/khipu_links_report.html
 | 4 | **Subsidiaries do not enter pendant sums** (422 khipus; pendant-only reading z = 4.4 on an offset baseline; adding them z = 2.5, subtracting z = 0.8). | tested |
 | 5 | **Huacones-Vilcahuasi** JC024–JC034 transcribed from the OKR record-sheet photos (tables in `extracted/`). An apparent chain of totals does not survive an offset baseline (z = 1.1). | transcription; link withdrawn |
 | 6 | Validations (AS069/AS070, Santa Valley structure, known duplicates) and negative results (colonial documents, sign convention, Waterfall E → B sums, no further links in the Berlin 1907 batch). | checks |
+| 7 | **Pachacamac → Huacho.** Two spliced Huacho khipus (UR233 + UR232, VA63038b) repeat parts 1 and 3 of AS175 (VA42518, Pachacamac) group by group, without its summary part 2 and with one empty cord added to every group (z = 6.4 and 19.5). AS118 (VA42601) repeats groups 2–3 of UR218 (VA42559) cord for cord. | new, as far as checked |
 
 ## Repository layout
 
