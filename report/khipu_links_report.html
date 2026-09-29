@@ -63,7 +63,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
     <div><span class="tag new">new</span><b>1 · Berlin AS149 → AS143</b><span class="note">Two groups of one khipu sum exactly into a group of another (5 of 5 positions, values up to 41,883). Links two khipus the Aschers analysed together but could not connect.</span></div>
     <div><span class="tag new">new</span><b>2 · Lima → Gothenburg</b><span class="note">KH0362 (Nordenskiöld, Nasca) is a physical copy of one branch of KH0049's account: the subtotal group and its three addends.</span></div>
     <div><span class="tag new">new</span><b>3 · Folded copies</b><span class="note">Two independent cases (Incahuasi; Waterfall set) where a separate cord in one copy is a subsidiary in the other.</span></div>
-    <div><span class="tag ok">tested</span><b>4 · Subsidiaries in sums</b><span class="note">Across 422 khipus, group sums hold on pendant values <em>without</em> subsidiaries; adding or subtracting them does worse.</span></div>
+    <div><span class="tag ok">tested</span><b>4 · Subsidiaries in sums</b><span class="note">Across 422 khipus, group sums hold on pendant values <em>without</em> subsidiaries (z = 4.4 on an offset baseline); adding or subtracting them does worse.</span></div>
     <div><span class="tag neg">not supported</span><b>5 · Huacones-Vilcahuasi archive</b><span class="note">JC024–JC034 transcribed from the OKR record-sheet photos. Apparent totals of one khipu on the next do not exceed an offset baseline.</span></div>
     <div><span class="tag neg">checks</span><b>6 · Validations and negatives</b><span class="note">Detectors recover AS069/AS070, Santa Valley structure and known duplicates; colonial documents, a sign convention and two published claims are not supported.</span></div>
   </div>
@@ -131,13 +131,13 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
 
 <section class="case" id="subs">
   <div class="head"><span class="tag ok">tested</span><h2 style="border:none;padding:0">4. Subsidiaries do not enter pendant sums</h2></div>
-  <p>For 422 khipus with subsidiaries we counted relations “pendant (≥ 100) = sum of a whole cluster of other pendants” involving at least one cord with subsidiaries, under three readings, against a baseline with values shuffled across positions (cluster boundaries kept, 30 shuffles per khipu).</p>
+  <p>For 422 khipus with subsidiaries we counted relations “pendant (≥ 100) = sum of a whole cluster of other pendants” involving at least one cord with subsidiaries, under three readings. Two baselines: values shuffled across positions (cluster boundaries kept, 30 shuffles per khipu), and the stricter offset baseline, counting “pendant = cluster sum + d” for d = ±1…±20.</p>
   <div class="tbl"><table>
-    <thead><tr><th>Reading</th><th class="n">sums found</th><th class="n">baseline</th><th class="n">excess</th><th class="n">z</th></tr></thead>
+    <thead><tr><th>Reading</th><th class="n">sums found</th><th class="n">shuffle baseline</th><th class="n">offset baseline</th><th class="n">z (offset)</th></tr></thead>
     <tbody>
-      <tr><td><b>pendant only (ignore subsidiaries)</b></td><td class="n">70</td><td class="n">42.3</td><td class="n">+27.7</td><td class="n">2.8</td></tr>
-      <tr><td>pendant + subsidiaries</td><td class="n">47</td><td class="n">38.3</td><td class="n">+8.7</td><td class="n">1.1</td></tr>
-      <tr><td>pendant − subsidiaries</td><td class="n">17</td><td class="n">18.9</td><td class="n">−1.9</td><td class="n">−0.3</td></tr>
+      <tr><td><b>pendant only (ignore subsidiaries)</b></td><td class="n">70</td><td class="n">42.3</td><td class="n">28.6 ± 9.5</td><td class="n">4.4</td></tr>
+      <tr><td>pendant + subsidiaries</td><td class="n">47</td><td class="n">38.3</td><td class="n">29.1 ± 7.0</td><td class="n">2.5</td></tr>
+      <tr><td>pendant − subsidiaries</td><td class="n">17</td><td class="n">18.9</td><td class="n">13.0 ± 5.1</td><td class="n">0.8</td></tr>
     </tbody>
   </table></div>
   <p class="note">Consistent with KH0049 (sums hold on pendant values; the Aschers found subsidiaries summing separately, colour by colour) and with K-CAT phase 10 (parent = sum of children in only 6.6% of groups). The folded copies in case 3 show that a subsidiary can be merged into the pendant when an account is rewritten.</p>
