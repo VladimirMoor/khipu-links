@@ -1,0 +1,150 @@
+точные: 66 (фон [3, 2, 0, 1, 1]); с одной ошибкой: 838 (фон [215, 260, 154, 186, 147])
+
+точные:
+  AS023 г1 [10, 10, 10, 10, 0] = MM001 сумма г37–г38   | Unknown / Huacho?
+  AS037 г6 [10, 10, 10, 10, 0] = MM001 сумма г37–г38   | Unknown / Huacho?
+  AS070 г1 [0, 0, 22, 33, 10] = UR035 сумма г1–г2   | Lluta Valley / Mollepampa
+  AS070 г1 [0, 0, 22, 33, 10] = KH0083 сумма г1–г2   | Lluta Valley / Mollepampa
+  AS070 г16 [0, 0, 748, 624, 641] = UR035 сумма г14,16   | Lluta Valley / Mollepampa
+  AS070 г16 [0, 0, 748, 624, 641] = KH0083 сумма г14,16   | Lluta Valley / Mollepampa
+  AS070 г17 [117, 203, 109, 119, 0] = UR035 сумма г11,14,17   | Lluta Valley / Mollepampa
+  AS070 г17 [117, 203, 109, 119, 0] = UR035 сумма г14,17   | Lluta Valley / Mollepampa
+  AS070 г17 [117, 203, 109, 119, 0] = KH0083 сумма г11,14,17   | Lluta Valley / Mollepampa
+  AS070 г17 [117, 203, 109, 119, 0] = KH0083 сумма г14,17   | Lluta Valley / Mollepampa
+  AS207C г1 [10, 10, 10, 10, 0] = MM001 сумма г37–г38   | Unknown / Huacho?
+  UR033 г1 [30, 30, 30, 30, 30] = UR047 сумма г1,3,5   | Unknown / "Pueblo Libre, Lima, Peru"
+  UR033 г1 [30, 30, 30, 30, 30] = UR047 сумма г3,5,7   | Unknown / "Pueblo Libre, Lima, Peru"
+  UR033 г1 [30, 30, 30, 30, 30] = UR211 сумма г15–г17   | Unknown / Ica/Pisco
+  UR033 г1 [30, 30, 30, 30, 30] = UR211 сумма г13,15,17   | Unknown / Ica/Pisco
+  UR035 г1 [0, 0, 22, 33, 10] = AS070 сумма г1–г2   | Mollepampa / Lluta Valley
+  UR035 г16 [0, 0, 748, 624, 641] = AS070 сумма г14–г16   | Mollepampa / Lluta Valley
+  UR035 г16 [0, 0, 748, 624, 641] = AS070 сумма г15–г16   | Mollepampa / Lluta Valley
+  UR035 г16 [0, 0, 748, 624, 641] = AS070 сумма г14,16   | Mollepampa / Lluta Valley
+  UR035 г17 [117, 203, 109, 119, 0] = AS070 сумма г15,17   | Mollepampa / Lluta Valley
+  UR035 г17 [117, 203, 109, 119, 0] = AS070 сумма г11,14,17   | Mollepampa / Lluta Valley
+  UR035 г17 [117, 203, 109, 119, 0] = AS070 сумма г14,17   | Mollepampa / Lluta Valley
+  UR047 г1 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR047 г3 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR047 г5 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR047 г7 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR047 г8 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR1031 г1 [0, 8, 132, 13, 16] = KH0033 сумма г1,5   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г1 [0, 8, 132, 13, 16] = KH0033 сумма г1,5,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г1 [0, 8, 132, 13, 16] = UR044 сумма г1,5   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г1 [0, 8, 132, 13, 16] = UR044 сумма г1,5,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,5   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,5,7   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,5,7,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,6   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,6,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = KH0033 сумма г3,7   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,5   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,5,7   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,5,7,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,6   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,6,9   | Unknown / La puntilla, between Paracas and Pisco
+  UR1031 г3 [120, 38, 16, 119, 28] = UR044 сумма г3,7   | Unknown / La puntilla, between Paracas and Pisco
+  UR1102 г1 [10, 20, 20, 20, 20] = UR211 сумма г5,7   | Pachacamac / Ica/Pisco
+  UR195 г2 [10, 2, 10, 3, 10] = UR1097 сумма г4–г6   | Huacho / Pachacamac
+  UR195 г2 [10, 2, 10, 3, 10] = UR1097 сумма г4,6   | Huacho / Pachacamac
+  UR195 г2 [10, 2, 10, 3, 10] = UR1097 сумма г6,8   | Huacho / Pachacamac
+  UR211 г7 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Ica/Pisco / Unknown
+  UR211 г13 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Ica/Pisco / Unknown
+  UR211 г15 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Ica/Pisco / Unknown
+  UR211 г16 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Ica/Pisco / Unknown
+  UR211 г17 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Ica/Pisco / Unknown
+  UR240 г11 [0, 16, 18, 0, 10] = AS037 сумма г11–г12   | Unknown / Unknown
+  UR240 г11 [0, 16, 18, 0, 10] = AS037 сумма г11–г13   | Unknown / Unknown
+  KH0083 г1 [0, 0, 22, 33, 10] = AS070 сумма г1–г2   | Mollepampa / Lluta Valley
+  KH0083 г16 [0, 0, 748, 624, 641] = AS070 сумма г14–г16   | Mollepampa / Lluta Valley
+  KH0083 г16 [0, 0, 748, 624, 641] = AS070 сумма г15–г16   | Mollepampa / Lluta Valley
+  KH0083 г16 [0, 0, 748, 624, 641] = AS070 сумма г14,16   | Mollepampa / Lluta Valley
+  KH0083 г17 [117, 203, 109, 119, 0] = AS070 сумма г15,17   | Mollepampa / Lluta Valley
+  KH0083 г17 [117, 203, 109, 119, 0] = AS070 сумма г11,14,17   | Mollepampa / Lluta Valley
+  KH0083 г17 [117, 203, 109, 119, 0] = AS070 сумма г14,17   | Mollepampa / Lluta Valley
+  MM001 г7 [10, 10, 10, 10, 10] = AS207A сумма г39,42   | Huacho? / Unknown
+  MM001 г28 [20, 10, 10, 10, 50] = UR190 сумма г32,34   | Huacho? / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+  UR190 г33 [10, 10, 20, 10, 20] = UR211 сумма г11,13   | Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca) / Ica/Pisco
+  UR190 г33 [10, 10, 20, 10, 20] = UR211 сумма г7,11   | Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca) / Ica/Pisco
+  UR190 г33 [10, 10, 20, 10, 20] = UR211 сумма г11,15   | Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca) / Ica/Pisco
+с одной ошибкой:
+  AS018 г1 [70, 70, 70, 70, 70] ≈ AS156 сумма г6–г7 [70, 60, 70, 70, 70]   | Unknown / Pachacamac
+  AS018 г1 [70, 70, 70, 70, 70] ≈ AS156 сумма г3,6 [70, 70, 70, 60, 70]   | Unknown / Pachacamac
+  AS021 г4 [15, 11, 11, 12, 13] ≈ UR1088 сумма г12–г16 [15, 11, 11, 11, 13]   | Unknown / Huacho
+  AS021 г5 [6, 8, 11, 16, 11] ≈ UR006 сумма г55,58,61,64,67,70 [5, 8, 11, 16, 11]   | Unknown / Leymebamba
+  AS021 г9 [8, 11, 15, 11, 11] ≈ AS079 сумма г2,4 [8, 11, 5, 11, 11]   | Unknown / Unknown
+  AS021 г9 [8, 11, 15, 11, 11] ≈ AS079 сумма г2,4,6 [8, 11, 5, 11, 11]   | Unknown / Unknown
+  AS021 г11 [0, 10, 11, 11, 0] ≈ UR190 сумма г15–г16 [0, 10, 11, 11, 10]   | Unknown / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+  AS023 г1 [10, 10, 10, 10, 0] ≈ MM001 сумма г38,42 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS023 г1 [10, 10, 10, 10, 0] ≈ MM001 сумма г38,42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS023 г1 [10, 10, 10, 10, 0] ≈ MM001 сумма г42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS023 г1 [10, 10, 10, 10, 0] ≈ UR208 сумма г24–г26 [10, 220, 10, 10, 0]   | Unknown / Pachacamac
+  AS023 г1 [10, 10, 10, 10, 0] ≈ UR208 сумма г24,26 [10, 140, 10, 10, 0]   | Unknown / Pachacamac
+  AS023 г1 [10, 10, 10, 10, 0] ≈ UR239 сумма г4,7 [10, 10, 10, 3, 0]   | Unknown / Unknown
+  AS023 г1 [10, 10, 10, 10, 0] ≈ UR239 сумма г4,7,10 [10, 10, 10, 3, 0]   | Unknown / Unknown
+  AS023 г1 [10, 10, 10, 10, 0] ≈ AS036 сумма г10,13 [10, 10, 10, 10, 6]   | Unknown / "Maranga, Huaca 1"
+  AS023 г1 [10, 10, 10, 10, 0] ≈ AS207A сумма г13–г14 [10, 10, 10, 10, 20]   | Unknown / Unknown
+  AS023 г1 [10, 10, 10, 10, 0] ≈ AS207A сумма г39,42 [10, 10, 10, 10, 10]   | Unknown / Unknown
+  AS023 г1 [10, 10, 10, 10, 0] ≈ MM019 сумма г8,10,12,14,16 [10, 10, 10, 10, 12]   | Unknown / unknown
+  AS023 г1 [10, 10, 10, 10, 0] ≈ MM019 сумма г10,12,14,16,18 [10, 10, 10, 10, 12]   | Unknown / unknown
+  AS026B г1 [24, 24, 12, 24, 24] ≈ UR006 сумма г67–г73 [24, 27, 12, 24, 24]   | Unknown / Leymebamba
+  AS028 г3 [12, 10, 10, 10, 40] ≈ UR190 сумма г31,34 [21, 10, 10, 10, 40]   | Unknown / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+  AS028 г4 [40, 30, 60, 0, 0] ≈ AS009 сумма г2–г3 [40, 91, 60, 0, 0]   | Unknown / Unknown
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г97,101,105,109,113,117 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г97,101,105,109,113,117,121 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г97,101,105,109,113,117,121,125 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г101,105,109,113,117 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г101,105,109,113,117,121 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г101,105,109,113,117,121,125 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ AS069 сумма г101,105,109,113,117,121,125,129 [0, 40, 10, 10, 0]   | Unknown / Lluta Valley
+  AS028 г5 [0, 110, 10, 10, 0] ≈ UR208 сумма г25–г26 [0, 140, 10, 10, 0]   | Unknown / Pachacamac
+  AS028 г5 [0, 110, 10, 10, 0] ≈ MM001 сумма г38,42 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS028 г5 [0, 110, 10, 10, 0] ≈ MM001 сумма г38,42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS028 г5 [0, 110, 10, 10, 0] ≈ MM001 сумма г42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS036 г8 [2, 20, 10, 20, 10] ≈ MM001 сумма г42,44 [2, 20, 30, 20, 10]   | "Maranga, Huaca 1" / Huacho?
+  AS036 г8 [2, 20, 10, 20, 10] ≈ MM001 сумма г42,44,46 [2, 20, 30, 20, 10]   | "Maranga, Huaca 1" / Huacho?
+  AS036 г10 [10, 10, 10, 10, 6] ≈ UR028 сумма г3–г12 [10, 16, 10, 10, 6]   | "Maranga, Huaca 1" / Atarco
+  AS036 г10 [10, 10, 10, 10, 6] ≈ MM019 сумма г16–г21 [10, 10, 12, 10, 6]   | "Maranga, Huaca 1" / unknown
+  AS036 г10 [10, 10, 10, 10, 6] ≈ AS207A сумма г13–г14 [10, 10, 10, 10, 20]   | "Maranga, Huaca 1" / Unknown
+  AS036 г10 [10, 10, 10, 10, 6] ≈ AS207A сумма г39,42 [10, 10, 10, 10, 10]   | "Maranga, Huaca 1" / Unknown
+  AS036 г10 [10, 10, 10, 10, 6] ≈ MM001 сумма г37–г38 [10, 10, 10, 10, 0]   | "Maranga, Huaca 1" / Huacho?
+  AS036 г10 [10, 10, 10, 10, 6] ≈ MM019 сумма г8,10,12,14,16 [10, 10, 10, 10, 12]   | "Maranga, Huaca 1" / unknown
+  AS036 г10 [10, 10, 10, 10, 6] ≈ MM019 сумма г10,12,14,16,18 [10, 10, 10, 10, 12]   | "Maranga, Huaca 1" / unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ MM001 сумма г38,42 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS037 г6 [10, 10, 10, 10, 0] ≈ MM001 сумма г38,42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS037 г6 [10, 10, 10, 10, 0] ≈ MM001 сумма г42,46 [0, 10, 10, 10, 0]   | Unknown / Huacho?
+  AS037 г6 [10, 10, 10, 10, 0] ≈ UR208 сумма г24–г26 [10, 220, 10, 10, 0]   | Unknown / Pachacamac
+  AS037 г6 [10, 10, 10, 10, 0] ≈ UR208 сумма г24,26 [10, 140, 10, 10, 0]   | Unknown / Pachacamac
+  AS037 г6 [10, 10, 10, 10, 0] ≈ UR239 сумма г4,7 [10, 10, 10, 3, 0]   | Unknown / Unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ UR239 сумма г4,7,10 [10, 10, 10, 3, 0]   | Unknown / Unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ AS036 сумма г10,13 [10, 10, 10, 10, 6]   | Unknown / "Maranga, Huaca 1"
+  AS037 г6 [10, 10, 10, 10, 0] ≈ AS207A сумма г13–г14 [10, 10, 10, 10, 20]   | Unknown / Unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ AS207A сумма г39,42 [10, 10, 10, 10, 10]   | Unknown / Unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ MM019 сумма г8,10,12,14,16 [10, 10, 10, 10, 12]   | Unknown / unknown
+  AS037 г6 [10, 10, 10, 10, 0] ≈ MM019 сумма г10,12,14,16,18 [10, 10, 10, 10, 12]   | Unknown / unknown
+  AS046 г3 [3, 16, 73, 30, 0] ≈ HP041 сумма г3,7 [3, 16, 73, 30, 33]   | Unknown / Unknown
+  AS046 г3 [3, 16, 73, 30, 0] ≈ KH0057 сумма г3,7 [3, 16, 73, 30, 33]   | Unknown / Unknown
+  AS050 г45 [0, 310, 0, 10, 20] ≈ AS069 сумма г156,159,162,165 [0, 33, 0, 10, 20]   | Unknown / Lluta Valley
+  AS050 г45 [0, 310, 0, 10, 20] ≈ AS069 сумма г156,159,162,165,168 [0, 33, 0, 10, 20]   | Unknown / Lluta Valley
+  AS059 г1 [13, 9, 10, 7, 10] ≈ UR006 сумма г48,51,54,57 [13, 9, 39, 7, 10]   | Unknown / Leymebamba
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г12–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г12–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г13–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г13–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г14–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г15 [12, 13, 13, 13, 13] ≈ QU013 сумма г14–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г16 [11, 10, 13, 12, 13] ≈ UR1146 сумма г6,8 [11, 12, 13, 12, 13]   | Unknown / Ica
+  AS066 г16 [11, 10, 13, 12, 13] ≈ UR1057 сумма г13,16,19,22,25 [11, 10, 13, 12, 16]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г12–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г12–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г13–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г13–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г14–г17 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS066 г17 [12, 13, 13, 13, 13] ≈ QU013 сумма г14–г18 [12, 23, 13, 13, 13]   | Unknown / Unknown
+  AS070 г1 [0, 0, 22, 33, 10] ≈ UR035 сумма г1,4 [0, 15, 22, 33, 10]   | Lluta Valley / Mollepampa
+  AS070 г1 [0, 0, 22, 33, 10] ≈ UR035 сумма г1,4,7 [0, 15, 22, 33, 10]   | Lluta Valley / Mollepampa
+  AS070 г1 [0, 0, 22, 33, 10] ≈ KH0083 сумма г1,4 [0, 15, 22, 33, 10]   | Lluta Valley / Mollepampa
+  AS070 г1 [0, 0, 22, 33, 10] ≈ KH0083 сумма г1,4,7 [0, 15, 22, 33, 10]   | Lluta Valley / Mollepampa
+  AS070 г16 [0, 0, 748, 624, 641] ≈ UR035 сумма г14–г16 [0, 0, 748, 634, 641]   | Lluta Valley / Mollepampa
+  AS070 г16 [0, 0, 748, 624, 641] ≈ UR035 сумма г15–г16 [0, 0, 748, 634, 641]   | Lluta Valley / Mollepampa
+  AS070 г16 [0, 0, 748, 624, 641] ≈ KH0083 сумма г14–г16 [0, 0, 748, 634, 641]   | Lluta Valley / Mollepampa

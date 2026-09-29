@@ -1,0 +1,28 @@
+точные: 8 (фон [0, 0, 0, 0, 1]); с одной ошибкой: 16 (фон [22, 13, 30, 21, 23])
+
+точные:
+  JC010 г97 [20, 20, 20] = AS207A сумма г10–г11   | Incahuasi / Unknown
+  JC010 г97 [20, 20, 20] = AS207A сумма г11–г12   | Incahuasi / Unknown
+  JC010 г97 [20, 20, 20] = AS207A сумма г10,12   | Incahuasi / Unknown
+  UR1123 г5 [40, 9, 57, 30, 56, 80, 21, 8, 22, 12] = UR1114 сумма г2–г3   | Ica / Between Ica and Pisco
+  UR1123 г5 [40, 9, 57, 30, 56, 80, 21, 8, 22, 12] = UR1114 сумма г3,5   | Ica / Between Ica and Pisco
+  QU014 г37 [20, 20, 20] = AS207A сумма г10–г11   | Unknown / Unknown
+  QU014 г37 [20, 20, 20] = AS207A сумма г11–г12   | Unknown / Unknown
+  QU014 г37 [20, 20, 20] = AS207A сумма г10,12   | Unknown / Unknown
+с одной ошибкой:
+  AS037 г17 [10, 10, 10] ≈ AS207A сумма г12,16 [19, 10, 10]   | Unknown / Unknown
+  AS066 г23 [13, 13, 12, 13] ≈ UR112 сумма г5,7 [13, 13, 19, 13]   | Unknown / Unknown
+  AS066 г23 [13, 13, 12, 13] ≈ UR190 сумма г58,62 [13, 13, 12, 12]   | Unknown / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+  JC010 г97 [20, 20, 20] ≈ AS207C сумма г1–г2 [20, 10, 20]   | Incahuasi / Unknown
+  JC019 г1 [32, 16, 17] ≈ AS208 сумма г6,10 [42, 16, 17]   | Incahuasi / "Huaura Valley, near Lima, on Santa Rosalia Hacienda"
+  UR047 г3 [10, 10, 10] ≈ AS207A сумма г12,16 [19, 10, 10]   | "Pueblo Libre, Lima, Peru" / Unknown
+  UR047 г5 [10, 10, 10, 10] ≈ UR190 сумма г28–г29 [10, 10, 9, 10]   | "Pueblo Libre, Lima, Peru" / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+  UR094 г22 [238, 30, 30] ≈ AS207A сумма г10–г12 [30, 30, 30]   | Unknown / Unknown
+  UR1095 г2 [17, 11, 12] ≈ AS075 сумма г38,42,46,50,54,58 [17, 11, 15]   | Pachacamac / Pachacamac
+  UR146 г9 [17, 20, 17] ≈ AS208 сумма г2,6,10 [42, 20, 17]   | Donation from the collection Belli / "Huaura Valley, near Lima, on Santa Rosalia Hacienda"
+  UR146 г9 [17, 20, 17] ≈ AS075 сумма г38,42,46,50,54,58,62 [17, 12, 17]   | Donation from the collection Belli / Pachacamac
+  UR211 г6 [10, 10, 10] ≈ AS207A сумма г12,16 [19, 10, 10]   | Ica/Pisco / Unknown
+  UR277 г25 [20, 19, 18] ≈ QU009 сумма г26,29 [56, 19, 18]   | Incahuasi / Unknown
+  QU014 г37 [20, 20, 20] ≈ AS207C сумма г1–г2 [20, 10, 20]   | Unknown / Unknown
+  UR004 г159 [17, 97, 17] ≈ AS075 сумма г38,42,46,50,54,58,62 [17, 12, 17]   | Leymebamba / Pachacamac
+  UR190 г101 [29, 10, 20] ≈ AS207C сумма г1–г2 [20, 10, 20]   | Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca) / Unknown
