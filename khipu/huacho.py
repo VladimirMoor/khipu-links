@@ -139,3 +139,43 @@ if __name__ == "__main__":
     with open(OUT, "a") as f:
         f.write("\n".join(L) + "\n")
     print("\n".join(L))
+
+
+def mix_report():
+    """Можно ли получить итог части 2 точно, беря каждый из 7 шнуров по AS175 или по UR232?
+    Фон — тот же вопрос для итога, сдвинутого на d = ±1…±20."""
+    rows = defaultdict(list)
+    for r in csv.DictReader(open(ROOT / "extracted/kfg_cords.csv")):
+        if r["inv_num"] in ("UR1175", "UR232"):
+            rows[r["inv_num"]].append(r)
+    A = [g[0] for g in groups("UR1175", rows)]
+    H = [h[:3] + h[4:] if len(h) == 6 else h for h, _, _ in groups("UR232", rows)]
+    lines = ["Смешанная версия (каждый шнур части 3 — по AS175 или по UR232):"]
+    real, null = 0, defaultdict(int)
+    for k in range(3):
+        for p in range(5):
+            a = [A[24 + 3 * s + k][p] for s in range(7)]
+            h = [H[3 * s + k][p] for s in range(7)]
+            t = A[21 + k][p]
+            sols = [m for m in itertools.product((0, 1), repeat=7)
+                    if sum(h[s] if x else a[s] for s, x in enumerate(m)) == t]
+            S = {sum(h[s] if x else a[s] for s, x in enumerate(m)) for m in itertools.product((0, 1), repeat=7)}
+            real += bool(sols)
+            for d in [x for x in range(-20, 21) if x]:
+                null[d] += (t + d) in S
+            if sols:
+                m = min(sols, key=sum)
+                need = [f"набор {s + 1}: {a[s]}→{h[s]}" for s, x in enumerate(m) if x and a[s] != h[s]]
+                lines.append(f"  г{22 + k} поз.{p + 1} итог {t}: сходится; по Уачо нужно {need or 'ничего'}")
+            else:
+                lines.append(f"  г{22 + k} поз.{p + 1} итог {t}: не сходится (AS175 {sum(a)}, UR232 {sum(h)})")
+    v = list(null.values())
+    lines.append(f"  сходится {real}/15; фон (итог ± d): {sum(v) / len(v):.1f} в среднем, максимум {max(v)}")
+    return lines
+
+
+if __name__ == "__main__":
+    L = mix_report()
+    with open(OUT, "a") as f:
+        f.write("\n".join(L) + "\n")
+    print("\n".join(L))
