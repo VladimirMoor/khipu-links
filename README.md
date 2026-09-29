@@ -13,7 +13,7 @@ Full write-up with tables, methods and caveats: [`report/khipu_links_report.html
 
 | # | Result | Status |
 |---|---|---|
-| 1 | **Berlin AS149 → AS143.** AS149 (KH0165) groups 1 + 2 = AS143 (KH0159) group 4, exactly in 5 of 5 positions (17436 = 8653 + 8783; 41883 = 20640 + 21243 …). With the Aschers' internal sums: five levels across two khipus. Chirinos 2010 reads this group as a fraction of the total; AS149 is not in his book. | new, as far as checked |
+| 1 | **Berlin AS149 → AS143.** AS149 (KH0165) groups 1 + 2 = AS143 (KH0159) group 4, exactly in 5 of 5 positions (17436 = 8653 + 8783; 41883 = 20640 + 21243 …). With the Aschers' internal sums: five levels across two khipus. Chirinos 2010 reads this group as a fraction of the total; AS149 is not in his book. AS179 (KH0196, same 1907 batch) carries one more parcel of the same allocation (1430, 670, 3424, 820 vs 1430, 670, 3410, 820 ×4 on AS149). | new, as far as checked |
 | 2 | **Lima → Gothenburg.** KH0362 (UR122, Museum of World Culture 1938.45.0228, Nasca; Nordenskiöld 1924) copies one branch of KH0049 (AS038/HP036, MNAAHP 3550): the subtotal group and its three addends. 27 of 31 intact pendants equal. | copy known (Chirinos 2010, pp. 233, 339–341); branch mapping and breakage analysis added |
 | 3 | **Folded copies.** A separate cord in one copy is a subsidiary in the other: UR270 → UR278 (Incahuasi), UR053C → UR053B (Waterfall set). | new rule; B ≈ C noted by Chirinos 2026 |
 | 4 | **Subsidiaries do not enter pendant sums** (422 khipus; pendant-only reading z = 4.4 on an offset baseline; adding them z = 2.5, subtracting z = 0.8). | tested |

@@ -1,0 +1,12 @@
+кипу с подходящими группами: 136, групп: 470
+пар кипу со счётом ≥ 2: 9
+счёт  фон  пара
+   6    0      UR1149 ~ UR1179     "Museum für Völkerkunde, #VA44866C | "Museum für Völkerkunde, #VA47123 | Ocucaje / Ica
+  12    8      UR1143 ~ UR1149     "Museum für Völkerkunde, #VA47096 | "Museum für Völkerkunde, #VA44866C | Ica / Ocucaje
+   4    0      UR1143 ~ UR1179     "Museum für Völkerkunde, #VA47096 | "Museum für Völkerkunde, #VA47123 | Ica / Ica
+   4    2       AS125 ~ UR247      "Museum für Völkerkunde, #VA42670 | "Ethnologisches Museum,  #VA 42610 | Pachacamac / Pachacamac
+   2    0       AS068 ~ KH0081     "Museo Nacional, Lima, P #3882 | Museo Nac., Pueblo Libre #1745 | Unknown / Monte de Cacatilla, Valle de Nazca
+   2    0       AS068 ~ UR281      "Museo Nacional, Lima, P #3882 | Museo Nac., Pueblo Libre #1745 | Unknown / Monte de Cacatilla, Valle de Nazca
+   2    0       JC017 ~ UR271      Proyecto Incahuasi #PAI-1456-2016 | Proyecto Incahuasi #13842 | Incahuasi / Incahuasi
+   2    0       UR118 ~ UR119      "Museum for World Cultur #31.37.2.b | "Museum for World Cultur #31.37.2.a | Paracas / Paracas
+   4    4       UR268 ~ UR275      Proyecto Incahuasi  #13835 | Proyecto Incahuasi #13836-2014 | Incahuasi / Incahuasi
