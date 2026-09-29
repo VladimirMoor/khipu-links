@@ -64,7 +64,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
     <div><span class="tag new">new</span><b>2 · Lima → Gothenburg</b><span class="note">KH0362 (Nordenskiöld, Nasca) is a physical copy of one branch of KH0049's account: the subtotal group and its three addends.</span></div>
     <div><span class="tag new">new</span><b>3 · Folded copies</b><span class="note">Two independent cases (Incahuasi; Waterfall set) where a separate cord in one copy is a subsidiary in the other.</span></div>
     <div><span class="tag ok">tested</span><b>4 · Subsidiaries in sums</b><span class="note">Across 422 khipus, group sums hold on pendant values <em>without</em> subsidiaries; adding or subtracting them does worse.</span></div>
-    <div><span class="tag hyp">hypothesis</span><b>5 · Huacones-Vilcahuasi archive</b><span class="note">JC024–JC034 transcribed from the OKR record-sheet photos; khipu totals recur as cords on the next khipu in the bundle.</span></div>
+    <div><span class="tag neg">not supported</span><b>5 · Huacones-Vilcahuasi archive</b><span class="note">JC024–JC034 transcribed from the OKR record-sheet photos. Apparent totals of one khipu on the next do not exceed an offset baseline.</span></div>
     <div><span class="tag neg">checks</span><b>6 · Validations and negatives</b><span class="note">Detectors recover AS069/AS070, Santa Valley structure and known duplicates; colonial documents, a sign convention and two published claims are not supported.</span></div>
   </div>
 </section>
@@ -144,7 +144,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
 </section>
 
 <section class="case" id="huacones">
-  <div class="head"><span class="tag hyp">hypothesis</span><h2 style="border:none;padding:0">5. Huacones-Vilcahuasi: totals on the next khipu</h2></div>
+  <div class="head"><span class="tag neg">not supported</span><h2 style="border:none;padding:0">5. Huacones-Vilcahuasi: transcription, no links</h2></div>
   <p>KH0653–KH0663 (JC024–JC034) exist in OKR only as photographs of handwritten record sheets. We transcribed all eleven (written values checked against the knot descriptions; 2 low-confidence cells). All come from one context: Sector F, unit 8, layer A-1, Elemento 11, lot 97, inventory 782–792, local numbers Quipu 1–11 (Barraza Lescano et al. 2022 report eleven khipus found rolled together in Patio 2 of the North Complex).</p>
   <div class="tbl"><table>
     <thead><tr><th>Total of</th><th class="n">value</th><th>appears as</th></tr></thead>
@@ -155,7 +155,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
       <tr><td>Quipu 3 (JC033)</td><td class="n">23</td><td>pendant 9 of Quipu 4 (JC027)</td></tr>
     </tbody>
   </table></div>
-  <p class="note">4 matches against a mean of 0.65 over 2,000 shuffles (p ≈ 0.013). The test type was chosen after the chain was noticed, the numbers are small, and the values come from handwriting, so this is a lead for checking on the objects. Three of the four links point to the next khipu in the local numbering.</p>
+  <p class="note">A value-shuffling baseline first suggested significance (4 matches against a mean of 0.65, p ≈ 0.013), but shuffling breaks the internal structure of the groups. With an offset baseline, which keeps all structure and counts “total = cord + d” for d = ±1…±15, the same four matches sit at the level of chance (mean 2.6, sd 1.25, z = 1.1). We withdraw the hierarchy claim; the transcriptions themselves (<code>extracted/huacones_*.csv</code>) remain available.</p>
 </section>
 
 <section class="case" id="checks">
@@ -171,6 +171,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
     <li><b>Colonial documents.</b> About 2,300 numbers from roughly 70 open-access transcriptions (Jauja 1570; <i>El quipu colonial</i> 2013 materials; Sisicaya 1588; Arica/Tarapacá 1540–1570; Chachapoyas 1555–1593) against OKR and KFG, by value, by table structure and by household sequence, including regional pairings (Lurín valley, Arica/Lluta, Leymebamba): no match survives the baselines. Three apparent hits were artefacts (round tribute numbers, runs of zeros, runs of single-person households) and disappeared under matched baselines.</li>
     <li><b>A sign convention.</b> Neither attachment side nor colour marks negative cords (circular-shift baseline, p = 0.35–0.92).</li>
     <li><b>Waterfall E → B sums</b> (Chirinos 2026): the best split of E part IV into four subparts resembles four B/C records, but random sets of E records do about as well (p = 0.07–0.33).</li>
+    <li><b>Berlin 1907 batch</b> (29 khipus listed with AS100 plus AS147–149): no further addends of AS143 (vector search with one-knot tolerance), and no excess of “total of one khipu = cord of another” over an offset baseline (158 against 141 ± 12). AS149 → AS143 remains the only link found in the batch.</li>
     <li>No arithmetic links involving the post-2017 OKR khipus (Khipus Enlazados RT-16905, British Museum Am1937,0213.84, SH001, R4303); their values are mostly single digits. Nothing beyond Medrano &amp; Khosla 2024 for UR231 (Monte Sierpe).</li>
   </ul>
 </section>
@@ -179,7 +180,7 @@ a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
   <h2>Methods in brief</h2>
   <ul>
     <li>Cord value = sum of <code>knot_value_type</code>; subtree value adds all subsidiaries. Values are compared on pendants only, on subtrees, or both, as stated per test.</li>
-    <li>Every detector has a baseline built from the corpus itself: values shuffled within each khipu, record order shuffled, cluster order shuffled, or annotation shifted circularly, chosen so that the baseline keeps the structure the test is not about. Thresholds are the maximum over shuffled corpora unless a p-value is given.</li>
+    <li>Every detector has a baseline built from the corpus itself: values shuffled within each khipu, record order shuffled, cluster order shuffled, annotation shifted circularly, or target values offset by ±d, chosen so that the baseline keeps the structure the test is not about. For sums over groups, value shuffling proved too permissive (it changes the distribution of group totals); the offset baseline is used there. Thresholds are the maximum over shuffled corpora unless a p-value is given.</li>
     <li>Each detector was run on known cases before being applied to the corpus; the known-case results are in section 6.</li>
   </ul>
   <p class="note">Code (Python, standard library) and derived tables, including the Huacones transcriptions, can be shared on request.</p>

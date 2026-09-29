@@ -17,8 +17,8 @@ Full write-up with tables, methods and caveats: [`report/khipu_links_report.html
 | 2 | **Lima → Gothenburg.** KH0362 (UR122, Museum of World Culture 1938.45.0228, Nasca; Nordenskiöld 1924) copies one branch of KH0049 (AS038/HP036, MNAAHP 3550): the subtotal group and its three addends. 27 of 31 intact pendants equal. | new, as far as checked |
 | 3 | **Folded copies.** A separate cord in one copy is a subsidiary in the other: UR270 → UR278 (Incahuasi), UR053C → UR053B (Waterfall set). | new rule; B ≈ C noted by Chirinos 2026 |
 | 4 | **Subsidiaries do not enter pendant sums** (422 khipus; pendant-only reading z = 2.8; adding or subtracting subsidiaries does worse). | tested |
-| 5 | **Huacones-Vilcahuasi** JC024–JC034 transcribed from the OKR record-sheet photos; totals of one khipu recur as cords of the next in the bundle. | hypothesis |
-| 6 | Validations (AS069/AS070, Santa Valley structure, known duplicates) and negative results (colonial documents, sign convention, Waterfall E → B sums). | checks |
+| 5 | **Huacones-Vilcahuasi** JC024–JC034 transcribed from the OKR record-sheet photos (tables in `extracted/`). An apparent chain of totals does not survive an offset baseline (z = 1.1). | transcription; link withdrawn |
+| 6 | Validations (AS069/AS070, Santa Valley structure, known duplicates) and negative results (colonial documents, sign convention, Waterfall E → B sums, no further links in the Berlin 1907 batch). | checks |
 
 ## Repository layout
 
