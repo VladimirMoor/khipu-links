@@ -6,20 +6,22 @@ Khipu Field Guide (KFG), about 700 khipus. Every detector is first run on relati
 published, and every result is compared with structure-preserving baselines (targets offset
 by ±d, shuffled group order), not only with shuffled values.
 
-- **Preprint** (6 pages): [`docs/preprint/preprint.pdf`](docs/preprint/preprint.pdf)
+- **Preprint** (7 pages): [`docs/preprint/preprint.pdf`](docs/preprint/preprint.pdf)
 - **Full report** with tables, methods and caveats: [`report/khipu_links_report.html`](report/khipu_links_report.html) (open in a browser)
 - **Study log** (Russian, every step and negative result): [`docs/project_log_ru.md`](docs/project_log_ru.md)
 
 ## New results
 
 These relations are, as far as we have checked (the Aschers' databook, Chirinos 2010,
-Urton 2014 and 2017, the Khipu-Biblio Cross-Reference), not described in the literature.
+Urton 2014 and 2017, Urton & Chu 2015, 2018, 2019, Medrano 2022, the Khipu-Biblio Cross-Reference), not described in the literature.
 
 | # | Result | Evidence |
 |---|---|---|
 | 1 | **Berlin / Ica: one allocation on three khipus** (AS143, AS149, AS179; 1907 acquisition). AS143 group 4 = AS149 group 1 + group 2 in all five positions (17436 = 8653 + 8783; 8220 = 4049 + 4171; 41883 = 20640 + 21243; 1350 = 660 + 690; 9528 = 4741 + 4787). All shares have the same composition (22.4 : 10.4 : 54.4 : 12.8 %); in ninths of the AS143 total (180,345) the shares are 2 + 2 + 2 + 2 + 1. AS149 splits its shares into lots; the lot 1430, 670, 3410, 820 (×4) recurs on AS179 as 1430, 670, 3424, 820. | The only exact cross-khipu vector sum in the corpus (`vecsum.py`; offset baseline 0–2, small values only). |
 | 2 | **Pachacamac → Huacho: a copy of the details without the totals.** The spliced Huacho khipus UR233 + UR232 (VA63038b) repeat parts 1 and 3 of AS175 (VA42518) group by group, leave out part 2 (the sums of part 3) and add one knotless pendant to every group. Their part-3 values reproduce AS175's own part-2 sums better than AS175 does (8 vs 5 of 15 exactly). | z = 6.4 and 19.5 against other offsets; group-order permutation p ≤ 0.003 (`diagscan.py`, `huacho.py`). Different objects: cords per group, lengths, subsidiaries. |
 | 3 | **AS118 links two other Pachacamac khipus.** Groups 2–3 of AS118 (VA42601) repeat groups 2–3 of UR218 (VA42559) cord for cord, including knot counts (five cords broken on AS118, intact on UR218). The five subsidiaries of its first, knotless pendant (2696, 13182, 14658, 11522, 8565) follow the group totals of AS125 (VA42670): 14658 exact; 8565 if an AS125 cord recorded by the Aschers as “?” (knots 3 · 1 · 1 · 1) is 3111. | Among 696 khipus only AS125 matches more than one of the values; none on the offset baseline (`as118.py`). |
+| 3a | **Pachacamac → Huacho again: two Berlin khipus joined on a Huacho khipu in Basel.** Six fragments on the cloth Basel IVc.366.03 (dug near Huacho, bought 1910; Medrano 2022) repeat runs of UR212 (VA42508(A); 37 of 195 pendants) and AS131 (VA42510; 25 of 146). UR212 and AS131 each have 14 main groups (14 and 10 cords); every fragment carrying both pairs the same unit (units 1, 4, 14), i.e. the Huacho khipu set the two halves of one 14-unit account side by side. | Other khipus ≥ 100 pendants: at most 4 matching cords (`basel_huacho.py`); same unit 3 of 3, p ≈ 0.005 (`ur212_as131_units.py`). Direction of the runs is not meaningful (two recorders, fragments sewn on in 1924). |
+| 3b | **Inkawasi UR269: the deduction is set by the place of the record.** In blocks of five records the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size (1.9%–4.4% of the mean deposit). Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, UR268's fixed deduction, but no record-level link was found. | 33 of 43 deductions equal their place value, 17 when records are shuffled within blocks (p ≈ 0.0005; `slotded.py`, `ur268_269.py`). |
 | 4 | **Empty pendants.** 11 khipus with regular groups have an intact, knotless pendant at the same position in ≥ 80% of groups (3.0 expected). In the Inkawasi pair UR255 ~ UR267A the net-value pendant is empty on UR255 in the first 12 deposits and filled with the same values as UR267A in 5 of the last 6; the tied UR256 shows the same order. | `blanks.py`, `fillslot.py`; the pairs themselves are known (Urton & Chu 2015). |
 
 ## Known relations recovered or refined
@@ -30,6 +32,7 @@ Urton 2014 and 2017, the Khipu-Biblio Cross-Reference), not described in the lit
 | **Folded copies.** A separate cord in one copy is a subsidiary in the other: UR270 → UR278 (Inkawasi), UR053C → UR053B (Waterfall set). | Packing rule new; B ≈ C noted by Chirinos (2026). |
 | **Subsidiaries do not enter pendant sums** (422 khipus; own values z = 4.4 on an offset baseline; adding subsidiaries z = 2.5, subtracting z = 0.8). | Tested. |
 | **Validations:** AS069/AS070 (Thompson 2024), Santa Valley structure, Inkawasi fixed deductions 10/15/47 (Urton & Chu 2015; found nowhere else in the corpus), duplicate recordings, single pendants = sums of neighbouring groups. | Recovered by the detectors. |
+| **Published tables reproduced:** Urton & Chu 2019 supplementary table (all OKR values of UR267A/B, UR275, UR268 in order; one difference), Barraza Lescano et al. 2022 Table 3 (our transcription of JC024–JC034, 9 of 11 exact; rows 4 and 8 of the paper swapped). Duplicate recordings read from opposite ends: AS208 = UR083, UR1107 = UR237. | `sup2019.py`, `huacones_table3.py`, `excerpts.py`. |
 
 ## Negative results
 
@@ -40,7 +43,7 @@ tasa; colour is not carried into copies and does not mark the product at Inkawas
 direction is not carried into the Waterfall copy; cord twist does not separate larger and
 smaller values; Urton's (2014) six “similar” Pachacamac pairs do not share values; the
 non-decimal “signs” of Wari-style khipus recur across khipus but have far too small an
-alphabet for syllables (compared with Quechua syllable statistics).
+alphabet for syllables (compared with Quechua syllable statistics); opposite recto/verso attachment is not a general rule of copies (7 of 10 pairs, p ≈ 0.17); no fixed supplier order across Inkawasi khipus; values on broken cords are uncertain, not simply too small (exact sums 35% vs 68%, no directional bias).
 
 ## Repository layout
 
