@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT / "data/open-khipu-repository/data/khipu.db"
 OUT = ROOT / "site/kd"
 PER = 30
+MIN_GAP = 0.45   # cm between neighbouring pendants in the model
 
 
 def num(x, d=0.0):
@@ -64,18 +65,23 @@ def from_okr(con, kid, cat_vals):
             pend.append(r)
         else:
             by_parent[r[1]].append(r)
-    # x-position of pendants: evenly inside their cluster
-    per_cl = defaultdict(list)
+    # x-position of pendants: groups laid out in cord order; a recorded group start is kept when it does not
+    # overlap the previous group, otherwise the group follows it after 1 cm; at least MIN_GAP cm between cords
+    pend.sort(key=lambda r: r[3] or 0)
+    groups, seen = [], {}
     for r in pend:
-        per_cl[r[4]].append(r)
-    xpos = {}
-    for c, rs in per_cl.items():
-        s, e, _ = cl.get(c, (0.0, 0.0, 0))
-        rs.sort(key=lambda r: r[3] or 0)
-        if e <= s:
-            e = s + 0.6 * len(rs)
+        if r[4] not in seen:
+            seen[r[4]] = len(groups)
+            groups.append([])
+        groups[seen[r[4]]].append(r)
+    xpos, cursor = {}, 0.0
+    for gi, rs in enumerate(groups):
+        s0, e0, _ = cl.get(rs[0][4], (0.0, 0.0, 0))
+        start = s0 if (gi == 0 and s0 > 0) or s0 >= cursor + 0.5 else (cursor + (1.0 if gi else 0.5))
+        width = max(e0 - s0 if e0 > s0 else 0.0, MIN_GAP * len(rs))
         for i, r in enumerate(rs):
-            xpos[r[0]] = s + (e - s) * (i + 0.5) / len(rs)
+            xpos[r[0]] = start + width * (i + 0.5) / len(rs)
+        cursor = start + width
     out, idx = [], {}
 
     def add(r, label, parent_i, x):
@@ -88,7 +94,6 @@ def from_okr(con, kid, cat_vals):
             pos = num(s[5]) if num(s[5]) > 0 else 1.0 + 0.8 * j
             add(s, f"{label}s{j}", idx[r[0]], pos)
 
-    pend.sort(key=lambda r: (xpos.get(r[0], 0), r[3] or 0))
     for i, r in enumerate(pend, 1):
         add(r, str(i), -1, xpos.get(r[0], i * 0.6))
     # values: sum of knot_value_type per cord (as in the corpus), fallback — from knot digits
@@ -98,7 +103,8 @@ def from_okr(con, kid, cat_vals):
     for i, c in enumerate(out):
         v = vals.get(back.get(i))
         c[10] = int(v) if v is not None else value_from_knots(c[11])
-    return {"q": "okr", "pl": round(num(pc[1]) if pc else max(c[3] for c in out) + 2, 1), "pc": (pcol[0] if pcol else "") or "", "c": out}
+    pl = max(num(pc[1]) if pc else 0.0, max((c[3] for c in out if c[2] == 1), default=0) + 1.5)
+    return {"q": "okr", "pl": round(pl, 1), "pc": (pcol[0] if pcol else "") or "", "c": out}
 
 
 def value_from_knots(kn):
@@ -139,7 +145,7 @@ def from_sheets(k):
     xpos = {}
     for gi, (s, a, b) in enumerate(groups):
         e = groups[gi + 1][0] - 0.8 if gi + 1 < len(groups) else s + 0.35 * (b - a + 1)
-        e = max(e, s + 0.2 * (b - a + 1))
+        e = max(e, s + MIN_GAP * (b - a + 1))
         for n in range(a, b + 1):
             xpos[n] = s + (e - s) * (n - a + 0.5) / (b - a + 1)
     out, idx = [], {}

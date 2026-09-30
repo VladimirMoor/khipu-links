@@ -433,7 +433,7 @@ function showKhipu(id){
    <h3>Model</h3>
    <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">Hanging</button><button type="button" id="m-flat" aria-pressed="false">Laid flat</button><button type="button" id="m-reset">Reset view</button><span class="qual muted" id="m-qual"></span></div>
    <div class="v3d" id="v3d"><div class="msg">Loading the 3D model…</div></div>
-   <p class="note">Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres; small spheres are single knots, coils are long knots (one ring per turn), paired beads are figure-eight knots; pendants attached recto hang in front of the primary cord, verso behind. Colours approximate the recorded colour codes; two-colour cords are striped.</p>
+   <p class="note">Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres; small spheres are single knots, coils are long knots (one ring per turn), paired beads are figure-eight knots; pendants attached recto hang in front of the primary cord, verso behind; subsidiary cords branch off their pendant at a small knot. Colours approximate the recorded colour codes; two-colour cords are striped.</p>
    <details><summary>Flat schematic</summary><div class="schem">${schematic(k)}</div><p class="note">Pendants in recorded order and grouping; dots mark knots by decimal place, units at the bottom.</p></details>
    ${es.length?`<h3>Links</h3><ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>Same object</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
@@ -476,18 +476,21 @@ async function view3d(k){
   function build(){
     if(V.group){V.scene.remove(V.group); V.group.traverse(o=>{o.geometry&&o.geometry.dispose(); o.material&&o.material.dispose&&o.material.dispose()})}
     const G=new T.Group(); V.group=G; V.picks=[];
+    { const ps=M.c.map((c,i)=>[c,i]).filter(([c])=>c[1]<0); let last=-1e9; ps.forEach(([c])=>{ if(c[3]<last+0.45) c[3]=last+0.45; last=c[3] }); if(ps.length) M.pl=Math.max(M.pl,last+1.5) }
     const hang=V.mode==='hang', PL=Math.max(M.pl,1);
     const pc=new T.CatmullRomCurve3([new T.Vector3(-1,0,0),new T.Vector3(PL*.33,hang?-0.4:0,0),new T.Vector3(PL*.66,hang?-0.4:0,0),new T.Vector3(PL+1,0,0)]);
     G.add(new T.Mesh(new T.TubeGeometry(pc,Math.max(20,Math.ceil(PL)),0.22,8,false),new T.MeshStandardMaterial({color:colOf(M.pc)==='#9a8f84'?css('--cord'):colOf(M.pc),roughness:.9})));
     const curves=[]; const sph=[], tor=[]; const tmp=new T.Object3D();
     const primaryAt=x=>{const t=Math.min(1,Math.max(0,(x+1)/(PL+2))); return pc.getPointAt(t)};
+    const subN={}, junction=[];
     M.c.forEach((c,i)=>{ const [label,pi,lvl,pos,len0,att,term,c1,op,c2,val,kn]=c; const len=Math.max(len0||0,3);
       let start, dir=new T.Vector3(0,-1,0), side=0;
       if(pi<0){ start=primaryAt(pos).clone(); side=att==='V'?-0.28:att==='R'?0.28:0; start.z+=side }
-      else { const pcur=curves[pi]; if(!pcur) return; const pl=pcur.getLength(); const t=Math.min(0.98,Math.max(0.02,(pos||1)/pl)); start=pcur.getPointAt(t).clone(); start.x+=0.25 }
+      else { const pcur=curves[pi]; if(!pcur) return; const pl=pcur.getLength(); const t=Math.min(0.98,Math.max(0.02,(pos||1)/pl)); start=pcur.getPointAt(t).clone(); subN[pi]=(subN[pi]||0)+1; side=0.28*subN[pi]; junction.push([start.clone(),pi]) }
       const pts=[start];
       const n=4; for(let j=1;j<=n;j++){ const f=j/n; const sway=hang?(rnd(i*7+j)-0.5)*Math.min(1.6,len*0.03):0;
-        pts.push(new T.Vector3(start.x+(pi<0?sway*0.4:0.6*f+sway*0.3), start.y-len*f, start.z+(hang?(side*2*f+sway):0))) }
+        const away=pi>=0?Math.min(1,f*3):f;   // subsidiaries leave the parent gradually, starting on it
+        pts.push(new T.Vector3(start.x+(pi<0?sway*0.25:0.18*away+sway*0.15), start.y-len*f, start.z+(pi<0?(hang?side*2*f+sway*0.6:0):(side*away+(hang?sway*0.4:0))))) }
       const cur=new T.CatmullRomCurve3(pts); curves[i]=cur;
       const colA=colOf(c1), colB=colOf(c2||c1);
       const mat=(op&&c2)? new T.MeshStandardMaterial({map:(()=>{const t=stripe(colA,colB).clone(); t.needsUpdate=true; t.repeat.set(1,Math.max(1,len/4)); return t})(),roughness:.95})
@@ -503,6 +506,7 @@ async function view3d(k){
       });
       if(term==='K'){ const [p]=place(len-0.2); sph.push([p,0.2,kcol]) }
     });
+    junction.forEach(([p,pi])=>{ const pc_=M.c[pi]; sph.push([p,0.17,new T.Color(colOf(pc_[7])).multiplyScalar(0.55)]) });
     if(sph.length){ const im=new T.InstancedMesh(new T.SphereGeometry(1,10,8),new T.MeshStandardMaterial({roughness:.8}),sph.length);
       sph.forEach(([p,r,c],j)=>{tmp.position.copy(p); tmp.scale.setScalar(r); tmp.quaternion.identity(); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c)}); G.add(im) }
     if(tor.length){ const im=new T.InstancedMesh(new T.TorusGeometry(0.2,0.1,6,12),new T.MeshStandardMaterial({roughness:.8}),tor.length); const up=new T.Vector3(0,0,1);
@@ -518,7 +522,8 @@ async function view3d(k){
     if(hot&&(!hit||hit.object!==hot)){hot.material.emissive&&hot.material.emissive.setHex(0);hot=null}
     if(hit){ hot=hit.object; hot.material.emissive&&hot.material.emissive.setHex(0x442222); const c=M.c[hot.userData.i];
       const ks=(c[11]||[]).map(([p,t,n,tu])=>`${t==='S'?n+'S':t==='L'?tu+'L':t}(${p})`).join(' ');
-      tip.innerHTML=`cord ${esc(c[0])} · ${c[10]}<br>${esc(c[7])}${c[8]?esc(c[8])+esc(c[9]):''} · ${c[4]} cm${c[5]?' · '+esc(c[5]):''}<br>${esc(ks||'no knots')}`;
+      const par=c[1]>=0?` · subsidiary of cord ${esc(M.c[c[1]][0])}`:'';
+      tip.innerHTML=`cord ${esc(c[0])} · ${c[10]}${par}<br>${esc(c[7])}${c[8]?esc(c[8])+esc(c[9]):''} · ${c[4]} cm${c[5]?' · '+esc(c[5]):''}<br>${esc(ks||'no knots')}`;
       tip.hidden=false; tip.style.left=Math.min(r.width-200,ev.clientX-r.left+12)+'px'; tip.style.top=(ev.clientY-r.top+12)+'px' } else tip.hidden=true });
   renderer.domElement.addEventListener('pointerleave',()=>{tip.hidden=true});
   const ro=new ResizeObserver(()=>{const w=host.clientWidth,h=host.clientHeight; if(!w||!h) return; renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix()}); ro.observe(host); V.ro=ro;
