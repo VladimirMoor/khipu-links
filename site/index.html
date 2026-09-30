@@ -97,6 +97,25 @@ ul.clean li{border-bottom:1px solid var(--line);padding-bottom:10px}
 button.link{font:inherit;background:none;border:0;padding:0;color:var(--indigo);text-decoration:underline;cursor:pointer}
 .kbtn{font-family:var(--f-mono);font-size:.82rem;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 7px;margin:2px;color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
 .copy{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:3px 8px;cursor:pointer}
+.maptools{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 10px}
+.maptools button{font-family:var(--f-display);font-size:.88rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+.maptools button:hover{background:var(--soft)}
+.maptools label{font-size:.88rem;display:flex;gap:5px;align-items:center}
+.ctx-centre{fill:var(--indigo)} .ctx-city{fill:var(--muted)} .ctx-valley{fill:var(--muted);font-style:italic}
+.ctx-suyu{fill:var(--muted);font-family:var(--f-display);letter-spacing:.25em;text-transform:uppercase;opacity:.7}
+.road{fill:none;stroke:var(--cord);stroke-dasharray:5 4;stroke-opacity:.8}
+.cmp{margin:14px 0}
+.cmp table td.v{font-family:var(--f-mono);text-align:right}
+.cmp tr.eq td{background:color-mix(in srgb,var(--ok) 12%,transparent)}
+.cmp tr.ne td{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.cmp tr.na td{color:var(--muted)}
+.cmp caption{text-align:left;font-family:var(--f-display);font-weight:500;padding:0 0 6px}
+ol.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+ol.tl li{position:relative;padding:0 0 18px 22px}
+ol.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--cord)}
+ol.tl li.hit::before{background:var(--accent);border-color:var(--accent)}
+ol.tl .when{font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}
+ol.tl h3{margin:.1em 0 .2em}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
 .loading{color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -108,7 +127,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     Khipu Links Atlas</a>
   <nav class="tabs" aria-label="Sections">
     <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a>
-    <a href="#findings">Findings</a><a href="#negatives">Negative results</a><a href="#sources">Sources</a><a href="#about">About</a>
+    <a href="#findings">Findings</a><a href="#timeline">Timeline</a><a href="#negatives">Negative results</a><a href="#sources">Sources</a><a href="#about">About</a>
   </nav>
 </div></header>
 
@@ -128,9 +147,16 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
 <section class="view" id="v-map" hidden>
   <p class="eyebrow">Find-places · approximate, village or valley level</p>
   <h1>Map</h1>
+  <div class="maptools" id="maptools">
+    <button type="button" data-z="all">Whole region</button><button type="button" data-z="central">Central coast</button><button type="button" data-z="south">South coast</button>
+    <button type="button" data-z="in" aria-label="Zoom in">+</button><button type="button" data-z="out" aria-label="Zoom out">−</button>
+    <label><input type="checkbox" id="l-links" checked> Links</label><label><input type="checkbox" id="l-centre" checked> Inka and earlier centres</label>
+    <label><input type="checkbox" id="l-valley"> Valleys</label><label><input type="checkbox" id="l-road" checked> Inka roads (schematic)</label>
+    <label><input type="checkbox" id="l-suyu"> Four quarters</label><label><input type="checkbox" id="l-city"> Modern cities</label>
+  </div>
   <div class="split">
     <div class="mapbox" id="mapbox" role="img" aria-label="Map of khipu find-places on the Peruvian and Chilean coast"></div>
-    <div class="panel" id="map-panel"><p class="muted">Select a place to list its khipus. Circle area shows how many digitized khipus carry that provenance; red arcs join places that share a link.</p></div>
+    <div class="panel" id="map-panel"><p class="muted">Select a place to list its khipus. Circle area shows how many digitized khipus carry that provenance; red arcs join places that share a link. Scroll or pinch to zoom, drag to pan.</p></div>
   </div>
   <p class="note">Locations are ours, placed by the provenance recorded in the OKR, the KFG and the museum records. They are approximate and do not reproduce any published map. Coastlines: Natural Earth, public domain. About 290 khipus have no recorded find-place and are not shown.</p>
 </section>
@@ -170,6 +196,13 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   <h1>Findings</h1>
   <div id="finding-detail"></div>
   <div class="grid" id="f-grid"></div>
+</section>
+
+<section class="view" id="v-timeline" hidden>
+  <p class="eyebrow">From the Inka storehouses to the museum shelves</p>
+  <h1>Timeline</h1>
+  <p>How the khipus came to be where they are. Red points mark events tied to a finding.</p>
+  <ol class="tl" id="tl"></ol>
 </section>
 
 <section class="view" id="v-negatives" hidden>
@@ -250,29 +283,62 @@ function drawMap(){
   if(mapDone) return; mapDone=true;
   const box=$('#mapbox'), W=box.clientWidth||600, H=box.clientHeight||800;
   const svg=d3.select(box).append('svg').attr('viewBox',`0 0 ${W} ${H}`);
-  const bbox={type:'Feature',geometry:{type:'MultiPoint',coordinates:[[-81.5,-4],[-68.5,-22]]}};
-  const proj=d3.geoMercator().fitExtent([[20,20],[W-20,H-20]],bbox), path=d3.geoPath(proj);
-  svg.append('g').selectAll('path').data(LAND.features).join('path').attr('class','land').attr('d',path);
-  const [sx,sy]=proj([-80.2,-15.5]); svg.append('text').attr('class','sea-label').attr('x',sx).attr('y',sy).attr('text-anchor','middle').text('Pacific Ocean');
+  const bbox={type:'Feature',geometry:{type:'MultiPoint',coordinates:[[-81.5,-3.2],[-68.0,-22]]}};
+  const proj=d3.geoMercator().fitExtent([[16,16],[W-16,H-16]],bbox), path=d3.geoPath(proj);
+  const root=svg.append('g');
+  root.append('g').selectAll('path').data(LAND.features).join('path').attr('class','land').attr('d',path);
+  const [sx,sy]=proj([-79.8,-15.5]); root.append('text').attr('class','sea-label').attr('x',sx).attr('y',sy).attr('text-anchor','middle').text('Pacific Ocean');
+  const gRoad=root.append('g'), gSuyu=root.append('g'), gValley=root.append('g'), gCentre=root.append('g'), gCity=root.append('g'), gFlow=root.append('g'), gSite=root.append('g'), gLab=root.append('g');
+  gRoad.selectAll('path').data(D.roads).join('path').attr('class','road').attr('d',r=>d3.line()(r.pts.map(p=>proj(p)))).append('title').text(r=>`Inka road, ${r.kind} route (schematic)`);
+  const ctx=k=>D.context.filter(c=>c.kind===k);
+  gSuyu.selectAll('text').data(ctx('suyu')).join('text').attr('class','ctx-suyu').attr('text-anchor','middle').attr('x',c=>proj([c.lon,c.lat])[0]).attr('y',c=>proj([c.lon,c.lat])[1]).text(c=>c.label);
+  gValley.selectAll('text').data(ctx('valley')).join('text').attr('class','ctx-valley').attr('x',c=>proj([c.lon,c.lat])[0]+3).attr('y',c=>proj([c.lon,c.lat])[1]).text(c=>c.label);
+  const cen=gCentre.selectAll('g').data(ctx('centre')).join('g').attr('transform',c=>`translate(${proj([c.lon,c.lat])})`);
+  cen.append('rect').attr('class','ctx-centre').attr('x',-3).attr('y',-3).attr('width',6).attr('height',6).attr('transform','rotate(45)');
+  cen.append('text').attr('class','ctx-centre lbl').attr('x',6).attr('y',4).text(c=>c.label); cen.append('title').text(c=>`${c.label}${c.note?': '+c.note:''}`);
+  const cit=gCity.selectAll('g').data(ctx('city')).join('g').attr('transform',c=>`translate(${proj([c.lon,c.lat])})`);
+  cit.append('circle').attr('class','ctx-city').attr('r',2); cit.append('text').attr('class','ctx-city lbl').attr('x',5).attr('y',-4).text(c=>c.label);
   const pos={}; D.sites.forEach(s=>pos[s.id]=proj([s.lon,s.lat]));
   const pair={}; D.edges.forEach(e=>{const a=K[e.from]?.site,b=K[e.to]?.site; if(a&&b&&a!==b){const k=[a,b].sort().join('|');pair[k]=(pair[k]||0)+1}});
-  const g=svg.append('g');
   Object.entries(pair).forEach(([k,n])=>{const [a,b]=k.split('|'),p=pos[a],q=pos[b]; if(!p||!q) return;
     const mx=(p[0]+q[0])/2+(q[1]-p[1])*.25, my=(p[1]+q[1])/2-(q[0]-p[0])*.25;
-    g.append('path').attr('class','flow').attr('stroke-width',1+Math.sqrt(n)*1.2).attr('d',`M${p[0]},${p[1]} Q${mx},${my} ${q[0]},${q[1]}`).append('title').text(`${siteLabel(a)} – ${siteLabel(b)}: ${n} link${n>1?'s':''}`)});
+    gFlow.append('path').attr('class','flow').attr('stroke-width',1+Math.sqrt(n)*1.2).attr('d',`M${p[0]},${p[1]} Q${mx},${my} ${q[0]},${q[1]}`).append('title').text(`${siteLabel(a)} – ${siteLabel(b)}: ${n} link${n>1?'s':''}`)});
   const r=d3.scaleSqrt().domain([1,d3.max(D.sites,s=>s.n)]).range([3.5,19]);
   const sites=[...D.sites].sort((a,b)=>b.n-a.n);
-  const c=svg.append('g').selectAll('circle').data(sites).join('circle').attr('class','site').attr('cx',s=>pos[s.id][0]).attr('cy',s=>pos[s.id][1]).attr('r',s=>r(s.n))
+  const c=gSite.selectAll('circle').data(sites).join('circle').attr('class','site').attr('cx',s=>pos[s.id][0]).attr('cy',s=>pos[s.id][1]).attr('r',s=>r(s.n))
    .attr('tabindex',0).attr('role','button').attr('aria-label',s=>`${s.label}, ${s.n} khipus`).on('click',(ev,s)=>sitePanel(s)).on('keydown',(ev,s)=>{if(ev.key==='Enter')sitePanel(s)});
   c.append('title').text(s=>`${s.label}: ${s.n}`);
   const big=new Set(['pachacamac','huacho','inkawasi','ica','nazca','leymebamba','santa','arica','cuzco','quillagua','huacones']);
-  svg.append('g').selectAll('text').data(sites.filter(s=>big.has(s.id))).join('text').attr('class','site-label')
-   .attr('x',s=>pos[s.id][0]+r(s.n)+4).attr('y',s=>pos[s.id][1]+4).text(s=>s.label.split(' (')[0]);
+  const labs=gLab.selectAll('text').data(sites).join('text').attr('class','site-label').attr('x',s=>pos[s.id][0]+r(s.n)+4).attr('y',s=>pos[s.id][1]+4).text(s=>s.label.split(' (')[0]);
+  const layer=(id,g)=>{const el=$(id); const f=()=>g.attr('display',el.checked?null:'none'); el.addEventListener('change',f); f()};
+  layer('#l-links',gFlow); layer('#l-centre',gCentre); layer('#l-valley',gValley); layer('#l-road',gRoad); layer('#l-suyu',gSuyu); layer('#l-city',gCity);
+  let k0=1;
+  function restyle(k){k0=k;
+    gSite.selectAll('circle').attr('r',s=>r(s.n)/Math.sqrt(k)).attr('stroke-width',1.2/k);
+    labs.attr('font-size',11/k).attr('x',s=>pos[s.id][0]+(r(s.n)/Math.sqrt(k))+4/k).attr('y',s=>pos[s.id][1]+4/k).attr('display',s=>(k>2.2||big.has(s.id))?null:'none');
+    root.selectAll('.lbl,.ctx-valley').attr('font-size',10/k); root.selectAll('.ctx-suyu').attr('font-size',12/k);
+    cen.selectAll('rect').attr('transform',`rotate(45) scale(${1/k})`); cen.selectAll('text').attr('x',6/k).attr('y',4/k);
+    cit.selectAll('circle').attr('r',2/k); cit.selectAll('text').attr('x',5/k).attr('y',-4/k);
+    gFlow.selectAll('path').attr('stroke-width',function(){return (this.__w||(this.__w=+this.getAttribute('stroke-width')))/k});
+    gRoad.selectAll('path').attr('stroke-width',1.4/k).attr('stroke-dasharray',`${5/k} ${4/k}`);
+    root.selectAll('.land').attr('stroke-width',.6/k); root.select('.sea-label').attr('font-size',11/k)}
+  const zoom=d3.zoom().scaleExtent([1,24]).translateExtent([[0,0],[W,H]]).on('zoom',ev=>{root.attr('transform',ev.transform); restyle(ev.transform.k)});
+  svg.call(zoom); restyle(1);
+  const focus=(lon1,lat1,lon2,lat2)=>{const [x1,y1]=proj([lon1,lat1]),[x2,y2]=proj([lon2,lat2]); const k=Math.min(24,.9/Math.max((x2-x1)/W,(y2-y1)/H));
+    svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(W/2,H/2).scale(k).translate(-(x1+x2)/2,-(y1+y2)/2))};
+  $('#maptools').addEventListener('click',ev=>{const z=ev.target.dataset&&ev.target.dataset.z; if(!z) return;
+    if(z==='all') svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);
+    if(z==='central') focus(-78.2,-10.6,-76.2,-12.9);
+    if(z==='south') focus(-76.6,-13.2,-74.2,-15.6);
+    if(z==='in') svg.transition().duration(300).call(zoom.scaleBy,1.6);
+    if(z==='out') svg.transition().duration(300).call(zoom.scaleBy,1/1.6)});
   function sitePanel(s){
     c.classed('on',d=>d.id===s.id);
     const ks=D.khipus.filter(k=>k.site===s.id), linked=ks.filter(k=>k.findings.length);
+    const near=D.context.filter(x=>x.kind==='centre'&&Math.hypot(x.lat-s.lat,x.lon-s.lon)<1.2);
     $('#map-panel').innerHTML=`<p class="eyebrow">${esc(s.region)}</p><h2 style="margin-top:0">${esc(s.label)}</h2>
      <p>${ks.length} digitized khipu${ks.length>1?'s':''}${linked.length?`, ${linked.length} in a link or finding`:''}.</p>
+     ${near.length?`<p class="note">Nearby: ${near.map(x=>esc(x.label)+(x.note?` (${esc(x.note)})`:'')).join('; ')}.</p>`:''}
      ${linked.length?`<h3>Linked</h3><div>${linked.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`:''}
      <h3>All</h3><div>${ks.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`;
   }
@@ -364,10 +430,21 @@ function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('')
 function showFinding(id){ const f=D.findings.find(x=>x.id===id); if(!f) return;
   $('#finding-detail').innerHTML=`<div class="drawer"><span class="chip st-${f.status}">${STATUS[f.status]}</span><h2>${esc(f.title)}</h2><p>${esc(f.summary)}</p>
    ${f.evidence.length?`<h3>Evidence</h3><ul>${f.evidence.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
+   ${(f.compare||[]).map(cmp).join('')}
    <h3>Khipus</h3><div>${f.khipus.map(k=>K[k]?`<a class="kbtn" href="#khipu-${k}">${esc(nameTxt(K[k]))}</a>`:`<span class="kbtn">${esc(k)}</span>`).join('')}</div>
    ${f.place.length?`<p class="note">Places: ${f.place.map(siteLabel).join(', ')} · <a href="#map">map</a></p>`:''}
    <h3>Reproduce</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>
    <p><a href="#findings">All findings</a></p></div>` }
+function cmp(c){
+  if(c.kind==='note') return `<h3>${esc(c.title)}</h3><p>${esc(c.text)}</p>`;
+  if(c.kind==='table') return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)}</caption><thead><tr>${c.head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
+  const A=K[c.a],B=K[c.b];
+  return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)} · ${esc(c.tally)}</caption><thead><tr><th>${esc(A?nameTxt(A):c.a)} cord</th><th>Value</th><th>${esc(B?nameTxt(B):c.b)} cord</th><th>Value</th></tr></thead>
+   <tbody>${c.rows.map(r=>`<tr class="${r[4]}"><td class="v">${esc(r[0])}</td><td class="v">${esc(r[1])}</td><td class="v">${esc(r[2])}</td><td class="v">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
+   ${c.note?`<p class="note">${esc(c.note)}</p>`:''}<p class="note">Green: equal · red: different · grey: no counterpart.</p></div>`;
+}
+function timeline(){ $('#tl').innerHTML=D.timeline.map(t=>{const f=t.finding&&D.findings.find(x=>x.id===t.finding);
+  return `<li class="${f?'hit':''}"><span class="when">${esc(t.when)}</span><h3>${esc(t.title)}</h3><p>${esc(t.text)}${f?` <a href="#finding-${f.id}">${esc(f.title)}</a>.`:''}</p></li>`}).join('') }
 function negatives(){ $('#neg').innerHTML=D.negatives.map(n=>`<li><b>${esc(n.title)}.</b> ${esc(n.text)}</li>`).join('') }
 function sources(){ $('#src').innerHTML=D.sources.map(s=>`<li><b>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</b><br><span class="muted">${esc(s.use)}</span></li>`).join('') }
 
@@ -375,7 +452,7 @@ $('#copymail').addEventListener('click',()=>{const t=$('#mail').textContent; nav
 
 Promise.all([fetch('./data.json').then(r=>r.json()),fetch('./land.json').then(r=>r.json())]).then(([d,l])=>{
   D=d; LAND=l; D.khipus.forEach(k=>K[k.id]=k);
-  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); negatives(); sources(); route();
+  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); timeline(); negatives(); sources(); route();
 }).catch(()=>{$('#stats').innerHTML='<span class="loading">The data files could not be loaded.</span>'});
 route();
 })();

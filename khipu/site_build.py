@@ -203,6 +203,166 @@ SOURCES = [
 ]
 
 
+CONTEXT = [  # (kind, label, lat, lon, note) — approximate positions for orientation
+    ("centre", "Chan Chan", -8.105, -79.075, "Chimu capital"), ("centre", "Farfán", -7.25, -79.47, "Chimu–Inka centre; floor yupana"),
+    ("centre", "Manchán", -9.47, -78.30, "Chimu–Inka centre; floor yupana"), ("centre", "Paramonga", -10.67, -77.83, "Fortress"),
+    ("centre", "Caral", -10.89, -77.52, "Supe valley"), ("centre", "Huarco / Cerro Azul", -13.02, -76.48, "Guarco capital"),
+    ("centre", "Huánuco Pampa", -9.87, -76.94, "Inka administrative centre"), ("centre", "Hatun Xauxa (Jauja)", -11.77, -75.50, "Huanca khipu accounts, 1533–1561"),
+    ("centre", "Vilcashuamán", -13.65, -73.95, "Inka provincial centre"), ("centre", "Chucuito", -15.89, -69.89, "Lupaqa accounts, 1567"),
+    ("centre", "Cajamarca", -7.16, -78.51, "Inka centre; 1532"), ("centre", "Chincha", -13.42, -76.13, "Coastal lordship"),
+    ("valley", "Jequetepeque", -7.35, -79.60, ""), ("valley", "Moche", -8.15, -78.98, ""), ("valley", "Casma", -9.47, -78.40, ""),
+    ("valley", "Supe", -10.80, -77.72, ""), ("valley", "Huaura", -11.12, -77.52, ""), ("valley", "Chancay", -11.52, -77.20, ""),
+    ("valley", "Chillón", -11.90, -77.08, ""), ("valley", "Rímac", -12.02, -77.00, ""), ("valley", "Lurín", -12.22, -76.82, ""),
+    ("valley", "Cañete", -13.05, -76.30, ""), ("valley", "Pisco", -13.65, -76.10, ""), ("valley", "Ica", -14.25, -75.70, ""),
+    ("valley", "Río Grande (Nazca)", -14.75, -75.15, ""), ("valley", "Acarí", -15.35, -74.55, ""), ("valley", "Lluta", -18.35, -70.20, ""),
+    ("valley", "Loa", -21.45, -70.00, ""),
+    ("city", "Lima", -12.046, -77.043, ""), ("city", "Trujillo", -8.11, -79.03, ""), ("city", "Arequipa", -16.40, -71.54, ""),
+    ("city", "Cusco", -13.53, -71.97, ""), ("city", "Arica", -18.48, -70.31, ""), ("city", "Tumbes", -3.57, -80.45, ""),
+    ("suyu", "Chinchaysuyu", -9.3, -76.4, "North-western quarter"), ("suyu", "Antisuyu", -12.6, -71.2, "Eastern quarter"),
+    ("suyu", "Collasuyu", -18.2, -68.9, "South-eastern quarter"), ("suyu", "Contisuyu", -15.6, -73.4, "South-western quarter"),
+]
+ROADS = [  # schematic trunk routes of the Inka road, approximate
+    ("coastal", [(-3.57, -80.45), (-5.2, -80.6), (-7.25, -79.47), (-8.1, -79.0), (-8.98, -78.63), (-9.47, -78.3), (-10.67, -77.83),
+                 (-11.1, -77.6), (-11.57, -77.27), (-12.05, -77.04), (-12.256, -76.9), (-13.02, -76.48), (-13.42, -76.13),
+                 (-14.07, -75.73), (-14.83, -74.94), (-15.43, -74.62)]),
+    ("highland", [(-3.99, -79.2), (-7.16, -78.51), (-9.87, -76.94), (-11.77, -75.5), (-13.65, -73.95), (-13.53, -71.97),
+                  (-15.89, -69.89), (-18.0, -67.8)]),
+]
+TIMELINE = [
+    ("c. 1400–1532", "Inka period", "Most khipus of the corpus date to the Inka period; radiocarbon dates, where tested, fall here.", None),
+    ("1533–1548", "Huanca lords record what they gave the Spaniards", "Their khipus, read out in court, keep the shares of the valley's three parts, 4 : 2 : 3 (Chirinos 2010).", None),
+    ("1558 / 1561", "A summary khipu equals twelve detail khipus", "Hatun Xauxa's summary of 1558 is the sum of the detail khipus shown in 1561 (Chirinos 2010). No such pair survives in the corpus.", None),
+    ("1583", "Third Council of Lima", "The council orders khipus to be destroyed; the court record of khipu readings ends soon after.", None),
+    ("1872", "Wilhelm Gretzer arrives in Peru", "A textile merchant from Hanover, he builds the largest collection of its time, mostly from grave robbers.", None),
+    ("1882", "Macedo collection to Berlin", "Berlin buys about 2,400 objects from José Mariano Macedo of Lima.", None),
+    ("1882–1923", "Eduard Gaffron practises medicine in Lima", "His collection later reaches Berlin (the Huacho khipus VA 63038–63044), Detmold and other museums.", "huacho1"),
+    ("1896", "Max Uhle excavates at Pachacamac", "The first systematic excavation of the sanctuary.", None),
+    ("1899", "Baessler gift", "Arthur Baessler gives Berlin about 11,690 objects.", None),
+    ("1904", "Khipus 'between Ica and Pisco' reach Berlin", "Among them AS114, whose block recurs on AS123.", "known"),
+    ("1906–1907", "Berlin buys Gretzer's collection", "About 40,000 objects, most labelled Pachacamac, among them UR212, AS131, AS170 and AS175.", "frame14"),
+    ("1907", "The Ica khipus AS143, AS149, AS179 enter Berlin", "One allocation spread over three khipus of the same batch.", "berlin"),
+    ("1909", "Gaffron khipus in Detmold", "Entered with other objects from his collection.", None),
+    ("1910", "Basel buys khipus dug near Huacho", "The ship's doctor Arnold Masarey sells a cache of cords; the museum's report calls them calendar records.", "basel"),
+    ("1924", "Nordenskiöld mounts the Huacho khipus", "Ten fragments and loose cords are sewn onto a cloth, IVc.366.03, and pieces face both ways.", "basel"),
+    ("1925", "Nordenskiöld's calendar reading", "He publishes the calendar hypothesis but not the Basel khipus.", None),
+    ("1978, 1988", "The Aschers' Databooks", "Cord-by-cord records of more than 200 khipus, with observations such as the 7 + 7 parts of AS131 and AS170.", "frame14"),
+    ("2013–2014", "Inkawasi storehouse excavated", "Alejandro Chu recovers 34 khipus, some under chili peppers, peanuts and black beans.", "inkawasi"),
+    ("2015, 2019", "Urton & Chu on Inkawasi", "Matched pairs and fixed deductions 10, 15, 47, 208.", "ur269"),
+    ("2016", "Conklin khipus at Dumbarton Oaks", "UR297 and UR298 enter the collection.", "dumbarton"),
+    ("2017", "Huacones-Vilcahuasi", "Eleven khipus found rolled together near a chili storeroom and a floor yupana.", None),
+    ("2022", "Medrano traces the Basel khipus to Huacho", "The museum archive names the burial ground near Huacho and the 1924 mounting.", "basel"),
+    ("2026", "This atlas", "Corpus-wide search: every link between surviving khipus is a copy of one account.", None),
+]
+
+
+def build_compare(pend, kids):
+    val = {k: [int(r["value"]) for r in rs] for k, rs in pend.items()}
+    grp = {k: [[int(r["value"]) for r in g] for _, g in itertools.groupby(rs, key=lambda r: r["group"])] for k, rs in pend.items()}
+    subs = lambda k, i: [int(c["value"]) for c in sorted(kids.get(pend[k][i]["cord_id"], []), key=lambda c: int(c["order"]))]
+
+    def pairs(title, a, b, mapping, note=""):
+        rows = []
+        for ia, ib in mapping:
+            va = val[a][ia - 1] if ia else None
+            vb = val[b][ib - 1] if ib else None
+            flag = "na" if va is None or vb is None else ("eq" if va == vb else "ne")
+            rows.append([ia or "", "" if va is None else va, ib or "", "" if vb is None else vb, flag])
+        n_eq = sum(r[4] == "eq" for r in rows)
+        return {"kind": "pairs", "title": title, "a": a, "b": b, "rows": rows, "note": note,
+                "tally": f"{n_eq} of {sum(r[4] != 'na' for r in rows)} cords equal"}
+
+    def window(title, a, b, width=40, note=""):
+        import difflib
+        A, B = val[a], val[b]
+        rows = []
+        for t, i1, i2, j1, j2 in difflib.SequenceMatcher(None, A, B, autojunk=False).get_opcodes():
+            if t == "equal":
+                rows += [[i1 + d + 1, A[i1 + d], j1 + d + 1, B[j1 + d], "eq"] for d in range(i2 - i1)]
+            elif t == "replace":
+                for d in range(max(i2 - i1, j2 - j1)):
+                    ia, ib = i1 + d, j1 + d
+                    rows.append([ia + 1 if ia < i2 else "", A[ia] if ia < i2 else "", ib + 1 if ib < j2 else "", B[ib] if ib < j2 else "",
+                                 "ne" if ia < i2 and ib < j2 else "na"])
+            elif t == "delete":
+                rows += [[i1 + d + 1, A[i1 + d], "", "", "na"] for d in range(i2 - i1)]
+            else:
+                rows += [["", "", j1 + d + 1, B[j1 + d], "na"] for d in range(j2 - j1)]
+        best, bi = -1, 0
+        for i in range(max(1, len(rows) - width + 1)):
+            e = sum(r[4] == "eq" for r in rows[i:i + width])
+            if e > best:
+                best, bi = e, i
+        rows = rows[bi:bi + width]
+        return {"kind": "pairs", "title": title, "a": a, "b": b, "rows": rows, "note": note,
+                "tally": f"{sum(r[4] == 'eq' for r in rows)} of {sum(r[4] != 'na' for r in rows)} aligned cords equal in this window"}
+
+    C = defaultdict(list)
+    C["basel"].append(pairs("MM015 (Basel) against UR212 unit 1 and AS131 unit 1", "MM015", "UR212",
+                            [(i, 195 - i) for i in range(1, 14)] + [(14, 195)],
+                            "Cords 1–13 run against UR212 in reverse; the knotless cord stays last on both."))
+    C["basel"].append(pairs("MM015 cords 15–23 against AS131 cords 1–9", "MM015", "UR1131", [(14 + i, i) for i in range(1, 10)],
+                            "Cord 21 is the colour-marked slot: knotless on AS131, 4 on the Basel copy."))
+    C["basel"].append(pairs("MM008 (Basel) against AS131 unit 14", "MM008", "UR1131", [(i, 147 - i) for i in range(1, 11)],
+                            "Cord 4 is the marked slot: knotless on AS131, 14 on the copy."))
+    C["basel"].append(pairs("MM008 cords 11–25 against UR212 unit 14", "MM008", "UR212", [(10 + i, i) for i in range(1, 15)] + [(25, None)],
+                            "UR212's first group; the Basel copy has one extra cord of 113 at the end."))
+    C["basel"].append({"kind": "table", "title": "Each fragment pairs the same unit of both khipus",
+                       "head": ["Fragment", "UR212 unit (counted from its end)", "AS131 unit"],
+                       "rows": [["MM015", "1", "1"], ["MM016", "4", "4"], ["MM008", "14", "14"], ["MM009", "—", "13"], ["MM012", "7", "—"], ["MM014", "2", "—"]]})
+    C["frame14"].append({"kind": "table", "title": "Khipus of the Gretzer batch with 14 units",
+                         "head": ["Khipu", "Berlin number", "Cords per unit", "How the halves of 7 are marked", "Cord data"],
+                         "rows": [["UR212", "VA 42508 (A)", "14", "a single knotless cord", "yes"], ["AS131 (UR1131)", "VA 42510", "10", "a larger space (Aschers)", "yes"],
+                                  ["AS170", "VA 42554", "5–7", "a marker, after a two-group preamble (Aschers)", "yes"],
+                                  ["UR199", "VA 42597 (A)", "5", "not recorded", "yes"], ["—", "VA 42513", "13", "museum record: 14 × 13", "no"],
+                                  ["—", "VA 42537", "9", "museum record: 14 × 9", "no"], ["—", "VA 42532", "5 + 4", "museum record: 7 × A, 7 × B, 7 × A, 7 × B", "no"]]})
+    g1, g2, g4 = grp["UR1149"][0], grp["UR1149"][1], grp["UR1143"][3]
+    C["berlin"].append({"kind": "table", "title": "AS143 group 4 = AS149 group 1 + group 2",
+                        "head": ["Position", "AS149 g1", "AS149 g2", "Sum", "AS143 g4", ""],
+                        "rows": [[i + 1, g1[i], g2[i], g1[i] + g2[i], g4[i], "=" if g1[i] + g2[i] == g4[i] else "≠"] for i in range(5)]})
+    C["huacho1"].append(window("AS175 (Pachacamac) against UR233 (Huacho), best-aligned window", "UR1175", "UR233", 44,
+                               "Runs break at the knotless cord UR233 adds to each group and where AS175's totals (part 2) are left out."))
+    st = len(grp["UR218"][0])   # UR218 group 2 starts after its first group
+    C["as118"].append(pairs("UR218 groups 2–3 against AS118 groups 2–3", "UR218", "UR1118", [(st + i, 1 + i) for i in range(1, 15)],
+                            "The knot counts agree as well; five cords are broken on AS118."))
+    s1 = subs("UR1118", 0)
+    t = [sum(g) for g in grp["AS125"]]
+    C["as118"].append({"kind": "table", "title": "AS118's first-cord subsidiaries against the group totals of AS125",
+                       "head": ["AS118 subsidiary", "AS125 group total", "Note"],
+                       "rows": [[s1[1], t[0], "unexplained"], [s1[2], t[1], "exact"], [s1[3], t[2], "exact if a broken cord read 2220 was 2298"],
+                                [s1[4], t[3], "exact if the cord the Aschers left unread is 3111"]]})
+    try:
+        sys_path = str(ROOT / "khipu")
+        import sys
+        sys.path.insert(0, sys_path)
+        import slotded
+        B = [b for b in slotded.blocks("UR269") if len(b) >= 4]
+        rows = []
+        for n, b in enumerate(B, 1):
+            ds = [slotded.ded(g) for g in b][:5]
+            rows.append([n] + [d if d is not None else "·" for d in ds] + [""] * (5 - len(ds)))
+        C["ur269"].append({"kind": "table", "title": "UR269: deduction in each place of each block", "head": ["Block", "Place 1", "Place 2", "Place 3", "Place 4", "Place 5"],
+                           "rows": rows, "note": "Modal values 47, 46, 46, 44, 25; · = no readable deduction."})
+    except Exception:
+        pass
+    shared = [1200, 1249, 1332, 1575, 2142, 2300]
+    find = lambda k, v: next((g for g in grp[k] if v in g), [])
+    C["inkawasi"].append({"kind": "table", "title": "UR273B keeps only the totals of UR274B", "head": ["Total", "UR274B group", "UR273B group"],
+                          "rows": [[v, " ".join(map(str, find("UR274B", v))), " ".join(map(str, find("UR273B", v)))] for v in shared]})
+    C["as003"].append({"kind": "table", "title": "AS003 repeats the summary part of AS215", "head": ["", "Summary cords", "Top cord"],
+                       "rows": [["AS215 part II", " ".join(map(str, grp["AS215"][4])), grp["AS215"][5][0]],
+                                ["AS003", " ".join(map(str, grp["AS003"][0])), grp["AS003"][1][0]]],
+                       "note": "Same six values in reverse order; 4 + 14 + 7 + 37 + 10 + 4 = 76 on both."})
+    C["known"].append(window("KH0049 (Lima) against UR122 (Gothenburg), best-aligned window", "KH0049", "UR122", 36))
+    try:
+        import do_check
+        U = do_check.urton_notes()
+        C["dumbarton"].append({"kind": "note", "title": "Check against Urton's own totals",
+                               "text": f"On the last eight sheets of UR297 Urton wrote the total of each group and of its summary cord: {sum(len(v) for v in U.values())} totals in all. 74 of the 78 equal our transcription (do_check.py)."})
+    except Exception:
+        pass
+    return C
+
+
 def site_of(k, prov, museum_num):
     if k.startswith("MM") and str(museum_num) == "IVc.366.03":
         return "huacho"
@@ -275,11 +435,21 @@ def main():
         undig.append({"inv": inv, "collector": cc.group(1).strip() if cc else "", "groups": (g.group(1).strip() if g else "")[:140],
                       "url": f"https://smb.museum-digital.de/object/{d['object_id']}"})
     undig.sort(key=lambda x: x["inv"])
+    kids = defaultdict(list)
+    for r in csv.DictReader(open(ROOT / "extracted/plus_do_cords.csv")):
+        if r["parent_id"]:
+            kids[r["parent_id"]].append(r)
+    comp = build_compare({k: v for k, v in pend.items()}, kids)
+    for f in FINDINGS:
+        f["compare"] = comp.get(f["id"], [])
     edges = [{"from": a, "to": b, "type": t, "finding": f, "note": n} for a, b, t, f, n in EDGES if a in ids and b in ids]
     dups = [{"a": a, "b": b, "note": n} for a, b, n in DUPLICATES if a in ids and b in ids]
     data = {"built": "2026-09-30", "khipus": khipus, "sites": sites, "edges": edges, "edgeTypes": EDGE_TYPES,
             "duplicates": dups, "findings": FINDINGS, "negatives": [{"title": a, "text": b} for a, b in NEGATIVES],
             "sources": [{"title": a, "url": u, "use": w} for a, u, w in SOURCES], "undigitized": undig,
+            "context": [{"kind": a, "label": b, "lat": c, "lon": d, "note": e} for a, b, c, d, e in CONTEXT],
+            "roads": [{"kind": a, "pts": [[lo, la] for la, lo in pts]} for a, pts in ROADS],
+            "timeline": [{"when": a, "title": b, "text": c, "finding": d} for a, b, c, d in TIMELINE],
             "scriptBase": KHIPU_URL}
     s = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     OUT.write_text(s)
