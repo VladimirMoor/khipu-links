@@ -119,6 +119,14 @@ ol.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;heigh
 ol.tl li.hit::before{background:var(--accent);border-color:var(--accent)}
 ol.tl .when{font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}
 ol.tl h3{margin:.1em 0 .2em}
+.v3d{position:relative;width:100%;height:min(70vh,560px);background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:10px 0 6px;touch-action:none}
+.v3d canvas{display:block;width:100%;height:100%}
+.v3d .tip{position:absolute;pointer-events:none;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-family:var(--f-mono);font-size:.78rem;max-width:280px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.v3d .msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-style:italic}
+.v3dbar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.v3dbar button{font-family:var(--f-display);font-size:.86rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+.v3dbar button[aria-pressed="true"]{background:var(--soft);border-color:var(--ink)}
+.qual{font-family:var(--f-display);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
 .loading{color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -422,17 +430,104 @@ function showKhipu(id){
    <dl class="meta"><dt>Museum</dt><dd>${esc(k.museum)||'—'}</dd><dt>Number</dt><dd class="mono">${esc(k.num)||'—'}</dd>
    <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}
    <dt>Cords</dt><dd>${k.np} pendants, ${k.nc} cords with subsidiaries, ${k.groups.length} groups; largest value ${k.max.toLocaleString('en')}</dd></dl>
-   <div class="schem">${schematic(k)}</div><p class="note">Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom. Colours are approximate.</p>
+   <h3>Model</h3>
+   <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">Hanging</button><button type="button" id="m-flat" aria-pressed="false">Laid flat</button><button type="button" id="m-reset">Reset view</button><span class="qual muted" id="m-qual"></span></div>
+   <div class="v3d" id="v3d"><div class="msg">Loading the 3D model…</div></div>
+   <p class="note">Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres; small spheres are single knots, coils are long knots (one ring per turn), paired beads are figure-eight knots; pendants attached recto hang in front of the primary cord, verso behind. Colours approximate the recorded colour codes; two-colour cords are striped.</p>
+   <details><summary>Flat schematic</summary><div class="schem">${schematic(k)}</div><p class="note">Pendants in recorded order and grouping; dots mark knots by decimal place, units at the bottom.</p></details>
    ${es.length?`<h3>Links</h3><ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>Same object</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
    ${fs.length?`<h3>Findings</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(f.title)}</a>`).join(' · ')}</p>`:''}
    <h3>Pendant values by group</h3><div class="groups">${gl}</div>
    <p><a href="#catalogue">Back to the list</a></p></div>`;
+  view3d(k);
 }
 function undig(){ $('#undig-n').textContent=D.undigitized.length;
   const key=u=>/14\s*x|7\s*x\s*A,\s*7\s*x\s*B/.test(u.groups)?0:1;
   $('#undig').innerHTML=D.undigitized.slice().sort((a,b)=>key(a)-key(b)||a.inv.localeCompare(b.inv)).map(u=>`<tr><td class="mono"><a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.inv)}</a>${key(u)===0?' <span class="chip st-suggestive">14 units</span>':''}</td><td>${esc(u.collector)}</td><td>${esc(u.groups)||'<span class="muted">—</span>'}</td></tr>`).join('') }
 document.addEventListener('click',ev=>{const tr=ev.target.closest('#rows tr'); if(tr){location.hash='khipu-'+tr.dataset.id}});
+
+
+/* ---------- 3D model (three.js) ---------- */
+let V=null, KD=null, libs=null;
+function loadScript(src){return new Promise((res,rej)=>{const e=document.createElement('script');e.src=src;e.onload=res;e.onerror=rej;document.head.appendChild(e)})}
+function loadLibs(){ if(!libs) libs=loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js').then(()=>loadScript('https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js')); return libs }
+async function loadModel(id){ if(!KD) KD=await fetch('./kd/index.json').then(r=>r.json()); const f=KD[id]; if(!f) return null; const b=await fetch('./kd/'+f).then(r=>r.json()); return b[id] }
+function disposeV(){ if(!V) return; cancelAnimationFrame(V.raf); V.ro&&V.ro.disconnect(); V.scene.traverse(o=>{o.geometry&&o.geometry.dispose(); if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{m.map&&m.map.dispose();m.dispose()})}}); V.renderer.dispose(); V=null }
+const QUAL={okr:'Knots as recorded (OKR)',sheet:'Knots from our transcription of the record sheets',recon:'Reconstructed from values (no knot positions recorded)'};
+async function view3d(k){
+  disposeV();
+  const host=$('#v3d'); if(!host) return;
+  let M; try{ await loadLibs(); M=await loadModel(k.id) }catch(e){ host.innerHTML='<div class="msg">The 3D viewer could not be loaded.</div>'; return }
+  if(!M||!M.c.length){ host.innerHTML='<div class="msg">No model for this khipu.</div>'; return }
+  $('#m-qual').textContent=QUAL[M.q]||'';
+  host.innerHTML=''; const tip=document.createElement('div'); tip.className='tip'; tip.hidden=true;
+  const T=THREE, W=host.clientWidth, H=host.clientHeight;
+  const renderer=new T.WebGLRenderer({antialias:true}); renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.setSize(W,H); host.appendChild(renderer.domElement); host.appendChild(tip);
+  const scene=new T.Scene(); scene.background=new T.Color(css('--surface'));
+  const camera=new T.PerspectiveCamera(40,W/H,0.1,5000);
+  scene.add(new T.HemisphereLight(0xffffff,0x444433,0.9)); const dl=new T.DirectionalLight(0xffffff,0.7); dl.position.set(40,60,80); scene.add(dl);
+  const controls=new T.OrbitControls(camera,renderer.domElement); controls.enableDamping=true;
+  V={renderer,scene,camera,controls,raf:0,mode:'hang',k,M,group:null};
+  const texCache={};
+  const stripe=(a,b)=>{const key=a+b; if(texCache[key]) return texCache[key]; const c=document.createElement('canvas'); c.width=8; c.height=64; const g=c.getContext('2d');
+    for(let i=0;i<8;i++){g.fillStyle=i%2?b:a; g.fillRect(0,i*8,8,8)} const t=new T.CanvasTexture(c); t.wrapS=t.wrapT=T.RepeatWrapping; return texCache[key]=t};
+  function rnd(i){const x=Math.sin(i*12.9898+78.233)*43758.5453; return x-Math.floor(x)}
+  function build(){
+    if(V.group){V.scene.remove(V.group); V.group.traverse(o=>{o.geometry&&o.geometry.dispose(); o.material&&o.material.dispose&&o.material.dispose()})}
+    const G=new T.Group(); V.group=G; V.picks=[];
+    const hang=V.mode==='hang', PL=Math.max(M.pl,1);
+    const pc=new T.CatmullRomCurve3([new T.Vector3(-1,0,0),new T.Vector3(PL*.33,hang?-0.4:0,0),new T.Vector3(PL*.66,hang?-0.4:0,0),new T.Vector3(PL+1,0,0)]);
+    G.add(new T.Mesh(new T.TubeGeometry(pc,Math.max(20,Math.ceil(PL)),0.22,8,false),new T.MeshStandardMaterial({color:colOf(M.pc)==='#9a8f84'?css('--cord'):colOf(M.pc),roughness:.9})));
+    const curves=[]; const sph=[], tor=[]; const tmp=new T.Object3D();
+    const primaryAt=x=>{const t=Math.min(1,Math.max(0,(x+1)/(PL+2))); return pc.getPointAt(t)};
+    M.c.forEach((c,i)=>{ const [label,pi,lvl,pos,len0,att,term,c1,op,c2,val,kn]=c; const len=Math.max(len0||0,3);
+      let start, dir=new T.Vector3(0,-1,0), side=0;
+      if(pi<0){ start=primaryAt(pos).clone(); side=att==='V'?-0.28:att==='R'?0.28:0; start.z+=side }
+      else { const pcur=curves[pi]; if(!pcur) return; const pl=pcur.getLength(); const t=Math.min(0.98,Math.max(0.02,(pos||1)/pl)); start=pcur.getPointAt(t).clone(); start.x+=0.25 }
+      const pts=[start];
+      const n=4; for(let j=1;j<=n;j++){ const f=j/n; const sway=hang?(rnd(i*7+j)-0.5)*Math.min(1.6,len*0.03):0;
+        pts.push(new T.Vector3(start.x+(pi<0?sway*0.4:0.6*f+sway*0.3), start.y-len*f, start.z+(hang?(side*2*f+sway):0))) }
+      const cur=new T.CatmullRomCurve3(pts); curves[i]=cur;
+      const colA=colOf(c1), colB=colOf(c2||c1);
+      const mat=(op&&c2)? new T.MeshStandardMaterial({map:(()=>{const t=stripe(colA,colB).clone(); t.needsUpdate=true; t.repeat.set(1,Math.max(1,len/4)); return t})(),roughness:.95})
+                         : new T.MeshStandardMaterial({color:colA,roughness:.95});
+      const mesh=new T.Mesh(new T.TubeGeometry(cur,Math.max(8,Math.ceil(len/2.5)),lvl>1?0.09:0.12,5,false),mat);
+      mesh.userData={i}; G.add(mesh); V.picks.push(mesh);
+      const kcol=new T.Color(colA).multiplyScalar(0.62);
+      const place=(d,off)=>{const L=cur.getLength(); const t=Math.min(0.995,Math.max(0.005,d/L)); const p=cur.getPointAt(t), tg=cur.getTangentAt(t); return [p,tg]};
+      (kn||[]).forEach(([kp,type,cnt,turns])=>{
+        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++){ const [p]=place(kp+q*0.42); sph.push([p,0.3,kcol]) } }
+        else if(type==='E'||type==='EE'||type==='TF'){ const [p,tg]=place(kp); const nrm=new T.Vector3(1,0,0).cross(tg).normalize().multiplyScalar(0.16); sph.push([p.clone().add(nrm),0.24,kcol]); sph.push([p.clone().sub(nrm),0.24,kcol]) }
+        else { const nt=Math.max(2,type==='L'?turns:3); for(let q=0;q<nt;q++){ const [p,tg]=place(kp+q*0.2); tor.push([p,tg,kcol]) } }
+      });
+      if(term==='K'){ const [p]=place(len-0.2); sph.push([p,0.2,kcol]) }
+    });
+    if(sph.length){ const im=new T.InstancedMesh(new T.SphereGeometry(1,10,8),new T.MeshStandardMaterial({roughness:.8}),sph.length);
+      sph.forEach(([p,r,c],j)=>{tmp.position.copy(p); tmp.scale.setScalar(r); tmp.quaternion.identity(); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c)}); G.add(im) }
+    if(tor.length){ const im=new T.InstancedMesh(new T.TorusGeometry(0.2,0.1,6,12),new T.MeshStandardMaterial({roughness:.8}),tor.length); const up=new T.Vector3(0,0,1);
+      tor.forEach(([p,tg,c],j)=>{tmp.position.copy(p); tmp.scale.setScalar(1); tmp.quaternion.setFromUnitVectors(up,tg.clone().normalize()); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c)}); G.add(im) }
+    V.scene.add(G); fit();
+  }
+  function fit(){ const box=new T.Box3().setFromObject(V.group), ctr=box.getCenter(new T.Vector3()), sz=box.getSize(new T.Vector3());
+    const d=Math.max(sz.x/ (2*Math.tan(20*Math.PI/180)*camera.aspect), sz.y/(2*Math.tan(20*Math.PI/180)))*1.12;
+    camera.position.set(ctr.x, ctr.y+sz.y*0.05, ctr.z+d+10); camera.near=Math.max(0.1,d/200); camera.far=d*20; camera.updateProjectionMatrix(); controls.target.copy(ctr); controls.update() }
+  const ray=new T.Raycaster(), mouse=new T.Vector2(); let hot=null;
+  renderer.domElement.addEventListener('pointermove',ev=>{ const r=renderer.domElement.getBoundingClientRect(); mouse.set(((ev.clientX-r.left)/r.width)*2-1,-((ev.clientY-r.top)/r.height)*2+1);
+    ray.setFromCamera(mouse,camera); const hit=ray.intersectObjects(V.picks,false)[0];
+    if(hot&&(!hit||hit.object!==hot)){hot.material.emissive&&hot.material.emissive.setHex(0);hot=null}
+    if(hit){ hot=hit.object; hot.material.emissive&&hot.material.emissive.setHex(0x442222); const c=M.c[hot.userData.i];
+      const ks=(c[11]||[]).map(([p,t,n,tu])=>`${t==='S'?n+'S':t==='L'?tu+'L':t}(${p})`).join(' ');
+      tip.innerHTML=`cord ${esc(c[0])} · ${c[10]}<br>${esc(c[7])}${c[8]?esc(c[8])+esc(c[9]):''} · ${c[4]} cm${c[5]?' · '+esc(c[5]):''}<br>${esc(ks||'no knots')}`;
+      tip.hidden=false; tip.style.left=Math.min(r.width-200,ev.clientX-r.left+12)+'px'; tip.style.top=(ev.clientY-r.top+12)+'px' } else tip.hidden=true });
+  renderer.domElement.addEventListener('pointerleave',()=>{tip.hidden=true});
+  const ro=new ResizeObserver(()=>{const w=host.clientWidth,h=host.clientHeight; if(!w||!h) return; renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix()}); ro.observe(host); V.ro=ro;
+  const loop=()=>{V&&(V.raf=requestAnimationFrame(loop)); controls.update(); renderer.render(scene,camera)}; loop();
+  const setMode=m=>{V.mode=m; $('#m-hang').setAttribute('aria-pressed',m==='hang'); $('#m-flat').setAttribute('aria-pressed',m==='flat'); build()};
+  $('#m-hang').onclick=()=>setMode('hang'); $('#m-flat').onclick=()=>setMode('flat'); $('#m-reset').onclick=()=>fit();
+  build();
+}
+window.addEventListener('hashchange',()=>{ if(!location.hash.startsWith('#khipu-')) disposeV() });
 
 /* ---------- Findings, negatives, sources ---------- */
 function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('') }
