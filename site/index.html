@@ -59,10 +59,10 @@ svg text{fill:var(--ink)}
 .mapbox{position:relative;width:100%;aspect-ratio:3/4;max-height:78vh;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .mapbox svg,.netbox svg{width:100%;height:100%;display:block}
 .land{fill:var(--soft);stroke:var(--line);stroke-width:.6}
-.sea-label{fill:var(--muted);font-family:var(--f-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.sea-label{fill:var(--muted);font-family:var(--f-display);letter-spacing:.2em;text-transform:uppercase}
 .site{fill:var(--cord);fill-opacity:.85;stroke:var(--surface);stroke-width:1.2;cursor:pointer}
 .site.on{fill:var(--accent)}
-.site-label{font-family:var(--f-display);font-size:11px;pointer-events:none}
+.site-label{font-family:var(--f-display);pointer-events:none;paint-order:stroke;stroke:var(--surface);stroke-linejoin:round}
 .flow{fill:none;stroke:var(--accent);stroke-opacity:.7}
 .netbox{width:100%;height:min(72vh,640px);background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .node{cursor:pointer;stroke:var(--surface);stroke-width:1.5}
@@ -312,18 +312,25 @@ function drawMap(){
   const labs=gLab.selectAll('text').data(sites).join('text').attr('class','site-label').attr('x',s=>pos[s.id][0]+r(s.n)+4).attr('y',s=>pos[s.id][1]+4).text(s=>s.label.split(' (')[0]);
   const layer=(id,g)=>{const el=$(id); const f=()=>g.attr('display',el.checked?null:'none'); el.addEventListener('change',f); f()};
   layer('#l-links',gFlow); layer('#l-centre',gCentre); layer('#l-valley',gValley); layer('#l-road',gRoad); layer('#l-suyu',gSuyu); layer('#l-city',gCity);
-  let k0=1;
-  function restyle(k){k0=k;
+  function restyle(t){ const k=t.k;
     gSite.selectAll('circle').attr('r',s=>r(s.n)/Math.sqrt(k)).attr('stroke-width',1.2/k);
-    labs.attr('font-size',11/k).attr('x',s=>pos[s.id][0]+(r(s.n)/Math.sqrt(k))+4/k).attr('y',s=>pos[s.id][1]+4/k).attr('display',s=>(k>2.2||big.has(s.id))?null:'none');
-    root.selectAll('.lbl,.ctx-valley').attr('font-size',10/k); root.selectAll('.ctx-suyu').attr('font-size',12/k);
+    // labels: constant screen size; greedy placement so that no two overlap on screen
+    const placed=[]; const fs=12;
+    labs.each(function(s){ const rr=r(s.n)/Math.sqrt(k); const x=pos[s.id][0]*k+t.x+rr*k+4, y=pos[s.id][1]*k+t.y;
+      const w=s.label.split(' (')[0].length*fs*.56, h=fs*1.1, box=[x,y-h*.75,x+w,y+h*.25];
+      const hit=placed.some(b=>!(box[2]<b[0]||box[0]>b[2]||box[3]<b[1]||box[1]>b[3]));
+      const show=!hit && (k>1.6||big.has(s.id));
+      if(show) placed.push(box);
+      d3.select(this).attr('display',show?null:'none').style('font-size',(fs/k)+'px').attr('stroke-width',3/k)
+        .attr('x',pos[s.id][0]+rr+4/k).attr('y',pos[s.id][1]+4/k)});
+    root.selectAll('.lbl,.ctx-valley').style('font-size',(10/k)+'px'); root.selectAll('.ctx-suyu').style('font-size',(12/k)+'px');
     cen.selectAll('rect').attr('transform',`rotate(45) scale(${1/k})`); cen.selectAll('text').attr('x',6/k).attr('y',4/k);
     cit.selectAll('circle').attr('r',2/k); cit.selectAll('text').attr('x',5/k).attr('y',-4/k);
     gFlow.selectAll('path').attr('stroke-width',function(){return (this.__w||(this.__w=+this.getAttribute('stroke-width')))/k});
     gRoad.selectAll('path').attr('stroke-width',1.4/k).attr('stroke-dasharray',`${5/k} ${4/k}`);
-    root.selectAll('.land').attr('stroke-width',.6/k); root.select('.sea-label').attr('font-size',11/k)}
-  const zoom=d3.zoom().scaleExtent([1,24]).translateExtent([[0,0],[W,H]]).on('zoom',ev=>{root.attr('transform',ev.transform); restyle(ev.transform.k)});
-  svg.call(zoom); restyle(1);
+    root.selectAll('.land').attr('stroke-width',.6/k); root.select('.sea-label').style('font-size',(11/k)+'px')}
+  const zoom=d3.zoom().scaleExtent([1,24]).translateExtent([[0,0],[W,H]]).on('zoom',ev=>{root.attr('transform',ev.transform); restyle(ev.transform)});
+  svg.call(zoom); restyle(d3.zoomIdentity);
   const focus=(lon1,lat1,lon2,lat2)=>{const [x1,y1]=proj([lon1,lat1]),[x2,y2]=proj([lon2,lat2]); const k=Math.min(24,.9/Math.max((x2-x1)/W,(y2-y1)/H));
     svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(W/2,H/2).scale(k).translate(-(x1+x2)/2,-(y1+y2)/2))};
   $('#maptools').addEventListener('click',ev=>{const z=ev.target.dataset&&ev.target.dataset.z; if(!z) return;
