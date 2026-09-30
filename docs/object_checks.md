@@ -9,8 +9,8 @@ are the published readings (Aschers / KFG / Urton). Every check is useful whatev
 
 | Cord | Published | What to check | If … |
 |---|---|---|---|
-| 13 (group 4, first cord) | Aschers “?”, knots 3s(10.0); 1s(18.0); 1s(26.0); 1s(37.0); 1s(39.0); KFG 3130; Urton 31111 | Knot types and clusters in the lower (units) zone: one or two single knots? any long or figure-eight knot? | **3111** → group 4 = 8565 = AS118 subsidiary 1s5 exactly; 3112 → 8566; 3130 → 8584 (no match). |
-| 8 (group 3, first cord) | Aschers “222?”, knots 2s(9.5); 2s(18.0); 2s(27.5), broken at 29.5 cm | Is the tens cluster cut by the break? traces of further tens knots or of units below 29.5 cm? | tens cut → the value may have been 2298, and group 3 = 11522 = AS118 1s4. |
+| 13 (group 4, first cord) | Aschers “?”, knots 3s(10.0); 1s(18.0); 1s(26.0); 1s(37.0); 1s(39.0); KFG 3130; Urton 31111; Chirinos 2010 3112 | Knot types and clusters in the lower (units) zone: one or two single knots? any long or figure-eight knot? | **3111** → group 4 = 8565 = AS118 subsidiary 1s5 exactly; 3112 → 8566; 3130 → 8584 (no match). |
+| 8 (group 3, first cord) | Aschers “222?” (Chirinos 2010: 2222), knots 2s(9.5); 2s(18.0); 2s(27.5), broken at 29.5 cm | Is the tens cluster cut by the break? traces of further tens knots or of units below 29.5 cm? | tens cut → the value may have been 2298, and group 3 = 11522 = AS118 1s4. |
 | 16 (single YB pendant, “group 5”) | no knots, 8.5 cm, broken | Any knot remains? | knots → a candidate for AS118 1s1 (2696). |
 
 ## 2. AS118 (VA42601, Pachacamac)
