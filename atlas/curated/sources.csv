@@ -1,0 +1,20 @@
+title,url,use
+"Ascher & Ascher, Code of the Quipu Databook I–II (1978, 1988)",https://courses.cit.cornell.edu/quipu/,Cord records and observations for AS khipus; the 7 + 7 parts of AS131 and AS170; AS215's summary part.
+Open Khipu Repository (OKR),https://github.com/khipulab/open-khipu-repository,"SQLite database (MIT licence), cord positions, record-sheet scans of UR297/UR298 and Huacones-Vilcahuasi."
+Khipu Field Guide (KFG),https://www.khipufieldguide.com/,Cleaned cord data for about 680 khipus; the 2026 catalogue lists 711.
+"Staatliche Museen zu Berlin, museum-digital",https://smb.museum-digital.de/,"305 khipu records: collectors (Gretzer, Gaffron…) and group descriptions of undigitized khipus."
+"Chirinos Rivera, Quipus del Tahuantinsuyo (2010)",,"Colonial allocations in ninths, summary = sum of details, copies in three exemplars."
+"Urton & Chu, Accounting in the King's Storehouse (LAA 2015) and supplements",https://doi.org/10.7183/1045-6635.26.4.512,Inkawasi inventory; matched pairs; UR269 listed without a repeating value.
+"Urton & Chu, The Invention of Taxation in the Inka Empire (LAA 2019)",https://doi.org/10.1017/laq.2018.64,"Fixed deductions 10, 15, 47, 208; the 2% proportionality we test on UR269."
+"Chu & Urton, El archivo khipu de Incawasi (2018)",,Spanish version; table of khipus found with produce.
+"Urton, Quipus de Pachacamac (2014)",,Inventory of the Berlin Pachacamac khipus.
+"Medrano, The promise of Andean khipu transcriptions (MPhil thesis, St Andrews 2022)",https://research-repository.st-andrews.ac.uk/,"Provenance of Basel IVc.366.03: dug near Huacho, bought 1910; mounted under Nordenskiöld in 1924."
+"Barraza Lescano et al., By Stones and by Knots (Andean Past 2022)",,"Huacones-Vilcahuasi context and Table 3, which checks our transcription."
+"Thompson, A Numerical Connection Between Two Khipus (2024)",,"AS069/AS070, used to validate the detectors."
+"Pereyra, Dos quipus excepcionales (1996)",,Detailed khipu descriptions.
+"Nordenskiöld, Calculations with Years and Months in the Peruvian Quipus (1925)",https://archive.org/details/b30624642,Calendar hypothesis; context of the Basel mounting.
+"Locke, A Peruvian Quipu (1927)",https://archive.org/details/peruvianquipu00lock,A Heye khipu with summary top cords.
+"Eeckhout, La sombra de Ychsma (BIFEA 2004)",https://journals.openedition.org/bifea/5047,Ychsma organization; no 7 + 7 unit match.
+"Lambayeque-style textiles in the Ethnologisches Museum, Berlin (Nuevo Mundo Mundos Nuevos)",https://journals.openedition.org/nuevomundo/69290,"How Gretzer collected: grave robbers, 'Pachacamac' labels."
+"Curatola & de la Puente (eds.), El quipu colonial (2013)",,Colonial transcriptions used in the document match.
+"Contreras, Structural pattern mining in Inka khipus (arXiv 2026)",https://arxiv.org/abs/2607.00185,Santa Valley recto/verso validation.

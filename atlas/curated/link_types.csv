@@ -1,0 +1,9 @@
+type,label
+sum,Sum across khipus
+lot,Shared lot
+details,Details without totals
+excerpt,Excerpt
+totals,Totals only
+join,Two accounts joined
+copy,Matching copy
+fold,Folded copy

@@ -1,0 +1,39 @@
+kind,label,lat,lon,note
+centre,Chan Chan,-8.105,-79.075,Chimu capital
+centre,Farfán,-7.25,-79.47,Chimu–Inka centre; floor yupana
+centre,Manchán,-9.47,-78.3,Chimu–Inka centre; floor yupana
+centre,Paramonga,-10.67,-77.83,Fortress
+centre,Caral,-10.89,-77.52,Supe valley
+centre,Huarco / Cerro Azul,-13.02,-76.48,Guarco capital
+centre,Huánuco Pampa,-9.87,-76.94,Inka administrative centre
+centre,Hatun Xauxa (Jauja),-11.77,-75.5,"Huanca khipu accounts, 1533–1561"
+centre,Vilcashuamán,-13.65,-73.95,Inka provincial centre
+centre,Chucuito,-15.89,-69.89,"Lupaqa accounts, 1567"
+centre,Cajamarca,-7.16,-78.51,Inka centre; 1532
+centre,Chincha,-13.42,-76.13,Coastal lordship
+valley,Jequetepeque,-7.35,-79.6,
+valley,Moche,-8.15,-78.98,
+valley,Casma,-9.47,-78.4,
+valley,Supe,-10.8,-77.72,
+valley,Huaura,-11.12,-77.52,
+valley,Chancay,-11.52,-77.2,
+valley,Chillón,-11.9,-77.08,
+valley,Rímac,-12.02,-77.0,
+valley,Lurín,-12.22,-76.82,
+valley,Cañete,-13.05,-76.3,
+valley,Pisco,-13.65,-76.1,
+valley,Ica,-14.25,-75.7,
+valley,Río Grande (Nazca),-14.75,-75.15,
+valley,Acarí,-15.35,-74.55,
+valley,Lluta,-18.35,-70.2,
+valley,Loa,-21.45,-70.0,
+city,Lima,-12.046,-77.043,
+city,Trujillo,-8.11,-79.03,
+city,Arequipa,-16.4,-71.54,
+city,Cusco,-13.53,-71.97,
+city,Arica,-18.48,-70.31,
+city,Tumbes,-3.57,-80.45,
+suyu,Chinchaysuyu,-9.3,-76.4,North-western quarter
+suyu,Antisuyu,-12.6,-71.2,Eastern quarter
+suyu,Collasuyu,-18.2,-68.9,South-eastern quarter
+suyu,Contisuyu,-15.6,-73.4,South-western quarter

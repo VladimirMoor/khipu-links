@@ -16,3 +16,5 @@ __pycache__/
 .claude/
 extracted/plus_do_cords.csv
 site/data.json
+atlas/atlas.db
+site/kd/

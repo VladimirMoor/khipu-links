@@ -1,0 +1,28 @@
+from,to,type,finding,note
+UR1149,UR1143,sum,berlin,AS143 group 4 = AS149 groups 1 + 2 in all five positions
+UR1149,UR1179,lot,berlin,"The lot 1430, 670, 3410, 820 recurs as 1430, 670, 3424, 820"
+UR1175,UR233,details,huacho1,"Parts 1 and 3 of AS175 copied group by group, totals left out"
+UR1175,UR232,details,huacho1,Part 3 of AS175 continued on the spliced second khipu
+UR218,UR1118,excerpt,as118,"Groups 2–3 of AS118 repeat groups 2–3 of UR218, knot counts included"
+AS125,UR1118,totals,as118,The five subsidiaries of AS118's first cord follow the group totals of AS125
+UR212,MM008,join,basel,UR212 unit 14 (cords 1–12)
+UR212,MM012,join,basel,UR212 cords 97–100
+UR212,MM014,join,basel,UR212 cords 167–169
+UR212,MM015,join,basel,"UR212 unit 1 (cords 182–194), 13 of 13"
+UR212,MM016,join,basel,UR212 unit 4 (cords 139–148)
+UR1131,MM008,join,basel,AS131 unit 14 (cords 137–146)
+UR1131,MM009,join,basel,AS131 cords 127–132
+UR1131,MM015,join,basel,"AS131 unit 1 (cords 1–9), marked slot filled"
+UR1131,MM016,join,basel,AS131 unit 4 (cords 35–39)
+UR274B,UR273B,totals,inkawasi,UR273B records only the deposit totals of UR274B
+UR267A,UR255,copy,inkawasi,Matched pair (Urton & Chu 2015); net slots empty then filled on UR255
+UR267B,UR256,copy,inkawasi,Matched pair (Urton & Chu 2015)
+UR266,UR275,copy,inkawasi,Shared deposits with deduction 47 (Urton & Chu 2015)
+UR278,UR270,fold,folded,A separate cord in one copy is a subsidiary in the other
+UR053C,UR053B,fold,folded,Waterfall set: triples in C packed into pairs in B
+KH0049,UR122,excerpt,known,Lima → Gothenburg: one branch of the account (Chirinos 2010)
+HP055,UR1084,copy,known,Lima ↔ Paris copy (Chirinos 2010)
+UR1114,UR1123,excerpt,known,AS123 group 5 = one block of AS114 (Urton 2005)
+AS215,AS003,totals,as003,"AS003 records only the summary part of AS215, with its total 76"
+UR066,UR067,copy,known,Puruchuco matching pair
+AS069,AS070,sum,known,Thompson 2024

@@ -1,0 +1,249 @@
+[
+ {
+  "id": "basel",
+  "status": "new",
+  "title": "Two Pachacamac accounts joined on a Huacho khipu",
+  "place": [
+   "pachacamac",
+   "huacho"
+  ],
+  "summary": "Six fragments sewn on the Basel cloth IVc.366.03 (dug near Huacho, bought 1910) repeat runs of two Berlin khipus labelled Pachacamac: UR212 (37 of 195 pendants) and AS131 (25 of 146). UR212 and AS131 each have 14 main groups, divided 7 + 7 at the same point. Every fragment that carries both khipus pairs the same unit (units 1, 4 and 14), so the Huacho khipu set the two halves of one 14-unit account side by side, 14 + 10 cords per unit.",
+  "evidence": [
+   "Other khipus with ≥ 100 pendants match at most 4 cords (median 0).",
+   "Same unit in 3 of 3 fragments: p ≈ (1/14)² ≈ 0.005.",
+   "Where Berlin leaves a colour-marked cord knotless, the Basel copy carries a value (3 of 3); other knotless cords stay knotless.",
+   "Unit totals of UR212 and AS131 are not correlated (ρ = 0.19): different categories of the same units."
+  ],
+  "khipus": [
+   "UR212",
+   "UR1131",
+   "MM008",
+   "MM009",
+   "MM012",
+   "MM014",
+   "MM015",
+   "MM016"
+  ],
+  "scripts": [
+   "basel_huacho.py",
+   "ur212_as131_units.py",
+   "basel_slots.py",
+   "halves_columns.py"
+  ]
+ },
+ {
+  "id": "frame14",
+  "status": "suggestive",
+  "title": "A 14-unit frame in Gretzer's Berlin batch",
+  "place": [
+   "pachacamac"
+  ],
+  "summary": "Fourteen main groups are rare (1.6% of khipus outside the Berlin 'Pachacamac' batch) but occur on 4 of 23 khipus of that batch: UR212, AS131, AS170 and UR199. Berlin catalogue records describe three more that are not digitized: VA 42513 (14 × 13 pendants), VA 42537 (14 × 9) and VA 42532 (7 × A, 7 × B, 7 × A, 7 × B). AS131, UR212 and AS170 split their units 7 + 7 at the same place, each marked differently: a larger space, a single knotless cord, a marker.",
+  "evidence": [
+   "Binomial P ≈ 0.0005 with all four; P ≈ 0.04 without the two khipus that prompted the question.",
+   "Across 109 OKR khipus with an even number of main groups, the largest space falls in the middle 12.9 times (13.0 expected): equal halves are not a general habit."
+  ],
+  "khipus": [
+   "UR212",
+   "UR1131",
+   "AS170",
+   "UR199"
+  ],
+  "scripts": [
+   "units14.py",
+   "halves.py"
+  ]
+ },
+ {
+  "id": "berlin",
+  "status": "new",
+  "title": "One allocation on three Ica khipus (Berlin, 1907)",
+  "place": [
+   "ica"
+  ],
+  "summary": "AS143 group 4 equals AS149 groups 1 + 2 in all five positions (17436 = 8653 + 8783, 41883 = 20640 + 21243, …). All shares have the same composition (22.4 : 10.4 : 54.4 : 12.8 %); in ninths of the AS143 total the shares are 2 + 2 + 2 + 2 + 1. The lot 1430, 670, 3410, 820 recurs on AS179.",
+  "evidence": [
+   "The only exact cross-khipu vector sum in the corpus (offset baseline 0–2, small values only).",
+   "Two 2/9 shares of AS143 are equal within 1 (41062 and 41061) with a substitution between goods (p ≈ 0.005)."
+  ],
+  "khipus": [
+   "UR1143",
+   "UR1149",
+   "UR1179"
+  ],
+  "scripts": [
+   "vecsum.py",
+   "lotmatch.py"
+  ]
+ },
+ {
+  "id": "huacho1",
+  "status": "new",
+  "title": "Pachacamac → Huacho: the details without the totals",
+  "place": [
+   "pachacamac",
+   "huacho"
+  ],
+  "summary": "The spliced Huacho khipus UR233 + UR232 (Berlin VA 63038b, Gaffron) repeat parts 1 and 3 of AS175 (VA 42518, Gretzer) group by group, leave out part 2 (the sums of part 3) and add one knotless pendant to every group.",
+  "evidence": [
+   "z = 6.4 and 19.5 against other offsets; group-order permutation p ≤ 0.003.",
+   "Different objects: cords per group, lengths and subsidiaries differ."
+  ],
+  "khipus": [
+   "UR1175",
+   "UR233",
+   "UR232"
+  ],
+  "scripts": [
+   "diagscan.py",
+   "huacho.py"
+  ]
+ },
+ {
+  "id": "as118",
+  "status": "new",
+  "title": "AS118 links two other Pachacamac khipus",
+  "place": [
+   "pachacamac"
+  ],
+  "summary": "Groups 2–3 of AS118 repeat groups 2–3 of UR218 cord for cord, knot counts included. The five subsidiaries of its first, knotless pendant follow the group totals of AS125: 14658 exact, 8565 if one cord the Aschers left unread is 3111.",
+  "evidence": [
+   "Among 696 khipus only AS125 matches more than one of the five values; none on the offset baseline."
+  ],
+  "khipus": [
+   "UR1118",
+   "UR218",
+   "AS125"
+  ],
+  "scripts": [
+   "as118.py"
+  ]
+ },
+ {
+  "id": "ur269",
+  "status": "new",
+  "title": "Inkawasi UR269: the deduction is set by the place of the record",
+  "place": [
+   "inkawasi"
+  ],
+  "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size (1.9% in places 2–4, 3.0% in place 1, 4.4% in place 5). Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268 from the same room, but no record-level link was found.",
+  "evidence": [
+   "33 of 43 deductions equal their place value; 17 when records are shuffled within blocks (p ≈ 0.0005).",
+   "No other Inkawasi khipu shows a place dependence (all p > 0.8)."
+  ],
+  "khipus": [
+   "UR269",
+   "UR268"
+  ],
+  "scripts": [
+   "slotded.py",
+   "ur268_269.py"
+  ]
+ },
+ {
+  "id": "inkawasi",
+  "status": "new",
+  "title": "Inkawasi: empty slots, totals-only copies, product labels",
+  "place": [
+   "inkawasi"
+  ],
+  "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. UR273B records only the deposit totals of UR274B (6 shared totals, 0.45 expected). Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
+  "evidence": [
+   "Split this clean under random placement: about 1 in 3,000.",
+   "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵."
+  ],
+  "khipus": [
+   "UR255",
+   "UR267A",
+   "UR256",
+   "UR267B",
+   "UR273B",
+   "UR274B",
+   "UR266",
+   "UR275"
+  ],
+  "scripts": [
+   "fillslot.py",
+   "blanks.py"
+  ]
+ },
+ {
+  "id": "as003",
+  "status": "new",
+  "title": "AS003: a record of the totals only",
+  "place": [
+   "nazca"
+  ],
+  "summary": "AS003 (Heye 17/8827) repeats the summary part of AS215 (Hood Museum, Nazca): six values that are sums over the four groups of its other part, and the top cord 76 that totals them. It is a second totals-only record, after UR273B at Inkawasi.",
+  "evidence": [
+   "The Aschers' AS215 entry (Databook pp. 127–132) describes the summary but does not mention AS003."
+  ],
+  "khipus": [
+   "AS003",
+   "AS215"
+  ],
+  "scripts": [
+   "mirror.py"
+  ]
+ },
+ {
+  "id": "folded",
+  "status": "known-refined",
+  "title": "Folded copies",
+  "place": [
+   "inkawasi"
+  ],
+  "summary": "In two independent cases a separate cord in one copy is a subsidiary in the other: UR270 → UR278 at Inkawasi and UR053C → UR053B in the Waterfall set. The packing rule is ours; the near-duplication of B and C was noted by Chirinos.",
+  "evidence": [
+   "UR053B/C: 35 fields match against at most 19 in 2,000 shuffles."
+  ],
+  "khipus": [
+   "UR270",
+   "UR278",
+   "UR053B",
+   "UR053C"
+  ],
+  "scripts": [
+   "records.py",
+   "bagscan.py"
+  ]
+ },
+ {
+  "id": "known",
+  "status": "known-refined",
+  "title": "Known copies recovered",
+  "place": [],
+  "summary": "The detectors find, without being told, the copies already published: Lima → Gothenburg (KH0049 → UR122, one branch of the account), Lima ↔ Paris (HP055 ~ AS084), AS114/AS123 (Urton 2005), Puruchuco UR066 ~ UR067, AS069/AS070 (Thompson 2024), and duplicate recordings of one object.",
+  "evidence": [],
+  "khipus": [
+   "KH0049",
+   "UR122",
+   "HP055",
+   "UR1084",
+   "UR1114",
+   "UR1123",
+   "UR066",
+   "UR067"
+  ],
+  "scripts": [
+   "excerpts.py",
+   "segsum.py"
+  ]
+ },
+ {
+  "id": "dumbarton",
+  "status": "data",
+  "title": "Two Dumbarton Oaks khipus transcribed",
+  "place": [],
+  "summary": "UR297 (438 pendants, 623 cords) and UR298 (203 pendants, 285 cords), given by Bill Conklin, exist in the OKR only as scans of Urton's handwritten sheets. We transcribed all 65 pages. 74 of the 78 group totals Urton noted on the sheets equal ours. UR297 has 41 groups, mostly ten cords plus one summary cord pulled up like a top cord. Neither khipu is linked to any other.",
+  "evidence": [],
+  "khipus": [
+   "UR297",
+   "UR298"
+  ],
+  "scripts": [
+   "do_ingest.py",
+   "do_check.py"
+  ]
+ }
+]
