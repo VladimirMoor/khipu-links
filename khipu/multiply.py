@@ -76,3 +76,67 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def cross_scan(G, mus, d=0):
+    """Между кипу через индекс по отношению первых двух ненулевых позиций (B = k·A сохраняет его)."""
+    from math import gcd
+    idx = defaultdict(list)
+    for k, gs in G.items():
+        for i, g in enumerate(gs):
+            if not 3 <= len(g) <= 12:
+                continue
+            nz = [p for p, x in enumerate(g) if x > 0]
+            if len(nz) < 3:
+                continue
+            p, q = nz[0], nz[1]
+            c = gcd(g[p], g[q])
+            idx[(len(g), p, q, g[p] // c, g[q] // c)].append((k, i, g))
+    hits = []
+    for key, items in idx.items():
+        if len(items) < 2:
+            continue
+        for (ka, ia, a), (kb, ib, b) in itertools.permutations(items, 2):
+            if ka == kb or mus[ka] == mus[kb]:
+                continue
+            p = key[1]
+            if b[p] % a[p]:
+                continue
+            k = b[p] // a[p]
+            if 2 <= k <= 20:
+                s = score(a, b, k, d)
+                if s:
+                    hits.append((s, k, ka, ia + 1, a, kb, ib + 1, b))
+    return hits
+
+
+if __name__ == "__main__":
+    G = load()
+    meta = {}
+    for fn in ("plus_khipus.json", "kfg_khipus.json"):
+        for m in json.load(open(ROOT / "extracted" / fn)):
+            meta.setdefault(m["INVESTIGATOR_NUM"], m)
+    mus = {k: str(meta.get(k, {}).get("MUSEUM_NUM") or k).replace(" ", "").upper() for k in G}
+    real = cross_scan(G, mus)
+    # фон: сдвиг B на d после умножения — индекс по отношению тогда не годится, поэтому фон —
+    # перестановка значений внутри каждой группы B (отношения разрушены, набор чисел тот же)
+    import random
+    rnd = random.Random(1)
+    nulls = []
+    for _ in range(5):
+        G2 = {k: [rnd.sample(g, len(g)) for g in gs] for k, gs in G.items()}
+        # сравниваем исходные A с перемешанными B: объединяем, помечая B другим ключом
+        GG = dict(G)
+        mm = dict(mus)
+        for k, gs in G2.items():
+            GG[k + "#p"] = gs
+            mm[k + "#p"] = mus[k] + "#p"
+        h = [x for x in cross_scan(GG, mm) if x[5].endswith("#p") and not x[2].endswith("#p")]
+        nulls.append(len(h))
+    lines = [f"между кипу: совпадений {len(real)}; фон (позиции B перемешаны) {nulls}"]
+    for h in sorted(real, key=lambda h: (-h[0], h[1]))[:30]:
+        s, k, ka, ia, a, kb, ib, b = h
+        lines.append(f"   {s} ×{k:<2} {ka} г{ia} {a} → {kb} г{ib} {b}   | {meta.get(ka, {}).get('PROVENANCE')} / {meta.get(kb, {}).get('PROVENANCE')}")
+    with open(OUT, "a") as f:
+        f.write("\n".join(lines) + "\n")
+    print("\n".join(lines))

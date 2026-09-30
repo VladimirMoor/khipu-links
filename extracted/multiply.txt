@@ -13,3 +13,34 @@
    3 ×3  UR1034 г10 [10, 7, 10, 4, 2] → UR1034 г9 [30, 30, 30, 12, 30]   | Pachacamac
    3 ×6  UR1034 г2 [5, 4, 5, 2, 2] → UR1034 г9 [30, 30, 30, 12, 30]   | Pachacamac
 
+между кипу: совпадений 72; фон (позиции B перемешаны) [81, 91, 81, 76, 57]
+   7 ×6  AS198 г1 [4, 4, 4, 4, 4, 4, 5, 4, 3, 2] → AS026B г1 [24, 24, 12, 24, 24, 24, 24, 24, 12, 12]   | Unknown / Unknown
+   6 ×4  AS026B г13 [5, 5, 0, 3, 3, 4, 3, 3, 0, 1] → UR1126 г9 [20, 20, 20, 12, 12, 20, 12, 12, 11, 11]   | Unknown / Ica
+   4 ×5  UR057 г3 [3, 3, 3, 2, 3, 2] → AS142 г2 [15, 15, 14, 14, 15, 10]   | Atarco / Ica
+   4 ×5  UR057 г4 [3, 3, 2, 3, 3, 2] → AS142 г2 [15, 15, 14, 14, 15, 10]   | Atarco / Ica
+   4 ×5  UR076 г1 [3, 3, 3, 3, 3, 2] → AS142 г2 [15, 15, 14, 14, 15, 10]   | Huaquerones / Ica
+   4 ×6  UR034 г27 [10, 10, 10, 10, 14] → AS072 г12 [60, 60, 60, 35, 84]   | Unknown / Rancho San Juan, Ica Valley
+   4 ×10 AS075 г14 [1, 1, 2, 3, 2, 2] → UR190 г11 [10, 10, 10, 10, 20, 20]   | Pachacamac / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   4 ×10 UR087 г9 [1, 1, 1, 13, 2, 1] → UR190 г11 [10, 10, 10, 10, 20, 20]   | Santa / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   4 ×10 UR087 г13 [1, 1, 1, 11, 2, 1] → UR190 г11 [10, 10, 10, 10, 20, 20]   | Santa / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   4 ×10 UR198 г18 [1, 1, 1, 6, 2, 3] → UR190 г11 [10, 10, 10, 10, 20, 20]   | "Santa Clara, Nazca" / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   4 ×10 UR190 г5 [3, 4, 3, 5] → UR1126 г21 [30, 40, 30, 50]   | Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca) / Ica
+   4 ×20 UR006 г61 [2, 2, 2, 1, 1] → AS090/N2 г8 [40, 40, 40, 20, 30]   | Leymebamba / Peru
+   3 ×2  UR1175 г6 [12, 12, 82, 58, 9] → AS177 г3 [24, 24, 24, 27, 18]   | Pachacamac / near Lima
+   3 ×2  UR282 г3 [20, 20, 10, 10] → UR283 г14 [40, 40, 80, 20]   | Huaca San Pedro, Armatambo / Huaca San Pedro, Armatambo
+   3 ×2  AS092 г9 [15, 10, 4, 10, 4] → UR208 г7 [30, 20, 100, 20, 20]   | Peru / Pachacamac
+   3 ×4  UR1088 г16 [4, 4, 5] → UR057 г1 [16, 16, 20]   | Huacho / Atarco
+   3 ×4  UR199 г20 [3, 6, 33, 3, 0, 3, 6, 30, 3, 7] → UR120 г6 [12, 24, 4, 0, 4, 6, 102, 120, 120, 0]   | Pachacamac / Huacho
+   3 ×5  AS075 г12 [2, 2, 3, 4, 4, 0] → UR190 г11 [10, 10, 10, 10, 20, 20]   | Pachacamac / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   3 ×5  UR010 г5 [2, 2, 11, 9, 4, 12] → UR190 г11 [10, 10, 10, 10, 20, 20]   | Leymebamba / Huaca Perez, Lima (a.k.a Hda. Infantas and Tambo Inca)
+   3 ×5  AS026A г6 [12, 2, 2, 4, 0] → UR208 г28 [60, 10, 10, 0, 0]   | Unknown / Pachacamac
+   3 ×5  AS210 г1 [4, 4, 2, 1] → UR282 г3 [20, 20, 10, 10]   | Unknown / Huaca San Pedro, Armatambo
+   3 ×5  UR1088 г15 [4, 4, 4, 2] → UR282 г3 [20, 20, 10, 10]   | Huacho / Huaca San Pedro, Armatambo
+   3 ×5  ENL13 г2 [2, 8, 1, 3, 4, 3, 1, 1] → QU014 г44 [10, 40, 110, 40, 20, 10, 25, 20]   | Khipus Enlazados MNAAHP RT-16905 (decomiso) / Unknown
+   3 ×5  UR065 г1 [4, 2, 0, 2, 2, 0] → UR264 г31 [20, 10, 20, 4, 10, 10]   | Huaquerones / Incahuasi
+   3 ×5  MM019 г31 [6, 2, 2, 2] → AS178 г4 [30, 10, 10, 30]   | unknown / near Lima
+   3 ×5  HP054 г4 [6, 4, 6, 4, 8, 0, 5, 15, 13] → UR202 г7 [30, 20, 150, 20, 0, 10, 10, 100, 0]   | Unknown / Pachacamac
+   3 ×6  UR1034 г4 [4, 4, 5, 3, 3] → AS177 г3 [24, 24, 24, 27, 18]   | Pachacamac / near Lima
+   3 ×10 UR087 г26 [1, 2, 1, 12, 1, 1] → MM020 г1 [10, 20, 0, 100, 10, 100]   | Santa / unknown
+   3 ×10 UR087 г28 [1, 2, 1, 12, 1, 1] → MM020 г1 [10, 20, 0, 100, 10, 100]   | Santa / unknown
+   3 ×10 UR198 г21 [1, 2, 0, 12, 1, 1] → MM020 г1 [10, 20, 0, 100, 10, 100]   | "Santa Clara, Nazca" / unknown
