@@ -53,8 +53,10 @@ No check needed: the Aschers' record of AS179 cord 3 is unambiguous, 3s(5.5); 4s
 4L(22.5) = 3424, and cord 2 (670) is broken at 28.0 cm, below its units zone. The AS179 lot
 therefore differs from the four AS149 lots (3410) by 14 in position 3.
 
-## Basel, Museum der Kulturen: MM015 (IVc.366.03) against Berlin UR212 (VA42508(A)) and UR1131 (VA42510)
+## Basel, Museum der Kulturen: IVc.366.03 (Huacho, Masarey 1910) against Berlin UR212 (VA42508(A)) and AS131 (VA42510)
 
-- MM015 group 1 repeats UR212 group 16 in mirror order (31 … 212, knotless cord last). Check the cord order and attachment (verso on MM015, recto on UR212) on both objects.
-- MM015 groups 2–3 repeat UR1131 group 1 (44, 38, 33, 26, 18, 18, ·, 13, 7). Check the seventh cord (4, W:GL on MM015; knotless NB:KB on UR1131).
-- Are MM015's three groups on one original main cord, or pieces joined later (knots of attachment, fibre, cord ends)?
+- Six fragments on the cloth (OKR MM008, MM009, MM012, MM014, MM015, MM016) repeat runs of UR212 and AS131 (`khipu/basel_huacho.py`). Longest: MM015 cords 1–13 = UR212 cords 182–194 (reversed); MM016 cords 5–14 = UR212 139–148 (reversed); MM008 cords 16–22 = UR212 6–12.
+- For each fragment: which end is the start of the primary cord (knotted loop or end knot), so that the fragment's orientation on the cloth can be fixed.
+- Berlin: which end of UR212 and of AS131 is the start, as recorded by Urton and by the Aschers.
+- MM015 cord 21 (4, W:GL) against AS131's seventh cord (knotless, NB:KB); MM008's 103 against UR212's 102; MM015's 212 with a subsidiary (88) against UR212's 212 without one.
+- Were the Basel fragments cut from larger khipus (cut ends) or broken?
