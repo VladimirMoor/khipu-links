@@ -62,7 +62,7 @@ def main():
             meta.setdefault(m["INVESTIGATOR_NUM"], m)
     mus = {k: str(meta.get(k, {}).get("MUSEUM_NUM") or k).replace(" ", "").upper() for k in G}
     lines = []
-    for cross in (False, True):
+    for cross in (False,):  # между кипу — слишком много пар без индекса
         real = scan(G, mus, 0, cross)
         null = [len(scan(G, mus, d, cross)) for d in (-3, -2, -1, 1, 2, 3)]
         lines.append(f"{'между кипу' if cross else 'внутри кипу'}: совпадений {len(real)}; фон (k·A ± d) {null}")
