@@ -1,0 +1,382 @@
+<title>Khipu Links Atlas</title>
+<meta name="description" content="Catalogue, map and network of the arithmetic links found between surviving Inka khipus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an archive drawer — a slim header with tabs; each view is a working surface (map, network, register). */
+:root{
+  --bg:#f3f4f0; --surface:#fbfbf8; --ink:#1d1b19; --muted:#5f5a53; --line:#d8d6ce;
+  --cord:#8a6a4f; --accent:#a3283d; --indigo:#2f4f86; --ok:#2f6b4f; --warn:#9a6a12; --soft:#e9e8e1;
+  --f-display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#161513; --surface:#1f1d1a; --ink:#ece7df; --muted:#a9a196; --line:#3a3631;
+  --cord:#c49a72; --accent:#e0566c; --indigo:#8aa6de; --ok:#6fbf95; --warn:#e0b25a; --soft:#2a2723; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#161513; --surface:#1f1d1a; --ink:#ece7df; --muted:#a9a196; --line:#3a3631;
+  --cord:#c49a72; --accent:#e0566c; --indigo:#8aa6de; --ok:#6fbf95; --warn:#e0b25a; --soft:#2a2723; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.55;padding-inline:16px;padding-block:0 48px}
+a{color:var(--indigo)} a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px}
+.bar{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-block:12px}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.brand svg{flex:none}
+nav.tabs{display:flex;flex-wrap:wrap;gap:4px}
+nav.tabs a{font-family:var(--f-display);font-weight:500;font-size:.95rem;text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:6px}
+nav.tabs a[aria-current="page"]{color:var(--ink);background:var(--soft)}
+nav.tabs a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.15;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4vw,3rem);margin:.2em 0 .3em}
+h2{font-size:1.5rem;margin:1.6em 0 .5em}
+h3{font-size:1.1rem;margin:1.2em 0 .3em}
+.lede{font-size:1.15rem;max-width:66ch;color:var(--ink)}
+p{max-width:68ch}
+.muted{color:var(--muted)}
+.mono{font-family:var(--f-mono);font-size:.86em}
+.eyebrow{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;color:var(--muted);font-weight:500}
+section.view{padding-top:20px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 32px;margin:18px 0 8px;font-variant-numeric:tabular-nums}
+.stats div{display:flex;flex-direction:column}
+.stats b{font-family:var(--f-display);font-size:1.7rem}
+.stats span{font-size:.85rem;color:var(--muted)}
+.chip{display:inline-block;font-family:var(--f-display);font-size:.72rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.st-new{color:var(--accent)} .st-suggestive{color:var(--warn)} .st-known-refined{color:var(--indigo)} .st-data{color:var(--ok)} .st-negative{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{margin:0;font-size:1.05rem}
+.card p{margin:0;font-size:.95rem}
+.card a.more{font-family:var(--f-display);font-size:.9rem;margin-top:auto}
+.split{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
+svg text{fill:var(--ink)}
+.mapbox{position:relative;width:100%;aspect-ratio:3/4;max-height:78vh;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.mapbox svg,.netbox svg{width:100%;height:100%;display:block}
+.land{fill:var(--soft);stroke:var(--line);stroke-width:.6}
+.sea-label{fill:var(--muted);font-family:var(--f-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.site{fill:var(--cord);fill-opacity:.85;stroke:var(--surface);stroke-width:1.2;cursor:pointer}
+.site.on{fill:var(--accent)}
+.site-label{font-family:var(--f-display);font-size:11px;pointer-events:none}
+.flow{fill:none;stroke:var(--accent);stroke-opacity:.7}
+.netbox{width:100%;height:min(72vh,640px);background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.node{cursor:pointer;stroke:var(--surface);stroke-width:1.5}
+.nlabel{font-family:var(--f-mono);font-size:10px;pointer-events:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;margin:8px 0}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 12px}
+.controls input[type=search],.controls select{font:inherit;font-size:.95rem;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-width:0}
+.controls input[type=search]{flex:1 1 220px}
+.controls label{font-size:.92rem;display:flex;gap:6px;align-items:center}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-display);font-weight:500;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0;background:var(--surface)}
+tbody tr{cursor:pointer} tbody tr:hover{background:var(--soft)}
+td.num{text-align:right}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle}
+.drawer{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:14px}
+.drawer h2{margin-top:0}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:8px 0;font-size:.95rem}
+dl.meta dt{color:var(--muted);font-family:var(--f-display);font-size:.85rem}
+dl.meta dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.schem{overflow-x:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:12px 0;padding-block:8px}
+.schem svg{display:block}
+.groups{font-family:var(--f-mono);font-size:.82rem;line-height:1.7;overflow-x:auto;white-space:nowrap}
+.groups div span{color:var(--muted)}
+ul.clean{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+ul.clean li{border-bottom:1px solid var(--line);padding-bottom:10px}
+.two{columns:2 320px;column-gap:28px}
+.two li{break-inside:avoid}
+.note{font-size:.88rem;color:var(--muted)}
+button.link{font:inherit;background:none;border:0;padding:0;color:var(--indigo);text-decoration:underline;cursor:pointer}
+.kbtn{font-family:var(--f-mono);font-size:.82rem;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 7px;margin:2px;color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+.copy{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:3px 8px;cursor:pointer}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
+.loading{color:var(--muted);font-style:italic}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="top"><div class="bar">
+  <a class="brand" href="#overview" aria-label="Khipu Links Atlas, overview">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 5 H24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 5 V22"/><path d="M11 5 V17"/><path d="M16 5 V24"/><path d="M21 5 V14"/></g><g fill="currentColor"><circle cx="6" cy="10" r="1.6"/><circle cx="6" cy="13.5" r="1.6"/><circle cx="16" cy="12" r="1.6"/><circle cx="11" cy="14" r="1.6"/><circle cx="21" cy="11" r="1.6"/><circle cx="16" cy="19" r="1.6"/></g></svg>
+    Khipu Links Atlas</a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a>
+    <a href="#findings">Findings</a><a href="#negatives">Negative results</a><a href="#sources">Sources</a><a href="#about">About</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+<section class="view" id="v-overview">
+  <p class="eyebrow">A register of the links between surviving Inka khipus</p>
+  <h1>Every link we found between khipus is a copy of one account</h1>
+  <p class="lede">We ran arithmetic detectors over about 700 digitized khipus and compared every hit with a baseline that keeps the khipus' structure. What survives is a set of copies and excerpts. Some keep only the totals of an account, some only its details, some split one account over two khipus or join two accounts on one. We found no summary khipu built from other surviving khipus.</p>
+  <div class="stats" id="stats"><span class="loading">Loading the register…</span></div>
+  <h2>Findings</h2>
+  <div class="grid" id="ov-findings"></div>
+  <h2>Where the linked khipus come from</h2>
+  <p>Two links run from khipus labelled <b>Pachacamac</b> to khipus dug near <b>Huacho</b>, about 150 km up the coast, in two museums and through two different sellers. The map shows them as red arcs.</p>
+  <p><a href="#map">Open the map</a> · <a href="#links">Open the network</a> · <a href="#catalogue">Browse the catalogue</a></p>
+</section>
+
+<section class="view" id="v-map" hidden>
+  <p class="eyebrow">Find-places · approximate, village or valley level</p>
+  <h1>Map</h1>
+  <div class="split">
+    <div class="mapbox" id="mapbox" role="img" aria-label="Map of khipu find-places on the Peruvian and Chilean coast"></div>
+    <div class="panel" id="map-panel"><p class="muted">Select a place to list its khipus. Circle area shows how many digitized khipus carry that provenance; red arcs join places that share a link.</p></div>
+  </div>
+  <p class="note">Locations are ours, placed by the provenance recorded in the OKR, the KFG and the museum records. They are approximate and do not reproduce any published map. Coastlines: Natural Earth, public domain. About 290 khipus have no recorded find-place and are not shown.</p>
+</section>
+
+<section class="view" id="v-links" hidden>
+  <p class="eyebrow">Khipus as nodes, relations as edges</p>
+  <h1>Network of links</h1>
+  <div class="legend" id="net-legend"></div>
+  <div class="split">
+    <div class="netbox" id="netbox" role="img" aria-label="Network diagram of linked khipus"></div>
+    <div class="panel" id="net-panel"><p class="muted">Select a khipu or a link. Grey dashed lines join two records of the same physical khipu.</p></div>
+  </div>
+</section>
+
+<section class="view" id="v-catalogue" hidden>
+  <p class="eyebrow">OKR, KFG and our transcriptions</p>
+  <h1>Catalogue</h1>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search by name, museum number, museum or place" aria-label="Search khipus">
+    <select id="f-site" aria-label="Find-place"><option value="">All places</option></select>
+    <select id="f-coll" aria-label="Collector"><option value="">All collectors</option></select>
+    <label><input type="checkbox" id="f-link"> Only linked khipus</label>
+    <span class="note" id="count"></span>
+  </div>
+  <div id="detail"></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Khipu</th><th>Museum</th><th>Number</th><th>Find-place</th><th>Collector</th><th class="num">Pendants</th><th class="num">Groups</th></tr></thead>
+    <tbody id="rows"></tbody></table></div>
+  <h2>Berlin khipus without cord data</h2>
+  <p>The Ethnologisches Museum's online records describe <span id="undig-n"></span> khipus that are not digitized cord by cord. Their group structure is listed below; three of them share the 14-unit frame.</p>
+  <div class="tablewrap"><table><thead><tr><th>Inventory</th><th>Collector</th><th>Groups (museum record)</th></tr></thead><tbody id="undig"></tbody></table></div>
+  <p class="note">Group descriptions: Staatliche Museen zu Berlin, Ethnologisches Museum, museum-digital (CC BY-NC-SA).</p>
+</section>
+
+<section class="view" id="v-findings" hidden>
+  <p class="eyebrow">What the evidence supports</p>
+  <h1>Findings</h1>
+  <div id="finding-detail"></div>
+  <div class="grid" id="f-grid"></div>
+</section>
+
+<section class="view" id="v-negatives" hidden>
+  <p class="eyebrow">Tested and not supported</p>
+  <h1>Negative results</h1>
+  <p>Each claim below was tested against a baseline that keeps the khipus' structure, usually the same comparison with the values offset by a few units. None rose above it.</p>
+  <ul class="clean two" id="neg"></ul>
+</section>
+
+<section class="view" id="v-sources" hidden>
+  <p class="eyebrow">Read and used</p>
+  <h1>Sources</h1>
+  <p>What each source gave this project. Texts of books and articles are not reproduced here.</p>
+  <ul class="clean" id="src"></ul>
+</section>
+
+<section class="view" id="v-about" hidden>
+  <h1>About</h1>
+  <p>This atlas collects the results of a corpus-wide search for arithmetic links between khipus in the open data of the Open Khipu Repository and the Khipu Field Guide, with two khipus we transcribed from record-sheet scans. Every detector was first run on relations already published, and every result was compared with structure-preserving baselines.</p>
+  <h3>Data and code</h3>
+  <p>Scripts, the full report and the study log are in the repository <a href="https://github.com/VladimirMoor/khipu-links">github.com/VladimirMoor/khipu-links</a>. Cord data come from the OKR (MIT licence) and the KFG; please cite them when you use the values.</p>
+  <h3>How this was made</h3>
+  <p>The analysis and this site were produced with the help of an AI assistant (Claude, Anthropic), directed and checked by the author. Transcriptions made from scans were checked against the recorders' own totals.</p>
+  <h3>Contact</h3>
+  <p><span class="mono" id="mail">aderby3d@gmail.com</span> <button class="copy" id="copymail" type="button">Copy address</button></p>
+</section>
+<footer class="wrap">Khipu Links Atlas · data built <span id="built"></span> · coastlines: Natural Earth</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(function(){
+const $=s=>document.querySelector(s), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D=null, LAND=null, K={}, mapDone=false, netDone=false;
+const STATUS={'new':'New','suggestive':'Suggestive','known-refined':'Known, refined','data':'New data','negative':'Negative'};
+const EDGECOL={sum:'--accent',lot:'--accent',details:'--accent',excerpt:'--indigo',totals:'--warn',join:'--accent',copy:'--indigo',fold:'--ok'};
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const COL={W:'#ece6d8',AB:'#c9a67a',LB:'#d2b48c',MB:'#946b45',KB:'#4b3527',DB:'#5b3d2a',NB:'#3f3a35',YB:'#c9a24a',B:'#7a5a3c',
+  BL:'#3f5e8c',RL:'#a63a3a',RD:'#a63a3a',RO:'#c05a33',GG:'#8f8f86',GR:'#8f8f86',G:'#5f7f4f',GL:'#6f8faf',PB:'#6b4a5a',FB:'#b08d67',
+  CB:'#7b5236',HB:'#6a5038',BS:'#a07a58',LC:'#d9c3a0',YG:'#a8a856',TG:'#a29a88'};
+const colOf=c=>{const k=String(c||'').split(/[:\-\/(]/)[0].replace(/[^A-Z]/g,''); return COL[k]||'#9a8f84'};
+const name=k=>k.alias?`${k.alias} <span class="muted">(${esc(k.id)})</span>`:esc(k.id);
+const nameTxt=k=>k.alias?`${k.alias} (${k.id})`:k.id;
+const siteLabel=id=>{const s=D.sites.find(x=>x.id===id);return s?s.label:''};
+
+function route(){
+  const h=(location.hash||'#overview').slice(1);
+  let view=h, arg=null;
+  if(h.startsWith('khipu-')){view='catalogue';arg=h.slice(6)}
+  else if(h.startsWith('finding-')){view='findings';arg=h.slice(8)}
+  if(!document.getElementById('v-'+view)) view='overview';
+  document.querySelectorAll('section.view').forEach(s=>s.hidden=(s.id!=='v-'+view));
+  document.querySelectorAll('nav.tabs a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+view?'page':'false'));
+  if(!D) return;
+  if(view==='map') drawMap();
+  if(view==='links') drawNet();
+  if(view==='catalogue'){ if(arg) showKhipu(arg); else $('#detail').innerHTML='' }
+  if(view==='findings'){ if(arg) showFinding(arg); else $('#finding-detail').innerHTML='' }
+  if(arg) window.scrollTo({top:0});
+}
+window.addEventListener('hashchange',route);
+
+function stats(){
+  const linked=new Set(); D.edges.forEach(e=>{linked.add(e.from);linked.add(e.to)});
+  $('#stats').innerHTML=[[D.khipus.length,'khipus with cord data'],[D.sites.length,'find-places'],[D.edges.length,'links between khipus'],[linked.size,'khipus in a link'],[D.findings.length,'findings'],[D.negatives.length,'negative results']]
+   .map(([n,l])=>`<div><b>${n}</b><span>${l}</span></div>`).join('');
+  $('#built').textContent=D.built;
+}
+function findingCard(f){
+  return `<article class="card"><div><span class="chip st-${f.status}">${STATUS[f.status]||f.status}</span></div>
+   <h3>${esc(f.title)}</h3><p>${esc(f.summary.split('. ').slice(0,2).join('. '))}.</p>
+   <a class="more" href="#finding-${f.id}">Evidence and khipus</a></article>`;
+}
+function overview(){ $('#ov-findings').innerHTML=D.findings.slice(0,6).map(findingCard).join('')+`<article class="card"><h3>…and ${D.findings.length-6} more</h3><p>Folded copies, known copies recovered, the Dumbarton Oaks transcriptions.</p><a class="more" href="#findings">All findings</a></article>` }
+
+/* ---------- Map ---------- */
+function drawMap(){
+  if(mapDone) return; mapDone=true;
+  const box=$('#mapbox'), W=box.clientWidth||600, H=box.clientHeight||800;
+  const svg=d3.select(box).append('svg').attr('viewBox',`0 0 ${W} ${H}`);
+  const bbox={type:'Feature',geometry:{type:'MultiPoint',coordinates:[[-81.5,-4],[-68.5,-22]]}};
+  const proj=d3.geoMercator().fitExtent([[20,20],[W-20,H-20]],bbox), path=d3.geoPath(proj);
+  svg.append('g').selectAll('path').data(LAND.features).join('path').attr('class','land').attr('d',path);
+  const [sx,sy]=proj([-80.2,-15.5]); svg.append('text').attr('class','sea-label').attr('x',sx).attr('y',sy).attr('text-anchor','middle').text('Pacific Ocean');
+  const pos={}; D.sites.forEach(s=>pos[s.id]=proj([s.lon,s.lat]));
+  const pair={}; D.edges.forEach(e=>{const a=K[e.from]?.site,b=K[e.to]?.site; if(a&&b&&a!==b){const k=[a,b].sort().join('|');pair[k]=(pair[k]||0)+1}});
+  const g=svg.append('g');
+  Object.entries(pair).forEach(([k,n])=>{const [a,b]=k.split('|'),p=pos[a],q=pos[b]; if(!p||!q) return;
+    const mx=(p[0]+q[0])/2+(q[1]-p[1])*.25, my=(p[1]+q[1])/2-(q[0]-p[0])*.25;
+    g.append('path').attr('class','flow').attr('stroke-width',1+Math.sqrt(n)*1.2).attr('d',`M${p[0]},${p[1]} Q${mx},${my} ${q[0]},${q[1]}`).append('title').text(`${siteLabel(a)} – ${siteLabel(b)}: ${n} link${n>1?'s':''}`)});
+  const r=d3.scaleSqrt().domain([1,d3.max(D.sites,s=>s.n)]).range([3.5,19]);
+  const sites=[...D.sites].sort((a,b)=>b.n-a.n);
+  const c=svg.append('g').selectAll('circle').data(sites).join('circle').attr('class','site').attr('cx',s=>pos[s.id][0]).attr('cy',s=>pos[s.id][1]).attr('r',s=>r(s.n))
+   .attr('tabindex',0).attr('role','button').attr('aria-label',s=>`${s.label}, ${s.n} khipus`).on('click',(ev,s)=>sitePanel(s)).on('keydown',(ev,s)=>{if(ev.key==='Enter')sitePanel(s)});
+  c.append('title').text(s=>`${s.label}: ${s.n}`);
+  const big=new Set(['pachacamac','huacho','inkawasi','ica','nazca','leymebamba','santa','arica','cuzco','quillagua','huacones']);
+  svg.append('g').selectAll('text').data(sites.filter(s=>big.has(s.id))).join('text').attr('class','site-label')
+   .attr('x',s=>pos[s.id][0]+r(s.n)+4).attr('y',s=>pos[s.id][1]+4).text(s=>s.label.split(' (')[0]);
+  function sitePanel(s){
+    c.classed('on',d=>d.id===s.id);
+    const ks=D.khipus.filter(k=>k.site===s.id), linked=ks.filter(k=>k.findings.length);
+    $('#map-panel').innerHTML=`<p class="eyebrow">${esc(s.region)}</p><h2 style="margin-top:0">${esc(s.label)}</h2>
+     <p>${ks.length} digitized khipu${ks.length>1?'s':''}${linked.length?`, ${linked.length} in a link or finding`:''}.</p>
+     ${linked.length?`<h3>Linked</h3><div>${linked.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`:''}
+     <h3>All</h3><div>${ks.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`;
+  }
+  sitePanel(D.sites.find(s=>s.id==='huacho')||D.sites[0]);
+}
+
+/* ---------- Network ---------- */
+function drawNet(){
+  if(netDone) return; netDone=true;
+  $('#net-legend').innerHTML=Object.entries(D.edgeTypes).map(([t,l])=>`<span><i style="background:var(${EDGECOL[t]||'--muted'})"></i>${esc(l)}</span>`).join('')+`<span><i style="background:var(--muted);height:1px"></i>Same khipu recorded twice</span>`;
+  const box=$('#netbox'), W=box.clientWidth||700, H=box.clientHeight||600;
+  const ids=new Set(); D.edges.forEach(e=>{ids.add(e.from);ids.add(e.to)}); D.duplicates.forEach(d=>{ids.add(d.a);ids.add(d.b)});
+  const nodes=[...ids].map(id=>({id,k:K[id]}));
+  const links=D.edges.map(e=>({source:e.from,target:e.to,e})).concat(D.duplicates.map(d=>({source:d.a,target:d.b,dup:d})));
+  const svg=d3.select(box).append('svg').attr('viewBox',`0 0 ${W} ${H}`);
+  const defs=svg.append('defs');
+  Object.keys(D.edgeTypes).forEach(t=>defs.append('marker').attr('id','ar-'+t).attr('viewBox','0 -4 8 8').attr('refX',14).attr('markerWidth',6).attr('markerHeight',6).attr('orient','auto').append('path').attr('d','M0,-4L8,0L0,4').attr('fill',css(EDGECOL[t]||'--muted')));
+  const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(links).id(d=>d.id).distance(l=>l.dup?30:62)).force('charge',d3.forceManyBody().strength(-110)).force('center',d3.forceCenter(W/2,H/2)).force('x',d3.forceX(W/2).strength(.05)).force('y',d3.forceY(H/2).strength(.07));
+  const L=svg.append('g').selectAll('line').data(links).join('line').attr('stroke',l=>l.dup?css('--muted'):css(EDGECOL[l.e.type]||'--muted')).attr('stroke-width',l=>l.dup?1:2.2).attr('stroke-dasharray',l=>l.dup?'4 3':null)
+   .attr('marker-end',l=>l.dup?null:`url(#ar-${l.e.type})`).style('cursor','pointer').on('click',(ev,l)=>linkPanel(l));
+  const siteCol=s=>s==='pachacamac'?css('--cord'):s==='huacho'?css('--accent'):s==='inkawasi'?css('--ok'):s==='ica'?css('--indigo'):css('--muted');
+  const N=svg.append('g').selectAll('circle').data(nodes).join('circle').attr('class','node').attr('r',d=>4+Math.sqrt(d.k?d.k.np:10)/2.2).attr('fill',d=>siteCol(d.k&&d.k.site))
+   .attr('tabindex',0).attr('role','button').attr('aria-label',d=>d.k?nameTxt(d.k):d.id).on('click',(ev,d)=>nodePanel(d)).on('keydown',(ev,d)=>{if(ev.key==='Enter')nodePanel(d)})
+   .call(d3.drag().on('start',(ev,d)=>{if(!ev.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y}).on('drag',(ev,d)=>{d.fx=ev.x;d.fy=ev.y}).on('end',(ev,d)=>{if(!ev.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+  const T=svg.append('g').selectAll('text').data(nodes).join('text').attr('class','nlabel').text(d=>d.k&&d.k.alias?d.k.alias:d.id);
+  sim.on('tick',()=>{nodes.forEach(d=>{d.x=Math.max(14,Math.min(W-14,d.x));d.y=Math.max(14,Math.min(H-14,d.y))});
+    L.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
+    N.attr('cx',d=>d.x).attr('cy',d=>d.y); T.attr('x',d=>d.x+9).attr('y',d=>d.y+3)});
+  function nodePanel(d){const k=d.k; if(!k){$('#net-panel').innerHTML=`<h2>${esc(d.id)}</h2>`;return}
+    const es=D.edges.filter(e=>e.from===k.id||e.to===k.id);
+    $('#net-panel').innerHTML=`<p class="eyebrow">${esc(siteLabel(k.site)||k.prov||'find-place unknown')}</p><h2 style="margin-top:0">${name(k)}</h2>
+     <p>${esc(k.museum)} ${esc(k.num)}${k.collector?` · collected by ${esc(k.collector)}`:''}. ${k.np} pendants in ${k.groups.length} groups.</p>
+     <ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}<br><span class="note">${esc(e.note)}</span></li>`).join('')}</ul>
+     <p><a href="#khipu-${k.id}">Open in the catalogue</a></p>`}
+  function linkPanel(l){ if(l.dup){$('#net-panel').innerHTML=`<h2 style="margin-top:0">Same khipu</h2><p>${esc(l.dup.a)} and ${esc(l.dup.b)}: ${esc(l.dup.note)}.</p>`;return}
+    const e=l.e,f=D.findings.find(x=>x.id===e.finding);
+    $('#net-panel').innerHTML=`<p class="eyebrow">${esc(D.edgeTypes[e.type])}</p><h2 style="margin-top:0">${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}</h2><p>${esc(e.note)}.</p>${f?`<p>Part of <a href="#finding-${f.id}">${esc(f.title)}</a>.</p>`:''}`}
+}
+
+/* ---------- Catalogue ---------- */
+function fillFilters(){
+  const sc={}; D.khipus.forEach(k=>{if(k.site)sc[k.site]=(sc[k.site]||0)+1});
+  $('#f-site').innerHTML+=D.sites.slice().sort((a,b)=>b.n-a.n).map(s=>`<option value="${s.id}">${esc(s.label)} (${s.n})</option>`).join('')+'<option value="_none">No recorded find-place</option>';
+  const cc={}; D.khipus.forEach(k=>{if(k.collector)cc[k.collector]=(cc[k.collector]||0)+1});
+  $('#f-coll').innerHTML+=Object.entries(cc).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<option>${esc(c)}</option>`).join('');
+  ['#q','#f-site','#f-coll','#f-link'].forEach(s=>$(s).addEventListener('input',renderRows));
+}
+function renderRows(){
+  const q=$('#q').value.trim().toLowerCase(), st=$('#f-site').value, co=$('#f-coll').value, ln=$('#f-link').checked;
+  const rows=D.khipus.filter(k=>(!q||[k.id,k.alias,k.okr,k.museum,k.num,k.prov,siteLabel(k.site)].join(' ').toLowerCase().includes(q))
+    &&(!st||(st==='_none'?!k.site:k.site===st))&&(!co||k.collector===co)&&(!ln||k.findings.length));
+  $('#count').textContent=`${rows.length} of ${D.khipus.length}`;
+  $('#rows').innerHTML=rows.map(k=>`<tr data-id="${k.id}"><td>${k.findings.length?'<span class="dot" title="In a link or finding"></span>':''}<b>${esc(nameTxt(k))}</b></td><td>${esc(k.museum)}</td><td class="mono">${esc(k.num)}</td><td>${esc(siteLabel(k.site)||k.prov)}</td><td>${esc(k.collector)}</td><td class="num">${k.np}</td><td class="num">${k.groups.length}</td></tr>`).join('');
+}
+function schematic(k){
+  const gap=10, step=6, top=18;
+  let x=12; const parts=[]; let i=0; let maxH=0;
+  k.groups.forEach((n,gi)=>{ for(let j=0;j<n;j++,i++){ const v=k.v[i]||0, digs=v?String(v).split('').map(Number):[];
+      const len=40+Math.min(4,digs.length)*16; maxH=Math.max(maxH,len);
+      parts.push(`<line x1="${x}" y1="${top}" x2="${x}" y2="${top+len}" stroke="${colOf(k.c[i])}" stroke-width="3" stroke-linecap="round"><title>cord ${i+1}: ${v}</title></line>`);
+      digs.forEach((d,pi)=>{ const place=digs.length-1-pi, y=top+len-8-place*16; for(let t=0;t<Math.min(d,9);t++) parts.push(`<circle cx="${x}" cy="${y-t*1.6}" r="1.5" fill="var(--ink)"/>`) });
+      x+=step } x+=gap });
+  const W=x+6, H=top+maxH+14;
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-label="Schematic of ${esc(k.id)}"><line x1="4" y1="${top}" x2="${W-4}" y2="${top}" stroke="var(--cord)" stroke-width="3" stroke-linecap="round"/>${parts.join('')}</svg>`;
+}
+function showKhipu(id){
+  const k=K[id]; if(!k){$('#detail').innerHTML=`<div class="drawer"><p>No khipu ${esc(id)} in the catalogue.</p></div>`;return}
+  const es=D.edges.filter(e=>e.from===id||e.to===id), fs=D.findings.filter(f=>f.khipus.includes(id)||es.some(e=>e.finding===f.id));
+  const dup=D.duplicates.filter(d=>d.a===id||d.b===id);
+  let i=0; const gl=k.groups.map((n,gi)=>{const vs=k.v.slice(i,i+n);i+=n;return `<div><span>g${gi+1} (${n})</span> ${vs.join(' ')}</div>`}).join('');
+  $('#detail').innerHTML=`<div class="drawer"><p class="eyebrow">${esc(siteLabel(k.site)||'Find-place: '+(k.prov||'unknown'))}</p><h2>${name(k)}</h2>
+   <dl class="meta"><dt>Museum</dt><dd>${esc(k.museum)||'—'}</dd><dt>Number</dt><dd class="mono">${esc(k.num)||'—'}</dd>
+   <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}
+   <dt>Cords</dt><dd>${k.np} pendants, ${k.nc} cords with subsidiaries, ${k.groups.length} groups; largest value ${k.max.toLocaleString('en')}</dd></dl>
+   <div class="schem">${schematic(k)}</div><p class="note">Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom. Colours are approximate.</p>
+   ${es.length?`<h3>Links</h3><ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
+   ${dup.length?`<h3>Same object</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
+   ${fs.length?`<h3>Findings</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(f.title)}</a>`).join(' · ')}</p>`:''}
+   <h3>Pendant values by group</h3><div class="groups">${gl}</div>
+   <p><a href="#catalogue">Back to the list</a></p></div>`;
+}
+function undig(){ $('#undig-n').textContent=D.undigitized.length;
+  const key=u=>/14\s*x|7\s*x\s*A,\s*7\s*x\s*B/.test(u.groups)?0:1;
+  $('#undig').innerHTML=D.undigitized.slice().sort((a,b)=>key(a)-key(b)||a.inv.localeCompare(b.inv)).map(u=>`<tr><td class="mono"><a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.inv)}</a>${key(u)===0?' <span class="chip st-suggestive">14 units</span>':''}</td><td>${esc(u.collector)}</td><td>${esc(u.groups)||'<span class="muted">—</span>'}</td></tr>`).join('') }
+document.addEventListener('click',ev=>{const tr=ev.target.closest('#rows tr'); if(tr){location.hash='khipu-'+tr.dataset.id}});
+
+/* ---------- Findings, negatives, sources ---------- */
+function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('') }
+function showFinding(id){ const f=D.findings.find(x=>x.id===id); if(!f) return;
+  $('#finding-detail').innerHTML=`<div class="drawer"><span class="chip st-${f.status}">${STATUS[f.status]}</span><h2>${esc(f.title)}</h2><p>${esc(f.summary)}</p>
+   ${f.evidence.length?`<h3>Evidence</h3><ul>${f.evidence.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
+   <h3>Khipus</h3><div>${f.khipus.map(k=>K[k]?`<a class="kbtn" href="#khipu-${k}">${esc(nameTxt(K[k]))}</a>`:`<span class="kbtn">${esc(k)}</span>`).join('')}</div>
+   ${f.place.length?`<p class="note">Places: ${f.place.map(siteLabel).join(', ')} · <a href="#map">map</a></p>`:''}
+   <h3>Reproduce</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>
+   <p><a href="#findings">All findings</a></p></div>` }
+function negatives(){ $('#neg').innerHTML=D.negatives.map(n=>`<li><b>${esc(n.title)}.</b> ${esc(n.text)}</li>`).join('') }
+function sources(){ $('#src').innerHTML=D.sources.map(s=>`<li><b>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</b><br><span class="muted">${esc(s.use)}</span></li>`).join('') }
+
+$('#copymail').addEventListener('click',()=>{const t=$('#mail').textContent; navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{$('#copymail').textContent='Copied'}).catch(()=>{const r=document.createRange();r.selectNodeContents($('#mail'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
+
+Promise.all([fetch('./data.json').then(r=>r.json()),fetch('./land.json').then(r=>r.json())]).then(([d,l])=>{
+  D=d; LAND=l; D.khipus.forEach(k=>K[k.id]=k);
+  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); negatives(); sources(); route();
+}).catch(()=>{$('#stats').innerHTML='<span class="loading">The data files could not be loaded.</span>'});
+route();
+})();
+</script>
