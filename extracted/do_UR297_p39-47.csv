@@ -1,0 +1,16 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR297,39,426,,Z/S/V,2S(4.5/S),47.5K,,W,20,,high,
+UR297,39,427,,Z/S/V,6S(4.5/S),41.5K,,W,60,,high,spin ditto; short dash mark in left margin
+UR297,39,428,,Z/S/V,2L(21.0/S)d,32.5r,,YB,2,,high,spin ditto; superscript d after knot; length suffix r (not K)
+UR297,39,429,,Z/S/V,—,48.5K,,YB,,,high,spin ditto; no knots; value written as dash
+UR297,39,430,,Z/S/V,1S(4.5/S),46.5K,,YB,10,,high,spin ditto
+UR297,39,431,,Z/S/V,1S(5.0/S),44.0K,,YB,10,,high,spin ditto
+UR297,39,432,,Z/S/V,—,28.5r,,YB,,,high,spin ditto; no knots; value written as dash; length suffix r (not K)
+UR297,39,433,,Z/S/V,1S(3.0/S) 2S(11.5/S),37.5K,,AB,120,2:0.5,medium,cord number circled (summary cord of 428-438 per p47 note: 122 incl. subsidiary 433s1=2); spin ditto; color letter overwritten - AB best reading
+UR297,39,433s1,433,Z/S,2L(15.0/S)d,41.0K,,KB,2,,high,superscript d after knot
+UR297,39,433s2,433,Z/S,—,26.0K,,YY,,,medium,spin ditto; no knots; value written as dash; color YY uncertain
+UR297,39,434,,Z/S/V,1S(4.5/S),49.5K,,YB,10,,high,
+UR297,39,435,,Z/S/V,1S(4.5/S),49.0K,,YB,10,,high,spin ditto
+UR297,39,436,,Z/S/V,2S(4.0/S),49.0K,,YB,20,,high,spin ditto
+UR297,39,437,,Z/S/V,2S(4.0/S),41.0K,,YB,20,,high,spin ditto; dotted line across row (likely scan/copy artifact)
+UR297,39,438,,Z/S/V,4S(3.5/S),48.5K,,YB,40,,high,spin ditto

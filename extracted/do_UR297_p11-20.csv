@@ -1,0 +1,174 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR297,11,66s1,66,Z/S,6s(3.0/S) 3L(10.5/S)d,28.0,,YB,63,1:0.0,high,bracket in left margin spans 66s1-66s3
+UR297,11,66s1s1,66s1,Z/S,3s(2.5/S) 7L(6.5/S)d,19.0,,W,37,,high,spin ditto
+UR297,11,66s2,66,Z/S,2s(2.5/S) 4L(9.0/S)d,31.5,,MB,24,,high,spin ditto
+UR297,11,66s3,66,Z/S,5s(2.0/S)d,23.5,,YY,50,,high,spin ditto
+UR297,11,67,,Z/S/V,2s(8.0/S) 2L(15.0/S)d,40.5,,W,22,1:3.0,high,
+UR297,11,67s1,67,Z/S,7L(12.0/S)d,26.5,,YY,7,,high,
+UR297,11,68,,Z/S/V,1s(11.0/S),38.0,,W,10,1:4.0,high,
+UR297,11,68s1,68,Z/S,5L(12.5/S)d,34.0,,YY,5,,high,
+UR297,11,69,,Z/S/V,1s(9.5/S),40.0,,W,10,1:3.0,high,
+UR297,11,69s1,69,Z/S,2L(11.5/S)d,28.5,,YY,2,,high,
+UR297,11,70,,Z/S/V,2s(9.5/S) 3L(15.0/S)d,36.5,,W,23,1:4.0,high,
+UR297,11,70s1,70,Z/S,1s(5.5/S) 7L(11.5/S),29.5,,YY,17,,high,no d mark on 7L
+UR297,11,71,,Z/S/V,2s(10.5/S) 1E(17.5/S),39.5,,W,21,2:3.5,high,group boundary mark (dashes in left margin) between 71s2 and 72
+UR297,11,71s1,71,Z/S,5s(5.5/S),18.0,,YY,50,,high,
+UR297,11,71s2,71,Z/S,1s(5.5/S) 6L(10.0/S)d,25.0,,YY,16,,high,spin ditto
+UR297,11,72,,Z/S/V,6L(16.0/S)d,37.5,,W,6,1:3.0,high,
+UR297,11,72s1,72,Z/S,1E(11.5/S),41.5,,YB:W,1,,high,
+UR297,12,73,,Z/S/V,-,33.0,,W,,1:2.5,high,length end marker 'r' (not K); value written '-'
+UR297,12,73s1,73,Z/S,2L(11.5/S)d,40.5,,YB:W,2,,high,
+UR297,12,74,,Z/S/V,7L(17.5/S)d,39.5,,W,7,1:5.0,high,
+UR297,12,74s1,74,Z/S,8L(10.5/S)d,42.0,,YB:W,8,,high,
+UR297,12,75,,Z/S/V,8L(18.5/S)d,34.5,,W,8,1:4.0,high,
+UR297,12,75s1,75,Z/S,-,29.0,,AB,,,high,length end marker 'r' (not K); value written '-'
+UR297,12,76,,Z/S/V,4s(9.0/S) 3L(15.5/S)d,19.5,,W,43,4:1-1.5 2-4-2.0-3.?,medium,cord label circled (top-like/summary cord); footnote *: Tied to 76s2s1 at 19.5 cm; subsidiaries field cramped: '4:' with '1-1.5' written above '2-4-2.0-3.?' (last digit cut off)
+UR297,12,76s1,76,Z/S,4s(5.0/S) 2L(9.5/S)d 1E(15.5/S),15.5,,B,43,,medium,CHECK: knots give 421 (43 only if 2L and 1E are summed as one units place); 1E position partly illegible
+UR297,12,76s2,76,Z/S,6s(4.5/S) 5L(9.5/S)d,16.0,,YY,65,1:0.5,high,length end marker 'r' (not K); spin ditto
+UR297,12,76s2s1,76s2,Z/S,1s(6.0/S) 7L(8.5/S)d,16.5,,YY,17,,high,spin ditto; footnote **: tied to 76 at 16.5 cm
+UR297,12,76s3,76,Z/S,2s(4.5/S) 5L(10.0/S)d 1E(14.5/S),32.5,,DB,26,,high,spin ditto; CHECK: knots give 251 (26 only if 5L and 1E are summed as one units place)
+UR297,12,76s4,76,Z/S,5s(4.5/S),22.0,,YY,50,,high,spin ditto
+UR297,12,77,,Z/S/V,2s(11.5/S) 2L(17.5/S)d,37.0,,W,22,3:4.0-4.5,high,
+UR297,12,77s1,77,Z/S,2s(6.0/S) 2L(10.0/S)d,58.5,,AB,22,,high,
+UR297,12,77s2,77,Z/S,5L(11.5/S)d,43.0,,AB,5,,high,length end marker 'r' (not K); spin ditto
+UR297,12,77s3,77,Z/S,5s(5.5/S),23.0,,SY:W,50,,high,spin ditto
+UR297,12,78,,Z/S/V,4s(10.0/S) 5L(15.0/S)d,34.5,,W,45,1:6.5,high,
+UR297,12,78s1,78,Z/S,2s(4.0/S) 2L(11.0/S)d,27.5,,AB,22,,high,
+UR297,13,79,,Z/S/V,5L(16.0/S)d,36.5,,W,5,1:3.5,high,
+UR297,13,79s1,79,Z/S,4L(12.0/S)d,43.5,,AB:W,4,,high,
+UR297,13,80,,Z/S/V,2L(18.0/S)d,39.0,,DB,2,1:4.0,high,
+UR297,13,80s1,80,Z/S,3s(7.0/S) 3s(10.5/S) 6L(14.0/S)d,26.5,,AB,336,,high,
+UR297,13,81,,Z/S/V,2L(18.5/S)d,31.0,,W,2,1:4.5,high,length end marker 'r' (not K)
+UR297,13,81s1,81,Z/S,1E(13.5/S),51.5,,AB,1,,high,
+UR297,13,82,,Z/S/V,1s(12.5/S) 1E(19.0/S),53.0,,W,11,1:4.5,high,group boundary mark (dashes in left margin) between 82s1 and 83
+UR297,13,82s1,82,Z/S,7L(13.5/S)d,49.5,,AB,7,,high,
+UR297,13,83,,Z/S/V,4L(15.0/S)d,39.0,,W,4,1:5.0,high,
+UR297,13,83s1,83,Z/S,1s(1.0/S) 3L(10.0/S)d,34.5,,YB:W,13,,high,
+UR297,13,84,,Z/S/V,2L(14.0/S)d,41.0,,W,2,1:4.5,high,
+UR297,13,84s1,84,Z/S,3L(8.0/S)d,33.5,,AB,3,,high,
+UR297,13,85,,Z/S/V,8L(14.5/S)d,35.5,,DB,8,2:5.5,high,
+UR297,13,85s1,85,Z/S,4L(9.0/S)d,33.0,,AB:W,4,,high,
+UR297,13,85s2,85,Z/S,4L(7.0/S)d,15.5,,YY:AB,4,,high,spin ditto
+UR297,13,86,,Z/S/V,2L(16.0/S)d,42.0,,W,2,1:5.5,high,
+UR297,13,86s1,86,Z/S,4L(11.0/S)d,37.5,,YY,4,,high,
+UR297,14,87,,Z/S/V,5L(15.0/S)d,31.0,,DB,5,1:5.0,high,
+UR297,14,87s1,87,Z/S,1s(3.5/S),35.0,,AB:W,10,,high,
+UR297,14,88,,Z/S/V,6s(7.0/S) 1E(16.0/S),25.5,,MB,61,4:1.5-2.5,high,length end marker 'b' (not K); cord label circled (top-like/summary cord)
+UR297,14,88s1,88,Z/S,4s(5.0/S) 2L(17.0/S)d,34.5,,YB,42,1:0.0,high,
+UR297,14,88s1s1,88s1,Z/S,4L(18.5/S)d,23.5,,AB,4,1:0.5,high,"spin ditto; footnote * (88s1s1, 88s1s1s1, 88s1s1s1s1): These three cords are knotted together at 23.5cm."
+UR297,14,88s1s1s1,88s1s1,Z/S,2s(4.5/S),39.0,,BD,20,1:0.0,high,spin ditto; footnote * knotted together at 23.5cm; color written BD
+UR297,14,88s1s1s1s1,88s1s1s1,Z/S,1s(4.0/S) 2L(14.0/S)d,26.0,,AB,12,,high,spin ditto; footnote * knotted together at 23.5cm
+UR297,14,88s2,88,Z/S,7L(14.0/S)d,30.5,,W,7,,high,spin ditto
+UR297,14,88s3,88,Z/S,5s(5.5/S),27.0,,AB,50,,high,spin ditto
+UR297,14,88s4,88,Z/S,2s(5.0/S) 3L(13.5/S)d,26.5,,AB,23,,high,spin ditto; footnote **: cord 88s4 has a pair of doubled cords knotted into the cord at 24.0cm.
+UR297,14,89,,Z/S/V,8L(15.0/S)d,35.0,,W,8,2:4.5,high,
+UR297,14,89s1,89,Z/S,5s(2.5/S),13.0,,YB,50,,high,
+UR297,14,89s2,89,Z/S,1s(2.0/S),37.5,,AB,10,,high,spin ditto
+UR297,14,90,,Z/S/V,-,14.0,,B,,1:4.5,high,length end marker 'r' (not K); value written '-'
+UR297,14,90s1,90,Z/S,5L(11.5/S)d,35.5,,YB:W,5,,high,
+UR297,14,91,,Z/S/V,5L(15.0/S)d,35.0,,W,5,1:4.0,high,
+UR297,14,91s1,91,Z/S,1s(3.0/S),34.5,,AB,10,1:2.0,high,
+UR297,14,91s1s1,91s1,Z/S,-,9.0,,NB,,,medium,spin ditto; value written '-'; color reads NB (possibly MB)
+UR297,15,92,,Z/S/V,1s(8.0/S),39.5,,W,10,2:4.0,high,
+UR297,15,92s1,92,Z/S,1s(3.0/S) 6L(9.0/S)d,33.5,,YY,16,,high,length end marker 't' (not K); end marked t with header annotation 'twisted'
+UR297,15,92s2,92,Z/S,1s(3.0/S),17.0,,NB,10,,high,spin ditto; color reads NB
+UR297,15,93,,Z/S/V,1s(7.5/S) 4L(14.0/S)d,37.0,,W,14,1:5.0,high,group boundary mark between 93s1 and 94
+UR297,15,93s1,93,Z/S,2s(3.0/S),38.0,,AB:W,20,,high,
+UR297,15,94,,Z/S/V,7L(14.5/S)d,32.0,,YB,7,1:2.5,high,left margin: 'Khipu B begin' (main cord B starts)
+UR297,15,94s1,94,Z/S,3L(12.0/S)d,38.5,,YB,3,,high,
+UR297,15,95,,Z/S/V,5L(16.0/S)d,37.0,,YB,5,1:2.0,high,
+UR297,15,95s1,95,Z/S,1s(5.0/S) 4L(14.5/S)d,33.0,,YB,14,,high,
+UR297,15,96,,Z/S/V,1s(7.5/S) 4L(17.5/S)d,38.0,,YB:W,14,1:3.5,high,
+UR297,15,96s1,96,Z/S,1s(4.0/S),43.0,,YB:W,10,,high,
+UR297,15,97,,Z/S/V,2L(17.0/S)d,35.0,,YB,2,1:3.5,high,
+UR297,15,97s1,97,Z/S,8L(11.5/S)d,27.5,,YB,8,,high,
+UR297,15,98,,Z/S/V,7L(17.0/S)d,33.0,,YB:W,7,1:4.5,high,
+UR297,15,98s1,98,Z/S,8L(12.0/S)d,34.5,,AB,8,,high,
+UR297,15,99,,Z/S/V,2L(15.0/S)d,38.0,,YB,2,1:5.0,high,
+UR297,15,99s1,99,Z/S,2s(1.5/S) 8L(9.5/S)d,23.0,,AB:W,28,,high,
+UR297,16,100,,Z/S/V,1s(9.5/S) 6L(15.0/S)d,22.5,,DB,16,6:1.5-3.0 1:4.0/1:7.5,high,cord label circled (top-like/summary cord)
+UR297,16,100s1,100,Z/S,8s(8.5/S) 3L(14.0/S)d,29.5,,AB,83,,high,
+UR297,16,100s2,100,Z/S,4s(11.0/S),25.0,,PG,40,,high,spin ditto
+UR297,16,100s3,100,Z/S,2s(11.5/S),54.0,,YY:W,20,1:1.5,high,spin ditto
+UR297,16,100s3s1,100s3,Z/S,2s(8.5/S),49.0,,YY:W,20,1:0.0,high,"spin ditto; footnote * (100s3s1, 100s3s1s1): Tied together at 22.0 cm."
+UR297,16,100s3s1s1,100s3s1,Z/S,2s(8.0/S),32.5,,GG,20,,high,spin ditto; footnote * tied together at 22.0 cm
+UR297,16,100s4,100,Z/S,5s(9.0/S) 2L(14.5/S)d,41.0,,AB,52,1:3.0,high,spin ditto
+UR297,16,100s4s1,100s4,Z/S,4s(5.5/S),22.0,,LB,40,,high,spin ditto
+UR297,16,100s5,100,Z/S,1s(9.0/S),31.0,,W,10,,high,spin ditto
+UR297,16,100s6,100,Z/S,1s(9.5/S) 7L(14.0/S)d,24.0,,DB,17,1:0.0,high,spin ditto
+UR297,16,100s6s1,100s6,Z/S,6s(2.0/S) 6s(8.0/S),31.5,,AB:W,660,,high,spin ditto
+UR297,16,100s7,100,Z/S,4L(12.0/S)d,17.5,,FB:GG:AB,4,,medium,spin ditto; first color component unclear (FB?)
+UR297,16,100s8,100,Z/S,2s(6.0/S),26.5,,BY,20,1:0.0,high,spin ditto
+UR297,16,100s8s1,100s8,Z/S,2L(15.0/S)d,41.0,,YB:W,2,,high,spin ditto
+UR297,16,101,,Z/S/V,2s(6.5/S) 6L(15.0/S)d,31.0,,YB,26,2:2.0,high,
+UR297,16,101s1,101,Z/S,2s(3.5/S),25.5,,W,20,,high,
+UR297,16,101s2,101,Z/S,1s(3.5/S) 3L(14.5/S)d,34.0,,YB,13,,high,spin ditto
+UR297,17,102,,Z/S/V,1s(7.0/S) 6L(15.5/S)d,31.0,,YB,16,1:3.5,high,
+UR297,17,102s1,102,Z/S,1s(4.0/S) 3L(14.0/S)d,33.5,,YB,13,,high,
+UR297,17,103,,Z/S/V,2L(17.0/S)d,33.5,,YB,2,1:1.5,high,
+UR297,17,103s1,103,Z/S,1s(4.0/S) 2L(15.0/S)d,40.0,,AB,12,,high,
+UR297,17,104,,Z/S/V,4s(5.5/S) 8L(11.5/S)d,18.5,,YB,48,3: 1:2.0 2:2.5,high,subsidiaries field: '3:' with '1:2.0' above '2:2.5'
+UR297,17,104s1,104,Z/S,2s(4.0/S),36.0,,AB,20,1:0.0,high,"footnote * (104s1, 104s1s1): Tied together w/ S-knot at 23.5 cm."
+UR297,17,104s1s1,104s1,Z/S,2s(4.0/S) 2L(11.0/S)d,39.0,,W,22,,high,spin ditto; footnote * tied together w/ S-knot at 23.5 cm
+UR297,17,104s2,104,Z/S,4s(3.5/S),49.5,,GG,40,,high,spin ditto
+UR297,17,104s3,104,Z/S,2s(3.5/S),26.0,,W:YY,20,1:0.5,high,"spin ditto; footnote ** (104s3, 104s3s1): tied together w/ S-knot at 20.0 cm"
+UR297,17,104s3s1,104s3,Z/S,2s(3.0/S),39.0,,PG,20,,high,spin ditto; footnote ** tied together at 20.0 cm; group boundary mark between 104s3s1 and 105
+UR297,17,105,,Z/S/V,9L(8.0/S)d,39.5,,AB,9,,high,
+UR297,17,106,,Z/S/V,7L(6.5/S)d,28.5,,AB,7,,high,spin ditto
+UR297,17,107,,Z/S/V,3s(3.0/S) 2L(9.5/S)d,29.5,,W,32,,high,"spin ditto; cord label circled (top-like/summary cord); 32 = 9+7+7+9 (sum of 105,106,108,109)"
+UR297,17,108,,Z/S/V,7L(7.5/S)d,34.5,,AB,7,,high,spin ditto
+UR297,17,109,,Z/S/V,9L(6.5/S)d,21.5,,AB,9,,high,spin ditto; group boundary mark between 109 and 110
+UR297,17,110,,Z/S/V,-,24.5,,W,,,high,value written '-'
+UR297,17,111,,Z/S/V,-,29.0,,W:YY,,,high,spin ditto; value written '-'
+UR297,18,112,,Z/S/V,2L(8.0/S)d,26.0,,W,2,,high,
+UR297,18,113,,Z/S/V,5L(7.5/S)d,30.0,,W:YY,5,,high,spin ditto
+UR297,18,114,,Z/S/V,-,33.5,,W,,,high,spin ditto; value written '-'
+UR297,18,115,,Z/S/V,6s(5.0/S) 2L(13.5/S)d,33.5,,YB,62,1:2.0,high,spin ditto; cord label circled (top-like/summary cord); 62 = sum of other pendants 112-120
+UR297,18,115s1,115,Z/S,-,28.0,,GG,,,high,value written '-'
+UR297,18,116,,Z/S/V,3L(9.0/S)d,36.0,,W,3,,high,
+UR297,18,117,,Z/S/V,3L(8.5/S)d,32.0,,YY:W,3,,high,spin ditto
+UR297,18,118,,Z/S/V,3L(9.0/S)d,49.5,,W:YY,3,,high,spin ditto
+UR297,18,119,,Z/S/V,2s(4.0/S) 3L(7.5/S)d,23.0,,W:YY,23,,high,spin ditto
+UR297,18,120,,Z/S/V,2s(5.0/S) 3L(10.0/S)d,45.5,,W:YY,23,,high,spin ditto; group boundary mark between 120 and 121
+UR297,18,121,,Z/S/V,-,29.0,,W,,,high,spin ditto; value written '-'
+UR297,18,122,,Z/S/V,-,33.5,,W,,,high,spin ditto; value written '-'
+UR297,18,123,,Z/S/V,1s(5.5/S) 5L(9.5/S)d,35.0,,W,15,,high,spin ditto
+UR297,18,124,,Z/S/V,2L(10.0/S)d,48.0,,W,2,,high,spin ditto
+UR297,18,125,,Z/S/V,5L(8.5/S)d,25.5,,W,5,,high,spin ditto
+UR297,18,126,,Z/S/V,5s(5.0/S) 2L(12.0/S)d,35.0,,YB,52,1:2.5,high,spin ditto; cord label circled (top-like/summary cord)
+UR297,18,126s1,126,Z/S,-,26.5,,GG,,1:1.0,high,value written '-'
+UR297,18,126s1s1,126s1,Z/S,2L(8.0/S)d,47.5,,W:YB,2,,high,spin ditto
+UR297,19,127,,Z/S/V,1s(5.5/S) 4L(8.5/S)d,26.0,,W,14,,high,
+UR297,19,128,,Z/S/V,4L(9.0/S)d,39.0,,W,4,,high,length end marker 'b' (not K); spin ditto
+UR297,19,129,,Z/S/V,5L(8.0/S)d,30.0,,W,5,,high,spin ditto
+UR297,19,130,,Z/S/V,7L(9.0/S)d,31.5,,W,7,,high,spin ditto
+UR297,19,131,,Z/S/V,2L(9.0/S)d,47.0,,W,2,,high,spin ditto; group boundary mark between 131 and 132
+UR297,19,132,,Z/S/V,4L(10.0/S)d,45.5,,W,4,,high,spin ditto
+UR297,19,133,,Z/S/V,2L(11.5/S)d,25.0,,W,2,,high,spin ditto
+UR297,19,134,,Z/S/V,4L(8.5/S)d,34.5,,W,4,,high,spin ditto
+UR297,19,135,,Z/S/V,7L(10.0/S)d,20.5,,W,7,,high,spin ditto
+UR297,19,136,,Z/S/V,1s(5.0/S) 2L(10.0/S)d,24.0,,W,12,,high,spin ditto
+UR297,19,137,,Z/S/V,8s(4.0/S) 5L(12.5/S)d,26.0,,YB,85,1:1.0,medium,spin ditto; cord label circled (top-like/summary cord); first value digit ambiguous 8/6 - read 85 per knots and group sum (other pendants 132-142 sum to 85)
+UR297,19,137s1,137,Z/S,2s(2.5/S),25.0,,YY,20,,high,
+UR297,19,138,,Z/S/V,7L(8.0/S)d,21.0,,W,7,,high,
+UR297,19,139,,Z/S/V,4L(8.5/S)d,22.0,,W,4,,high,spin ditto
+UR297,19,140,,Z/S/V,1s(5.0/S) 6L(9.5/S)d,25.0,,W,16,,high,spin ditto
+UR297,19,141,,Z/S/V,6L(10.0/S)d,28.0,,W,6,1:2.0,high,spin ditto
+UR297,19,141s1,141,Z/S,1s(3.0/S),24.5,,W:YY,10,,high,
+UR297,20,142,,Z/S/V,2s(3.5/S) 3L(9.0/S)d,20.5,,W,23,1:0.5,high,
+UR297,20,142s1,142,Z/S,1s(3.0/S),28.0,,YY,10,,high,group boundary mark between 142s1 and 143
+UR297,20,143,,Z/S/V,-,39.0,,W:YY,,,high,value written '-'
+UR297,20,144,,Z/S/V,2L(8.0/S)d,35.5,,W:YY,2,,high,spin ditto
+UR297,20,145,,Z/S/V,4L(10.0/S)d,25.0,,W,4,,high,spin ditto
+UR297,20,146,,Z/S/V,7L(10.0/S)d,43.0,,W,7,,high,spin ditto
+UR297,20,147,,Z/S/V,1s(5.0/S) 2L(10.5/S)d,16.5,,W:YY,12,,high,spin ditto
+UR297,20,148,,Z/S/V,6s(4.5/S) 2L(10.0/S)d,22.5,,YB,62,1:0.5,high,spin ditto; cord label circled (top-like/summary cord); 62 = sum of other pendants 143-153
+UR297,20,148s1,148,Z/S,2s(5.0/S),29.0,,W:YY,20,,high,
+UR297,20,149,,Z/S/V,2s(5.0/S) 2L(10.5/S)d,27.5,,W,22,1:3.5,high,
+UR297,20,149s1,149,Z/S,2s(1.5/S),7.5,,W:YY,20,,high,
+UR297,20,150,,Z/S/V,3L(12.0/S)d,33.5,,W,3,,high,
+UR297,20,151,,Z/S/V,5L(12.0/S)d,38.0,,W,5,,high,length end marker 'r' (not K); spin ditto
+UR297,20,152,,Z/S/V,2L(13.0/S)d,46.0,,W,2,,high,spin ditto
+UR297,20,153,,Z/S/V,5L(11.5/S)d,35.5,,W,5,,high,length end marker 'r' (not K); spin ditto; group boundary mark between 153 and 154
+UR297,20,154,,Z/S/V,-,31.5,,W,,,high,spin ditto; value written '-'
+UR297,20,155,,Z/S/V,3L(9.5/S)d,26.5,,W,3,,high,spin ditto

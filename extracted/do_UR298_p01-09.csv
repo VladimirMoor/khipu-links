@@ -1,0 +1,141 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR298,2,1,,z/s/r,5s(9.5/z) 5s(14.0/z) 1E(19.0/z),29.0,,KB:W,551,1:0.0,high,length written 29.0K
+UR298,2,1s1,1,z/s,4s(13.5/z),19.0,,KB,40,,high,length written 19.0K
+UR298,2,2,,z/s/r,2s(9.5/z) 7s(14.0/z),33.0,,KB:W,270,1:0.0,high,length written 33.0K
+UR298,2,2s1,2,z/s,3s(14.0/z) 7L(20.0/z)^d,23.0,,KB,37,,high,length written 23.0K; superscript d after last knot
+UR298,2,3,,z/s/r,1s(9.5/z) 2s(14.0/z) 5L(19.5/z)^d,35.5,,KB:W,125,1:0.0,high,length written 35.5K
+UR298,2,3s1,3,z/s,3s(14.0/z),36.5,,FB,30,,high,length written 36.5K
+UR298,2,4,,z/s/r,2s(9.0/z) 9s(13.5/z) 5L(19.0/z)^d,26.0,,KB:W,295,1-0.0; 1-6.5,high,length written 26.0K; two subsidiary entries (4s1 and 4s2)
+UR298,2,4s1,4,z/s,2s(13.5/z) 1E(18.5/z),43.5,,KB,21,,high,length written 43.5K
+UR298,2,4s2,4,z/s,2s(7.0/z) 5L(13.0/z)^d,33.0,,KB:W,25,,high,length written 33.0K
+UR298,2,5,,z/s,-,43.0,,KB:W,,,high,no knots; value written -; no attachment recorded; length written 43.0K
+UR298,2,6,,z/s,-,44.0,,KB:W,,,high,no knots; value written -; no attachment recorded; length written 44.0K
+UR298,2,7,,z/s/r,3s(16.0/z),33.0,,OB,30,,high,length written 33.0K
+UR298,2,8,,z/s/r,2s(15.5/z),34.0,,OB,20,,high,length written 34.0K
+UR298,2,9,,z/s/r,1s(15.5/z) 1E(22.5/z),32.0,,OB,11,,high,length written 32.0K
+UR298,2,10,,z/s/r,1s(16.0/z) 1E(22.0/z) 6L(23.5/z)^d,27.5,,OB,17,,medium,length written 27.5K; value 17 treats 1E and 6L as one units cluster (E+L in same place); read as separate clusters would give 116
+UR298,2,11,,z/s/r,2s(16.0/z),33.0,,OB,20,,high,length written 33.0K
+UR298,2,12,,z/s/r,1s(16.0/z),34.0,,OB,10,,high,length written 34.0K
+UR298,3,13,,z/s/r,4L(22.5/z)^d,44.5,,GG:BL:AB,4,,high,length written 44.5K
+UR298,3,14,,z/s/r,4L(22.5/z)^d,44.5,,GG:BL:AB,4,,high,length written 44.5K; color written as ditto
+UR298,3,15,,z/s/r,7L(22.0/z)^d,43.0,,GG:BL:AB,7,,high,length written 43.0K; spin/ply/attach and color written as ditto
+UR298,3,16,,z/s/r,2L(22.0/z)^d,43.0,,GG:BL:AB,2,,high,length written 43.0K; spin/ply/attach and color written as ditto
+UR298,3,17,,z/s/r,2L(22.0/z)^d,35.0,,GG:BL:AB,2,,high,length written 35.0K; spin/ply/attach and color written as ditto
+UR298,3,18,,z/s/r,1E(22.5/z),52.0,,GG:BL:AB,1,,high,length written 52.0K; spin/ply/attach and color written as ditto
+UR298,3,19,,z/s/r,2s(10.0/z) 1s(14.5/z) 2L(21.5/z)^d,36.5,,MB:AB,212,1:1.5,high,length written 36.5K; spin/ply/attach written as ditto
+UR298,3,19s1,19,z/s,2s(13.0/z),28.0,,B,20,,high,length written 28.0K
+UR298,3,20,,z/s/r,1s(10.0/z) 3s(15.0/z) 4L(21.5/z)^d,38.5,,MB:AB,134,1:1.5,high,length written 38.5K
+UR298,3,20s1,20,z/s,1s(13.5/z),28.5,,B,10,,high,length written 28.5K
+UR298,3,21,,z/s/r,2s(10.0/z) 2s(15.0/z) 6L(21.5/z)^d,34.0,,MB:AB,226,1:1.0,high,length written 34.0K
+UR298,3,21s1,21,z/s,1s(14.0/z),27.5,,B,10,,high,length written 27.5K
+UR298,3,22,,z/s/r,2s(10.0/z) 3s(15.5/z) 4L(21.5/z)^d,35.0,,MB:AB,234,1:1.0,high,length written 35.0K
+UR298,3,22s1,22,z/s,2s(14.0/z),26.0,,B,20,,high,length written 26.0K
+UR298,3,23,,z/s/r,1s(10.0/z) 7s(15.5/z) 4L(21.5/z)^d,31.5,,MB:AB,174,1:1.0,high,length written 31.5K
+UR298,3,23s1,23,z/s,1s(15.0/z),31.5,,B,10,,high,length written 31.5K
+UR298,3,24,,z/s/r,1s(10.0/z) 1s(15.5/z) 6L(21.0/z)^d,43.0,,MB:AB,116,1:1.0,high,length written 43.0K
+UR298,3,24s1,24,z/s,1s(14.5/z),28.5,,B,10,,high,length written 28.5K
+UR298,4,25,,z/s/r,1E(21.0/z),36.0,,OB,1,,high,length written 36.0K
+UR298,4,26,,z/s/r,1E(21.5/z),40.5,,OB,1,,high,length written 40.5K
+UR298,4,27,,z/s/r,1E(20.5/z),37.0,,OB,1,,high,length written 37.0b (end marker b)
+UR298,4,28,,z/s/r,2L(20.5/z)^d,44.0,,OB,2,,high,length written 44.0r (end marker r)
+UR298,4,29,,z/s/r,2L(20.0/z)^d,35.0,,OB,2,,high,length written 35.0b (end marker b)
+UR298,4,30,,z/s/r,1E(19.0/z),41.0,,OB,1,,high,length written 41.0K
+UR298,4,31,,z/s/r,-,42.0,,GG:MB,,,high,no knots; value -; length written 42.0K
+UR298,4,32,,z/s/r,-,46.0,,GG:MB,,,high,no knots; value -; length written 46.0K
+UR298,4,33,,z/s/r,-,45.5,,GG:MB,,,high,no knots; value -; spin/ply/attach and color written as ditto; length written 45.5K
+UR298,4,34,,z/s/r,-,44.5,,GG:MB,,,high,no knots; value -; spin/ply/attach and color written as ditto; length written 44.5K
+UR298,4,35,,z/s/r,-,44.0,,GG:MB,,,high,no knots; value -; spin/ply/attach and color written as ditto; length written 44.0K
+UR298,4,36,,z/s/r,-,42.5,,GG:MB,,,high,no knots; value -; spin/ply/attach and color written as ditto; length written 42.5K
+UR298,4,37,,z/s/r,1s(10.0/z) 3s(16.5/z),35.0,,B,130,1:1.0,high,length written 35.0r (end marker r)
+UR298,4,37s1,37,z/s,1s(8.5/z) 1s(15.0/z) 6L(20.5/z)^d,26.5,,OB,116,,high,length written 26.5K
+UR298,4,38,,z/s/r,7s(15.5/z) 3L(21.0/z)^d,37.0,,MB-B,73,1:0.5,high,length written 37.0K
+UR298,4,38s1,38,z/s,4s(14.5/z) 3L(20.0/z)^d,27.0,,B,43,,high,length written 27.0K
+UR298,4,39,,z/s/r,7s(15.5/z) 7L(21.5/z)^d,34.5,,MB-B,77,1:1.0,high,length written 34.5r (end marker r)
+UR298,4,39s1,39,z/s,4s(15.0/z) 4L(20.5/z)^d,23.0,,B,44,,high,length written 23.0K
+UR298,5,40,,z/s/r,7s(15.0/z) 6L(21.5/z)^d,39.0,,GG:B,76,1:0.5,high,length written 39.0K
+UR298,5,40s1,40,z/s,3s(14.5/z) 4L(20.5/z)^d,27.5,,B,34,,high,length written 27.5K
+UR298,5,41,,z/s/r,3s(15.5/z) 6L(22.0/z)^d,46.0,,MB-B,36,1:1.0,high,length written 46.0K; color may read MB:B
+UR298,5,41s1,41,z/s,3s(14.0/z) 2L(20.0/z)^d,25.0,,B,32,,high,length written 25.0K
+UR298,5,42,,z/s/r,9s(15.5/z) 6L(21.5/z)^d,30.0,,MB-B,96,1:1.0,high,length written 30.0K
+UR298,5,42s1,42,z/s,3s(13.5/z) 2L(20.0/z)^d,22.5,,B,32,,high,length written 22.5K
+UR298,5,43,,z/s/r,1s(9.5/z) 2s(15.5/z) 2L(21.0/z)^d,41.5,,YY,122,1:1.5,high,length written 41.5K
+UR298,5,43s1,43,z/s,3s(14.0/z),26.5,,B,30,1:16.5,high,length written 26.5K
+UR298,5,43s1s1,43s1,z/s,1E(2.5/z),14.0,,AB,1,,high,length written 14.0K
+UR298,5,44,,z/s/r,5s(14.5/z) 5L(20.0/z)^d,34.5,,YY,55,1:1.5,high,length written 34.5r (end marker r)
+UR298,5,44s1,44,z/s,1s(13.5/z),26.5,,B,10,1:16.0,high,length written 26.5K
+UR298,5,44s1s1,44s1,z/s,-,14.5,,W,,,high,no knots; value -; length written 14.5K
+UR298,5,45,,z/s/r,4s(15.0/z) 5L(21.5/z)^d,40.0,,YY,45,1:1.0,high,length written 40.0K
+UR298,5,45s1,45,z/s,1s(14.0/z),28.0,,B,10,1:17.0,high,length written 28.0K
+UR298,5,45s1s1,45s1,z/s,-,17.5,,W,,,high,no knots; value -; length written 17.5r (end marker r)
+UR298,5,46,,z/s/r,3s(14.5/z) 7L(20.5/z)^d,36.5,,YY,37,1:1.0,high,length written 36.5K
+UR298,5,46s1,46,z/s,1s(13.5/z),28.0,,B,10,1:16.5,high,length written 28.0K
+UR298,5,46s1s1,46s1,z/s,1E(13.0/z),14.5,,W,1,,high,length written 14.5K
+UR298,6,47,,z/s/r,2s(15.0/z) 9L(21.0/z)^d,36.0,,YY,29,1:1.0,high,length written 36.0r (end marker r)
+UR298,6,47s1,47,z/s,1s(14.0/z),29.5,,B,10,1:17.5,high,length written 29.5K
+UR298,6,47s1s1,47s1,z/s,1E(3.0/z),14.0,,W,1,,high,length written 14.0K
+UR298,6,48,,z/s/r,2s(15.0/z) 7L(21.0/z)^d,32.0,,YY,27,1:1.0,high,length written 32.0b (end marker b)
+UR298,6,48s1,48,z/s,1s(14.0/z),28.5,,B,10,1:17.5,high,length written 28.5K
+UR298,6,48s1s1,48s1,z/s,-,15.5,,W,,,high,no knots; value -; length written 15.5b (end marker b)
+UR298,6,49,,z/s/r,4s(9.0/z) 4s(15.0/z) 4L(21.0/z)^d,37.0,,VB,444,3:1-1.5,high,length written 37.0K
+UR298,6,49s1,49,z/s,1s(9.0/z) 1s(15.0/z) 1E(20.5/z),30.0,,AB,111,3:0.5-1.0,high,length written 30.0K
+UR298,6,49s1s1,49s1,z/s,3L(19.5/z)^d,39.5,,GG-AB,3,,high,spin/ply written as ditto; length written 39.5K
+UR298,6,49s1s2,49s1,z/s,5s(14.5/z),30.0,,B,50,,high,spin/ply written as ditto; length written 30.0K
+UR298,6,49s1s3,49s1,z/s,3s(14.0/z),34.0,,W,30,,high,spin/ply written as ditto; length written 34.0r (end marker r)
+UR298,6,49s2,49,z/s,5s(14.5/z),31.0,,MB,50,,high,spin/ply written as ditto; length written 31.0K
+UR298,6,49s3,49,z/s,2L(20.5/z)^d,35.0,,YY,2,,high,spin/ply written as ditto; length written 35.0K
+UR298,6,50,,z/s/r,1s(9.0/z) 2s(15.0/z) 3L(21.0/z)^d,36.0,,VB,123,3:1-1.5,high,length written 36.0K
+UR298,6,50s1,50,z/s,9s(14.0/z),21.5,,YY,90,2:0.5-1,high,length written 21.5K
+UR298,6,50s1s1,50s1,z/s,2L(19.0/z)^d,32.0,,GG-AB,2,,high,spin/ply written as ditto; length written 32.0K
+UR298,6,50s1s2,50s1,z/s,3s(13.0/z),35.0,,B,30,,high,spin/ply written as ditto; length written 35.0K
+UR298,7,50s2,50,z/s,5s(13.5/z),32.5,,B,50,,high,length written 32.5K
+UR298,7,50s3,50,z/s,1s(13.0/z) 5L(19.0/z)^d,30.0,,YY,15,,high,spin/ply written as ditto; length written 30.0r (end marker r)
+UR298,7,51,,z/s/r,1s(9.0/z) 7s(15.0/z) 1E(21.0/z),30.5,,VB,171,2:1-1.5,high,length written 30.5K
+UR298,7,51s1,51,z/s,9s(14.0/z),21.0,,AB,90,2:0-0.5,high,length written 21.0K
+UR298,7,51s1s1,51s1,z/s,4L(19.5/z)^d,43.0,,AB-GG,4,,high,spin/ply written as ditto; length written 43.0K
+UR298,7,51s1s2,51s1,z/s,3s(14.0/z),34.0,,MB,30,,high,spin/ply written as ditto; length written 34.0K
+UR298,7,51s2,51,z/s,6s(14.5/z),28.0,,MB,60,,high,spin/ply written as ditto; length written 28.0K
+UR298,7,51s3,51,z/s,1s(13.5/z) 7L(20.0/z)^d,32.0,,YY,17,,high,spin/ply written as ditto; length written 32.0r (end marker r)
+UR298,7,52,,z/s/r,1s(9.0/z) 4s(15.5/z) 7L(21.0/z)^d,24.5,,VB,147,3:1-2.0,high,length written 24.5K
+UR298,7,52s1,52,z/s,8s(14.0/z),22.5,,AB,80,2:0.5-1.0,high,length written 22.5K
+UR298,7,52s1s1,52s1,z/s,3L(18.0/z)^d,36.0,,AB-GG,3,,high,spin/ply written as ditto; length written 36.0K
+UR298,7,52s1s2,52s1,z/s,3s(13.0/z),30.0,,B,30,,high,spin/ply written as ditto; length written 30.0r (end marker r)
+UR298,7,52s2,52,z/s,5s(14.0/z),33.0,,B,50,,high,spin/ply written as ditto; length written 33.0K
+UR298,7,52s3,52,z/s,1s(13.0/z) 8L(19.0/z)^d,32.0,,W,18,,high,spin/ply written as ditto; length written 32.0b (end marker b)
+UR298,7,53,,z/s/r,1s(8.5/z) 6s(15.0/z) 5L(20.5/z)^d,27.0,,VB,165,2:1-1.5,high,length written 27.0K
+UR298,7,53s1,53,z/s,7s(14.5/z),26.0,,AB,70,2:0.5-1.0,high,length written 26.0K
+UR298,7,53s1s1,53s1,z/s,2L(19.0/z)^d,35.0,,AB-GG,2,,high,spin/ply written as ditto; length written 35.0K
+UR298,7,53s1s2,53s1,z/s,-,4.5,,B,,,high,no knots; value -; spin/ply written as ditto; length written 4.5b (end marker b)
+UR298,8,53s2,53,z/s,5s(14.0/z),27.0,,B,50,,high,length written 27.0K
+UR298,8,54,,z/s/r,1s(9.0/z) 6s(15.5/z) 2L(21.5/z)^d,28.5,,VB,162,3:1-2.0,high,length written 28.5K
+UR298,8,54s1,54,z/s,8s(14.0/z) 2L(19.5/z)^d,21.0,,AB,82,2:0.5,high,length written 21.0K
+UR298,8,54s1s1,54s1,z/s,1E(18.0/z),32.0,,B-GG,1,,high,spin/ply written as ditto; length written 32.0K
+UR298,8,54s1s2,54s1,z/s,3s(13.5/z),27.5,,MB,30,,high,spin/ply written as ditto; length written 27.5K
+UR298,8,54s2,54,z/s,4s(14.5/z),33.0,,MB,40,,high,spin/ply written as ditto; length written 33.0K
+UR298,8,54s3,54,z/s,1s(14.0/z) 8L(20.5/z)^d,33.5,,W,18,,high,spin/ply written as ditto; length written 33.5K
+UR298,8,55,,z/s/r,6s(13.0/z),57.0,,KB:W,60,1:5.0,high,length written 57.0K
+UR298,8,55s1,55,z/s,3s(8.0/z),31.5,,W,30,,high,length written 31.5b (end marker b)
+UR298,8,56,,z/s/r,1s(6.5/z) 4L(20.0/z)^d,47.0,,KB:W,14,1:4.5,medium,length written 47.0K; CHECK: knots give 104 if the 1s at 6.5 cm is a hundreds knot (tens sit at 13.0 cm on cords 55 and 59 of this group); written 14 treats it as tens
+UR298,8,56s1,56,z/s,1s(8.0/z),29.0,,W,10,,high,length written 29.0r (end marker r)
+UR298,8,57,,z/s/r,1s(6.5/z) 5L(20.0/z)^d,50.0,,KB:W,15,1:4.5,medium,length written 50.0K; CHECK: knots give 105 if the 1s at 6.5 cm is a hundreds knot (tens at 13.0 cm on cords 55 and 59); written 15 treats it as tens
+UR298,8,57s1,57,z/s,5s(7.5/z) 5L(14.5/z)^d,32.0,,W,55,,high,length written 32.0K
+UR298,8,58,,z/s/r,1s(6.5/z),62.0,,KB:W,10,1:4.5,medium,length written 62.0K; CHECK: knots give 100 if the 1s at 6.5 cm is a hundreds knot (tens at 13.0 cm on cords 55 and 59); written 10 treats it as tens
+UR298,8,58s1,58,z/s,3s(8.0/z),40.5,,W,30,,high,length written 40.5K
+UR298,8,59,,z/s/r,3s(13.0/z),54.0,,KB:W,30,1:5.0,high,length written 54.0K
+UR298,8,59s1,59,z/s,2s(8.5/z) 5L(14.5/z)^d,38.0,,W,25,,high,length written 38.0K
+UR298,9,60,,z/s/r,3s(13.5/z),52.0,,KB:W,30,1:5.5,high,length written 52.0K
+UR298,9,60s1,60,z/s,1s(8.0/z) 4L(13.5/z)^d,34.0,,W,14,,high,length written 34.0K
+UR298,9,61,,z/s/r,4s(7.5/z) 3s(14.5/z) 1E(21.0/z),58.5,,KB:W,431,3 btw. 3.5-4.0; 1 - 5.5,high,TOP CORD: label circled with asterisk; footnote '61 is a top cord attached to cords 55-60'; length written 58.5K; pendants 55-60 sum to 429 if the 6.5 cm knots on 56/57/58 are hundreds (159 if tens as written)
+UR298,9,61s1,61,z/s,6s(10.0/z) 2L(17.5/z)^d,34.0,,YY,62,1:1.0,high,length written 34.0K
+UR298,9,61s1s1,61s1,z/s,6s(9.0/z) 1E(17.0/z),31.5,,KB,61,,high,length written 31.5K
+UR298,9,61s2,61,z/s,4s(9.5/z) 5L(16.5/z)^d,34.5,,YY,45,,high,length written 34.5K
+UR298,9,61s3,61,z/s,2s(9.5/z) 3L(15.5/z)^d,22.0,,KB:W,23,,high,length written 22.0K
+UR298,9,61s4,61,z/s,1s(2.5/z) 6s(9.0/z) 2L(15.5/z)^d,32.0,,W,162,,high,length written 32.0K
+UR298,9,62,,z/s/r,3s(8.0/z) 4s(14.0/z),48.5,,MB,340,,high,different handwriting from here on; length written 48.5K
+UR298,9,63,,z/s/r,7s(12.0/z),46.0,,MB,70,,high,spin/ply/attach written as ditto; length written 46.0K
+UR298,9,64,,z/s/r,1s(8.5/z) 2s(14.0/z),27.5,,MB,120,,high,spin/ply/attach written as ditto; length written 27.5K
+UR298,9,65,,z/s/r,1s(8.5/z) 2s(14.5/z),28.0,,MB,120,,high,spin/ply/attach written as ditto; length written 28.0K
+UR298,9,66,,z/s/r,6s(13.0/z),23.5,,MB,60,,high,spin/ply/attach written as ditto; length written 23.5K
+UR298,9,67,,z/s/r,5s(13.0/z),32.5,,MB,50,,high,spin/ply/attach written as ditto; length written 32.5K
+UR298,9,68,,z/s/r,1s(5.0/z) 4s(8.0/z) 7s(14.0/z) 1E(19.5,31.0,,YB,1471,,high,"value written ""1,471"" (with comma); last knot written without closing direction/paren; spin/ply/attach written as ditto; length written 31.0K"
+UR298,9,69,,z/s/r,6s(7.5/z) 5s(14.0/z) 4L(20.0/z)^d,30.0,,YB,654,,high,spin/ply/attach written as ditto; length written 30.0K
+UR298,9,70,,z/s/r,6s(8.5/z) 4L(19.5/z)^d,24.0,,YB,604,,high,spin/ply/attach written as ditto; length written 24.0b (end marker b)

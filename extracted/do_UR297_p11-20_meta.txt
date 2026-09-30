@@ -1,0 +1,19 @@
+[pages 11-20: each page header reads "Khipu Number: UR-297   (D.O.)" with circled page number (11)...(20); no "group of N pendants" lines on these pages]
+[page 11] left-margin bracket spanning 66s1-66s3; dashed mark in left margin between 71s2 and 72 (group boundary 61-71 | 72-82)
+[page 12] * Tied to 76s2s1 at 19.5 cm.
+[page 12] ** " " 76 at 16.5 cm.   (i.e. 76s2s1 tied to 76 at 16.5 cm)
+[page 13] dashed mark in left margin between 82s1 and 83 (group boundary 72-82 | 83-93)
+[page 14] * These three cords are knotted together at 23.5cm.   (bracket: 88s1s1, 88s1s1s1, 88s1s1s1s1)
+[page 14] ** cord 88s4 has a pair of doubled cords knotted into the cord at 24.0cm.
+[page 15] header annotation "twisted" with arrow to the length of 92s1 ("33.5t")
+[page 15] left margin at 93s1/94: dashed mark and "Khipu B begin"
+[page 16] * Tied together at 22.0 cm.   (bracket: 100s3s1, 100s3s1s1)
+[page 17] * Tied together w/ S-knot at 23.5 cm.   (bracket: 104s1, 104s1s1)
+[page 17] ** " " " " " 20.0 cm.   (bracket: 104s3, 104s3s1)
+[page 17] dashed marks in left margin between 104s3s1 and 105 (group 94-104 | 105-109) and between 109 and 110 (105-109 | 110-120)
+[page 18] dashed mark in left margin between 120 and 121 (group 110-120 | 121-131)
+[page 19] dashed mark in left margin between 131 and 132 (group 121-131 | 132-142)
+[page 20] dashed marks in left margin between 142s1 and 143 (132-142 | 143-153) and between 153 and 154 (143-153 | 154-164)
+[transcriber note] Circled ("top"-like) cords on these pages: 76, 88, 100, 107, 115, 126, 137, 148. For 107 (=32), 115 (=62), 137 (=85), 148 (=62) the value equals the sum of the other pendants in its group.
+[transcriber note] Length column: every length ends in K unless the CSV notes give another end marker (r, b, t). length_cm holds the number only. Thickness column is blank on all pages.
+[transcriber note] A faint dotted horizontal line crosses the same row position on every page (71s1, 77s1, 85s1, 90, 98, 100s8s1, 108, 124, 139, 152). It looks like a copying artefact, not a mark, and is not recorded in the CSV.

@@ -1,0 +1,141 @@
+p39: Khipu Number: UR-297
+p39: (D.O.) [written at top center of sheet]
+p39: page number circled: 39
+p39: cord 433 circled
+p40: UR-297 / D.O.
+p40: (1) "summary" cord + group of 10 cord values
+p40: cords 1-11
+p40: [left margin] Khipu A
+p40: 28 = total on 10 cord group
+p40: 26 = " " summary cord
+p40: 12 - 22
+p40: 40 = total on 10 cord group
+p40: 45 = " " summary cord
+p40: 23 - 33
+p40: 210 = total on 10 cord group
+p40: 897 = " " summary cord
+p40: 34 - 38
+p40: 30 = total of 5 cord group
+p40: 30 = " " summary cord
+p41: (2)
+p41: 39 -> 49
+p41: [left margin] (Khipu A)
+p41: 150 = total on 10 cords
+p41: 132 = " " "summary" cord
+p41: 50 - 60
+p41: 169 = total on 10 cords
+p41: 148 = " " summary cord
+p41: 61 - 71
+p41: 253 = total on 10 cords
+p41: 248 = " " summary cord
+p41: 72 - 82
+p41: 566 = total on 10 cords
+p41: 244 = " " summary cord
+p41: 83 - 93
+p41: 217 = total on 10 cords
+p41: 219 = " " summary cord
+p41: [left margin] Khipu B
+p41: 94 - 104
+p41: 380 = total on 10 cords
+p41: 1,004 = " " summary cord
+p42: (3)
+p42: 105 - 109
+p42: 32 = total on group of 4 cords
+p42: 32 = " " summary cord
+p42: 110 - 120
+p42: 62 = total on group of 10 cords
+p42: 62 = " " summary cord
+p42: 121 - 131
+p42: 54 = total on group of 10 cords
+p42: 54 = " " summary cord
+p42: 132 - 142
+p42: 105 = total on group of 10 cords
+p42: 105 = " " summary cord
+p42: 143 - 153
+p42: 82 = total on group of 10 cords
+p42: 82 = " " summary cord
+p43: (4)
+p43: 154 - 164
+p43: 75 = total on 10 cord group
+p43: 75 = total on summary cord
+p43: 165 - 175
+p43: 85 = total on group of 10 cords
+p43: 140 = " " summary cord
+p43: 176 - 186
+p43: 75 = total on group of 10 cords
+p43: 76 = total on summary cord
+p43: 187 - 197
+p43: 84 = total on 10 cord group
+p43: 123 = total on summary cord
+p43: 198 - 208
+p43: 113 = total on 10 cord group
+p43: 113 = " " summary cord
+p44: (5)
+p44: 209 - 219
+p44: 125 = Total of 10 cord group
+p44: 135 = " on summary cord
+p44: 220 - 230
+p44: 135 = total of 10 cord group
+p44: 135 = " on summary cord
+p44: 231 - 241
+p44: 231 = total of 10 cord group
+p44: 46 (broken) = " on summary cord
+p44: 242 - 252
+p44: 100 = total on 10 cord group
+p44: 100 = total on summary cord
+p44: 253 - 263
+p44: 100 - Total on 10 cord group
+p44: 100 - Total on summary cord
+p45: (6)
+p45: 264 - 274
+p45: 230 = total on 10 cord group
+p45: 0 (broken) = total on summary cord
+p45: 275 - 285
+p45: 130 = total on 10 cord group
+p45: 130 = total on summary cord
+p45: 286 - 296
+p45: 167 = total on 10 cord group
+p45: 170 = " " summary cord
+p45: 297 - 306 [sic; next range starts 307]
+p45: 150 = total on 10 cord group
+p45: 0 (broken) = summary cord
+p45: 307 - 317
+p45: 56 = Total on group of 10 cords
+p45: 80 = " " summary cord
+p46: (7)
+p46: 318 - 328
+p46: 84 = total on 10 cord group
+p46: 72 = " " summary cord
+p46: 329 - 339
+p46: 86 = total on 10 cord group
+p46: 96 = " on summary cord
+p46: 340 - 350
+p46: 157 = total on 10 cord group
+p46: (157+22=) 179 = total on summary cord
+p46: 351 - 361
+p46: 150 = total on 10 cord group
+p46: 130 = " " summary cord
+p46: 362 - 372
+p46: 237 = total on 10 cord group
+p46: (237+72=) 309 = total on summary cord
+p47: (8)
+p47: 373 - 383
+p47: 20 = total on 10 cord group
+p47: 20 = total on summary cord
+p47: 384 - 394
+p47: 20 = total on 10 cord group
+p47: 20 = " " summary cord
+p47: 395 - 405
+p47: 80 = total on 10 cord group
+p47: 80 = " " summary cord
+p47: 406 - 416
+p47: 80 = total on 10 cord group
+p47: 50 (broken) = total on summary cord
+p47: 417 - 427
+p47: 81 = total on 10 cord group
+p47: 82 = " " summary cord
+p47: 428 - 438
+p47: 122 = total of 10 cord group
+p47: 122 = " " summary cord
+p47: [observation, not on sheet] pages 40-47 are lined-paper analysis notes, not cord recording sheets; no cord rows on them
+p47: [observation, not on sheet] check against p39 rows: 428-438 excluding 433 sum to 2+10+10+10+10+20+20+40 = 122; 433 (120) + 433s1 (2) = 122, matching the note

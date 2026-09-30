@@ -1,0 +1,27 @@
+[p1] UR-298   PC.WBC.2016.071   (page number 1 circled; "W" of WBC overwritten)
+[p1] Museum: Dumbarton Oaks: PC.WBC.2016.071
+[p1] (Medium-size khipu donated by Bill Conklin)
+[p1] Provenience: unknown
+[p1] Material: Cotton
+[p1] Main cord: 101.0cm - one main cord with KB-AB-W, final S-twist (~1/2cm diameter)
+[p1] Main Cord   (margin label)
+[p1] 0.0-2.0cm., needlework bundle; space of 5.0cm.
+[p1] 7.0cm., group of 6 pendants (1-6); space of 0.5cm.
+[p1] 8.0cm., " " 24 pendants (7-30); space of 0.5cm.
+[p1] 12.0cm., " " 18 " (31-48); space of 0.5cm.
+[p1] 15.0cm., " " 18 " (49-67); space of 0.5cm.   [NOTE: range end "67" overwritten; 49-67 is 19 cords, not 18 -- possibly 49-66]
+[p1] 18.5cm., " " 26 " (68-93); space of 0.5cm.
+[p1] 23.0cm., " " 6 " (94-99); " " 0.5cm.   [NOTE: "99" overwritten, uncertain]
+[p1] 24.5cm., " " 12 " (100-111); " " 0.5cm.   [NOTE: "100" overwritten]
+[p1] 26.5cm., " " 12 " (112-123); " " 0.5 cm.
+[p1] 28.5cm., " " 57 " (124-180); " " 0.5cm.   [NOTE: "57" overwritten, uncertain]
+[p1] 41.0cm., " " 21 " (181-202); " - 56.5 cm.   [NOTE: "181" and "202" overwritten; 181-202 is 22 cords, not 21]
+[p1] Twisted end of primary cord (101.0cm).
+[p2-p9] Khipu Number: UR-298   (D.O.)   -- repeated page header; page numbers 2-9 circled top right
+[p9] *61 is a top cord attached to cords 55-60
+[transcriber] Pages 2-9 are landscape sheets scanned sideways (rotated 90 deg). Cord numbering on pp2-9 does NOT follow the p1 group list (e.g. pendants numbered 1-70 with subsidiaries as NsN); group list pendant numbers refer to the p1 scheme.
+[transcriber] Length column: almost every value carries a trailing end-marker letter (K, b, or r); length_cm holds the number only, the raw form is in notes ("length written ...").
+[transcriber] Thickness column is blank on all pages.
+[transcriber] Many long knots carry a superscript "d" after the closing parenthesis; transcribed as "^d". Figure-eight knots written lowercase "e" on the sheets, normalised to "E".
+[transcriber] Ditto marks (") in spin/ply/attach and color were expanded to the value above; noted per row.
+[transcriber] p9 rows 62-70 are in a different hand (heavier italic script).

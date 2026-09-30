@@ -1,0 +1,16 @@
+AS056 (7 подв., 4B, Hacienda Ullujalla y Callengo): KH0067 8; UR163 8 | фон 0
+AS068 (215 подв., 3882, Unknown): UR281 192; KH0081 192 | фон 0
+AS128 (269 подв., VA63042(B), Nazca): UR1126 4; UR1034 2 | фон 2
+LL01 (96 подв., "No. 4, B-8705", Unknown): KH0001 60; UR176 60 | фон 0
+MM015 (23 подв., IVc.366.03, Eduard Gaffron): UR212 8; UR1131 6 | фон 0
+MM016 (19 подв., IVc.366.03, Eduard Gaffron): UR212 14; UR1131 4 | фон 0
+UR1031 (54 подв., 32-70-30/F851, Unknown): UR044 20; KH0033 20 | фон 0
+UR1034 (108 подв., 365240, Pachacamac): AS128 2; UR1126 2 | фон 0
+UR1084 (319 подв., 71.1930.19.470, Unknown): HP055 28; MM002 2; BM3 2; UR202 2; JC011 2 | фон 10
+UR1114 (339 подв., VA16148, Between Ica and Pisco): UR1123 14; UR231 2; UR205 2; UR297 2 | фон 4
+UR1126 (104 подв., VA47095, Ica): AS128 4; UR1034 2; UR058B 2 | фон 0
+UR1131 (146 подв., VA42510, Pachacamac): MM015 6; MM009 6; MM016 4; MM008 4 | фон 0
+UR122 (72 подв., 1938.45.0228, Nazca): AS038 24; KH0049 20; HP036 20 | фон 0
+UR212 (195 подв., VA42508(A), Pachacamac): MM016 14; MM015 8; MM012 2 | фон 0
+UR231 (864 подв., VA63038(A), Ica/Pisco): MM017 2; UR1114 2 | фон 2
+UR297 (438 подв., None, None): AS181 2; UR236 2; KH0197 2; UR1114 2 | фон 12

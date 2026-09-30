@@ -1,0 +1,158 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR297,30,281,,z/s/V,2s(13.0/s),18.0b,,KB,20,1:1.0,high,cord label circled
+UR297,30,281s1,281,z/s,1s(4.0/s) 1s(12.0/s),43.5K,,W,110,,high,
+UR297,30,282,,z/s/V,2s(8.0/s),55.0K,,YB,20,,high,
+UR297,30,283,,z/s/V,,27.0K,,AB,,,high,spin/ply ditto mark
+UR297,30,284,,z/s/V,,40.0K,,YB,,,high,spin/ply ditto mark
+UR297,30,285,,z/s/V,3s(8.0/s),40.0K,,AB,30,,high,spin/ply ditto mark; dash mark in left margin
+UR297,30,286,,z/s/V,,42.0K,,YB,,,high,spin/ply ditto mark
+UR297,30,287,,z/s/V,,41.0K,,KB,,,high,spin/ply ditto mark
+UR297,30,288,,z/s/V,1s(8.5/s),16.0b,,KB,10,,high,spin/ply ditto mark
+UR297,30,289,,z/s/V,1s(7.5/s),38.0K,,KB,10,,high,spin/ply ditto mark
+UR297,30,290,,z/s/V,2s(8.5/s),32.5b,,KB,20,,high,spin/ply ditto mark
+UR297,30,291,,z/s/V,1s(6.0/s) 3s(8.0/s),28.0K,,YY,130,1:0.5,high,spin/ply ditto mark; cord label circled
+UR297,30,291s1,291,z/s/V,4s(7.0/s),52.0K,,W,40,,high,spin/ply ditto mark; spin/ply ditto on a subsidiary row (as written)
+UR297,30,292,,z/s/V,2s(9.0/s),16.0b,,KB,20,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,30,293,,z/s/V,2s(9.0/s),31.0r,,KB,20,,high,spin/ply ditto mark
+UR297,30,294,,z/s/V,2s(9.0/s),37.0K,,KB,20,,high,spin/ply ditto mark
+UR297,30,295,,z/s/V,1s(9.0/s) 4L(16.5/s)d,41.5K,,KB,14,,high,spin/ply ditto mark
+UR297,30,296,,z/s/V,5s(9.0/s) 3L(17.0/s)d,31.5K,,KB,53,,high,spin/ply ditto mark; dash mark in left margin
+UR297,31,297,,z/s/V,,22.0b,,KB,,,high,
+UR297,31,298,,z/s/V,,35.0b,,KB,,,high,spin/ply ditto mark
+UR297,31,299,,z/s/V,1s(8.5/s),15.0b,,KB,10,,high,spin/ply ditto mark
+UR297,31,300,,z/s/V,,0.0b,,KB,,,high,spin/ply ditto mark; cord label circled; length 0.0b
+UR297,31,301,,z/s/V,2s(9.0/s),48.0K,,KB,20,,high,spin/ply ditto mark
+UR297,31,302,,z/s/V,1s(9.0/s),28.0r,,KB,10,,high,spin/ply ditto mark
+UR297,31,303,,z/s/V,,4.5b,,KB,,,high,spin/ply ditto mark
+UR297,31,304,,z/s/V,4s(8.5/s),40.0K,,KB,40,,high,spin/ply ditto mark
+UR297,31,305,,z/s/V,1s(8.5/s),28.0r,,KB,10,,high,spin/ply ditto mark
+UR297,31,306,,z/s/V,6s(8.5/s),45.0K,,KB,60,,high,spin/ply ditto mark; dash mark in left margin
+UR297,31,307,,z/s/V,5s(12.5/s),50.0K,,W,50,1:7.0,high,spin/ply ditto mark; cord label circled
+UR297,31,307s1,307,z/s,3s(7.0/s),41.5K,,GG,30,,high,
+UR297,31,308,,z/s/V,,50.0K,,YY,,,high,
+UR297,31,309,,z/s/V,,43.5r,,W,,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,31,310,,z/s/V,,60.5K,,YY,,,high,spin/ply ditto mark
+UR297,31,311,,z/s/V,,52.0K,,W,,,high,spin/ply ditto mark
+UR297,31,312,,z/s/V,,54.5K,,W,,,high,spin/ply ditto mark
+UR297,32,313,,z/s/V,,43.5K,,W,,,high,
+UR297,32,314,,z/s/V,,41.0r,,W,,,high,spin/ply ditto mark
+UR297,32,315,,z/s/V,6L(28.5/s)d,48.5K,,W,6,,high,spin/ply ditto mark
+UR297,32,316,,z/s/V,,58.0K,,W,,,high,spin/ply ditto mark
+UR297,32,317,,z/s/V,5s(15.0/s),49.0K,,W,50,,high,spin/ply ditto mark; dash mark in left margin
+UR297,32,318,,z/s/V,4L(21.5/s)d,40.5K,,W,4,,high,spin/ply ditto mark
+UR297,32,319,,z/s/V,5s(7.5/s) 2L(23.5/s)d,28.5K,,W,52,1:5.5,high,spin/ply ditto mark
+UR297,32,319s1,319,z/s,1s(2.5/s) 2L(11.0/s)d,16.5K,,BL,12,,high,
+UR297,32,320,,z/s/V,,27.0K,,W,,,high,
+UR297,32,321,,z/s/V,2L(21.0/s)d,29.0r,,W,2,,high,spin/ply ditto mark
+UR297,32,322,,z/s/V,3L(23.5/s)d,28.5K,,W,3,,high,spin/ply ditto mark
+UR297,32,323,,z/s/V,2L(24.5/s)d,44.0K,,W,2,,high,spin/ply ditto mark
+UR297,32,324,,z/s/V,6L(23.0/s)d,30.5K,,W,6,,high,spin/ply ditto mark
+UR297,32,325,,z/s/V,2L(23.0/s)d,43.5K,,W,2,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,32,326,,z/s/V,1E(23.5/s),41.0K,,W,1,,high,spin/ply ditto mark
+UR297,32,327,,z/s/V,,31.0K,,W,,,high,spin/ply ditto mark
+UR297,32,328,,z/s/V,6s(12.0/s),42.5K,,W,60,1:2.5,high,"spin/ply ditto mark; cord label circled; subsidiaries ""1"" written like ""9"""
+UR297,32,328s1,328,z/s,1s(9.0/s) 2L(20.5/s)d,43.0K,,GG,12,,high,dash mark in left margin below row
+UR297,33,329,,z/s/V,,53.0K,,YY,,,high,dash mark in left margin
+UR297,33,330,,z/s/V,,63.5K,,YY,,,high,spin/ply ditto mark
+UR297,33,331,,z/s/V,,50.0K,,YY,,,high,spin/ply ditto mark
+UR297,33,332,,z/s/V,,49.0K,,YY,,,high,spin/ply ditto mark
+UR297,33,333,,z/s/V,,52.0K,,YY,,,high,spin/ply ditto mark
+UR297,33,334,,z/s/V,,57.0K,,YY,,,high,spin/ply ditto mark
+UR297,33,335,,z/s/V,1s(5.5/s),48.0K,,YY,10,,high,spin/ply ditto mark
+UR297,33,337,,z/s/V,1s(6.0/s) 2L(14.0/s)d,47.5K,,YY,12,,high,spin/ply ditto mark; 337 written above 336 with curved arrow indicating order swap
+UR297,33,336,,z/s/V,,1.0b,,YY,,,high,spin/ply ditto mark; written below 337 (arrow)
+UR297,33,338,,z/s/V,6s(6.0/s) 4L(14.0/s)u,45.5K,,YY,64,,medium,"spin/ply ditto mark; superscript after L cluster reads ""u"" not ""d""; asterisk with arrow pointing to it from row 336/337"
+UR297,33,339,,z/s/V,9s(12.5/s) 6L(22.5/s)d,38.0K,,YB,96,1:2.5,high,spin/ply ditto mark; cord label circled
+UR297,33,339s1,339,x/s,,48.0K,,GG,,,medium,"spin written ""x/s"" (probably z/s); dash mark in left margin"
+UR297,33,340,,z/s/V,1s(4.0/s) 5s(14.5/s) 7L(25.5/s)d,35.5K,,YY,157,1:2.0,high,cord label circled
+UR297,33,340s1,340,z/s,2s(12.0/s) 2L(24.0/s)d,44.0K,,GG,22,,high,dotted line drawn across row
+UR297,33,341,,z/s/V,,46.0K,,YY,,,high,
+UR297,33,342,,z/s/V,1s(7.0/s),39.0K,,W,10,,high,spin/ply ditto mark
+UR297,33,343,,z/s/V,1s(7.0/s),40.0K,,W,10,,high,spin/ply ditto mark
+UR297,34,344,,z/s/V,1s(8.0/s),42.5K,,W,10,,high,
+UR297,34,345,,z/s/V,,39.5K,,W,,,high,spin/ply ditto mark
+UR297,34,346,,z/s/V,3s(6.5/s) 7L(19.0/s)d,32.0K,,W,37,,high,spin/ply ditto mark
+UR297,34,347,,z/s/V,5s(7.0/s),35.5K,,W,50,,high,spin/ply ditto mark
+UR297,34,348,,z/s/V,1s(7.0/s),42.0K,,W,10,,high,spin/ply ditto mark
+UR297,34,349,,z/s/V,1s(8.0/s),42.0K,,W,10,,high,spin/ply ditto mark
+UR297,34,350,,z/s/V,2s(8.0/s),40.5K,,W,20,,high,spin/ply ditto mark; dash mark in left margin
+UR297,34,351,,z/s/V,1s(6.5/s),14.5b,,YB,100,1:3.0,high,spin/ply ditto mark; cord label circled; single cluster read as hundreds (position 6.5 vs tens ~8 nearby)
+UR297,34,351s1,351,z/s,3s(13.5/s),41.0K,,AB,30,,high,
+UR297,34,352,,z/s/V,,45.5K,,YY,,,high,
+UR297,34,353,,z/s/V,,47.0K,,YY,,,high,spin/ply ditto mark
+UR297,34,354,,z/s/V,1s(4.0/s),41.5K,,YY,10,,high,spin/ply ditto mark
+UR297,34,355,,z/s/V,,24.0b,,YY,,,high,spin/ply ditto mark
+UR297,34,356,,z/s/V,2s(4.5/s),47.0K,,YY,20,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,34,357,,z/s/V,1s(4.5/s),43.0K,,YY,10,,high,spin/ply ditto mark
+UR297,34,358,,z/s/V,3s(5.0/s),37.5K,,YY,30,,high,spin/ply ditto mark
+UR297,34,359,,z/s/V,1s(4.5/s),46.0K,,YY,10,,high,spin/ply ditto mark
+UR297,35,360,,z/s/V,2s(4.0/s),32.0K,,YY,20,,high,
+UR297,35,361,,z/s/V,5s(5.0/s),42.5K,,YY,50,,high,spin/ply ditto mark; dash mark in left margin
+UR297,35,362,,z/s/V,,44.5K,,AB,,,high,spin/ply ditto mark
+UR297,35,363,,z/s/V,,45.5K,,AB,,,high,spin/ply ditto mark
+UR297,35,364,,z/s/V,1s(7.0/s) 4L(14.0/s)d,38.5K,,AB,14,,high,spin/ply ditto mark
+UR297,35,365,,z/s/V,1s(6.0/s),45.0K,,AB,10,,high,spin/ply ditto mark
+UR297,35,366,,z/s/V,1s(6.5/s),36.5b,,AB,10,,high,spin/ply ditto mark
+UR297,35,367,,z/s/V,2s(5.5/s),41.0K,,AB,20,,high,spin/ply ditto mark
+UR297,35,368,,z/s/V,4s(5.0/s),37.0K,,AB,40,,high,spin/ply ditto mark
+UR297,35,369,,z/s/V,4s(5.5/s) 3L(16.5/s)d,35.5K,,AB,43,,high,spin/ply ditto mark
+UR297,35,370,,z/s/V,2s(6.0/s),41.5K,,AB,20,,high,spin/ply ditto mark
+UR297,35,371,,z/s/V,8s(6.0/s),38.5K,,AB,80,,high,spin/ply ditto mark
+UR297,35,372,,z/s/V,2s(5.0/s) 3s(13.5/s) 7L(25.0/s)d,43.0K,,W,237,1:3.5,high,spin/ply ditto mark; cord label circled
+UR297,35,372s1,372,z/s,7s(10.5/s) 2L(21.0/s)d,30.5K,,GG,72,,high,dotted line drawn across row; dash mark in left margin
+UR297,35,373,,z/s/V,,54.5K,,W,,,high,
+UR297,35,374,,z/s/V,,52.0K,,W,,,high,spin/ply ditto mark
+UR297,35,375,,z/s/V,,39.0b,,W,,,high,spin/ply ditto mark
+UR297,35,376,,z/s/V,,21.0K,,W,,,high,spin/ply ditto mark
+UR297,36,377,,z/s/V,,30.0K,,W,,,high,
+UR297,36,378,,z/s/V,2s(2.0/s),0.0b,,KB,20,,medium,spin/ply ditto mark; cord label circled; length reads 0.0b although knot at 2.0
+UR297,36,379,,z/s/V,,42.0r,,W,,,high,spin/ply ditto mark
+UR297,36,380,,z/s/V,,47.0K,,W,,,high,spin/ply ditto mark
+UR297,36,381,,z/s/V,,52.5K,,W,,,high,spin/ply ditto mark
+UR297,36,382,,z/s/V,,52.5r,,W,,,high,spin/ply ditto mark
+UR297,36,383,,z/s/V,2s(6.5/s),51.0K,,W,20,,high,spin/ply ditto mark; dash mark in left margin
+UR297,36,384,,z/s/V,,54.5K,,W,,,high,spin/ply ditto mark
+UR297,36,385,,z/s/V,,53.5K,,W,,,high,spin/ply ditto mark
+UR297,36,386,,z/s/V,1s(8.0/s),56.5K,,W,10,,high,spin/ply ditto mark
+UR297,36,387,,z/s/V,,55.0K,,W,,,high,spin/ply ditto mark
+UR297,36,388,,z/s/V,,8.0b,,W,,,high,spin/ply ditto mark
+UR297,36,389,,z/s/V,2s(16.0/s),44.5b,,AB,20,,medium,spin/ply ditto mark; cord label circled; length 44.5b or 47.5b
+UR297,36,390,,z/s/V,,56.0K,,W,,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,36,391,,z/s/V,,56.0K,,W,,,high,spin/ply ditto mark
+UR297,36,392,,z/s/V,,53.0K,,W,,,high,spin/ply ditto mark
+UR297,36,393,,z/s/V,,51.0K,,W,,,high,spin/ply ditto mark
+UR297,36,394,,z/s/V,1s(9.5/s),53.0K,,W,10,,high,spin/ply ditto mark; dash mark in left margin below row
+UR297,37,395,,z/s/z,,54.5K,,YY,,,medium,"attachment written ""z"" (not V) as read"
+UR297,37,396,,z/s/z,,57.0K,,YY,,,high,spin/ply ditto mark
+UR297,37,397,,z/s/z,,54.0K,,YY,,,high,spin/ply ditto mark
+UR297,37,398,,z/s/z,,32.0K,,YY,,,high,spin/ply ditto mark
+UR297,37,399,,z/s/z,,55.0K,,YY,,,high,spin/ply ditto mark
+UR297,37,400,,z/s/z,4s(8.0/s),42.0K,,KB,40,1:0.5,high,spin/ply ditto mark; cord label circled
+UR297,37,400s1,400,z/s,4s(8.0/s),59.0r,,YY,40,,high,row written in different (print) hand
+UR297,37,401,,z/s/V,,51.5K,,YY,,,high,
+UR297,37,402,,z/s/V,,50.5K,,YY,,,high,spin/ply ditto mark
+UR297,37,403,,z/s/V,,55.0K,,YY,,,high,spin/ply ditto mark
+UR297,37,404,,z/s/V,1s(3.5/s),51.0K,,YY,10,,high,spin/ply ditto mark
+UR297,37,405,,z/s/V,7s(3.0/s),44.0K,,YY,70,,high,spin/ply ditto mark; dash mark in left margin
+UR297,37,406,,z/s/V,,59.0r,,AB,,,high,spin/ply ditto mark
+UR297,37,407,,z/s/V,,61.5K,,AB,,,high,spin/ply ditto mark; dotted line drawn across row
+UR297,37,408,,z/s/V,,60.0r,,AB,,,high,spin/ply ditto mark
+UR297,37,409,,z/s/V,4s(10.5/s),55.5K,,AB,40,,high,spin/ply ditto mark
+UR297,37,410,,z/s/V,4s(11.0),56.5K,,AB,40,,high,spin/ply ditto mark; knot direction not written
+UR297,38,411,,z/s/V,3s(7.0/s),8.5b,,KB,30,1:0.5,medium,"cord label circled; length overwritten, reads 8.5b"
+UR297,38,411s1,411,z/s,2s(7.0/s),60.0r,,W,20,,high,
+UR297,38,412,,z/s/V,,58.0K,,AB,,,high,
+UR297,38,413,,z/s/V,,0.0b,,?,,,high,"spin/ply ditto mark; color written ""?"""
+UR297,38,414,,z/s/V,,62.5r,,AB,,,high,spin/ply ditto mark
+UR297,38,415,,z/s/V,,61.0K,,AB,,,high,spin/ply ditto mark
+UR297,38,416,,z/s/V,,34.0K,,AB,,,high,spin/ply ditto mark; dash mark in left margin
+UR297,38,417,,z/s/V,,0.0b,,?,,,high,"spin/ply ditto mark; color written ""?"""
+UR297,38,418,,z/s/V,,49.0K,,YB,,,high,spin/ply ditto mark
+UR297,38,419,,z/s/V,,46.5K,,YB,,,high,spin/ply ditto mark
+UR297,38,420,,z/s/V,,53.0K,,YB,,,high,spin/ply ditto mark
+UR297,38,421,,z/s/V,,49.5K,,W,,,high,spin/ply ditto mark
+UR297,38,422,,z/s/V,4s(12.5/s),39.0K,,KB,40,1:0.5,high,spin/ply ditto mark; cord label circled
+UR297,38,422s1,422,z/s,4s(13.0/s) 2L(33.5/s)d,50.5K,,AB,42,,medium,dotted line drawn across row; L position 33.5 or 35.5
+UR297,38,423,,z/s/V,,16.0b,,W,,,high,
+UR297,38,424,,z/s/V,1E(35.0/s),44.0K,,W,1,,high,spin/ply ditto mark
+UR297,38,425,,z/s/V,,51.0K,,W,,,high,spin/ply ditto mark

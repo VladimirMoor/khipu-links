@@ -14,3 +14,4 @@ __pycache__/
 *.pyc
 .DS_Store
 .claude/
+extracted/plus_do_cords.csv

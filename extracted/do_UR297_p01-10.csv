@@ -1,0 +1,123 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR297,4,1,,z/s/V,-,37.0K,,AB,,,high,
+UR297,4,2,,z/s/V,-,32.0K,,AB,,,high,spin ditto
+UR297,4,3,,z/s/V,-,28.0K,,AB,,,high,spin ditto
+UR297,4,4,,z/s/V,-,37.0r,,YB,,,high,spin ditto
+UR297,4,5,,z/s/V,1s(8.0/s),26.0K,,YB,10,1:8.0,high,spin ditto
+UR297,4,5s1,5,z/s,2L(17.0/s)d,33.5K,,YB,2,,high,
+UR297,4,6,,z/s/V,2s(6.5/s) 6L(10.5/s)d,26.5K,,AB,26,1:0.5,high,"cord number circled (pulled-up 'top-like' cord, footnote *: 'This - and all addnl. circled cord numbers - have been pulled up (by Conklin?) in a position similar to top cords'); spin marked ** (footnote cut off in scan); value circled with annotation 'sums total on pendants' (=10+12+4 of cords 5,7,11)"
+UR297,4,6s1,6,z/s,-,30.0K,,EB,,,medium,color reading EB uncertain
+UR297,4,7,,z/s/V,1s(8.0/s) 5L(12.0/s)d,23.0K,,AB,12,,medium,"CHECK: knots give 15 (long knot count reads '5L', could be a 2L written ambiguously; group sum on cord 6 = 26 = 10+12+4 supports 12)"
+UR297,4,8,,z/s/V,-,58.0K,,W:KB,,,medium,spin ditto; color written 'W:KB'/'W+KB'
+UR297,4,9,,z/s/V,-,26.0b,,AB:KB,,,high,spin ditto
+UR297,4,10,,z/s/V,-,27.5K,,AB,,,high,spin ditto
+UR297,4,11,,z/s/V,4L(15.5/s)d,37.0K,,AB:W,4,,high,spin ditto; last cord of group 1-11
+UR297,4,12,,z/s/V,3L(13.0/s)d,33.5K,,MG,3,,high,spin ditto; first cord of group 12-22
+UR297,4,13,,z/s/V,-,3.0b,,MG,,,high,spin ditto
+UR297,4,14,,z/s/V,3L(13.5/s)d,30.5K,,W,3,,high,spin ditto; value computed (value column blank)
+UR297,4,15,,z/s/V,-,30.5r,,MG,,,high,spin ditto
+UR297,5,16,,z/s/V,-,5.0b,,MG:MB,,,high,
+UR297,5,17,,z/s/V,3L(14.0/s)d,37.0b,,MG,3,,high,spin ditto
+UR297,5,18,,z/s/V,4s(5.5/s) 5L(11.5/s)d,23.5K,,MG,45,,high,cord number circled (pulled-up top-like cord); value circled; spin ditto
+UR297,5,19,,z/s/V,-,13.0b,,MG,,,high,spin ditto
+UR297,5,20,,z/s/V,3L(14.0/s)d,30.0K,,MG,3,,high,spin ditto
+UR297,5,21,,z/s/V,3L(15.0/s)d,34.0K,,MG,3,,high,spin ditto
+UR297,5,22,,z/s/V,1s(6.5/s),31.5K,,MG,10,2:3.0-3.5,high,spin ditto
+UR297,5,22s1,22,z/s,3L(11.0/s)d,26.0K,,W,3,,high,
+UR297,5,22s2,22,z/s,1s(3.5/s) 5L(10.5/s)d,35.0K,,YB,15,,high,spin ditto; last of group 12-22
+UR297,5,23,,z/s/V,4L(13.5/s)d,38.5K,,W:MB,4,,high,first of group 23-33
+UR297,5,24,,z/s/V,4L(16.0/s)d,37.0b,,DG,4,,medium,"spin ditto; color letter uncertain (DG, possibly AG)"
+UR297,5,25,,z/s/V,1s(7.5/s) 3L(15.5/s)d,34.0K,,MG,13,1:1.5,high,spin ditto
+UR297,5,25s1,25,z/s,1E(14.0/s),34.5K,,W,1,,high,
+UR297,5,26,,z/s/V,1s(15.0/s),38.0b,,MG,10,,medium,single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,5,27,,z/s/V,1s(7.5/s) 3L(15.5/s)d,48.0K,,MG,13,1:2.0,high,spin ditto
+UR297,5,27s1,27,z/s,1s(12.0/s),47.5K,,W,10,,medium,single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,5,28,,z/s/V,4L(14.5/s)d,27.5b,,MG,4,,high,
+UR297,6,29,,z/s/V,8s(6.5/s) 1s(17.0/s),30.0K,,MB:AB,810,1-3:1.5-2.5; 4:6.0,medium,"cord number circled (pulled-up top-like cord); value 810 = 8 hundreds, 1 ten, empty units by recorder's reading (single at 17.0 read as tens)"
+UR297,6,29s1,29,z/s,5s(4.5/s) 4L(16.0/s)d,23.5K,,W,54,,medium,"value written '54 (0?)' with arrow inserting 0 between 5 and 4, i.e. possibly 504 (large gap between clusters)"
+UR297,6,29s2,29,z/s,-,30.0b,,DO,,,medium,spin ditto; color reading uncertain ('DO'/'D0')
+UR297,6,29s3,29,z/s,3s(1.5/s),36.0K,,MB:W,30,,medium,spin ditto; value written '30(0)?' i.e. possibly 300
+UR297,6,29s4,29,z/s,3L(8.0/s),15.0K,,MB,3,,high,spin ditto; long knot without d mark
+UR297,6,30,,z/s/V,8L(13.5/s)d,31.5K,,YB,8,1:2.0,high,
+UR297,6,30s1,30,z/s,1s(13.0/s),43.5K,,W,10,,medium,single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,6,31,,z/s/V,1s(8.0/s) 3L(15.0/s)d,38.5b,,YB,13,1:2.0,high,
+UR297,6,31s1,31,z/s,1s(12.5/s),40.0K,,W,10,,medium,single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,6,32,,z/s/V,4L(15.0/s)d,42.0b,,YB:W,4,,high,
+UR297,6,33,,z/s/V,2s(8.5/s) 2L(14.5/s)d,43.0K,,MG,22,2:2.0,high,spin ditto; last of group 23-33
+UR297,6,33s1,33,z/s,6s(7.0/s),27.5K,,AB,60,,high,
+UR297,6,33s2,33,z/s,1s(7.0/s) 4L(16.0/s)d,32.0K,,YB,14,1:0.5,high,spin ditto
+UR297,6,33s2s1,33s2,z/s,1s(14.0/s),28.0K,,W,10,,medium,spin ditto; single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,6,34,,z/s/V,8L(14.0/s)d,36.0K,,YB,8,1:4.5,high,first of group 34-38
+UR297,6,34s1,34,z/s,2L(10.5/s)d,29.5K,,W,2,,high,
+UR297,6,35,,z/s/V,6L(14.5/s)d,35.5K,,YB,6,1:3.5,high,
+UR297,6,35s1,35,z/s,2L(11.0/s)d,30.0K,,W,2,,high,
+UR297,7,36,,z/s/V,3s(7.0/s),33.5K,,DG,30,2:3.0-3.5,high,cord number circled (pulled-up top-like cord)
+UR297,7,36s1,36,z/s,-,29.0K,,W,,,high,
+UR297,7,36s2,36,z/s,-,25.5K,,MB,,1:0.0,low,label written like '36s1' (overwritten/unclear); read as 36s2 since cord 36 has 2 subsidiaries; spin ditto
+UR297,7,36s1s1,36s1,z/s,-,0.0b,,MB,,,medium,label as written '36s1s1'; probably the subsidiary (1:0.0) of the preceding row; color ditto (MB); spin ditto
+UR297,7,37,,z/s/V,-,46.5K,,W:AB,,1:3.5,high,
+UR297,7,37s1,37,z/s,-,33.5K,,W,,,high,
+UR297,7,38,,z/s/V,1s(8.5/s) 2L(16.0/s)d,36.5K,,MB:W,12,1:3.5,high,last of group 34-38
+UR297,7,38s1,38,z/s,- (untied knot?),31.0K,,W,,,high,knots column: '- (untied knot?)'
+UR297,7,39,,z/s/V,3L(13.0/s)d,31.0K,,W,3,,high,first of group 39-49
+UR297,7,40,,z/s/V,3L(13.0/s)d,31.5K,,W,3,1:4.0,high,spin ditto
+UR297,7,40s1,40,z/s,-,35.0K,,AB,,,high,
+UR297,7,41,,z/s/V,2L(16.0/s)d,38.0K,,W,2,1:4.5,high,
+UR297,7,41s1,41,z/s,-,29.0K,,AB,,,high,
+UR297,7,42,,z/s/V,-,38.5K,,W,,1:4.0,high,spin written like 'z/6/V' (read z/s/V)
+UR297,7,42s1,42,z/s,4L(10.0/s)d,31.5K,,AB,4,,high,
+UR297,7,43,,z/s/V,4L(13.0/s)d,36.0K,,W,4,1:4.5,high,
+UR297,7,43s1,43,z/s,3L(9.0/s)d,30.5K,,AB,3,,high,
+UR297,8,45,,z/s/V,1s(6.0/s) 7L(14.0/s)d,36.0K,,W,17,1:5.5,high,listed before 44 on the sheet; arrow drawn from 44 to above 45
+UR297,8,45s1,45,z/s,4L(8.0/s)d,26.0K,,AB,4,,high,
+UR297,8,44,,z/s/V,5s(8.5/s) 2L(13.0/s)d,34.0K,,MB,52,3:3.5-4.5,high,cord number circled (pulled-up top-like cord); listed after 45s1 with arrow pointing back to above 45 (reordering)
+UR297,8,44s1,44,z/s,5s(4.0/s) 3L(10.0/s)d,34.5K,,AB,53,,high,
+UR297,8,44s2,44,z/s,5L(10.0/s)d,38.5K,,W,5,,high,spin ditto
+UR297,8,44s3,44,z/s,2s(3.5/s) 2L(7.5/s)d,26.5K,,W,22,,high,spin ditto
+UR297,8,46,,z/s/V,5L(13.0/s)d,35.0K,,W,5,1:4.0,high,
+UR297,8,46s1,46,z/s,8L(8.5/s)d,29.5K,,AB,8,,high,
+UR297,8,47,,z/s/V,4L(13.0/s)d,33.5K,,W,4,1:3.5,high,
+UR297,8,47s1,47,z/s,1s(3.0/s),33.5K,,AB,10,,medium,value written '10(0?)' i.e. possibly 100
+UR297,8,48,,z/s/V,1s(5.5/s) 5L(11.0/s)d,28.5K,,W,15,1:2.5,high,
+UR297,8,48s1,48,z/s,1s(3.0/s) 4L(10.5/s)d,26.0K,,AB,14,,high,
+UR297,8,49,,z/s/V,2s(5.5/s) 1E(13.5/s),36.0K,,W,21,1:4.0,high,last of group 39-49
+UR297,8,49s1,49,z/s,3s(1.0/s) 3L(9.0/s)d,30.0K,,AB,33,,high,
+UR297,8,50,,z/s/V,1s(15.5/s),36.5K,,AB:W,10,1:4.0,medium,first of group 50-60; single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,8,50s1,50,z/s,1s(12.5/s),35.0K,,YB:W,10,,medium,single knot at units-level position; value read as tens by knot type (units place empty)
+UR297,8,51,,z/s/V,2s(9.0/s),31.0K,,AB,20,1:4.0,high,
+UR297,8,51s1,51,z/s,-,36.0K,,W,,,high,
+UR297,9,52,,z/s/V,1s(10.0/s) 3L(16.0/s)d,33.0K,,YB,13,1:4.0,high,
+UR297,9,52s1,52,z/s,2s(4.5/s),33.0K,,W:YY,20,1:0.0,high,
+UR297,9,52s1s1,52s1,z/s,-,33.0K,,MB,,,high,
+UR297,9,53,,z/s/V,-,32.0K,,YB,,1:4.0,high,
+UR297,9,53s1,53,z/s,-,33.5K,,W,,,high,
+UR297,9,54,,z/s/V,1s(10.0/s),34.5K,,YB,10,1:5.0,high,
+UR297,9,54s1,54,z/s,-,31.5K,,W:YY,,,high,
+UR297,9,55,,z/s/V,8s(13.0/s) 5L(18.0/s)d,48.5K,,BS,85,3:2.0-2.5,medium,cord number circled (pulled-up top-like cord); color 'BS' uncertain; subsidiary position partly cut at page edge
+UR297,9,55s1,55,z/s,3s(9.5/s),34.5K,,RB,30,,high,
+UR297,9,55s2,55,z/s,1s(9.0/s),44.0K,,DB,10,3:0.0-1.0,high,
+UR297,9,55s2s1,55s2,z/s,3L(14.0/s)d,23.0K,,W,3,,high,
+UR297,9,55s2s2,55s2,-,-,0.0b,,FB,,,medium,spin column '-'; color FB (possibly EB)
+UR297,9,55s2s3,55s2,z/s,2s(8.0/s),46.0K,,RB:AB,20,,high,
+UR297,9,55s3,55,z/s,-,36.0K,,W,,,high,
+UR297,9,56,,z/s/V,3s(9.5/s),27.5K,,YB,30,1:4.5,high,
+UR297,9,56s1,56,z/s,3L(9.5/s)d,33.0K,,YY:W,3,,high,
+UR297,9,57,,z/s/V,1s(9.5/s) 2L(14.0/s)d,32.0K,,YB,12,1:4.5,high,
+UR297,9,57s1,57,z/s,3s(5.0/s) 2L(10.0/s)d,30.0K,,YY:W,32,,high,
+UR297,10,58,,z/s/V,-,33.5K,,YB,,1:4.0,high,
+UR297,10,58s1,58,z/s,5L(10.0/s)d,32.0K,,YB:W,5,,high,
+UR297,10,59,,z/s/V,-,29.0K,,YB,,1:4.5,high,
+UR297,10,59s1,59,z/s,-,31.0K,,YB:W,,,high,
+UR297,10,60,,z/s/V,2L(15.0/s)d,42.5K,,YB,2,1:5.0,high,last of group 50-60
+UR297,10,60s1,60,z/s,2L(9.5/s)d,35.0K,,YB:W,2,,high,
+UR297,10,61,,z/s/V,2L(16.5/s)d,44.0K,,W,2,1:3.0,high,first of group 61-71
+UR297,10,61s1,61,z/s,7L(12.0/s)d,28.5K,,YB:W,7,,high,
+UR297,10,62,,z/s/V,6L(16.0/s)d,38.0K,,W,6,1:3.0,high,
+UR297,10,62s1,62,z/s,-,34.5K,,YB,,,high,
+UR297,10,63,,z/s/V,3L(17.0/s)d,39.0K,,W,3,1:4.0,high,
+UR297,10,63s1,63,z/s,3L(11.5/s)d,28.5K,,YY,3,,high,
+UR297,10,64,,z/s/V,6L(16.5/s)d,37.0K,,W,6,1:3.0,high,
+UR297,10,64s1,64,z/s,4L(13.0/s)d,29.5K,,YY,4,,high,
+UR297,10,65,,z/s/V,1s(9.0/s) 2L(17.0/s)d,39.5K,,W,12,1:4.0,high,
+UR297,10,65s1,65,z/s,2s(4.0/s) 7L(9.5/s)d,27.5K,,YY,27,,high,
+UR297,10,66,,z/s/V,7s(7.5/s) 4L(14.0/s)d,22.0K,,YY,74,3:2.5; 6.0-7.0 [overwritten; insert above reads '0-5.0' or '1.0-5.0'],medium,"cord number circled (pulled-up top-like cord); subsidiary positions overwritten/corrected, reading uncertain"

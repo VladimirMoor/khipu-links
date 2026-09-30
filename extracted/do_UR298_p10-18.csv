@@ -1,0 +1,146 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR298,10,71,,z/s/r,6s(8.5/z) 1s(14.0/z) 7L(19.5/z)d,31.0K,,YB,617,,high,superscript d after last knot
+UR298,10,72,,z/s/r,1s(8.0/z) 5L(18.5/z)d,40.0K,,YB,105,,high,spin/ply/attach ditto; superscript d after last knot
+UR298,10,73,,z/s/r,6s(8.0/z) 8L(18.5/z)d,32.5K,,YB,608,,high,spin/ply/attach ditto; superscript d after last knot
+UR298,10,74,,z/s/r,-,68.5r,,MB,,,high,spin/ply/attach ditto; no knots; value -; length end r
+UR298,10,75,,z/s/r,-,63.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,10,76,,z/s/r,-,65.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,10,77,,z/s/r,-,62.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,10,78,,z/s/r,-,62.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,10,79,,z/s/r,-,62.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,10,80,,z/s/r,6s(9.0/z) 9L(20.5/z)d,37.0K,,MB,609,1:1.5,high,spin/ply/attach ditto; superscript d after last knot
+UR298,10,80s1,80,z/s,1s(3.0/z),39.0K,,MB:AB,100,,medium,label written like '80s)'; single knot at 3.0 cm read as hundreds place
+UR298,10,81,,z/s/r,2s(9.0/z) 1s(15.0/z) 3L(21.0/z)d,46.0K,,MB,213,1:1.0,high,subsidiary field first digit could read 7 (7:1.0); superscript d after last knot
+UR298,10,81s1,81,z/s,1s(7.0/z),39.0K,,MB:AB,10,,high,label written like '81s)'
+UR298,10,82,,z/s/r,2s(9.0/z) 4s(14.5/z),50.0K,,MB,240,1:1.0,medium,a further knot entry after 4s(14.5/z) is crossed out (illegible ~'2.5')
+UR298,10,82s1,82,z/s,1s(7.0/z),39.0K,,MB:AB,10,,high,label written like '82s)'
+UR298,10,83,,z/s/r,2s(8.5/z) 4s(14.5/z),43.0K,,MB,240,1:1.0,high,
+UR298,10,83s1,83,z/s,4s(12.5/z),38.5K,,MB:AB,10,,medium,CHECK: knots give 40; label written like '83s)'
+UR298,11,84,,z/s/r,1s(8.5/z) 8s(14.5/z) 6L(20.5/z)d,37.0K,,MB,186,1:1.0,high,superscript d after last knot
+UR298,11,84s1,84,z/s,-,43.0K,,MB:AB,,,high,label written like '84s)'; no knots; value -
+UR298,11,85,,z/s/r,1s(8.5/z) 6s(14.5/z) 2L(20.5/z)d,48.0K,,MB,162,1:1.5,high,superscript d after last knot
+UR298,11,85s1,85,z/s,5s(12.0/z),35.5K,,MB:AB,50,,high,label written like '85s)'
+UR298,11,86,,z/s/r,5s(14.0/z) 8L(19.5/z)d,24.0K,,RD,58,,high,superscript d after last knot
+UR298,11,87,,z/s/r,2s(13.0/z) 5L(18.5/z)d,30.0K,,DB,25,,high,spin/ply/attach ditto
+UR298,11,88,,z/s/r,8s(8.0/z) 3s(13.5/z),27.5K,,YY,830,,high,spin/ply/attach ditto
+UR298,11,89,,z/s/r,2s(8.0/z) 8L(20.0/z)d,32.0K,,YY,208,,high,spin/ply/attach ditto
+UR298,11,90,,z/s/r,1s(8.0/z) 4L(19.0/z)d,34.5K,,YY,104,,high,spin/ply/attach ditto
+UR298,11,91,,z/s/r,2s(8.0/z) 1s(13.5/z),40.0K,,YY,210,,high,spin/ply/attach ditto
+UR298,11,92,,z/s/r,3s(14.0/z),41.5K,,YY,30,,high,spin/ply/attach ditto
+UR298,11,93,,z/s/r,1s(8.5/z) 3s(14.0/z) 7L(20.0/z)d,35.0K,,YY,137,,high,spin/ply/attach ditto
+UR298,11,94,,z/s/r,2s(14.0/z),50.5K,,MB,20,,high,spin/ply/attach ditto
+UR298,11,95,,z/s/r,5L(20.0/z)d,43.5K,,YY,5,,high,spin/ply/attach ditto
+UR298,11,96,,z/s/r,5L(20.0/z)d,48.0K,,MB,5,,high,spin/ply/attach ditto
+UR298,11,97,,z/s/r,1s(13.0/z),38.5b,,YY,10,,high,spin/ply/attach ditto; length end b
+UR298,11,98,,z/s/r,1s(13.0/z),51.0K,,MB,10,,high,spin/ply/attach ditto
+UR298,11,99,,z/s/r,2L(20.0/z)d,34.5b,,YY,2,,high,spin/ply/attach ditto; length end b
+UR298,12,100,,z/s/r,7s(8.0/z) 5s(14.0/z) 3L(20.0/z)d,39.5K,,KB:AB,753,1:1.5,high,superscript d after last knot
+UR298,12,100s1,100,z/s,1s(6.5/z),39.5K,,FB,10,,high,label written like '100s)'
+UR298,12,101,,z/s/r,1s(5.5/z) 1s(8.5/z) 1E(19.5/z),44.0K,,FB:AB,111,,medium,first knot position 5.5 slightly unclear
+UR298,12,102,,z/s/r,1s(8.0/z) 2s(13.5/z) 6L(20.0/z)d,50.5K,,KB:AB,126,1:1.5,high,spin/ply/attach ditto
+UR298,12,102s1,102,z/s,1s(7.0/z),42.5K,,FB,10,,high,label written like '102s)'
+UR298,12,103,,z/s/r,-,46.5K,,FB:AB,,,high,no knots; value -
+UR298,12,104,,z/s/r,1s(8.5/z) 3s(14.0/z) 4L(20.5/z)d,56.5K,,KB:AB,134,1:1.5,high,spin/ply/attach ditto
+UR298,12,104s1,104,z/s,1s(7.0/z),39.5K,,FB,10,,high,label written like '104s)'
+UR298,12,105,,z/s/r,-,49.0K,,FB:AB,,,high,no knots; value -
+UR298,12,106,,z/s/r,7s(8.0/z) 2s(13.5/z) 8L(19.0/z)d,41.0K,,KB:AB,728,1:1.0,high,spin/ply/attach ditto
+UR298,12,106s1,106,z/s,1s(7.5/z),37.5K,,FB,10,,high,label written like '106s)'
+UR298,12,107,,z/s/r,-,49.0K,,FB:AB,,,high,no knots; value -
+UR298,12,108,,z/s/r,1s(8.5/z) 7s(14.0/z) 9L(20.0/z)d,38.5K,,KB:AB,179,1:1.0,high,spin/ply/attach ditto
+UR298,12,108s1,108,z/s,-,46.0K,,FB,,,high,label written like '108s)'; no knots; value -
+UR298,12,109,,z/s/r,-,50.0K,,FB:AB,,,high,no knots; value -
+UR298,12,110,,z/s/r,7s(14.0/z) 9L(20.0/z)d,38.0K,,KB:AB,79,1:1.5,high,spin/ply/attach ditto; subsidiary field first digit could read 7
+UR298,12,110s1,110,z/s,1s(7.0/z),45.5K,,FB,10,,high,label written like '110s)'
+UR298,12,111,,z/s/r,-,47.0K,,FB:AB,,,high,no knots; value -
+UR298,13,112,,z/s/r,3s(5.0/z) 3s(8.0/z),42.5K,,FB:W,3300,,medium,page skewed: length/color/value written about one ruled line above the knots; aligned by sequence and value-knot agreement
+UR298,13,113,,z/s/r,1s(5.0/z) 3s(8.5/z),46.0K,,FB:AB,1300,,medium,spin/ply/attach ditto; right-hand columns aligned by sequence (skewed page)
+UR298,13,114,,z/s/r,4s(8.5/z) 8s(14.0/z),32.5K,,FB:AB,480,,medium,spin/ply/attach ditto; right-hand columns aligned by sequence (skewed page)
+UR298,13,115,,z/s/r,1s(4.5/z) 9s(8.5/z) 5s(14.0/z),27.0K,,FB:W,1950,,medium,"value written '1,950'; first knot position 4.5 unclear; right-hand columns aligned by sequence"
+UR298,13,116,,z/s/r,3s(9.0/z),47.5K,,FB:AB,300,,medium,spin/ply/attach ditto; right-hand columns aligned by sequence (skewed page)
+UR298,13,117,,z/s/r,8s(9.0/z) 5L(20.5/z)d,35.0K,,FB:AB,805,,medium,superscript d after last knot; right-hand columns aligned by sequence
+UR298,13,118,,z/s/r,4s(8.0/z) 4s(14.0/z),34.5b,,HB,440,,medium,length end b; right-hand columns aligned by sequence (skewed page)
+UR298,13,119,,z/s/r,2s(14.0/z),38.0K,,HB,20,,medium,right-hand columns aligned by sequence (skewed page)
+UR298,13,120,,z/s/r,-,41.0K,,HB,,,medium,no knots; value -; right-hand columns aligned by sequence
+UR298,13,121,,z/s/r,-,44.0r,,HB,,,medium,no knots; value -; length end r; right-hand columns aligned by sequence
+UR298,13,122,,z/s/r,-,41.0K,,HB,,,medium,no knots; value -; right-hand columns aligned by sequence
+UR298,13,123,,z/s/r,1s(14.0/z) 8L(20.5/z)d,26.5K,,HB,18,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,13,124,,z/s/r,1s(8.0/z) 4L(18.5/z)d,31.5K,,KB,104,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,13,125,,z/s/r,1s(8.5/z) 2L(19.0/z)d,46.0K,,KB,102,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,13,126,,z/s/r,1s(8.5/z) 3L(19.0/z)d,45.0K,,KB,103,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,13,127,,z/s/r,1s(9.0/z) 3L(19.0/z)d,28.0K,,KB,103,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,13,128,,z/s/r,1s(9.0/z),39.0K,,KB,100,,medium,right-hand columns aligned by sequence (skewed page)
+UR298,13,129,,z/s/r,1s(9.5/z) 2L(19.0/z)d,34.5K,,KB,102,,medium,superscript d; right-hand columns aligned by sequence (skewed page)
+UR298,14,130,,z/s/r,-,52.0K,,YY,,,high,no knots; value -; cords 130-134 bracketed with asterisk: '* Many untied knots'
+UR298,14,131,,z/s/r,-,58.0K,,YY,,,high,no knots; value -; in bracket 130-134 ('* Many untied knots')
+UR298,14,132,,z/s/r,-,49.0K,,YY,,,high,no knots; value -; in bracket 130-134 ('* Many untied knots')
+UR298,14,133,,z/s/r,-,48.0K,,YY,,,high,no knots; value -; in bracket 130-134 ('* Many untied knots')
+UR298,14,134,,z/s/r,2L(13.0/z)d 1s(26.5/z),44.0r,,YY,2+10,,medium,value written '2+10' (not an integer); long knot above single knot; CHECK: anomalous knot order - standard top-down reading does not apply; written 2+10 = 12 if read as separate values; in bracket 130-134 ('* Many untied knots')
+UR298,14,136,,z/s/r,-,46.0r,,YY,,,high,written on the line before 135 with an arrow indicating the order 135/136 is swapped; no knots; value -
+UR298,14,135,,z/s/r,-,6.0b,,MB,,,medium,written after 136 (arrow marks swap); length 6.0 end b (short/broken); no knots; value -
+UR298,14,137,,z/s/V,2L(19.5/z)d 1s(27.5/z),62.0K,,YY,2+10,,medium,attachment V (verso); value written '2+10' (not an integer); CHECK: anomalous knot order (long knot above single) - written 2+10 = 12 if read as separate values
+UR298,14,138,,z/s/r,-,39.0K,,MB,,,high,no knots; value -
+UR298,14,139,,z/s/V,-,64.0K,,YY,,,high,attachment V (verso); no knots; value -
+UR298,14,140,,z/s/r,2L(26.0),50.0r,,YY,2,,high,knot direction not recorded
+UR298,14,141,,z/s/r,-,45.0K,,MB,,,high,no knots; value -
+UR298,14,142,,z/s/r,-,73.5r,,MB,,,high,no knots; value -
+UR298,14,143,,z/s/r,-,76.0r,,MB,,,high,no knots; value -
+UR298,14,144,,z/s/r,-,72.0r,,MB,,,high,no knots; value -
+UR298,14,145,,z/s/r,-,79.0r,,MB,,,high,no knots; value -
+UR298,14,146,,z/s/r,-,83.0r,,MB,,,high,no knots; value -
+UR298,15,147,,z/s/r,-,67.0K,,MB,,,high,no knots; value -
+UR298,15,148,,z/s/r,-,64.0b,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,149,,z/s/r,-,74.5K,,MB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,150,,z/s/r,-,50.0K,,RB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,151,,z/s/r,-,49.0K,,RB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,152,,z/s/r,-,41.0b,,RB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,153,,z/s/r,-,30.5b,,RB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,154,,z/s/r,-,61.5K,,YB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,155,,z/s/r,-,44.5r,,YB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,156,,z/s/r,-,22.5K,,YY,,,medium,spin/ply/attach ditto; no knots; value -; color overwritten; could be YB
+UR298,15,157,,z/s/r,-,41.0r,,YB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,158,,z/s/r,-,46.0K,,AB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,159,,z/s/r,-,46.5b,,AB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,160,,z/s/r,-,60.0K,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,161,,z/s/r,-,15.0b,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,162,,z/s/r,-,49.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,15,163,,z/s/r,-,45.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,164,,z/s/r,-,48.0K,,W,,,high,no knots; value -
+UR298,16,165,,z/s/r,-,47.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,166,,z/s/r,-,46.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,167,,z/s/r,-,43.0K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,168,,z/s/r,-,44.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,169,,z/s/r,-,49.5K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,170,,z/s/r,-,52.0K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,171,,z/s/r,-,34.0K,,FB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,172,,z/s/r,-,52.0K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,173,,z/s/r,-,43.5r,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,174,,z/s/r,-,25.5b,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,175,,z/s/r,-,39.5r,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,176,,z/s/r,-,34.5b,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,177,,z/s/r,-,37.5b,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,178,,z/s/r,-,43.5r,,YB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,16,179,,z/s/r,4s(21.0/z),39.5K,,MB,40,,medium,spin/ply/attach ditto; CHECK: knots give 4 if judged by position (21.0 cm is the units zone on neighbouring cords; single knots there are unusual) - written 40
+UR298,16,180,,z/s/r,-,29.0b,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,17,181,,z/s/r,-,11.5b,,MB,,,high,no knots; value -
+UR298,17,182,,z/s/r,-,18.5b,,YY,,,high,spin/ply/attach ditto; no knots; value -
+UR298,17,183,,z/s/r,1s(4.5/z) 3s(9.5/z) <--> 8s(20.5/z),26.0b,,MB,1380,,medium,"value written '1,380' (last digits overwritten; could be 1,308); double arrow drawn between 3s(9.5) and 8s(20.5) marking an empty space; CHECK: knots give 1308 (8s at 20.5 is the units zone)"
+UR298,17,184,,z/s/r,1s(4.0/z) 1s(9.0/z) 9s(15.0/z),44.0K,,MB:YB,1190,,high,"value written '1,190'"
+UR298,17,185,,z/s/r,1s(4.0/z) 7s(9.0/) 5s(15.0/z) 8L(21.0/z)d,29.0K,,VB,1758,,medium,"value written '1,758'; direction of 7s cluster given by arrow to annotation 'ssssssz' on the line below (individual knot directions)"
+UR298,17,186,,z/s/r,7s(9.5/s) 9s(15.0/z) 1E(22.5/z),35.5K,,KB:W,791,,high,direction of first cluster written s (overwritten)
+UR298,17,187,,z/s/r,7s(10.0/z) 6s(14.5/z),17.0K,,MB,760,,high,
+UR298,17,188,,z/s/r,1s(1.0/z) 8s(5.0/z) 6s(17.0/z) 7L(24.5/z)d,51.0K,,YY,18067,,high,"value written '18,067'"
+UR298,17,189,,z/s/r,2s(4.0/z) 7s(9.5/z) 5s(16.0/z) 5L(19.0/z)d,23.5K,,B,2755,,high,"value written '2,755'"
+UR298,17,190,,z/s/r,5s(16.5/z) 7L(24.5/z)d,55.5K,,MB,57,,high,
+UR298,17,191,,z/s/r,2s(4.0/z) 8s(15.0/z) 4L(23.5/z)d,47.5K,,MB:YB,2084,,high,"value written '2,084'"
+UR298,17,192,,z/s/r,1s(4.0/z) 8s(14.5/z) 3L(21.0/z)d,25.5K,,LB,1083,,high,"value written '1,083'"
+UR298,17,193,,z/s/r,1s(4.5/z) 1s(9.5/z) 3s(15.5/z) 6L(22.5/z)d,46.0K,,LB:W,1136,,high,"value written '1,136'"
+UR298,17,194,,z/s/r,1s(4.0/z) 6s(9.0/z) 9s(14.5/s) 5L(21.5/s)d,42.0r,,VB,1695,,high,"value written '1,695'; s directions underlined"
+UR298,17,195,,z/s/r,8s(10.0/z) 5s(15.5/z) 3L(22.0/s)d,36.5K,,KB:YY,853,,high,s direction underlined
+UR298,17,196,,z/s/r,1s(3.5/s) 4s(14.0/s),34.5r,,MB,1040,,high,"value written '1,040'; s directions underlined"
+UR298,18,197,,z/s/r,1s(1.0/s) 5s(4.0/s) 9s(9.0/s) 8s(14.5/s),22.0r,,YY,15980,,high,"value written '15,980'"
+UR298,18,198,,z/s/r,-,38.0K,,KB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,18,199,,z/s/r,5s(15.0/s) 6L(22.5/s)d,51.0K,,MB,56,,high,spin/ply/attach ditto
+UR298,18,200,,z/s/r,-,39.5r,,RB,,,high,spin/ply/attach ditto; no knots; value -
+UR298,18,201,,z/s/r,1s(4.0/s) 4s(10.0/s) 8s(15.5/s) 6L(21.0/s)d,42.5K,,YY:B,1486,,high,"value written '1,486'"
+UR298,18,202,,z/s/r,-,47.0K,,W,,,high,spin/ply/attach ditto; no knots; value -
+UR298,18,203,,z/s/?,-,43.0K,,HB,,,high,attachment '?' with note 'Broken off main cord'; no knots; value -; last cord recorded (rest of page blank)

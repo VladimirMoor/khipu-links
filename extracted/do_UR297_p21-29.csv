@@ -1,0 +1,157 @@
+khipu,page,cord,parent,spin_ply_attach,knots_raw,length_cm,thickness_mm,color,value,subsidiaries_raw,confidence,notes
+UR297,21,156,,Z/S/V,1s(5.5/S),31.5K,,W,10,1:4.5,high,
+UR297,21,156s1,156,Z/S,-,26.5K,,GG,,,high,"value written as ""-"""
+UR297,21,157,,Z/S/V,-,32.0K,,W,,,high,"value written as ""-"""
+UR297,21,158,,Z/S/V,3L(9.0/S)d,26.5K,,W,3,,high,
+UR297,21,159,,Z/S/V,6s(5.0/S) 5L(9.5/S)d,31.5K,,YB,65,1:2.0,high,cord number circled on sheet
+UR297,21,159s1,159,Z/S,1s(4.5/S),30.5K,,YY,10,,high,
+UR297,21,160,,Z/S/V,1s(5.5/S) 2L(10.5/S)d,27.0K,,W,12,,high,
+UR297,21,161,,Z/S/V,-,36.0K,,YY:W,,,high,"value written as ""-"""
+UR297,21,162,,Z/S/V,5L(9.5/S)d,27.5K,,YY:W,5,,high,
+UR297,21,163,,Z/S/V,6L(8.5/S)d,26.0K,,W,6,,high,
+UR297,21,164,,Z/S/V,2s(5.5/S) 6L(8.0/S)d,24.5K,,W,26,1:3.5,high,
+UR297,21,164s1,164,Z/S,1s(3.0/S),29.5K,,YY,10,,high,dash mark in left margin at this row (end of group 154-164)
+UR297,21,165,,Z/S/V,4L(7.5/S)d,26.0K,,W,4,,high,
+UR297,21,166,,Z/S/V,4L(7.5/S)d,24.5K,,W,4,,high,
+UR297,21,167,,Z/S/V,4L(8.5/S)d,28.0K,,W,4,,high,
+UR297,21,168,,Z/S/V,3L(8.0/S)d,27.5K,,W,3,,high,
+UR297,21,169,,Z/S/V,1s(3.5/S) 3L(8.5/S)d,27.0K,,W,13,,high,
+UR297,22,170,,Z/S/V,6s(6.5/S),28.5K,,YB,60,2:2.0,high,cord number circled on sheet
+UR297,22,170s1,170,Z/S,1s(7.0/S),30.5K,,GG,10,,high,
+UR297,22,170s2,170,Z/S,7s(5.5/S),34.0K,,W,70,,high,
+UR297,22,171,,Z/S/V,5L(8.5/S)d,28.5K,,W,5,,high,
+UR297,22,172,,Z/S/V,1s(3.0/S) 2L(10.0/S)d,27.5K,,W,12,2:1.5,high,
+UR297,22,172s1,172,Z/S,-,0.0h,,PG,,,medium,"length written 0.0h; value written as ""-"""
+UR297,22,172s2,172,Z/S,-,0.0h,,W,,,medium,"length written 0.0h; value written as ""-"""
+UR297,22,173,,Z/S/V,1s(2.5/S) 2L(8.5/S)d,30.5K,,W,12,,high,
+UR297,22,174,,Z/S/V,5L(8.5/S)d,22.0K,,W,5,,high,
+UR297,22,175,,Z/S/V,2s(3.5/S) 3L(9.5/S)d,23.5K,,W,23,,high,dash mark in left margin at this row (end of group 165-175)
+UR297,22,176,,Z/S/V,-,30.5K,,W,,,high,"value written as ""-"""
+UR297,22,177,,Z/S/V,-,37.0K,,W,,,high,"value written as ""-"""
+UR297,22,178,,Z/S/V,-,34.0K,,W,,,high,"value written as ""-"""
+UR297,22,179,,Z/S/V,-,39.5K,,W,,,high,"value written as ""-"""
+UR297,22,180,,Z/S/V,5L(15.0/S)d,33.5K,,W,5,,high,
+UR297,22,181,,Z/S/V,6s(10.5/S) 4L(16.5/S)d,38.0K,,AB,64,2:2.5 3.0,high,cord number circled on sheet; subsidiary positions 2.5 and 3.0 written stacked
+UR297,22,181s1,181,Z/S,1s(8.5/S) 1E(15.0/S),33.5K,,YB,11,,high,
+UR297,22,181s2,181,Z/S,-,41.0K,,GG:AB,,,high,"value written as ""-"""
+UR297,23,182,,Z/S/V,1s(7.5/S),36.0K,,W,10,,high,
+UR297,23,183,,Z/S/V,1s(8.0/S),31.5K,,W,10,,high,
+UR297,23,184,,Z/S/V,-,39.5K,,YY,,,high,"value written as ""-""; small dash mark just before cord number"
+UR297,23,185,,Z/S/V,4s(8.5/S),36.0K,,W,40,,high,
+UR297,23,186,,Z/S/V,1s(8.0/S),37.0K,,W,10,1:2.5,high,
+UR297,23,186s1,186,Z/S,-,32.5K,,AB:G,,,high,"value written as ""-""; dash mark in left margin at this row (end of group 176-186)"
+UR297,23,187,,Z/S/V,3L(12.5/S)d,23.5r,,KB,3,,high,length written 23.5r
+UR297,23,188,,Z/S/V,-,5.5h,,KB,,1:3.5,medium,"length written 5.5h; value written as ""-"""
+UR297,23,188s1,188,?,-,0.0h,,AB:KB,,,medium,"spin/ply written ""?""; length 0.0h; value written as ""-"""
+UR297,23,189,,Z/S/V,2s(6.5/S) 4L(12.0/S)d,28.5K,,KB,24,1:4.0,high,
+UR297,23,189s1,189,Z/S,5L(7.5/S)d,35.5K,,AB,5,,high,
+UR297,23,190,,Z/S/V,-,32.0K,,KB,,1:3.5,high,"value written as ""-"""
+UR297,23,190s1,190,Z/S,3L(9.0/S)d,26.5K,,YB,3,,high,
+UR297,23,191,,Z/S/V,9s(7.0/S) 3L(16.5/S)d,41.5K,,AB,93,2:3.5 5.0,high,cord number circled on sheet; subsidiary positions 3.5 and 5.0 written stacked
+UR297,23,191s1,191,Z/S,1s(5.0/S),36.0K,,YB,10,,high,
+UR297,23,191s2,191,Z/S,1s(3.0/S),18.0K,,KB:AB,10,1:0.0,high,
+UR297,23,191s2s1,191s2,Z/S,1s(3.0/S),24.0K,,YB,10,,high,
+UR297,24,192,,Z/S/V,3L(13.5/S)d,30.5K,,KB,3,,high,
+UR297,24,193,,Z/S/V,2s(5.5/S) 4L(8.5/S)d,26.0r,,KB,24,,high,length written 26.0r
+UR297,24,194,,Z/S/V,-,34.0K,,KB,,,high,"value written as ""-"""
+UR297,24,195,,Z/S/V,4L(12.0/S)d,34.5K,,KB,4,,high,
+UR297,24,196,,Z/S/V,1s(7.0/S) 4L(11.5/S)d,29.0K,,KB,14,,high,
+UR297,24,197,,Z/S/V,4L(12.5/S)d,30.5r,,KB,4,,high,length written 30.5r; dash mark in left margin at this row (end of group 187-197)
+UR297,24,198,,Z/S/V,-,38.5K,,YB,,,high,"value written as ""-"""
+UR297,24,199,,Z/S/V,1s(6.0/S),35.5K,,YB,10,,high,
+UR297,24,200,,Z/S/V,1s(6.5/S),59.0K,,YB,10,,high,
+UR297,24,201,,Z/S/V,4L(11.0/S)d,33.0K,,YB,4,,high,
+UR297,24,202,,Z/S/V,8s(7.5/S),23.5r,,AB,80,2:3.0 4.0,high,cord number circled on sheet; length written 23.5r; subsidiary positions 3.0 and 4.0 written stacked
+UR297,24,202s1,202,Z/S,1s(6.5/S) 3L(14.0/S)d,30.0r,,YY,13,,high,length written 30.0r
+UR297,24,202s2,202,Z/S,2s(4.0/S),28.5K,,GG,20,,high,
+UR297,24,203,,Z/S/V,2s(7.0/S) 1E(10.5/S),41.5K,,YB,21,,high,
+UR297,24,204,,Z/S/V,1s(7.5/S) 2L(11.0/S)d,41.5K,,YB,12,,high,
+UR297,24,205,,Z/S/V,1s(6.0/S) 4L(10.0/S)d,42.0K,,YB,14,,high,
+UR297,24,206,,Z/S/V,-,33.0K,,YB,,,high,"value written as ""-"""
+UR297,25,207,,Z/S/V,1s(6.0/S) 2L(11.0/S)d,43.0K,,YB,12,,high,
+UR297,25,208,,Z/S/V,1s(5.0/S),45.0K,,YB,10,1:2.0,high,
+UR297,25,208s1,208,Z/S,2s(3.0/S),40.5K,,GG,20,,high,dash mark in left margin at this row (end of group 198-208)
+UR297,25,209,,Z/S/V,2L(10.5/S)d,48.0K,,AB,2,,high,
+UR297,25,210,,Z/S/V,1s(4.5/S) 1s(8.0/S) 1E(17.5/Z),38.5K,,AB,111,2:3.0 3.5,medium,cord number circled on sheet; E knot direction Z; subsidiary positions written small and stacked (read 3.0 over 3.5)
+UR297,25,210s1,210,Z/S,2L(15.0/S)d,34.0K,,YB,2,,high,
+UR297,25,210s2,210,Z/S,2s(4.0/S) 2L(7.5/S)d,28.0K,,PG,22,,high,
+UR297,25,211,,Z/S/V,6L(10.0/S)d,29.0r,,AB,6,,high,length written 29.0r
+UR297,25,212,,Z/S/V,1s(7.5/S),45.0K,,AB,10,,high,
+UR297,25,213,,Z/S/V,4L(11.0/S)d,40.0K,,AB,4,,high,
+UR297,25,214,,Z/S/V,3s(5.5/S) 8L(8.5/S)d,31.5K,,AB,38,1:4.0,high,
+UR297,25,214s1,214,Z/S,2s(2.5/S) 2L(7.5/S)d,48.0K,,RG,22,,high,
+UR297,25,215,,Z/S/V,2s(7.0/S) 7L(9.0/S)d,34.5K,,YB,27,,high,
+UR297,25,216,,Z/S/V,2L(12.0/S)d,38.0K,,YB,2,,high,
+UR297,25,217,,Z/S/V,2L(12.0/S)d,43.5K,,YB,2,,high,
+UR297,25,218,,Z/S/V,1s(5.5/S) 2L(10.5/S)d,35.5K,,AB,12,,high,
+UR297,25,219,,Z/S/V,-,42.0K,,AB,,,high,"value written as ""-""; dash mark in left margin below this row (end of group 209-219)"
+UR297,26,220,,Z/S/V,-,39.5K,,YY,,,high,"value written as ""-"""
+UR297,26,221,,Z/S/V,-,38.5K,,YY,,,high,"value written as ""-"""
+UR297,26,222,,Z/S/V,3L(18.0/S)d,37.0K,,YY,3,,high,
+UR297,26,223,,Z/S/V,-,41.0K,,YY,,,high,"value written as ""-"""
+UR297,26,224,,Z/S/V,-,40.5K,,YY,,,high,"value written as ""-"""
+UR297,26,225,,Z/S/V,2s(7.5/S),41.0K,,YY,20,,high,
+UR297,26,226,,Z/S/V,7s(8.0/S) 2L(14.0/S)d,31.0K,,AB,72,2:2.5 4.0,high,cord number circled on sheet; subsidiary positions 2.5 and 4.0 written stacked
+UR297,26,226s1,226,Z/S,4s(6.0/S) 1E(13.0/S),28.0K,,YB,41,,high,
+UR297,26,226s2,226,Z/S,2s(4.0/S) 2L(8.5/S)d,33.0K,,PG,22,,high,
+UR297,26,227,,Z/S/V,3s(7.0/S),33.5K,,YY,30,,high,
+UR297,26,228,,Z/S/V,1s(8.0/S),45.5K,,YY,10,,high,
+UR297,26,229,,Z/S/V,1s(7.5/S),37.5K,,YY,10,,high,
+UR297,26,230,,Z/S/V,4s(7.5/S),33.0K,,YB,40,1:2.0,medium,color letters faint (read YB)
+UR297,26,230s1,230,Z/S,2s(5.5/S) 2L(14.0/S)d,27.5K,,YB,22,,medium,color letters faint (read YB); dash mark in left margin at this row (end of group 220-230)
+UR297,26,231,,Z/S/V,1s(6.5/S),49.5K,,YB,10,,high,
+UR297,26,232,,Z/S/V,-,43.0K,,YB,,,high,"value written as ""-"""
+UR297,26,233,,Z/S/V,1s(6.5/1D),32.5r,,YB,10,,medium,"knot direction written unclearly (reads ""1D""); length written 32.5r"
+UR297,27,234,,Z/S/V,-,4.5b,,KB,,1:3.5,high,"cord number circled on sheet; length written 4.5b; value written as ""-"""
+UR297,27,234s1,234,Z/S,4s(6.5/S) 6L(11.5/S)d,36.0K,,PG,46,,high,
+UR297,27,235,,Z/S/V,1s(7.0/S),43.5K,,YB,10,1:2.0,high,
+UR297,27,235s1,235,Z/S,-,44.5K,,YB,,,high,"value written as ""-"""
+UR297,27,236,,Z/S/V,1s(6.5/S),29.0r,,YB,10,1:2.5,high,length written 29.0r
+UR297,27,236s1,236,Z/S,2s(3.0/S) 6L(8.0/S)d,14.0K,,YB,26,,high,
+UR297,27,237,,Z/S/V,1s(6.5/S) 1E(21.0/),41.0K,,YB,11,,medium,"E knot direction not legible/not written (sheet shows ""1E(21.0/"")"
+UR297,27,238,,Z/S/V,3s(8.0/S),43.0K,,YB,30,,high,
+UR297,27,239,,Z/S/V,3s(8.5/S) 4L(20.0/S)d,34.5K,,YB,34,,high,
+UR297,27,240,,Z/S/V,1s(8.0/S),43.0K,,YB,10,,high,
+UR297,27,241,,Z/S/V,8s(9.0/S),42.0K,,YB,80,,high,dash mark in left margin at this row (end of group 231-241)
+UR297,27,242,,Z/S/V,-,40.5K,,YB:W,,,high,"value written as ""-"""
+UR297,27,243,,Z/S/V,-,37.5r,,YB:W,,,high,"length written 37.5r; value written as ""-"""
+UR297,27,244,,Z/S/V,-,34.5K,,YB:W,,,high,"value written as ""-"""
+UR297,27,245,,Z/S/V,-,30.0K,,YB:W,,,high,"value written as ""-"""
+UR297,27,246,,Z/S/V,-,33.0K,,YB:W,,,high,"value written as ""-"""
+UR297,27,247,,,1s(5.5/S),50.5K,,YB:W,100,1:1.5,medium,"cord number circled on sheet; spin/ply/attach left blank (dots only); written value 100 implies the single knot at 5.5 is the hundreds place (tens knots elsewhere on this khipu sit at ~5.5-9.0 cm), place not verifiable from this row alone"
+UR297,27,247s1,247,Z/S,-,29.0r,,W,,,high,"length written 29.0r; value written as ""-"""
+UR297,28,248,,Z/S/V,-,36.5K,,YB:W,,,high,"value written as ""-"""
+UR297,28,249,,Z/S/V,1s(5.5/S),34.0K,,YB:W,10,,high,
+UR297,28,250,,Z/S/V,1s(5.0/S),34.5K,,YB:W,10,,high,
+UR297,28,251,,Z/S/V,4s(4.5/S),33.5K,,YB:W,40,,high,
+UR297,28,252,,Z/S/V,4s(5.0/S),31.0K,,YB:W,40,,high,dash mark in left margin at this row (end of group 242-252)
+UR297,28,253,,Z/S/V,-,28.0r,,KB,,,high,"length written 28.0r; value written as ""-"""
+UR297,28,254,,Z/S/V,1s(5.5/S),26.5r,,KB,10,,high,length written 26.5r
+UR297,28,255,,Z/S/V,3s(6.0/S),25.5r,,KB,30,,high,length written 25.5r
+UR297,28,256,,Z/S/V,-,26.0r,,KB,,,high,"length written 26.0r; value written as ""-"""
+UR297,28,257,,Z/S/V,3s(6.5/S),28.0r,,KB,30,,high,length written 28.0r
+UR297,28,258,,Z/S/V,7s(17.0/S),40.5K,,YB,70,2:2.0 3.0,medium,cord number circled on sheet; knot position 17.0 as written (unusually low for tens); length digit overwritten (read 40.5); subsidiary positions 2.0 and 3.0 written stacked
+UR297,28,258s1,258,Z/S,1s(15.0/S),27.0K,,W,10,,high,
+UR297,28,258s2,258,Z/S,2s(14.5/S),28.5K,,AB,20,,high,
+UR297,28,259,,Z/S/V,2s(5.0/S),37.5K,,KB,20,,medium,knot position digit overwritten (read 5.0)
+UR297,28,260,,Z/S/V,1s(5.0/S),38.5K,,KB,10,,high,
+UR297,28,261,,Z/S/V,-,28.0r,,KB,,,high,"length written 28.0r; value written as ""-"""
+UR297,28,262,,Z/S/V,-,26.5r,,KB,,,high,"length written 26.5r; value written as ""-"""
+UR297,28,263,,Z/S/V,-,33.0r,,KB,,,high,"length written 33.0r; value written as ""-""; dash mark in left margin below this row (end of group 253-263)"
+UR297,29,264,,Z/S/V,-,27.0r,,W,,,high,"length written 27.0r; value written as ""-"""
+UR297,29,265,,Z/S/V,-,29.0K,,W,,,high,"value written as ""-"""
+UR297,29,266,,Z/S/V,1s(7.5/S),27.0r,,W,10,,high,length written 27.0r
+UR297,29,267,,Z/S/V,1s(7.5/S),43.5r,,W,10,,high,length written 43.5r
+UR297,29,268,,Z/S/V,2s(7.5/S),28.0r,,W,20,,high,length written 28.0r
+UR297,29,269,,Z/S/V,2s(8.0/S),25.5K,,W,20,,high,
+UR297,29,270,,Z/S/V,-,0.0b,,KB,,,high,"cord number circled on sheet; length written 0.0b; value written as ""-"""
+UR297,29,271,,Z/S/V,2s(7.0/S),26.0K,,W,20,,high,
+UR297,29,272,,Z/S/V,3s(7.0/S),32.0r,,W,30,,high,length written 32.0r
+UR297,29,273,,Z/S/V,3s(7.0/S),44.0K,,W,30,,high,
+UR297,29,274,,Z/S/V,9s(7.5/S),29.5K,,W,90,,high,dash mark in left margin at this row (end of group 264-274)
+UR297,29,275,,Z/S/V,1s(7.5/S),42.0b,,KB,10,,high,length written 42.0b
+UR297,29,276,,Z/S/V,1s(8.0/S),26.0r,,KB,10,,high,length written 26.0r
+UR297,29,277,,Z/S/V,-,40.5K,,YB,,,high,"value written as ""-"""
+UR297,29,278,,Z/S/V,-,37.5K,,YB,,,high,"value written as ""-"""
+UR297,29,279,,Z/S/V,1s(6.5/S),32.5r,,KB,10,,high,length written 32.5r
+UR297,29,280,,Z/S/V,5s(8.0/S),20.0K,,AB,50,,high,

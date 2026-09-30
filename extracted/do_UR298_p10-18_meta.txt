@@ -1,0 +1,17 @@
+p10: Khipu Number: UR-298    (D.O.)    [page number circled: 10]
+p11: Khipu Number: UR-298    (D.O.)    [page number circled: 11]
+p12: Khipu Number: UR-298    (D.O.)    [page number circled: 12]
+p13: Khipu Number: UR-298    (D.O.)    [page number circled: 13]
+p13: [observation by transcriber: sheet photographed skewed; length/color/value entries sit about one ruled line above their knot entries]
+p14: Khipu Number: UR-298    (D.O.)    [page number circled: 14]
+p14: [bracket drawn along the left margin of cords 130-134, marked with an asterisk]
+p14: * Many untied knots
+p14: [curved arrow in left margin between 136 and 135: cord 136 entered on the line above 135 (order swapped)]
+p15: Khipu Number: UR-298    (D.O.)    [page number circled: 15]
+p16: Khipu Number: UR-298    (D.O.)    [page number circled: 16]
+p17: Khipu Number: UR-298    (D.O.)    [page number circled: 17]
+p17: [cord 183 knots: double-headed arrow drawn between 3s(9.5/z) and 8s(20.5/z)]
+p17: [cord 185: arrow from the 7s(9.0/) cluster to the annotation on the line below:] ssssssz
+p18: Khipu Number: UR-298    (D.O.)    [page number circled: 18]
+p18: 203 z/s/? Broken off main cord
+p18: [rest of sheet blank after cord 203]
