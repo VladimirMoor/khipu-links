@@ -127,6 +127,13 @@ ol.tl h3{margin:.1em 0 .2em}
 .v3dbar button{font-family:var(--f-display);font-size:.86rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
 .v3dbar button[aria-pressed="true"]{background:var(--soft);border-color:var(--ink)}
 .qual{font-family:var(--f-display);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.gs{position:relative;flex:1 1 220px;max-width:340px;margin-left:auto}
+.gs input{width:100%;font:inherit;font-size:.92rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.gs ul{position:absolute;z-index:20;left:0;right:0;top:calc(100% + 4px);list-style:none;margin:0;padding:4px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.18);max-height:60vh;overflow:auto}
+.gs li{padding:6px 8px;border-radius:6px;cursor:pointer;display:flex;gap:10px;align-items:baseline}
+.gs li[aria-selected="true"],.gs li:hover{background:var(--soft)}
+.gs li b{font-family:var(--f-mono);font-size:.88rem;white-space:nowrap}
+.gs li span{font-size:.82rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
 .loading{color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -140,6 +147,10 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a>
     <a href="#findings">Findings</a><a href="#timeline">Timeline</a><a href="#negatives">Negative results</a><a href="#sources">Sources</a><a href="#about">About</a>
   </nav>
+  <form class="gs" id="gs" role="search" autocomplete="off">
+    <input type="search" id="gq" placeholder="Find a khipu: AS002, UR212, KH0049, VA 42508" aria-label="Find a khipu by number" aria-autocomplete="list" aria-controls="gsug">
+    <ul id="gsug" role="listbox" hidden></ul>
+  </form>
 </div></header>
 
 <main class="wrap">
@@ -186,7 +197,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   <p class="eyebrow">OKR, KFG and our transcriptions</p>
   <h1>Catalogue</h1>
   <div class="controls">
-    <input type="search" id="q" placeholder="Search by name, museum number, museum or place" aria-label="Search khipus">
+    <input type="search" id="q" placeholder="Number (AS002, UR212, KH0049, VA 42508), museum or place" aria-label="Search khipus">
     <select id="f-site" aria-label="Find-place"><option value="">All places</option></select>
     <select id="f-coll" aria-label="Collector"><option value="">All collectors</option></select>
     <label><input type="checkbox" id="f-link"> Only linked khipus</label>
@@ -405,7 +416,8 @@ function fillFilters(){
 }
 function renderRows(){
   const q=$('#q').value.trim().toLowerCase(), st=$('#f-site').value, co=$('#f-coll').value, ln=$('#f-link').checked;
-  const rows=D.khipus.filter(k=>(!q||[k.id,k.alias,k.okr,k.museum,k.num,k.prov,siteLabel(k.site)].join(' ').toLowerCase().includes(q))
+  const hits=q?new Set(findKhipus(q,10000).map(k=>k.id)):null;
+  const rows=(q?findKhipus(q,10000):D.khipus).filter(k=>(!hits||hits.has(k.id))
     &&(!st||(st==='_none'?!k.site:k.site===st))&&(!co||k.collector===co)&&(!ln||k.findings.length));
   $('#count').textContent=`${rows.length} of ${D.khipus.length}`;
   $('#rows').innerHTML=rows.map(k=>`<tr data-id="${k.id}"><td>${k.findings.length?'<span class="dot" title="In a link or finding"></span>':''}<b>${esc(nameTxt(k))}</b></td><td>${esc(k.museum)}</td><td class="mono">${esc(k.num)}</td><td>${esc(siteLabel(k.site)||k.prov)}</td><td>${esc(k.collector)}</td><td class="num">${k.np}</td><td class="num">${k.groups.length}</td></tr>`).join('');
@@ -533,6 +545,34 @@ async function view3d(k){
   build();
 }
 window.addEventListener('hashchange',()=>{ if(!location.hash.startsWith('#khipu-')) disposeV() });
+
+
+/* ---------- Search by number ---------- */
+const alnum=x=>String(x||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+const canon=x=>{const a=alnum(x); const m=a.match(/^([A-Z]*)0*(\d+)([A-Z]*)$/); return m?m[1]+'|'+(+m[2])+'|'+m[3]:a};
+let SIDX=null;
+function searchIndex(){ if(SIDX) return SIDX; SIDX=D.khipus.map(k=>{const keys=[k.id,k.alias,k.okr,k.num].filter(Boolean); return {k,keys,canon:keys.map(canon),raw:keys.map(alnum),text:[k.museum,k.prov,siteLabel(k.site),k.collector].join(' ').toLowerCase()}}); return SIDX }
+function findKhipus(q,limit){
+  const c=canon(q), a=alnum(q), t=q.trim().toLowerCase(); if(!a&&!t) return [];
+  const scored=[];
+  searchIndex().forEach(e=>{ let s=0;
+    if(e.canon.includes(c)) s=100; else if(a&&e.raw.some(r=>r.startsWith(a))) s=60; else if(a.length>=2&&e.raw.some(r=>r.includes(a))) s=40; else if(t.length>=3&&e.text.includes(t)) s=10;
+    if(s) scored.push([s,e.k]) });
+  scored.sort((x,y)=>y[0]-x[0]||x[1].id.localeCompare(y[1].id)); return scored.slice(0,limit).map(x=>x[1]);
+}
+(function(){ const inp=$('#gq'), ul=$('#gsug'); let items=[], sel=0;
+  const show=()=>{ if(!D){ul.hidden=true;return} items=findKhipus(inp.value,8); sel=0;
+    ul.innerHTML=items.map((k,i)=>`<li role="option" aria-selected="${i===0}" data-id="${k.id}"><b>${esc(nameTxt(k))}</b><span>${esc([k.num,k.museum].filter(Boolean).join(' · '))}</span></li>`).join('')||(inp.value.trim()?'<li><span>No khipu with that number</span></li>':'');
+    ul.hidden=!inp.value.trim() };
+  const go=id=>{ if(!id) return; ul.hidden=true; inp.value=''; location.hash='khipu-'+id };
+  inp.addEventListener('input',show);
+  inp.addEventListener('keydown',ev=>{ if(ul.hidden) return;
+    if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){ev.preventDefault(); sel=(sel+(ev.key==='ArrowDown'?1:-1)+items.length)%Math.max(1,items.length); ul.querySelectorAll('li').forEach((li,i)=>li.setAttribute('aria-selected',i===sel))}
+    if(ev.key==='Escape'){ul.hidden=true} });
+  $('#gs').addEventListener('submit',ev=>{ev.preventDefault(); items=findKhipus(inp.value,8); go(items[sel]&&items[sel].id||items[0]&&items[0].id)});
+  ul.addEventListener('mousedown',ev=>{const li=ev.target.closest('li[data-id]'); if(li){ev.preventDefault(); go(li.dataset.id)}});
+  inp.addEventListener('blur',()=>setTimeout(()=>{ul.hidden=true},150));
+})();
 
 /* ---------- Findings, negatives, sources ---------- */
 function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('') }
