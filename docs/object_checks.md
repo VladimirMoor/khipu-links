@@ -49,5 +49,6 @@ The full list of the 32 differing cords is produced by `khipu/huacho.py` and the
 
 ## 5. AS149 / AS179 (VA44866C, VA47123)
 
-- AS179 group 1, position 3: 3424 against 3410 on the four AS149 lots — one knot group
-  differs (one ten + four units); a reading check would show whether the lot is identical.
+No check needed: the Aschers' record of AS179 cord 3 is unambiguous, 3s(5.5); 4s(11.5); 2s(17.5);
+4L(22.5) = 3424, and cord 2 (670) is broken at 28.0 cm, below its units zone. The AS179 lot
+therefore differs from the four AS149 lots (3410) by 14 in position 3.
