@@ -71,6 +71,14 @@ def main():
              f"макс {max(n[0] for n in nulls)})",
              f"с пустой графой из оборванных шнуров: {count(real, 'оборв')} (фон {sum(n[1] for n in nulls) / 50:.1f})",
              ""]
+    full = {k for k, gs in K.items() if all(v == 0 for g in gs for v, *_ in g)}
+    K2 = {k: gs for k, gs in K.items() if k not in full}
+    part = sum(1 for k in K2 if any(c[0] == "цел" for c in real[k]))
+    rnd2 = random.Random(2)
+    pn = [sum(1 for gs in K2.values() if any(c[0] == "цел" for c in blank_cols([rnd2.sample(g, len(g)) for g in gs])))
+          for _ in range(200)]
+    lines.insert(3, f"без полностью пустых кипу ({', '.join(sorted(full))}): {part} "
+                    f"(фон {sum(pn) / len(pn):.1f}, макс {max(pn)} из 200)")
     for k, cols in sorted(real.items()):
         if cols:
             lines.append(f"  {k:10} L={len(K[k][0])} групп={len(K[k])} {cols}  | {meta.get(k, {}).get('PROVENANCE')}")

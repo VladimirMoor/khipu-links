@@ -50,6 +50,20 @@ def main():
     lines.append("")
     lines.append(f"итого: {dict(stat)}")
     lines.append("порядок по группам UR255 (з — заполнен, п — пуст): " + "".join(k for _, k in order))
+    # UR256 (привязан к UR255, постоянное 10): группы вида [общее, графа, 10, …]
+    rows2 = defaultdict(list)
+    for r in csv.DictReader(open(ROOT / "extracted/plus_cords.csv")):
+        if r["inv_num"] == "UR256" and r["parent_id"] == "":
+            rows2["UR256"].append(r)
+    seq, ok, tot = [], 0, 0
+    for g in groups(rows2, "UR256"):
+        v = [int(r["value"]) for r in g]
+        if len(v) >= 3 and v[0] and 10 in v and v.index(10) == 2:
+            seq.append("п" if v[1] == 0 else "з")
+            if v[1]:
+                tot += 1
+                ok += v[0] == v[1] + 10 + sum(v[3:])
+    lines.append(f"UR256, группы [общее, графа, 10, …]: {''.join(seq)}; общее = остаток + 10 (+ прочие) в {ok} из {tot}")
     OUT.write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
 

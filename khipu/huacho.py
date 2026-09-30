@@ -131,6 +131,11 @@ def part2_report():
         lines.append(f"  г{22 + k} {t}  сумма по AS175 {sa}  сумма по UR232 {sh}")
     lines.append(f"  точно: по AS175 {ea}/15, по UR232 {eh}/15; где версии расходятся, ближе к части 2: "
                  f"AS175 {da}, UR232 {dh}")
+    import math
+    one = lambda a, b: a == b or (a != b and 10 ** round(math.log10(abs(a - b))) == abs(a - b))
+    ka = sum(one(A[21 + k][p], sum(A[24 + 3 * s + k][p] for s in range(7))) for k in range(3) for p in range(5))
+    kh = sum(one(A[21 + k][p], sum(H[3 * s + k][p] for s in range(7))) for k in range(3) for p in range(5))
+    lines.append(f"  точно или с разницей в один узел: по AS175 {ka}/15, по UR232 {kh}/15")
     return lines
 
 
