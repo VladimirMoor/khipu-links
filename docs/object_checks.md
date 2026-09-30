@@ -52,3 +52,9 @@ The full list of the 32 differing cords is produced by `khipu/huacho.py` and the
 No check needed: the Aschers' record of AS179 cord 3 is unambiguous, 3s(5.5); 4s(11.5); 2s(17.5);
 4L(22.5) = 3424, and cord 2 (670) is broken at 28.0 cm, below its units zone. The AS179 lot
 therefore differs from the four AS149 lots (3410) by 14 in position 3.
+
+## Basel, Museum der Kulturen: MM015 (IVc.366.03) against Berlin UR212 (VA42508(A)) and UR1131 (VA42510)
+
+- MM015 group 1 repeats UR212 group 16 in mirror order (31 … 212, knotless cord last). Check the cord order and attachment (verso on MM015, recto on UR212) on both objects.
+- MM015 groups 2–3 repeat UR1131 group 1 (44, 38, 33, 26, 18, 18, ·, 13, 7). Check the seventh cord (4, W:GL on MM015; knotless NB:KB on UR1131).
+- Are MM015's three groups on one original main cord, or pieces joined later (knots of attachment, fibre, cord ends)?
