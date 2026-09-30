@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accounts across khipus</title>
+<style>
+@page { size: A4; margin: 22mm 20mm 22mm 20mm; }
+body { font-family: "Charter", "Georgia", "Times New Roman", serif; font-size: 10.5pt; line-height: 1.42; color: #111; }
+h1 { font-size: 17pt; line-height: 1.2; margin: 0 0 6pt; }
+.authors { font-size: 10.5pt; margin-bottom: 2pt; }
+.affil { font-size: 9pt; color: #444; margin-bottom: 12pt; }
+.abstract { border-top: 1px solid #999; border-bottom: 1px solid #999; padding: 6pt 0 8pt; margin-bottom: 12pt; font-size: 9.8pt; }
+.abstract b { font-variant: small-caps; }
+h2 { font-size: 12pt; margin: 14pt 0 4pt; }
+h3 { font-size: 10.8pt; margin: 10pt 0 3pt; font-style: italic; font-weight: normal; }
+p { margin: 0 0 6pt; text-align: justify; hyphens: auto; }
+ul { margin: 0 0 6pt 16pt; padding: 0; }
+li { margin-bottom: 2pt; }
+table { border-collapse: collapse; margin: 4pt 0 8pt; font-size: 9pt; width: 100%; }
+th, td { border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; padding: 2pt 4pt; text-align: left; vertical-align: top; }
+th { background: #f1f1f1; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.cap { font-size: 8.8pt; color: #333; margin: -4pt 0 8pt; }
+.refs p { font-size: 8.8pt; text-indent: -12pt; padding-left: 12pt; text-align: left; margin-bottom: 3pt; }
+code { font-family: "Menlo", monospace; font-size: 8.6pt; }
+.small { font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<h1>Accounts across khipus: an allocation spread over three Berlin khipus, a detail copy from Pachacamac to Huacho, and a khipu that links two others</h1>
+<div class="authors">Vladimir Muravev</div>
+<div class="affil">Independent researcher · aderby3d@gmail.com · Preprint, 30 September 2026 · Code and derived tables: https://github.com/VladimirMoor/khipu-links</div>
+
+<div class="abstract"><b>Abstract.</b> Most known numerical relations in Inka khipus lie within a single khipu. Relations between khipus, which would show how records were copied, aggregated and passed between accountants, are known only in a few cases. We searched the open khipu data (Open Khipu Repository and the Khipu Field Guide companion data, about 700 khipus) systematically for cross-khipu sums, copies and extracts. Every detector is first run on published relations, and every result is compared with structure-preserving baselines (offset targets, shuffled group order). We report three relations that we have not found described. (1) Three Berlin khipus of one 1907 acquisition, AS143, AS149 and AS179, record one allocation. A group of AS143 equals, position by position, the sum of two groups of AS149 (five equalities up to 41,883), which is the only exact cross-khipu vector sum in the corpus. All shares have the same four-part composition, the shares stand in the ratio 2 : 2 : 2 : 2 : 1 of the total, and one standard lot recurs on AS179. (2) Two spliced Huacho khipus (UR233 + UR232) repeat parts 1 and 3 of the Pachacamac khipu AS175 group by group (z = 6.4 and 19.5 against other offsets), leave out the summary part 2, and add one empty pendant to every group. Their part-3 values reproduce the part-2 sums of AS175 better than AS175 itself does. (3) The Pachacamac khipu AS118 repeats two groups of UR218 cord for cord, and the subsidiaries of its first pendant follow the group totals of AS125. We also report regularities of empty pendants and several negative results.</div>
+
+<h2>1. Introduction</h2>
+<p>Since Locke (1912) the decimal knot notation of Inka khipus has been readable: long knots with 2–9 turns or a figure-eight knot give the units, clusters of single knots give the higher registers, and position along the pendant gives the place value. What the numbers counted, and how records related to each other, is largely unknown. The Aschers' databook (Ascher and Ascher 1978) documents many sums inside individual khipus. Cross-khipu relations have been shown for a few archives: matching and hierarchical khipus at Puruchuco (Urton and Brezine 2005), pairs of duplicate accounts (Urton 2005, 2014), the storehouse archive of Inkawasi with its fixed deductions (Urton and Chu 2015, 2019), a numerical connection between AS069 and AS070 (Thompson 2024), and a partial copy of a Lima khipu in Gothenburg (Chirinos Rivera 2010).</p>
+<p>Such relations are the most direct evidence we have of khipu accounting as a practice: who kept totals, who kept details, and what was copied. Here we search for them across the whole open corpus with explicit statistical baselines. The emphasis is on relations whose numerical evidence does not depend on interpretation.</p>
+
+<h2>2. Data and methods</h2>
+<p><b>Data.</b> Open Khipu Repository (OKR, SQLite release, 609 khipus; Zenodo 10.5281/zenodo.18025748), the Khipu Field Guide companion data (KFG, 678 khipus; Khosla and Medrano 2023, Zenodo 10.5281/zenodo.8125718), and 19 khipus added to the OKR after 2017. A cord's value is the sum of its knot values; unless stated otherwise we use the pendant's own value without subsidiaries, since across 422 khipus group sums hold on own values (z = 4.4 on an offset baseline) and fail when subsidiaries are added or subtracted. Group boundaries are the recorded ones, which follow physical spacing on the primary cord. Physical attributes (termination, length, colour, knot direction) come from the OKR and KFG records; published knot records were checked in the Aschers' databook where relevant.</p>
+<p><b>Detectors.</b> (a) Vector sums: every group of every khipu against position-wise sums of 2–10 consecutive groups, or 2–8 groups at a stride of 2–4, of every other khipu. (b) Group-diagonal alignment: for two khipus, the number of equal values ≥ 10 between group <i>j</i> of one and group <i>j</i> + <i>c</i> of the other, allowing one extra position in the longer group, summed along each offset <i>c</i>. (c) Lot matching: whole groups equal within max(1, 2%) with at least half of the positions exact. (d) Subsidiary totals: lists of subsidiary values of one pendant against chains of group sums of other khipus.</p>
+<p><b>Baselines.</b> Value shuffling is too permissive for sums, because it destroys the group structure that sums depend on. We therefore use the offset baseline: the same search with targets shifted by ±<i>d</i> (typically <i>d</i> = 1–30), which keeps every structural property of the data. For alignments we compare the aligning offset with all other offsets and with permutations of group order. Pairs with the same museum number are treated as duplicate recordings and excluded.</p>
+<p><b>Validation.</b> Without being told where to look, the detectors recover Thompson's AS069/AS070 relation, the Lima–Gothenburg copy (Chirinos Rivera 2010), the Inkawasi matching pairs and their fixed deductions of 10, 15 and 47 (Urton and Chu 2015; fixed deductions occur nowhere else in the corpus), known duplicate recordings, and single pendants equal to the sum of the preceding group (28 cases against 0.6 expected).</p>
+
+<h2>3. Results</h2>
+<h3>3.1 Berlin (Ica, 1907): one allocation on three khipus</h3>
+<p>AS143 (KH0159, VA47096, Ica), AS149 (KH0165, VA44866C, Ocucaje) and AS179 (KH0196, VA47123, Ica) came to the Berlin museum in the same 1907 acquisition. Group 1 of AS143 is its total (180,345); groups 2–5 are the parts, as the Aschers noted. Group 4 of AS143 equals the sum of groups 1 and 2 of AS149 in all five positions:</p>
+<table>
+<tr><th>Position</th><th class="n">1</th><th class="n">2</th><th class="n">3</th><th class="n">4</th><th class="n">5</th></tr>
+<tr><td>AS149 g1</td><td class="n">8,653</td><td class="n">4,049</td><td class="n">20,640</td><td class="n">660</td><td class="n">4,741</td></tr>
+<tr><td>AS149 g2</td><td class="n">8,783</td><td class="n">4,171</td><td class="n">21,243</td><td class="n">690</td><td class="n">4,787</td></tr>
+<tr><td>AS143 g4</td><td class="n">17,436</td><td class="n">8,220</td><td class="n">41,883</td><td class="n">1,350</td><td class="n">9,528</td></tr>
+</table>
+<p>Among all cross-khipu comparisons in the corpus (detector a), this is the only exact vector sum; with targets shifted by 1–7 the same scan finds 0–2, all on small values. It persists when single pendants are merged into adjacent groups.</p>
+<ul>
+<li><b>Composition.</b> Every group of AS143 and both upper groups of AS149 divide over the four main positions in the same proportions, about 22.4 : 10.4 : 54.4 : 12.8% (mean deviation 0.5%, largest 1.1%). Among 16 corpus khipus with four or more comparable groups, only AS143 itself is as uniform.</li>
+<li><b>Shares.</b> In ninths of the AS143 total, the five shares are 0.99 (AS143 g2), 2.05 (g3), 2.05 (g5), 1.93 (AS149 g1) and 1.98 (AS149 g2), i.e. 2 + 2 + 2 + 2 + 1 = 9. Two of the shares are recorded only on AS149; AS143 keeps their sum.</li>
+<li><b>Lots.</b> AS149 divides each of its two shares into six lots of 5,470–6,450 (four main positions) and a remainder (1,142; 1,767), and one lot further into nine small lots. The lot 1430, 670, 3410, 820 occurs four times on AS149, and 1430, 670, 3424, 820 is the first group of AS179; nowhere else in the corpus do 1430, 670 and 820 occur together in a group.</li>
+</ul>
+<p>The Aschers (1981, p. 146) discuss AS143 and AS149 together but found no confirmed relation; Chirinos Rivera (2010, pp. 286–293) reads AS143 alone as fractions of 600. On our reading the uniform ratios within each khipu follow from one quantity of fixed composition apportioned to five recipients, one with a half share, and recorded at three levels on three khipus.</p>
+
+<h3>3.2 Pachacamac → Huacho: a copy of the details without the totals</h3>
+<p>AS175 (UR1175, KH0192, VA42518, Pachacamac, 1907) has 45 groups of five pendants in three parts; according to the Aschers (Databook, pp. 1073–1074) part 2 (groups 22–24) is related to the sums of the seven sets of part 3. UR233 and UR232 (KH0470, KH0469, VA63038b, Huacho) are two khipus whose primary cords are spliced together (KFG note on UR232). UR233 repeats part 1 of AS175 (groups 1–21; three AS175 groups appear split in two) and UR232 repeats part 3 (groups 25–45), group for group. Along the aligning offset there are 29 and 40 equal values ≥ 10, against 3.2 ± 4.0 and 2.1 ± 1.9 at all other offsets (z = 6.4 and 19.5); permuting group order never reaches the real score (p ≤ 0.003). Of the comparable values, 85 of 100 (UR233) and 73 of 105 (UR232) are equal, and most others differ by one knot.</p>
+<ul>
+<li><b>No totals.</b> Part 2 is not on the Huacho pair.</li>
+<li><b>One extra pendant per group.</b> Each Huacho group has a sixth, knotless pendant (position 3 on UR233, position 4 on UR232). On UR233 these are intact (16 of 18 with knotted ends, median 46 cm); on UR232 they are dark (MB:KB) and 18 of 20 are broken.</li>
+<li><b>Subsidiaries.</b> AS175's white subsidiaries on the first pendant of each group reappear as black (KB) subsidiaries; the five that survive intact carry the same values (25, 6, 7, 6, 0), the other 22 are stubs of 0.5–2.5 cm.</li>
+<li><b>Different objects.</b> Six pendants per group against five, 27 subsidiaries against 114, primary cords 66 + 81 cm against 210 cm, median pendant length 41–47 cm against 64 cm.</li>
+</ul>
+<p><b>The copy fits the totals better than the original.</b> Summing part 3 as recorded on AS175 reproduces 5 of the 15 part-2 values exactly (6 allowing a one-knot difference; the Aschers, using a one-digit tolerance, count 8); summing the same groups as recorded on UR232 reproduces 8 exactly (10 with one-knot tolerance). Taking each of the seven addends from either version, 10 of 15 totals can be met exactly (targets shifted by ±1…±20: 1.5 on average, at most 5). In five totals the Huacho values are required where the versions differ; for instance the total 335 needs 18 (UR232) where AS175 has 108 (group 27, position 3). One total requires the AS175 value. We cannot tell from the records whether the differing AS175 values were changed later or misread.</p>
+
+<h3>3.3 Pachacamac: AS118 links UR218 and AS125</h3>
+<p>AS118 (UR1118, KH0132, VA42601) has three groups. Its groups 2 and 3 (seven white pendants each; group 2 "actually on a subsidiary main cord" according to Urton's note in the KFG record) repeat groups 2 and 3 of UR218 (KH0456, VA42559) cord for cord, including the number of knots on each cord: [620, 470, 528, 935/932, 474, 319, 453] and [492, 663, 252, 654, 423, 433, 275]. Five cords of group 3 are broken on AS118 and keep only their upper registers (the Aschers record "6(5+)?" and "4??" where UR218 has 663 and 423); on UR218 they are intact, and cord lengths differ, so these are two objects. UR218 is not the copy that Urton (2014, p. 15) pairs with UR1144: his six Pachacamac pairs are similar in cord count and colour, and their values agree only at chance level in our data.</p>
+<p>The first pendant of AS118 carries no knots and five subsidiaries, 2696, 13182, 14658, 11522 and 8565. The Aschers (Databook, pp. 791–793) note that this cord "is not a regular pendant attachment": its twisted end runs through the strands of the main cord, so it was attached before it was twisted and knotted. Subsidiaries 2–5 follow, in order, the group sums of AS125 (KH0140, VA42670), 13676, 14658, 11444 and 8584:</p>
+<ul>
+<li>14658 is exact.</li>
+<li>8565 is exact if the first cord of AS125 group 4 is 3111. The Aschers give no value for this cord ("?"), only its knots, 3s(10.0); 1s(18.0); 1s(26.0); 1s(37.0); 1s(39.0): three thousands, one hundred, one ten and single knots in the units zone. KFG lists 3130 and Urton's recording 31111.</li>
+<li>11522 is exact if the first cord of group 3, recorded as "222?" and broken at 29.5 cm with its tens starting at 27.5 cm, was 2298; this requires the break to have cut the tens cluster.</li>
+<li>13182 against 13676 is unexplained.</li>
+</ul>
+<p>Against the group-sum chains of all 696 other khipus (best offset, 1% tolerance), only AS125 matches more than one of the five values; with the values shifted by ±100…±300 no khipu matches three.</p>
+
+<h3>3.4 Empty pendants and filled slots</h3>
+<p>Among 154 khipus with regular groups (≥ 5 groups of equal length ≥ 3), 11 have a position where the pendant is intact but knotless in ≥ 80% of the groups (3.0 expected when values are shuffled within groups; at most 6 in 200 shuffles). Five more khipus have regular groups and no knots at all. In the Inkawasi pair UR255 ~ UR267A each group records a gross value, the fixed deduction 15 and the net value (gross = 15 + net), in the orders [gross, net, 15] and [gross, 15, net]. Of 19 groups that can be paired, UR255 leaves the net pendant empty in the first 12 (11 intact, 34–45 cm) and fills it with the same value as UR267A in 5 of the last 6 (about 1 in 3,000 for a split this clean under random placement). The khipu tied to it, UR256, shows the same order: in groups of the form [gross, slot, 10, …] the slot is empty in the first 6 and filled in the next 12 (about 1 in 18,000). We have not been able to check whether Urton and Chu discuss these empty pendants.</p>
+
+<h3>3.5 Negative results</h3>
+<ul>
+<li>A proposed hierarchy of totals among the Huacones-Vilcahuasi record sheets (JC024–JC034, transcribed by us from OKR photographs) disappears under the offset baseline (z = 1.1); the Berlin 1907 batch shows no further links beyond §3.1.</li>
+<li>No colonial transcription available to us matches a digitized khipu; the Berlin composition matches neither colonial census categories nor the Chincha tasa beyond chance.</li>
+<li>Colour is not carried into copies (Lima–Gothenburg, Pachacamac–Huacho) and does not mark the product at Inkawasi: the same deposits appear in light brown (UR255/UR256) and white (UR267A/B).</li>
+<li>Knot direction: copies share their archive's usual direction; in the Waterfall set, UR053C is tied in an S–Z–S block pattern, and UR053B copies the whole Z block in S knots. Cord twist does not systematically separate larger and smaller values in the seven khipus with enough cords of each twist.</li>
+<li>About 6% of pendants have a non-decimal knot layout, 85% on khipus in the Wari style (with canutos; e.g. UR039, UR050–UR055, UR110, UR112). Pairs of such "signs" recur across these khipus from different collections more often than chance (43 against 22–30, p &lt; 0.005), but their alphabet (long knots of 3–8 turns, peaking at 5) is far too small for a syllabary: we see no phonetic signal.</li>
+</ul>
+
+<h2>4. Discussion</h2>
+<p>The three relations show three ways in which one account was spread over several khipus. At Berlin/Ica a total, its shares and their subdivisions were recorded on different khipus, and one khipu (AS143) keeps the sum of two shares that another (AS149) holds separately. At Pachacamac and Huacho the detailed parts of an account were copied onto a separate pair of khipus, without the summary part, with an empty pendant added to every group, and joined into one bundle. AS118 combines an extract of one khipu (UR218) with the group totals of another (AS125). Together with the Lima–Gothenburg copy, which holds exactly one branch of its original (a subtotal and its three addends), the pattern is consistent: copies are extracts of details, while totals stay with the fuller record.</p>
+<p>This fits colonial testimony. In the Visita of Chucuito (1567), as summarized by Chirinos Rivera (2010, pp. 88–89), distribution khipus for tribute in cloth, labour and silver existed in several copies, and each subdivision knew, in separate interviews, what fell to it. It also fits the storehouse accounting of Inkawasi (Urton and Chu 2015), where two copies of the same deposits were kept, and where one copy leaves the net value empty in its earlier entries.</p>
+<p>The main limitation is that all evidence comes from recordings, some decades old, of fragile objects. Several readings would be settled on the objects in Berlin: AS125 group 4 cord 1 and group 3 cord 1; the AS175 part-3 cords where AS175 and UR232 differ; the extra pendants and black subsidiaries of UR232/UR233. A radiocarbon date for UR232/UR233 (VA63038; Cherkinsky and Urton 2014) would show whether the Huacho copy is Inka or colonial.</p>
+
+<h2>Data and code availability</h2>
+<p class="small">All code (Python, standard library) and derived tables are at https://github.com/VladimirMoor/khipu-links (MIT licence); the main scripts are <code>vecsum.py</code>, <code>diagscan.py</code>, <code>lotmatch.py</code>, <code>huacho.py</code>, <code>as118.py</code>, <code>blanks.py</code> and <code>fillslot.py</code>. The source data are the OKR and KFG releases cited above; third-party data and publications are not redistributed.</p>
+
+<h2>Acknowledgements</h2>
+<p class="small">I thank the creators of the Open Khipu Repository, the Khipu Field Guide and the Khipu-Biblio Cross-Reference (K. M. Thompson), whose open data made this work possible. The code and analyses were developed with the assistance of an AI model (Claude, Anthropic); all results were checked against the source records.</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>Ascher, M., and R. Ascher. 1978. <i>Code of the Quipu: Databook</i>. Ann Arbor: University of Michigan Press. (Online edition, Cornell University.)</p>
+<p>Ascher, M., and R. Ascher. 1981. <i>Code of the Quipu: A Study in Media, Mathematics, and Culture</i>. Ann Arbor: University of Michigan Press.</p>
+<p>Cherkinsky, A., and G. Urton. 2014. Radiocarbon chronology of Andean khipus. <i>Open Journal of Archaeometry</i> 2: 5260.</p>
+<p>Chirinos Rivera, A. 2010. <i>Quipus del Tahuantinsuyo: curacas, incas y su saber matemático en el siglo XVI</i>. Lima.</p>
+<p>FitzPatrick, M. 2025. Primary questions: a survey of Inka-style khipu primary cords. Preprint, doi:10.31235/osf.io/hqkcj_v1.</p>
+<p>Hyland, S. 2014. Ply, markedness, and redundancy: new evidence for how Andean khipus encoded information. <i>American Anthropologist</i> 116(3): 643–648.</p>
+<p>Hyland, S., G. A. Ware, and M. Clark. 2014. Knot direction in a khipu/alphabetic text from the Central Andes. <i>Latin American Antiquity</i> 25(2): 189–197.</p>
+<p>Khosla, A., and M. Medrano. 2023. Khipu Field Guide companion data (data-science khipu article v2.0.0). Zenodo, doi:10.5281/zenodo.8125718.</p>
+<p>Locke, L. L. 1912. The ancient quipu, a Peruvian knot record. <i>American Anthropologist</i> 14(2): 325–332.</p>
+<p>Open Khipu Repository. Zenodo, doi:10.5281/zenodo.18025748; https://github.com/khipulab/open-khipu-repository.</p>
+<p>Thompson, K. M. 2024. A numerical connection between two khipus. <i>Ñawpa Pacha</i> 45(1), doi:10.1080/00776297.2024.2411789.</p>
+<p>Thompson, K. M. 2026. Khipu-Biblio Cross-Reference (KBCR), v9. Figshare, doi:10.26188/25661322.</p>
+<p>Urton, G. 2005. Khipu archives: duplicate accounts and identity labels in the Inka knotted string records. <i>Latin American Antiquity</i> 16(2): 147–167.</p>
+<p>Urton, G. 2014. <i>Quipus de Pachacamac</i>. Lima: Ministerio de Cultura.</p>
+<p>Urton, G. 2017. <i>Inka History in Knots: Reading Khipus as Primary Sources</i>. Austin: University of Texas Press.</p>
+<p>Urton, G., and C. J. Brezine. 2005. Khipu accounting in ancient Peru. <i>Science</i> 309: 1065–1067.</p>
+<p>Urton, G., and A. Chu. 2015. Accounting in the King's Storehouse: the Inkawasi khipu archive. <i>Latin American Antiquity</i> 26(4): 512–529.</p>
+<p>Urton, G., and A. Chu. 2019. The invention of taxation in the Inka Empire. <i>Latin American Antiquity</i> 30(1): 1–16.</p>
+</div>
+</body>
+</html>

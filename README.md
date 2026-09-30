@@ -5,6 +5,7 @@ hierarchies — in the Open Khipu Repository (OKR) and the Khipu Field Guide (KF
 Every detector is checked on relations already known in the literature and every result
 is compared with shuffled-corpus baselines.
 
+Preprint (6 pages): [`docs/preprint/preprint.pdf`](docs/preprint/preprint.pdf).
 Full write-up with tables, methods and caveats: [`report/khipu_links_report.html`](report/khipu_links_report.html)
 (open the file in a browser). A running log of the whole study, in Russian, is in
 [`docs/project_log_ru.md`](docs/project_log_ru.md).
