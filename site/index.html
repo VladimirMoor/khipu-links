@@ -108,11 +108,15 @@ button.link{font:inherit;background:none;border:0;padding:0;color:var(--indigo);
 .ctx-suyu{fill:var(--muted);font-family:var(--f-display);letter-spacing:.25em;text-transform:uppercase;opacity:.7}
 .road{fill:none;stroke:var(--cord);stroke-dasharray:5 4;stroke-opacity:.8}
 .cmp{margin:14px 0}
+.cmp .tablewrap{width:fit-content;max-width:100%}
+.cmp table{width:auto}
 .cmp table td.v{font-family:var(--f-mono);text-align:right}
+.cmp table th.v{text-align:right}
+.cmp table th,.cmp table td{padding-left:18px;padding-right:18px}
 .cmp tr.eq td{background:color-mix(in srgb,var(--ok) 12%,transparent)}
 .cmp tr.ne td{background:color-mix(in srgb,var(--accent) 14%,transparent)}
 .cmp tr.na td{color:var(--muted)}
-.cmp caption{text-align:left;font-family:var(--f-display);font-weight:500;padding:0 0 6px}
+.cmp .cmpcap{font-family:var(--f-display);font-weight:500;margin:0 0 6px}
 ol.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
 ol.tl li{position:relative;padding:0 0 18px 22px}
 ol.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--cord)}
@@ -1091,9 +1095,9 @@ function showFinding(id){ let f=D.findings.find(x=>x.id===id); if(!f) return; f=
    <p><a href="#findings">${tr('All findings')}</a></p></div>` }
 function cmp(c){
   if(c.kind==='note') return `<h3>${esc(c.title)}</h3><p>${esc(c.text)}</p>`;
-  if(c.kind==='table') return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)}</caption><thead><tr>${c.head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
+  if(c.kind==='table') return `<div class="cmp"><div class="cmpcap">${esc(c.title)}</div><div class="tablewrap"><table><thead><tr>${c.head.map((h,i)=>`<th class="${c.rows.length&&c.rows.every(r=>typeof r[i]==='number')?'v':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
   const A=K[c.a],B=K[c.b];
-  return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)} · ${esc(c.tally)}</caption><thead><tr><th>${esc(A?nameTxt(A):c.a)} cord</th><th>Value</th><th>${esc(B?nameTxt(B):c.b)} cord</th><th>Value</th></tr></thead>
+  return `<div class="cmp"><div class="cmpcap">${esc(c.title)} · ${esc(c.tally)}</div><div class="tablewrap"><table><thead><tr><th class="v">${esc(A?nameTxt(A):c.a)}: ${tr('cord')}</th><th class="v">${tr('Value')}</th><th class="v">${esc(B?nameTxt(B):c.b)}: ${tr('cord')}</th><th class="v">${tr('Value')}</th></tr></thead>
    <tbody>${c.rows.map(r=>`<tr class="${r[4]}"><td class="v">${esc(r[0])}</td><td class="v">${esc(r[1])}</td><td class="v">${esc(r[2])}</td><td class="v">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
    ${c.note?`<p class="note">${esc(c.note)}</p>`:''}<p class="note">${tr('Green: equal · red: different · grey: no counterpart.')}</p></div>`;
 }

@@ -271,7 +271,9 @@
    "Aschers’ Databook": "Databook Ашеров",
    "pendants#few": "подвесных",
    "cords with subsidiaries#few": "шнура с дочерними",
-   "groups#few": "группы"
+   "groups#few": "группы",
+   "cord": "шнур",
+   "Value": "Значение"
   }
  },
  "content": {
