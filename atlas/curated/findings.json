@@ -147,10 +147,11 @@
   "place": [
    "inkawasi"
   ],
-  "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. UR273B records only the deposit totals of UR274B (6 shared totals, 0.45 expected). Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
+  "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. The bundle UR273A + UR273B records only the deposit totals of UR274A + UR274B: 4 and 6 shared totals (0.3 and 0.5 expected), in the same order on both. Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
   "evidence": [
-   "Split this clean under random placement: about 1 in 3,000.",
-   "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵."
+   "Split this clean under random placement: about 1 in 3,900.",
+   "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵.",
+   "UR273A ~ UR274A: 891, 453, 448, 448 in the same order (p ≈ 3 × 10⁻⁴); UR273B ~ UR274B: six totals in the same order (p ≈ 10⁻⁵)."
   ],
   "khipus": [
    "UR255",
@@ -160,7 +161,9 @@
    "UR273B",
    "UR274B",
    "UR266",
-   "UR275"
+   "UR275",
+   "UR273A",
+   "UR274A"
   ],
   "scripts": [
    "fillslot.py",
@@ -195,7 +198,7 @@
   ],
   "summary": "In two independent cases a separate cord in one copy is a subsidiary in the other: UR270 → UR278 at Inkawasi and UR053C → UR053B in the Waterfall set. The packing rule is ours; the near-duplication of B and C was noted by Chirinos.",
   "evidence": [
-   "UR053B/C: 35 fields match against at most 19 in 2,000 shuffles."
+   "UR053B/C: 35 fields match against at most 18 in 2,000 shuffles."
   ],
   "khipus": [
    "UR270",

@@ -322,10 +322,11 @@
    },
    "inkawasi": {
     "title": "Inkawasi: leere Plätze, Kopien nur der Summen, Produktkennzeichen",
-    "summary": "Auf UR255 ist die Netto-Hängeschnur in den ersten 12 Lieferungen leer und in 5 der letzten 6 mit den Werten von UR267A gefüllt. UR273B verzeichnet nur die Liefersummen von UR274B (6 gemeinsame Summen, 0,45 erwartet). Kopien liegen in einem anderen Bündel als ihre Gegenstücke. Eine rote Quaste am Anfang der Hauptschnur kommt nur bei Erdnuss-Khipus vor (2 von 4 gegenüber 0 von 25).",
+    "summary": "Auf UR255 ist die Netto-Hängeschnur in den ersten 12 Lieferungen leer und in 5 der letzten 6 mit den Werten von UR267A gefüllt. Das Bündel UR273A + UR273B verzeichnet nur die Liefersummen von UR274A + UR274B: 4 und 6 gemeinsame Summen (0,3 und 0,5 erwartet), auf beiden in derselben Reihenfolge. Kopien liegen in einem anderen Bündel als ihre Gegenstücke. Eine rote Quaste am Anfang der Hauptschnur kommt nur bei Erdnuss-Khipus vor (2 von 4 gegenüber 0 von 25).",
     "evidence": [
-     "Eine so saubere Trennung bei zufälliger Anordnung: etwa 1 zu 3.000.",
-     "UR273B ~ UR274B: Poisson-p ≈ 10⁻⁵."
+     "Eine so saubere Trennung bei zufälliger Anordnung: etwa 1 zu 3.900.",
+     "UR273B ~ UR274B: Poisson-p ≈ 10⁻⁵.",
+     "UR273A ~ UR274A: 891, 453, 448, 448 in derselben Reihenfolge (p ≈ 3 × 10⁻⁴); UR273B ~ UR274B: sechs Summen in derselben Reihenfolge (p ≈ 10⁻⁵)."
     ]
    },
    "as003": {
@@ -339,7 +340,7 @@
     "title": "Gefaltete Kopien",
     "summary": "In zwei unabhängigen Fällen ist eine eigenständige Schnur der einen Kopie in der anderen eine Nebenschnur: UR270 → UR278 in Inkawasi und UR053C → UR053B im Waterfall-Satz. Die Packregel stammt von uns; die nahezu vollständige Doppelung von B und C hat Chirinos bemerkt.",
     "evidence": [
-     "UR053B/C: 35 Felder stimmen überein, gegenüber höchstens 19 in 2.000 Mischungen."
+     "UR053B/C: 35 Felder stimmen überein, gegenüber höchstens 18 in 2.000 Mischungen."
     ]
    },
    "known": {

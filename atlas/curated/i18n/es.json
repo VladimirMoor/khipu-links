@@ -322,10 +322,11 @@
    },
    "inkawasi": {
     "title": "Inkawasi: espacios vacíos, copias solo de totales, marcas de producto",
-    "summary": "En UR255 el colgante del valor neto está vacío en los 12 primeros depósitos y lleva los valores de UR267A en 5 de los 6 últimos. UR273B registra solo los totales de depósito de UR274B (6 totales compartidos; 0,45 esperados). Las copias están en un atado distinto de su par. Una borla roja al inicio de la cuerda principal aparece solo en khipus de maní (2 de 4 frente a 0 de 25).",
+    "summary": "En UR255 el colgante del valor neto está vacío en los 12 primeros depósitos y lleva los valores de UR267A en 5 de los 6 últimos. El atado UR273A + UR273B registra solo los totales de depósito de UR274A + UR274B: 4 y 6 totales compartidos (0,3 y 0,5 esperados), en el mismo orden en ambos. Las copias están en un atado distinto de su par. Una borla roja al inicio de la cuerda principal aparece solo en khipus de maní (2 de 4 frente a 0 de 25).",
     "evidence": [
-     "Una división tan limpia al azar: alrededor de 1 en 3.000.",
-     "UR273B ~ UR274B: p de Poisson ≈ 10⁻⁵."
+     "Una división tan limpia al azar: alrededor de 1 en 3900.",
+     "UR273B ~ UR274B: p de Poisson ≈ 10⁻⁵.",
+     "UR273A ~ UR274A: 891, 453, 448, 448 en el mismo orden (p ≈ 3 × 10⁻⁴); UR273B ~ UR274B: seis totales en el mismo orden (p ≈ 10⁻⁵)."
     ]
    },
    "as003": {
@@ -339,7 +340,7 @@
     "title": "Copias plegadas",
     "summary": "En dos casos independientes una cuerda separada en una copia es una subsidiaria en la otra: UR270 → UR278 en Inkawasi y UR053C → UR053B en el conjunto Waterfall. La regla de empaquetado es nuestra; la casi duplicación de B y C la señaló Chirinos.",
     "evidence": [
-     "UR053B/C: coinciden 35 campos frente a un máximo de 19 en 2.000 barajados."
+     "UR053B/C: coinciden 35 campos frente a un máximo de 18 en 2000 barajados."
     ]
    },
    "known": {

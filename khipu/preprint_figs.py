@@ -3,7 +3,7 @@
 fig*_es.svg — те же рисунки с испанскими подписями.
 fig1 — места находок и связи между кипу (site/data.json, береговая линия Natural Earth из site/land.json);
 fig2 — доли распределения AS143 / AS149 в девятых (числа из §3.1);
-fig3 — счёт диагонали D(c) для AS175 против UR233 и UR232 (diagscan.py);
+fig3 — счёт диагонали для AS175 против UR233 и UR232 (huacho.diagonal, те же числа, что z = 6.4 и 19.5);
 fig4 — вычет UR269 по месту записи в блоке (slotded.py).
 """
 import json
@@ -108,33 +108,27 @@ def fig2():
 
 
 def fig3():
-    import diagscan as DS
     import csv
-    import itertools
-    by = defaultdict(list)
-    for r in csv.DictReader(open(ROOT / "extracted/plus_do_cords.csv")):
-        if r["parent_id"] == "" and r["inv_num"] in ("UR1175", "UR233", "UR232"):
-            by[r["inv_num"]].append(r)
-    G = {}
-    for k, rs in by.items():
-        rs.sort(key=lambda r: int(r["order"]))
-        G[k] = [[int(r["value"]) for r in g] for _, g in itertools.groupby(rs, key=lambda r: r["group"])]
+    import huacho as HU
+    rows = defaultdict(list)
+    for r in csv.DictReader(open(ROOT / "extracted/kfg_cords.csv")):
+        if r["inv_num"] in ("UR1175", "UR233", "UR232"):
+            rows[r["inv_num"]].append(r)
+    A = HU.groups("UR1175", rows)
     W, H = 460, 230
     b = []
     for row, other in enumerate(("UR233", "UR232")):
-        D = DS.diag(G["UR1175"], G[other])
-        cs = list(range(-len(G[other]) + 1, len(G["UR1175"])))
+        D = HU.diagonal(A, HU.groups(other, rows))   # the same scores as huacho.py (z = 6.4 and 19.5)
+        cs = sorted(D)
         y0, hh = 18 + row * 105, 70
         mx = max(D.values())
         x0, w = 50, 400
         bw = w / len(cs)
-        best = max(cs, key=lambda c: D.get(c, 0))
+        best = max(cs, key=D.get)
         for i, c in enumerate(cs):
-            v = D.get(c, 0)
+            v = D[c]
             h = hh * v / mx
-            b.append(f'<rect x="{x0 + i * bw:.2f}" y="{y0 + hh - h:.1f}" width="{max(bw - .6, .5):.2f}" height="{h:.1f}" fill="{ACC if c in (best, best + 1, best - 1) and v > 6 else CORD}"/>')
-        others = [D.get(c, 0) for c in cs if abs(c - best) > 1]
-        m = sum(others) / len(others)
+            b.append(f'<rect x="{x0 + i * bw:.2f}" y="{y0 + hh - h:.1f}" width="{max(bw - .6, .5):.2f}" height="{h:.1f}" fill="{ACC if c == best else CORD}"/>')
         b.append(f'<line x1="{x0}" x2="{x0 + w}" y1="{y0 + hh}" y2="{y0 + hh}" stroke="{MUTED}"/>')
         b.append(f'<text x="{x0 - 6}" y="{y0 + 8}" text-anchor="end" fill="{MUTED}" font-size="9">{mx}</text>')
         b.append(f'<text x="{x0 - 6}" y="{y0 + hh}" text-anchor="end" fill="{MUTED}" font-size="9">0</text>')
