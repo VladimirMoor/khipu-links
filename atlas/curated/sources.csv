@@ -18,3 +18,4 @@ Khipu Field Guide (KFG),https://www.khipufieldguide.com/,Cleaned cord data for a
 "Lambayeque-style textiles in the Ethnologisches Museum, Berlin (Nuevo Mundo Mundos Nuevos)",https://journals.openedition.org/nuevomundo/69290,"How Gretzer collected: grave robbers, 'Pachacamac' labels."
 "Curatola & de la Puente (eds.), El quipu colonial (2013)",,Colonial transcriptions used in the document match.
 "Contreras, Structural pattern mining in Inka khipus (arXiv 2026)",https://arxiv.org/abs/2607.00185,Santa Valley recto/verso validation.
+"Terrain Tiles (AWS Open Data Registry; Mapzen; SRTM, GMTED2010, ETOPO1)",https://registry.opendata.aws/terrain-tiles/,Relief of the 3D map: elevations resampled to a 0.03° grid by khipu/terrain.py.
