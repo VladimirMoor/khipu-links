@@ -518,6 +518,10 @@
    "Colour of the product": {
     "title": "El color del producto",
     "text": "El color no se conserva en las copias y no marca el producto en Inkawasi."
+   },
+   "Ordered totals and strided copies": {
+    "title": "Totales ordenados y copias con paso",
+    "text": "Totales de grupo de un khipu repetidos en el mismo orden en otro (192 khipus con al menos tres totales no redondos ≥ 100): todo par por encima de la línea de base con valores desplazados es una copia ya conocida o un segundo registro del mismo objeto. Dentro de Inkawasi, cada p-ésimo registro de un khipu frente a registros consecutivos de otro (pasos 2–8): solo destaca UR269 ~ UR275; el resto está al nivel esperado por el número de pasos y desfases probados."
    }
   },
   "sources": {

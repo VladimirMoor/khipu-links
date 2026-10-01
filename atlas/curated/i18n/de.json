@@ -508,6 +508,10 @@
    "Colour of the product": {
     "title": "Farbe des Produkts",
     "text": "Die Farbe wird nicht in Kopien übernommen und kennzeichnet in Inkawasi nicht das Produkt."
+   },
+   "Ordered totals and strided copies": {
+    "title": "Geordnete Summen und Kopien mit Schrittweite",
+    "text": "Gruppensummen eines Khipus, die auf einem anderen in derselben Reihenfolge wiederkehren (192 Khipus mit mindestens drei nicht runden Summen ≥ 100): Jedes Paar über der Vergleichsbasis mit verschobenen Werten ist eine bereits bekannte Kopie oder eine zweite Aufnahme desselben Objekts. Innerhalb von Inkawasi, jeder p-te Eintrag eines Khipus gegen aufeinanderfolgende Einträge eines anderen (Schrittweiten 2–8): nur UR269 ~ UR275 sticht hervor; der Rest liegt auf dem Niveau, das die Zahl der geprüften Schrittweiten und Verschiebungen erwarten lässt."
    }
   },
   "sources": {
