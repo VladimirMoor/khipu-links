@@ -20,3 +20,4 @@ atlas/atlas.db
 site/kd/
 site/terrain.json
 dist/
+site/i18n/

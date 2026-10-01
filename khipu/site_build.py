@@ -192,11 +192,34 @@ def main():
             "context": q("select kind, label, lat, lon, note from context"),
             "roads": [{"kind": r["kind"], "pts": [[lo, la] for la, lo in json.loads(r["pts"])]} for r in q("select * from road")],
             "timeline": [{"when": r["whn"], "title": r["title"], "text": r["text"], "finding": r["finding"] or None} for r in q("select * from timeline order by ord")],
-            "corrections": q("select * from correction"), "checks": checks, "scriptBase": KHIPU_URL,
-            "es": json.load(open(ROOT / "atlas/curated/es.json"))}
+            "corrections": q("select * from correction"), "checks": checks, "scriptBase": KHIPU_URL}
     s = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     OUT.write_text(s)
     print(f"data.json: khipus {len(khipus)}; sites {len(sites)}; edges {len(data['edges'])}; {len(s) // 1024} KB")
+    write_i18n(data)
+
+
+def write_i18n(data):
+    """Переводы интерфейса и содержимого: atlas/curated/i18n/<lang>.json → site/i18n/<lang>.json.
+
+    content — по ключам английского текста (находки по id; хронология, отрицательные результаты, источники — по
+    английскому заголовку), так что новая строка без перевода просто показывается по-английски.
+    """
+    src = ROOT / "atlas/curated/i18n"
+    out = ROOT / "site/i18n"
+    out.mkdir(exist_ok=True)
+    want = {"findings": {f["id"] for f in data["findings"]}, "timeline": {t["title"] for t in data["timeline"]},
+            "negatives": {n["title"] for n in data["negatives"]}, "sources": {x["title"] for x in data["sources"]},
+            "linkTypes": set(data["edgeTypes"])}
+    for f in sorted(src.glob("*.json")):
+        if f.stem == "en_source":
+            continue
+        t = json.load(open(f))
+        miss = {k: len(v - set(t.get("content", {}).get(k, {}))) for k, v in want.items()}
+        (out / f.name).write_text(json.dumps(t, ensure_ascii=False, separators=(",", ":")))
+        print(f"i18n/{f.name}: ui {sum(len(v) for v in t['ui'].values())} strings; untranslated content "
+              + ", ".join(f"{k} {n}" for k, n in miss.items() if n) if any(miss.values()) else
+              f"i18n/{f.name}: ui {sum(len(v) for v in t['ui'].values())} strings; content complete")
 
 
 if __name__ == "__main__":

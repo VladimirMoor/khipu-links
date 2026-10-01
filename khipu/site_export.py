@@ -52,6 +52,7 @@ def main():
     for f in ("data.json", "land.json", "terrain.json"):
         shutil.copy(SITE / f, DIST / f)
     shutil.copytree(SITE / "kd", DIST / "kd")
+    shutil.copytree(SITE / "i18n", DIST / "i18n")
     (DIST / "THIRD_PARTY_NOTICES.txt").write_text(NOTICE.format(
         okr=(ROOT / "data/open-khipu-repository/LICENSE").read_text().strip(),
         kfg=(ROOT / "data/kfg/kfg_article/LICENSE").read_text().strip()))

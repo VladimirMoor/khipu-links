@@ -22,4 +22,16 @@ Standalone copy for Vercel or any static host (wraps the page, adds data files a
 python3 khipu/site_export.py https://<project>.vercel.app && npx vercel deploy dist --prod
 ```
 
-The site (`site/index.html`) reads only the exported `site/data.json` and `site/kd/*.json`.
+The site (`site/index.html`) reads only the exported `site/data.json`, `site/kd/*.json` and `site/i18n/<lang>.json`.
+
+## Languages
+
+The page is written in English. Translations live in `curated/i18n/<lang>.json` (now `es`, `ru`, `de`), keyed by the
+English text: `ui.static` (short strings in the markup), `ui.mixed` (HTML blocks marked `data-i18n-html`, such as the
+*Start here* page), `ui.dyn` (strings passed to `tr()` in the code) and `content` (findings by id; timeline, negative
+results and sources by their English title; link types). `site_build.py` copies them to `site/i18n/`, and the page
+loads one only when a reader picks that language. Anything without a translation is shown in English.
+
+`python3 khipu/i18n_source.py` writes `curated/i18n/en_source.json`, the full list of English strings to translate,
+and reports what each language still lacks. To add a language: translate `en_source.json` into `curated/i18n/<lang>.json`,
+add the code to `LANGS` and a button in `.lang` in `site/index.html`, and rebuild.

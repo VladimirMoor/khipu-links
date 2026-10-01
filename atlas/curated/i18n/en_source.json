@@ -1,0 +1,541 @@
+{
+ "ui": {
+  "static": [
+   "3D relief",
+   "A register of the links between surviving Inka khipus",
+   "About",
+   "Aligns the pendant sequences (forward and reversed), lists identical groups, and finds the group totals of one khipu among the cords of the other, with the count expected by chance from values offset by ±1…±5.",
+   "All collectors",
+   "All places",
+   "Berlin khipus without cord data",
+   "Browse the catalogue",
+   "Catalogue",
+   "Central coast",
+   "Clear",
+   "Collection",
+   "Collector",
+   "Compare",
+   "Compare two khipus",
+   "Contact",
+   "Copy address",
+   "Data and code",
+   "Diagram of a khipu",
+   "Each claim below was tested against a baseline that keeps the khipus' structure, usually the same comparison with the values offset by a few units. None rose above it.",
+   "Every link we found between khipus is a copy of one account",
+   "Filter by structure",
+   "Find a khipu by number",
+   "Find a khipu: AS002, UR212, KH0049, VA 42508",
+   "Find numbers",
+   "Find-place",
+   "Find-places · approximate, village or valley level",
+   "Findings",
+   "Flat map",
+   "For a museum visit",
+   "For readers new to the subject",
+   "Four quarters",
+   "From the Inka storehouses to the museum shelves",
+   "Group descriptions: Staatliche Museen zu Berlin, Ethnologisches Museum, museum-digital (CC BY-NC-SA).",
+   "Groups",
+   "Groups (museum record)",
+   "Groups from",
+   "Height",
+   "How collections differ",
+   "How the khipus came to be where they are. Red points mark events tied to a finding.",
+   "How this was made",
+   "Inka and earlier centres",
+   "Inka roads (schematic)",
+   "Inventory",
+   "Khipu",
+   "Khipu A",
+   "Khipu B",
+   "Khipus as nodes, relations as edges",
+   "Knot data",
+   "Language",
+   "Largest value at least",
+   "Links",
+   "Locations are ours, placed by the provenance recorded in the OKR, the KFG and the museum records. They are approximate and do not reproduce any published map. Coastlines: Natural Earth, public domain. About 290 khipus have no recorded find-place and are not shown.",
+   "Main groups of size",
+   "Map",
+   "Map of khipu find-places on the Peruvian and Chilean coast",
+   "Map view",
+   "Mismatches allowed",
+   "Modern cities",
+   "Museum",
+   "Negative results",
+   "Network diagram of linked khipus",
+   "Network of links",
+   "New to khipus? Start here",
+   "No recorded find-place",
+   "Number",
+   "Number (AS002, UR212, KH0049, VA 42508), museum or place",
+   "Numbers",
+   "OKR, KFG and our transcriptions",
+   "On the object",
+   "One number finds every pendant (and, optionally, group total) with that value. Two or more numbers find runs of consecutive pendants or of consecutive group totals, in either direction. Values come from the catalogue layer (pendants' own values).",
+   "Only linked khipus",
+   "Open the map",
+   "Open the network",
+   "Overview",
+   "Pendants",
+   "Pendants at least",
+   "Read and used",
+   "Readings that decide our results and can only be settled on the khipus themselves, grouped by museum. Each check is useful whatever the outcome.",
+   "Recent research notes",
+   "Relief: Terrain Tiles (AWS Open Data; Mapzen; SRTM, GMTED2010 and ETOPO1), resampled to a 0.03° grid (about 3 km). Heights are exaggerated; the sea floor is flattened. Drag to rotate, right-drag or two fingers to pan, scroll or pinch to zoom.",
+   "Run the detectors yourself",
+   "Search",
+   "Search khipus",
+   "Sections",
+   "Select a khipu or a link. Grey dashed lines join two records of the same physical khipu.",
+   "Select a place to list its khipus. Circle area shows how many digitized khipus carry that provenance; red arcs join places that share a link. Scroll or pinch to zoom, drag to pan.",
+   "Sources",
+   "South coast",
+   "Start here",
+   "Statistics",
+   "Tested and not supported",
+   "The analysis and this site were produced with the help of an AI assistant (Claude, Anthropic), directed and checked by the author. Transcriptions made from scans were checked against the recorders' own totals.",
+   "This atlas collects the results of a corpus-wide search for arithmetic links between khipus in the open data of the Open Khipu Repository and the Khipu Field Guide, with two khipus we transcribed from record-sheet scans. Every detector was first run on relations already published, and every result was compared with structure-preserving baselines.",
+   "Timeline",
+   "Tolerance",
+   "Tools",
+   "Valleys",
+   "Vertical exaggeration",
+   "We ran arithmetic detectors over about 700 digitized khipus and compared every hit with a baseline that keeps the khipus' structure. What survives is a set of copies and excerpts. Some keep only the totals of an account, some only its details, some split one account over two khipus or join two accounts on one. We found no summary khipu built from other surviving khipus.",
+   "What each source gave this project. Texts of books and articles are not reproduced here.",
+   "What the evidence supports",
+   "Where the linked khipus come from",
+   "Whole region",
+   "Zoom in",
+   "Zoom out",
+   "any",
+   "e.g. 8653 or 1430, 670, 3410, 820",
+   "e.g. MM015",
+   "e.g. UR212",
+   "group totals too",
+   "has broken pendants",
+   "has proposed corrections",
+   "has subsidiaries",
+   "reversed order too",
+   "to"
+  ],
+  "mixed": {
+   "where": "Two links run from khipus labelled <b>Pachacamac</b> to khipus dug near <b>Huacho</b>, about 150 km up the coast, in two museums and through two different sellers. The map shows them as red arcs.",
+   "open": "<a href=\"#map\">Open the map</a> · <a href=\"#links\">Open the network</a> · <a href=\"#catalogue\">Browse the catalogue</a>",
+   "undig": "The Ethnologisches Museum's online records describe <span id=\"undig-n\"></span> khipus that are not digitized cord by cord. Their group structure is listed below; three of them share the 14-unit frame.",
+   "start-what": "<h2>What is a khipu?</h2>\n  <p>A khipu (also spelled <i>quipu</i>, from the Quechua word for “knot”) is a set of knotted cords that people in the Andes used to keep records. Most surviving khipus come from the Inka empire, which ruled the Andes from Ecuador to Chile in the fifteenth and early sixteenth centuries, until the Spanish conquest of 1532. Some are older, from the Wari state (about AD 600–1000). Khipus were made of cotton or camelid fibre, often dyed, and could hold from a handful to more than a thousand cords.</p>\n  <p>Spanish chroniclers describe specialists, the <i>khipukamayuq</i>, who kept khipus of the census, of tribute and of the contents of storehouses, and who “read” them aloud to officials. Some villages in Peru still kept khipus as community records in the twentieth century.</p>",
+   "start-numbers": "<h2>How numbers were knotted</h2>\n  <p>Many khipus record numbers in a decimal system that has been understood since 1912 (L. L. Locke). Each hanging cord carries one number. Position along the cord gives the place value: knots nearest the main cord are the highest place (thousands, hundreds), knots farthest from it are the units. An empty position means zero.</p>",
+   "start-legend": "<b>F</b> primary cord, from which the others hang. <b>A</b> reads 251: two single knots in the hundreds, five in the tens, a figure-eight knot for one unit. <b>B</b> reads 73: seven single knots in the tens and a long knot of three turns. <b>C</b> reads 304: the tens position is empty, so it is zero; the units are a long knot of four turns. <b>E</b> is a subsidiary, a cord tied to another cord (here 5). <b>D</b> is a top cord, rising above the primary cord; it carries 628, the sum of A, B and C. Sums like this, inside one khipu, are how much of khipu arithmetic was discovered.",
+   "start-where": "<h2>Where do they come from?</h2>\n  <p>Roughly a thousand khipus survive in museums around the world. Most come from burials on the dry Pacific coast of Peru and northern Chile, where the desert preserved the fibre. Many were dug up in the late nineteenth and early twentieth centuries, often by grave robbers (<i>huaqueros</i>), and sold to collectors and museums in Lima, Berlin, New York and elsewhere. As a result, the place recorded for a khipu is often only what a dealer said. About 700 khipus have been recorded cord by cord and are openly available as data; this atlas uses them.</p>",
+   "start-known": "<h2>What we know, and what we don't</h2>\n  <p>We can read the numbers on most khipus, and many khipus add up: one cord often holds the sum of a group of others. Khipus from an Inka storehouse at Inkawasi record deliveries of produce with a fixed deduction taken from each. What the numbers counted — people, llamas, bags of maize — is usually unknown, because the labels were kept by colours, cord order and the memory of the reader, not in writing. Whether some khipus also recorded words or stories is still debated. Only a handful of khipus have been matched to Spanish written records, such as khipus from the Santa valley and a colonial census (Medrano 2021).</p>",
+   "start-project": "<h2>What this project does</h2>\n  <p>Most studies look inside one khipu at a time. We looked for numbers shared <i>between</i> different khipus: one khipu that copies another, or one that holds the totals of another. Such links show how accountants handled several records of the same business — who kept the details and who kept the totals. With a computer we compared every khipu in the open data with every other one.</p>\n  <p>Because the corpus is large, some coincidences are bound to happen. So every link is tested against chance: we run the same search with the numbers slightly shifted, which keeps everything else the same, and count how many matches appear by accident. A link is reported only if it stands far above that level. Weaker patterns are labelled “suggestive”, and the searches that found nothing are listed under <a href=\"#negatives\">Negative results</a>.</p>",
+   "start-use": "<h2>How to use the atlas</h2>\n  <ul>\n  <li><a href=\"#overview\">Overview</a> — the main results on one page.</li>\n  <li><a href=\"#map\">Map</a> — where the khipus were found; red arcs join places with linked khipus. Switch to <i>3D relief</i> to see the coast and the Andes.</li>\n  <li><a href=\"#links\">Links</a> — a network of the khipus that are linked to each other.</li>\n  <li><a href=\"#catalogue\">Catalogue</a> — every khipu, with its museum, find-place, a 3D model and its cord values. Type a number such as AS143 or UR212 in the search box at the top.</li>\n  <li><a href=\"#findings\">Findings</a> — one page per result, with the evidence and the scripts that reproduce it.</li>\n  <li><a href=\"#tools\">Tools</a> — search for a sequence of numbers across all khipus, or compare two khipus.</li>\n  <li><a href=\"#timeline\">Timeline</a>, <a href=\"#stats\">Statistics</a>, <a href=\"#checks\">On the object</a> (what only a visit to the museum can settle), <a href=\"#sources\">Sources</a>.</li>\n  </ul>",
+   "start-glossary": "<h2>Words used on this site</h2>\n  <dl class=\"gloss\">\n  <dt>Primary cord</dt><dd>the main cord from which the others hang.</dd>\n  <dt>Pendant</dt><dd>a cord hanging from the primary cord; it usually carries one number.</dd>\n  <dt>Subsidiary</dt><dd>a cord tied to another cord rather than to the primary cord.</dd>\n  <dt>Top cord</dt><dd>a cord rising above the primary cord, often holding a sum.</dd>\n  <dt>Group</dt><dd>pendants set close together, separated from the next group by a space; groups often have the same structure.</dd>\n  <dt>Single, long and figure-eight knots</dt><dd>single knots count tens, hundreds and higher places; a long knot (2–9 turns) or a figure-eight knot (one) gives the units.</dd>\n  <dt>AS, UR, KH, MM…</dt><dd>catalogue numbers. AS numbers were given by Marcia and Robert Ascher, UR numbers by Gary Urton, KH numbers by the Khipu Field Guide; one khipu can have several. Museum numbers such as VA 42508 belong to the museums.</dd>\n  <dt>OKR, KFG</dt><dd>the Open Khipu Repository and the Khipu Field Guide, the two open databases of khipu recordings used here.</dd>\n  <dt>Copy, extract</dt><dd>a khipu that repeats the values of another, completely or in part.</dd>\n  <dt>Baseline</dt><dd>how many matches the same search finds by chance; a result counts only if it is far above it.</dd>\n  </dl>",
+   "start-read": "<h2>To read further</h2>\n  <p>Gary Urton, <i>Inka History in Knots</i> (2017); Marcia and Robert Ascher, <i>Code of the Quipu</i> (1981; the <i>Databook</i> is online at Cornell); Frank Salomon, <i>The Cord Keepers</i> (2004), on khipus kept in a Peruvian village. Our full results are in the <a href=\"https://github.com/VladimirMoor/khipu-links/blob/main/docs/preprint/preprint.pdf\">preprint</a>.</p>",
+   "repo": "Scripts, the full report and the study log are in the repository <a href=\"https://github.com/VladimirMoor/khipu-links\">github.com/VladimirMoor/khipu-links</a>; the paper is the <a href=\"https://github.com/VladimirMoor/khipu-links/blob/main/docs/preprint/preprint.pdf\">preprint (PDF, version 2)</a>. Cord data come from the OKR (MIT licence) and the KFG; please cite them when you use the values."
+  },
+  "dyn": [
+   "Acquired",
+   "Add a note (visible to everyone who can open the atlas)",
+   "Add note",
+   "All",
+   "All digitized khipus",
+   "All findings",
+   "Also known as",
+   "Applied",
+   "Aschers’ Databook",
+   "Back to the list",
+   "Basis",
+   "Cite this khipu",
+   "Collector",
+   "Compare with another khipu",
+   "Condition",
+   "Copy cord values as CSV",
+   "Cord",
+   "Cord values and knot positions as recorded in the Open Khipu Repository",
+   "Cords",
+   "Data",
+   "Delete",
+   "Elsewhere",
+   "Enter one or more numbers.",
+   "Enter two different khipu numbers.",
+   "Evidence",
+   "Evidence and khipus",
+   "Exactly 14 main groups",
+   "Findings",
+   "Flat schematic",
+   "Folded copies, known copies recovered, the Dumbarton Oaks transcriptions.",
+   "Green: equal · red: different · grey: no counterpart.",
+   "Group sizes (pendants per group)",
+   "Group totals found among the other khipu's cords",
+   "Hanging",
+   "Identical groups",
+   "In a link or finding",
+   "Khipu Field Guide values; knot positions not recorded (the 3D model is a reconstruction)",
+   "Khipus",
+   "Knot types (recorded knots only)",
+   "Knots as recorded (OKR)",
+   "Knots from our transcription of the record sheets",
+   "Known, refined",
+   "Laid flat",
+   "Length",
+   "Linked",
+   "Links",
+   "Loading notes…",
+   "Loading the 3D model…",
+   "Loading the relief…",
+   "Median pendants",
+   "Model",
+   "Museum",
+   "Museum record (museum-digital)",
+   "Nearby",
+   "Negative",
+   "New",
+   "New data",
+   "No khipu with that number",
+   "No notes on this khipu yet.",
+   "No shared runs.",
+   "Notes are shared among signed-in viewers of the atlas and are not available in this view.",
+   "Number",
+   "OKR",
+   "Open",
+   "Open in the catalogue",
+   "Our transcription of Urton’s record sheets (OKR scans), checked against his own totals",
+   "Part of",
+   "Pendant values",
+   "Pendant values by group",
+   "Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.",
+   "Place",
+   "Places",
+   "Proposed",
+   "Proposed readings",
+   "Provenance",
+   "Reconstructed from values (no knot positions recorded)",
+   "Recorded",
+   "Relief map of the Peruvian and Chilean coast with khipu find-places",
+   "Reproduce",
+   "Research notes",
+   "Reset view",
+   "Same khipu",
+   "Same khipu recorded twice",
+   "Same object",
+   "Saving…",
+   "Show values as recorded",
+   "Show values with proposed readings",
+   "Someone",
+   "Suggestive",
+   "Summary",
+   "The note could not be saved. Try again.",
+   "The notes store is full.",
+   "The relief could not be loaded.",
+   "Values",
+   "What to check",
+   "Where",
+   "Why it matters",
+   "With broken pendants",
+   "With subsidiaries",
+   "You can read the notes. To add your own, ask the owner of the atlas for Contributor access.",
+   "Zero-valued pendants",
+   "broken pendants of",
+   "cord with subsidiaries",
+   "cords with subsidiaries",
+   "digitized khipu",
+   "digitized khipus",
+   "figure-8",
+   "find-places",
+   "findings",
+   "first 300 shown",
+   "forward",
+   "group",
+   "groups",
+   "in a link or finding",
+   "khipus in a link",
+   "khipus with cord data",
+   "largest value",
+   "link",
+   "links",
+   "links between khipus",
+   "long",
+   "map",
+   "match",
+   "matches",
+   "negative results",
+   "other",
+   "pendant",
+   "pendants",
+   "reversed",
+   "single",
+   "subsidiaries",
+   "{b} broken pendants of {n}; {s} subsidiaries",
+   "…and {n} more"
+  ]
+ },
+ "content": {
+  "findings": {
+   "basel": {
+    "title": "Two Pachacamac accounts joined on a Huacho khipu",
+    "summary": "Six fragments sewn on the Basel cloth IVc.366.03 (dug near Huacho, bought 1910) repeat runs of two Berlin khipus labelled Pachacamac: UR212 (37 of 195 pendants) and AS131 (25 of 146). UR212 and AS131 each have 14 main groups, divided 7 + 7 at the same point. Every fragment that carries both khipus pairs the same unit (units 1, 4 and 14), so the Huacho khipu set the two halves of one 14-unit account side by side, 14 + 10 cords per unit.",
+    "evidence": [
+     "Other khipus with ≥ 100 pendants match at most 4 cords (median 0).",
+     "Same unit in 3 of 3 fragments: p ≈ (1/14)² ≈ 0.005.",
+     "Where Berlin leaves a colour-marked cord knotless, the Basel copy carries a value (3 of 3); other knotless cords stay knotless.",
+     "Unit totals of UR212 and AS131 are not correlated (ρ = 0.19): different categories of the same units."
+    ]
+   },
+   "frame14": {
+    "title": "A 14-unit frame in Gretzer's Berlin batch",
+    "summary": "Fourteen main groups are rare (1.6% of khipus outside the Berlin 'Pachacamac' batch) but occur on 4 of 23 khipus of that batch: UR212, AS131, AS170 and UR199. Berlin catalogue records describe three more that are not digitized: VA 42513 (14 × 13 pendants), VA 42537 (14 × 9) and VA 42532 (7 × A, 7 × B, 7 × A, 7 × B). AS131, UR212 and AS170 split their units 7 + 7 at the same place, each marked differently: a larger space, a single knotless cord, a marker.",
+    "evidence": [
+     "Binomial P ≈ 0.0005 with all four; P ≈ 0.04 without the two khipus that prompted the question.",
+     "Across 109 OKR khipus with an even number of main groups, the largest space falls in the middle 12.9 times (13.0 expected): equal halves are not a general habit."
+    ]
+   },
+   "berlin": {
+    "title": "One allocation on three Ica khipus (Berlin, 1907)",
+    "summary": "AS143 group 4 equals AS149 groups 1 + 2 in all five positions (17436 = 8653 + 8783, 41883 = 20640 + 21243, …). All shares have the same composition (22.4 : 10.4 : 54.4 : 12.8 %); in ninths of the AS143 total the shares are 2 + 2 + 2 + 2 + 1. The lot 1430, 670, 3410, 820 recurs on AS179.",
+    "evidence": [
+     "The only exact cross-khipu vector sum in the corpus (offset baseline 0–2, small values only).",
+     "Two 2/9 shares of AS143 are equal within 1 (41062 and 41061) with a substitution between goods (p ≈ 0.005)."
+    ]
+   },
+   "huacho1": {
+    "title": "Pachacamac → Huacho: the details without the totals",
+    "summary": "The spliced Huacho khipus UR233 + UR232 (Berlin VA 63038b, Gaffron) repeat parts 1 and 3 of AS175 (VA 42518, Gretzer) group by group, leave out part 2 (the sums of part 3) and add one knotless pendant to every group.",
+    "evidence": [
+     "z = 6.4 and 19.5 against other offsets; group-order permutation p ≤ 0.003.",
+     "Different objects: cords per group, lengths and subsidiaries differ."
+    ]
+   },
+   "as118": {
+    "title": "AS118 links two other Pachacamac khipus",
+    "summary": "Groups 2–3 of AS118 repeat groups 2–3 of UR218 cord for cord, knot counts included. The five subsidiaries of its first, knotless pendant follow the group totals of AS125: 14658 exact, 8565 if one cord the Aschers left unread is 3111.",
+    "evidence": [
+     "Among 696 khipus only AS125 matches more than one of the five values; none on the offset baseline."
+    ]
+   },
+   "ur269": {
+    "title": "Inkawasi UR269: the deduction is set by the place of the record",
+    "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size (1.9% in places 2–4, 3.0% in place 1, 4.4% in place 5). Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268 from the same room, but no record-level link was found.",
+    "evidence": [
+     "33 of 43 deductions equal their place value; 17 when records are shuffled within blocks (p ≈ 0.0005).",
+     "No other Inkawasi khipu shows a place dependence (all p > 0.8)."
+    ]
+   },
+   "inkawasi": {
+    "title": "Inkawasi: empty slots, totals-only copies, product labels",
+    "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. UR273B records only the deposit totals of UR274B (6 shared totals, 0.45 expected). Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
+    "evidence": [
+     "Split this clean under random placement: about 1 in 3,000.",
+     "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵."
+    ]
+   },
+   "as003": {
+    "title": "AS003: a record of the totals only",
+    "summary": "AS003 (Heye 17/8827) repeats the summary part of AS215 (Hood Museum, Nazca): six values that are sums over the four groups of its other part, and the top cord 76 that totals them. It is a second totals-only record, after UR273B at Inkawasi.",
+    "evidence": [
+     "The Aschers' AS215 entry (Databook pp. 127–132) describes the summary but does not mention AS003."
+    ]
+   },
+   "folded": {
+    "title": "Folded copies",
+    "summary": "In two independent cases a separate cord in one copy is a subsidiary in the other: UR270 → UR278 at Inkawasi and UR053C → UR053B in the Waterfall set. The packing rule is ours; the near-duplication of B and C was noted by Chirinos.",
+    "evidence": [
+     "UR053B/C: 35 fields match against at most 19 in 2,000 shuffles."
+    ]
+   },
+   "known": {
+    "title": "Known copies recovered",
+    "summary": "The detectors find, without being told, the copies already published: Lima → Gothenburg (KH0049 → UR122, one branch of the account), Lima ↔ Paris (HP055 ~ AS084), AS114/AS123 (Urton 2005), Puruchuco UR066 ~ UR067, AS069/AS070 (Thompson 2024), and duplicate recordings of one object.",
+    "evidence": []
+   },
+   "dumbarton": {
+    "title": "Two Dumbarton Oaks khipus transcribed",
+    "summary": "UR297 (438 pendants, 623 cords) and UR298 (203 pendants, 285 cords), given by Bill Conklin, exist in the OKR only as scans of Urton's handwritten sheets. We transcribed all 65 pages. 74 of the 78 group totals Urton noted on the sheets equal ours. UR297 has 41 groups, mostly ten cords plus one summary cord pulled up like a top cord. Neither khipu is linked to any other.",
+    "evidence": []
+   }
+  },
+  "timeline": {
+   "Inka period": {
+    "title": "Inka period",
+    "text": "Most khipus of the corpus date to the Inka period; radiocarbon dates, where tested, fall here."
+   },
+   "Huanca lords record what they gave the Spaniards": {
+    "title": "Huanca lords record what they gave the Spaniards",
+    "text": "Their khipus, read out in court, keep the shares of the valley's three parts, 4 : 2 : 3 (Chirinos 2010)."
+   },
+   "A summary khipu equals twelve detail khipus": {
+    "title": "A summary khipu equals twelve detail khipus",
+    "text": "Hatun Xauxa's summary of 1558 is the sum of the detail khipus shown in 1561 (Chirinos 2010). No such pair survives in the corpus."
+   },
+   "Third Council of Lima": {
+    "title": "Third Council of Lima",
+    "text": "The council orders khipus to be destroyed; the court record of khipu readings ends soon after."
+   },
+   "Wilhelm Gretzer arrives in Peru": {
+    "title": "Wilhelm Gretzer arrives in Peru",
+    "text": "A textile merchant from Hanover, he builds the largest collection of its time, mostly from grave robbers."
+   },
+   "Macedo collection to Berlin": {
+    "title": "Macedo collection to Berlin",
+    "text": "Berlin buys about 2,400 objects from José Mariano Macedo of Lima."
+   },
+   "Eduard Gaffron practises medicine in Lima": {
+    "title": "Eduard Gaffron practises medicine in Lima",
+    "text": "His collection later reaches Berlin (the Huacho khipus VA 63038–63044), Detmold and other museums."
+   },
+   "Max Uhle excavates at Pachacamac": {
+    "title": "Max Uhle excavates at Pachacamac",
+    "text": "The first systematic excavation of the sanctuary."
+   },
+   "Baessler gift": {
+    "title": "Baessler gift",
+    "text": "Arthur Baessler gives Berlin about 11,690 objects."
+   },
+   "Khipus 'between Ica and Pisco' reach Berlin": {
+    "title": "Khipus 'between Ica and Pisco' reach Berlin",
+    "text": "Among them AS114, whose block recurs on AS123."
+   },
+   "Berlin buys Gretzer's collection": {
+    "title": "Berlin buys Gretzer's collection",
+    "text": "About 40,000 objects, most labelled Pachacamac, among them UR212, AS131, AS170 and AS175."
+   },
+   "The Ica khipus AS143, AS149, AS179 enter Berlin": {
+    "title": "The Ica khipus AS143, AS149, AS179 enter Berlin",
+    "text": "One allocation spread over three khipus of the same batch."
+   },
+   "Gaffron khipus in Detmold": {
+    "title": "Gaffron khipus in Detmold",
+    "text": "Entered with other objects from his collection."
+   },
+   "Basel buys khipus dug near Huacho": {
+    "title": "Basel buys khipus dug near Huacho",
+    "text": "The ship's doctor Arnold Masarey sells a cache of cords; the museum's report calls them calendar records."
+   },
+   "Nordenskiöld mounts the Huacho khipus": {
+    "title": "Nordenskiöld mounts the Huacho khipus",
+    "text": "Ten fragments and loose cords are sewn onto a cloth, IVc.366.03, and pieces face both ways."
+   },
+   "Nordenskiöld's calendar reading": {
+    "title": "Nordenskiöld's calendar reading",
+    "text": "He publishes the calendar hypothesis but not the Basel khipus."
+   },
+   "The Aschers' Databooks": {
+    "title": "The Aschers' Databooks",
+    "text": "Cord-by-cord records of more than 200 khipus, with observations such as the 7 + 7 parts of AS131 and AS170."
+   },
+   "Inkawasi storehouse excavated": {
+    "title": "Inkawasi storehouse excavated",
+    "text": "Alejandro Chu recovers 34 khipus, some under chili peppers, peanuts and black beans."
+   },
+   "Urton & Chu on Inkawasi": {
+    "title": "Urton & Chu on Inkawasi",
+    "text": "Matched pairs and fixed deductions 10, 15, 47, 208."
+   },
+   "Conklin khipus at Dumbarton Oaks": {
+    "title": "Conklin khipus at Dumbarton Oaks",
+    "text": "UR297 and UR298 enter the collection."
+   },
+   "Huacones-Vilcahuasi": {
+    "title": "Huacones-Vilcahuasi",
+    "text": "Eleven khipus found rolled together near a chili storeroom and a floor yupana."
+   },
+   "Medrano traces the Basel khipus to Huacho": {
+    "title": "Medrano traces the Basel khipus to Huacho",
+    "text": "The museum archive names the burial ground near Huacho and the 1924 mounting."
+   },
+   "This atlas": {
+    "title": "This atlas",
+    "text": "Corpus-wide search: every link between surviving khipus is a copy of one account."
+   }
+  },
+  "negatives": {
+   "Summary khipus": {
+    "title": "Summary khipus",
+    "text": "No khipu records the group totals or column sums of another beyond chance (384 pairs against 415.6 on the offset baseline)."
+   },
+   "Compilations": {
+    "title": "Compilations",
+    "text": "Apart from the Basel fragments, no khipu combines runs from two or more other khipus."
+   },
+   "Colonial documents": {
+    "title": "Colonial documents",
+    "text": "About 2,300 numbers from roughly 70 open transcriptions match no digitized khipu."
+   },
+   "Huacones-Vilcahuasi hierarchy": {
+    "title": "Huacones-Vilcahuasi hierarchy",
+    "text": "Totals of one khipu on the next are at the level of chance (offset baseline)."
+   },
+   "Opposite attachment in copies": {
+    "title": "Opposite attachment in copies",
+    "text": "Recto on one copy and verso on the other in 7 of 10 pairs, against 50% at random (p ≈ 0.17)."
+   },
+   "Same suppliers in the same order": {
+    "title": "Same suppliers in the same order",
+    "text": "Deposit sizes of different Inkawasi khipus do not correlate by position."
+   },
+   "Copies respect group boundaries": {
+    "title": "Copies respect group boundaries",
+    "text": "Run endpoints fall on group boundaries in 38% of cases against 46% expected."
+   },
+   "Broken cords as lower bounds": {
+    "title": "Broken cords as lower bounds",
+    "text": "Sums with a broken part are exact half as often (35% vs 68%), but the sign shows no loss of knots."
+   },
+   "Equal-share convention": {
+    "title": "Equal-share convention",
+    "text": "Pairs of equal-total groups are not over-represented corpus-wide (p ≈ 0.1)."
+   },
+   "Pachacamac style vs Huacho style": {
+    "title": "Pachacamac style vs Huacho style",
+    "text": "Simple numeric features do not separate site-museum Pachacamac khipus from Huacho khipus."
+   },
+   "Sign convention": {
+    "title": "Sign convention",
+    "text": "Neither attachment side nor colour marks negative cords."
+   },
+   "Syllables in non-decimal khipus": {
+    "title": "Syllables in non-decimal khipus",
+    "text": "The non-decimal signs of Wari-style khipus have far too small an alphabet for syllables."
+   },
+   "Calendar reading": {
+    "title": "Calendar reading",
+    "text": "Group and cord counts give no calendar numbers beyond chance."
+   },
+   "Colour of the product": {
+    "title": "Colour of the product",
+    "text": "Colour is not carried into copies and does not mark the product at Inkawasi."
+   }
+  },
+  "sources": {
+   "Ascher & Ascher, Code of the Quipu Databook I–II (1978, 1988)": "Cord records and observations for AS khipus; the 7 + 7 parts of AS131 and AS170; AS215's summary part.",
+   "Open Khipu Repository (OKR)": "SQLite database (MIT licence), cord positions, record-sheet scans of UR297/UR298 and Huacones-Vilcahuasi.",
+   "Khipu Field Guide (KFG)": "Cleaned cord data for about 680 khipus; the 2026 catalogue lists 711.",
+   "Staatliche Museen zu Berlin, museum-digital": "305 khipu records: collectors (Gretzer, Gaffron…) and group descriptions of undigitized khipus.",
+   "Chirinos Rivera, Quipus del Tahuantinsuyo (2010)": "Colonial allocations in ninths, summary = sum of details, copies in three exemplars.",
+   "Urton & Chu, Accounting in the King's Storehouse (LAA 2015) and supplements": "Inkawasi inventory; matched pairs; UR269 listed without a repeating value.",
+   "Urton & Chu, The Invention of Taxation in the Inka Empire (LAA 2019)": "Fixed deductions 10, 15, 47, 208; the 2% proportionality we test on UR269.",
+   "Chu & Urton, El archivo khipu de Incawasi (2018)": "Spanish version; table of khipus found with produce.",
+   "Urton, Quipus de Pachacamac (2014)": "Inventory of the Berlin Pachacamac khipus.",
+   "Medrano, The promise of Andean khipu transcriptions (MPhil thesis, St Andrews 2022)": "Provenance of Basel IVc.366.03: dug near Huacho, bought 1910; mounted under Nordenskiöld in 1924.",
+   "Barraza Lescano et al., By Stones and by Knots (Andean Past 2022)": "Huacones-Vilcahuasi context and Table 3, which checks our transcription.",
+   "Thompson, A Numerical Connection Between Two Khipus (2024)": "AS069/AS070, used to validate the detectors.",
+   "Pereyra, Dos quipus excepcionales (1996)": "Detailed khipu descriptions.",
+   "Nordenskiöld, Calculations with Years and Months in the Peruvian Quipus (1925)": "Calendar hypothesis; context of the Basel mounting.",
+   "Locke, A Peruvian Quipu (1927)": "A Heye khipu with summary top cords.",
+   "Eeckhout, La sombra de Ychsma (BIFEA 2004)": "Ychsma organization; no 7 + 7 unit match.",
+   "Lambayeque-style textiles in the Ethnologisches Museum, Berlin (Nuevo Mundo Mundos Nuevos)": "How Gretzer collected: grave robbers, 'Pachacamac' labels.",
+   "Curatola & de la Puente (eds.), El quipu colonial (2013)": "Colonial transcriptions used in the document match.",
+   "Contreras, Structural pattern mining in Inka khipus (arXiv 2026)": "Santa Valley recto/verso validation.",
+   "Terrain Tiles (AWS Open Data Registry; Mapzen; SRTM, GMTED2010, ETOPO1)": "Relief of the 3D map: elevations resampled to a 0.03° grid by khipu/terrain.py."
+  },
+  "linkTypes": {
+   "sum": "Sum across khipus",
+   "lot": "Shared lot",
+   "details": "Details without totals",
+   "excerpt": "Excerpt",
+   "totals": "Totals only",
+   "join": "Two accounts joined",
+   "copy": "Matching copy",
+   "fold": "Folded copy"
+  }
+ }
+}
