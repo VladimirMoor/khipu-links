@@ -50,6 +50,8 @@ section.view{padding-top:20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
 .card h3{margin:0;font-size:1.05rem}
+.card>div:first-child:has(>.chip){margin-bottom:4px}
+.drawer>.chip{margin-bottom:12px}
 .card p{margin:0;font-size:.95rem}
 .card a.more{font-family:var(--f-display);font-size:.9rem;margin-top:auto}
 .split{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
