@@ -148,6 +148,19 @@ def main():
     names = defaultdict(list)
     for r in q("select khipu, name from khipu_name order by name"):
         names[r["khipu"]].append(r["name"])
+    import re
+    norm = lambda x: re.sub(r"[^0-9A-Z]", "", str(x).upper())
+    smb = {r["norm"]: r["url"] for r in q("select * from smb_object")}
+    acq = q("select * from acquisition")
+    brk = {r["khipu"]: r["n"] for r in q("select khipu, count(*) as n from cord where level = 1 and termination = 'B' group by khipu")}
+    nsub = {r["khipu"]: r["n"] for r in q("select khipu, count(*) as n from cord where level > 1 group by khipu")}
+    corr = defaultdict(list)
+    for r in q("select * from correction"):
+        corr[r["khipu"]].append(r)
+    checks = q("select * from object_check")
+    ktypes = defaultdict(dict)
+    for r in q("select k.khipu, k.type, sum(k.n) as n from model_knot k join model_meta m on m.khipu = k.khipu where m.quality != 'recon' group by k.khipu, k.type"):
+        ktypes[r["khipu"]][r["type"]] = r["n"]
     khipus = []
     for m in q("select * from khipu order by id"):
         k = m["id"]
@@ -157,7 +170,12 @@ def main():
                        "site": m["site"], "collector": m["collector"], "names": names.get(k, []), "np": m["n_pendants"], "nc": m["n_cords"], "model": m["model"],
                        "groups": [len(list(g)) for _, g in itertools.groupby(rs, key=lambda r: r["group"])],
                        "v": vals, "c": [r["color"] for r in rs], "max": max(vals) if vals else 0, "sum": sum(vals),
-                       "findings": sorted(set(find_k.get(k, []) + edge_k.get(k, [])))})
+                       "findings": sorted(set(find_k.get(k, []) + edge_k.get(k, []))),
+                       "brk": brk.get(k, 0), "nsub": nsub.get(k, 0), "corr": corr.get(k, []), "kt": ktypes.get(k, {}),
+                       "kfg": next((n for n in [k] + names.get(k, []) if re.fullmatch(r"KH\d{4}[A-Z]?", n)), ""),
+                       "ascher": next((n for n in [m["alias"], k] + names.get(k, []) if n and re.fullmatch(r"AS\d{3}[A-Z]?", n)), ""),
+                       "smb": next((u for kk, u in smb.items() if m["num"] and (norm(m["num"]) == kk or (norm(m["num"]).startswith(kk) and len(norm(m["num"])) - len(kk) <= 2))), ""),
+                       "acq": next(({"via": a["via"], "year": a["year"], "note": a["note"]} for a in acq if norm(m["num"]).startswith(norm(a["num_prefix"]))), None)})
     ids = {x["id"] for x in khipus}
     site_counts = Counter(x["site"] for x in khipus if x["site"])
     sites = [dict(r, n=site_counts.get(r["id"], 0)) for r in q("select * from site") if site_counts.get(r["id"], 0)]
@@ -174,7 +192,7 @@ def main():
             "context": q("select kind, label, lat, lon, note from context"),
             "roads": [{"kind": r["kind"], "pts": [[lo, la] for la, lo in json.loads(r["pts"])]} for r in q("select * from road")],
             "timeline": [{"when": r["whn"], "title": r["title"], "text": r["text"], "finding": r["finding"] or None} for r in q("select * from timeline order by ord")],
-            "corrections": q("select * from correction"), "scriptBase": KHIPU_URL}
+            "corrections": q("select * from correction"), "checks": checks, "scriptBase": KHIPU_URL}
     s = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     OUT.write_text(s)
     print(f"data.json: khipus {len(khipus)}; sites {len(sites)}; edges {len(data['edges'])}; {len(s) // 1024} KB")

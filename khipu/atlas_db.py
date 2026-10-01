@@ -49,6 +49,9 @@ create table timeline(ord int, whn text, title text, text text, finding text);
 create table correction(khipu text, cord text, field text, recorded text, corrected text, applied text, source text, note text);
 create table undigitized(inv text, collector text, groups text, url text);
 create table khipu_name(khipu text, name text, source text);
+create table object_check(museum text, khipu text, cord text, ck text, why text);
+create table acquisition(num_prefix text, via text, year text, note text);
+create table smb_object(norm text, url text);
 """
 
 
@@ -156,6 +159,13 @@ def main():
         cc = re.search(r"Sammler:\s*([^\n]+)", desc)
         db.execute("insert into undigitized values(?,?,?,?)", (inv, cc.group(1).strip() if cc else "", (g.group(1).strip() if g else "")[:140],
                    f"https://smb.museum-digital.de/object/{d['object_id']}"))
+    db.executemany("insert into object_check values(?,?,?,?,?)", [(r["museum"], r["khipu"], r["cord"], r["check"], r["why"]) for r in rows("object_checks.csv")])
+    db.executemany("insert into acquisition values(?,?,?,?)", [(r["num_prefix"], r["via"], r["year"], r["note"]) for r in rows("acquisitions.csv")])
+    smb = []
+    for f in os.listdir(ROOT / "data/smb/obj"):
+        d = json.load(open(ROOT / "data/smb/obj" / f))
+        smb.append((norm(d["object_inventory_number"]), f"https://smb.museum-digital.de/object/{d['object_id']}"))
+    db.executemany("insert into smb_object values(?,?)", smb)
     # other numbers of the same khipu (KFG catalogue names and their aliases)
     known = {x[0] for x in db.execute("select id from khipu")}
     names = set()

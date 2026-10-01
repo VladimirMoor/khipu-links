@@ -134,6 +134,26 @@ ol.tl h3{margin:.1em 0 .2em}
 .gs li[aria-selected="true"],.gs li:hover{background:var(--soft)}
 .gs li b{font-family:var(--f-mono);font-size:.88rem;white-space:nowrap}
 .gs li span{font-size:.82rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toolgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.form{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:8px 0 12px}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--muted);font-family:var(--f-display)}
+.form label.inline{flex-direction:row;align-items:center;gap:6px;color:var(--ink)}
+.form input[type=text],.form input[type=number],.form select{font:inherit;font-size:.95rem;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-width:0}
+.form input.wide{width:min(420px,100%)}
+.btn{font-family:var(--f-display);font-size:.92rem;border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:8px;padding:7px 14px;cursor:pointer}
+.btn.ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.hit{background:color-mix(in srgb,var(--ok) 22%,transparent);border-radius:3px;padding:0 2px}
+.miss{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px;padding:0 2px}
+.seq{font-family:var(--f-mono);font-size:.82rem}
+.moref{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:0 0 12px;background:var(--surface)}
+.moref summary{cursor:pointer;font-family:var(--f-display);font-size:.92rem}
+.moref .form{margin:10px 0 2px}
+.chart{width:100%;max-width:560px}
+.chart text{font-size:11px;font-family:var(--f-display)}
+.bars rect{fill:var(--cord)}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+pre.cite{white-space:pre-wrap;font-family:var(--f-mono);font-size:.82rem;background:var(--soft);border-radius:8px;padding:10px;margin:6px 0}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
 .loading{color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -144,8 +164,8 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 5 H24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 5 V22"/><path d="M11 5 V17"/><path d="M16 5 V24"/><path d="M21 5 V14"/></g><g fill="currentColor"><circle cx="6" cy="10" r="1.6"/><circle cx="6" cy="13.5" r="1.6"/><circle cx="16" cy="12" r="1.6"/><circle cx="11" cy="14" r="1.6"/><circle cx="21" cy="11" r="1.6"/><circle cx="16" cy="19" r="1.6"/></g></svg>
     Khipu Links Atlas</a>
   <nav class="tabs" aria-label="Sections">
-    <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a>
-    <a href="#findings">Findings</a><a href="#timeline">Timeline</a><a href="#negatives">Negative results</a><a href="#sources">Sources</a><a href="#about">About</a>
+    <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a><a href="#tools">Tools</a>
+    <a href="#findings">Findings</a><a href="#timeline">Timeline</a><a href="#negatives">Negative results</a><a href="#stats">Statistics</a><a href="#checks">On the object</a><a href="#sources">Sources</a><a href="#about">About</a>
   </nav>
   <form class="gs" id="gs" role="search" autocomplete="off">
     <input type="search" id="gq" placeholder="Find a khipu: AS002, UR212, KH0049, VA 42508" aria-label="Find a khipu by number" aria-autocomplete="list" aria-controls="gsug">
@@ -203,6 +223,19 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     <label><input type="checkbox" id="f-link"> Only linked khipus</label>
     <span class="note" id="count"></span>
   </div>
+  <details class="moref"><summary>Filter by structure</summary>
+    <div class="form" id="sf">
+      <label>Groups from<input type="number" id="sf-g1" min="0" style="width:6em"></label><label>to<input type="number" id="sf-g2" min="0" style="width:6em"></label>
+      <label>Main groups of size<input type="number" id="sf-gs" min="1" style="width:6em" placeholder="any"></label>
+      <label>Pendants at least<input type="number" id="sf-np" min="0" style="width:7em"></label>
+      <label>Largest value at least<input type="number" id="sf-mx" min="0" style="width:8em"></label>
+      <label>Knot data<select id="sf-q"><option value="">any</option><option value="okr">recorded (OKR)</option><option value="sheet">our transcription</option><option value="recon">reconstructed</option></select></label>
+      <label class="inline"><input type="checkbox" id="sf-sub"> has subsidiaries</label>
+      <label class="inline"><input type="checkbox" id="sf-brk"> has broken pendants</label>
+      <label class="inline"><input type="checkbox" id="sf-cor"> has proposed corrections</label>
+      <button class="btn ghost" type="button" id="sf-reset">Clear</button>
+    </div>
+  </details>
   <div id="detail"></div>
   <div class="tablewrap"><table>
     <thead><tr><th>Khipu</th><th>Museum</th><th>Number</th><th>Find-place</th><th>Collector</th><th class="num">Pendants</th><th class="num">Groups</th></tr></thead>
@@ -225,6 +258,50 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   <h1>Timeline</h1>
   <p>How the khipus came to be where they are. Red points mark events tied to a finding.</p>
   <ol class="tl" id="tl"></ol>
+</section>
+
+<section class="view" id="v-tools" hidden>
+  <p class="eyebrow">Run the detectors yourself</p>
+  <h1>Tools</h1>
+  <div class="toolgrid">
+  <div class="panel">
+    <h2 style="margin-top:0">Find numbers</h2>
+    <p class="note">One number finds every pendant (and, optionally, group total) with that value. Two or more numbers find runs of consecutive pendants or of consecutive group totals, in either direction. Values come from the catalogue layer (pendants' own values).</p>
+    <form class="form" id="ns-form">
+      <label>Numbers<input type="text" id="ns-q" class="wide" placeholder="e.g. 8653 or 1430, 670, 3410, 820" value="1430, 670, 3410, 820"></label>
+      <label>Tolerance<select id="ns-tol"><option value="0">exact</option><option value="1">± 1</option><option value="2">± 2</option><option value="10">± 10</option></select></label>
+      <label>Mismatches allowed<select id="ns-mis"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
+      <label class="inline"><input type="checkbox" id="ns-rev" checked> reversed order too</label>
+      <label class="inline"><input type="checkbox" id="ns-grp" checked> group totals too</label>
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <div id="ns-out"></div>
+  </div>
+  <div class="panel">
+    <h2 style="margin-top:0">Compare two khipus</h2>
+    <p class="note">Aligns the pendant sequences (forward and reversed), lists identical groups, and finds the group totals of one khipu among the cords of the other, with the count expected by chance from values offset by ±1…±5.</p>
+    <form class="form" id="cmp-form">
+      <label>Khipu A<input type="text" id="cmp-a" placeholder="e.g. UR212" value="UR212"></label>
+      <label>Khipu B<input type="text" id="cmp-b" placeholder="e.g. MM015" value="MM015"></label>
+      <button class="btn" type="submit">Compare</button>
+    </form>
+    <div id="cmp-out"></div>
+  </div>
+  </div>
+</section>
+
+<section class="view" id="v-stats" hidden>
+  <p class="eyebrow">How collections differ</p>
+  <h1>Statistics</h1>
+  <form class="form" id="st-form"><label>Collection<select id="st-sel"></select></label><span class="note" id="st-n"></span></form>
+  <div class="statgrid" id="st-out"></div>
+</section>
+
+<section class="view" id="v-checks" hidden>
+  <p class="eyebrow">For a museum visit</p>
+  <h1>On the object</h1>
+  <p>Readings that decide our results and can only be settled on the khipus themselves, grouped by museum. Each check is useful whatever the outcome.</p>
+  <div id="ck-out"></div>
 </section>
 
 <section class="view" id="v-negatives" hidden>
@@ -418,7 +495,7 @@ function renderRows(){
   const q=$('#q').value.trim().toLowerCase(), st=$('#f-site').value, co=$('#f-coll').value, ln=$('#f-link').checked;
   const hits=q?new Set(findKhipus(q,10000).map(k=>k.id)):null;
   const rows=(q?findKhipus(q,10000):D.khipus).filter(k=>(!hits||hits.has(k.id))
-    &&(!st||(st==='_none'?!k.site:k.site===st))&&(!co||k.collector===co)&&(!ln||k.findings.length));
+    &&(!st||(st==='_none'?!k.site:k.site===st))&&(!co||k.collector===co)&&(!ln||k.findings.length)&&sfOk(k));
   $('#count').textContent=`${rows.length} of ${D.khipus.length}`;
   $('#rows').innerHTML=rows.map(k=>`<tr data-id="${k.id}"><td>${k.findings.length?'<span class="dot" title="In a link or finding"></span>':''}<b>${esc(nameTxt(k))}</b></td><td>${esc(k.museum)}</td><td class="mono">${esc(k.num)}</td><td>${esc(siteLabel(k.site)||k.prov)}</td><td>${esc(k.collector)}</td><td class="num">${k.np}</td><td class="num">${k.groups.length}</td></tr>`).join('');
 }
@@ -442,6 +519,7 @@ function showKhipu(id){
    <dl class="meta"><dt>Museum</dt><dd>${esc(k.museum)||'—'}</dd><dt>Number</dt><dd class="mono">${esc(k.num)||'—'}</dd>
    <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}${(k.names||[]).length?`<dt>Also known as</dt><dd class="mono">${k.names.map(esc).join(', ')}</dd>`:''}
    <dt>Cords</dt><dd>${k.np} pendants, ${k.nc} cords with subsidiaries, ${k.groups.length} groups; largest value ${k.max.toLocaleString('en')}</dd></dl>
+   ${cardExtras(k)}
    <h3>Model</h3>
    <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">Hanging</button><button type="button" id="m-flat" aria-pressed="false">Laid flat</button><button type="button" id="m-reset">Reset view</button><span class="qual muted" id="m-qual"></span></div>
    <div class="v3d" id="v3d"><div class="msg">Loading the 3D model…</div></div>
@@ -450,8 +528,9 @@ function showKhipu(id){
    ${es.length?`<h3>Links</h3><ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>Same object</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
    ${fs.length?`<h3>Findings</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(f.title)}</a>`).join(' · ')}</p>`:''}
-   <h3>Pendant values by group</h3><div class="groups">${gl}</div>
+   <h3>Pendant values by group</h3><div class="groups" id="gvals">${gl}</div>
    <p><a href="#catalogue">Back to the list</a></p></div>`;
+  wireCard(k);
   view3d(k);
 }
 function undig(){ $('#undig-n').textContent=D.undigitized.length;
@@ -574,6 +653,130 @@ function findKhipus(q,limit){
   inp.addEventListener('blur',()=>setTimeout(()=>{ul.hidden=true},150));
 })();
 
+
+/* ---------- Tools: number search ---------- */
+const ART='https://claude.ai/artifact/6e97CVKAN6Xb1kQW5sFYno';
+function gsums(k){const out=[];let i=0;k.groups.forEach(n=>{let t=0;for(let j=0;j<n;j++)t+=k.v[i+j]||0;out.push({s:t,start:i,n});i+=n});return out}
+function cordGroup(k,idx){let i=0;for(let g=0;g<k.groups.length;g++){if(idx<i+k.groups[g])return g+1;i+=k.groups[g]}return 0}
+function numberSearch(nums,tol,mis,rev,grp){
+  const res=[]; const near=(a,b)=>Math.abs(a-b)<=tol;
+  D.khipus.forEach(k=>{
+    const seqs=[['pendants',k.v,i=>`cord ${i+1} (g${cordGroup(k,i)})`]];
+    if(grp){const g=gsums(k); seqs.push(['group totals',g.map(x=>x.s),i=>`group ${i+1}`])}
+    seqs.forEach(([kind,v,lab])=>{
+      if(nums.length===1){ v.forEach((x,i)=>{ if(near(x,nums[0])&&x>0) res.push({k,kind,where:lab(i),dir:'',vals:[x],ok:[true],score:1}) }); return }
+      const L=nums.length; [[false,nums],...(rev?[[true,nums.slice().reverse()]]:[])].forEach(([r,q])=>{
+        for(let i=0;i+L<=v.length;i++){ let m=0; const ok=[]; for(let j=0;j<L;j++){const e=near(v[i+j],q[j])&&!(v[i+j]===0&&q[j]!==0); ok.push(e); if(!e) m++; if(m>mis) break}
+          if(m<=mis&&ok.length===L) res.push({k,kind,where:`${lab(i)} – ${lab(i+L-1).replace(/^cord |^group /,'')}`,dir:r?'reversed':'',vals:v.slice(i,i+L),ok,score:L-m}) } });
+    });
+  });
+  res.sort((a,b)=>b.score-a.score||a.k.id.localeCompare(b.k.id)); return res;
+}
+$('#ns-form').addEventListener('submit',ev=>{ev.preventDefault();
+  const nums=($('#ns-q').value.match(/\d+/g)||[]).map(Number); if(!nums.length){$('#ns-out').innerHTML='<p class="note">Enter one or more numbers.</p>';return}
+  const res=numberSearch(nums,+$('#ns-tol').value,nums.length>1?+$('#ns-mis').value:0,$('#ns-rev').checked,$('#ns-grp').checked);
+  const show=res.slice(0,300);
+  $('#ns-out').innerHTML=`<p class="note">${res.length} match${res.length===1?'':'es'}${res.length>300?' (first 300 shown)':''}.</p>`+(show.length?`<div class="tablewrap"><table><thead><tr><th>Khipu</th><th>Where</th><th>Values</th><th>Place</th></tr></thead><tbody>${show.map(r=>`<tr data-id="${r.k.id}" class="nsr"><td><b>${esc(nameTxt(r.k))}</b></td><td>${esc(r.kind)}: ${esc(r.where)}${r.dir?' · '+r.dir:''}</td><td class="seq">${r.vals.map((x,i)=>`<span class="${r.ok[i]?'hit':'miss'}">${x}</span>`).join(' ')}</td><td>${esc(siteLabel(r.k.site)||r.k.prov)}</td></tr>`).join('')}</tbody></table></div>`:'')});
+document.addEventListener('click',ev=>{const tr=ev.target.closest('tr.nsr'); if(tr) location.hash='khipu-'+tr.dataset.id});
+
+/* ---------- Tools: compare two khipus ---------- */
+function runs(A,B){ const n=A.length,m=B.length; if(!n||!m) return []; const L=new Int32Array((n+1)*(m+1)); const all=[];
+  for(let i=1;i<=n;i++) for(let j=1;j<=m;j++){ if(A[i-1]===B[j-1]){ const v=L[(i-1)*(m+1)+j-1]+1; L[i*(m+1)+j]=v } }
+  for(let i=1;i<=n;i++) for(let j=1;j<=m;j++){ const v=L[i*(m+1)+j]; if(v>=3&&(i===n||j===m||L[(i+1)*(m+1)+j+1]===0)){ const a=i-v,b=j-v; const seg=A.slice(a,i); if(seg.filter(x=>x>=10).length>=2) all.push({a,b,len:v}) } }
+  all.sort((x,y)=>y.len-x.len); const usedA=new Set(),usedB=new Set(),out=[];
+  all.forEach(r=>{ let free=true; for(let t=0;t<r.len;t++){ if(usedA.has(r.a+t)||usedB.has(r.b+t)){free=false;break} } if(free){ for(let t=0;t<r.len;t++){usedA.add(r.a+t);usedB.add(r.b+t)} out.push(r) } });
+  return out.sort((x,y)=>x.a-y.a) }
+function compareKhipus(A,B){
+  const fw=runs(A.v,B.v), Br=B.v.slice().reverse(), rv=runs(A.v,Br).map(r=>({a:r.a,b:B.v.length-(r.b+r.len),len:r.len,rev:true}));
+  const tf=fw.reduce((s,r)=>s+r.len,0), tr=rv.reduce((s,r)=>s+r.len,0);
+  const gk=k=>{const out={};let i=0;k.groups.forEach((n,g)=>{const t=k.v.slice(i,i+n);i+=n; if(n>=3&&t.filter(x=>x>=10).length>=2){(out[t.join(',')]=out[t.join(',')]||[]).push(g+1)}});return out};
+  const ga=gk(A),gb=gk(B); const same=Object.keys(ga).filter(x=>gb[x]).map(x=>({v:x,a:ga[x],b:gb[x]}));
+  const tot=(X,Y)=>{const T=[...new Set(gsums(X).map(g=>g.s).filter(s=>s>=20))], Ys=new Set(Y.v); const real=T.filter(t=>Ys.has(t));
+    let nb=0; for(const d of [-5,-4,-3,-2,-1,1,2,3,4,5]) nb+=T.filter(t=>Ys.has(t+d)).length; return {real,exp:nb/10,n:T.length}};
+  return {fw,rv,tf,tr,same,ab:tot(A,B),ba:tot(B,A)} }
+$('#cmp-form').addEventListener('submit',ev=>{ev.preventDefault();
+  const A=findKhipus($('#cmp-a').value,1)[0], B=findKhipus($('#cmp-b').value,1)[0];
+  if(!A||!B||A===B){$('#cmp-out').innerHTML='<p class="note">Enter two different khipu numbers.</p>';return}
+  const r=compareKhipus(A,B); const best=r.tr>r.tf?r.rv:r.fw, dir=r.tr>r.tf?'reversed':'forward';
+  const runRows=best.map(x=>`<tr><td class="v">${x.a+1}–${x.a+x.len}</td><td class="v">${x.rev?`${x.b+x.len}–${x.b+1}`:`${x.b+1}–${x.b+x.len}`}</td><td class="v">${x.len}</td><td class="seq">${A.v.slice(x.a,x.a+x.len).join(' ')}</td></tr>`).join('');
+  $('#cmp-out').innerHTML=`<h3>${esc(nameTxt(A))} and ${esc(nameTxt(B))}</h3>
+   <p>Runs of ≥ 3 equal consecutive pendants: <b>${r.tf}</b> cords forward, <b>${r.tr}</b> reversed. ${best.length?`Best orientation: ${dir}.`:''}</p>
+   ${best.length?`<div class="tablewrap"><table><thead><tr><th>${esc(A.id)} cords</th><th>${esc(B.id)} cords</th><th>Length</th><th>Values</th></tr></thead><tbody>${runRows}</tbody></table></div>`:'<p class="note">No shared runs.</p>'}
+   <h3>Identical groups</h3>${r.same.length?`<ul>${r.same.map(x=>`<li class="seq">${esc(x.v)} — ${esc(A.id)} g${x.a.join(', g')} · ${esc(B.id)} g${x.b.join(', g')}</li>`).join('')}</ul>`:'<p class="note">None (groups of ≥ 3 cords with ≥ 2 values ≥ 10).</p>'}
+   <h3>Group totals found among the other khipu's cords</h3>
+   <p>${esc(A.id)} totals on ${esc(B.id)}: <b>${r.ab.real.length}</b> of ${r.ab.n} (expected by chance ${r.ab.exp.toFixed(1)})${r.ab.real.length?': <span class="seq">'+r.ab.real.slice(0,20).join(', ')+'</span>':''}.<br>
+   ${esc(B.id)} totals on ${esc(A.id)}: <b>${r.ba.real.length}</b> of ${r.ba.n} (expected ${r.ba.exp.toFixed(1)})${r.ba.real.length?': <span class="seq">'+r.ba.real.slice(0,20).join(', ')+'</span>':''}.</p>
+   <p><a href="#khipu-${A.id}">Open ${esc(A.id)}</a> · <a href="#khipu-${B.id}">Open ${esc(B.id)}</a></p>`});
+
+/* ---------- Catalogue: structure filters ---------- */
+function sfOk(k){ const g1=+$('#sf-g1').value||0, g2=+$('#sf-g2').value||0, gs=+$('#sf-gs').value||0, np=+$('#sf-np').value||0, mx=+$('#sf-mx').value||0, qq=$('#sf-q').value;
+  if(g1&&k.groups.length<g1) return false; if(g2&&k.groups.length>g2) return false;
+  if(gs&&!k.groups.some(n=>n===gs)) return false; if(np&&k.np<np) return false; if(mx&&k.max<mx) return false; if(qq&&k.model!==qq) return false;
+  if($('#sf-sub').checked&&!k.nsub) return false; if($('#sf-brk').checked&&!k.brk) return false; if($('#sf-cor').checked&&!(k.corr||[]).length) return false; return true }
+['#sf-g1','#sf-g2','#sf-gs','#sf-np','#sf-mx','#sf-q','#sf-sub','#sf-brk','#sf-cor'].forEach(x=>$(x).addEventListener('input',()=>renderRows()));
+$('#sf-reset').addEventListener('click',()=>{['#sf-g1','#sf-g2','#sf-gs','#sf-np','#sf-mx'].forEach(x=>$(x).value='');$('#sf-q').value='';['#sf-sub','#sf-brk','#sf-cor'].forEach(x=>$(x).checked=false);renderRows()});
+
+/* ---------- Khipu card extras ---------- */
+const MODELQ={okr:'Cord values and knot positions as recorded in the Open Khipu Repository',sheet:'Our transcription of Urton’s record sheets (OKR scans), checked against his own totals',recon:'Khipu Field Guide values; knot positions not recorded (the 3D model is a reconstruction)'};
+function cardExtras(k){
+  const links=[];
+  if(k.kfg) links.push(`<a href="https://www.khipufieldguide.com/catalog/${encodeURIComponent(k.kfg)}.html" target="_blank" rel="noopener">Khipu Field Guide ${esc(k.kfg)}</a>`);
+  if(k.ascher){const n=+k.ascher.replace(/\D/g,''); links.push(`<a href="https://courses.cit.cornell.edu/quipu/data/as${n}.pdf" target="_blank" rel="noopener">Aschers’ Databook, ${esc(k.ascher)}</a>`)}
+  if(k.smb) links.push(`<a href="${esc(k.smb)}" target="_blank" rel="noopener">Museum record (museum-digital)</a>`);
+  links.push(`<a href="https://github.com/khipulab/open-khipu-repository" target="_blank" rel="noopener">Open Khipu Repository</a>`);
+  const corr=(k.corr||[]);
+  return `<dl class="meta">${k.acq?`<dt>Acquired</dt><dd>${esc([k.acq.via,k.acq.year].filter(Boolean).join(', '))} <span class="note">— ${esc(k.acq.note)}</span></dd>`:''}
+    <dt>Data</dt><dd>${esc(MODELQ[k.model]||'')}</dd>
+    <dt>Condition</dt><dd>${k.brk} broken pendant${k.brk===1?'':'s'} of ${k.np}; ${k.nsub} subsidiar${k.nsub===1?'y':'ies'}</dd></dl>
+   ${corr.length?`<h3>Proposed readings</h3><div class="tablewrap"><table><thead><tr><th>Cord</th><th>Recorded</th><th>Proposed</th><th>Basis</th><th>Applied</th></tr></thead><tbody>${corr.map(c=>`<tr><td class="v">${esc(c.cord)}</td><td class="v">${esc(c.recorded||'?')}</td><td class="v">${esc(c.corrected)}</td><td>${esc(c.source)}; ${esc(c.note)}</td><td>${esc(c.applied)}</td></tr>`).join('')}</tbody></table></div>
+     <div class="actions"><button class="btn ghost" type="button" id="corr-t" aria-pressed="false">Show values with proposed readings</button></div>`:''}
+   <h3>Elsewhere</h3><p>${links.join(' · ')}</p>
+   <div class="actions"><button class="btn ghost" type="button" id="cite-b">Cite this khipu</button><button class="btn ghost" type="button" id="csv-b">Copy cord values as CSV</button><a class="btn ghost" href="#tools" id="cmp-b2">Compare with another khipu</a></div>
+   <div id="cite-out"></div>`;
+}
+function copyText(t,btn,label){ const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent=label,1600)};
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done).catch(()=>{$('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre><p class="note">Select the text above to copy it.</p>`}); else $('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre>` }
+function wireCard(k){
+  const cb=$('#cite-b'); if(cb) cb.onclick=()=>{ const t=`Khipu ${nameTxt(k)}${k.museum?`, ${k.museum}`:''}${k.num?` ${k.num}`:''}. In: Khipu Links Atlas (2026), ${ART}#khipu-${k.id} (accessed ${new Date().toISOString().slice(0,10)}). Cord data: ${k.model==='recon'?'Khipu Field Guide':'Open Khipu Repository'}.`;
+    $('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre>`; copyText(t,cb,'Cite this khipu') };
+  const vb=$('#csv-b'); if(vb) vb.onclick=()=>{ let i=0; const lines=['cord,group,value,color']; k.groups.forEach((n,g)=>{for(let j=0;j<n;j++,i++) lines.push(`${i+1},${g+1},${k.v[i]},${k.c[i]||''}`)}); copyText(lines.join('\n'),vb,'Copy cord values as CSV') };
+  const c2=$('#cmp-b2'); if(c2) c2.onclick=()=>{ $('#cmp-a').value=k.alias||k.id };
+  const ct=$('#corr-t'); if(ct) ct.onclick=()=>{ const on=ct.getAttribute('aria-pressed')!=='true'; ct.setAttribute('aria-pressed',on); ct.textContent=on?'Show values as recorded':'Show values with proposed readings';
+    const v=k.v.slice(); if(on) (k.corr||[]).forEach(c=>{const n=parseInt(c.cord,10); if(c.field==='value'&&n>0&&n<=v.length) v[n-1]=+c.corrected});
+    let i=0; $('#gvals').innerHTML=k.groups.map((n,gi)=>{const vs=v.slice(i,i+n).map((x,j)=>x!==k.v[i+j]?`<span class="hit">${x}</span>`:x);i+=n;return `<div><span>g${gi+1} (${n})</span> ${vs.join(' ')}</div>`}).join('') };
+}
+
+/* ---------- Statistics ---------- */
+function statsInit(){
+  const sel=$('#st-sel'); const opts=[['all','All digitized khipus']];
+  D.sites.slice().sort((a,b)=>b.n-a.n).filter(s=>s.n>=8).forEach(s=>opts.push(['site:'+s.id,s.label]));
+  const cc={}; D.khipus.forEach(k=>{if(k.collector)cc[k.collector]=(cc[k.collector]||0)+1}); Object.entries(cc).filter(x=>x[1]>=5).sort((a,b)=>b[1]-a[1]).forEach(([c])=>opts.push(['col:'+c,'Collector: '+c]));
+  sel.innerHTML=opts.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join(''); sel.addEventListener('input',statsDraw); statsDraw() }
+function bars(title,data,fmt){ const W=520,H=190,m={l:40,r:10,t:22,b:34}; const mx=Math.max(1,...data.map(d=>d[1])); const bw=(W-m.l-m.r)/data.length;
+  const y=v=>H-m.b-(H-m.t-m.b)*v/mx;
+  return `<div class="panel"><h3 style="margin-top:0">${esc(title)}</h3><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">
+   <g class="bars">${data.map((d,i)=>`<rect x="${m.l+i*bw+2}" y="${y(d[1])}" width="${Math.max(1,bw-4)}" height="${H-m.b-y(d[1])}"><title>${esc(d[0])}: ${fmt?fmt(d[1]):d[1]}</title></rect>`).join('')}</g>
+   <line x1="${m.l}" y1="${H-m.b}" x2="${W-m.r}" y2="${H-m.b}" stroke="var(--line)"/>
+   ${data.map((d,i)=>`<text x="${m.l+i*bw+bw/2}" y="${H-m.b+14}" text-anchor="middle">${esc(d[0])}</text>`).join('')}
+   <text x="${m.l-6}" y="${y(mx)+4}" text-anchor="end">${fmt?fmt(mx):mx}</text><text x="${m.l-6}" y="${H-m.b}" text-anchor="end">0</text></svg></div>` }
+function statsDraw(){ const v=$('#st-sel').value; const ks=D.khipus.filter(k=>v==='all'||(v.startsWith('site:')?k.site===v.slice(5):k.collector===v.slice(4)));
+  $('#st-n').textContent=`${ks.length} khipus`;
+  const gs=Array(21).fill(0); ks.forEach(k=>k.groups.forEach(n=>gs[Math.min(20,n)]++));
+  const vb=['0','1–9','10–99','100–999','1k–9k','10k+'], vc=Array(6).fill(0); ks.forEach(k=>k.v.forEach(x=>{vc[x<=0?0:Math.min(5,1+Math.floor(Math.log10(x)))]++}));
+  const kt={S:0,L:0,E:0,other:0}; ks.forEach(k=>Object.entries(k.kt||{}).forEach(([t,n])=>{kt[t in kt?t:'other']+=n}));
+  const pct=(a,b)=>b?Math.round(100*a/b)+'%':'—'; const med=a=>{const s=a.slice().sort((x,y)=>x-y);return s.length?s[Math.floor(s.length/2)]:0};
+  const n14=ks.filter(k=>k.groups.filter(n=>n>=5).length===14).length;
+  $('#st-out').innerHTML=`<div class="panel"><h3 style="margin-top:0">Summary</h3><dl class="meta"><dt>Khipus</dt><dd>${ks.length}</dd><dt>Median pendants</dt><dd>${med(ks.map(k=>k.np))}</dd>
+   <dt>With subsidiaries</dt><dd>${pct(ks.filter(k=>k.nsub).length,ks.length)}</dd><dt>With broken pendants</dt><dd>${pct(ks.filter(k=>k.brk).length,ks.length)}</dd>
+   <dt>Zero-valued pendants</dt><dd>${pct(vc[0],vc.reduce((a,b)=>a+b,0))}</dd><dt>Exactly 14 main groups</dt><dd>${n14}</dd><dt>In a link or finding</dt><dd>${ks.filter(k=>k.findings.length).length}</dd></dl></div>`
+   + bars('Group sizes (pendants per group)',gs.map((n,i)=>[i===20?'20+':String(i),n]).slice(1))
+   + bars('Pendant values',vb.map((l,i)=>[l,vc[i]]))
+   + bars('Knot types (recorded knots only)',[['single',kt.S],['long',kt.L],['figure-8',kt.E],['other',kt.other]]) }
+
+/* ---------- On the object ---------- */
+function checksDraw(){ const by={}; D.checks.forEach(c=>{(by[c.museum]=by[c.museum]||[]).push(c)});
+  $('#ck-out').innerHTML=Object.entries(by).map(([m,cs])=>`<h2>${esc(m)}</h2><div class="tablewrap"><table><thead><tr><th>Khipu</th><th>Cord</th><th>What to check</th><th>Why it matters</th></tr></thead><tbody>${cs.map(c=>`<tr><td>${K[c.khipu]?`<a href="#khipu-${c.khipu}">${esc(nameTxt(K[c.khipu]))}</a>`:esc(c.khipu)}</td><td>${esc(c.cord)}</td><td>${esc(c.ck)}</td><td>${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>`).join('') }
+
 /* ---------- Findings, negatives, sources ---------- */
 function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('') }
 function showFinding(id){ const f=D.findings.find(x=>x.id===id); if(!f) return;
@@ -601,7 +804,7 @@ $('#copymail').addEventListener('click',()=>{const t=$('#mail').textContent; nav
 
 Promise.all([fetch('./data.json').then(r=>r.json()),fetch('./land.json').then(r=>r.json())]).then(([d,l])=>{
   D=d; LAND=l; D.khipus.forEach(k=>K[k.id]=k);
-  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); timeline(); negatives(); sources(); route();
+  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); timeline(); negatives(); sources(); statsInit(); checksDraw(); route();
 }).catch(()=>{$('#stats').innerHTML='<span class="loading">The data files could not be loaded.</span>'});
 route();
 })();
