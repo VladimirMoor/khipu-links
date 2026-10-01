@@ -145,13 +145,16 @@ def main():
     for f in findings:
         for k in f["khipus"]:
             find_k[k].append(f["id"])
+    names = defaultdict(list)
+    for r in q("select khipu, name from khipu_name order by name"):
+        names[r["khipu"]].append(r["name"])
     khipus = []
     for m in q("select * from khipu order by id"):
         k = m["id"]
         rs = pend.get(k, [])
         vals = [int(r["value"]) for r in rs]
         khipus.append({"id": k, "alias": m["alias"], "okr": m["okr"], "museum": m["museum"], "num": m["num"], "prov": m["prov"],
-                       "site": m["site"], "collector": m["collector"], "np": m["n_pendants"], "nc": m["n_cords"], "model": m["model"],
+                       "site": m["site"], "collector": m["collector"], "names": names.get(k, []), "np": m["n_pendants"], "nc": m["n_cords"], "model": m["model"],
                        "groups": [len(list(g)) for _, g in itertools.groupby(rs, key=lambda r: r["group"])],
                        "v": vals, "c": [r["color"] for r in rs], "max": max(vals) if vals else 0, "sum": sum(vals),
                        "findings": sorted(set(find_k.get(k, []) + edge_k.get(k, [])))})

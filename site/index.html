@@ -440,7 +440,7 @@ function showKhipu(id){
   let i=0; const gl=k.groups.map((n,gi)=>{const vs=k.v.slice(i,i+n);i+=n;return `<div><span>g${gi+1} (${n})</span> ${vs.join(' ')}</div>`}).join('');
   $('#detail').innerHTML=`<div class="drawer"><p class="eyebrow">${esc(siteLabel(k.site)||'Find-place: '+(k.prov||'unknown'))}</p><h2>${name(k)}</h2>
    <dl class="meta"><dt>Museum</dt><dd>${esc(k.museum)||'—'}</dd><dt>Number</dt><dd class="mono">${esc(k.num)||'—'}</dd>
-   <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}
+   <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}${(k.names||[]).length?`<dt>Also known as</dt><dd class="mono">${k.names.map(esc).join(', ')}</dd>`:''}
    <dt>Cords</dt><dd>${k.np} pendants, ${k.nc} cords with subsidiaries, ${k.groups.length} groups; largest value ${k.max.toLocaleString('en')}</dd></dl>
    <h3>Model</h3>
    <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">Hanging</button><button type="button" id="m-flat" aria-pressed="false">Laid flat</button><button type="button" id="m-reset">Reset view</button><span class="qual muted" id="m-qual"></span></div>
@@ -551,7 +551,7 @@ window.addEventListener('hashchange',()=>{ if(!location.hash.startsWith('#khipu-
 const alnum=x=>String(x||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 const canon=x=>{const a=alnum(x); const m=a.match(/^([A-Z]*)0*(\d+)([A-Z]*)$/); return m?m[1]+'|'+(+m[2])+'|'+m[3]:a};
 let SIDX=null;
-function searchIndex(){ if(SIDX) return SIDX; SIDX=D.khipus.map(k=>{const keys=[k.id,k.alias,k.okr,k.num].filter(Boolean); return {k,keys,canon:keys.map(canon),raw:keys.map(alnum),text:[k.museum,k.prov,siteLabel(k.site),k.collector].join(' ').toLowerCase()}}); return SIDX }
+function searchIndex(){ if(SIDX) return SIDX; SIDX=D.khipus.map(k=>{const keys=[k.id,k.alias,k.okr,k.num,...(k.names||[])].filter(Boolean); return {k,keys,canon:keys.map(canon),raw:keys.map(alnum),text:[k.museum,k.prov,siteLabel(k.site),k.collector].join(' ').toLowerCase()}}); return SIDX }
 function findKhipus(q,limit){
   const c=canon(q), a=alnum(q), t=q.trim().toLowerCase(); if(!a&&!t) return [];
   const scored=[];
@@ -562,7 +562,7 @@ function findKhipus(q,limit){
 }
 (function(){ const inp=$('#gq'), ul=$('#gsug'); let items=[], sel=0;
   const show=()=>{ if(!D){ul.hidden=true;return} items=findKhipus(inp.value,8); sel=0;
-    ul.innerHTML=items.map((k,i)=>`<li role="option" aria-selected="${i===0}" data-id="${k.id}"><b>${esc(nameTxt(k))}</b><span>${esc([k.num,k.museum].filter(Boolean).join(' · '))}</span></li>`).join('')||(inp.value.trim()?'<li><span>No khipu with that number</span></li>':'');
+    ul.innerHTML=items.map((k,i)=>{const via=[k.okr,...(k.names||[])].find(n=>n&&canon(n)===canon(inp.value)&&canon(n)!==canon(k.id)&&canon(n)!==canon(k.alias)); return `<li role="option" aria-selected="${i===0}" data-id="${k.id}"><b>${esc(nameTxt(k))}</b><span>${esc([via?'= '+via:'',k.num,k.museum].filter(Boolean).join(' · '))}</span></li>`}).join('')||(inp.value.trim()?'<li><span>No khipu with that number</span></li>':'');
     ul.hidden=!inp.value.trim() };
   const go=id=>{ if(!id) return; ul.hidden=true; inp.value=''; location.hash='khipu-'+id };
   inp.addEventListener('input',show);

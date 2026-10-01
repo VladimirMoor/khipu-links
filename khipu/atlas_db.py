@@ -6,7 +6,7 @@
   * модель — model_cord, model_knot: геометрия для 3D (позиция на основном шнуре или на родителе, длина, крепление,
     узлы с высотой и типом); источник модели: okr | sheet | recon (см. site_knots.py);
   * курируемое — site, site_rule, context, road, link, link_type, duplicate, finding, negative, source, timeline,
-    correction (поправки к прочтениям; применяются к cord.value только при applied = yes), undigitized (берлинские
+    khipu_name (другие номера того же кипу: имена каталога KFG и их псевдонимы), correction (поправки к прочтениям; применяются к cord.value только при applied = yes), undigitized (берлинские
     карточки museum-digital без оцифровки).
 Правка данных: меняем файлы в atlas/curated/ (или добавляем расшифровку в extracted/), затем
   python3 khipu/atlas_db.py && python3 khipu/site_build.py && python3 khipu/site_knots.py
@@ -48,6 +48,7 @@ create table source(title text, url text, use text);
 create table timeline(ord int, whn text, title text, text text, finding text);
 create table correction(khipu text, cord text, field text, recorded text, corrected text, applied text, source text, note text);
 create table undigitized(inv text, collector text, groups text, url text);
+create table khipu_name(khipu text, name text, source text);
 """
 
 
@@ -155,6 +156,16 @@ def main():
         cc = re.search(r"Sammler:\s*([^\n]+)", desc)
         db.execute("insert into undigitized values(?,?,?,?)", (inv, cc.group(1).strip() if cc else "", (g.group(1).strip() if g else "")[:140],
                    f"https://smb.museum-digital.de/object/{d['object_id']}"))
+    # other numbers of the same khipu (KFG catalogue names and their aliases)
+    known = {x[0] for x in db.execute("select id from khipu")}
+    names = set()
+    for r in rows("kfg_names.csv"):
+        k = r["khipu"]
+        if k in known:
+            for n in [r["kfg"]] + [a.strip() for a in r["aliases"].split(";") if a.strip()]:
+                if n != k:
+                    names.add((k, n, "KFG catalogue"))
+    db.executemany("insert into khipu_name values(?,?,?)", sorted(names))
     db.commit()
     q = lambda s: db.execute(s).fetchone()[0]
     print(f"atlas.db: khipu {q('select count(*) from khipu')}, cord {q('select count(*) from cord')}, model_cord {q('select count(*) from model_cord')}, "
