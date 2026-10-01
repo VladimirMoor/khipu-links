@@ -13,7 +13,7 @@ The atlas keeps its data apart from the web page.
 Rebuild after any change:
 
 ```
-python3 khipu/atlas_db.py && python3 khipu/site_build.py && python3 khipu/site_knots.py
+python3 khipu/atlas_db.py && python3 khipu/site_build.py && python3 khipu/site_knots.py && python3 khipu/terrain.py
 ```
 
 The site (`site/index.html`) reads only the exported `site/data.json` and `site/kd/*.json`.
