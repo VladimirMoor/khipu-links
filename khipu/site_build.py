@@ -192,7 +192,8 @@ def main():
             "context": q("select kind, label, lat, lon, note from context"),
             "roads": [{"kind": r["kind"], "pts": [[lo, la] for la, lo in json.loads(r["pts"])]} for r in q("select * from road")],
             "timeline": [{"when": r["whn"], "title": r["title"], "text": r["text"], "finding": r["finding"] or None} for r in q("select * from timeline order by ord")],
-            "corrections": q("select * from correction"), "checks": checks, "scriptBase": KHIPU_URL}
+            "corrections": q("select * from correction"), "checks": checks, "scriptBase": KHIPU_URL,
+            "es": json.load(open(ROOT / "atlas/curated/es.json"))}
     s = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     OUT.write_text(s)
     print(f"data.json: khipus {len(khipus)}; sites {len(sites)}; edges {len(data['edges'])}; {len(s) // 1024} KB")

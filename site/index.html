@@ -154,6 +154,7 @@ ol.tl h3{margin:.1em 0 .2em}
 .statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
 pre.cite{white-space:pre-wrap;font-family:var(--f-mono);font-size:.82rem;background:var(--soft);border-radius:8px;padding:10px;margin:6px 0}
+.lang{display:flex;gap:2px}.lang button{font-family:var(--f-display);font-size:.8rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:6px;padding:3px 7px;cursor:pointer}.lang button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:.85rem;color:var(--muted)}
 .loading{color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -167,6 +168,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     <a href="#overview">Overview</a><a href="#map">Map</a><a href="#links">Links</a><a href="#catalogue">Catalogue</a><a href="#tools">Tools</a>
     <a href="#findings">Findings</a><a href="#timeline">Timeline</a><a href="#negatives">Negative results</a><a href="#stats">Statistics</a><a href="#checks">On the object</a><a href="#sources">Sources</a><a href="#about">About</a>
   </nav>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
   <form class="gs" id="gs" role="search" autocomplete="off">
     <input type="search" id="gq" placeholder="Find a khipu: AS002, UR212, KH0049, VA 42508" aria-label="Find a khipu by number" aria-autocomplete="list" aria-controls="gsug">
     <ul id="gsug" role="listbox" hidden></ul>
@@ -182,8 +184,8 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   <h2>Findings</h2>
   <div class="grid" id="ov-findings"></div>
   <h2>Where the linked khipus come from</h2>
-  <p>Two links run from khipus labelled <b>Pachacamac</b> to khipus dug near <b>Huacho</b>, about 150 km up the coast, in two museums and through two different sellers. The map shows them as red arcs.</p>
-  <p><a href="#map">Open the map</a> · <a href="#links">Open the network</a> · <a href="#catalogue">Browse the catalogue</a></p>
+  <p data-i18n-html="where">Two links run from khipus labelled <b>Pachacamac</b> to khipus dug near <b>Huacho</b>, about 150 km up the coast, in two museums and through two different sellers. The map shows them as red arcs.</p>
+  <p data-i18n-html="open"><a href="#map">Open the map</a> · <a href="#links">Open the network</a> · <a href="#catalogue">Browse the catalogue</a></p>
 </section>
 
 <section class="view" id="v-map" hidden>
@@ -241,7 +243,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
     <thead><tr><th>Khipu</th><th>Museum</th><th>Number</th><th>Find-place</th><th>Collector</th><th class="num">Pendants</th><th class="num">Groups</th></tr></thead>
     <tbody id="rows"></tbody></table></div>
   <h2>Berlin khipus without cord data</h2>
-  <p>The Ethnologisches Museum's online records describe <span id="undig-n"></span> khipus that are not digitized cord by cord. Their group structure is listed below; three of them share the 14-unit frame.</p>
+  <p data-i18n-html="undig">The Ethnologisches Museum's online records describe <span id="undig-n"></span> khipus that are not digitized cord by cord. Their group structure is listed below; three of them share the 14-unit frame.</p>
   <div class="tablewrap"><table><thead><tr><th>Inventory</th><th>Collector</th><th>Groups (museum record)</th></tr></thead><tbody id="undig"></tbody></table></div>
   <p class="note">Group descriptions: Staatliche Museen zu Berlin, Ethnologisches Museum, museum-digital (CC BY-NC-SA).</p>
 </section>
@@ -322,7 +324,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   <h1>About</h1>
   <p>This atlas collects the results of a corpus-wide search for arithmetic links between khipus in the open data of the Open Khipu Repository and the Khipu Field Guide, with two khipus we transcribed from record-sheet scans. Every detector was first run on relations already published, and every result was compared with structure-preserving baselines.</p>
   <h3>Data and code</h3>
-  <p>Scripts, the full report and the study log are in the repository <a href="https://github.com/VladimirMoor/khipu-links">github.com/VladimirMoor/khipu-links</a>. Cord data come from the OKR (MIT licence) and the KFG; please cite them when you use the values.</p>
+  <p data-i18n-html="repo">Scripts, the full report and the study log are in the repository <a href="https://github.com/VladimirMoor/khipu-links">github.com/VladimirMoor/khipu-links</a>. Cord data come from the OKR (MIT licence) and the KFG; please cite them when you use the values.</p>
   <h3>How this was made</h3>
   <p>The analysis and this site were produced with the help of an AI assistant (Claude, Anthropic), directed and checked by the author. Transcriptions made from scans were checked against the recorders' own totals.</p>
   <h3>Contact</h3>
@@ -336,6 +338,27 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
 (function(){
 const $=s=>document.querySelector(s), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D=null, LAND=null, K={}, mapDone=false, netDone=false;
+const ES_STATIC={"Overview": "Resumen", "Map": "Mapa", "Links": "Vínculos", "Catalogue": "Catálogo", "Tools": "Herramientas", "Findings": "Hallazgos", "Timeline": "Cronología", "Negative results": "Resultados negativos", "Statistics": "Estadística", "On the object": "En el objeto", "Sources": "Fuentes", "About": "Acerca de", "A register of the links between surviving Inka khipus": "Un registro de los vínculos entre los khipus incas conservados", "Every link we found between khipus is a copy of one account": "Todo vínculo que hallamos entre khipus es una copia de una misma cuenta", "We ran arithmetic detectors over about 700 digitized khipus and compared every hit with a baseline that keeps the khipus' structure. What survives is a set of copies and excerpts. Some keep only the totals of an account, some only its details, some split one account over two khipus or join two accounts on one. We found no summary khipu built from other surviving khipus.": "Aplicamos detectores aritméticos a unos 700 khipus digitalizados y comparamos cada coincidencia con una línea de base que conserva la estructura de los khipus. Lo que resiste es un conjunto de copias y extractos. Algunas conservan solo los totales de una cuenta, otras solo sus detalles; algunas reparten una cuenta en dos khipus o reúnen dos cuentas en uno. No hallamos ningún khipu de resumen construido a partir de otros khipus conservados.", "Where the linked khipus come from": "De dónde vienen los khipus vinculados", "Open the map": "Abrir el mapa", "Open the network": "Abrir la red", "Browse the catalogue": "Ver el catálogo", "Find-places · approximate, village or valley level": "Lugar de hallazgo", "Whole region": "Toda la región", "Central coast": "Costa central", "South coast": "Costa sur", "Select a place to list its khipus. Circle area shows how many digitized khipus carry that provenance; red arcs join places that share a link. Scroll or pinch to zoom, drag to pan.": "Elija un lugar para ver sus khipus. El área del círculo indica cuántos khipus digitalizados tienen esa procedencia; los arcos rojos unen lugares que comparten un vínculo. Use la rueda o los dedos para acercar y arrastre para desplazar.", "Locations are ours, placed by the provenance recorded in the OKR, the KFG and the museum records. They are approximate and do not reproduce any published map. Coastlines: Natural Earth, public domain. About 290 khipus have no recorded find-place and are not shown.": "Las ubicaciones son nuestras, situadas según la procedencia registrada en el OKR, el KFG y las fichas de los museos. Son aproximadas y no reproducen ningún mapa publicado. Costas: Natural Earth, dominio público. Unos 290 khipus no tienen lugar de hallazgo registrado y no se muestran.", "Khipus as nodes, relations as edges": "Khipu", "Network of links": "Red de vínculos", "Select a khipu or a link. Grey dashed lines join two records of the same physical khipu.": "Elija un khipu o un vínculo. Las líneas grises discontinuas unen dos registros del mismo khipu físico.", "OKR, KFG and our transcriptions": "OKR, KFG y nuestras transcripciones", "Filter by structure": "Filtrar por estructura", "Clear": "Borrar", "Khipu B": "Khipu B", "Khipu": "Khipu", "Khipu A": "Khipu A", "Museum": "Museo", "Number": "Número", "Number (AS002, UR212, KH0049, VA 42508), museum or place": "Número (AS002, UR212, KH0049, VA 42508), museo o lugar", "Numbers": "Números", "Find-place": "Lugar de hallazgo", "Collector": "Coleccionista", "Pendants": "Colgantes", "Pendants at least": "Colgantes, mínimo", "Groups (museum record)": "Grupos (ficha del museo)", "Groups": "Grupos", "Groups from": "Grupos desde", "Berlin khipus without cord data": "Khipus de Berlín sin datos de cuerdas", "Inventory": "Inventario", "Group descriptions: Staatliche Museen zu Berlin, Ethnologisches Museum, museum-digital (CC BY-NC-SA).": "Descripción de grupos: Staatliche Museen zu Berlin, Ethnologisches Museum, museum-digital (CC BY-NC-SA).", "What the evidence supports": "Lo que la evidencia respalda", "From the Inka storehouses to the museum shelves": "De los almacenes incas a los estantes de los museos", "How the khipus came to be where they are. Red points mark events tied to a finding.": "Cómo llegaron los khipus a donde están. Los puntos rojos marcan hechos ligados a un hallazgo.", "Run the detectors yourself": "Use los detectores usted mismo", "Find numbers": "Buscar números", "One number finds every pendant (and, optionally, group total) with that value. Two or more numbers find runs of consecutive pendants or of consecutive group totals, in either direction. Values come from the catalogue layer (pendants' own values).": "Un número encuentra cada colgante (y, si se quiere, cada total de grupo) con ese valor. Dos o más números encuentran tramos de colgantes consecutivos o de totales de grupo consecutivos, en cualquier sentido. Los valores provienen de la capa de catálogo (valor propio de cada colgante).", "Search": "Buscar", "Compare two khipus": "Comparar", "Aligns the pendant sequences (forward and reversed), lists identical groups, and finds the group totals of one khipu among the cords of the other, with the count expected by chance from values offset by ±1…±5.": "Alinea las secuencias de colgantes (en ambos sentidos), lista los grupos idénticos y busca los totales de grupo de un khipu entre las cuerdas del otro, con el número esperado al azar a partir de valores desplazados ±1…±5.", "Compare": "Comparar", "How collections differ": "En qué difieren las colecciones", "For a museum visit": "Para una visita al museo", "Readings that decide our results and can only be settled on the khipus themselves, grouped by museum. Each check is useful whatever the outcome.": "Lecturas que deciden nuestros resultados y que solo se pueden resolver en los propios khipus, agrupadas por museo. Cada comprobación es útil sea cual sea el resultado.", "Tested and not supported": "Comprobado y no respaldado", "Each claim below was tested against a baseline that keeps the khipus' structure, usually the same comparison with the values offset by a few units. None rose above it.": "Cada afirmación de abajo se contrastó con una línea de base que conserva la estructura de los khipus, normalmente la misma comparación con los valores desplazados unas pocas unidades. Ninguna la superó.", "Read and used": "Leído y usado", "What each source gave this project. Texts of books and articles are not reproduced here.": "Lo que cada fuente aportó a este proyecto. No se reproducen textos de libros ni artículos.", "This atlas collects the results of a corpus-wide search for arithmetic links between khipus in the open data of the Open Khipu Repository and the Khipu Field Guide, with two khipus we transcribed from record-sheet scans. Every detector was first run on relations already published, and every result was compared with structure-preserving baselines.": "Este atlas reúne los resultados de una búsqueda, en todo el corpus, de vínculos aritméticos entre khipus en los datos abiertos del Open Khipu Repository y del Khipu Field Guide, con dos khipus que transcribimos de escaneos de hojas de registro. Cada detector se probó primero con relaciones ya publicadas, y cada resultado se comparó con líneas de base que conservan la estructura.", "Data and code": "Datos y código", "How this was made": "Cómo se hizo", "The analysis and this site were produced with the help of an AI assistant (Claude, Anthropic), directed and checked by the author. Transcriptions made from scans were checked against the recorders' own totals.": "El análisis y este sitio se hicieron con ayuda de un asistente de IA (Claude, Anthropic), dirigido y revisado por el autor. Las transcripciones hechas a partir de escaneos se verificaron con los propios totales de quienes registraron los khipus.", "Contact": "Contacto", "Copy address": "Copiar dirección", "Inka and earlier centres": "Centros incas y anteriores", "Valleys": "Valles", "Inka roads (schematic)": "Caminos incas (esquemáticos)", "Four quarters": "Cuatro suyus", "Modern cities": "Ciudades actuales", "Only linked khipus": "Solo khipus vinculados", "to": "hasta", "Main groups of size": "Grupos principales de tamaño", "Largest value at least": "Valor máximo, mínimo", "Knot data": "Datos de nudos", "has subsidiaries": "con subsidiarias", "has broken pendants": "con colgantes rotos", "has proposed corrections": "con lecturas propuestas", "Tolerance": "Tolerancia", "Mismatches allowed": "Diferencias permitidas", "reversed order too": "también en orden inverso", "group totals too": "también totales de grupo", "Collection": "Colección", "Find a khipu: AS002, UR212, KH0049, VA 42508": "Buscar un khipu: AS002, UR212, KH0049, VA 42508", "any": "cualquiera", "e.g. 8653 or 1430, 670, 3410, 820": "p. ej. 8653 o 1430, 670, 3410, 820", "e.g. UR212": "p. ej. UR212", "e.g. MM015": "p. ej. MM015"};
+const ES_MIXED={"where": "Dos vínculos van de khipus rotulados <b>Pachacamac</b> a khipus excavados cerca de <b>Huacho</b>, unos 150 km costa arriba, en dos museos y por dos vendedores distintos. El mapa los muestra como arcos rojos.", "open": "<a href=\"#map\">Abrir el mapa</a> · <a href=\"#links\">Abrir la red</a> · <a href=\"#catalogue\">Ver el catálogo</a>", "undig": "Las fichas en línea del Ethnologisches Museum describen <span id=\"undig-n\">%N%</span> khipus que no están digitalizados cuerda por cuerda. Su estructura de grupos se lista abajo; tres de ellos comparten el marco de 14 unidades.", "repo": "Los scripts, el informe completo y el diario de estudio están en el repositorio <a href=\"https://github.com/VladimirMoor/khipu-links\">github.com/VladimirMoor/khipu-links</a>. Los datos de cuerdas provienen del OKR (licencia MIT) y del KFG; cítelos cuando use los valores."};
+const ES_DYN={"New": "Nuevo", "Suggestive": "Indicio", "Known, refined": "Conocido, precisado", "New data": "Datos nuevos", "Negative": "Negativo", "Evidence and khipus": "Evidencia y khipus", "All findings": "Todos los hallazgos", "Evidence": "Evidencia", "Khipus": "Khipus", "Reproduce": "Reproducir", "Places": "Lugares", "map": "mapa", "khipus with cord data": "khipus con datos de cuerdas", "find-places": "lugares de hallazgo", "links between khipus": "vínculos entre khipus", "khipus in a link": "khipus en un vínculo", "findings": "hallazgos", "negative results": "resultados negativos", "Folded copies, known copies recovered, the Dumbarton Oaks transcriptions.": "Copias plegadas, copias conocidas recuperadas, las transcripciones de Dumbarton Oaks.", "Linked": "Vinculados", "All": "Todos", "Nearby": "Cerca", "in a link or finding": "en un vínculo o hallazgo", "digitized khipus": "khipus digitalizados", "digitized khipu": "khipu digitalizado", "Open in the catalogue": "Abrir en el catálogo", "Same khipu": "El mismo khipu", "Part of": "Parte de", "Same khipu recorded twice": "Mismo khipu registrado dos veces", "Museum": "Museo", "Number": "Número", "Provenance": "Procedencia", "Collector": "Coleccionista", "OKR": "OKR", "Also known as": "También conocido como", "Cords": "Cuerdas", "pendants": "colgantes", "cords with subsidiaries": "cuerdas con subsidiarias", "groups": "grupos", "largest value": "valor máximo", "Model": "Modelo", "Hanging": "Colgado", "Laid flat": "Extendido", "Reset view": "Restablecer vista", "Flat schematic": "Esquema plano", "Links": "Vínculos", "Same object": "Mismo objeto", "Findings": "Hallazgos", "Pendant values by group": "Valores de colgantes por grupo", "Back to the list": "Volver a la lista", "Acquired": "Ingreso", "Data": "Datos", "Condition": "Estado", "Proposed readings": "Lecturas propuestas", "Elsewhere": "En otros sitios", "Cite this khipu": "Citar este khipu", "Copy cord values as CSV": "Copiar valores en CSV", "Compare with another khipu": "Comparar con otro khipu", "Show values with proposed readings": "Mostrar valores con lecturas propuestas", "Show values as recorded": "Mostrar valores registrados", "broken pendants of": "colgantes rotos de", "subsidiaries": "subsidiarias", "Cord": "Cuerda", "Recorded": "Registrado", "Proposed": "Propuesto", "Basis": "Base", "Applied": "Aplicado", "Cord values and knot positions as recorded in the Open Khipu Repository": "Valores de cuerdas y posiciones de nudos según el Open Khipu Repository", "Our transcription of Urton’s record sheets (OKR scans), checked against his own totals": "Nuestra transcripción de las hojas de registro de Urton (escaneos del OKR), verificada con sus propios totales", "Khipu Field Guide values; knot positions not recorded (the 3D model is a reconstruction)": "Valores del Khipu Field Guide; posiciones de nudos no registradas (el modelo 3D es una reconstrucción)", "Knots as recorded (OKR)": "Nudos según registro (OKR)", "Knots from our transcription of the record sheets": "Nudos de nuestra transcripción de las hojas", "Reconstructed from values (no knot positions recorded)": "Reconstruido a partir de valores (sin posiciones de nudos)", "Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.": "Colgantes en el orden y agrupación registrados; los puntos marcan los nudos por posición decimal, unidades abajo.", "Green: equal · red: different · grey: no counterpart.": "Verde: igual · rojo: distinto · gris: sin contraparte.", "Where": "Dónde", "Values": "Valores", "Place": "Lugar", "matches": "coincidencias", "match": "coincidencia", "first 300 shown": "se muestran las 300 primeras", "Enter one or more numbers.": "Introduzca uno o más números.", "Enter two different khipu numbers.": "Introduzca dos números de khipu distintos.", "Identical groups": "Grupos idénticos", "Group totals found among the other khipu's cords": "Totales de grupo hallados entre las cuerdas del otro khipu", "No shared runs.": "Sin tramos compartidos.", "Length": "Longitud", "Open": "Abrir", "forward": "directo", "reversed": "inverso", "Summary": "Resumen", "Median pendants": "Mediana de colgantes", "With subsidiaries": "Con subsidiarias", "With broken pendants": "Con colgantes rotos", "Zero-valued pendants": "Colgantes de valor cero", "Exactly 14 main groups": "Exactamente 14 grupos principales", "In a link or finding": "En un vínculo o hallazgo", "Group sizes (pendants per group)": "Tamaño de grupo (colgantes por grupo)", "Pendant values": "Valores de colgantes", "Knot types (recorded knots only)": "Tipos de nudo (solo nudos registrados)", "All digitized khipus": "Todos los khipus digitalizados", "What to check": "Qué comprobar", "Why it matters": "Por qué importa", "single": "simple", "long": "largo", "figure-8": "en ocho", "other": "otro", "Loading the 3D model…": "Cargando el modelo 3D…", "No khipu with that number": "Ningún khipu con ese número"};
+let LANG='en'; try{ LANG=localStorage.getItem('atlas-lang')==='es'?'es':'en' }catch(e){}
+const tr=x=>LANG==='es'&&ES_DYN[x]?ES_DYN[x]:x;
+const ES=()=>LANG==='es'&&D&&D.es;
+function applyStatic(){
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement&&!n.parentElement.closest('script,style,svg,canvas,#rows,#undig,#ns-out,#cmp-out,#st-out,#ck-out,#detail,#finding-detail,#tl,#neg,#src,#f-grid,#ov-findings,#stats,#map-panel,#net-panel,#gsug,[data-i18n-html]')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+  const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(n=>{ if(n.__en===undefined){ const t=n.nodeValue.trim(); if(!ES_STATIC[t]) return; n.__en=n.nodeValue }
+    n.nodeValue=LANG==='es'?n.__en.replace(n.__en.trim(),ES_STATIC[n.__en.trim()]):n.__en });
+  document.querySelectorAll('[placeholder]').forEach(el=>{ if(el.__ph===undefined) el.__ph=el.getAttribute('placeholder'); el.setAttribute('placeholder',LANG==='es'&&ES_STATIC[el.__ph]?ES_STATIC[el.__ph]:el.__ph) });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{ if(el.__html===undefined) el.__html=el.innerHTML; const n=$('#undig-n')?$('#undig-n').textContent:'';
+    el.innerHTML=LANG==='es'?ES_MIXED[el.dataset.i18nHtml].replace('%N%',D?D.undigitized.length:''):el.__html; if($('#undig-n')&&D) $('#undig-n').textContent=D.undigitized.length });
+  document.documentElement.lang=LANG;
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===LANG));
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.lang; try{localStorage.setItem('atlas-lang',LANG)}catch(e){}
+  applyStatic(); if(!D) return; stats(); overview(); findings(); timeline(); negatives(); sources(); renderRows(); undig(); checksDraw(); statsDraw(); route();
+  if(typeof netLegend==='function') netLegend() }));
+
 const STATUS={'new':'New','suggestive':'Suggestive','known-refined':'Known, refined','data':'New data','negative':'Negative'};
 const EDGECOL={sum:'--accent',lot:'--accent',details:'--accent',excerpt:'--indigo',totals:'--warn',join:'--accent',copy:'--indigo',fold:'--ok'};
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -367,15 +390,17 @@ window.addEventListener('hashchange',route);
 function stats(){
   const linked=new Set(); D.edges.forEach(e=>{linked.add(e.from);linked.add(e.to)});
   $('#stats').innerHTML=[[D.khipus.length,'khipus with cord data'],[D.sites.length,'find-places'],[D.edges.length,'links between khipus'],[linked.size,'khipus in a link'],[D.findings.length,'findings'],[D.negatives.length,'negative results']]
-   .map(([n,l])=>`<div><b>${n}</b><span>${l}</span></div>`).join('');
+   .map(([n,l])=>`<div><b>${n}</b><span>${tr(l)}</span></div>`).join('');
   $('#built').textContent=D.built;
 }
-function findingCard(f){
-  return `<article class="card"><div><span class="chip st-${f.status}">${STATUS[f.status]||f.status}</span></div>
+function fx(f){ const e=ES()&&D.es.findings[f.id]; return e?{...f,title:e.title,summary:e.summary,evidence:e.evidence||f.evidence}:f }
+const etl=id=>(ES()&&D.es.linkTypes[id])||D.edgeTypes[id];
+function findingCard(f){ f=fx(f);
+  return `<article class="card"><div><span class="chip st-${f.status}">${tr(STATUS[f.status]||f.status)}</span></div>
    <h3>${esc(f.title)}</h3><p>${esc(f.summary.split('. ').slice(0,2).join('. '))}.</p>
-   <a class="more" href="#finding-${f.id}">Evidence and khipus</a></article>`;
+   <a class="more" href="#finding-${f.id}">${tr('Evidence and khipus')}</a></article>`;
 }
-function overview(){ $('#ov-findings').innerHTML=D.findings.slice(0,6).map(findingCard).join('')+`<article class="card"><h3>…and ${D.findings.length-6} more</h3><p>Folded copies, known copies recovered, the Dumbarton Oaks transcriptions.</p><a class="more" href="#findings">All findings</a></article>` }
+function overview(){ $('#ov-findings').innerHTML=D.findings.slice(0,6).map(findingCard).join('')+`<article class="card"><h3>${LANG==='es'?'…y '+(D.findings.length-6)+' más':'…and '+(D.findings.length-6)+' more'}</h3><p>${tr('Folded copies, known copies recovered, the Dumbarton Oaks transcriptions.')}</p><a class="more" href="#findings">${tr('All findings')}</a></article>` }
 
 /* ---------- Map ---------- */
 function drawMap(){
@@ -442,18 +467,19 @@ function drawMap(){
     const ks=D.khipus.filter(k=>k.site===s.id), linked=ks.filter(k=>k.findings.length);
     const near=D.context.filter(x=>x.kind==='centre'&&Math.hypot(x.lat-s.lat,x.lon-s.lon)<1.2);
     $('#map-panel').innerHTML=`<p class="eyebrow">${esc(s.region)}</p><h2 style="margin-top:0">${esc(s.label)}</h2>
-     <p>${ks.length} digitized khipu${ks.length>1?'s':''}${linked.length?`, ${linked.length} in a link or finding`:''}.</p>
-     ${near.length?`<p class="note">Nearby: ${near.map(x=>esc(x.label)+(x.note?` (${esc(x.note)})`:'')).join('; ')}.</p>`:''}
-     ${linked.length?`<h3>Linked</h3><div>${linked.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`:''}
-     <h3>All</h3><div>${ks.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`;
+     <p>${ks.length} ${tr(ks.length>1?'digitized khipus':'digitized khipu')}${linked.length?`, ${linked.length} ${tr('in a link or finding')}`:''}.</p>
+     ${near.length?`<p class="note">${tr('Nearby')}: ${near.map(x=>esc(x.label)+(x.note?` (${esc(x.note)})`:'')).join('; ')}.</p>`:''}
+     ${linked.length?`<h3>${tr('Linked')}</h3><div>${linked.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`:''}
+     <h3>${tr('All')}</h3><div>${ks.map(k=>`<a class="kbtn" href="#khipu-${k.id}">${esc(nameTxt(k))}</a>`).join('')}</div>`;
   }
   sitePanel(D.sites.find(s=>s.id==='huacho')||D.sites[0]);
 }
 
 /* ---------- Network ---------- */
+function netLegend(){ $('#net-legend').innerHTML=Object.keys(D.edgeTypes).map(t=>`<span><i style="background:var(${EDGECOL[t]||'--muted'})"></i>${esc(etl(t))}</span>`).join('')+`<span><i style="background:var(--muted);height:1px"></i>${tr('Same khipu recorded twice')}</span>` }
 function drawNet(){
   if(netDone) return; netDone=true;
-  $('#net-legend').innerHTML=Object.entries(D.edgeTypes).map(([t,l])=>`<span><i style="background:var(${EDGECOL[t]||'--muted'})"></i>${esc(l)}</span>`).join('')+`<span><i style="background:var(--muted);height:1px"></i>Same khipu recorded twice</span>`;
+  netLegend();
   const box=$('#netbox'), W=box.clientWidth||700, H=box.clientHeight||600;
   const ids=new Set(); D.edges.forEach(e=>{ids.add(e.from);ids.add(e.to)}); D.duplicates.forEach(d=>{ids.add(d.a);ids.add(d.b)});
   const nodes=[...ids].map(id=>({id,k:K[id]}));
@@ -476,8 +502,8 @@ function drawNet(){
     const es=D.edges.filter(e=>e.from===k.id||e.to===k.id);
     $('#net-panel').innerHTML=`<p class="eyebrow">${esc(siteLabel(k.site)||k.prov||'find-place unknown')}</p><h2 style="margin-top:0">${name(k)}</h2>
      <p>${esc(k.museum)} ${esc(k.num)}${k.collector?` · collected by ${esc(k.collector)}`:''}. ${k.np} pendants in ${k.groups.length} groups.</p>
-     <ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}<br><span class="note">${esc(e.note)}</span></li>`).join('')}</ul>
-     <p><a href="#khipu-${k.id}">Open in the catalogue</a></p>`}
+     <ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}<br><span class="note">${esc(e.note)}</span></li>`).join('')}</ul>
+     <p><a href="#khipu-${k.id}">${tr('Open in the catalogue')}</a></p>`}
   function linkPanel(l){ if(l.dup){$('#net-panel').innerHTML=`<h2 style="margin-top:0">Same khipu</h2><p>${esc(l.dup.a)} and ${esc(l.dup.b)}: ${esc(l.dup.note)}.</p>`;return}
     const e=l.e,f=D.findings.find(x=>x.id===e.finding);
     $('#net-panel').innerHTML=`<p class="eyebrow">${esc(D.edgeTypes[e.type])}</p><h2 style="margin-top:0">${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}</h2><p>${esc(e.note)}.</p>${f?`<p>Part of <a href="#finding-${f.id}">${esc(f.title)}</a>.</p>`:''}`}
@@ -516,20 +542,20 @@ function showKhipu(id){
   const dup=D.duplicates.filter(d=>d.a===id||d.b===id);
   let i=0; const gl=k.groups.map((n,gi)=>{const vs=k.v.slice(i,i+n);i+=n;return `<div><span>g${gi+1} (${n})</span> ${vs.join(' ')}</div>`}).join('');
   $('#detail').innerHTML=`<div class="drawer"><p class="eyebrow">${esc(siteLabel(k.site)||'Find-place: '+(k.prov||'unknown'))}</p><h2>${name(k)}</h2>
-   <dl class="meta"><dt>Museum</dt><dd>${esc(k.museum)||'—'}</dd><dt>Number</dt><dd class="mono">${esc(k.num)||'—'}</dd>
-   <dt>Provenance</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>Collector</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}${(k.names||[]).length?`<dt>Also known as</dt><dd class="mono">${k.names.map(esc).join(', ')}</dd>`:''}
-   <dt>Cords</dt><dd>${k.np} pendants, ${k.nc} cords with subsidiaries, ${k.groups.length} groups; largest value ${k.max.toLocaleString('en')}</dd></dl>
+   <dl class="meta"><dt>${tr('Museum')}</dt><dd>${esc(k.museum)||'—'}</dd><dt>${tr('Number')}</dt><dd class="mono">${esc(k.num)||'—'}</dd>
+   <dt>${tr('Provenance')}</dt><dd>${esc(k.prov)||'—'}</dd>${k.collector?`<dt>${tr('Collector')}</dt><dd>${esc(k.collector)}</dd>`:''}${k.okr?`<dt>OKR</dt><dd class="mono">${esc(k.okr)}</dd>`:''}${(k.names||[]).length?`<dt>${tr('Also known as')}</dt><dd class="mono">${k.names.map(esc).join(', ')}</dd>`:''}
+   <dt>${tr('Cords')}</dt><dd>${k.np} ${tr('pendants')}, ${k.nc} ${tr('cords with subsidiaries')}, ${k.groups.length} ${tr('groups')}; ${tr('largest value')} ${k.max.toLocaleString('en')}</dd></dl>
    ${cardExtras(k)}
-   <h3>Model</h3>
-   <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">Hanging</button><button type="button" id="m-flat" aria-pressed="false">Laid flat</button><button type="button" id="m-reset">Reset view</button><span class="qual muted" id="m-qual"></span></div>
-   <div class="v3d" id="v3d"><div class="msg">Loading the 3D model…</div></div>
+   <h3>${tr('Model')}</h3>
+   <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">${tr('Hanging')}</button><button type="button" id="m-flat" aria-pressed="false">${tr('Laid flat')}</button><button type="button" id="m-reset">${tr('Reset view')}</button><span class="qual muted" id="m-qual"></span></div>
+   <div class="v3d" id="v3d"><div class="msg">${tr('Loading the 3D model…')}</div></div>
    <p class="note">Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres; small spheres are single knots, coils are long knots (one ring per turn), paired beads are figure-eight knots; pendants attached recto hang in front of the primary cord, verso behind; subsidiary cords branch off their pendant at a small knot. Colours approximate the recorded colour codes; two-colour cords are striped.</p>
-   <details><summary>Flat schematic</summary><div class="schem">${schematic(k)}</div><p class="note">Pendants in recorded order and grouping; dots mark knots by decimal place, units at the bottom.</p></details>
-   ${es.length?`<h3>Links</h3><ul class="clean">${es.map(e=>`<li><b>${esc(D.edgeTypes[e.type])}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
-   ${dup.length?`<h3>Same object</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
-   ${fs.length?`<h3>Findings</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(f.title)}</a>`).join(' · ')}</p>`:''}
-   <h3>Pendant values by group</h3><div class="groups" id="gvals">${gl}</div>
-   <p><a href="#catalogue">Back to the list</a></p></div>`;
+   <details><summary>${tr('Flat schematic')}</summary><div class="schem">${schematic(k)}</div><p class="note">${tr('Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.')}</p></details>
+   ${es.length?`<h3>${tr('Links')}</h3><ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
+   ${dup.length?`<h3>${tr('Same object')}</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
+   ${fs.length?`<h3>${tr('Findings')}</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(fx(f).title)}</a>`).join(' · ')}</p>`:''}
+   <h3>${tr('Pendant values by group')}</h3><div class="groups" id="gvals">${gl}</div>
+   <p><a href="#catalogue">${tr('Back to the list')}</a></p></div>`;
   wireCard(k);
   view3d(k);
 }
@@ -551,7 +577,7 @@ async function view3d(k){
   const host=$('#v3d'); if(!host) return;
   let M; try{ await loadLibs(); M=await loadModel(k.id) }catch(e){ host.innerHTML='<div class="msg">The 3D viewer could not be loaded.</div>'; return }
   if(!M||!M.c.length){ host.innerHTML='<div class="msg">No model for this khipu.</div>'; return }
-  $('#m-qual').textContent=QUAL[M.q]||'';
+  $('#m-qual').textContent=tr(QUAL[M.q]||'');
   host.innerHTML=''; const tip=document.createElement('div'); tip.className='tip'; tip.hidden=true;
   const T=THREE, W=host.clientWidth, H=host.clientHeight;
   const renderer=new T.WebGLRenderer({antialias:true}); renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.setSize(W,H); host.appendChild(renderer.domElement); host.appendChild(tip);
@@ -641,7 +667,7 @@ function findKhipus(q,limit){
 }
 (function(){ const inp=$('#gq'), ul=$('#gsug'); let items=[], sel=0;
   const show=()=>{ if(!D){ul.hidden=true;return} items=findKhipus(inp.value,8); sel=0;
-    ul.innerHTML=items.map((k,i)=>{const via=[k.okr,...(k.names||[])].find(n=>n&&canon(n)===canon(inp.value)&&canon(n)!==canon(k.id)&&canon(n)!==canon(k.alias)); return `<li role="option" aria-selected="${i===0}" data-id="${k.id}"><b>${esc(nameTxt(k))}</b><span>${esc([via?'= '+via:'',k.num,k.museum].filter(Boolean).join(' · '))}</span></li>`}).join('')||(inp.value.trim()?'<li><span>No khipu with that number</span></li>':'');
+    ul.innerHTML=items.map((k,i)=>{const via=[k.okr,...(k.names||[])].find(n=>n&&canon(n)===canon(inp.value)&&canon(n)!==canon(k.id)&&canon(n)!==canon(k.alias)); return `<li role="option" aria-selected="${i===0}" data-id="${k.id}"><b>${esc(nameTxt(k))}</b><span>${esc([via?'= '+via:'',k.num,k.museum].filter(Boolean).join(' · '))}</span></li>`}).join('')||(inp.value.trim()?`<li><span>${tr('No khipu with that number')}</span></li>`:'');
     ul.hidden=!inp.value.trim() };
   const go=id=>{ if(!id) return; ul.hidden=true; inp.value=''; location.hash='khipu-'+id };
   inp.addEventListener('input',show);
@@ -673,10 +699,10 @@ function numberSearch(nums,tol,mis,rev,grp){
   res.sort((a,b)=>b.score-a.score||a.k.id.localeCompare(b.k.id)); return res;
 }
 $('#ns-form').addEventListener('submit',ev=>{ev.preventDefault();
-  const nums=($('#ns-q').value.match(/\d+/g)||[]).map(Number); if(!nums.length){$('#ns-out').innerHTML='<p class="note">Enter one or more numbers.</p>';return}
+  const nums=($('#ns-q').value.match(/\d+/g)||[]).map(Number); if(!nums.length){$('#ns-out').innerHTML=`<p class="note">${tr('Enter one or more numbers.')}</p>`;return}
   const res=numberSearch(nums,+$('#ns-tol').value,nums.length>1?+$('#ns-mis').value:0,$('#ns-rev').checked,$('#ns-grp').checked);
   const show=res.slice(0,300);
-  $('#ns-out').innerHTML=`<p class="note">${res.length} match${res.length===1?'':'es'}${res.length>300?' (first 300 shown)':''}.</p>`+(show.length?`<div class="tablewrap"><table><thead><tr><th>Khipu</th><th>Where</th><th>Values</th><th>Place</th></tr></thead><tbody>${show.map(r=>`<tr data-id="${r.k.id}" class="nsr"><td><b>${esc(nameTxt(r.k))}</b></td><td>${esc(r.kind)}: ${esc(r.where)}${r.dir?' · '+r.dir:''}</td><td class="seq">${r.vals.map((x,i)=>`<span class="${r.ok[i]?'hit':'miss'}">${x}</span>`).join(' ')}</td><td>${esc(siteLabel(r.k.site)||r.k.prov)}</td></tr>`).join('')}</tbody></table></div>`:'')});
+  $('#ns-out').innerHTML=`<p class="note">${res.length} ${tr(res.length===1?'match':'matches')}${res.length>300?' ('+tr('first 300 shown')+')':''}.</p>`+(show.length?`<div class="tablewrap"><table><thead><tr><th>Khipu</th><th>${tr('Where')}</th><th>${tr('Values')}</th><th>${tr('Place')}</th></tr></thead><tbody>${show.map(r=>`<tr data-id="${r.k.id}" class="nsr"><td><b>${esc(nameTxt(r.k))}</b></td><td>${esc(r.kind)}: ${esc(r.where)}${r.dir?' · '+r.dir:''}</td><td class="seq">${r.vals.map((x,i)=>`<span class="${r.ok[i]?'hit':'miss'}">${x}</span>`).join(' ')}</td><td>${esc(siteLabel(r.k.site)||r.k.prov)}</td></tr>`).join('')}</tbody></table></div>`:'')});
 document.addEventListener('click',ev=>{const tr=ev.target.closest('tr.nsr'); if(tr) location.hash='khipu-'+tr.dataset.id});
 
 /* ---------- Tools: compare two khipus ---------- */
@@ -696,14 +722,14 @@ function compareKhipus(A,B){
   return {fw,rv,tf,tr,same,ab:tot(A,B),ba:tot(B,A)} }
 $('#cmp-form').addEventListener('submit',ev=>{ev.preventDefault();
   const A=findKhipus($('#cmp-a').value,1)[0], B=findKhipus($('#cmp-b').value,1)[0];
-  if(!A||!B||A===B){$('#cmp-out').innerHTML='<p class="note">Enter two different khipu numbers.</p>';return}
+  if(!A||!B||A===B){$('#cmp-out').innerHTML=`<p class="note">${tr('Enter two different khipu numbers.')}</p>`;return}
   const r=compareKhipus(A,B); const best=r.tr>r.tf?r.rv:r.fw, dir=r.tr>r.tf?'reversed':'forward';
   const runRows=best.map(x=>`<tr><td class="v">${x.a+1}–${x.a+x.len}</td><td class="v">${x.rev?`${x.b+x.len}–${x.b+1}`:`${x.b+1}–${x.b+x.len}`}</td><td class="v">${x.len}</td><td class="seq">${A.v.slice(x.a,x.a+x.len).join(' ')}</td></tr>`).join('');
   $('#cmp-out').innerHTML=`<h3>${esc(nameTxt(A))} and ${esc(nameTxt(B))}</h3>
    <p>Runs of ≥ 3 equal consecutive pendants: <b>${r.tf}</b> cords forward, <b>${r.tr}</b> reversed. ${best.length?`Best orientation: ${dir}.`:''}</p>
-   ${best.length?`<div class="tablewrap"><table><thead><tr><th>${esc(A.id)} cords</th><th>${esc(B.id)} cords</th><th>Length</th><th>Values</th></tr></thead><tbody>${runRows}</tbody></table></div>`:'<p class="note">No shared runs.</p>'}
-   <h3>Identical groups</h3>${r.same.length?`<ul>${r.same.map(x=>`<li class="seq">${esc(x.v)} — ${esc(A.id)} g${x.a.join(', g')} · ${esc(B.id)} g${x.b.join(', g')}</li>`).join('')}</ul>`:'<p class="note">None (groups of ≥ 3 cords with ≥ 2 values ≥ 10).</p>'}
-   <h3>Group totals found among the other khipu's cords</h3>
+   ${best.length?`<div class="tablewrap"><table><thead><tr><th>${esc(A.id)} cords</th><th>${esc(B.id)} cords</th><th>Length</th><th>Values</th></tr></thead><tbody>${runRows}</tbody></table></div>`:`<p class="note">${tr('No shared runs.')}</p>`}
+   <h3>${tr('Identical groups')}</h3>${r.same.length?`<ul>${r.same.map(x=>`<li class="seq">${esc(x.v)} — ${esc(A.id)} g${x.a.join(', g')} · ${esc(B.id)} g${x.b.join(', g')}</li>`).join('')}</ul>`:'<p class="note">None (groups of ≥ 3 cords with ≥ 2 values ≥ 10).</p>'}
+   <h3>${tr("Group totals found among the other khipu's cords")}</h3>
    <p>${esc(A.id)} totals on ${esc(B.id)}: <b>${r.ab.real.length}</b> of ${r.ab.n} (expected by chance ${r.ab.exp.toFixed(1)})${r.ab.real.length?': <span class="seq">'+r.ab.real.slice(0,20).join(', ')+'</span>':''}.<br>
    ${esc(B.id)} totals on ${esc(A.id)}: <b>${r.ba.real.length}</b> of ${r.ba.n} (expected ${r.ba.exp.toFixed(1)})${r.ba.real.length?': <span class="seq">'+r.ba.real.slice(0,20).join(', ')+'</span>':''}.</p>
    <p><a href="#khipu-${A.id}">Open ${esc(A.id)}</a> · <a href="#khipu-${B.id}">Open ${esc(B.id)}</a></p>`});
@@ -725,30 +751,30 @@ function cardExtras(k){
   if(k.smb) links.push(`<a href="${esc(k.smb)}" target="_blank" rel="noopener">Museum record (museum-digital)</a>`);
   links.push(`<a href="https://github.com/khipulab/open-khipu-repository" target="_blank" rel="noopener">Open Khipu Repository</a>`);
   const corr=(k.corr||[]);
-  return `<dl class="meta">${k.acq?`<dt>Acquired</dt><dd>${esc([k.acq.via,k.acq.year].filter(Boolean).join(', '))} <span class="note">— ${esc(k.acq.note)}</span></dd>`:''}
-    <dt>Data</dt><dd>${esc(MODELQ[k.model]||'')}</dd>
-    <dt>Condition</dt><dd>${k.brk} broken pendant${k.brk===1?'':'s'} of ${k.np}; ${k.nsub} subsidiar${k.nsub===1?'y':'ies'}</dd></dl>
-   ${corr.length?`<h3>Proposed readings</h3><div class="tablewrap"><table><thead><tr><th>Cord</th><th>Recorded</th><th>Proposed</th><th>Basis</th><th>Applied</th></tr></thead><tbody>${corr.map(c=>`<tr><td class="v">${esc(c.cord)}</td><td class="v">${esc(c.recorded||'?')}</td><td class="v">${esc(c.corrected)}</td><td>${esc(c.source)}; ${esc(c.note)}</td><td>${esc(c.applied)}</td></tr>`).join('')}</tbody></table></div>
-     <div class="actions"><button class="btn ghost" type="button" id="corr-t" aria-pressed="false">Show values with proposed readings</button></div>`:''}
-   <h3>Elsewhere</h3><p>${links.join(' · ')}</p>
-   <div class="actions"><button class="btn ghost" type="button" id="cite-b">Cite this khipu</button><button class="btn ghost" type="button" id="csv-b">Copy cord values as CSV</button><a class="btn ghost" href="#tools" id="cmp-b2">Compare with another khipu</a></div>
+  return `<dl class="meta">${k.acq?`<dt>${tr('Acquired')}</dt><dd>${esc([k.acq.via,k.acq.year].filter(Boolean).join(', '))} <span class="note">— ${esc(k.acq.note)}</span></dd>`:''}
+    <dt>${tr('Data')}</dt><dd>${esc(tr(MODELQ[k.model]||''))}</dd>
+    <dt>${tr('Condition')}</dt><dd>${LANG==='es'?`${k.brk} colgantes rotos de ${k.np}; ${k.nsub} subsidiarias`:`${k.brk} broken pendant${k.brk===1?'':'s'} of ${k.np}; ${k.nsub} subsidiar${k.nsub===1?'y':'ies'}`}</dd></dl>
+   ${corr.length?`<h3>${tr('Proposed readings')}</h3><div class="tablewrap"><table><thead><tr><th>${tr('Cord')}</th><th>${tr('Recorded')}</th><th>${tr('Proposed')}</th><th>${tr('Basis')}</th><th>${tr('Applied')}</th></tr></thead><tbody>${corr.map(c=>`<tr><td class="v">${esc(c.cord)}</td><td class="v">${esc(c.recorded||'?')}</td><td class="v">${esc(c.corrected)}</td><td>${esc(c.source)}; ${esc(c.note)}</td><td>${esc(c.applied)}</td></tr>`).join('')}</tbody></table></div>
+     <div class="actions"><button class="btn ghost" type="button" id="corr-t" aria-pressed="false">${tr('Show values with proposed readings')}</button></div>`:''}
+   <h3>${tr('Elsewhere')}</h3><p>${links.join(' · ')}</p>
+   <div class="actions"><button class="btn ghost" type="button" id="cite-b">${tr('Cite this khipu')}</button><button class="btn ghost" type="button" id="csv-b">${tr('Copy cord values as CSV')}</button><a class="btn ghost" href="#tools" id="cmp-b2">${tr('Compare with another khipu')}</a></div>
    <div id="cite-out"></div>`;
 }
 function copyText(t,btn,label){ const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent=label,1600)};
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done).catch(()=>{$('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre><p class="note">Select the text above to copy it.</p>`}); else $('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre>` }
 function wireCard(k){
   const cb=$('#cite-b'); if(cb) cb.onclick=()=>{ const t=`Khipu ${nameTxt(k)}${k.museum?`, ${k.museum}`:''}${k.num?` ${k.num}`:''}. In: Khipu Links Atlas (2026), ${ART}#khipu-${k.id} (accessed ${new Date().toISOString().slice(0,10)}). Cord data: ${k.model==='recon'?'Khipu Field Guide':'Open Khipu Repository'}.`;
-    $('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre>`; copyText(t,cb,'Cite this khipu') };
-  const vb=$('#csv-b'); if(vb) vb.onclick=()=>{ let i=0; const lines=['cord,group,value,color']; k.groups.forEach((n,g)=>{for(let j=0;j<n;j++,i++) lines.push(`${i+1},${g+1},${k.v[i]},${k.c[i]||''}`)}); copyText(lines.join('\n'),vb,'Copy cord values as CSV') };
+    $('#cite-out').innerHTML=`<pre class="cite">${esc(t)}</pre>`; copyText(t,cb,tr('Cite this khipu')) };
+  const vb=$('#csv-b'); if(vb) vb.onclick=()=>{ let i=0; const lines=['cord,group,value,color']; k.groups.forEach((n,g)=>{for(let j=0;j<n;j++,i++) lines.push(`${i+1},${g+1},${k.v[i]},${k.c[i]||''}`)}); copyText(lines.join('\n'),vb,tr('Copy cord values as CSV')) };
   const c2=$('#cmp-b2'); if(c2) c2.onclick=()=>{ $('#cmp-a').value=k.alias||k.id };
-  const ct=$('#corr-t'); if(ct) ct.onclick=()=>{ const on=ct.getAttribute('aria-pressed')!=='true'; ct.setAttribute('aria-pressed',on); ct.textContent=on?'Show values as recorded':'Show values with proposed readings';
+  const ct=$('#corr-t'); if(ct) ct.onclick=()=>{ const on=ct.getAttribute('aria-pressed')!=='true'; ct.setAttribute('aria-pressed',on); ct.textContent=on?tr('Show values as recorded'):tr('Show values with proposed readings');
     const v=k.v.slice(); if(on) (k.corr||[]).forEach(c=>{const n=parseInt(c.cord,10); if(c.field==='value'&&n>0&&n<=v.length) v[n-1]=+c.corrected});
     let i=0; $('#gvals').innerHTML=k.groups.map((n,gi)=>{const vs=v.slice(i,i+n).map((x,j)=>x!==k.v[i+j]?`<span class="hit">${x}</span>`:x);i+=n;return `<div><span>g${gi+1} (${n})</span> ${vs.join(' ')}</div>`}).join('') };
 }
 
 /* ---------- Statistics ---------- */
 function statsInit(){
-  const sel=$('#st-sel'); const opts=[['all','All digitized khipus']];
+  const sel=$('#st-sel'); const opts=[['all',tr('All digitized khipus')]];
   D.sites.slice().sort((a,b)=>b.n-a.n).filter(s=>s.n>=8).forEach(s=>opts.push(['site:'+s.id,s.label]));
   const cc={}; D.khipus.forEach(k=>{if(k.collector)cc[k.collector]=(cc[k.collector]||0)+1}); Object.entries(cc).filter(x=>x[1]>=5).sort((a,b)=>b[1]-a[1]).forEach(([c])=>opts.push(['col:'+c,'Collector: '+c]));
   sel.innerHTML=opts.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join(''); sel.addEventListener('input',statsDraw); statsDraw() }
@@ -766,45 +792,45 @@ function statsDraw(){ const v=$('#st-sel').value; const ks=D.khipus.filter(k=>v=
   const kt={S:0,L:0,E:0,other:0}; ks.forEach(k=>Object.entries(k.kt||{}).forEach(([t,n])=>{kt[t in kt?t:'other']+=n}));
   const pct=(a,b)=>b?Math.round(100*a/b)+'%':'—'; const med=a=>{const s=a.slice().sort((x,y)=>x-y);return s.length?s[Math.floor(s.length/2)]:0};
   const n14=ks.filter(k=>k.groups.filter(n=>n>=5).length===14).length;
-  $('#st-out').innerHTML=`<div class="panel"><h3 style="margin-top:0">Summary</h3><dl class="meta"><dt>Khipus</dt><dd>${ks.length}</dd><dt>Median pendants</dt><dd>${med(ks.map(k=>k.np))}</dd>
-   <dt>With subsidiaries</dt><dd>${pct(ks.filter(k=>k.nsub).length,ks.length)}</dd><dt>With broken pendants</dt><dd>${pct(ks.filter(k=>k.brk).length,ks.length)}</dd>
-   <dt>Zero-valued pendants</dt><dd>${pct(vc[0],vc.reduce((a,b)=>a+b,0))}</dd><dt>Exactly 14 main groups</dt><dd>${n14}</dd><dt>In a link or finding</dt><dd>${ks.filter(k=>k.findings.length).length}</dd></dl></div>`
-   + bars('Group sizes (pendants per group)',gs.map((n,i)=>[i===20?'20+':String(i),n]).slice(1))
-   + bars('Pendant values',vb.map((l,i)=>[l,vc[i]]))
-   + bars('Knot types (recorded knots only)',[['single',kt.S],['long',kt.L],['figure-8',kt.E],['other',kt.other]]) }
+  $('#st-out').innerHTML=`<div class="panel"><h3 style="margin-top:0">${tr('Summary')}</h3><dl class="meta"><dt>Khipus</dt><dd>${ks.length}</dd><dt>${tr('Median pendants')}</dt><dd>${med(ks.map(k=>k.np))}</dd>
+   <dt>${tr('With subsidiaries')}</dt><dd>${pct(ks.filter(k=>k.nsub).length,ks.length)}</dd><dt>${tr('With broken pendants')}</dt><dd>${pct(ks.filter(k=>k.brk).length,ks.length)}</dd>
+   <dt>${tr('Zero-valued pendants')}</dt><dd>${pct(vc[0],vc.reduce((a,b)=>a+b,0))}</dd><dt>${tr('Exactly 14 main groups')}</dt><dd>${n14}</dd><dt>${tr('In a link or finding')}</dt><dd>${ks.filter(k=>k.findings.length).length}</dd></dl></div>`
+   + bars(tr('Group sizes (pendants per group)'),gs.map((n,i)=>[i===20?'20+':String(i),n]).slice(1))
+   + bars(tr('Pendant values'),vb.map((l,i)=>[l,vc[i]]))
+   + bars(tr('Knot types (recorded knots only)'),[[tr('single'),kt.S],[tr('long'),kt.L],[tr('figure-8'),kt.E],[tr('other'),kt.other]]) }
 
 /* ---------- On the object ---------- */
 function checksDraw(){ const by={}; D.checks.forEach(c=>{(by[c.museum]=by[c.museum]||[]).push(c)});
-  $('#ck-out').innerHTML=Object.entries(by).map(([m,cs])=>`<h2>${esc(m)}</h2><div class="tablewrap"><table><thead><tr><th>Khipu</th><th>Cord</th><th>What to check</th><th>Why it matters</th></tr></thead><tbody>${cs.map(c=>`<tr><td>${K[c.khipu]?`<a href="#khipu-${c.khipu}">${esc(nameTxt(K[c.khipu]))}</a>`:esc(c.khipu)}</td><td>${esc(c.cord)}</td><td>${esc(c.ck)}</td><td>${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>`).join('') }
+  $('#ck-out').innerHTML=Object.entries(by).map(([m,cs])=>`<h2>${esc(m)}</h2><div class="tablewrap"><table><thead><tr><th>Khipu</th><th>${tr('Cord')}</th><th>${tr('What to check')}</th><th>${tr('Why it matters')}</th></tr></thead><tbody>${cs.map(c=>`<tr><td>${K[c.khipu]?`<a href="#khipu-${c.khipu}">${esc(nameTxt(K[c.khipu]))}</a>`:esc(c.khipu)}</td><td>${esc(c.cord)}</td><td>${esc(c.ck)}</td><td>${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>`).join('') }
 
 /* ---------- Findings, negatives, sources ---------- */
 function findings(){ $('#f-grid').innerHTML=D.findings.map(findingCard).join('') }
-function showFinding(id){ const f=D.findings.find(x=>x.id===id); if(!f) return;
-  $('#finding-detail').innerHTML=`<div class="drawer"><span class="chip st-${f.status}">${STATUS[f.status]}</span><h2>${esc(f.title)}</h2><p>${esc(f.summary)}</p>
-   ${f.evidence.length?`<h3>Evidence</h3><ul>${f.evidence.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
+function showFinding(id){ let f=D.findings.find(x=>x.id===id); if(!f) return; f=fx(f);
+  $('#finding-detail').innerHTML=`<div class="drawer"><span class="chip st-${f.status}">${tr(STATUS[f.status])}</span><h2>${esc(f.title)}</h2><p>${esc(f.summary)}</p>
+   ${f.evidence.length?`<h3>${tr('Evidence')}</h3><ul>${f.evidence.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
    ${(f.compare||[]).map(cmp).join('')}
-   <h3>Khipus</h3><div>${f.khipus.map(k=>K[k]?`<a class="kbtn" href="#khipu-${k}">${esc(nameTxt(K[k]))}</a>`:`<span class="kbtn">${esc(k)}</span>`).join('')}</div>
-   ${f.place.length?`<p class="note">Places: ${f.place.map(siteLabel).join(', ')} · <a href="#map">map</a></p>`:''}
-   <h3>Reproduce</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>
-   <p><a href="#findings">All findings</a></p></div>` }
+   <h3>${tr('Khipus')}</h3><div>${f.khipus.map(k=>K[k]?`<a class="kbtn" href="#khipu-${k}">${esc(nameTxt(K[k]))}</a>`:`<span class="kbtn">${esc(k)}</span>`).join('')}</div>
+   ${f.place.length?`<p class="note">${tr('Places')}: ${f.place.map(siteLabel).join(', ')} · <a href="#map">${tr('map')}</a></p>`:''}
+   <h3>${tr('Reproduce')}</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>
+   <p><a href="#findings">${tr('All findings')}</a></p></div>` }
 function cmp(c){
   if(c.kind==='note') return `<h3>${esc(c.title)}</h3><p>${esc(c.text)}</p>`;
   if(c.kind==='table') return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)}</caption><thead><tr>${c.head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
   const A=K[c.a],B=K[c.b];
   return `<div class="cmp"><div class="tablewrap"><table><caption>${esc(c.title)} · ${esc(c.tally)}</caption><thead><tr><th>${esc(A?nameTxt(A):c.a)} cord</th><th>Value</th><th>${esc(B?nameTxt(B):c.b)} cord</th><th>Value</th></tr></thead>
    <tbody>${c.rows.map(r=>`<tr class="${r[4]}"><td class="v">${esc(r[0])}</td><td class="v">${esc(r[1])}</td><td class="v">${esc(r[2])}</td><td class="v">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
-   ${c.note?`<p class="note">${esc(c.note)}</p>`:''}<p class="note">Green: equal · red: different · grey: no counterpart.</p></div>`;
+   ${c.note?`<p class="note">${esc(c.note)}</p>`:''}<p class="note">${tr('Green: equal · red: different · grey: no counterpart.')}</p></div>`;
 }
-function timeline(){ $('#tl').innerHTML=D.timeline.map(t=>{const f=t.finding&&D.findings.find(x=>x.id===t.finding);
+function timeline(){ $('#tl').innerHTML=D.timeline.map((t0,i)=>{const t=ES()?{...t0,...D.es.timeline[i]}:t0; let f=t.finding&&D.findings.find(x=>x.id===t.finding); if(f) f=fx(f);
   return `<li class="${f?'hit':''}"><span class="when">${esc(t.when)}</span><h3>${esc(t.title)}</h3><p>${esc(t.text)}${f?` <a href="#finding-${f.id}">${esc(f.title)}</a>.`:''}</p></li>`}).join('') }
-function negatives(){ $('#neg').innerHTML=D.negatives.map(n=>`<li><b>${esc(n.title)}.</b> ${esc(n.text)}</li>`).join('') }
-function sources(){ $('#src').innerHTML=D.sources.map(s=>`<li><b>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</b><br><span class="muted">${esc(s.use)}</span></li>`).join('') }
+function negatives(){ $('#neg').innerHTML=D.negatives.map((n0,i)=>{const n=ES()?D.es.negatives[i]:n0; return `<li><b>${esc(n.title)}.</b> ${esc(n.text)}</li>`}).join('') }
+function sources(){ $('#src').innerHTML=D.sources.map((s,i)=>`<li><b>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</b><br><span class="muted">${esc(ES()?D.es.sources[i]:s.use)}</span></li>`).join('') }
 
 $('#copymail').addEventListener('click',()=>{const t=$('#mail').textContent; navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{$('#copymail').textContent='Copied'}).catch(()=>{const r=document.createRange();r.selectNodeContents($('#mail'));const s=getSelection();s.removeAllRanges();s.addRange(r)})});
 
 Promise.all([fetch('./data.json').then(r=>r.json()),fetch('./land.json').then(r=>r.json())]).then(([d,l])=>{
   D=d; LAND=l; D.khipus.forEach(k=>K[k.id]=k);
-  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); timeline(); negatives(); sources(); statsInit(); checksDraw(); route();
+  stats(); overview(); fillFilters(); renderRows(); undig(); findings(); timeline(); negatives(); sources(); statsInit(); checksDraw(); applyStatic(); route();
 }).catch(()=>{$('#stats').innerHTML='<span class="loading">The data files could not be loaded.</span>'});
 route();
 })();
