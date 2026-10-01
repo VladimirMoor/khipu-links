@@ -16,7 +16,7 @@ Rebuild after any change:
 python3 khipu/atlas_db.py && python3 khipu/site_build.py && python3 khipu/site_knots.py && python3 khipu/terrain.py
 ```
 
-Standalone copy for Vercel or any static host (wraps the page, adds data files and licence notices to dist/):
+Standalone copy for Vercel or any static host (wraps the page, adds data files and licence notices to dist/). The branch `site` of this repository holds only that copy; Vercel deploys it from GitHub (Production Branch = site, Framework = Other, no build command). Update it with `sh khipu/site_publish.sh https://khipu-links.vercel.app`. By hand:
 
 ```
 python3 khipu/site_export.py https://<project>.vercel.app && npx vercel deploy dist --prod
