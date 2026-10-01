@@ -19,3 +19,4 @@ site/data.json
 atlas/atlas.db
 site/kd/
 site/terrain.json
+dist/
