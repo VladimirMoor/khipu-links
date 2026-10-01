@@ -6,7 +6,7 @@ Khipu Field Guide (KFG), about 700 khipus. Every detector is first run on relati
 published, and every result is compared with structure-preserving baselines (targets offset
 by ±d, shuffled group order), not only with shuffled values.
 
-- **Preprint**, version 2 (11 pages, 4 figures): [`docs/preprint/preprint.pdf`](docs/preprint/preprint.pdf)
+- **Preprint**, version 2 (11 pages, 4 figures): [`docs/preprint/preprint.pdf`](docs/preprint/preprint.pdf); Spanish translation: [`docs/preprint/preprint_es.pdf`](docs/preprint/preprint_es.pdf)
 - **Full report** with tables, methods and caveats: [`report/khipu_links_report.html`](report/khipu_links_report.html) (open in a browser)
 - **Study log** (Russian, every step and negative result): [`docs/project_log_ru.md`](docs/project_log_ru.md)
 

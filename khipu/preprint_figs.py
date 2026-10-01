@@ -1,5 +1,6 @@
 """Рисунки препринта (SVG): docs/preprint/fig1_map.svg … fig4_ur269.svg.
 
+fig*_es.svg — те же рисунки с испанскими подписями.
 fig1 — места находок и связи между кипу (site/data.json, береговая линия Natural Earth из site/land.json);
 fig2 — доли распределения AS143 / AS149 в девятых (числа из §3.1);
 fig3 — счёт диагонали D(c) для AS175 против UR233 и UR232 (diagscan.py);
@@ -18,6 +19,12 @@ OUT = ROOT / "docs/preprint"
 sys.path.insert(0, str(ROOT / "khipu"))
 FONT = 'font-family="Charter, Georgia, serif"'
 INK, MUTED, ACC, CORD, LAND = "#1d1b19", "#6b665e", "#a3283d", "#8a6a4f", "#e9e8e1"
+LANG = "en"
+ES = {"Pacific Ocean": "Océano Pacífico", "ninths of the AS143 total (group 1 = 180,345)": "novenos del total de AS143 (grupo 1 = 180 345)",
+      "vs": "frente a", "offset c (group of AS175 − group of {o})": "desfase c (grupo de AS175 − grupo de {o})", "place": "lugar",
+      "deduction": "deducción", "sum of the": "suma de los", "five places:": "cinco lugares:"}
+T = lambda x: ES.get(x, x) if LANG == "es" else x
+SUF = lambda: "_es" if LANG == "es" else ""
 
 
 def svg(w, h, body):
@@ -69,10 +76,10 @@ def fig1():
             dx, dy = lab[s["id"]]
             b.append(f'<text x="{x + r + dx - 6 if dx > 0 else x + dx:.1f}" y="{y + dy:.1f}" fill="{INK}" '
                      f'stroke="#fff" stroke-width="2.5" paint-order="stroke">{s["label"].split(" (")[0]}</text>')
-    b.append(f'<text x="24" y="{H * .8:.0f}" fill="{MUTED}" font-style="italic">Pacific Ocean</text></g>')
+    b.append(f'<text x="24" y="{H * .8:.0f}" fill="{MUTED}" font-style="italic">{T("Pacific Ocean")}</text></g>')
     km = 100 / 111 * k
     b.append(f'<path d="M20,{H - 14} h{km:.1f}" stroke="{INK}" stroke-width="1.5"/><text x="{20 + km / 2:.1f}" y="{H - 18}" text-anchor="middle" font-size="9">100 km</text>')
-    (OUT / "fig1_map.svg").write_text(svg(W, H, b))
+    (OUT / f"fig1_map{SUF()}.svg").write_text(svg(W, H, b))
 
 
 def fig2():
@@ -94,10 +101,10 @@ def fig2():
         b.append(f'<line x1="{xx:.1f}" x2="{xx:.1f}" y1="110" y2="114" stroke="{MUTED}"/>')
         b.append(f'<text x="{xx:.1f}" y="126" text-anchor="middle" fill="{MUTED}" font-size="9">{i}</text>')
     b.append(f'<line x1="{x0}" x2="{x0 + w}" y1="110" y2="110" stroke="{MUTED}"/>')
-    b.append(f'<text x="{x0 + w / 2}" y="142" text-anchor="middle" fill="{MUTED}">ninths of the AS143 total (group 1 = 180,345)</text>')
+    b.append(f'<text x="{x0 + w / 2}" y="142" text-anchor="middle" fill="{MUTED}">{T("ninths of the AS143 total (group 1 = 180,345)")}</text>')
     x4 = x0 + w * 3 / 9
     b.append(f'<path d="M{x4:.1f},46 L{x4:.1f},72 M{x0 + w * 7 / 9 - 2:.1f},46 L{x0 + w * 7 / 9 - 2:.1f},72" stroke="{ACC}" stroke-dasharray="3 2"/>')
-    (OUT / "fig2_berlin.svg").write_text(svg(W, H, b))
+    (OUT / f"fig2_berlin{SUF()}.svg").write_text(svg(W, H, b))
 
 
 def fig3():
@@ -131,9 +138,9 @@ def fig3():
         b.append(f'<line x1="{x0}" x2="{x0 + w}" y1="{y0 + hh}" y2="{y0 + hh}" stroke="{MUTED}"/>')
         b.append(f'<text x="{x0 - 6}" y="{y0 + 8}" text-anchor="end" fill="{MUTED}" font-size="9">{mx}</text>')
         b.append(f'<text x="{x0 - 6}" y="{y0 + hh}" text-anchor="end" fill="{MUTED}" font-size="9">0</text>')
-        b.append(f'<text x="{x0 + 4}" y="{y0 + 4}" font-weight="bold">AS175 vs {other}</text>')
-        b.append(f'<text x="{x0 + w / 2}" y="{y0 + hh + 14}" text-anchor="middle" fill="{MUTED}" font-size="9">offset c (group of AS175 − group of {other})</text>')
-    (OUT / "fig3_huacho.svg").write_text(svg(W, H, b))
+        b.append(f'<text x="{x0 + 4}" y="{y0 + 4}" font-weight="bold">AS175 {T("vs")} {other}</text>')
+        b.append(f'<text x="{x0 + w / 2}" y="{y0 + hh + 14}" text-anchor="middle" fill="{MUTED}" font-size="9">{T("offset c (group of AS175 − group of {o})").format(o=other)}</text>')
+    (OUT / f"fig3_huacho{SUF()}.svg").write_text(svg(W, H, b))
 
 
 def fig4():
@@ -156,15 +163,16 @@ def fig4():
             for j in range(n):
                 xx = cx + (j - (n - 1) / 2) * 5
                 b.append(f'<circle cx="{xx:.1f}" cy="{Y(v):.1f}" r="2.2" fill="{ACC if v == mode[p] else CORD}"/>')
-        b.append(f'<text x="{cx}" y="{y0 + hh + 14}" text-anchor="middle">place {p}</text>')
+        b.append(f'<text x="{cx}" y="{y0 + hh + 14}" text-anchor="middle">{T("place")} {p}</text>')
         b.append(f'<text x="{cx + 24}" y="{Y(mode[p]) + 3:.1f}" fill="{ACC}" font-size="9">{mode[p]}</text>')
-    b.append(f'<text x="{x0 - 36}" y="{y0 + hh / 2}" transform="rotate(-90 {x0 - 36} {y0 + hh / 2})" text-anchor="middle" fill="{MUTED}">deduction</text>')
-    b.append(f'<text x="{x0 + 400}" y="{y0 + 40}" fill="{MUTED}" font-size="9">sum of the</text>')
-    b.append(f'<text x="{x0 + 400}" y="{y0 + 52}" fill="{MUTED}" font-size="9">five places:</text>')
+    b.append(f'<text x="{x0 - 36}" y="{y0 + hh / 2}" transform="rotate(-90 {x0 - 36} {y0 + hh / 2})" text-anchor="middle" fill="{MUTED}">{T("deduction")}</text>')
+    b.append(f'<text x="{x0 + 400}" y="{y0 + 40}" fill="{MUTED}" font-size="9">{T("sum of the")}</text>')
+    b.append(f'<text x="{x0 + 400}" y="{y0 + 52}" fill="{MUTED}" font-size="9">{T("five places:")}</text>')
     b.append(f'<text x="{x0 + 400}" y="{y0 + 64}" fill="{ACC}" font-size="9">208</text>')
-    (OUT / "fig4_ur269.svg").write_text(svg(W, H, b))
+    (OUT / f"fig4_ur269{SUF()}.svg").write_text(svg(W, H, b))
 
 
 if __name__ == "__main__":
-    fig1(); fig2(); fig3(); fig4()
+    for LANG in ("en", "es"):
+        fig1(); fig2(); fig3(); fig4()
     print("figures:", ", ".join(sorted(p.name for p in OUT.glob("fig*.svg"))))
