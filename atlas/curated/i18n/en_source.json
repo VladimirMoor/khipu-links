@@ -313,19 +313,22 @@
     ]
    },
    "ur269": {
-    "title": "Inkawasi UR269: the deduction is set by the place of the record",
-    "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size (1.9% in places 2–4, 3.0% in place 1, 4.4% in place 5). Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268 from the same room, but no record-level link was found.",
+    "title": "Inkawasi UR269: five supply streams, each with its own deduction",
+    "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size. The place-1 records are deliveries of the stream recorded in full on UR275 (deduction 47 throughout) and its copy UR266: 5 of 10 place-1 records reappear on UR275, at one fixed offset (block b of UR269 = entry b + 15 of UR275), while places 2–5 are found on no other khipu. Each block is one round of five streams in a fixed order, each stream with its own fixed deduction. Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268, but no record-level link was found.",
     "evidence": [
      "33 of 43 deductions equal their place value; 17 when records are shuffled within blocks (p ≈ 0.0005).",
+     "Place 1 on UR275: 5 of 10 records (0.5 expected); places 2–4: 0, 1, 1. All five at one offset; 5,000 permutations of block order reach at most 4 (p ≈ 0.0002).",
+     "UR269 keeps the arithmetic where UR275 slips: 1827 = 1780 + 47 on UR269, 1825 on UR275.",
      "No other Inkawasi khipu shows a place dependence (all p > 0.8)."
     ]
    },
    "inkawasi": {
     "title": "Inkawasi: empty slots, totals-only copies, product labels",
-    "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. UR273B records only the deposit totals of UR274B (6 shared totals, 0.45 expected). Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
+    "summary": "On UR255 the net pendant is empty in the first 12 deposits and filled with the values of UR267A in 5 of the last 6. The bundle UR273A + UR273B records only the deposit totals of UR274A + UR274B: 4 and 6 shared totals (0.3 and 0.5 expected), in the same order on both. Copies lie in a different bundle from their counterparts. A red tassel at the start of the primary cord occurs only on peanut khipus (2 of 4 against 0 of 25).",
     "evidence": [
-     "Split this clean under random placement: about 1 in 3,000.",
-     "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵."
+     "Split this clean under random placement: about 1 in 3,900.",
+     "UR273B ~ UR274B: Poisson p ≈ 10⁻⁵.",
+     "UR273A ~ UR274A: 891, 453, 448, 448 in the same order (p ≈ 3 × 10⁻⁴); UR273B ~ UR274B: six totals in the same order (p ≈ 10⁻⁵)."
     ]
    },
    "as003": {
@@ -339,7 +342,7 @@
     "title": "Folded copies",
     "summary": "In two independent cases a separate cord in one copy is a subsidiary in the other: UR270 → UR278 at Inkawasi and UR053C → UR053B in the Waterfall set. The packing rule is ours; the near-duplication of B and C was noted by Chirinos.",
     "evidence": [
-     "UR053B/C: 35 fields match against at most 19 in 2,000 shuffles."
+     "UR053B/C: 35 fields match against at most 18 in 2,000 shuffles."
     ]
    },
    "known": {

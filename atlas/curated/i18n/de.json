@@ -313,11 +313,13 @@
     ]
    },
    "ur269": {
-    "title": "Inkawasi UR269: Der Abzug hängt von der Position des Eintrags ab",
-    "summary": "In Blöcken von fünf Einträgen [brutto, netto, Abzug] beträgt der Abzug je nach Position 47, 46, 46, 44, 25, unabhängig von der Größe der Lieferung (1,9 % an den Positionen 2–4, 3,0 % an Position 1, 4,4 % an Position 5). Urton & Chu (2015, 2018, 2019) führen UR269 als Khipu ohne wiederkehrenden Wert. Die fünf Positionsabzüge ergeben zusammen 208, den festen Abzug von UR268 aus demselben Raum, doch eine Verbindung auf der Ebene einzelner Einträge wurde nicht gefunden.",
+    "title": "Inkawasi UR269: fünf Lieferströme, jeder mit eigenem Abzug",
+    "summary": "In Blöcken aus fünf Einträgen [brutto, netto, Abzug] beträgt der Abzug nach Stelle 47, 46, 46, 44, 25, unabhängig von der Größe der Lieferung. Die Einträge an Stelle 1 sind Lieferungen des Stroms, den UR275 vollständig verzeichnet (überall Abzug 47), ebenso dessen Kopie UR266: 5 von 10 Einträgen an Stelle 1 erscheinen auf UR275 wieder, bei einer festen Verschiebung (Block b von UR269 = Eintrag b + 15 von UR275), während die Stellen 2–5 auf keinem anderen Khipu vorkommen. Jeder Block ist eine Runde aus fünf Strömen in fester Reihenfolge, jeder Strom mit eigenem festem Abzug. Urton und Chu (2015, 2018, 2019) führen UR269 als Khipu ohne wiederkehrenden Wert. Die fünf Abzüge ergeben zusammen 208, den festen Abzug von UR268, eine Verbindung auf Ebene der Einträge wurde aber nicht gefunden.",
     "evidence": [
-     "33 von 43 Abzügen entsprechen ihrem Positionswert; 17, wenn die Einträge innerhalb der Blöcke gemischt werden (p ≈ 0,0005).",
-     "Kein anderes Khipu aus Inkawasi zeigt eine Abhängigkeit von der Position (alle p > 0,8)."
+     "33 von 43 Abzügen entsprechen dem Wert ihrer Stelle; 17, wenn die Einträge innerhalb der Blöcke gemischt werden (p ≈ 0,0005).",
+     "Stelle 1 auf UR275: 5 von 10 Einträgen (0,5 erwartet); Stellen 2–4: 0, 1, 1. Alle fünf bei derselben Verschiebung; 5.000 Permutationen der Blockfolge erreichen höchstens 4 (p ≈ 0,0002).",
+     "UR269 hält die Arithmetik, wo UR275 abweicht: 1827 = 1780 + 47 auf UR269, 1825 auf UR275.",
+     "Kein anderes Khipu aus Inkawasi zeigt eine Abhängigkeit von der Stelle (alle p > 0,8)."
     ]
    },
    "inkawasi": {

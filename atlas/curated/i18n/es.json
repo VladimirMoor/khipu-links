@@ -313,10 +313,12 @@
     ]
    },
    "ur269": {
-    "title": "Inkawasi UR269: la deducción depende del lugar del registro",
-    "summary": "En bloques de cinco registros [bruto, neto, deducción] la deducción es 47, 46, 46, 44, 25 según el lugar, sea cual sea el tamaño del depósito (1,9 % en los lugares 2–4, 3,0 % en el lugar 1, 4,4 % en el lugar 5). Urton y Chu (2015, 2018, 2019) describen UR269 como sin valor repetido. Las cinco deducciones suman 208, la deducción fija de UR268 en la misma sala, pero no se halló un vínculo registro por registro.",
+    "title": "Inkawasi UR269: cinco flujos de entregas, cada uno con su deducción",
+    "summary": "En bloques de cinco registros [bruto, neto, deducción] la deducción es 47, 46, 46, 44, 25 según el lugar, sea cual sea el tamaño del depósito. Los registros del lugar 1 son entregas del flujo que UR275 registra completo (deducción 47 en todo el khipu) y su copia UR266: 5 de 10 registros del lugar 1 reaparecen en UR275, con un desfase fijo (bloque b de UR269 = entrada b + 15 de UR275), mientras que los lugares 2–5 no aparecen en ningún otro khipu. Cada bloque es una ronda de cinco flujos en orden fijo, cada uno con su propia deducción fija. Urton y Chu (2015, 2018, 2019) describen UR269 como sin valor repetido. Las cinco deducciones suman 208, la deducción fija de UR268, pero no se halló un vínculo registro por registro.",
     "evidence": [
      "33 de 43 deducciones igualan el valor de su lugar; 17 al barajar los registros dentro de los bloques (p ≈ 0,0005).",
+     "Lugar 1 en UR275: 5 de 10 registros (0,5 esperados); lugares 2–4: 0, 1, 1. Los cinco con un mismo desfase; 5000 permutaciones del orden de los bloques llegan como máximo a 4 (p ≈ 0,0002).",
+     "UR269 conserva la aritmética donde UR275 falla: 1827 = 1780 + 47 en UR269, 1825 en UR275.",
      "Ningún otro khipu de Inkawasi muestra dependencia del lugar (todos p > 0,8)."
     ]
    },
