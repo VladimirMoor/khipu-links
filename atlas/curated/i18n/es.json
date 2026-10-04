@@ -522,6 +522,10 @@
    "Ordered totals and strided copies": {
     "title": "Totales ordenados y copias con paso",
     "text": "Totales de grupo de un khipu repetidos en el mismo orden en otro (192 khipus con al menos tres totales no redondos ≥ 100): todo par por encima de la línea de base con valores desplazados es una copia ya conocida o un segundo registro del mismo objeto. Dentro de Inkawasi, cada p-ésimo registro de un khipu frente a registros consecutivos de otro (pasos 2–8): solo destaca UR269 ~ UR275; el resto está al nivel esperado por el número de pasos y desfases probados."
+   },
+   "Place-dependent constants and small-valued copies": {
+    "title": "Constantes según el lugar y copias de valores pequeños",
+    "text": "Se buscó en todos los khipus y en todas las posiciones de cuerda un valor fijado por el lugar del registro en su bloque, como en UR269 (bloques entre grupos separadores; registros barajados dentro de los bloques): UR269 es el único caso claro (p ≈ 0,003; el siguiente, UR037, p ≈ 0,05 con valores de 2 y 4). Grupos idénticos de seis o más valores pequeños (< 100) en khipus con distinto número de museo: toda coincidencia rara es un segundo registro del mismo objeto o AS003 ~ AS215; el resto son series uniformes como siete veces 10."
    }
   },
   "sources": {

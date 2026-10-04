@@ -512,6 +512,10 @@
    "Ordered totals and strided copies": {
     "title": "Geordnete Summen und Kopien mit Schrittweite",
     "text": "Gruppensummen eines Khipus, die auf einem anderen in derselben Reihenfolge wiederkehren (192 Khipus mit mindestens drei nicht runden Summen ≥ 100): Jedes Paar über der Vergleichsbasis mit verschobenen Werten ist eine bereits bekannte Kopie oder eine zweite Aufnahme desselben Objekts. Innerhalb von Inkawasi, jeder p-te Eintrag eines Khipus gegen aufeinanderfolgende Einträge eines anderen (Schrittweiten 2–8): nur UR269 ~ UR275 sticht hervor; der Rest liegt auf dem Niveau, das die Zahl der geprüften Schrittweiten und Verschiebungen erwarten lässt."
+   },
+   "Place-dependent constants and small-valued copies": {
+    "title": "Stellenabhängige Konstanten und Kopien kleiner Werte",
+    "text": "Ein durch die Stelle des Eintrags im Block festgelegter Wert wie auf UR269 wurde auf allen Khipus und an allen Schnurpositionen gesucht (Blöcke zwischen Trenngruppen; Einträge innerhalb der Blöcke gemischt): UR269 ist der einzige klare Fall (p ≈ 0,003; danach UR037, p ≈ 0,05 bei Werten von 2 und 4). Identische Gruppen aus sechs oder mehr kleinen Werten (< 100) auf Khipus mit verschiedenen Museumsnummern: Jeder seltene Treffer ist eine zweite Aufnahme desselben Objekts oder AS003 ~ AS215; der Rest sind gleichförmige Folgen wie siebenmal 10."
    }
   },
   "sources": {
