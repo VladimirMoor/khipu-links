@@ -92,6 +92,17 @@ def main():
     meta.setdefault("UR297", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.072", "PROVENANCE": "Unknown", "OKR_NUM": "KH0674"})
     meta.setdefault("UR298", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.071", "PROVENANCE": "Unknown", "OKR_NUM": "KH0675"})
     norm = lambda s: re.sub(r"[^0-9A-Z]", "", str(s).upper())
+    # museum numbers: the KFG release of 2026-10-10 corrects a one-row shift in older records of a Berlin series
+    # (UR212 = VA42513, UR199 = VA42532, AS149 = VA44866A …; checked against the group structure on the museum records).
+    # Taken only where the KFG lists our investigator number among the khipu's names.
+    m26p = ROOT / "extracted/kfg2026_meta.json"
+    if m26p.exists():
+        for inv, v in json.load(open(m26p)).items():
+            names = {norm(x) for x in re.split(r"[,;]", v.get("aliases", "")) if x.strip()}
+            alias = ("AS" + inv[3:]) if re.fullmatch(r"UR1\d{3}", inv) else ""
+            if inv in meta and v.get("museum_num") and (norm(inv) in names or (alias and norm(alias) in names)):
+                if norm(meta[inv].get("MUSEUM_NUM")) != norm(v["museum_num"]):
+                    meta[inv] = dict(meta[inv], MUSEUM_NUM=v["museum_num"], MUSEUM_NUM_OLD=meta[inv].get("MUSEUM_NUM"))
     coll = {norm(inv): c for inv, c, _, _ in json.load(open(ROOT / "data/smb/khipu_collectors.json"))}
     apply = {(r["khipu"], r["cord"]): int(r["corrected"]) for r in corr if r["applied"].strip().lower() == "yes" and r["field"] == "value"}
     allc = list(csv.DictReader(open(ROOT / "extracted/plus_do_cords.csv")))
@@ -153,7 +164,8 @@ def main():
         mm = meta.get(k, {})
         prov = str(mm.get("PROVENANCE") or "").strip('" ')
         mnum = str(mm.get("MUSEUM_NUM") or "").strip('" ')
-        c = coll.get(norm(mnum)) or next((v for kk, v in coll.items() if norm(mnum).startswith(kk) and len(norm(mnum)) - len(kk) <= 2), "")
+        m1 = norm(mnum.split(",")[0])   # "VA16135A, VA16135B": the first number is enough to find the collector
+        c = coll.get(m1) or next((v for kk, v in coll.items() if m1.startswith(kk) and len(m1) - len(kk) <= 2), "")
         if not c and "Gaffron" in prov:
             c = "Gaffron, Eduard"
         db.execute("insert into khipu values(?,?,?,?,?,?,?,?,?,?,?)", (k, ("AS" + k[3:]) if re.fullmatch(r"UR1\d{3}", k) else "",

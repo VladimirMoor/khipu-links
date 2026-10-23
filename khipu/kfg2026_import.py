@@ -54,7 +54,9 @@ def main():
         name = info.get("Name", f.stem)
         al = [norm(x) for x in re.split(r"[,;]", info.get("Aliases", "")) if x.strip()]
         # investigator numbers (UR, AS…) first: KH numbers of khipus added after 2017 may differ between sources
-        inv = ours.get(name) or next((hn[x] for x in al if x in hn and not x.startswith("KH")), None) or okr2inv.get(name) or name
+        # investigator numbers (UR, AS…) listed by the KFG itself come first: the KFG renumbered some khipus in 2026
+        # (KH0197 is now AS180), so the old catalogue mapping by KH code can point at the wrong object
+        inv = next((hn[x] for x in al if x in hn and not x.startswith("KH")), None) or ours.get(name) or okr2inv.get(name) or name
         gr = {}
         gi = 0
         for r in S.get("CordGroups", [])[1:]:

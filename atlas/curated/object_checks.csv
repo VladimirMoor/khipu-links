@@ -18,6 +18,4 @@ museum,khipu,cord,check,why
 "Museum der Kulturen, Basel",MM015,13,Cord 212 with a subsidiary (88) against UR212's 212 without one.,Whether the copy adds subsidiaries.
 "Museum der Kulturen, Basel",MM008,primary cord,Which end of each fragment is the start (knotted loop or end knot)?,Fixes the orientation of each fragment on the 1924 cloth.
 "Museum der Kulturen, Basel",MM016,ends,Cut or broken ends: were the fragments cut from larger khipus?,Tells a contemporary copy from pieces reassembled later.
-"Ethnologisches Museum, Berlin",VA 42513,whole,Digitize cord by cord (museum record: 14 × 13 pendants).,Tests whether it records the same 14 units as UR212 and AS131.
-"Ethnologisches Museum, Berlin",VA 42537,whole,Digitize cord by cord (museum record: 14 × 9 pendants).,As above.
-"Ethnologisches Museum, Berlin",VA 42532,whole,"Digitize cord by cord (7 × A, 7 × B, 7 × A, 7 × B).",As above.
+"Ethnologisches Museum, Berlin",VA 42537,whole,Digitize cord by cord (museum record: 14 × 9 pendants).,Tests whether it records the same 14 units as UR212 and AS131.

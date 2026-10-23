@@ -43,7 +43,7 @@
   "place": [
    "pachacamac"
   ],
-  "summary": "Fourteen main groups are rare (1.6% of khipus outside the Berlin 'Pachacamac' batch) but occur on 4 of 23 khipus of that batch: UR212, AS131, AS170 and UR199. Berlin catalogue records describe three more that are not digitized: VA 42513 (14 × 13 pendants), VA 42537 (14 × 9) and VA 42532 (7 × A, 7 × B, 7 × A, 7 × B). AS131, UR212 and AS170 split their units 7 + 7 at the same place, each marked differently: a larger space, a single knotless cord, a marker.",
+  "summary": "Fourteen main groups are rare (1.6% of khipus outside the Berlin 'Pachacamac' batch) but occur on 4 of 23 khipus of that batch: UR212, AS131, AS170 and UR199. The Berlin catalogue describes one more that is not digitized, VA 42537 (14 × 9); two other records with this frame, VA 42513 (14 × 13 pendants) and VA 42532 (7 × A, 7 × B, 7 × A, 7 × B), are UR212 and UR199 themselves, as the KFG release of October 2026 numbers them. AS131, UR212 and AS170 split their units 7 + 7 at the same place, each marked differently: a larger space, a single knotless cord, a marker.",
   "evidence": [
    "Binomial P ≈ 0.0005 with all four; P ≈ 0.04 without the two khipus that prompted the question.",
    "Across 109 OKR khipus with an even number of main groups, the largest space falls in the middle 12.9 times (13.0 expected): equal halves are not a general habit."
@@ -60,7 +60,7 @@
   ],
   "levels": {
    "numbers": "4 of the 23 khipus of the batch have 14 main groups, against 1.6% elsewhere (P ≈ 0.0005; P ≈ 0.04 without the two khipus that prompted the question).",
-   "structure": "Three of them divide their units 7 + 7, each marked differently; three undigitized khipus of the batch are described with 14 groups.",
+   "structure": "Three of them divide their units 7 + 7, each marked differently; one undigitized khipu of the batch, VA 42537, is described with 14 groups.",
    "reading": "Suggestive only: a shared fourteen-unit frame in one archive. What the units were is unknown."
   }
  },
