@@ -36,6 +36,13 @@ def main():
     for r in csv.DictReader(open(ROOT / "atlas/curated/kfg_names.csv")):
         if r["khipu"]:
             ours[r["kfg"]] = r["khipu"]
+    okr2inv, have = {}, set()
+    for r in csv.DictReader(open(ROOT / "extracted/plus_do_cords.csv")):
+        have.add(r["inv_num"])
+        if r["okr_num"]:
+            okr2inv.setdefault(r["okr_num"], r["inv_num"])
+    norm = lambda x: re.sub(r"[^0-9A-Z]", "", x.upper())
+    hn = {norm(h): h for h in have}
     rows, meta, bad = [], {}, []
     for f in sorted(SRC.glob("*.xlsx")):
         try:
@@ -45,7 +52,9 @@ def main():
             continue
         info = kv(S.get("Khipu", []))
         name = info.get("Name", f.stem)
-        inv = ours.get(name, name)
+        al = [norm(x) for x in re.split(r"[,;]", info.get("Aliases", "")) if x.strip()]
+        # investigator numbers (UR, AS…) first: KH numbers of khipus added after 2017 may differ between sources
+        inv = ours.get(name) or next((hn[x] for x in al if x in hn and not x.startswith("KH")), None) or okr2inv.get(name) or name
         gr = {}
         gi = 0
         for r in S.get("CordGroups", [])[1:]:

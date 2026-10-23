@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = ["khipu_id", "okr_num", "inv_num", "cord_id", "parent_id", "level", "order", "sib_ordinal",
           "group", "value", "n_knots", "color", "attachment", "twist", "length", "termination"]
-META = {"UR297": ("KH0675", 9000297), "UR298": ("KH0674", 9000298)}
+META = {"UR297": ("KH0674", 9000297), "UR298": ("KH0675", 9000298)}  # KH numbers as in the KFG (2026)
 
 
 def ranges(k):

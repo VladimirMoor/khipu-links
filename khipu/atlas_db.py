@@ -88,8 +88,9 @@ def main():
     for fn in ("plus_khipus.json", "kfg_khipus.json"):
         for m in json.load(open(ROOT / "extracted" / fn)):
             meta.setdefault(m["INVESTIGATOR_NUM"], m)
-    meta.setdefault("UR297", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.072", "PROVENANCE": "Unknown", "OKR_NUM": "KH0675"})
-    meta.setdefault("UR298", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.071", "PROVENANCE": "Unknown", "OKR_NUM": "KH0674"})
+    # KH numbers as in the KFG (2026): KH0674 = UR297 = PC.WBC.2016.072, KH0675 = UR298 = PC.WBC.2016.071
+    meta.setdefault("UR297", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.072", "PROVENANCE": "Unknown", "OKR_NUM": "KH0674"})
+    meta.setdefault("UR298", {"MUSEUM_NAME": "Dumbarton Oaks, Washington DC", "MUSEUM_NUM": "PC.WBC.2016.071", "PROVENANCE": "Unknown", "OKR_NUM": "KH0675"})
     norm = lambda s: re.sub(r"[^0-9A-Z]", "", str(s).upper())
     coll = {norm(inv): c for inv, c, _, _ in json.load(open(ROOT / "data/smb/khipu_collectors.json"))}
     apply = {(r["khipu"], r["cord"]): int(r["corrected"]) for r in corr if r["applied"].strip().lower() == "yes" and r["field"] == "value"}
