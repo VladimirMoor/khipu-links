@@ -806,7 +806,7 @@ function showKhipu(id){
    <h3>${tr('Model')}</h3>
    <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">${tr('Hanging')}</button><button type="button" id="m-flat" aria-pressed="false">${tr('Laid flat')}</button><button type="button" id="m-reset">${tr('Reset view')}</button><span class="qual muted" id="m-qual"></span></div>
    <div class="v3d" id="v3d"><div class="msg">${tr('Loading the 3D model…')}</div></div>
-   <p class="note">Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres; small spheres are single knots, coils are long knots (one ring per turn), paired beads are figure-eight knots; pendants attached recto hang in front of the primary cord, verso behind; subsidiary cords branch off their pendant at a small knot. Colours approximate the recorded colour codes; two-colour cords are striped.</p>
+   <p class="note">${tr("Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; single knots are small overhand knots, long knots are tight wraps with one turn per unit, figure-eight knots are larger knots; pendants attached recto hang in front of the primary cord, verso behind; subsidiary cords branch off their pendant at a small knot. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.")}</p>
    <details><summary>${tr('Flat schematic')}</summary><div class="schem">${schematic(k)}</div><p class="note">${tr('Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.')}</p></details>
    ${es.length?`<h3>${tr('Links')}</h3><ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>${tr('Same object')}</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
@@ -842,51 +842,88 @@ async function view3d(k){
   const renderer=new T.WebGLRenderer({antialias:true}); renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.setSize(W,H); host.appendChild(renderer.domElement); host.appendChild(tip);
   const scene=new T.Scene(); scene.background=new T.Color(css('--surface'));
   const camera=new T.PerspectiveCamera(40,W/H,0.1,5000);
-  scene.add(new T.HemisphereLight(0xffffff,0x444433,0.9)); const dl=new T.DirectionalLight(0xffffff,0.7); dl.position.set(40,60,80); scene.add(dl);
+  scene.add(new T.HemisphereLight(0xffffff,0x4a4436,0.75)); const dl=new T.DirectionalLight(0xffffff,0.85); dl.position.set(40,60,80); scene.add(dl); const dl2=new T.DirectionalLight(0xfff2e0,0.35); dl2.position.set(-60,20,-40); scene.add(dl2);
   const controls=new T.OrbitControls(camera,renderer.domElement); controls.enableDamping=true;
   V={renderer,scene,camera,controls,raf:0,mode:'hang',k,M,group:null};
-  const texCache={};
-  const stripe=(a,b)=>{const key=a+b; if(texCache[key]) return texCache[key]; const c=document.createElement('canvas'); c.width=8; c.height=64; const g=c.getContext('2d');
-    for(let i=0;i<8;i++){g.fillStyle=i%2?b:a; g.fillRect(0,i*8,8,8)} const t=new T.CanvasTexture(c); t.wrapS=t.wrapT=T.RepeatWrapping; return texCache[key]=t};
+  // Rope look, made in the browser: one small canvas per colour pair (two plies twisted round each other, with fibre
+  // streaks), plus one grey canvas used as a bump map for relief. Tube UVs are scaled to cord length, so a cord colour's
+  // material is shared by every cord of that colour.
+  const texCache={}, matCache={};
+  const PLY=0.55;   // cm of cord per turn of the ply
+  function plyCanvas(a,b,bump){ const W2=64,H2=32, c=document.createElement('canvas'); c.width=W2; c.height=H2; const g=c.getContext('2d');
+    const im=g.createImageData(W2,H2), ca=new T.Color(a), cb=new T.Color(b);
+    for(let y=0;y<H2;y++) for(let x=0;x<W2;x++){
+      const ph=((x/W2)+(y/H2))*2, f=ph-Math.floor(ph), ply=Math.floor(ph)%2;      // two plies, S-twist
+      const groove=Math.pow(Math.sin(Math.PI*f),0.6);                              // dark at the seam between plies
+      const fibre=0.85+0.15*Math.sin((x*7.3+y*13.1)+Math.sin(x*1.7)*3)*Math.sin(y*2.1+x*0.4);
+      const sh=(0.45+0.55*groove)*fibre, o=(y*W2+x)*4;
+      if(bump){ const v=Math.round(255*sh); im.data[o]=im.data[o+1]=im.data[o+2]=v }
+      else { const c0=ply?cb:ca; im.data[o]=Math.min(255,c0.r*255*sh*1.08); im.data[o+1]=Math.min(255,c0.g*255*sh*1.08); im.data[o+2]=Math.min(255,c0.b*255*sh*1.08) }
+      im.data[o+3]=255 }
+    g.putImageData(im,0,0); const t=new T.CanvasTexture(c); t.wrapS=t.wrapT=T.RepeatWrapping; t.anisotropy=4; return t }
+  const bumpTex=plyCanvas('#fff','#fff',true);
+  const ropeMat=(a,b)=>{ const k=a+'|'+b; if(matCache[k]) return matCache[k];
+    if(!texCache[k]) texCache[k]=plyCanvas(a,b,false);
+    return matCache[k]=new T.MeshStandardMaterial({map:texCache[k],bumpMap:bumpTex,bumpScale:0.035,roughness:.97,metalness:0}) };
+  const knotMat=new T.MeshStandardMaterial({map:plyCanvas('#ffffff','#e8e8e8',false),bumpMap:bumpTex,bumpScale:0.03,roughness:.95});
+  const ropeTube=(curve,segs,r,radial)=>{ const g=new T.TubeGeometry(curve,segs,r,radial,false), L=curve.getLength(), uv=g.attributes.uv;
+    for(let q=0;q<uv.count;q++) uv.setX(q,uv.getX(q)*L/PLY); uv.needsUpdate=true; return g };
+  // knot shapes, built once: an overhand (single) knot, coils for long knots of 2–9 turns, a figure-eight
+  const KG={};
+  function helixGeo(turns,R,pitch,r){ const pts=[]; const n=turns*16;
+    for(let q=0;q<=n;q++){ const a=q/16*Math.PI*2; pts.push(new T.Vector3(R*Math.cos(a),R*Math.sin(a),-q/16*pitch+turns*pitch/2)) }
+    return new T.TubeGeometry(new T.CatmullRomCurve3(pts),n,r,6,false) }
+  const knotGeo=(type,turns)=>{ const k=type+(turns||''); if(KG[k]) return KG[k];
+    if(type==='S') KG[k]=new T.TorusKnotGeometry(0.115,0.052,48,6,2,3);             // a tight overhand-like lump wrapping the cord
+    else if(type==='E') KG[k]=new T.TorusKnotGeometry(0.13,0.055,64,6,3,4);         // figure-eight: one turn more than a single knot
+    else KG[k]=helixGeo(Math.max(2,turns||3),0.165,0.105,0.055);                    // long knot: turns wound tight round the cord
+    return KG[k] };
   function rnd(i){const x=Math.sin(i*12.9898+78.233)*43758.5453; return x-Math.floor(x)}
   function build(){
-    if(V.group){V.scene.remove(V.group); V.group.traverse(o=>{o.geometry&&o.geometry.dispose(); o.material&&o.material.dispose&&o.material.dispose()})}
+    if(V.group){V.scene.remove(V.group); V.group.traverse(o=>{ if(o.geometry&&!Object.values(KG).includes(o.geometry)) o.geometry.dispose() })}
     const G=new T.Group(); V.group=G; V.picks=[];
     { const ps=M.c.map((c,i)=>[c,i]).filter(([c])=>c[1]<0); let last=-1e9; ps.forEach(([c])=>{ if(c[3]<last+0.45) c[3]=last+0.45; last=c[3] }); if(ps.length) M.pl=Math.max(M.pl,last+1.5) }
     const hang=V.mode==='hang', PL=Math.max(M.pl,1);
+    const big=M.c.length>600, RAD=big?6:8, SEG=big?3:1.6, NPT=big?4:6;   // less geometry on very large khipus
     const pc=new T.CatmullRomCurve3([new T.Vector3(-1,0,0),new T.Vector3(PL*.33,hang?-0.4:0,0),new T.Vector3(PL*.66,hang?-0.4:0,0),new T.Vector3(PL+1,0,0)]);
-    G.add(new T.Mesh(new T.TubeGeometry(pc,Math.max(20,Math.ceil(PL)),0.22,8,false),new T.MeshStandardMaterial({color:colOf(M.pc)==='#9a8f84'?css('--cord'):colOf(M.pc),roughness:.9})));
-    const curves=[]; const sph=[], tor=[]; const tmp=new T.Object3D();
+    const pcol=colOf(M.pc)==='#9a8f84'?css('--cord'):colOf(M.pc);
+    G.add(new T.Mesh(ropeTube(pc,Math.max(40,Math.ceil(PL*2)),0.22,10),ropeMat(pcol,new T.Color(pcol).multiplyScalar(0.85).getStyle())));
+    const curves=[]; const knots={}, beads=[]; const tmp=new T.Object3D();
     const primaryAt=x=>{const t=Math.min(1,Math.max(0,(x+1)/(PL+2))); return pc.getPointAt(t)};
     const subN={}, junction=[];
+    const addKnot=(key,p,tg,c,spin)=>{ (knots[key]=knots[key]||[]).push([p,tg,c,spin]) };
     M.c.forEach((c,i)=>{ const [label,pi,lvl,pos,len0,att,term,c1,op,c2,val,kn]=c; const len=Math.max(len0||0,3);
-      let start, dir=new T.Vector3(0,-1,0), side=0;
+      let start, side=0;
       if(pi<0){ start=primaryAt(pos).clone(); side=att==='V'?-0.28:att==='R'?0.28:0; start.z+=side }
       else { const pcur=curves[pi]; if(!pcur) return; const pl=pcur.getLength(); const t=Math.min(0.98,Math.max(0.02,(pos||1)/pl)); start=pcur.getPointAt(t).clone(); subN[pi]=(subN[pi]||0)+1; side=0.28*subN[pi]; junction.push([start.clone(),pi]) }
       const pts=[start];
-      const n=4; for(let j=1;j<=n;j++){ const f=j/n; const sway=hang?(rnd(i*7+j)-0.5)*Math.min(1.6,len*0.03):0;
+      const n=NPT; for(let j=1;j<=n;j++){ const f=j/n; const sway=hang?(rnd(i*7+j)-0.5)*Math.min(1.6,len*0.03):0;
         const away=pi>=0?Math.min(1,f*3):f;   // subsidiaries leave the parent gradually, starting on it
         pts.push(new T.Vector3(start.x+(pi<0?sway*0.25:0.18*away+sway*0.15), start.y-len*f, start.z+(pi<0?(hang?side*2*f+sway*0.6:0):(side*away+(hang?sway*0.4:0))))) }
       const cur=new T.CatmullRomCurve3(pts); curves[i]=cur;
-      const colA=colOf(c1), colB=colOf(c2||c1);
-      const mat=(op&&c2)? new T.MeshStandardMaterial({map:(()=>{const t=stripe(colA,colB).clone(); t.needsUpdate=true; t.repeat.set(1,Math.max(1,len/4)); return t})(),roughness:.95})
-                         : new T.MeshStandardMaterial({color:colA,roughness:.95});
-      const mesh=new T.Mesh(new T.TubeGeometry(cur,Math.max(8,Math.ceil(len/2.5)),lvl>1?0.09:0.12,5,false),mat);
+      const colA=colOf(c1), colB=(op&&c2)?colOf(c2):new T.Color(colA).multiplyScalar(0.88).getStyle();
+      const r=lvl>1?0.09:0.12;
+      const mesh=new T.Mesh(ropeTube(cur,Math.max(big?6:10,Math.ceil(len/SEG)),r,RAD),ropeMat(colA,colB));
       mesh.userData={i}; G.add(mesh); V.picks.push(mesh);
-      const kcol=new T.Color(colA).multiplyScalar(0.62);
-      const place=(d,off)=>{const L=cur.getLength(); const t=Math.min(0.995,Math.max(0.005,d/L)); const p=cur.getPointAt(t), tg=cur.getTangentAt(t); return [p,tg]};
-      (kn||[]).forEach(([kp,type,cnt,turns])=>{
-        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++){ const [p]=place(kp+q*0.42); sph.push([p,0.3,kcol]) } }
-        else if(type==='E'||type==='EE'||type==='TF'){ const [p,tg]=place(kp); const nrm=new T.Vector3(1,0,0).cross(tg).normalize().multiplyScalar(0.16); sph.push([p.clone().add(nrm),0.24,kcol]); sph.push([p.clone().sub(nrm),0.24,kcol]) }
-        else { const nt=Math.max(2,type==='L'?turns:3); for(let q=0;q<nt;q++){ const [p,tg]=place(kp+q*0.2); tor.push([p,tg,kcol]) } }
+      const kcol=new T.Color(colA).multiplyScalar(0.8);
+      const place=d=>{const L=cur.getLength(); const t=Math.min(0.995,Math.max(0.005,d/L)); return [cur.getPointAt(t),cur.getTangentAt(t)]};
+      (kn||[]).forEach(([kp,type,cnt,turns],q0)=>{
+        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++){ const [p,tg]=place(kp+q*0.42); addKnot('S',p,tg,kcol,rnd(i*31+q0*7+q)*6.28) } }
+        else if(type==='E'||type==='EE'||type==='TF'){ const [p,tg]=place(kp); addKnot('E',p,tg,kcol,rnd(i*17+q0)*6.28) }
+        else { const nt=Math.min(9,Math.max(2,type==='L'?turns:3)); const [p,tg]=place(kp+nt*0.053); addKnot('L'+nt,p,tg,kcol,rnd(i*13+q0)*6.28) }
       });
-      if(term==='K'){ const [p]=place(len-0.2); sph.push([p,0.2,kcol]) }
+      if(term==='K'){ const [p,tg]=place(len-0.25); addKnot('S',p,tg,new T.Color(colA).multiplyScalar(0.75),rnd(i)*6.28) }
     });
-    junction.forEach(([p,pi])=>{ const pc_=M.c[pi]; sph.push([p,0.17,new T.Color(colOf(pc_[7])).multiplyScalar(0.55)]) });
-    if(sph.length){ const im=new T.InstancedMesh(new T.SphereGeometry(1,10,8),new T.MeshStandardMaterial({roughness:.8}),sph.length);
-      sph.forEach(([p,r,c],j)=>{tmp.position.copy(p); tmp.scale.setScalar(r); tmp.quaternion.identity(); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c)}); G.add(im) }
-    if(tor.length){ const im=new T.InstancedMesh(new T.TorusGeometry(0.2,0.1,6,12),new T.MeshStandardMaterial({roughness:.8}),tor.length); const up=new T.Vector3(0,0,1);
-      tor.forEach(([p,tg,c],j)=>{tmp.position.copy(p); tmp.scale.setScalar(1); tmp.quaternion.setFromUnitVectors(up,tg.clone().normalize()); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c)}); G.add(im) }
+    junction.forEach(([p,pi])=>{ beads.push([p,new T.Color(colOf(M.c[pi][7])).multiplyScalar(0.7)]) });
+    const up=new T.Vector3(0,0,1), q1=new T.Quaternion(), q2=new T.Quaternion();
+    Object.entries(knots).forEach(([key,list])=>{ const geo=key==='S'?knotGeo('S'):key==='E'?knotGeo('E'):knotGeo('L',+key.slice(1));
+      const im=new T.InstancedMesh(geo,knotMat,list.length);
+      list.forEach(([p,tg,c,spin],j)=>{ tmp.position.copy(p); tmp.scale.setScalar(1);
+        q1.setFromUnitVectors(up,tg.clone().normalize()); q2.setFromAxisAngle(up,spin); tmp.quaternion.copy(q1).multiply(q2);
+        tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c) });
+      G.add(im) });
+    if(beads.length){ const im=new T.InstancedMesh(knotGeo('S'),knotMat,beads.length);
+      beads.forEach(([p,c],j)=>{ tmp.position.copy(p); tmp.scale.setScalar(0.9); tmp.quaternion.setFromAxisAngle(new T.Vector3(1,0,0),Math.PI/2); tmp.updateMatrix(); im.setMatrixAt(j,tmp.matrix); im.setColorAt(j,c) }); G.add(im) }
     V.scene.add(G); fit();
   }
   function fit(){ const box=new T.Box3().setFromObject(V.group), ctr=box.getCenter(new T.Vector3()), sz=box.getSize(new T.Vector3());
@@ -895,8 +932,9 @@ async function view3d(k){
   const ray=new T.Raycaster(), mouse=new T.Vector2(); let hot=null;
   renderer.domElement.addEventListener('pointermove',ev=>{ const r=renderer.domElement.getBoundingClientRect(); mouse.set(((ev.clientX-r.left)/r.width)*2-1,-((ev.clientY-r.top)/r.height)*2+1);
     ray.setFromCamera(mouse,camera); const hit=ray.intersectObjects(V.picks,false)[0];
-    if(hot&&(!hit||hit.object!==hot)){hot.material.emissive&&hot.material.emissive.setHex(0);hot=null}
-    if(hit){ hot=hit.object; hot.material.emissive&&hot.material.emissive.setHex(0x442222); const c=M.c[hot.userData.i];
+    if(hot&&(!hit||hit.object!==hot)){ hot.material=hot.userData.base; hot=null }
+    if(hit&&hit.object!==hot){ hot=hit.object; hot.userData.base=hot.material; const b=hot.material; hot.userData.hi=hot.userData.hi||(()=>{const m=b.clone(); m.emissive=new T.Color(0x552222); return m})(); hot.material=hot.userData.hi }
+    if(hit){ const c=M.c[hot.userData.i];
       const ks=(c[11]||[]).map(([p,t,n,tu])=>`${t==='S'?n+'S':t==='L'?tu+'L':t}(${p})`).join(' ');
       const par=c[1]>=0?` · subsidiary of cord ${esc(M.c[c[1]][0])}`:'';
       tip.innerHTML=`cord ${esc(c[0])} · ${c[10]}${par}<br>${esc(c[7])}${c[8]?esc(c[8])+esc(c[9]):''} · ${c[4]} cm${c[5]?' · '+esc(c[5]):''}<br>${esc(ks||'no knots')}`;
