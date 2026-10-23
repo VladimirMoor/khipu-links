@@ -43,7 +43,7 @@ table.sum td:first-child { white-space: nowrap; }
 
 <h2>1. Introduction</h2>
 <p>Since Locke (1912) the decimal knot notation of Inka khipus has been readable: long knots with 2–9 turns or a figure-eight knot give the units, clusters of single knots give the higher registers, and position along the pendant gives the place value. What the numbers counted, and how records related to each other, is largely unknown. The Aschers' databook (Ascher and Ascher 1978) documents many sums inside individual khipus. Cross-khipu relations have been shown for a few archives: matching and hierarchical khipus at Puruchuco (Urton and Brezine 2005), pairs of duplicate accounts (Urton 2005, 2014), the storehouse archive of Inkawasi with its fixed deductions (Urton and Chu 2015, 2019), a numerical connection between AS069 and AS070 (Thompson 2024), and a partial copy of a Lima khipu in Gothenburg (Chirinos Rivera 2010).</p>
-<p>Such relations are the most direct evidence we have of khipu accounting as a practice: who kept totals, who kept details, and what was copied. Here we search for them across the whole open corpus with explicit statistical baselines. The emphasis is on relations whose numerical evidence does not depend on interpretation.</p>
+<p>Such relations are the most direct evidence we have of khipu accounting as a practice: who kept totals, who kept details, and what was copied. Recent computational work on the open data has looked within khipus and at the corpus as a whole: summation patterns inside each khipu (Da Fieno Delucchi 2026), structural signatures and clustering (Segura 2026; Contreras 2026), and the forms of knots (FitzPatrick 2026). Here we search for relations between khipus across the whole open corpus, with explicit statistical baselines. The emphasis is on relations whose numerical evidence does not depend on interpretation.</p>
 
 <h2>2. Data and methods</h2>
 <p><b>Data.</b> Open Khipu Repository (OKR, SQLite release, 609 khipus; Zenodo 10.5281/zenodo.18025748), the Khipu Field Guide companion data (KFG, 678 khipus; Khosla and Medrano 2023, Zenodo 10.5281/zenodo.8125718), and 19 khipus added to the OKR after 2017. A cord's value is the sum of its knot values; unless stated otherwise we use the pendant's own value without subsidiaries, since across 422 khipus group sums hold on own values (z = 4.4 on an offset baseline) and fail when subsidiaries are added or subtracted. Group boundaries are the recorded ones, which follow physical spacing on the primary cord. Physical attributes (termination, length, colour, knot direction) come from the OKR and KFG records; published knot records were checked in the Aschers' databook where relevant.</p>
@@ -158,13 +158,17 @@ table.sum td:first-child { white-space: nowrap; }
 <p>Ascher, M., and R. Ascher. 1981. <i>Code of the Quipu: A Study in Media, Mathematics, and Culture</i>. Ann Arbor: University of Michigan Press.</p>
 <p>Cherkinsky, A., and G. Urton. 2014. Radiocarbon chronology of Andean khipus. <i>Open Journal of Archaeometry</i> 2: 5260.</p>
 <p>Chirinos Rivera, A. 2010. <i>Quipus del Tahuantinsuyo: curacas, incas y su saber matemático en el siglo XVI</i>. Lima.</p>
+<p>Contreras, M. 2026. Structural pattern mining in Inka khipus: unsupervised clustering, provenance classification, and a computational validation of the Santa Valley match. arXiv:2607.00185.</p>
+<p>Da Fieno Delucchi, A. 2026. Khipu Computational Analysis Toolkit (K-CAT). https://adafieno.github.io/khipu-computational-toolkit/</p>
 <p>FitzPatrick, M. 2025. Primary questions: a survey of Inka-style khipu primary cords. Preprint, doi:10.31235/osf.io/hqkcj_v1.</p>
+<p>FitzPatrick, M. 2026. Knot tricks: what mathematical knot theory can reveal about the structure of khipu knot encoding. <i>Latin American Antiquity</i>, doi:10.1017/laq.2026.10171.</p>
 <p>Hyland, S. 2014. Ply, markedness, and redundancy: new evidence for how Andean khipus encoded information. <i>American Anthropologist</i> 116(3): 643–648.</p>
 <p>Hyland, S., G. A. Ware, and M. Clark. 2014. Knot direction in a khipu/alphabetic text from the Central Andes. <i>Latin American Antiquity</i> 25(2): 189–197.</p>
 <p>Medrano, M. 2022. The promise of Andean khipu transcriptions: a multi-scale investigation. MPhil thesis, University of St Andrews.</p>
 <p>Khosla, A., and M. Medrano. 2023. Khipu Field Guide companion data (data-science khipu article v2.0.0). Zenodo, doi:10.5281/zenodo.8125718.</p>
 <p>Locke, L. L. 1912. The ancient quipu, a Peruvian knot record. <i>American Anthropologist</i> 14(2): 325–332.</p>
 <p>Open Khipu Repository. Zenodo, doi:10.5281/zenodo.18025748; https://github.com/khipulab/open-khipu-repository.</p>
+<p>Segura, J. J. 2026. Code for A Categorical Framework for Khipu Analysis (v1.0.0). Zenodo, doi:10.5281/zenodo.18395875.</p>
 <p>Thompson, K. M. 2024. A numerical connection between two khipus. <i>Ñawpa Pacha</i> 45(1), doi:10.1080/00776297.2024.2411789.</p>
 <p>Thompson, K. M. 2026. Khipu-Biblio Cross-Reference (KBCR), v9. Figshare, doi:10.26188/25661322.</p>
 <p>Urton, G. 2005. Khipu archives: duplicate accounts and identity labels in the Inka knotted string records. <i>Latin American Antiquity</i> 16(2): 147–167.</p>
