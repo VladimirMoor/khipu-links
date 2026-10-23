@@ -29,7 +29,12 @@
    "ur212_as131_units.py",
    "basel_slots.py",
    "halves_columns.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "Six fragments repeat 37 cords of UR212 and 25 of AS131; other khipus with at least 100 pendants match at most 4. In each of the 3 fragments that carry both, they pair the same unit (p ≈ 0.005, computed after the pairing was noticed).",
+   "structure": "Both Berlin khipus have 14 units divided 7 + 7 at the same point; their unit totals are uncorrelated, so they record different categories of the same units.",
+   "reading": "Two halves of one fourteen-unit account set side by side on a khipu from Huacho. The fragments were sewn onto a cloth in 1924, so their order on the cloth says nothing."
+  }
  },
  {
   "id": "frame14",
@@ -52,7 +57,12 @@
   "scripts": [
    "units14.py",
    "halves.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "4 of the 23 khipus of the batch have 14 main groups, against 1.6% elsewhere (P ≈ 0.0005; P ≈ 0.04 without the two khipus that prompted the question).",
+   "structure": "Three of them divide their units 7 + 7, each marked differently; three undigitized khipus of the batch are described with 14 groups.",
+   "reading": "Suggestive only: a shared fourteen-unit frame in one archive. What the units were is unknown."
+  }
  },
  {
   "id": "berlin",
@@ -74,7 +84,12 @@
   "scripts": [
    "vecsum.py",
    "lotmatch.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "AS143 group 4 = AS149 groups 1 + 2 in all five positions: the only exact sum between two khipus in a scan of the whole corpus; the same scan with the numbers shifted by 1–7 finds 0–2, all on small values.",
+   "structure": "Every share has the same four-part composition; the shares are 2 + 2 + 2 + 2 + 1 ninths of the AS143 total; a standard lot of AS149 recurs on AS179.",
+   "reading": "One quantity apportioned to five recipients and recorded at three levels on three khipus. What was shared, and among whom, is unknown."
+  }
  },
  {
   "id": "huacho1",
@@ -97,7 +112,12 @@
   "scripts": [
    "diagscan.py",
    "huacho.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "Group-by-group alignment z = 6.4 (UR233) and 19.5 (UR232) against all other offsets; no permutation of group order reaches it (p ≤ 0.003). In the scan of all pairs it is the strongest pair that is neither a second recording of one object nor a copy already known.",
+   "structure": "UR233 repeats part 1 of AS175 and UR232 part 3, group for group; part 2, the sums of part 3, is absent; every group gains one empty pendant; the copy fits the part-2 sums better than the original (8 of 15 against 5).",
+   "reading": "A copy of the details made without the totals. When it was made, by whom, and how it reached Huacho is unknown; a radiocarbon date of VA63038 would show whether it is Inka or colonial."
+  }
  },
  {
   "id": "as118",
@@ -117,7 +137,12 @@
   ],
   "scripts": [
    "as118.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "Groups 2–3 equal those of UR218 cord for cord, knot counts included. Of the five subsidiary values, one equals a group total of AS125 exactly and two more do if two cords of AS125 read as 3111 and 2298; among 696 khipus only AS125 (and its second recording) matches more than one.",
+   "structure": "An extract of one khipu and the totals of another, kept on a cord that was attached before it was knotted.",
+   "reading": "A khipu that links two other records. It rests partly on two readings that only the object can settle (AS125 group 4 cord 1, group 3 cord 1)."
+  }
  },
  {
   "id": "ur269",
@@ -143,7 +168,12 @@
    "slotded.py",
    "ur268_269.py",
    "ur269_streams.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "The deduction equals the value of its place in 33 of 43 records (17 when records are shuffled within blocks; p ≈ 0.0005). The place-1 records reappear on UR275 at one offset (5 matches; at most 4 in 5,000 permutations of block order; p ≈ 0.0002). Both patterns were found by exploring the Inkawasi khipus; a search of the whole corpus finds the place-set deduction nowhere else.",
+   "structure": "Blocks of five records, each place with its own fixed deduction; stream 1 is recorded in full, in the same sequence, on UR275.",
+   "reading": "Five supply streams delivered in rounds, each with its own deduction. What the streams were (producers, fields, villages) is unknown."
+  }
  },
  {
   "id": "inkawasi",
@@ -173,7 +203,12 @@
   "scripts": [
    "fillslot.py",
    "blanks.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "UR255 leaves the net pendant empty in its first 12 deposits and fills it in 5 of the last 6 (about 1 in 3,900 by chance); UR273A/B share 4 and 6 totals with UR274A/B against 0.3 and 0.5 expected, in the same order.",
+   "structure": "Each copy lies in a different bundle from its counterpart; the totals-only bundle keeps the order of the full one.",
+   "reading": "Copies made or completed at different times, and totals kept apart from the details. Why the slots were left empty is not known."
+  }
  },
  {
   "id": "as003",
@@ -192,7 +227,12 @@
   ],
   "scripts": [
    "mirror.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "The six values and their total 76 equal the summary part of AS215, in reverse cord order.",
+   "structure": "A seven-cord khipu that holds only the totals of another khipu's summary.",
+   "reading": "A totals-only record. The provenance of AS003 is unknown, so where and why it was made cannot be said."
+  }
  },
  {
   "id": "folded",
@@ -214,7 +254,12 @@
   "scripts": [
    "records.py",
    "bagscan.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "UR053C → UR053B: 35 fields agree against at most 18 in 2,000 shuffles of the C records; UR270 → UR278: 15 consecutive values.",
+   "structure": "A cord that stands alone in one copy is a subsidiary in the other, in two independent pairs.",
+   "reading": "Copies keep the values but not necessarily the cord hierarchy."
+  }
  },
  {
   "id": "known",
@@ -236,7 +281,12 @@
   "scripts": [
    "excerpts.py",
    "segsum.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "The detectors find these published copies without being told where to look.",
+   "structure": "Copies of one branch of an account, matching pairs and duplicate recordings, as published.",
+   "reading": "A check of the method, not a new result."
+  }
  },
  {
   "id": "dumbarton",
@@ -252,6 +302,11 @@
   "scripts": [
    "do_ingest.py",
    "do_check.py"
-  ]
+  ],
+  "levels": {
+   "numbers": "74 of the 78 group totals that Urton noted on his record sheets equal our transcription.",
+   "structure": "UR297: 41 groups, mostly ten cords plus one summary cord raised like a top cord.",
+   "reading": "New data. Neither khipu is linked to any other in the corpus."
+  }
  }
 ]

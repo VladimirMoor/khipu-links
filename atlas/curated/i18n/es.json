@@ -116,7 +116,9 @@
    "Vertical exaggeration": "Exageración vertical",
    "Zoom in": "Acercar",
    "Zoom out": "Alejar",
-   "New to khipus? Start here": "¿Nuevo en el tema de los khipus? Para empezar"
+   "New to khipus? Start here": "¿Nuevo en el tema de los khipus? Para empezar",
+   "Where two khipus share numbers, they look like copies, extracts and parts of one account": "Donde dos khipus comparten números, parecen copias, extractos y partes de una misma cuenta",
+   "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately.": "Aplicamos detectores aritméticos a unos 700 khipus digitalizados y conservamos solo las coincidencias que quedan muy por encima de una línea de base que conserva la estructura de los khipus. Leído como registro, lo que resiste parece un conjunto de copias y extractos de cuentas: unos conservan solo los totales, otros solo los detalles; algunos reparten una cuenta en dos khipus o reúnen dos en uno. Los números establecen las coincidencias; leerlas como copias es una interpretación, y cada hallazgo presenta ambas cosas por separado."
   },
   "mixed": {
    "where": "Dos vínculos van de khipus rotulados <b>Pachacamac</b> a khipus excavados cerca de <b>Huacho</b>, unos 150 km costa arriba, en dos museos y por dos vendedores distintos. El mapa los muestra como arcos rojos.",
@@ -131,7 +133,9 @@
    "start-project": "<h2>Qué hace este proyecto</h2>\n  <p>La mayoría de los estudios examinan un khipu a la vez. Nosotros buscamos números compartidos <i>entre</i> khipus distintos: un khipu que copia otro, o uno que contiene los totales de otro. Estos vínculos muestran cómo los contadores manejaban varios registros de un mismo asunto: quién llevaba el detalle y quién los totales. Con una computadora comparamos cada khipu de los datos abiertos con todos los demás.</p>\n  <p>Como el corpus es grande, es inevitable que haya coincidencias. Por eso cada vínculo se contrasta con el azar: repetimos la misma búsqueda con los números ligeramente desplazados, lo que deja todo lo demás igual, y contamos cuántas coincidencias aparecen por casualidad. Un vínculo solo se informa si queda muy por encima de ese nivel. Los patrones más débiles se marcan como «indicio», y las búsquedas que no encontraron nada se enumeran en <a href=\"#negatives\">Resultados negativos</a>.</p>",
    "start-use": "<h2>Cómo usar el atlas</h2>\n  <ul>\n  <li><a href=\"#overview\">Resumen</a>: los resultados principales en una sola página.</li>\n  <li><a href=\"#map\">Mapa</a>: dónde se hallaron los khipus; los arcos rojos unen lugares con khipus vinculados. Cambie a <i>Relieve 3D</i> para ver la costa y los Andes.</li>\n  <li><a href=\"#links\">Vínculos</a>: una red de los khipus vinculados entre sí.</li>\n  <li><a href=\"#catalogue\">Catálogo</a>: cada khipu, con su museo, su lugar de hallazgo, un modelo 3D y los valores de sus cuerdas. Escriba un número como AS143 o UR212 en el buscador de arriba.</li>\n  <li><a href=\"#findings\">Hallazgos</a>: una página por resultado, con la evidencia y los scripts que lo reproducen.</li>\n  <li><a href=\"#tools\">Herramientas</a>: buscar una secuencia de números en todos los khipus o comparar dos khipus.</li>\n  <li><a href=\"#timeline\">Cronología</a>, <a href=\"#stats\">Estadística</a>, <a href=\"#checks\">En el objeto</a> (lo que solo una visita al museo puede resolver), <a href=\"#sources\">Fuentes</a>.</li>\n  </ul>",
    "start-glossary": "<h2>Términos usados en este sitio</h2>\n  <dl class=\"gloss\">\n  <dt>Cuerda principal</dt><dd>la cuerda principal de la que cuelgan las demás.</dd>\n  <dt>Colgante</dt><dd>una cuerda que cuelga de la cuerda principal; suele llevar un número.</dd>\n  <dt>Subsidiaria</dt><dd>una cuerda atada a otra cuerda y no a la cuerda principal.</dd>\n  <dt>Cuerda superior</dt><dd>una cuerda que se eleva por encima de la cuerda principal y que a menudo contiene una suma.</dd>\n  <dt>Grupo</dt><dd>colgantes situados muy juntos, separados del grupo siguiente por un espacio; los grupos suelen tener la misma estructura.</dd>\n  <dt>Nudos simples, largos y en ocho</dt><dd>los nudos simples cuentan decenas, centenas y posiciones superiores; un nudo largo (2–9 vueltas) o un nudo en ocho (uno) da las unidades.</dd>\n  <dt>AS, UR, KH, MM…</dt><dd>números de catálogo. Los números AS los asignaron Marcia y Robert Ascher, los UR Gary Urton y los KH el Khipu Field Guide; un mismo khipu puede tener varios. Los números de museo, como VA 42508, pertenecen a los museos.</dd>\n  <dt>OKR, KFG</dt><dd>el Open Khipu Repository y el Khipu Field Guide, las dos bases de datos abiertas de registros de khipus que se usan aquí.</dd>\n  <dt>Copia, extracto</dt><dd>un khipu que repite los valores de otro, completa o parcialmente.</dd>\n  <dt>Línea de base</dt><dd>cuántas coincidencias encuentra la misma búsqueda por azar; un resultado solo cuenta si queda muy por encima de ella.</dd>\n  </dl>",
-   "start-read": "<h2>Para saber más</h2>\n  <p>Gary Urton, <i>Inka History in Knots</i> (2017); Marcia y Robert Ascher, <i>Code of the Quipu</i> (1981; el <i>Databook</i> está en línea en Cornell); Frank Salomon, <i>The Cord Keepers</i> (2004), sobre los khipus conservados en una comunidad peruana. Nuestros resultados completos están en el <a href=\"https://github.com/VladimirMoor/khipu-links/blob/main/docs/preprint/preprint.pdf\">preprint</a>.</p>"
+   "start-read": "<h2>Para saber más</h2>\n  <p>Gary Urton, <i>Inka History in Knots</i> (2017); Marcia y Robert Ascher, <i>Code of the Quipu</i> (1981; el <i>Databook</i> está en línea en Cornell); Frank Salomon, <i>The Cord Keepers</i> (2004), sobre los khipus conservados en una comunidad peruana. Nuestros resultados completos están en el <a href=\"https://github.com/VladimirMoor/khipu-links/blob/main/docs/preprint/preprint.pdf\">preprint</a>.</p>",
+   "example": "<h2>Un ejemplo</h2>\n  <p>Tres khipus comprados por el museo de Berlín en 1907 proceden de Ica. El grupo 4 del khipu AS143 es igual a los grupos 1 y 2 del khipu AS149 sumados posición por posición:</p>\n  <div class=\"tablewrap\"><table class=\"ex\"><thead><tr><th>Posición</th><th class=\"v\">1</th><th class=\"v\">2</th><th class=\"v\">3</th><th class=\"v\">4</th><th class=\"v\">5</th></tr></thead>\n  <tbody><tr><td>AS149, grupo 1</td><td class=\"v\">8653</td><td class=\"v\">4049</td><td class=\"v\">20640</td><td class=\"v\">660</td><td class=\"v\">4741</td></tr>\n  <tr><td>AS149, grupo 2</td><td class=\"v\">8783</td><td class=\"v\">4171</td><td class=\"v\">21243</td><td class=\"v\">690</td><td class=\"v\">4787</td></tr>\n  <tr class=\"sum\"><td>AS143, grupo 4</td><td class=\"v\">17436</td><td class=\"v\">8220</td><td class=\"v\">41883</td><td class=\"v\">1350</td><td class=\"v\">9528</td></tr></tbody></table></div>\n  <p>Entre todos los pares de khipus del corpus esta es la única suma exacta de este tipo; la misma búsqueda con los números desplazados en 1–7 encuentra 0–2, todas con valores pequeños. Según nuestra interpretación, AS143 conserva el total de dos partes que AS149 registra por separado. <a href=\"#finding-berlin\">El hallazgo</a> · <a href=\"#tools\">Comparar dos khipus por su cuenta</a></p>",
+   "sure": "<h3>¿Qué tan seguros estamos?</h3>\n  <p>Los detectores comparan cada khipu con todos los demás, de modo que algunas coincidencias inusuales aparecerán por azar. Por eso las líneas de base repiten la búsqueda completa, no una sola comparación: el mismo barrido con todos los números buscados desplazados unas pocas unidades muestra cuántas coincidencias produce por sí solo el número de comparaciones. La copia Pachacamac–Huacho es el par más fuerte de su barrido, aparte de los registros duplicados de un mismo objeto y de las copias ya conocidas.</p>\n  <p>Algunas pruebas se hicieron después de haber notado un patrón: el emparejamiento de unidades en los fragmentos de Basilea, el marco de catorce unidades, los espacios vacíos de UR255, y la deducción fijada por el lugar y la alineación de flujos de UR269. Sus valores p describen un patrón ya visto, no la probabilidad de encontrar algún patrón en alguna parte; cuando pudimos, volvimos a probar el patrón sin los khipus que lo sugirieron, o lo buscamos en todo el corpus (la estructura de UR269 no aparece en ningún otro lugar). Cada hallazgo separa lo que muestran los números de cómo los leemos.</p>"
   },
   "dyn": {
    "New": "Nuevo",
@@ -268,7 +272,11 @@
    "Museum record (museum-digital)": "Ficha del museo (museum-digital)",
    "Aschers’ Databook": "Databook de los Ascher",
    "cord": "cuerda",
-   "Value": "Valor"
+   "Value": "Valor",
+   "How strong is this?": "¿Qué tan sólido es?",
+   "Numbers": "Números",
+   "Structure": "Estructura",
+   "Reading": "Interpretación"
   }
  },
  "content": {
@@ -281,7 +289,12 @@
      "La misma unidad en 3 de 3 fragmentos: p ≈ (1/14)² ≈ 0,005.",
      "Donde Berlín deja sin nudos una cuerda marcada por el color, la copia de Basilea lleva un valor (3 de 3); las demás cuerdas sin nudos siguen sin nudos.",
      "Los totales por unidad de UR212 y AS131 no se correlacionan (ρ = 0,19): categorías distintas de las mismas unidades."
-    ]
+    ],
+    "levels": {
+     "numbers": "Seis fragmentos repiten 37 cuerdas de UR212 y 25 de AS131; los demás khipus con al menos 100 colgantes coinciden en 4 como máximo. En cada uno de los 3 fragmentos que contienen ambos, emparejan la misma unidad (p ≈ 0,005, calculado después de notar el emparejamiento).",
+     "structure": "Ambos khipus de Berlín tienen 14 unidades divididas 7 + 7 en el mismo punto; sus totales por unidad no se correlacionan, de modo que registran categorías distintas de las mismas unidades.",
+     "reading": "Dos mitades de una cuenta de catorce unidades puestas lado a lado en un khipu de Huacho. Los fragmentos se cosieron en una tela en 1924, por lo que su orden en la tela no dice nada."
+    }
    },
    "frame14": {
     "title": "Un marco de 14 unidades en el lote de Gretzer en Berlín",
@@ -289,7 +302,12 @@
     "evidence": [
      "P binomial ≈ 0,0005 con los cuatro; P ≈ 0,04 sin los dos khipus que motivaron la pregunta.",
      "En 109 khipus del OKR con un número par de grupos principales, el mayor espacio cae en el centro 12,9 veces (13,0 esperado): las mitades iguales no son un hábito general."
-    ]
+    ],
+    "levels": {
+     "numbers": "4 de los 23 khipus del lote tienen 14 grupos principales, frente al 1,6 % en el resto (P ≈ 0,0005; P ≈ 0,04 sin los dos khipus que motivaron la pregunta).",
+     "structure": "Tres de ellos dividen sus unidades 7 + 7, cada uno marcado de forma distinta; tres khipus no digitalizados del lote se describen con 14 grupos.",
+     "reading": "Solo un indicio: un marco común de catorce unidades en un mismo archivo. Se desconoce qué eran las unidades."
+    }
    },
    "berlin": {
     "title": "Una sola asignación en tres khipus de Ica (Berlín, 1907)",
@@ -297,7 +315,12 @@
     "evidence": [
      "La única suma vectorial exacta entre khipus del corpus (línea de base desplazada 0–2, solo valores pequeños).",
      "Dos partes de 2/9 de AS143 son iguales con diferencia de 1 (41062 y 41061), con una sustitución entre bienes (p ≈ 0,005)."
-    ]
+    ],
+    "levels": {
+     "numbers": "Grupo 4 de AS143 = grupos 1 + 2 de AS149 en las cinco posiciones: la única suma exacta entre dos khipus en un barrido de todo el corpus; el mismo barrido con los números desplazados en 1–7 encuentra 0–2, todas con valores pequeños.",
+     "structure": "Todas las partes tienen la misma composición en cuatro componentes; las partes son 2 + 2 + 2 + 2 + 1 novenos del total de AS143; un lote estándar de AS149 reaparece en AS179.",
+     "reading": "Una cantidad repartida entre cinco destinatarios y registrada en tres niveles en tres khipus. Se desconoce qué se repartió y entre quiénes."
+    }
    },
    "huacho1": {
     "title": "Pachacamac → Huacho: los detalles sin los totales",
@@ -305,14 +328,24 @@
     "evidence": [
      "z = 6,4 y 19,5 frente a otros desplazamientos; permutación del orden de grupos p ≤ 0,003.",
      "Objetos distintos: difieren las cuerdas por grupo, las longitudes y las subsidiarias."
-    ]
+    ],
+    "levels": {
+     "numbers": "Alineación grupo por grupo z = 6,4 (UR233) y 19,5 (UR232) frente a todos los demás desplazamientos; ninguna permutación del orden de los grupos la alcanza (p ≤ 0,003). En el barrido de todos los pares es el par más fuerte que no es ni un registro duplicado de un mismo objeto ni una copia ya conocida.",
+     "structure": "UR233 repite grupo por grupo la parte 1 de AS175 y UR232 la parte 3; falta la parte 2, las sumas de la parte 3; cada grupo gana un colgante vacío; la copia se ajusta mejor a las sumas de la parte 2 que el original (8 de 15 frente a 5).",
+     "reading": "Una copia de los detalles hecha sin los totales. Se desconoce cuándo y por quién se hizo y cómo llegó a Huacho; un fechado por radiocarbono de VA63038 mostraría si es inca o colonial."
+    }
    },
    "as118": {
     "title": "AS118 enlaza otros dos khipus de Pachacamac",
     "summary": "Los grupos 2–3 de AS118 repiten cuerda por cuerda los grupos 2–3 de UR218, incluido el número de nudos. Las cinco subsidiarias de su primer colgante, sin nudos, siguen los totales de grupo de AS125: 14658 exacto; 8565 si una cuerda que los Ascher dejaron sin leer es 3111.",
     "evidence": [
      "Entre 696 khipus solo AS125 coincide en más de uno de los cinco valores; ninguno en la línea de base desplazada."
-    ]
+    ],
+    "levels": {
+     "numbers": "Los grupos 2–3 son iguales a los de UR218 cuerda por cuerda, incluido el número de nudos. De los cinco valores de las subsidiarias, uno es igual exactamente a un total de grupo de AS125 y otros dos lo son si dos cuerdas de AS125 se leen como 3111 y 2298; entre 696 khipus solo AS125 (y su segundo registro) coincide con más de uno.",
+     "structure": "Un extracto de un khipu y los totales de otro, guardados en una cuerda que se ató antes de ser anudada.",
+     "reading": "Un khipu que enlaza otros dos registros. Se apoya en parte en dos lecturas que solo el objeto puede resolver (AS125 grupo 4 cuerda 1, grupo 3 cuerda 1)."
+    }
    },
    "ur269": {
     "title": "Inkawasi UR269: cinco flujos de entregas, cada uno con su deducción",
@@ -322,7 +355,12 @@
      "Lugar 1 en UR275: 5 de 10 registros (0,5 esperados); lugares 2–4: 0, 1, 1. Los cinco con un mismo desfase; 5000 permutaciones del orden de los bloques llegan como máximo a 4 (p ≈ 0,0002).",
      "UR269 conserva la aritmética donde UR275 falla: 1827 = 1780 + 47 en UR269, 1825 en UR275.",
      "Ningún otro khipu de Inkawasi muestra dependencia del lugar (todos p > 0,8)."
-    ]
+    ],
+    "levels": {
+     "numbers": "La deducción es igual al valor de su lugar en 33 de 43 registros (17 al barajar los registros dentro de los bloques; p ≈ 0,0005). Los registros del lugar 1 reaparecen en UR275 con un mismo desfase (5 coincidencias; como máximo 4 en 5000 permutaciones del orden de los bloques; p ≈ 0,0002). Ambos patrones se encontraron explorando los khipus de Inkawasi; una búsqueda en todo el corpus no encuentra en ningún otro lugar la deducción fijada por el lugar.",
+     "structure": "Bloques de cinco registros, cada lugar con su propia deducción fija; el flujo 1 está registrado completo, en la misma secuencia, en UR275.",
+     "reading": "Cinco flujos de entregas que llegaban por rondas, cada uno con su propia deducción. Se desconoce qué eran los flujos (productores, campos, pueblos)."
+    }
    },
    "inkawasi": {
     "title": "Inkawasi: espacios vacíos, copias solo de totales, marcas de producto",
@@ -331,31 +369,56 @@
      "Una división tan limpia al azar: alrededor de 1 en 3900.",
      "UR273B ~ UR274B: p de Poisson ≈ 10⁻⁵.",
      "UR273A ~ UR274A: 891, 453, 448, 448 en el mismo orden (p ≈ 3 × 10⁻⁴); UR273B ~ UR274B: seis totales en el mismo orden (p ≈ 10⁻⁵)."
-    ]
+    ],
+    "levels": {
+     "numbers": "UR255 deja vacío el colgante del valor neto en sus 12 primeros depósitos y lo llena en 5 de los 6 últimos (alrededor de 1 entre 3900 por azar); UR273A/B comparten 4 y 6 totales con UR274A/B frente a 0,3 y 0,5 esperados, en el mismo orden.",
+     "structure": "Cada copia está en un atado distinto del de su par; el atado solo de totales conserva el orden del completo.",
+     "reading": "Copias hechas o completadas en momentos distintos, y totales guardados aparte de los detalles. No se sabe por qué se dejaron vacíos los espacios."
+    }
    },
    "as003": {
     "title": "AS003: un registro solo de los totales",
     "summary": "AS003 (Heye 17/8827) repite la parte de resumen de AS215 (Hood Museum, Nazca): seis valores que son sumas sobre los cuatro grupos de su otra parte, y la cuerda superior 76 que los totaliza. Es un segundo registro solo de totales, después de UR273B en Inkawasi.",
     "evidence": [
      "La entrada de los Ascher sobre AS215 (Databook, pp. 127–132) describe el resumen pero no menciona AS003."
-    ]
+    ],
+    "levels": {
+     "numbers": "Los seis valores y su total 76 son iguales a la parte de resumen de AS215, en orden inverso de cuerdas.",
+     "structure": "Un khipu de siete cuerdas que contiene solo los totales de la parte de resumen de otro khipu.",
+     "reading": "Un registro solo de totales. Se desconoce la procedencia de AS003, así que no se puede decir dónde ni por qué se hizo."
+    }
    },
    "folded": {
     "title": "Copias plegadas",
     "summary": "En dos casos independientes una cuerda separada en una copia es una subsidiaria en la otra: UR270 → UR278 en Inkawasi y UR053C → UR053B en el conjunto Waterfall. La regla de empaquetado es nuestra; la casi duplicación de B y C la señaló Chirinos.",
     "evidence": [
      "UR053B/C: coinciden 35 campos frente a un máximo de 18 en 2000 barajados."
-    ]
+    ],
+    "levels": {
+     "numbers": "UR053C → UR053B: coinciden 35 campos frente a un máximo de 18 en 2000 barajados de los registros de C; UR270 → UR278: 15 valores consecutivos.",
+     "structure": "Una cuerda que está sola en una copia es una subsidiaria en la otra, en dos pares independientes.",
+     "reading": "Las copias conservan los valores, pero no necesariamente la jerarquía de las cuerdas."
+    }
    },
    "known": {
     "title": "Copias conocidas recuperadas",
     "summary": "Los detectores encuentran, sin que se les indique, las copias ya publicadas: Lima → Gotemburgo (KH0049 → UR122, una rama de la cuenta), Lima ↔ París (HP055 ~ AS084), AS114/AS123 (Urton 2005), Puruchuco UR066 ~ UR067, AS069/AS070 (Thompson 2024) y registros duplicados de un mismo objeto.",
-    "evidence": []
+    "evidence": [],
+    "levels": {
+     "numbers": "Los detectores encuentran estas copias publicadas sin que se les indique dónde buscar.",
+     "structure": "Copias de una rama de una cuenta, pares coincidentes y registros duplicados, tal como se publicaron.",
+     "reading": "Una comprobación del método, no un resultado nuevo."
+    }
    },
    "dumbarton": {
     "title": "Dos khipus de Dumbarton Oaks transcritos",
     "summary": "UR297 (438 colgantes, 623 cuerdas) y UR298 (203 colgantes, 285 cuerdas), donados por Bill Conklin, existen en el OKR solo como escaneos de las hojas manuscritas de Urton. Transcribimos las 65 páginas. 74 de los 78 totales de grupo que Urton anotó en las hojas coinciden con los nuestros. UR297 tiene 41 grupos, casi todos de diez cuerdas más una cuerda de resumen levantada como cuerda superior. Ninguno de los dos está vinculado a otro khipu.",
-    "evidence": []
+    "evidence": [],
+    "levels": {
+     "numbers": "74 de los 78 totales de grupo que Urton anotó en sus hojas de registro coinciden con nuestra transcripción.",
+     "structure": "UR297: 41 grupos, casi todos de diez cuerdas más una cuerda de resumen levantada como cuerda superior.",
+     "reading": "Datos nuevos. Ninguno de los dos khipus está vinculado a otro del corpus."
+    }
    }
   },
   "linkTypes": {

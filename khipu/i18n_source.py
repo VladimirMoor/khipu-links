@@ -16,7 +16,9 @@ I18N = ROOT / "atlas/curated/i18n"
 NEW_STATIC = ["Start here", "For readers new to the subject", "All places", "No recorded find-place", "All collectors",
               "Sections", "Language", "Find a khipu by number", "Map view", "Zoom in", "Zoom out", "Vertical exaggeration",
               "Map of khipu find-places on the Peruvian and Chilean coast", "Network diagram of linked khipus",
-              "Search khipus", "Diagram of a khipu", "New to khipus? Start here"]
+              "Search khipus", "Diagram of a khipu", "New to khipus? Start here",
+              "Where two khipus share numbers, they look like copies, extracts and parts of one account",
+              "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately."]
 
 
 def mixed_blocks(html):
@@ -44,7 +46,8 @@ def main():
         dyn.add(m.group(1))
     D = json.load(open(ROOT / "site/data.json"))
     src = {"ui": {"static": sorted(set(es["ui"]["static"]) | set(NEW_STATIC)), "mixed": mixed_blocks(html), "dyn": sorted(dyn)},
-           "content": {"findings": {f["id"]: {"title": f["title"], "summary": f["summary"], "evidence": f.get("evidence", [])} for f in D["findings"]},
+           "content": {"findings": {f["id"]: {"title": f["title"], "summary": f["summary"], "evidence": f.get("evidence", []),
+                                                  **({"levels": f["levels"]} if f.get("levels") else {})} for f in D["findings"]},
                        "timeline": {t["title"]: {"title": t["title"], "text": t["text"]} for t in D["timeline"]},
                        "negatives": {n["title"]: {"title": n["title"], "text": n["text"]} for n in D["negatives"]},
                        "sources": {s["title"]: s["use"] for s in D["sources"]},
@@ -58,6 +61,7 @@ def main():
         t = json.load(open(f))
         miss = {k: [x for x in src["ui"][k] if x not in t["ui"].get(k, {})] for k in src["ui"]}
         cm = {k: [x for x in src["content"][k] if x not in t["content"].get(k, {})] for k in src["content"]}
+        cm["levels"] = [x for x, v in src["content"]["findings"].items() if "levels" in v and "levels" not in t["content"].get("findings", {}).get(x, {})]
         print(f"{f.stem}: missing ui " + ", ".join(f"{k} {len(v)}" for k, v in miss.items()) +
               "; content " + ", ".join(f"{k} {len(v)}" for k, v in cm.items() if v))
 
