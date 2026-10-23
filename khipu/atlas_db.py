@@ -95,6 +95,17 @@ def main():
     coll = {norm(inv): c for inv, c, _, _ in json.load(open(ROOT / "data/smb/khipu_collectors.json"))}
     apply = {(r["khipu"], r["cord"]): int(r["corrected"]) for r in corr if r["applied"].strip().lower() == "yes" and r["field"] == "value"}
     allc = list(csv.DictReader(open(ROOT / "extracted/plus_do_cords.csv")))
+    # khipus first published in the KFG release of 2026-10-10 (extracted/kfg2026_cords.csv, kfg2026_import.py), not in the corpus above
+    k26 = ROOT / "extracted/kfg2026_cords.csv"
+    if k26.exists():
+        have_k = {r["inv_num"] for r in allc}
+        m26 = json.load(open(ROOT / "extracted/kfg2026_meta.json"))
+        add = [r for r in csv.DictReader(open(k26)) if r["inv_num"] not in have_k]
+        allc += add
+        for k in {r["inv_num"] for r in add}:
+            v = m26.get(k, {})
+            meta.setdefault(k, {"MUSEUM_NAME": v.get("museum", ""), "MUSEUM_NUM": v.get("museum_num", ""), "PROVENANCE": v.get("provenance", ""),
+                                "OKR_NUM": v.get("kfg", k), "KFG2026": True})
     pend = defaultdict(list)
     for r in allc:
         if r["parent_id"] == "":

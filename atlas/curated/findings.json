@@ -92,6 +92,33 @@
   }
  },
  {
+  "id": "ica109",
+  "status": "new",
+  "title": "A private khipu holds the section totals of Berlin AS109 (Ica)",
+  "place": [
+   "ica"
+  ],
+  "summary": "KH0697 (AK002), a khipu in a private collection, formerly in the Maiman Collection in Tel Aviv, without a recorded provenance, has groups that equal the totals of whole sections of AS109, a Berlin khipu from Ica of Gretzer's 1907 batch. Its groups 7 and 8, [755, 1501, 1100, 330, 1136], equal the sum of AS109 groups 33–41 in all five positions; the sum of groups 12–20 differs by one knot (1126); group 4, [766, 1572, 1120, 520, 1137], matches the sum of groups 2–10 in three positions and has 120 moved between the last two (640 + 1017 = 520 + 1137). Its groups 9–15 match nothing in the corpus. KH0697 was first published in the Khipu Field Guide release of October 2026.",
+  "evidence": [
+   "14 matches of four or five positions, all with AS109, against 0 in 40 searches with the target values shifted by ±1…±20; AK001, AK003 and BA001 from the same collection match nothing.",
+   "The match with groups 33–41 also holds in the 2023 data of AS109."
+  ],
+  "khipus": [
+   "KH0697",
+   "UR1109"
+  ],
+  "scripts": [
+   "kfg_fetch.sh",
+   "kfg2026_import.py",
+   "maiman_sums.py"
+  ],
+  "levels": {
+   "numbers": "Group 7 (= group 8) of KH0697 equals the sum of nine groups of AS109 in all five positions; 14 matches of four or more positions with AS109 against 0 in 40 shifted-value searches over the whole corpus.",
+   "structure": "Groups 4–8 of KH0697 follow the totals of four sections of AS109: one exactly, one to a knot, one with 120 moved between two positions, as on AS143; groups 9–15 have no counterpart in the corpus.",
+   "reading": "Either KH0697 keeps the section totals of AS109 and of other, lost khipus, or both apply one standard quota per unit (755, 1501, 1100, 330, 1136). Either way the two belong to one accounting circle, so KH0697 probably comes from the same find at Ica as the Berlin batch."
+  }
+ },
+ {
   "id": "huacho1",
   "status": "new",
   "title": "Pachacamac → Huacho: the details without the totals",

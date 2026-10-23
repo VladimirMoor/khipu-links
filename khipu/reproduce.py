@@ -52,7 +52,10 @@ CHECKS = [
     ("3.9", "UR053C → UR053B: 35 fields, at most 18 in 2,000 shuffles", "paper_extra", r"совпавших полей 35; 2000 перемешиваний троек C: среднее [\d.]+, максимум 18", None),
     ("3.9", "run ends on group boundaries 38% against 46%", "unit_invariance", r"доля 38% против 46%", None),
     ("3.10", "74 of 78 of Urton's group totals equal ours", "do_check", r"итогов у Уртона: 78; совпадают с нашей расшифровкой: 74", None),
-    ("3.11", "style: 22 of 29 = share of the larger class", "style_pach_huacho", r"22 из 29 \(доля большего класса 76%\)", None),
+    ("3.11", "KH0697: 14 matches of 4+ positions, all with AS109; 0 in 40 shifted searches", "maiman_sums", r"KH0697: групп 15; совпадений \(≥ 4 позиций\) 14; фон в среднем 0\.00, максимум 0", None),
+    ("3.11", "KH0697 group 8 = sum of AS109 groups 33–41, [755, 1501, 1100, 330, 1136]", "maiman_sums", r"г8 \[755, 1501, 1100, 330, 1136\] = UR1109 сумма г33–г41 \[755, 1501, 1100, 330, 1136\]", None),
+    ("3.11", "AK001, AK003 and BA001 match nothing", "maiman_sums", r"KH0665: [^\n]*совпадений \(≥ 4 позиций\) 0;[\s\S]*KH0696: [^\n]*совпадений \(≥ 4 позиций\) 0;[\s\S]*KH0698: [^\n]*совпадений \(≥ 4 позиций\) 0;", None),
+    ("3.12", "style: 22 of 29 = share of the larger class", "style_pach_huacho", r"22 из 29 \(доля большего класса 76%\)", None),
 ]
 
 BY_HAND = [

@@ -11,11 +11,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "report/kfg_notes.csv"
 SEC = {"berlin": "3.1", "huacho1": "3.2", "as118": "3.3", "basel": "3.4", "frame14": "3.5", "inkawasi": "3.6",
-       "ur269": "3.7", "as003": "3.8", "folded": "3.9", "dumbarton": "3.10"}
+       "ur269": "3.7", "as003": "3.8", "folded": "3.9", "dumbarton": "3.10", "ica109": "3.11"}
 PRIOR = {("UR267A", "UR255"): "pairing: Urton & Chu 2015", ("UR267B", "UR256"): "pairing: Urton & Chu 2015",
          ("UR266", "UR275"): "pairing: Urton & Chu 2015"}
 ATLAS = "https://khipu-links.vercel.app/#finding-"
-PAPER = "Muravev 2026, Accounts across khipus (preprint v3, https://github.com/VladimirMoor/khipu-links)"
+PAPER = "Muravev 2026, Accounts across khipus (preprint v4, https://github.com/VladimirMoor/khipu-links)"
 
 
 def main():
