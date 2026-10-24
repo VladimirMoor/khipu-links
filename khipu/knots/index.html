@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Khipu knot shapes</title>
+<style>html,body{margin:0;height:100%;background:#e9e0cf;font:14px system-ui}#v{width:100%;height:100%}#bar{position:fixed;left:8px;top:8px;background:#fffd;padding:6px 10px;border-radius:6px}</style></head>
+<body><div id="v"></div><div id="bar">Khipu knot shapes · <button id="save">compute and save site/knots.json</button> <span id="msg"></span></div>
+<!-- Run: python3 khipu/knots/serve.py, open http://127.0.0.1:8767/ . The page ties and tightens every knot shape,
+     shows them on cords, and the button writes site/knots.json (each shape's knot determinant is checked first). -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const T=THREE, host=document.getElementById('v');
+const renderer=new T.WebGLRenderer({antialias:true}); renderer.setPixelRatio(2); renderer.setSize(innerWidth,innerHeight); host.appendChild(renderer.domElement);
+const scene=new T.Scene(); scene.background=new T.Color('#e9e0cf');
+const camera=new T.PerspectiveCamera(30,innerWidth/innerHeight,0.01,500);
+scene.add(new T.HemisphereLight(0xffffff,0x4a4436,0.75)); const dl=new T.DirectionalLight(0xffffff,0.85); dl.position.set(40,60,80); scene.add(dl); const dl2=new T.DirectionalLight(0xfff2e0,0.35); dl2.position.set(-60,20,-40); scene.add(dl2);
+const controls=new T.OrbitControls(camera,renderer.domElement);
+</script>
+<script src="knotdet.js"></script><script src="rope.js"></script>
+<script>
+// every shape on its own cord, laid out as on the site (knot x toward the viewer)
+const r=0.12, cols=['#e8dcc4','#5a3a26','#8a6440'];
+ROPE.KEYS.forEach((key,ci)=>{ const x=ci*0.9, seg=ROPE.knotShape(key), path=[];
+  for(let s=0;s<1;s+=0.1) path.push(new T.Vector3(x,-s,0));
+  seg.forEach(([a,b,z])=>path.push(new T.Vector3(x-b*r,-(1+z*r),a*r)));
+  const L=1+seg[seg.length-1][2]*r; for(let s=L+0.1;s<L+1.5;s+=0.1) path.push(new T.Vector3(x,-s,0));
+  const c=cols[ci%3]; scene.add(new T.Mesh(ROPE.ropeLine(path,r,10),ROPE.ropeMat(c,new T.Color(c).multiplyScalar(0.88).getStyle()))) });
+camera.position.set(4,-2,12); controls.target.set(4,-2,0); controls.update();
+const loop=()=>{requestAnimationFrame(loop); controls.update(); renderer.render(scene,camera)}; loop();
+document.getElementById('save').onclick=async()=>{ const {out,report}=ROPE.exportShapes();
+  const want={S:3,E:5}; for(let n=2;n<=9;n++) want['L'+n]=2*n+1;
+  const bad=report.filter(x=>x.det!==want[x.key]);
+  console.table(report);
+  if(bad.length){ document.getElementById('msg').textContent='wrong knot: '+bad.map(x=>x.key+' det '+x.det).join(', '); return }
+  const res=await fetch('/knots.json',{method:'PUT',body:JSON.stringify(out)});
+  document.getElementById('msg').textContent=res.ok?'saved ('+report.map(x=>x.key+' '+x.det).join(', ')+')':'save failed' };
+</script></body></html>

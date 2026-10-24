@@ -53,7 +53,7 @@ def main():
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n"
             + head + "</head><body>\n" + body + "\n</body></html>\n")
     (DIST / "index.html").write_text(page)
-    for f in ("data.json", "land.json", "terrain.json"):
+    for f in ("data.json", "land.json", "terrain.json", "knots.json"):
         shutil.copy(SITE / f, DIST / f)
     shutil.copytree(SITE / "kd", DIST / "kd")
     shutil.copytree(SITE / "i18n", DIST / "i18n")
