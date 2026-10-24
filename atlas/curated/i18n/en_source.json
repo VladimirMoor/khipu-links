@@ -454,6 +454,20 @@
      "structure": "UR297: 41 groups, mostly ten cords plus one summary cord raised like a top cord.",
      "reading": "New data. Neither khipu is linked to any other in the corpus."
     }
+   },
+   "inkawasi_archive": {
+    "title": "Inkawasi: how the storehouse kept its books",
+    "summary": "The 52 khipus from the Inka storehouse at Inkawasi (Cañete valley) read as one bookkeeping system on three levels. Tables split each delivery into nine parts (UR278, UR270); their group totals are the gross deliveries entered, in the same order, in the ledgers (UR275 and its copy UR266; UR274B). Each ledger records gross, net and a fixed deduction of its own: 15 and 10 on the two chili ledgers, 47 on the peanut ledger UR275, 47, 46, 46, 44 and 25 by place on UR269, 208 on UR268. Copies keep their ledger's deduction and were stored elsewhere: the chili ledgers in sector A, their copies in sector C. Totals-only records lie next to their full ledgers (layers 14 and 15 of unit 20N). No surviving khipu holds the totals of the others. The fixed deduction was described by Urton and Chu (2015, 2019); the nine-part tables and the layout of the archive as a whole are, as far as we know, new.",
+    "evidence": [
+     "Nine-cord group totals of UR278 equal the gross deliveries of UR266 in order: 10 equal and 3 one knot apart in its first 18 groups; of UR270, five consecutive deliveries of UR274B (groups 17, 20–23) and one kept only on UR273B. Against values shifted by 1–10: 11 of 31 and 9 of 18 group totals found elsewhere in the archive, against 3.0 and 3.1 (at most 6).",
+     "Gross = net + deduction in 15 of 25 groups of three on UR267A (deduction 15), 12 of 14 on UR267B (10) and 7 of 9 on UR275 (47); with the values shuffled within each khipu, 0.3 or fewer are expected. Each copy keeps its ledger's deduction: UR255 15, UR256 10, UR266 47.",
+     "The large values of UR257 (up to 98,718) match totals of other Inkawasi khipus no more often than shifted values do (3 of 10 against 2.7)."
+    ],
+    "levels": {
+     "numbers": "Nine-part tables whose group totals are the gross deliveries of the ledgers, in order; groups of three that add up (gross = net + deduction) with one deduction per ledger; each copy has the same deduction as its ledger.",
+     "structure": "Three levels — parts, deliveries, totals — on different khipus; copies of the chili ledgers in another sector, the totals-only bundle next to its full one.",
+     "reading": "Each delivery made up of nine contributions; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
+    }
    }
   },
   "timeline": {
@@ -614,6 +628,18 @@
    "Place-dependent constants and small-valued copies": {
     "title": "Place-dependent constants and small-valued copies",
     "text": "A value fixed by the place of the record in its block, as on UR269, was sought on every khipu and every cord position (blocks between separator groups; records shuffled within blocks): UR269 is the only clear case (p ≈ 0.003; next UR037, p ≈ 0.05 on values of 2 and 4). Identical groups of six or more small values (< 100) on khipus with different museum numbers: every rare match is a second recording of one object or AS003 ~ AS215; the rest are uniform runs such as seven 10s."
+   },
+   "A hidden network": {
+    "title": "A hidden network",
+    "text": "Every pair of the 757 khipus (286,146 pairs) was scored for shared rare values (≥ 100, not multiples of 10) and for a group total of one standing on a cord of the other. Beyond the known links, second recordings of one object under two numbers and one new link (AS104 ~ UR234), the excess over shifted values is spread thinly over thousands of pairs, and khipus from one place share no more rare values than random khipus of the same size (place labels shuffled: p = 0.075). The known links are small separate groups, not parts of one structure."
+   },
+   "Knot direction and attachment side in copies": {
+    "title": "Knot direction and attachment side in copies",
+    "text": "On cords that two linked khipus share, the copy does not follow the original's knot direction beyond what khipus of the same place share anyway (long knots are reversed on about half of the copies), nor its attachment side (recto or verso of a whole khipu follows how bundles were laid out: both members of a two-khipu bundle are always opposite). Colour is kept more often than chance (26% against 16%). Cords attached on the other side within a khipu mark sections — whole groups at the start or end, knotless separators — and are not copied."
+   },
+   "Operations beyond addition": {
+    "title": "Operations beyond addition",
+    "text": "Fractions (one group equal to another times p/q with rounding, q = 2–12), products (a × b = c within a group), squares and cubes, and a circle's area (π·r² or 3·r²) were sought in every khipu. Against values shifted by 1–5, with each value combination counted once and round numbers left out: fractions 7 against 11.9, products 228 against 217, powers 167 against 142, circle 188 against 245 — none above chance. Besides sums, only whole-number multiples (×8 on UR271, halving on AS026B) and proportional shares (the Berlin ninths) occur."
    }
   },
   "sources": {
@@ -649,13 +675,16 @@
    "fold": "Folded copy"
   },
   "compare": {
+   "10, then 17": "10, then 17",
    "14 of 14 cords equal": "14 of 14 cords equal",
+   "208 = the five deductions of UR269 together": "208 = the five deductions of UR269 together",
    "25 of 36 aligned cords equal in this window": "25 of 36 aligned cords equal in this window",
    "36 of 37 aligned cords equal in this window": "36 of 37 aligned cords equal in this window",
    "8 of 10 cords equal": "8 of 10 cords equal",
    "8 of 14 cords equal": "8 of 14 cords equal",
    "8 of 9 cords equal": "8 of 9 cords equal",
    "9 of 14 cords equal": "9 of 14 cords equal",
+   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (with UR265)",
    "AS003 repeats the summary part of AS215": "AS003 repeats the summary part of AS215",
    "AS118 subsidiary": "AS118 subsidiary",
    "AS118's first-cord subsidiaries against the group totals of AS125": "AS118's first-cord subsidiaries against the group totals of AS125",
@@ -675,12 +704,14 @@
    "Cord data": "Cord data",
    "Cords 1–13 run against UR212 in reverse; the knotless cord stays last on both.": "Cords 1–13 run against UR212 in reverse; the knotless cord stays last on both.",
    "Cords per unit": "Cords per unit",
+   "Deduction": "Deduction",
    "Each fragment pairs the same unit of both khipus": "Each fragment pairs the same unit of both khipus",
    "Fragment": "Fragment",
    "How the halves of 7 are marked": "How the halves of 7 are marked",
    "KH0049 (Lima) against UR122 (Gothenburg), best-aligned window": "KH0049 (Lima) against UR122 (Gothenburg), best-aligned window",
    "Khipu": "Khipu",
    "Khipus of the Gretzer batch with 14 units": "Khipus of the Gretzer batch with 14 units",
+   "Linked to": "Linked to",
    "MM008 (Basel) against AS131 unit 14": "MM008 (Basel) against AS131 unit 14",
    "MM008 cords 11–25 against UR212 unit 14": "MM008 cords 11–25 against UR212 unit 14",
    "MM015 (Basel) against UR212 unit 1 and AS131 unit 1": "MM015 (Basel) against UR212 unit 1 and AS131 unit 1",
@@ -688,16 +719,21 @@
    "Modal values 47, 46, 46, 44, 25; · = no readable deduction.": "Modal values 47, 46, 46, 44, 25; · = no readable deduction.",
    "Note": "Note",
    "On the last eight sheets of UR297 Urton wrote the total of each group and of its summary cord: 78 totals in all. 74 of the 78 equal our transcription (do_check.py).": "On the last eight sheets of UR297 Urton wrote the total of each group and of its summary cord: 78 totals in all. 74 of the 78 equal our transcription (do_check.py).",
+   "Place": "Place",
    "Place 1": "Place 1",
    "Place 2": "Place 2",
    "Place 3": "Place 3",
    "Place 4": "Place 4",
    "Place 5": "Place 5",
+   "Place: sector, excavation unit and layer (UE) from the excavators' notes in the OKR; the JC khipus were recorded in 2016. Products from the excavators' nicknames and from the copies.": "Place: sector, excavation unit and layer (UE) from the excavators' notes in the OKR; the JC khipus were recorded in 2016. Products from the excavators' nicknames and from the copies.",
    "Position": "Position",
+   "Product": "Product",
+   "Role": "Role",
    "Runs break at the knotless cord UR233 adds to each group and where AS175's totals (part 2) are left out.": "Runs break at the knotless cord UR233 adds to each group and where AS175's totals (part 2) are left out.",
    "Same six values in reverse order; 4 + 14 + 7 + 37 + 10 + 4 = 76 on both.": "Same six values in reverse order; 4 + 14 + 7 + 37 + 10 + 4 = 76 on both.",
    "Sum": "Sum",
    "Summary cords": "Summary cords",
+   "The Inkawasi khipus by place": "The Inkawasi khipus by place",
    "The knot counts agree as well; five cords are broken on AS118.": "The knot counts agree as well; five cords are broken on AS118.",
    "Top cord": "Top cord",
    "Total": "Total",
@@ -711,13 +747,42 @@
    "a larger space (Aschers)": "a larger space (Aschers)",
    "a marker, after a two-group preamble (Aschers)": "a marker, after a two-group preamble (Aschers)",
    "a single knotless cord": "a single knotless cord",
+   "beans": "beans",
+   "chili": "chili",
+   "copied on UR255": "copied on UR255",
+   "copied on UR256": "copied on UR256",
+   "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269": "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269",
+   "copy of UR267A": "copy of UR267A",
+   "copy of UR267B": "copy of UR267B",
+   "copy of UR275": "copy of UR275",
+   "copy of a ledger": "copy of a ledger",
+   "deliveries split into nine parts": "deliveries split into nine parts",
    "exact": "exact",
    "exact if a broken cord read 2220 was 2298": "exact if a broken cord read 2220 was 2298",
    "exact if the cord the Aschers left unread is 3111": "exact if the cord the Aschers left unread is 3111",
+   "group totals = gross deliveries of UR274B": "group totals = gross deliveries of UR274B",
+   "group totals = gross deliveries of UR275 and UR266": "group totals = gross deliveries of UR275 and UR266",
+   "ledger with a final block of deductions": "ledger with a final block of deductions",
+   "ledger, deduction in a fixed slot": "ledger, deduction in a fixed slot",
+   "ledger: gross, net, fixed deduction": "ledger: gross, net, fixed deduction",
+   "long groups, large values": "long groups, large values",
+   "multiples (×8)": "multiples (×8)",
    "museum record: 14 × 13": "museum record: 14 × 13",
    "museum record: 14 × 9": "museum record: 14 × 9",
    "museum record: 7 × A, 7 × B, 7 × A, 7 × B": "museum record: 7 × A, 7 × B, 7 × A, 7 × B",
    "not recorded": "not recorded",
+   "peanut": "peanut",
+   "place 1 = deliveries of UR275": "place 1 = deliveries of UR275",
+   "rounds of five deliveries, deduction by place": "rounds of five deliveries, deduction by place",
+   "sections repeated in rounds": "sections repeated in rounds",
+   "short record": "short record",
+   "short record, large values": "short record, large values",
+   "small counts": "small counts",
+   "totals kept on UR273A": "totals kept on UR273A",
+   "totals kept on UR273B; split into nine parts on UR270": "totals kept on UR273B; split into nine parts on UR270",
+   "totals of UR274A": "totals of UR274A",
+   "totals of UR274B": "totals of UR274B",
+   "totals only": "totals only",
    "unexplained": "unexplained",
    "yes": "yes"
   }

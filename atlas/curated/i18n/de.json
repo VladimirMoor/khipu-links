@@ -454,6 +454,20 @@
      "structure": "Die Gruppen 4–8 von KH0697 folgen den Summen von vier Abschnitten von AS109: eine exakt, eine bis auf einen Knoten, eine mit 120 zwischen zwei Positionen verschoben, wie auf AS143; die Gruppen 9–15 haben im Korpus kein Gegenstück.",
      "reading": "Entweder enthält KH0697 die Abschnittssummen von AS109 und von anderen, verlorenen Khipus, oder beide wenden eine einheitliche Norm je Einheit an (755, 1501, 1100, 330, 1136). So oder so gehören beide zu einem Rechnungskreis, KH0697 stammt also wahrscheinlich aus demselben Fund in Ica wie der Berliner Bestand."
     }
+   },
+   "inkawasi_archive": {
+    "title": "Inkawasi: wie das Lagerhaus Buch führte",
+    "summary": "Die 52 Khipus aus dem Inka-Lagerhaus von Inkawasi (Cañete-Tal) lassen sich als ein Buchführungssystem auf drei Ebenen lesen. Tabellen teilen jede Lieferung in neun Teile (UR278, UR270); ihre Gruppensummen sind die Bruttolieferungen, die in derselben Reihenfolge in den Büchern stehen (UR275 und seine Kopie UR266; UR274B). Jedes Buch verzeichnet brutto, netto und einen eigenen festen Abzug: 15 und 10 in den beiden Chili-Büchern, 47 im Erdnussbuch UR275, 47, 46, 46, 44 und 25 je nach Stelle auf UR269, 208 auf UR268. Kopien behalten den Abzug ihres Buchs und wurden an anderer Stelle aufbewahrt: die Chili-Bücher in Sektor A, ihre Kopien in Sektor C. Reine Summenaufzeichnungen liegen neben ihren vollständigen Büchern (Schichten 14 und 15 der Einheit 20N). Kein erhaltenes Khipu enthält die Summen der anderen. Den festen Abzug haben Urton und Chu (2015, 2019) beschrieben; die Neunertabellen und der Aufbau des Archivs als Ganzes sind, soweit wir wissen, neu.",
+    "evidence": [
+     "Die Summen der Neunergruppen von UR278 sind die Bruttolieferungen von UR266 in Reihenfolge: 10 gleich und 3 um einen Knoten verschieden in den ersten 18 Gruppen; bei UR270 fünf aufeinanderfolgende Lieferungen von UR274B (Gruppen 17, 20–23) und eine nur auf UR273B. Gegenüber um 1–10 verschobenen Werten: 11 von 31 und 9 von 18 Gruppensummen finden sich anderswo im Archiv, gegenüber 3,0 und 3,1 (höchstens 6).",
+     "Brutto = netto + Abzug in 15 von 25 Dreiergruppen auf UR267A (Abzug 15), 12 von 14 auf UR267B (10) und 7 von 9 auf UR275 (47); mit innerhalb jedes Khipus gemischten Werten erwartet man 0,3 oder weniger. Jede Kopie behält den Abzug ihres Buchs: UR255 15, UR256 10, UR266 47.",
+     "Die großen Werte von UR257 (bis 98 718) stimmen mit Summen anderer Inkawasi-Khipus nicht häufiger überein als verschobene Werte (3 von 10 gegenüber 2,7)."
+    ],
+    "levels": {
+     "numbers": "Neunertabellen, deren Gruppensummen die Bruttolieferungen der Bücher sind, in Reihenfolge; Dreiergruppen, die sich addieren (brutto = netto + Abzug), mit einem Abzug je Buch; jede Kopie hat denselben Abzug wie ihr Buch.",
+     "structure": "Drei Ebenen — Teile, Lieferungen, Summen — auf verschiedenen Khipus; die Kopien der Chili-Bücher in einem anderen Sektor, das Summenbündel neben dem vollständigen.",
+     "reading": "Jede Lieferung aus neun Beiträgen; getrennte Bücher für jedes Produkt und jeden Lieferstrom, jedes mit eigener fester Abgabe; Kopien an einem zweiten Ort, vielleicht zur Kontrolle; Zusammenfassungen anderswo oder verloren."
+    }
    }
   },
   "timeline": {
@@ -731,7 +745,46 @@
    "museum record: 7 × A, 7 × B, 7 × A, 7 × B": "Museumseintrag: 7 × A, 7 × B, 7 × A, 7 × B",
    "not recorded": "nicht erfasst",
    "unexplained": "ungeklärt",
-   "yes": "ja"
+   "yes": "ja",
+   "The Inkawasi khipus by place": "Die Khipus von Inkawasi nach Fundort",
+   "Place": "Fundort",
+   "Product": "Produkt",
+   "Role": "Funktion",
+   "Deduction": "Abzug",
+   "Linked to": "Verbindung",
+   "Place: sector, excavation unit and layer (UE) from the excavators' notes in the OKR; the JC khipus were recorded in 2016. Products from the excavators' nicknames and from the copies.": "Fundort: Sektor, Grabungseinheit und Schicht (UE) nach den Notizen der Ausgräber im OKR; die JC-Khipus wurden 2016 aufgenommen. Produkte nach den Spitznamen der Ausgräber und nach den Kopien.",
+   "chili": "Chili",
+   "peanut": "Erdnuss",
+   "beans": "Bohnen",
+   "ledger: gross, net, fixed deduction": "Buch: brutto, netto, fester Abzug",
+   "copy of a ledger": "Kopie eines Buchs",
+   "rounds of five deliveries, deduction by place": "Runden aus fünf Lieferungen, Abzug nach Stelle",
+   "ledger with a final block of deductions": "Buch mit einem Abzugsblock am Ende",
+   "ledger, deduction in a fixed slot": "Buch, Abzug an fester Stelle",
+   "totals only": "nur Summen",
+   "sections repeated in rounds": "in Runden wiederholte Abschnitte",
+   "multiples (×8)": "Vielfache (×8)",
+   "short record, large values": "kurze Aufzeichnung, große Werte",
+   "short record": "kurze Aufzeichnung",
+   "small counts": "kleine Zählungen",
+   "long groups, large values": "lange Gruppen, große Werte",
+   "10, then 17": "10, dann 17",
+   "copied on UR255": "kopiert auf UR255",
+   "copied on UR256": "kopiert auf UR256",
+   "copy of UR267A": "Kopie von UR267A",
+   "copy of UR267B": "Kopie von UR267B",
+   "copy of UR275": "Kopie von UR275",
+   "place 1 = deliveries of UR275": "Stelle 1 = Lieferungen von UR275",
+   "208 = the five deductions of UR269 together": "208 = die fünf Abzüge von UR269 zusammen",
+   "totals kept on UR273A": "Summen auf UR273A",
+   "totals of UR274A": "Summen von UR274A",
+   "totals of UR274B": "Summen von UR274B",
+   "deliveries split into nine parts": "Lieferungen in neun Teilen",
+   "group totals = gross deliveries of UR275 and UR266": "Gruppensummen = Bruttolieferungen von UR275 und UR266",
+   "group totals = gross deliveries of UR274B": "Gruppensummen = Bruttolieferungen von UR274B",
+   "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269": "kopiert auf UR266; in neun Teilen auf UR278; seine Lieferungen sind Stelle 1 von UR269",
+   "totals kept on UR273B; split into nine parts on UR270": "Summen auf UR273B; in neun Teilen auf UR270",
+   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (mit UR265)"
   }
  }
 }

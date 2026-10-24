@@ -454,6 +454,20 @@
      "structure": "Los grupos 4–8 de KH0697 siguen los totales de cuatro secciones de AS109: uno exactamente, uno con diferencia de un nudo, uno con 120 trasladados entre dos posiciones, como en AS143; los grupos 9–15 no tienen contrapartida en el corpus.",
      "reading": "O bien KH0697 guarda los totales por sección de AS109 y de otros khipus perdidos, o bien ambos aplican una misma cuota estándar por unidad (755, 1501, 1100, 330, 1136). En cualquier caso los dos pertenecen a un mismo círculo contable, así que KH0697 probablemente procede del mismo hallazgo en Ica que el lote de Berlín."
     }
+   },
+   "inkawasi_archive": {
+    "title": "Inkawasi: cómo llevaba sus cuentas el depósito",
+    "summary": "Los 52 khipus del depósito inca de Inkawasi (valle de Cañete) se leen como un solo sistema contable en tres niveles. Unas tablas dividen cada entrega en nueve partes (UR278, UR270); los totales de sus grupos son las entregas brutas anotadas, en el mismo orden, en los libros (UR275 y su copia UR266; UR274B). Cada libro registra bruto, neto y una deducción fija propia: 15 y 10 en los dos libros de ají, 47 en el libro de maní UR275, 47, 46, 46, 44 y 25 según el lugar en UR269, 208 en UR268. Las copias conservan la deducción de su libro y se guardaban en otro lugar: los libros de ají en el sector A, sus copias en el sector C. Los registros solo de totales están junto a sus libros completos (capas 14 y 15 de la unidad 20N). Ningún khipu conservado contiene los totales de los demás. La deducción fija fue descrita por Urton y Chu (2015, 2019); las tablas de nueve partes y la disposición del archivo en conjunto son, hasta donde sabemos, nuevas.",
+    "evidence": [
+     "Los totales de los grupos de nueve cuerdas de UR278 son las entregas brutas de UR266 en orden: 10 iguales y 3 a un nudo en sus primeros 18 grupos; los de UR270, cinco entregas consecutivas de UR274B (grupos 17, 20–23) y una guardada solo en UR273B. Frente a valores desplazados en 1–10: 11 de 31 y 9 de 18 totales de grupo aparecen en otro lugar del archivo, frente a 3,0 y 3,1 (como máximo 6).",
+     "Bruto = neto + deducción en 15 de 25 grupos de tres en UR267A (deducción 15), 12 de 14 en UR267B (10) y 7 de 9 en UR275 (47); con los valores barajados dentro de cada khipu se esperan 0,3 o menos. Cada copia conserva la deducción de su libro: UR255 15, UR256 10, UR266 47.",
+     "Los valores grandes de UR257 (hasta 98 718) no coinciden con totales de otros khipus de Inkawasi más que valores desplazados (3 de 10 frente a 2,7)."
+    ],
+    "levels": {
+     "numbers": "Tablas de nueve partes cuyos totales de grupo son las entregas brutas de los libros, en orden; grupos de tres que suman (bruto = neto + deducción) con una deducción por libro; cada copia tiene la misma deducción que su libro.",
+     "structure": "Tres niveles —partes, entregas, totales— en khipus distintos; las copias de los libros de ají en otro sector, el atado de totales junto al completo.",
+     "reading": "Cada entrega formada por nueve aportes; libros separados para cada producto y flujo de entregas, cada uno con su propia exacción fija; copias guardadas en un segundo lugar, quizá para control; los resúmenes, en otra parte o perdidos."
+    }
    }
   },
   "linkTypes": {
@@ -731,7 +745,46 @@
    "museum record: 7 × A, 7 × B, 7 × A, 7 × B": "ficha del museo: 7 × A, 7 × B, 7 × A, 7 × B",
    "not recorded": "no registrado",
    "unexplained": "sin explicar",
-   "yes": "sí"
+   "yes": "sí",
+   "The Inkawasi khipus by place": "Los khipus de Inkawasi por lugar",
+   "Place": "Lugar",
+   "Product": "Producto",
+   "Role": "Función",
+   "Deduction": "Deducción",
+   "Linked to": "Vínculo",
+   "Place: sector, excavation unit and layer (UE) from the excavators' notes in the OKR; the JC khipus were recorded in 2016. Products from the excavators' nicknames and from the copies.": "Lugar: sector, unidad de excavación y capa (UE) según las notas de los excavadores en el OKR; los khipus JC se registraron en 2016. Productos según los apodos de los excavadores y las copias.",
+   "chili": "ají",
+   "peanut": "maní",
+   "beans": "frijoles",
+   "ledger: gross, net, fixed deduction": "libro: bruto, neto, deducción fija",
+   "copy of a ledger": "copia de un libro",
+   "rounds of five deliveries, deduction by place": "rondas de cinco entregas, deducción según el lugar",
+   "ledger with a final block of deductions": "libro con un bloque final de deducciones",
+   "ledger, deduction in a fixed slot": "libro, deducción en una posición fija",
+   "totals only": "solo totales",
+   "sections repeated in rounds": "secciones repetidas en rondas",
+   "multiples (×8)": "múltiplos (×8)",
+   "short record, large values": "registro corto, valores grandes",
+   "short record": "registro corto",
+   "small counts": "conteos pequeños",
+   "long groups, large values": "grupos largos, valores grandes",
+   "10, then 17": "10, luego 17",
+   "copied on UR255": "copiado en UR255",
+   "copied on UR256": "copiado en UR256",
+   "copy of UR267A": "copia de UR267A",
+   "copy of UR267B": "copia de UR267B",
+   "copy of UR275": "copia de UR275",
+   "place 1 = deliveries of UR275": "lugar 1 = entregas de UR275",
+   "208 = the five deductions of UR269 together": "208 = las cinco deducciones de UR269 juntas",
+   "totals kept on UR273A": "totales guardados en UR273A",
+   "totals of UR274A": "totales de UR274A",
+   "totals of UR274B": "totales de UR274B",
+   "deliveries split into nine parts": "entregas divididas en nueve partes",
+   "group totals = gross deliveries of UR275 and UR266": "totales de grupo = entregas brutas de UR275 y UR266",
+   "group totals = gross deliveries of UR274B": "totales de grupo = entregas brutas de UR274B",
+   "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269": "copiado en UR266; dividido en nueve partes en UR278; sus entregas son el lugar 1 de UR269",
+   "totals kept on UR273B; split into nine parts on UR270": "totales guardados en UR273B; dividido en nueve partes en UR270",
+   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (con UR265)"
   }
  }
 }
