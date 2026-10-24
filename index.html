@@ -1298,7 +1298,9 @@ function showFinding(id){ let f=D.findings.find(x=>x.id===id); if(!f) return; f=
    ${f.place.length?`<p class="note">${tr('Places')}: ${f.place.map(siteLabel).join(', ')} · <a href="#map">${tr('map')}</a></p>`:''}
    <h3>${tr('Reproduce')}</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>
    <p><a href="#findings">${tr('All findings')}</a></p></div>` }
-function cmp(c){
+function cmp(c0){
+  const ct=x=>typeof x==='string'?(CT('compare')[x]||x):x;
+  const c={...c0,title:ct(c0.title),tally:ct(c0.tally),note:ct(c0.note),text:ct(c0.text),head:(c0.head||[]).map(ct),rows:c0.kind==='table'?c0.rows.map(r=>r.map(ct)):c0.rows};
   if(c.kind==='note') return `<h3>${esc(c.title)}</h3><p>${esc(c.text)}</p>`;
   if(c.kind==='table') return `<div class="cmp"><div class="cmpcap">${esc(c.title)}</div><div class="tablewrap"><table><thead><tr>${c.head.map((h,i)=>`<th class="${c.rows.length&&c.rows.every(r=>typeof r[i]==='number')?'v':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
   const A=K[c.a],B=K[c.b];
