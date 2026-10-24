@@ -614,6 +614,18 @@
    "Place-dependent constants and small-valued copies": {
     "title": "Stellenabhängige Konstanten und Kopien kleiner Werte",
     "text": "Ein durch die Stelle des Eintrags im Block festgelegter Wert wie auf UR269 wurde auf allen Khipus und an allen Schnurpositionen gesucht (Blöcke zwischen Trenngruppen; Einträge innerhalb der Blöcke gemischt): UR269 ist der einzige klare Fall (p ≈ 0,003; danach UR037, p ≈ 0,05 bei Werten von 2 und 4). Identische Gruppen aus sechs oder mehr kleinen Werten (< 100) auf Khipus mit verschiedenen Museumsnummern: Jeder seltene Treffer ist eine zweite Aufnahme desselben Objekts oder AS003 ~ AS215; der Rest sind gleichförmige Folgen wie siebenmal 10."
+   },
+   "A hidden network": {
+    "title": "Ein verborgenes Netz",
+    "text": "Jedes Paar der 757 Khipus (286 146 Paare) wurde nach gemeinsamen seltenen Werten (≥ 100, keine Vielfachen von 10) bewertet und danach, ob eine Gruppensumme des einen auf einer Schnur des anderen steht. Abgesehen von den bekannten Verbindungen, von Zweitaufnahmen desselben Objekts unter zwei Nummern und einer neuen Verbindung (AS104 ~ UR234) verteilt sich der Überschuss gegenüber verschobenen Werten dünn auf Tausende von Paaren, und Khipus eines Ortes teilen nicht mehr seltene Werte als zufällige Khipus gleicher Größe (Ortsangaben gemischt: p = 0,075). Die bekannten Verbindungen sind kleine, getrennte Gruppen, keine Teile einer einzigen Struktur."
+   },
+   "Knot direction and attachment side in copies": {
+    "title": "Knotenrichtung und Befestigungsseite bei Kopien",
+    "text": "Auf den Schnüren, die zwei verbundene Khipus teilen, folgt die Kopie der Knotenrichtung des Originals nicht über das hinaus, was Khipus eines Ortes ohnehin teilen (lange Knoten sind bei etwa der Hälfte der Kopien umgekehrt), und auch nicht seiner Befestigungsseite (Recto oder Verso eines ganzen Khipus hängt davon ab, wie Bündel ausgelegt wurden: die beiden Teile eines Bündels aus zwei Khipus sind stets entgegengesetzt). Die Farbe bleibt häufiger erhalten als zufällig (26 % gegenüber 16 %). Schnüre, die innerhalb eines Khipus auf der anderen Seite befestigt sind, markieren Abschnitte — ganze Gruppen am Anfang oder Ende, knotenlose Trenner — und werden nicht kopiert."
+   },
+   "Operations beyond addition": {
+    "title": "Rechenarten jenseits der Addition",
+    "text": "Brüche (eine Gruppe gleich einer anderen mal p/q mit Rundung, q = 2–12), Produkte (a × b = c innerhalb einer Gruppe), Quadrate und Kuben sowie die Kreisfläche (π·r² oder 3·r²) wurden in jedem Khipu gesucht. Gegenüber um 1–5 verschobenen Werten, jede Wertkombination einmal gezählt und ohne runde Zahlen: Brüche 7 gegenüber 11,9, Produkte 228 gegenüber 217, Potenzen 167 gegenüber 142, Kreis 188 gegenüber 245 — nichts über dem Zufall. Neben Summen kommen nur ganzzahlige Vielfache (×8 auf UR271, Halbieren auf AS026B) und proportionale Anteile (die Berliner Neuntel) vor."
    }
   },
   "sources": {

@@ -624,6 +624,18 @@
    "Place-dependent constants and small-valued copies": {
     "title": "Constantes según el lugar y copias de valores pequeños",
     "text": "Se buscó en todos los khipus y en todas las posiciones de cuerda un valor fijado por el lugar del registro en su bloque, como en UR269 (bloques entre grupos separadores; registros barajados dentro de los bloques): UR269 es el único caso claro (p ≈ 0,003; el siguiente, UR037, p ≈ 0,05 con valores de 2 y 4). Grupos idénticos de seis o más valores pequeños (< 100) en khipus con distinto número de museo: toda coincidencia rara es un segundo registro del mismo objeto o AS003 ~ AS215; el resto son series uniformes como siete veces 10."
+   },
+   "A hidden network": {
+    "title": "Una red oculta",
+    "text": "Se puntuó cada par de los 757 khipus (286 146 pares) por valores raros compartidos (≥ 100, no múltiplos de 10) y por el total de un grupo de uno que aparece en una cuerda del otro. Aparte de los vínculos conocidos, de segundas grabaciones de un mismo objeto con dos números y de un vínculo nuevo (AS104 ~ UR234), el exceso sobre los valores desplazados se reparte en miles de pares, y los khipus de un mismo lugar no comparten más valores raros que khipus al azar del mismo tamaño (etiquetas de lugar barajadas: p = 0,075). Los vínculos conocidos son grupos pequeños y separados, no partes de una sola estructura."
+   },
+   "Knot direction and attachment side in copies": {
+    "title": "Dirección de los nudos y lado de sujeción en las copias",
+    "text": "En las cuerdas que comparten dos khipus vinculados, la copia no sigue la dirección de los nudos del original más allá de lo que comparten de todos modos los khipus de un mismo lugar (los nudos largos están invertidos en cerca de la mitad de las copias), ni su lado de sujeción (el recto o verso de un khipu entero depende de cómo se dispusieron los atados: los dos miembros de un atado de dos khipus siempre son opuestos). El color se conserva más que por azar (26 % frente a 16 %). Las cuerdas sujetas del otro lado dentro de un khipu marcan secciones —grupos enteros al principio o al final, separadores sin nudos— y no se copian."
+   },
+   "Operations beyond addition": {
+    "title": "Operaciones más allá de la suma",
+    "text": "Se buscaron en cada khipu fracciones (un grupo igual a otro por p/q con redondeo, q = 2–12), productos (a × b = c dentro de un grupo), cuadrados y cubos, y el área de un círculo (π·r² o 3·r²). Frente a valores desplazados en 1–5, contando cada combinación una vez y sin números redondos: fracciones 7 frente a 11,9; productos 228 frente a 217; potencias 167 frente a 142; círculo 188 frente a 245: ninguno por encima del azar. Además de las sumas, solo hay múltiplos enteros (×8 en UR271, mitades en AS026B) y partes proporcionales (los novenos de Berlín)."
    }
   },
   "sources": {
