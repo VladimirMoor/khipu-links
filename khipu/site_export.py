@@ -45,6 +45,10 @@ def main():
     body = body.replace("<style>", "<style>\n#notes,#ov-notes{display:none!important}", 1)
     i = body.index("<style>")
     head, body = body[:i], body[i:]   # <title>, <meta>, <link> go into <head>
+    # Vercel Web Analytics (cookieless page-view counting), standalone copy only; the claude.ai artifact does not load it
+    body = body.replace("· coastlines: Natural Earth", "· coastlines: Natural Earth · visits counted with Vercel Web Analytics (no cookies)", 1)
+    body += ("\n<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>"
+             "\n<script defer src=\"/_vercel/insights/script.js\"></script>")
     page = ("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\">"
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n"
             + head + "</head><body>\n" + body + "\n</body></html>\n")
