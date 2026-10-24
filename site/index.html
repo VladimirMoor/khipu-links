@@ -886,17 +886,15 @@ async function view3d(k){
   // knot (single), a tight coil of n turns (long) or an open figure-eight, and then goes on; the tube follows that line,
   // so a knot has the cord's own thickness, twist and colour. Local paths: x, y across the cord, z along it (from 0 to len).
   const TAU=Math.PI*2;
-  function knotLocal(type,turns,r,K){ const out=[];
-    if(type==='S'){ const a=1.45*r, b=1.6*r, L=6.5*r;                            // open trefoil = overhand knot
-      for(let q=0;q<=K;q++){ const t=q/K*TAU; out.push([a*(Math.sin(t)+2*Math.sin(2*t)), a*(Math.cos(t)-2*Math.cos(2*t))+a, L*q/K-b*Math.sin(3*t)]) }
-      return [out,L] }
-    if(type==='E'){ const a=1.2*r, b=1.7*r, L=8.5*r;                             // open figure-eight knot
-      for(let q=0;q<=K;q++){ const t=q/K*TAU, w=2+Math.cos(2*t); out.push([a*(w*Math.cos(3*t)-3), a*w*Math.sin(3*t), L*q/K+b*Math.sin(4*t)]) }
-      return [out,L] }
-    const n=Math.min(9,Math.max(2,turns||3)), R=1.05*r, pitch=2.1*r, per=Math.max(8,Math.round(K/4)), L=n*pitch+2*r;  // long knot: n tight turns
-    out.push([0,0,0]);
-    for(let q=0;q<=n*per;q++){ const t=q/per*TAU; out.push([R*Math.cos(t)-R,R*Math.sin(t),r+q/per*pitch]) }
-    out.push([0,0,L]); return [out,L] }
+  function knotLocal(type,turns,r,K){
+    // A knot pulled tight on a cord is compact: the cord wraps round itself and passes through. A single knot is one such
+    // wrap, a long knot 2–9 wraps side by side, a figure-eight one wrap each way with a crossing between them.
+    const out=[[0,0,0]], R=1.05*r, pitch=2.1*r, per=Math.max(10,Math.round(K/4));
+    const wraps=type==='S'?1:type==='E'?2:Math.min(9,Math.max(2,turns||3));
+    for(let q=0;q<=wraps*per;q++){ const u=q/per, w=Math.floor(Math.min(u,wraps-1e-9));
+      const dir=(type==='E'&&w===1)?-1:1, t=dir*(u-w)*TAU+(type==='E'&&w===1?0:w*TAU);
+      out.push([R*Math.cos(t), R*Math.sin(t), r+u*pitch]) }   // wraps centred on the cord's axis
+    const L=wraps*pitch+2*r; out.push([0,0,L]); return [out,L] }
   function rnd(i){const x=Math.sin(i*12.9898+78.233)*43758.5453; return x-Math.floor(x)}
   function frame(tg){ const T0=tg.clone().normalize(); const ref=Math.abs(T0.y)<0.9?new T.Vector3(0,1,0):new T.Vector3(1,0,0);
     const N=new T.Vector3().crossVectors(T0,ref).normalize(), B=new T.Vector3().crossVectors(T0,N).normalize(); return [T0,N,B] }
@@ -930,10 +928,10 @@ async function view3d(k){
       // knot events along the cord: [start (cm), type, turns]
       const ev=[];
       (kn||[]).forEach(([kp,type,cnt,turns])=>{
-        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++) ev.push([kp+q*(6.5*r+0.25),'S',0]) }
+        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++) ev.push([kp+q*(4.1*r+0.3),'S',0]) }
         else if(type==='E'||type==='EE'||type==='TF') ev.push([kp,'E',0]);
         else ev.push([kp,'L',type==='L'?turns:3]) });
-      if(term==='K') ev.push([L0-6.5*r-0.3,'S',0]);
+      if(term==='K') ev.push([L0-4.1*r-0.3,'S',0]);
       ev.sort((a,b)=>a[0]-b[0]);
       const path=lead.slice(0,-1), at=d=>{const u=Math.min(1,Math.max(0,d/L0)); return [cur0.getPointAt(u),cur0.getTangentAt(u)]};
       let sPos=0, e=0, kk=0;
