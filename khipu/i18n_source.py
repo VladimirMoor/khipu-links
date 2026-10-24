@@ -23,6 +23,19 @@ NEW_STATIC = ["Start here", "For readers new to the subject", "All places", "No 
               "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately."]
 
 
+def compare_strings(D):
+    """English strings of the comparison blocks on the finding pages (titles, tallies, notes, column heads, text cells):
+    translated in content.compare, keyed by the English string."""
+    out = set()
+    for f in D["findings"]:
+        for c in f.get("compare", []):
+            out |= {c[k] for k in ("title", "tally", "note", "text") if c.get(k)}
+            out |= {h for h in c.get("head") or [] if h}
+            if c.get("kind") == "table":
+                out |= {x for r in c["rows"] for x in r if isinstance(x, str) and re.search(r"[A-Za-z]{3}", x)}
+    return sorted(out)
+
+
 def mixed_blocks(html):
     out = {}
     for m in re.finditer(r'<(\w+)([^>]*)\sdata-i18n-html="([^"]+)"([^>]*)>', html):
@@ -53,7 +66,8 @@ def main():
                        "timeline": {t["title"]: {"title": t["title"], "text": t["text"]} for t in D["timeline"]},
                        "negatives": {n["title"]: {"title": n["title"], "text": n["text"]} for n in D["negatives"]},
                        "sources": {s["title"]: s["use"] for s in D["sources"]},
-                       "linkTypes": D["edgeTypes"]}}
+                       "linkTypes": D["edgeTypes"],
+                       "compare": {x: x for x in compare_strings(D)}}}
     (I18N / "en_source.json").write_text(json.dumps(src, ensure_ascii=False, indent=1))
     n = sum(len(v) for v in src["ui"].values())
     print(f"en_source.json: ui {n} strings ({', '.join(f'{k} {len(v)}' for k, v in src['ui'].items())})")

@@ -205,12 +205,15 @@ def write_i18n(data):
     content — по ключам английского текста (находки по id; хронология, отрицательные результаты, источники — по
     английскому заголовку), так что новая строка без перевода просто показывается по-английски.
     """
+    import sys
+    sys.path.insert(0, str(ROOT / "khipu"))
+    from i18n_source import compare_strings
     src = ROOT / "atlas/curated/i18n"
     out = ROOT / "site/i18n"
     out.mkdir(exist_ok=True)
     want = {"findings": {f["id"] for f in data["findings"]}, "timeline": {t["title"] for t in data["timeline"]},
             "negatives": {n["title"] for n in data["negatives"]}, "sources": {x["title"] for x in data["sources"]},
-            "linkTypes": set(data["edgeTypes"])}
+            "linkTypes": set(data["edgeTypes"]), "compare": set(compare_strings(data))}
     for f in sorted(src.glob("*.json")):
         if f.stem == "en_source":
             continue
