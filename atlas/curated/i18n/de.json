@@ -118,7 +118,11 @@
    "reversed order too": "auch umgekehrte Reihenfolge",
    "to": "bis",
    "Where two khipus share numbers, they look like copies, extracts and parts of one account": "Wo zwei Khipus Zahlen teilen, sehen sie aus wie Kopien, Auszüge und Teile einer Abrechnung",
-   "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately.": "Wir haben arithmetische Detektoren auf etwa 700 digitalisierte Khipus angewandt und nur die Übereinstimmungen behalten, die weit über einer Vergleichsbasis liegen, die die Struktur der Khipus beibehält. Als Aufzeichnungen gelesen, sieht das, was standhält, wie Kopien und Auszüge von Abrechnungen aus: Manche bewahren nur die Summen, manche nur die Einzelposten, manche verteilen eine Abrechnung auf zwei Khipus oder vereinen zwei auf einem. Die Zahlen belegen die Übereinstimmungen; sie als Kopien zu lesen ist eine Deutung, und jeder Befund stellt beides getrennt dar."
+   "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately.": "Wir haben arithmetische Detektoren auf etwa 700 digitalisierte Khipus angewandt und nur die Übereinstimmungen behalten, die weit über einer Vergleichsbasis liegen, die die Struktur der Khipus beibehält. Als Aufzeichnungen gelesen, sieht das, was standhält, wie Kopien und Auszüge von Abrechnungen aus: Manche bewahren nur die Summen, manche nur die Einzelposten, manche verteilen eine Abrechnung auf zwei Khipus oder vereinen zwei auf einem. Die Zahlen belegen die Übereinstimmungen; sie als Kopien zu lesen ist eine Deutung, und jeder Befund stellt beides getrennt dar.",
+   "Two khipus side by side": "Zwei Khipus nebeneinander",
+   "Side by side": "Nebeneinander",
+   "Show": "Anzeigen",
+   "Pendants of the two khipus in one table, lined up where most consecutive values agree (or as you set it). Equal values are green, values one knot apart (a difference of 1, 10, 100 or 1000) amber, other differences red. A group total (Σ) is green when the same number is a cord or a group total of the other khipu.": "Die Hängeschnüre beider Khipus in einer Tabelle, so ausgerichtet, dass möglichst viele aufeinanderfolgende Werte übereinstimmen (oder wie Sie es einstellen). Gleiche Werte sind grün, Werte, die sich um einen Knoten unterscheiden (1, 10, 100 oder 1000), gelb, andere Unterschiede rot. Eine Gruppensumme (Σ) ist grün, wenn dieselbe Zahl eine Schnur oder Gruppensumme des anderen Khipus ist."
   },
   "mixed": {
    "where": "Zwei Verbindungen führen von Khipus mit der Herkunftsangabe <b>Pachacamac</b> zu Khipus, die bei <b>Huacho</b> ausgegraben wurden, etwa 150 km weiter nördlich an der Küste, in zwei Museen und über zwei verschiedene Verkäufer. Die Karte zeigt sie als rote Bögen.",
@@ -277,7 +281,24 @@
    "Numbers": "Zahlen",
    "Structure": "Struktur",
    "Reading": "Deutung",
-   "Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.": "Ziehen zum Drehen, Mausrad oder Zweifingergeste zum Zoomen, mit rechter Maustaste ziehen zum Verschieben; über eine Schnur fahren zeigt Wert und Knoten. Schnüre maßstäblich in Zentimetern, als zweifach gezwirnte Schnur gezeichnet; die Knoten sind in die Schnur selbst geknüpft und festgezogen wie an den Objekten: einfache Knoten als Überhandknoten, lange Knoten mit einer Windung um die Schnur je Einheit, Achterknoten als Achter. Jede Hängeschnur ist einmal um die Hauptschnur geschlungen, recto vorn, verso hinten; Nebenschnüre sind um ihre Hängeschnur geschlungen. Die Farben nähern die aufgezeichneten Farbcodes an; zweifarbige Schnüre zeigen beide Farben im Zwirn."
+   "Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.": "Ziehen zum Drehen, Mausrad oder Zweifingergeste zum Zoomen, mit rechter Maustaste ziehen zum Verschieben; über eine Schnur fahren zeigt Wert und Knoten. Schnüre maßstäblich in Zentimetern, als zweifach gezwirnte Schnur gezeichnet; die Knoten sind in die Schnur selbst geknüpft und festgezogen wie an den Objekten: einfache Knoten als Überhandknoten, lange Knoten mit einer Windung um die Schnur je Einheit, Achterknoten als Achter. Jede Hängeschnur ist einmal um die Hauptschnur geschlungen, recto vorn, verso hinten; Nebenschnüre sind um ihre Hängeschnur geschlungen. Die Farben nähern die aufgezeichneten Farbcodes an; zweifarbige Schnüre zeigen beide Farben im Zwirn.",
+   "No link between these two khipus is recorded in the atlas.": "Im Atlas ist keine Verbindung zwischen diesen beiden Khipus verzeichnet.",
+   "Pendants only, in recorded order; g = group, with its number of cords and its total.": "Nur Hängeschnüre, in der aufgezeichneten Reihenfolge; g = Gruppe, mit Zahl der Schnüre und Summe.",
+   "Pendants side by side": "Gegenübergestellte Hängeschnüre",
+   "See them side by side": "Nebeneinander ansehen",
+   "Side by side": "Nebeneinander",
+   "also on the other khipu": "auch auf dem anderen Khipu",
+   "best alignment": "beste Ausrichtung",
+   "different": "verschieden",
+   "equal": "gleich",
+   "offset": "Versatz",
+   "one knot apart": "um einen Knoten",
+   "shift down one cord": "eine Schnur nach unten",
+   "shift up one cord": "eine Schnur nach oben",
+   "side by side": "nebeneinander",
+   "swap A and B": "A und B tauschen",
+   "with gaps": "mit Lücken",
+   "With gaps: empty cells where one khipu has cords the other lacks. The arrows shift B as a whole instead.": "Mit Lücken: leere Zellen, wo ein Khipu Schnüre hat, die dem anderen fehlen. Die Pfeile verschieben stattdessen B als Ganzes."
   }
  },
  "content": {

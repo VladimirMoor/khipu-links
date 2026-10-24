@@ -119,6 +119,23 @@ button.link{font:inherit;background:none;border:0;padding:0;color:var(--indigo);
 .cmp tr.ne td{background:color-mix(in srgb,var(--accent) 14%,transparent)}
 .cmp tr.na td{color:var(--muted)}
 .cmp .cmpcap{font-family:var(--f-display);font-weight:500;margin:0 0 6px}
+.pair .tablewrap{width:fit-content;max-width:100%;max-height:75vh;overflow:auto}
+.pair table{width:auto;border-collapse:separate;border-spacing:0}
+.pair th{position:sticky;top:0;background:var(--surface);z-index:1}
+.pair td{padding:2px 10px;font-family:var(--f-mono);font-size:.84rem;text-align:right;white-space:nowrap}
+.pair td.g{font-family:var(--f-body);font-size:.78rem;color:var(--muted);text-align:left;vertical-align:top}
+.pair td.g b{color:var(--ink);font-weight:500}
+.pair td.g .hit{color:var(--ok);font-weight:600}
+.pair td.n{color:var(--muted);font-size:.74rem}
+.pair td.mid{color:var(--muted);text-align:center;padding:2px 4px}
+.pair td.gs{border-top:1px solid var(--line)}
+.pair tr.eq td.val{background:color-mix(in srgb,var(--ok) 16%,transparent)}
+.pair tr.eq.z td.val{background:color-mix(in srgb,var(--ok) 6%,transparent)}
+.pair tr.near td.val{background:color-mix(in srgb,#d9a441 22%,transparent)}
+.pair tr.ne td.val{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.pair .ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.pair .tally{margin:6px 0 10px}
+@media (max-width:560px){.pair td.n{display:none}.pair td{padding:2px 6px}}
 ol.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
 ol.tl li{position:relative;padding:0 0 18px 22px}
 ol.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--cord)}
@@ -360,6 +377,18 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-si
   </div>
 </section>
 
+<section class="view" id="v-pair" hidden>
+  <p class="eyebrow">Two khipus side by side</p>
+  <h1>Side by side</h1>
+  <p class="note">Pendants of the two khipus in one table, lined up where most consecutive values agree (or as you set it). Equal values are green, values one knot apart (a difference of 1, 10, 100 or 1000) amber, other differences red. A group total (Σ) is green when the same number is a cord or a group total of the other khipu.</p>
+  <form class="form" id="pair-form">
+    <label>Khipu A<input type="text" id="pair-a" placeholder="e.g. UR212"></label>
+    <label>Khipu B<input type="text" id="pair-b" placeholder="e.g. AS131"></label>
+    <button class="btn" type="submit">Show</button>
+  </form>
+  <div id="pair-out"></div>
+</section>
+
 <section class="view" id="v-stats" hidden>
   <p class="eyebrow">How collections differ</p>
   <h1>Statistics</h1>
@@ -475,7 +504,7 @@ function loadLang(l){ if(L10N[l]) return Promise.resolve(L10N[l]);
   return L10N_P[l] }
 function applyStatic(){
   const S=T().ui.static, M=T().ui.mixed;
-  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement&&!n.parentElement.closest('script,style,svg,canvas,#rows,#undig,#ns-out,#cmp-out,#st-out,#ck-out,#detail,#finding-detail,#tl,#neg,#src,#f-grid,#ov-findings,#stats,#map-panel,#net-panel,#gsug,#notes,#ov-notes,.m3lab,[data-i18n-html]')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement&&!n.parentElement.closest('script,style,svg,canvas,#rows,#undig,#ns-out,#cmp-out,#pair-out,#st-out,#ck-out,#detail,#finding-detail,#tl,#neg,#src,#f-grid,#ov-findings,#stats,#map-panel,#net-panel,#gsug,#notes,#ov-notes,.m3lab,[data-i18n-html]')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
   const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
   nodes.forEach(n=>{ if(n.__en===undefined){ const t=n.nodeValue.trim(); if(!t||!S[t]) return; n.__en=n.nodeValue }
     const t=n.__en.trim(); n.nodeValue=S[t]?n.__en.replace(t,S[t]):n.__en });
@@ -509,6 +538,7 @@ function route(){
   let view=h, arg=null;
   if(h.startsWith('khipu-')){view='catalogue';arg=h.slice(6)}
   else if(h.startsWith('finding-')){view='findings';arg=h.slice(8)}
+  else if(h.startsWith('pair-')){view='pair';arg=h.slice(5)}
   if(!document.getElementById('v-'+view)) view='overview';
   document.querySelectorAll('section.view').forEach(s=>s.hidden=(s.id!=='v-'+view));
   document.querySelectorAll('nav.tabs a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+view?'page':'false'));
@@ -517,6 +547,7 @@ function route(){
   if(view==='links') drawNet();
   if(view==='catalogue'){ if(arg) showKhipu(arg); else $('#detail').innerHTML='' }
   if(view==='findings'){ if(arg) showFinding(arg); else $('#finding-detail').innerHTML='' }
+  if(view==='pair') showPair(arg);
   if(arg) window.scrollTo({top:0});
 }
 window.addEventListener('hashchange',route);
@@ -759,11 +790,11 @@ function drawNet(){
     const es=D.edges.filter(e=>e.from===k.id||e.to===k.id);
     $('#net-panel').innerHTML=`<p class="eyebrow">${esc(siteLabel(k.site)||k.prov||'find-place unknown')}</p><h2 style="margin-top:0">${name(k)}</h2>
      <p>${esc(k.museum)} ${esc(k.num)}${k.collector?` · collected by ${esc(k.collector)}`:''}. ${k.np} pendants in ${k.groups.length} groups.</p>
-     <ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}<br><span class="note">${esc(e.note)}</span></li>`).join('')}</ul>
+     <ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))} · ${pairLink(e.from,e.to)}<br><span class="note">${esc(e.note)}</span></li>`).join('')}</ul>
      <p><a href="#khipu-${k.id}">${tr('Open in the catalogue')}</a></p>`}
-  function linkPanel(l){ if(l.dup){$('#net-panel').innerHTML=`<h2 style="margin-top:0">Same khipu</h2><p>${esc(l.dup.a)} and ${esc(l.dup.b)}: ${esc(l.dup.note)}.</p>`;return}
+  function linkPanel(l){ if(l.dup){$('#net-panel').innerHTML=`<h2 style="margin-top:0">Same khipu</h2><p>${esc(l.dup.a)} and ${esc(l.dup.b)}: ${esc(l.dup.note)}.</p><p><a href="${pairHref(l.dup.a,l.dup.b)}">${tr('See them side by side')}</a></p>`;return}
     const e=l.e,f=D.findings.find(x=>x.id===e.finding);
-    $('#net-panel').innerHTML=`<p class="eyebrow">${esc(D.edgeTypes[e.type])}</p><h2 style="margin-top:0">${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}</h2><p>${esc(e.note)}.</p>${f?`<p>Part of <a href="#finding-${f.id}">${esc(f.title)}</a>.</p>`:''}`}
+    $('#net-panel').innerHTML=`<p class="eyebrow">${esc(D.edgeTypes[e.type])}</p><h2 style="margin-top:0">${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))}</h2><p>${esc(e.note)}.</p>${f?`<p>Part of <a href="#finding-${f.id}">${esc(f.title)}</a>.</p>`:''}<p><a href="${pairHref(e.from,e.to)}">${tr('See them side by side')}</a></p>`}
 }
 
 /* ---------- Catalogue ---------- */
@@ -808,7 +839,7 @@ function showKhipu(id){
    <div class="v3d" id="v3d"><div class="msg">${tr('Loading the 3D model…')}</div></div>
    <p class="note">${tr("Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.")}</p>
    <details><summary>${tr('Flat schematic')}</summary><div class="schem">${schematic(k)}</div><p class="note">${tr('Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.')}</p></details>
-   ${es.length?`<h3>${tr('Links')}</h3><ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
+   ${es.length?`<h3>${tr('Links')}</h3><ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)} · ${pairLink(e.from,e.to)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>${tr('Same object')}</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
    ${fs.length?`<h3>${tr('Findings')}</h3><p>${fs.map(f=>`<a href="#finding-${f.id}">${esc(fx(f).title)}</a>`).join(' · ')}</p>`:''}
    <h3>${tr('Pendant values by group')}</h3><div class="groups" id="gvals">${gl}</div>
@@ -1059,7 +1090,85 @@ $('#cmp-form').addEventListener('submit',ev=>{ev.preventDefault();
    <h3>${tr("Group totals found among the other khipu's cords")}</h3>
    <p>${esc(A.id)} totals on ${esc(B.id)}: <b>${r.ab.real.length}</b> of ${r.ab.n} (expected by chance ${r.ab.exp.toFixed(1)})${r.ab.real.length?': <span class="seq">'+r.ab.real.slice(0,20).join(', ')+'</span>':''}.<br>
    ${esc(B.id)} totals on ${esc(A.id)}: <b>${r.ba.real.length}</b> of ${r.ba.n} (expected ${r.ba.exp.toFixed(1)})${r.ba.real.length?': <span class="seq">'+r.ba.real.slice(0,20).join(', ')+'</span>':''}.</p>
-   <p><a href="#khipu-${A.id}">Open ${esc(A.id)}</a> · <a href="#khipu-${B.id}">Open ${esc(B.id)}</a></p>`});
+   <p><a href="${pairHref(A.id,B.id)}">${tr('See them side by side')}</a> · <a href="#khipu-${A.id}">Open ${esc(A.id)}</a> · <a href="#khipu-${B.id}">Open ${esc(B.id)}</a></p>`});
+
+/* ---------- Side by side ---------- */
+const pairHref=(a,b)=>'#pair-'+encodeURIComponent(a)+'~'+encodeURIComponent(b);
+const pairLink=(a,b)=>`<a href="${pairHref(a,b)}">${tr('side by side')}</a>`;
+const knotApart=(x,y)=>Math.max(x,y)>=10&&[1,10,100,1000,10000].includes(Math.abs(x-y));
+let PAIR={key:'',rev:false,mode:'gaps',off:0};
+// Line up the pendants: global alignment with gaps (equal large values count most, equal zeros least, a value one knot
+// apart a little; a gap costs 2), so that cords added or missing on one khipu do not shift everything after them.
+function alignGaps(X,Y){ const n=X.length,m=Y.length, W=m+1, H=new Float32Array((n+1)*W), P=new Uint8Array((n+1)*W), G=2;
+  const sc=(x,y)=>x===y?(x>=100?5:x>=10?4:x>0?1:0.5):knotApart(x,y)?1:-1;
+  for(let i=1;i<=n;i++){H[i*W]=-G*i;P[i*W]=1} for(let j=1;j<=m;j++){H[j]=-G*j;P[j]=2}
+  for(let i=1;i<=n;i++) for(let j=1;j<=m;j++){ const d=H[(i-1)*W+j-1]+sc(X[i-1],Y[j-1]), u=H[(i-1)*W+j]-G, l=H[i*W+j-1]-G;
+    if(d>=u&&d>=l){H[i*W+j]=d;P[i*W+j]=0} else if(u>=l){H[i*W+j]=u;P[i*W+j]=1} else {H[i*W+j]=l;P[i*W+j]=2} }
+  const out=[]; let i=n,j=m; while(i>0||j>0){ const p=P[i*W+j]; if(i>0&&j>0&&p===0){out.push([i-1,j-1]);i--;j--} else if(i>0&&(j===0||p===1)){out.push([i-1,-1]);i--} else {out.push([-1,j-1]);j--} }
+  return {pairs:out.reverse(),score:H[n*W+m]} }
+// the shift (offset of B against A) carrying most equal consecutive pendants
+function bestShift(A,S){ const by={}; runs(A.v,S).forEach(x=>{by[x.b-x.a]=(by[x.b-x.a]||0)+x.len}); const o=Object.keys(by).sort((x,y)=>by[y]-by[x])[0]; return o!=null?+o:0 }
+function pairAuto(A,B){ const f=alignGaps(A.v,B.v).score, r=alignGaps(A.v,B.v.slice().reverse()).score; return r>f }
+function groupIndex(k){ const g=[]; k.groups.forEach((n,gi)=>{ for(let j=0;j<n;j++) g.push(gi) }); return g }
+function showPair(arg){
+  const [ia,ib]=(arg||'').split('~').map(x=>decodeURIComponent(x||''));
+  const A=K[ia]||findKhipus(ia,1)[0], B=K[ib]||findKhipus(ib,1)[0];
+  $('#pair-a').value=A?(A.alias||A.id):ia; $('#pair-b').value=B?(B.alias||B.id):ib;
+  if(!A||!B||A===B){ $('#pair-out').innerHTML=ia||ib?`<p class="note">${tr('Enter two different khipu numbers.')}</p>`:''; return }
+  const key=A.id+'~'+B.id; if(PAIR.key!==key) PAIR={key,rev:pairAuto(A,B),mode:'gaps',off:0};
+  drawPair(A,B) }
+function drawPair(A,B){
+  const {rev,mode,off}=PAIR, nA=A.v.length, nB=B.v.length, bi=s=>rev?nB-1-s:s, S=rev?B.v.slice().reverse():B.v;
+  // rows: [index on A or -1, index on B or -1]
+  let rows=[];
+  if(mode==='gaps') rows=alignGaps(A.v,S).pairs.map(([a,s])=>[a,s<0?-1:bi(s)]);
+  else for(let p=Math.min(0,-off);p<Math.max(nA,nB-off);p++){ const s=p+off; rows.push([p>=0&&p<nA?p:-1, s>=0&&s<nB?bi(s):-1]) }
+  const gA=groupIndex(A), gB=groupIndex(B), sA=gsums(A), sB=gsums(B);
+  const valsA=new Set(A.v), valsB=new Set(B.v), totA=new Set(sA.map(g=>g.s)), totB=new Set(sB.map(g=>g.s));
+  // group of each row on one side: the group of its cord, or for a gap inside a group that group
+  const slots=(side,gix)=>{ const idx=rows.map(r=>r[side]), out=new Array(rows.length).fill(null);
+    let prev=null; for(let r=0;r<rows.length;r++){ if(idx[r]>=0){ prev=gix[idx[r]]; out[r]=prev } else out[r]=prev }
+    let next=null; for(let r=rows.length-1;r>=0;r--){ if(idx[r]>=0) next=gix[idx[r]]; else if(out[r]!==next) out[r]=null }
+    return out };
+  const slA=slots(0,gA), slB=slots(1,gB);
+  const gcell=(k,gi,tot,other,otherTot,span)=>{ const t=tot[gi].s, hit=t>=10&&(other.has(t)||otherTot.has(t));
+    return `<td class="g gs" rowspan="${span}"><b>g${gi+1}</b> · ${k.groups[gi]}<br><span class="${hit?'hit':''}" title="${hit?esc(tr('also on the other khipu')):''}">Σ ${t}</span></td>` };
+  const cellFor=(sl,r,k,tot,other,otherTot)=>{ const g=sl[r]; if(g===null) return '<td class="g"></td>'; if(r>0&&sl[r-1]===g) return '';
+    let n=1; while(r+n<sl.length&&sl[r+n]===g) n++; return gcell(k,g,tot,other,otherTot,n) };
+  let eq=0,near=0,ne=0; const html=[];
+  rows.forEach(([a,b],r)=>{ let cls='na';
+    if(a>=0&&b>=0){ const x=A.v[a],y=B.v[b]; if(x===y){cls=x?'eq':'eq z';eq++} else if(knotApart(x,y)){cls='near';near++} else {cls='ne';ne++} }
+    const gsA=slA[r]!==null&&(r===0||slA[r-1]!==slA[r]), gsB=slB[r]!==null&&(r===0||slB[r-1]!==slB[r]);
+    html.push(`<tr class="${cls}">${cellFor(slA,r,A,sA,valsB,totB)}<td class="n${gsA?' gs':''}">${a>=0?a+1:''}</td><td class="val${gsA?' gs':''}">${a>=0?A.v[a]:''}</td><td class="mid">${a>=0&&b>=0?(cls.startsWith('eq')?'=':cls==='near'?'≈':'≠'):''}</td><td class="val${gsB?' gs':''}">${b>=0?B.v[b]:''}</td><td class="n${gsB?' gs':''}">${b>=0?b+1:''}</td>${cellFor(slB,r,B,sB,valsA,totA)}</tr>`) });
+  const es=D.edges.filter(e=>(e.from===A.id&&e.to===B.id)||(e.from===B.id&&e.to===A.id)), dup=D.duplicates.find(d=>(d.a===A.id&&d.b===B.id)||(d.a===B.id&&d.b===A.id));
+  const rel=es.map(e=>{ const f=D.findings.find(x=>x.id===e.finding); return `<li><b>${esc(etl(e.type))}</b>: ${esc(nameTxt(K[e.from]))} → ${esc(nameTxt(K[e.to]))} — ${esc(e.note)}${f?` · <a href="#finding-${f.id}">${esc(fx(f).title)}</a>`:''}</li>` }).join('')+(dup?`<li><b>${tr('Same khipu')}</b>: ${esc(dup.note)}</li>`:'');
+  $('#pair-out').innerHTML=`<div class="pair">
+   <h2>${name(A)} · ${name(B)}</h2>
+   <p class="note">${esc(A.museum)} ${esc(A.num)} · ${esc(siteLabel(A.site)||A.prov||'')}<br>${esc(B.museum)} ${esc(B.num)} · ${esc(siteLabel(B.site)||B.prov||'')}</p>
+   ${rel?`<ul class="clean">${rel}</ul>`:`<p class="note">${tr('No link between these two khipus is recorded in the atlas.')}</p>`}
+   <div class="ctl"><span>${esc(B.alias||B.id)}:</span>
+    <button class="btn ghost" type="button" id="pr-rev" aria-pressed="${rev}">${tr('reversed')}</button>
+    <button class="btn ghost" type="button" id="pr-gaps" aria-pressed="${mode==='gaps'}">${tr('with gaps')}</button>
+    <button class="btn ghost" type="button" id="pr-up" title="${esc(tr('shift up one cord'))}">↑</button>
+    <button class="btn ghost" type="button" id="pr-dn" title="${esc(tr('shift down one cord'))}">↓</button>
+    <button class="btn ghost" type="button" id="pr-auto">${tr('best alignment')}</button>
+    <button class="btn ghost" type="button" id="pr-swap">${tr('swap A and B')}</button>
+    <a class="btn ghost" href="#khipu-${A.id}">${esc(A.alias||A.id)}</a><a class="btn ghost" href="#khipu-${B.id}">${esc(B.alias||B.id)}</a></div>
+   <p class="tally">${tr('Pendants side by side')}: <b>${eq+near+ne}</b> · ${tr('equal')} <b>${eq}</b> · ${tr('one knot apart')} <b>${near}</b> · ${tr('different')} <b>${ne}</b>${mode==='shift'&&off?` · ${tr('offset')} ${off>0?'+':''}${off}`:''}</p>
+   <div class="tablewrap"><table><thead><tr><th>${esc(A.alias||A.id)}</th><th>${tr('cord')}</th><th>${tr('Value')}</th><th></th><th>${tr('Value')}</th><th>${tr('cord')}</th><th>${esc(B.alias||B.id)}</th></tr></thead><tbody>${html.join('')}</tbody></table></div>
+   <p class="note">${tr('Pendants only, in recorded order; g = group, with its number of cords and its total.')} ${tr('With gaps: empty cells where one khipu has cords the other lacks. The arrows shift B as a whole instead.')}</p></div>`;
+  const shiftFrom=()=>{ if(PAIR.mode!=='shift'){ PAIR.mode='shift'; PAIR.off=bestShift(A,PAIR.rev?B.v.slice().reverse():B.v) } };
+  $('#pr-rev').onclick=()=>{ PAIR.rev=!PAIR.rev; if(PAIR.mode==='shift') PAIR.off=bestShift(A,PAIR.rev?B.v.slice().reverse():B.v); drawPair(A,B) };
+  $('#pr-gaps').onclick=()=>{ if(PAIR.mode==='gaps') shiftFrom(); else PAIR.mode='gaps'; drawPair(A,B) };
+  $('#pr-up').onclick=()=>{ shiftFrom(); PAIR.off++; drawPair(A,B) };
+  $('#pr-dn').onclick=()=>{ shiftFrom(); PAIR.off--; drawPair(A,B) };
+  $('#pr-auto').onclick=()=>{ PAIR.rev=pairAuto(A,B); PAIR.mode='gaps'; drawPair(A,B) };
+  $('#pr-swap').onclick=()=>{ location.hash=pairHref(B.id,A.id).slice(1) };
+}
+$('#pair-form').addEventListener('submit',ev=>{ev.preventDefault();
+  const A=findKhipus($('#pair-a').value,1)[0], B=findKhipus($('#pair-b').value,1)[0];
+  if(!A||!B||A===B){$('#pair-out').innerHTML=`<p class="note">${tr('Enter two different khipu numbers.')}</p>`;return}
+  location.hash=pairHref(A.id,B.id).slice(1) });
 
 /* ---------- Catalogue: structure filters ---------- */
 function sfOk(k){ const g1=+$('#sf-g1').value||0, g2=+$('#sf-g2').value||0, gs=+$('#sf-gs').value||0, np=+$('#sf-np').value||0, mx=+$('#sf-mx').value||0, qq=$('#sf-q').value;
@@ -1181,6 +1290,7 @@ function showFinding(id){ let f=D.findings.find(x=>x.id===id); if(!f) return; f=
    ${f.levels?`<h3>${tr('How strong is this?')}</h3><dl class="levels"><dt>${tr('Numbers')}</dt><dd>${esc(f.levels.numbers)}</dd><dt>${tr('Structure')}</dt><dd>${esc(f.levels.structure)}</dd><dt>${tr('Reading')}</dt><dd>${esc(f.levels.reading)}</dd></dl>`:''}
    ${f.evidence.length?`<h3>${tr('Evidence')}</h3><ul>${f.evidence.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>`:''}
    ${(f.compare||[]).map(cmp).join('')}
+   ${(()=>{const es=D.edges.filter(e=>e.finding===f.id&&K[e.from]&&K[e.to]); return es.length?`<p class="note">${tr('Side by side')}: ${es.map(e=>`<a href="${pairHref(e.from,e.to)}">${esc(nameTxt(K[e.from]))} · ${esc(nameTxt(K[e.to]))}</a>`).join(' · ')}</p>`:''})()}
    <h3>${tr('Khipus')}</h3><div>${f.khipus.map(k=>K[k]?`<a class="kbtn" href="#khipu-${k}">${esc(nameTxt(K[k]))}</a>`:`<span class="kbtn">${esc(k)}</span>`).join('')}</div>
    ${f.place.length?`<p class="note">${tr('Places')}: ${f.place.map(siteLabel).join(', ')} · <a href="#map">${tr('map')}</a></p>`:''}
    <h3>${tr('Reproduce')}</h3><p>${f.scripts.map(s=>`<a href="${D.scriptBase+s}" target="_blank" rel="noopener" class="mono">${esc(s)}</a>`).join(' · ')}</p>

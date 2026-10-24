@@ -17,6 +17,8 @@ NEW_STATIC = ["Start here", "For readers new to the subject", "All places", "No 
               "Sections", "Language", "Find a khipu by number", "Map view", "Zoom in", "Zoom out", "Vertical exaggeration",
               "Map of khipu find-places on the Peruvian and Chilean coast", "Network diagram of linked khipus",
               "Search khipus", "Diagram of a khipu", "New to khipus? Start here",
+              "Two khipus side by side", "Side by side", "Show",
+              "Pendants of the two khipus in one table, lined up where most consecutive values agree (or as you set it). Equal values are green, values one knot apart (a difference of 1, 10, 100 or 1000) amber, other differences red. A group total (Σ) is green when the same number is a cord or a group total of the other khipu.",
               "Where two khipus share numbers, they look like copies, extracts and parts of one account",
               "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately."]
 

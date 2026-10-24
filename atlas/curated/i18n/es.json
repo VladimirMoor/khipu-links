@@ -118,7 +118,11 @@
    "Zoom out": "Alejar",
    "New to khipus? Start here": "¿Nuevo en el tema de los khipus? Para empezar",
    "Where two khipus share numbers, they look like copies, extracts and parts of one account": "Donde dos khipus comparten números, parecen copias, extractos y partes de una misma cuenta",
-   "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately.": "Aplicamos detectores aritméticos a unos 700 khipus digitalizados y conservamos solo las coincidencias que quedan muy por encima de una línea de base que conserva la estructura de los khipus. Leído como registro, lo que resiste parece un conjunto de copias y extractos de cuentas: unos conservan solo los totales, otros solo los detalles; algunos reparten una cuenta en dos khipus o reúnen dos en uno. Los números establecen las coincidencias; leerlas como copias es una interpretación, y cada hallazgo presenta ambas cosas por separado."
+   "We ran arithmetic detectors over about 700 digitized khipus and kept only the matches that stand far above a baseline that keeps the khipus' structure. Read as records, what survives looks like copies and excerpts of accounts: some keep only the totals, some only the details, some split one account over two khipus or join two on one. The numbers establish the matches; reading them as copies is an interpretation, and each finding sets out the two separately.": "Aplicamos detectores aritméticos a unos 700 khipus digitalizados y conservamos solo las coincidencias que quedan muy por encima de una línea de base que conserva la estructura de los khipus. Leído como registro, lo que resiste parece un conjunto de copias y extractos de cuentas: unos conservan solo los totales, otros solo los detalles; algunos reparten una cuenta en dos khipus o reúnen dos en uno. Los números establecen las coincidencias; leerlas como copias es una interpretación, y cada hallazgo presenta ambas cosas por separado.",
+   "Two khipus side by side": "Dos khipus lado a lado",
+   "Side by side": "Lado a lado",
+   "Show": "Mostrar",
+   "Pendants of the two khipus in one table, lined up where most consecutive values agree (or as you set it). Equal values are green, values one knot apart (a difference of 1, 10, 100 or 1000) amber, other differences red. A group total (Σ) is green when the same number is a cord or a group total of the other khipu.": "Los colgantes de los dos khipus en una sola tabla, alineados donde coinciden más valores consecutivos (o como usted lo fije). Los valores iguales en verde, los que difieren en un nudo (1, 10, 100 o 1000) en ámbar y las demás diferencias en rojo. El total de un grupo (Σ) aparece en verde cuando el mismo número es una cuerda o un total de grupo del otro khipu."
   },
   "mixed": {
    "where": "Dos vínculos van de khipus rotulados <b>Pachacamac</b> a khipus excavados cerca de <b>Huacho</b>, unos 150 km costa arriba, en dos museos y por dos vendedores distintos. El mapa los muestra como arcos rojos.",
@@ -277,7 +281,24 @@
    "Numbers": "Números",
    "Structure": "Estructura",
    "Reading": "Interpretación",
-   "Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.": "Arrastre para girar, use la rueda o pellizque para acercar, arrastre con el botón derecho para desplazar; pase el cursor sobre una cuerda para ver su valor y sus nudos. Cuerdas a escala en centímetros, dibujadas como cuerda torcida de dos cabos; los nudos están hechos en la propia cuerda y apretados, como en los objetos: los simples son nudos simples, los largos dan una vuelta alrededor de la cuerda por unidad, los nudos en ocho son ochos. Cada colgante da una vuelta alrededor de la cuerda principal, por delante si está atada por el recto y por detrás si por el verso; las subsidiarias dan una vuelta alrededor de su colgante. Los colores aproximan los códigos de color registrados; las cuerdas de dos colores muestran ambos en la torsión."
+   "Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.": "Arrastre para girar, use la rueda o pellizque para acercar, arrastre con el botón derecho para desplazar; pase el cursor sobre una cuerda para ver su valor y sus nudos. Cuerdas a escala en centímetros, dibujadas como cuerda torcida de dos cabos; los nudos están hechos en la propia cuerda y apretados, como en los objetos: los simples son nudos simples, los largos dan una vuelta alrededor de la cuerda por unidad, los nudos en ocho son ochos. Cada colgante da una vuelta alrededor de la cuerda principal, por delante si está atada por el recto y por detrás si por el verso; las subsidiarias dan una vuelta alrededor de su colgante. Los colores aproximan los códigos de color registrados; las cuerdas de dos colores muestran ambos en la torsión.",
+   "No link between these two khipus is recorded in the atlas.": "El atlas no registra ningún vínculo entre estos dos khipus.",
+   "Pendants only, in recorded order; g = group, with its number of cords and its total.": "Solo colgantes, en el orden registrado; g = grupo, con su número de cuerdas y su total.",
+   "Pendants side by side": "Pares de colgantes",
+   "See them side by side": "Verlos lado a lado",
+   "Side by side": "Lado a lado",
+   "also on the other khipu": "también en el otro khipu",
+   "best alignment": "mejor alineación",
+   "different": "distintos",
+   "equal": "iguales",
+   "offset": "desplazamiento",
+   "one knot apart": "a un nudo",
+   "shift down one cord": "bajar una cuerda",
+   "shift up one cord": "subir una cuerda",
+   "side by side": "lado a lado",
+   "swap A and B": "intercambiar A y B",
+   "with gaps": "con huecos",
+   "With gaps: empty cells where one khipu has cords the other lacks. The arrows shift B as a whole instead.": "Con huecos: celdas vacías donde un khipu tiene cuerdas que faltan en el otro. Las flechas, en cambio, desplazan B entero."
   }
  },
  "content": {
