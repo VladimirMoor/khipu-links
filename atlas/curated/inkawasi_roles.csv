@@ -1,0 +1,53 @@
+khipu,place,product,role,deduction,link
+UR271,A 19Q · UE 25,beans,multiples (×8),,
+UR269,A 20N · UE 11,peanut,"rounds of five deliveries, deduction by place","47, 46, 46, 44, 25",place 1 = deliveries of UR275
+UR266,A 20N · UE 12,peanut,copy of a ledger,47,copy of UR275
+UR270,A 20N · UE 13,peanut,deliveries split into nine parts,,group totals = gross deliveries of UR274B
+UR273A,A 20N · UE 14,,totals only,,totals of UR274A
+UR273B,A 20N · UE 14,,totals only,,totals of UR274B
+UR274A,A 20N · UE 15,,"ledger, deduction in a fixed slot",30,totals kept on UR273A
+UR274B,A 20N · UE 15,,"ledger, deduction in a fixed slot","10, then 17",totals kept on UR273B; split into nine parts on UR270
+UR278,A 20N · UE 16,peanut,deliveries split into nine parts,,group totals = gross deliveries of UR275 and UR266
+UR277,A 20N · UE 17,,sections repeated in rounds,,
+UR268,A 20N · UE 18,peanut,ledger with a final block of deductions,208,208 = the five deductions of UR269 together
+UR275,A 20N · UE 19,peanut,"ledger: gross, net, fixed deduction",47,copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269
+UR276,A 20N · UE 20,,short record,,
+UR279,A 20N · UE 21,,short record,,
+UR272,A 20N · UE 22,,small counts,,
+UR265,A 21K · UE 5,,short record,,
+UR264,A 21K · UE 5 (with UR265),,small counts,,
+UR267A,A 24-F · UE 16,chili,"ledger: gross, net, fixed deduction",15,copied on UR255
+UR267B,A 24-F · UE 16,chili,"ledger: gross, net, fixed deduction",10,copied on UR256
+UR263,A 2K · UE 8,,small counts,,
+UR280,A · UE 10,,short record,,
+JC018,B,,"short record, large values",,
+JC010,B · UE 02,,small counts,,
+JC016,B · UE 02,,short record,,
+JC023,B · UE 02,,small counts,,
+JC006,B · UE 03,,short record,,
+JC008,B · UE 03,,short record,,
+JC014,B · UE 03,,short record,,
+JC015,B · UE 03,,short record,,
+JC019,B · UE 03,,short record,,
+JC021,B · UE 03,,"short record, large values",,
+JC022,B · UE 03,,short record,,
+JC009,B · UE 04,,small counts,,
+JC020,B · UE 04,,"short record, large values",,
+JC001,B · UE 05,,small counts,,
+JC002,B · UE 05,,short record,,
+JC003,B · UE 05,,short record,,
+JC007,B · UE 05,,"short record, large values",,
+JC011,B · UE 05,,small counts,,
+JC012,B · UE 05,,small counts,,
+JC013,B · UE 05,,small counts,,
+JC004,B · UE 06,,small counts,,
+JC005,B · UE 06,,small counts,,
+JC017,B · UE 06,,short record,,
+UR255,C 19K · UE 2,chili,copy of a ledger,15,copy of UR267A
+UR256,C 19K · UE 2,chili,copy of a ledger,10,copy of UR267B
+UR257,C 19K · UE 2,,"short record, large values",,
+UR258,C 19K · UE 2,,small counts,,
+UR259,C 19K · UE 2,,short record,,
+UR260,C 19K · UE 2,,small counts,,
+UR261,C 19K · UE 2,,short record,,
+UR262,,,"long groups, large values",,

@@ -29,3 +29,6 @@ AS069,AS070,sum,known,Thompson 2024
 UR274A,UR273A,totals,inkawasi,UR273A records only the deposit totals of UR274A (891; 453; 448; 448 in the same order)
 UR275,UR269,excerpt,ur269,The place-1 records of UR269 blocks 2-5 and 9 are UR275 entries 17-20 and 24 (deduction 47)
 UR1109,KH0697,totals,ica109,"KH0697 groups 7-8 = sum of AS109 groups 33-41 (755, 1501, 1100, 330, 1136); group 4 ~ groups 2-10"
+UR278,UR275,totals,inkawasi_archive,"Nine-cord groups of UR278 add up to the gross deliveries of UR275, in order (UR278 g6, g7, g8, g10, g12, g15, g17 = UR275 g2, g3, g4, g6, g8, g11, g13)"
+UR278,UR266,totals,inkawasi_archive,"Nine-cord groups of UR278 add up to the gross deliveries of UR266, in order (10 equal and 3 one knot apart in the first 18 groups)"
+UR270,UR274B,totals,inkawasi_archive,"Nine-cord groups of UR270 add up to the gross deliveries of UR274B, in order (UR270 g1, g5, g6, g7, g9 = UR274B g17, g20, g21, g22, g23)"

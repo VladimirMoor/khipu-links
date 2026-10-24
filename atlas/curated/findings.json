@@ -335,5 +335,44 @@
    "structure": "UR297: 41 groups, mostly ten cords plus one summary cord raised like a top cord.",
    "reading": "New data. Neither khipu is linked to any other in the corpus."
   }
+ },
+ {
+  "id": "inkawasi_archive",
+  "status": "new",
+  "title": "Inkawasi: how the storehouse kept its books",
+  "place": [
+   "inkawasi"
+  ],
+  "summary": "The 52 khipus from the Inka storehouse at Inkawasi (Cañete valley) read as one bookkeeping system on three levels. Tables split each delivery into nine parts (UR278, UR270); their group totals are the gross deliveries entered, in the same order, in the ledgers (UR275 and its copy UR266; UR274B). Each ledger records gross, net and a fixed deduction of its own: 15 and 10 on the two chili ledgers, 47 on the peanut ledger UR275, 47, 46, 46, 44 and 25 by place on UR269, 208 on UR268. Copies keep their ledger's deduction and were stored elsewhere: the chili ledgers in sector A, their copies in sector C. Totals-only records lie next to their full ledgers (layers 14 and 15 of unit 20N). No surviving khipu holds the totals of the others. The fixed deduction was described by Urton and Chu (2015, 2019); the nine-part tables and the layout of the archive as a whole are, as far as we know, new.",
+  "evidence": [
+   "Nine-cord group totals of UR278 equal the gross deliveries of UR266 in order: 10 equal and 3 one knot apart in its first 18 groups; of UR270, five consecutive deliveries of UR274B (groups 17, 20–23) and one kept only on UR273B. Against values shifted by 1–10: 11 of 31 and 9 of 18 group totals found elsewhere in the archive, against 3.0 and 3.1 (at most 6).",
+   "Gross = net + deduction in 15 of 25 groups of three on UR267A (deduction 15), 12 of 14 on UR267B (10) and 7 of 9 on UR275 (47); with the values shuffled within each khipu, 0.3 or fewer are expected. Each copy keeps its ledger's deduction: UR255 15, UR256 10, UR266 47.",
+   "The large values of UR257 (up to 98,718) match totals of other Inkawasi khipus no more often than shifted values do (3 of 10 against 2.7)."
+  ],
+  "khipus": [
+   "UR278",
+   "UR275",
+   "UR266",
+   "UR270",
+   "UR274B",
+   "UR273B",
+   "UR267A",
+   "UR267B",
+   "UR255",
+   "UR256",
+   "UR269",
+   "UR268",
+   "UR274A",
+   "UR273A",
+   "UR257"
+  ],
+  "scripts": [
+   "inkawasi.py"
+  ],
+  "levels": {
+   "numbers": "Nine-part tables whose group totals are the gross deliveries of the ledgers, in order; groups of three that add up (gross = net + deduction) with one deduction per ledger; each copy has the same deduction as its ledger.",
+   "structure": "Three levels — parts, deliveries, totals — on different khipus; copies of the chili ledgers in another sector, the totals-only bundle next to its full one.",
+   "reading": "Each delivery made up of nine contributions; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
+  }
  }
 ]

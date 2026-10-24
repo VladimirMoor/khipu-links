@@ -5,6 +5,7 @@
 (build_compare: значения берутся из каталожного слоя базы).
 Порядок: python3 khipu/atlas_db.py && python3 khipu/site_build.py && python3 khipu/site_knots.py
 """
+import csv
 import itertools
 import json
 from collections import Counter, defaultdict
@@ -106,6 +107,11 @@ def build_compare(pend, kids):
         pass
     shared = [1200, 1249, 1332, 1575, 2142, 2300]
     find = lambda k, v: next((g for g in grp[k] if v in g), [])
+    roles = list(csv.DictReader(open(ROOT / "atlas/curated/inkawasi_roles.csv")))
+    C["inkawasi_archive"].append({"kind": "table", "title": "The Inkawasi khipus by place",
+                                  "head": ["Khipu", "Place", "Product", "Role", "Deduction", "Linked to"],
+                                  "rows": [[r["khipu"], r["place"], r["product"], r["role"], r["deduction"], r["link"]] for r in roles],
+                                  "note": "Place: sector, excavation unit and layer (UE) from the excavators' notes in the OKR; the JC khipus were recorded in 2016. Products from the excavators' nicknames and from the copies."})
     C["inkawasi"].append({"kind": "table", "title": "UR273B keeps only the totals of UR274B", "head": ["Total", "UR274B group", "UR273B group"],
                           "rows": [[v, " ".join(map(str, find("UR274B", v))), " ".join(map(str, find("UR273B", v)))] for v in shared]})
     C["as003"].append({"kind": "table", "title": "AS003 repeats the summary part of AS215", "head": ["", "Summary cords", "Top cord"],
