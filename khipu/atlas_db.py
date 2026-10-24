@@ -32,7 +32,7 @@ create table khipu(id text primary key, alias text, okr text, museum text, num t
 create table cord(khipu text, cord_id text, parent_id text, level int, ord int, grp text, value int, color text,
   attachment text, length real, termination text);
 create table model_cord(khipu text, idx int, label text, parent_idx int, level int, pos real, length real, attachment text,
-  termination text, color1 text, op text, color2 text, value int);
+  termination text, color1 text, op text, color2 text, value int, twist text);
 create table model_knot(khipu text, cord_idx int, pos real, type text, n int, turns int, direction text);
 create table model_meta(khipu text primary key, quality text, primary_length real, primary_color text);
 create table site(id text primary key, label text, lat real, lon real, region text);
@@ -159,7 +159,7 @@ def main():
             m = SK.reconstruct(k, rs, kids)
         db.execute("insert into model_meta values(?,?,?,?)", (k, m["q"], m["pl"], m["pc"]))
         for i, c in enumerate(m["c"]):
-            db.execute("insert into model_cord values(?,?,?,?,?,?,?,?,?,?,?,?,?)", (k, i, c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[8], c[9], c[10]))
+            db.execute("insert into model_cord values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (k, i, c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[8], c[9], c[10], c[12] if len(c) > 12 else ""))
             db.executemany("insert into model_knot values(?,?,?,?,?,?,?)", [(k, i, kn[0], kn[1], kn[2], kn[3], kn[4]) for kn in c[11]])
         mm = meta.get(k, {})
         prov = str(mm.get("PROVENANCE") or "").strip('" ')

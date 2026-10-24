@@ -35,7 +35,7 @@ def from_okr(con, kid, cat_vals):
     pc = con.execute("select PCORD_ID, PCORD_LENGTH from primary_cord where KHIPU_ID=?", (kid,)).fetchone()
     pcol = con.execute("select COLOR_CD_1 from ascher_cord_color where KHIPU_ID=? and PCORD_FLAG=1 limit 1", (kid,)).fetchone()
     cords = con.execute("select CORD_ID, PENDANT_FROM, CORD_LEVEL, CORD_ORDINAL, CLUSTER_ID, ATTACH_POS, CORD_LENGTH, "
-                        "ATTACHMENT_TYPE, TERMINATION from cord where KHIPU_ID=? order by CORD_LEVEL, CORD_ORDINAL", (kid,)).fetchall()
+                        "ATTACHMENT_TYPE, TERMINATION, TWIST from cord where KHIPU_ID=? order by CORD_LEVEL, CORD_ORDINAL", (kid,)).fetchall()
     if not cords:
         return None
     cl = {r[0]: (num(r[1]), num(r[2]), r[3] or 0) for r in
@@ -89,7 +89,8 @@ def from_okr(con, kid, cat_vals):
         idx[r[0]] = len(out)
         kn = knots.get(r[0], [])
         val = 0
-        out.append([label, parent_i, r[2] or 1, round(x, 2), round(num(r[6]), 1), r[7] or "", r[8] or "", c1, op, c2, val, kn])
+        out.append([label, parent_i, r[2] or 1, round(x, 2), round(num(r[6]), 1), r[7] or "", r[8] or "", c1, op, c2, val, kn,
+                    (r[9] or "").strip().upper()[:1]])   # ply direction of the cord: S, Z, U or empty
         for j, s in enumerate(sorted(by_parent.get(r[0], []), key=lambda z: z[3] or 0), 1):
             pos = num(s[5]) if num(s[5]) > 0 else 1.0 + 0.8 * j
             add(s, f"{label}s{j}", idx[r[0]], pos)
@@ -245,8 +246,8 @@ def main():
         knots[(k, ci)].append([pos, t, n, turns, d])
     cords = defaultdict(list)
     for r in db.execute("select khipu, idx, label, parent_idx, level, pos, length, attachment, termination, color1, op, color2, value "
-                        "from model_cord order by khipu, idx"):
-        cords[r[0]].append(list(r[2:]) + [knots.get((r[0], r[1]), [])])
+                        ", twist from model_cord order by khipu, idx"):
+        cords[r[0]].append(list(r[2:13]) + [knots.get((r[0], r[1]), []), r[13] or ""])
     models = {k: {"q": q, "pl": pl, "pc": pc or "", "c": cords[k]} for k, q, pl, pc in db.execute("select * from model_meta")}
     ids = sorted(models)
     index = {}
