@@ -459,7 +459,7 @@
     "title": "Inkawasi: wie das Lagerhaus Buch führte",
     "summary": "Die 52 Khipus aus dem Inka-Lagerhaus von Inkawasi (Cañete-Tal) lassen sich als ein Buchführungssystem auf drei Ebenen lesen. Tabellen teilen jede Lieferung in neun Teile (UR278, UR270); ihre Gruppensummen sind die Bruttolieferungen, die in derselben Reihenfolge in den Büchern stehen (UR275 und seine Kopie UR266; UR274B). Jedes Buch verzeichnet brutto, netto und einen eigenen festen Abzug: 15 und 10 in den beiden Chili-Büchern, 47 im Erdnussbuch UR275, 47, 46, 46, 44 und 25 je nach Stelle auf UR269, 208 auf UR268. Kopien behalten den Abzug ihres Buchs und wurden an anderer Stelle aufbewahrt: die Chili-Bücher in Sektor A, ihre Kopien in Sektor C. Reine Summenaufzeichnungen liegen neben ihren vollständigen Büchern (Schichten 14 und 15 der Einheit 20N). Kein erhaltenes Khipu enthält die Summen der anderen. Den festen Abzug haben Urton und Chu (2015, 2019) beschrieben; die Neunertabellen und der Aufbau des Archivs als Ganzes sind, soweit wir wissen, neu.",
     "evidence": [
-     "Die Summen der Neunergruppen von UR278 sind die Bruttolieferungen von UR266 in Reihenfolge: 10 gleich und 3 um einen Knoten verschieden in den ersten 18 Gruppen; bei UR270 fünf aufeinanderfolgende Lieferungen von UR274B (Gruppen 17, 20–23) und eine nur auf UR273B. Gegenüber um 1–10 verschobenen Werten: 11 von 31 und 9 von 18 Gruppensummen finden sich anderswo im Archiv, gegenüber 3,0 und 3,1 (höchstens 6).",
+     "In Reihenfolge an den Bruttolieferungen der Bücher ausgerichtet, ergeben die Summen der Neunergruppen von UR278 10 gleiche und 4 um einen Knoten verschiedene auf UR266 (7 und 4 auf UR275), die von UR270 4 gleiche und 1 um einen Knoten verschiedene auf UR274B; mit um 1–10 verschobenen Werten der Bücher findet dieselbe Ausrichtung höchstens 2. Eine Suche nach solchen geordneten Summen in jedem Paar von Inkawasi-Khipus findet nur diese und die bekannten reinen Summenbündel.",
      "Brutto = netto + Abzug in 15 von 25 Dreiergruppen auf UR267A (Abzug 15), 12 von 14 auf UR267B (10) und 7 von 9 auf UR275 (47); mit innerhalb jedes Khipus gemischten Werten erwartet man 0,3 oder weniger. Jede Kopie behält den Abzug ihres Buchs: UR255 15, UR256 10, UR266 47.",
      "Die großen Werte von UR257 (bis 98 718) stimmen mit Summen anderer Inkawasi-Khipus nicht häufiger überein als verschobene Werte (3 von 10 gegenüber 2,7)."
     ],
@@ -784,7 +784,19 @@
    "group totals = gross deliveries of UR274B": "Gruppensummen = Bruttolieferungen von UR274B",
    "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269": "kopiert auf UR266; in neun Teilen auf UR278; seine Lieferungen sind Stelle 1 von UR269",
    "totals kept on UR273B; split into nine parts on UR270": "Summen auf UR273B; in neun Teilen auf UR270",
-   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (mit UR265)"
+   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (mit UR265)",
+   "208 = sum of the five deductions": "208 = Summe der fünf Abzüge",
+   "Copies and totals": "Kopien, Summen",
+   "Ledgers": "Bücher",
+   "Outlined in red: stored in sector C (unit 19K); all others in sector A. Numbers after − are the fixed deductions; arrows point from the details to the totals and from a ledger to its copy.": "Rot umrandet: in Sektor C (Einheit 19K) aufbewahrt; alle anderen in Sektor A. Die Zahlen nach − sind die festen Abzüge; die Pfeile führen von den Einzelheiten zu den Summen und vom Buch zu seiner Kopie.",
+   "Parts": "Teile",
+   "The archive on three levels": "Das Archiv auf drei Ebenen",
+   "copy": "Kopie",
+   "ledger": "Buch",
+   "nine parts": "neun Teile",
+   "place 1": "Stelle 1",
+   "rounds of five": "Fünferrunden",
+   "totals": "Summen"
   }
  }
 }

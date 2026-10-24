@@ -119,6 +119,19 @@ button.link{font:inherit;background:none;border:0;padding:0;color:var(--indigo);
 .cmp tr.ne td{background:color-mix(in srgb,var(--accent) 14%,transparent)}
 .cmp tr.na td{color:var(--muted)}
 .cmp .cmpcap{font-family:var(--f-display);font-weight:500;margin:0 0 6px}
+.dgwrap{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow-x:auto}
+.dg{display:block;width:100%;min-width:640px;height:auto}
+.dg-box{fill:var(--soft);stroke:var(--line);stroke-width:1.2}
+.dg-box.dg-c{stroke:var(--accent);stroke-width:2}
+.dg-id{font-family:var(--f-display);font-weight:600;font-size:13px;fill:var(--ink)}
+.dg-role{font-size:11px;fill:var(--muted)}
+.dg-ded{font-family:var(--f-mono);font-size:11px;fill:var(--ink)}
+.dg-place{font-size:10px;fill:var(--muted)}
+.dg-prod{font-size:10px;fill:var(--cord);font-style:italic}
+.dg-row{font-family:var(--f-display);font-size:12px;font-weight:500;fill:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.dg-edge{stroke:var(--muted);stroke-width:1.3;fill:none}
+.dg-arrow{fill:var(--muted)}
+.dg-elab{font-size:10px;fill:var(--muted)}
 .pair .tablewrap{width:fit-content;max-width:100%;max-height:75vh;overflow:auto}
 .pair table{width:auto;border-collapse:separate;border-spacing:0}
 .pair th{position:sticky;top:0;background:var(--surface);z-index:1}
@@ -1299,6 +1312,7 @@ function cmp(c0){
   const ct=x=>typeof x==='string'?(CT('compare')[x]||x):x;
   const c={...c0,title:ct(c0.title),tally:ct(c0.tally),note:ct(c0.note),text:ct(c0.text),head:(c0.head||[]).map(ct),rows:c0.kind==='table'?c0.rows.map(r=>r.map(ct)):c0.rows};
   if(c.kind==='note') return `<h3>${esc(c.title)}</h3><p>${esc(c.text)}</p>`;
+  if(c.kind==='svg'){ let svg=c0.svg; (c0.labels||[]).forEach(l=>{ svg=svg.split('>'+esc(l)+'<').join('>'+esc(ct(l))+'<') }); return `<div class="cmp"><div class="cmpcap">${esc(c.title)}</div><div class="dgwrap">${svg}</div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>` }
   if(c.kind==='table') return `<div class="cmp"><div class="cmpcap">${esc(c.title)}</div><div class="tablewrap"><table><thead><tr>${c.head.map((h,i)=>`<th class="${c.rows.length&&c.rows.every(r=>typeof r[i]==='number')?'v':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r=>`<tr>${r.map(x=>`<td class="${typeof x==='number'?'v':''}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${c.note?`<p class="note">${esc(c.note)}</p>`:''}</div>`;
   const A=K[c.a],B=K[c.b];
   return `<div class="cmp"><div class="cmpcap">${esc(c.title)} · ${esc(c.tally)}</div><div class="tablewrap"><table><thead><tr><th class="v">${esc(A?nameTxt(A):c.a)}: ${tr('cord')}</th><th class="v">${tr('Value')}</th><th class="v">${esc(B?nameTxt(B):c.b)}: ${tr('cord')}</th><th class="v">${tr('Value')}</th></tr></thead>

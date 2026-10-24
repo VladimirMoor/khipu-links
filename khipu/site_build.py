@@ -16,6 +16,73 @@ OUT = ROOT / "site/data.json"
 KHIPU_URL = "https://github.com/VladimirMoor/khipu-links/blob/main/khipu/"
 
 
+def inkawasi_diagram():
+    """SVG of the Inkawasi archive on three levels (parts, ledgers, copies and totals). Text elements hold English
+    strings that the page translates (listed in "labels")."""
+    W, H, bw, bh = 1120, 440, 116, 62
+    X = {k: 215 + 140 * i for i, k in enumerate(["UR275", "UR269", "UR268", "UR274B", "UR274A", "UR267A", "UR267B"])}
+    Y = {"parts": 70, "ledgers": 205, "copies": 340}
+    nodes = [  # id, x, row, role key, deduction, place, product key, sector C
+        ("UR278", X["UR275"], "parts", "nine parts", "", "A 20N · UE 16", "peanut", False),
+        ("UR270", X["UR274B"], "parts", "nine parts", "", "A 20N · UE 13", "", False),
+        ("UR275", X["UR275"], "ledgers", "ledger", "− 47", "A 20N · UE 19", "peanut", False),
+        ("UR269", X["UR269"], "ledgers", "rounds of five", "− 47·46·46·44·25", "A 20N · UE 11", "peanut", False),
+        ("UR268", X["UR268"], "ledgers", "ledger", "− 208", "A 20N · UE 18", "peanut", False),
+        ("UR274B", X["UR274B"], "ledgers", "ledger", "− 10, 17", "A 20N · UE 15", "", False),
+        ("UR274A", X["UR274A"], "ledgers", "ledger", "− 30", "A 20N · UE 15", "", False),
+        ("UR267A", X["UR267A"], "ledgers", "ledger", "− 15", "A 24-F · UE 16", "chili", False),
+        ("UR267B", X["UR267B"], "ledgers", "ledger", "− 10", "A 24-F · UE 16", "chili", False),
+        ("UR266", X["UR275"], "copies", "copy", "− 47", "A 20N · UE 12", "peanut", False),
+        ("UR273B", X["UR274B"], "copies", "totals only", "", "A 20N · UE 14", "", False),
+        ("UR273A", X["UR274A"], "copies", "totals only", "", "A 20N · UE 14", "", False),
+        ("UR255", X["UR267A"], "copies", "copy", "− 15", "C 19K · UE 2", "chili", True),
+        ("UR256", X["UR267B"], "copies", "copy", "− 10", "C 19K · UE 2", "chili", True),
+    ]
+    pos = {n[0]: (n[1], Y[n[2]]) for n in nodes}
+    edges = [("UR278", "UR275", "totals"), ("UR278", "UR266", ""), ("UR270", "UR274B", "totals"), ("UR275", "UR266", "copy"),
+             ("UR274B", "UR273B", "totals"), ("UR274A", "UR273A", "totals"), ("UR267A", "UR255", "copy"),
+             ("UR267B", "UR256", "copy"), ("UR275", "UR269", "place 1"), ("UR269", "UR268", "208 = sum of the five deductions")]
+    labels = {"Parts", "Ledgers", "Copies and totals", "The archive on three levels",
+              "Outlined in red: stored in sector C (unit 19K); all others in sector A. Numbers after − are the fixed deductions; arrows point from the details to the totals and from a ledger to its copy."}
+    out = [f'<svg viewBox="0 0 {W} {H}" class="dg" role="img" aria-label="The archive on three levels">',
+           '<defs><marker id="dga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+           '<path d="M0,0 L10,5 L0,10 z" class="dg-arrow"/></marker></defs>']
+    for key, y in (("Parts", "parts"), ("Ledgers", "ledgers"), ("Copies and totals", "copies")):
+        out.append(f'<text x="8" y="{Y[y] + 5}" class="dg-row">{key}</text>')
+    for a, b, lab in edges:
+        (x1, y1), (x2, y2) = pos[a], pos[b]
+        if y1 == y2:      # same row: from right edge to left edge
+            sx, sy, ex, ey = x1 + bw / 2, y1, x2 - bw / 2, y2
+        else:
+            sx, sy, ex, ey = x1, y1 + bh / 2, x2, y2 - bh / 2
+            if a == "UR278" and b == "UR266":   # long arrow past UR275, on its left
+                sx, ex = x1 - bw / 2 + 6, x2 - bw / 2 + 6
+                out.append(f'<path d="M{sx},{sy} C{sx - 40},{sy + 80} {ex - 40},{ey - 80} {ex},{ey}" class="dg-edge" marker-end="url(#dga)"/>')
+                continue
+        out.append(f'<line x1="{sx}" y1="{sy}" x2="{ex}" y2="{ey}" class="dg-edge" marker-end="url(#dga)"/>')
+        if lab:
+            labels.add(lab)
+            if y1 == y2:      # under the boxes, below the place labels
+                out.append(f'<text x="{(sx + ex) / 2}" y="{sy + bh / 2 + 28}" class="dg-elab" text-anchor="middle">{lab}</text>')
+            else:
+                out.append(f'<text x="{sx + 6}" y="{(sy + ey) / 2 + 4}" class="dg-elab">{lab}</text>')
+    for k, x, row, role, ded, place, prod, secC in nodes:
+        y = Y[row]
+        out.append(f'<rect x="{x - bw / 2}" y="{y - bh / 2}" width="{bw}" height="{bh}" rx="7" class="dg-box{" dg-c" if secC else ""}"/>')
+        out.append(f'<text x="{x}" y="{y - 14}" class="dg-id" text-anchor="middle">{k}</text>')
+        out.append(f'<text x="{x}" y="{y + 3}" class="dg-role" text-anchor="middle">{role}</text>')
+        labels.add(role)
+        if ded:
+            out.append(f'<text x="{x}" y="{y + 19}" class="dg-ded" text-anchor="middle">{ded}</text>')
+        out.append(f'<text x="{x}" y="{y + bh / 2 + 13}" class="dg-place" text-anchor="middle">{place}</text>')
+        if prod:
+            labels.add(prod)
+            out.append(f'<text x="{x - bw / 2 + 2}" y="{y - bh / 2 - 4}" class="dg-prod">{prod}</text>')
+    out.append("</svg>")
+    return {"kind": "svg", "title": "The archive on three levels", "svg": "".join(out), "labels": sorted(labels),
+            "note": "Outlined in red: stored in sector C (unit 19K); all others in sector A. Numbers after − are the fixed deductions; arrows point from the details to the totals and from a ledger to its copy."}
+
+
 def build_compare(pend, kids):
     val = {k: [int(r["value"]) for r in rs] for k, rs in pend.items()}
     grp = {k: [[int(r["value"]) for r in g] for _, g in itertools.groupby(rs, key=lambda r: r["group"])] for k, rs in pend.items()}
@@ -107,6 +174,7 @@ def build_compare(pend, kids):
         pass
     shared = [1200, 1249, 1332, 1575, 2142, 2300]
     find = lambda k, v: next((g for g in grp[k] if v in g), [])
+    C["inkawasi_archive"].append(inkawasi_diagram())
     roles = list(csv.DictReader(open(ROOT / "atlas/curated/inkawasi_roles.csv")))
     C["inkawasi_archive"].append({"kind": "table", "title": "The Inkawasi khipus by place",
                                   "head": ["Khipu", "Place", "Product", "Role", "Deduction", "Linked to"],

@@ -459,7 +459,7 @@
     "title": "Inkawasi: cómo llevaba sus cuentas el depósito",
     "summary": "Los 52 khipus del depósito inca de Inkawasi (valle de Cañete) se leen como un solo sistema contable en tres niveles. Unas tablas dividen cada entrega en nueve partes (UR278, UR270); los totales de sus grupos son las entregas brutas anotadas, en el mismo orden, en los libros (UR275 y su copia UR266; UR274B). Cada libro registra bruto, neto y una deducción fija propia: 15 y 10 en los dos libros de ají, 47 en el libro de maní UR275, 47, 46, 46, 44 y 25 según el lugar en UR269, 208 en UR268. Las copias conservan la deducción de su libro y se guardaban en otro lugar: los libros de ají en el sector A, sus copias en el sector C. Los registros solo de totales están junto a sus libros completos (capas 14 y 15 de la unidad 20N). Ningún khipu conservado contiene los totales de los demás. La deducción fija fue descrita por Urton y Chu (2015, 2019); las tablas de nueve partes y la disposición del archivo en conjunto son, hasta donde sabemos, nuevas.",
     "evidence": [
-     "Los totales de los grupos de nueve cuerdas de UR278 son las entregas brutas de UR266 en orden: 10 iguales y 3 a un nudo en sus primeros 18 grupos; los de UR270, cinco entregas consecutivas de UR274B (grupos 17, 20–23) y una guardada solo en UR273B. Frente a valores desplazados en 1–10: 11 de 31 y 9 de 18 totales de grupo aparecen en otro lugar del archivo, frente a 3,0 y 3,1 (como máximo 6).",
+     "Alineados en orden con las entregas brutas de los libros, los totales de los grupos de nueve cuerdas de UR278 dan 10 iguales y 4 a un nudo en UR266 (7 y 4 en UR275), los de UR270 4 iguales y 1 a un nudo en UR274B; con los valores de los libros desplazados en 1–10 la misma alineación encuentra como máximo 2. Una búsqueda de tales totales ordenados en cada par de khipus de Inkawasi encuentra solo estos y los atados conocidos solo de totales.",
      "Bruto = neto + deducción en 15 de 25 grupos de tres en UR267A (deducción 15), 12 de 14 en UR267B (10) y 7 de 9 en UR275 (47); con los valores barajados dentro de cada khipu se esperan 0,3 o menos. Cada copia conserva la deducción de su libro: UR255 15, UR256 10, UR266 47.",
      "Los valores grandes de UR257 (hasta 98 718) no coinciden con totales de otros khipus de Inkawasi más que valores desplazados (3 de 10 frente a 2,7)."
     ],
@@ -784,7 +784,19 @@
    "group totals = gross deliveries of UR274B": "totales de grupo = entregas brutas de UR274B",
    "copied on UR266; split into nine parts on UR278; its deliveries are place 1 of UR269": "copiado en UR266; dividido en nueve partes en UR278; sus entregas son el lugar 1 de UR269",
    "totals kept on UR273B; split into nine parts on UR270": "totales guardados en UR273B; dividido en nueve partes en UR270",
-   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (con UR265)"
+   "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (con UR265)",
+   "208 = sum of the five deductions": "208 = suma de las cinco deducciones",
+   "Copies and totals": "Copias y totales",
+   "Ledgers": "Libros",
+   "Outlined in red: stored in sector C (unit 19K); all others in sector A. Numbers after − are the fixed deductions; arrows point from the details to the totals and from a ledger to its copy.": "Con borde rojo: guardados en el sector C (unidad 19K); todos los demás en el sector A. Los números tras − son las deducciones fijas; las flechas van del detalle a los totales y de un libro a su copia.",
+   "Parts": "Partes",
+   "The archive on three levels": "El archivo en tres niveles",
+   "copy": "copia",
+   "ledger": "libro",
+   "nine parts": "nueve partes",
+   "place 1": "lugar 1",
+   "rounds of five": "rondas de cinco",
+   "totals": "totales"
   }
  }
 }

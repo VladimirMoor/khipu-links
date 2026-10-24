@@ -31,6 +31,7 @@ def compare_strings(D):
         for c in f.get("compare", []):
             out |= {c[k] for k in ("title", "tally", "note", "text") if c.get(k)}
             out |= {h for h in c.get("head") or [] if h}
+            out |= set(c.get("labels") or [])
             if c.get("kind") == "table":
                 out |= {x for r in c["rows"] for x in r if isinstance(x, str) and re.search(r"[A-Za-z]{3}", x)}
     return sorted(out)
