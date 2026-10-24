@@ -809,7 +809,7 @@ function showKhipu(id){
    <h3>${tr('Model')}</h3>
    <div class="v3dbar"><button type="button" id="m-hang" aria-pressed="true">${tr('Hanging')}</button><button type="button" id="m-flat" aria-pressed="false">${tr('Laid flat')}</button><button type="button" id="m-reset">${tr('Reset view')}</button><span class="qual muted" id="m-qual"></span></div>
    <div class="v3d" id="v3d"><div class="msg">${tr('Loading the 3D model…')}</div></div>
-   <p class="note">${tr("Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself: single knots as overhand knots, long knots as tight coils with one turn per unit, figure-eight knots as figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.")}</p>
+   <p class="note">${tr("Drag to rotate, scroll or pinch to zoom, right-drag to pan; hover a cord for its value and knots. Cords to scale in centimetres, drawn as two-ply twisted cord; the knots are tied in the cord itself and pulled tight, as on the objects: single knots are overhand knots, long knots wrap round the cord with one turn per unit, figure-eight knots are figure-eights. Each pendant is looped once round the primary cord, recto in front and verso behind; subsidiary cords are looped round their pendant. Colours approximate the recorded colour codes; two-colour cords show both colours in the twist.")}</p>
    <details><summary>${tr('Flat schematic')}</summary><div class="schem">${schematic(k)}</div><p class="note">${tr('Pendants drawn in recorded order and grouping; dots mark knots by decimal place, units at the bottom.')}</p></details>
    ${es.length?`<h3>${tr('Links')}</h3><ul class="clean">${es.map(e=>`<li><b>${esc(etl(e.type))}</b>: <a href="#khipu-${e.from}">${esc(nameTxt(K[e.from]))}</a> → <a href="#khipu-${e.to}">${esc(nameTxt(K[e.to]))}</a> — ${esc(e.note)}</li>`).join('')}</ul>`:''}
    ${dup.length?`<h3>${tr('Same object')}</h3><p>${dup.map(d=>`${esc(d.a)} = ${esc(d.b)}: ${esc(d.note)}`).join('; ')}.</p>`:''}
@@ -828,9 +828,9 @@ document.addEventListener('click',ev=>{const tr=ev.target.closest('#rows tr'); i
 
 
 /* ---------- 3D model (three.js) ---------- */
-let V=null, KD=null, libs=null;
+let V=null, KD=null, libs=null, KN=null;
 function loadScript(src){return new Promise((res,rej)=>{const e=document.createElement('script');e.src=src;e.onload=res;e.onerror=rej;document.head.appendChild(e)})}
-function loadLibs(){ if(!libs) libs=loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js').then(()=>loadScript('https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js')); return libs }
+function loadLibs(){ if(!libs) libs=loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js').then(()=>loadScript('https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js')).then(()=>fetch('./knots.json')).then(r=>r.json()).then(j=>{KN=j}); return libs }
 async function loadModel(id){ if(!KD) KD=await fetch('./kd/index.json').then(r=>r.json()); const f=KD[id]; if(!f) return null; const b=await fetch('./kd/'+f).then(r=>r.json()); return b[id] }
 function disposeV(){ if(!V) return; cancelAnimationFrame(V.raf); V.ro&&V.ro.disconnect(); V.scene.traverse(o=>{o.geometry&&o.geometry.dispose(); if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{m.map&&m.map.dispose();m.dispose()})}}); V.renderer.dispose(); V=null }
 const QUAL={okr:'Knots as recorded (OKR)',sheet:'Knots from our transcription of the record sheets',recon:'Reconstructed from values (no knot positions recorded)'};
@@ -885,19 +885,19 @@ async function view3d(k){
     g.setAttribute('uv',new T.BufferAttribute(uv,2)); g.setIndex(idx); g.computeBoundingSphere(); return g }
   const ropeTube=(curve,segs,r,radial)=>{ const g=new T.TubeGeometry(curve,segs,r,radial,false), L=curve.getLength(), uv=g.attributes.uv;
     for(let q=0;q<uv.count;q++) uv.setX(q,uv.getX(q)*L/PLY); uv.needsUpdate=true; return g };
-  // Knots are tied in the cord itself: where the record has a knot, the cord's centre line runs through an open overhand
-  // knot (single), a tight coil of n turns (long) or an open figure-eight, and then goes on; the tube follows that line,
-  // so a knot has the cord's own thickness, twist and colour. Local paths: x, y across the cord, z along it (from 0 to len).
+  // Knots are tied in the cord itself: where the record has a knot, the cord's centre line runs through the knot's shape
+  // and goes on, and the tube follows that line, so a knot has the cord's own thickness, twist and colour. The shapes
+  // (knots.json, made with khipu/knots/) are knots laid out the way they are tied and pulled tight by a small simulation
+  // in which the cord cannot pass through itself, each checked with the knot determinant: S single (overhand),
+  // E figure-eight, L2 to L9 long knots. Points in units of the cord radius: x toward the viewer, z down the cord from
+  // where it enters the knot (0) to where it leaves (the last point, on the axis).
   const TAU=Math.PI*2;
-  function knotLocal(type,turns,r,K){
-    // A knot pulled tight on a cord is compact: the cord wraps round itself and passes through. A single knot is one such
-    // wrap, a long knot 2–9 wraps side by side, a figure-eight one wrap each way with a crossing between them.
-    const out=[[0,0,0]], R=1.05*r, pitch=2.1*r, per=Math.max(10,Math.round(K/4));
-    const wraps=type==='S'?1:type==='E'?2:Math.min(9,Math.max(2,turns||3));
-    for(let q=0;q<=wraps*per;q++){ const u=q/per, w=Math.floor(Math.min(u,wraps-1e-9));
-      const dir=(type==='E'&&w===1)?-1:1, t=dir*(u-w)*TAU+(type==='E'&&w===1?0:w*TAU);
-      out.push([R*Math.cos(t), R*Math.sin(t), r+u*pitch]) }   // wraps centred on the cord's axis
-    const L=wraps*pitch+2*r; out.push([0,0,L]); return [out,L] }
+  function knotLocal(type,turns,r,big){
+    const f=KN[type==='E'?'E':type==='L'&&turns>=2?'L'+Math.min(9,turns):'S'], n=f.length/3, step=big?3:1, out=[];
+    for(let q=0;q<n;q+=step) out.push([f[3*q]*r,f[3*q+1]*r,f[3*q+2]*r]);
+    if((n-1)%step) out.push([0,0,f[3*n-1]*r]);
+    return [out,f[3*n-1]*r] }
+  const kLen=(type,r)=>KN[type][KN[type].length-1]*r;
   function rnd(i){const x=Math.sin(i*12.9898+78.233)*43758.5453; return x-Math.floor(x)}
   function frame(tg){ const T0=tg.clone().normalize(); const ref=Math.abs(T0.y)<0.9?new T.Vector3(0,1,0):new T.Vector3(1,0,0);
     const N=new T.Vector3().crossVectors(T0,ref).normalize(), B=new T.Vector3().crossVectors(T0,N).normalize(); return [T0,N,B] }
@@ -906,7 +906,7 @@ async function view3d(k){
     const G=new T.Group(); V.group=G; V.picks=[];
     { const ps=M.c.map((c,i)=>[c,i]).filter(([c])=>c[1]<0); let last=-1e9; ps.forEach(([c])=>{ if(c[3]<last+0.45) c[3]=last+0.45; last=c[3] }); if(ps.length) M.pl=Math.max(M.pl,last+1.5) }
     const hang=V.mode==='hang', PL=Math.max(M.pl,1);
-    const big=M.c.length>600, RAD=big?5:8, STEP=big?4:1.5, KS=big?16:56, NPT=big?4:6;   // less geometry on very large khipus
+    const big=M.c.length>600, RAD=big?5:8, STEP=big?4:1.5, NPT=big?4:6;   // less geometry on very large khipus
     const pc=new T.CatmullRomCurve3([new T.Vector3(-1,0,0),new T.Vector3(PL*.33,hang?-0.4:0,0),new T.Vector3(PL*.66,hang?-0.4:0,0),new T.Vector3(PL+1,0,0)]);
     const pcol=colOf(M.pc)==='#9a8f84'?css('--cord'):colOf(M.pc), PR=0.22;
     G.add(new T.Mesh(ropeTube(pc,Math.max(40,Math.ceil(PL*2)),PR,10),ropeMat(pcol,new T.Color(pcol).multiplyScalar(0.85).getStyle())));
@@ -931,19 +931,19 @@ async function view3d(k){
       // knot events along the cord: [start (cm), type, turns]
       const ev=[];
       (kn||[]).forEach(([kp,type,cnt,turns])=>{
-        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++) ev.push([kp+q*(4.1*r+0.3),'S',0]) }
+        if(type==='S'){ for(let q=0;q<Math.max(1,cnt);q++) ev.push([kp+q*(kLen('S',r)+0.25),'S',0]) }
         else if(type==='E'||type==='EE'||type==='TF') ev.push([kp,'E',0]);
         else ev.push([kp,'L',type==='L'?turns:3]) });
-      if(term==='K') ev.push([L0-4.1*r-0.3,'S',0]);
+      if(term==='K') ev.push([L0-kLen('S',r)-0.3,'S',0]);
       ev.sort((a,b)=>a[0]-b[0]);
       const path=lead.slice(0,-1), at=d=>{const u=Math.min(1,Math.max(0,d/L0)); return [cur0.getPointAt(u),cur0.getTangentAt(u)]};
       let sPos=0, e=0, kk=0;
       while(sPos<L0){
-        if(e<ev.length && ev[e][0]<=sPos+STEP){ const [loc,Lk]=knotLocal(ev[e][1],ev[e][2],r,KS);
+        if(e<ev.length && ev[e][0]<=sPos+STEP){ const [loc,Lk]=knotLocal(ev[e][1],ev[e][2],r,big);
           const s0=Math.min(Math.max(sPos,ev[e][0]),L0-Lk-0.1); e++;
           if(s0<sPos-1e-6) continue;                                   // no room left on the cord for this knot
           const [P,tg]=at(s0); const [T0,N,B]=frame(tg);
-          const spin=rnd(i*31+(kk++)*7)*TAU, cs=Math.cos(spin), sn=Math.sin(spin);
+          const spin=(rnd(i*31+(kk++)*7)-0.5)*0.8, cs=Math.cos(spin), sn=Math.sin(spin);   // front of the knot toward the viewer, give or take
           loc.forEach(([x,y,z])=>{ const X=x*cs-y*sn, Y=x*sn+y*cs; path.push(P.clone().addScaledVector(N,X).addScaledVector(B,Y).addScaledVector(T0,z)) });
           sPos=s0+Lk+0.05; }
         else { path.push(at(sPos)[0]); sPos+=STEP }
