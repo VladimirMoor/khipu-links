@@ -36,7 +36,7 @@ function ropeLine(Pts,r,radial){ const n=Pts.length, pos=new Float32Array(n*(rad
       nor[o*3]=tmpv.x; nor[o*3+1]=tmpv.y; nor[o*3+2]=tmpv.z;
       pos[o*3]=Pts[k].x+r*tmpv.x; pos[o*3+1]=Pts[k].y+r*tmpv.y; pos[o*3+2]=Pts[k].z+r*tmpv.z;
       uv[o*2]=len/PARAM.PLY; uv[o*2+1]=j/radial }
-    if(k>0) for(let j=0;j<radial;j++){ const a0=(k-1)*(radial+1)+j, b0=k*(radial+1)+j; idx.push(a0,b0,a0+1, b0,b0+1,a0+1) } }
+    if(k>0) for(let j=0;j<radial;j++){ const a0=(k-1)*(radial+1)+j, b0=k*(radial+1)+j; idx.push(a0,a0+1,b0, b0,a0+1,b0+1) } }   // counter-clockwise seen from outside
   const g=new T.BufferGeometry(); g.setAttribute('position',new T.BufferAttribute(pos,3)); g.setAttribute('normal',new T.BufferAttribute(nor,3));
   g.setAttribute('uv',new T.BufferAttribute(uv,2)); g.setIndex(idx); g.computeBoundingSphere(); return g }
 
