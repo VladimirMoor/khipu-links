@@ -2464,6 +2464,29 @@ def h181b():
         print(f"H181b: {a}~{b}: cords {len(xs)}; prepared-length Spearman {r:.2f}; circular shifts mean {statistics.mean(sims):.2f}, p {p_:.3f}")
 
 
+def h183():
+    """Plans and counts: khipus split into 'planned' ones (nearly all values ≥ 10 round) and 'counted' ones; the per-khipu
+    share of round values is bimodal, beyond a binomial spread around the corpus share."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rows = []
+    for k, cs in K.items():
+        v = [r["value"] for r in cs if r["value"] >= 10]
+        if len(v) >= 15:
+            rows.append((sum(1 for x in v if x % 10 == 0) / len(v), len(v), k))
+    p_ = sum(s_ * n for s_, n, _ in rows) / sum(n for _, n, _ in rows)
+    h = Counter(min(9, int(s_ * 10)) for s_, _, _ in rows)
+    sim = Counter()
+    for _ in range(20):
+        for _, n, _ in rows:
+            x = sum(R.random() < p_ for _ in range(n)) / n
+            sim[min(9, int(x * 10))] += 1 / 20
+    print(f"H183: khipus {len(rows)}; corpus share of round values {p_:.2f}")
+    print("   observed by tenths: " + " ".join(f"{i / 10:.1f}:{h[i]}" for i in range(10)))
+    print("   binomial expectation: " + " ".join(f"{i / 10:.1f}:{sim[i]:.0f}" for i in range(10)))
+    print("   ≥ 0.9 round: " + ", ".join(f"{k} ({site.get(k)}, {n})" for s_, n, k in rows if s_ >= 0.9))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
