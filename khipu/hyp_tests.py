@@ -2571,6 +2571,24 @@ def h189():
     print("H189: " + "; ".join(f"{k} {v}" for k, v in res.items()))
 
 
+def h195():
+    """Ply direction as a sign: within khipus that mix S- and Z-plied pendants, the Z-plied cords (the minority) carry
+    different numbers, or are zero more often."""
+    K = hyp.okr()
+    data = [[(r["twist"], r["value"]) for r in cs if r["value"] > 0 and r["twist"] in ("S", "Z")] for cs in K.values()]
+    n, real, m, p_hi, p_lo = within_compare(data, "Z", "S")
+    print(f"H195: khipus {n}; Z-plied median larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
+    zz = Counter()
+    for cs in K.values():
+        z = [r for r in cs if r["twist"] == "Z"]
+        s_ = [r for r in cs if r["twist"] == "S"]
+        if len(z) >= 3 and len(s_) >= 3:
+            a = sum(1 for r in z if not r["clusters"]) / len(z)
+            b = sum(1 for r in s_ if not r["clusters"]) / len(s_)
+            zz["Z emptier" if a > b else "S emptier" if b > a else "equal"] += 1
+    print("   empty cords: " + ", ".join(f"{k} {v}" for k, v in zz.items()))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
