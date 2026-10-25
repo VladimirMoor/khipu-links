@@ -2323,6 +2323,31 @@ def h160():
               f"mean |Δ turns| (same length) {w[2]:.2f} vs {r_[2]:.2f}")
 
 
+def h168():
+    """Totals overshoot: where no cord equals a group's sum exactly but one equals the sum ± d (d = 1…5, cords outside the
+    group, sums ≥ 50 and ≥ 3 non-zero parts), the near total is above the sum more often than below. The falling value
+    distribution alone favours 'below'."""
+    K = hyp.okr()
+    up, dn = Counter(), Counter()
+    for cs in K.values():
+        gs = hyp.groups(cs)
+        where = defaultdict(set)
+        for gi, g in enumerate(gs):
+            for r in g:
+                where[r["value"]].add(gi)
+        for gi, g in enumerate(gs):
+            v = [r["value"] for r in g]
+            S = sum(v)
+            if S < 50 or sum(1 for x in v if x) < 3:
+                continue
+            has = lambda x: bool(where.get(x, set()) - {gi})
+            if has(S):
+                continue
+            for d in range(1, 6):
+                up[d] += has(S + d); dn[d] += has(S - d)
+    print("H168: near totals above/below the group sum: " + ", ".join(f"±{d}: {up[d]}/{dn[d]}" for d in range(1, 6)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
