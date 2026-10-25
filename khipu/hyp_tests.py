@@ -2039,6 +2039,23 @@ def h139():
           f"positive in {sum(r > 0 for r in rs)}, negative in {sum(r < 0 for r in rs)}")
 
 
+def h140():
+    """Simple fractions in subsidiaries: the subsidiary sum is exactly 1/q of the pendant (q = 2…10) more often than 1/q of
+    the pendant ± 1 (same q), pendants ≥ 10."""
+    K = hyp.okr()
+    ex, near = Counter(), Counter()
+    for cs in K.values():
+        for r in cs:
+            s_ = sum(x["value"] for x in r["subs"])
+            p_ = r["value"]
+            if p_ < 10 or s_ < 1:
+                continue
+            for q in range(2, 11):
+                ex[q] += s_ * q == p_
+                near[q] += (s_ * q == p_ + 1) + (s_ * q == p_ - 1)
+    print("H140: q: exact vs (±1)/2 — " + ", ".join(f"1/{q}: {ex[q]} vs {near[q] / 2:.1f}" for q in range(2, 11)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
