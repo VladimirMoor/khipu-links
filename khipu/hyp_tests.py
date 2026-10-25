@@ -3159,6 +3159,84 @@ def h293():
         print(f"H293: column sums ({len(C)}) multiples of {base}: {f(0)}; shifted mean {statistics.mean(sh):.1f}, max {max(sh)}")
 
 
+def h326():
+    """Colour as a category with its own magnitude: per khipu, R² of log value on cord colour (colours with ≥ 3 valued
+    cords) against colours shuffled within the khipu; count khipus with p < 0.01."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    def r2(p):
+        ys = [y for _, y in p]
+        m = statistics.mean(ys)
+        tot = sum((y - m) ** 2 for y in ys) or 1
+        by = defaultdict(list)
+        for c_, y in p:
+            by[c_].append(y)
+        return sum(len(v) * (statistics.mean(v) - m) ** 2 for v in by.values()) / tot
+    n = sig = 0
+    top = []
+    for k, cs in K.items():
+        xs = [(r["colour"][0], math.log(r["value"])) for r in cs if r["value"] > 0 and r["colour"][0] and not r["colour"][1]]
+        cc = Counter(c_ for c_, _ in xs)
+        xs = [x for x in xs if cc[x[0]] >= 3]
+        if len(xs) < 20 or len({c_ for c_, _ in xs}) < 2:
+            continue
+        real = r2(xs)
+        labs = [c_ for c_, _ in xs]
+        ys = [y for _, y in xs]
+        sims = []
+        for _ in range(200):
+            R.shuffle(labs)
+            sims.append(r2(list(zip(labs, ys))))
+        p_ = (1 + sum(x >= real for x in sims)) / 201
+        n += 1
+        sig += p_ < 0.01
+        if p_ < 0.01:
+            top.append((real, k))
+    print(f"H326: khipus {n}; colour explains values beyond chance (p < 0.01) in {sig} (expected {0.01 * n:.1f})")
+    print("   strongest: " + ", ".join(f"{k} ({site.get(k)}) {r:.2f}" for r, k in sorted(top, reverse=True)[:15]))
+
+
+def h326b():
+    """H326 within groups: log values centred on their group mean, colours shuffled only inside groups (so group scale
+    cannot make colour look informative)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    def r2(p):
+        tot = sum(y * y for _, y in p) or 1
+        by = defaultdict(list)
+        for c_, y in p:
+            by[c_].append(y)
+        return sum(len(v) * statistics.mean(v) ** 2 for v in by.values()) / tot
+    n = sig = 0
+    top = []
+    for k, cs in K.items():
+        rows = []
+        for g in hyp.groups(cs):
+            xs = [(r["colour"][0], math.log(r["value"])) for r in g if r["value"] > 0 and r["colour"][0] and not r["colour"][1]]
+            if len(xs) >= 3 and len({c_ for c_, _ in xs}) >= 2:
+                m = statistics.mean(y for _, y in xs)
+                rows.append([(c_, y - m) for c_, y in xs])
+        flat = [x for g in rows for x in g]
+        if len(flat) < 20:
+            continue
+        real = r2(flat)
+        sims = []
+        for _ in range(200):
+            sh = []
+            for g in rows:
+                cl = [c_ for c_, _ in g]
+                R.shuffle(cl)
+                sh += list(zip(cl, [y for _, y in g]))
+            sims.append(r2(sh))
+        p_ = (1 + sum(x >= real for x in sims)) / 201
+        n += 1
+        sig += p_ < 0.01
+        if p_ < 0.01:
+            top.append((real, k))
+    print(f"H326b: khipus {n}; colour explains values within groups (p < 0.01) in {sig} (expected {0.01 * n:.1f})")
+    print("   strongest: " + ", ".join(f"{k} ({site.get(k)}) {r:.2f}" for r, k in sorted(top, reverse=True)[:15]))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
