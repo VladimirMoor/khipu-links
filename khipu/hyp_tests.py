@@ -2796,6 +2796,53 @@ def h212():
     print(f"H212: KFG-only khipus {len(new)}; groups {n}; first largest {first}, last largest {last}, expected {exp:.0f}")
 
 
+def h213():
+    """Replication on KFG-only khipus (not in OKR): 8–9 vs 1–2 endings (H149/150), units digit 9 by places (H148), length of
+    neighbours within vs across groups (H177, raw length), subsidiaries scaling with their pendant (H139)."""
+    import csv
+    O = hyp.okr()
+    _, _, dup = hyp.atlas()
+    rows = defaultdict(list)
+    subs = defaultdict(int)
+    for r in csv.DictReader(open(hyp.ROOT / "extracted/plus2026_cords.csv")):
+        k = r["inv_num"]
+        if k in O or any((k, o) in dup for o in O):
+            continue
+        if r["parent_id"]:
+            subs[r["parent_id"]] += int(r["value"] or 0)
+        else:
+            rows[k].append((int(r["order"]), int(r["value"] or 0), r["group"], float(r["length"] or 0), r["termination"], r["cord_id"]))
+    V = [v for cs in rows.values() for _, v, *_ in cs]
+    b = sum(1 for v in V if 20 <= v <= 999 and v % 10 in (8, 9))
+    a = sum(1 for v in V if 20 <= v <= 999 and v % 10 in (1, 2))
+    print(f"H213: KFG-only khipus {len(rows)}; endings 8–9 {b}, 1–2 {a} (ratio {b / max(1, a):.2f})")
+    for n in (2, 3, 4):
+        c = Counter(v % 10 for v in V if len(str(v)) == n and v % 10)
+        base = sum(c[d] for d in range(1, 7)) / 6 or 1
+        print(f"   {n} places: 7 {c[7] / base:.2f}, 8 {c[8] / base:.2f}, 9 {c[9] / base:.2f} (n {sum(c.values())})")
+    win, acr, rnd = [], [], []
+    for cs in rows.values():
+        cs.sort()
+        L = [(g, l) for _, _, g, l, t, _ in cs if l > 0 and t != "B"]
+        if len(L) < 20:
+            continue
+        m = statistics.median(l for _, l in L)
+        for (g1, l1), (g2, l2) in zip(L, L[1:]):
+            (win if g1 == g2 else acr).append(abs(l1 - l2) / m)
+        for _ in range(len(L)):
+            (x, y) = R.sample(L, 2)
+            rnd.append(abs(x[1] - y[1]) / m)
+    if win:
+        print(f"   lengths: within-group neighbours {statistics.median(win):.3f}, across boundary {statistics.median(acr):.3f}, random {statistics.median(rnd):.3f}")
+    rs = []
+    for cs in rows.values():
+        xs = [(v, subs[cid]) for _, v, _, _, _, cid in cs if v >= 1 and subs.get(cid, 0) >= 1]
+        if len(xs) >= 8:
+            rs.append(spearman([x for x, _ in xs], [y for _, y in xs]))
+    if rs:
+        print(f"   subsidiaries: khipus {len(rs)}, mean Spearman (pendant, subsidiary sum) {statistics.mean(rs):.3f}, positive {sum(r > 0 for r in rs)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
