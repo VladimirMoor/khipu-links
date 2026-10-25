@@ -378,7 +378,8 @@
      "Lugar 1 en UR275: 5 de 10 registros (0,5 esperados); lugares 2–4: 0, 1, 1. Los cinco con un mismo desfase; 5000 permutaciones del orden de los bloques llegan como máximo a 4 (p ≈ 0,0002).",
      "UR269 conserva la aritmética donde UR275 falla: 1827 = 1780 + 47 en UR269, 1825 en UR275.",
      "Ningún otro khipu de Inkawasi muestra dependencia del lugar (todos p > 0,8).",
-     "UR268 frente a UR275, filas de cuatro cuerdas en orden: Spearman 0,83 (16 filas; razón 2,8–5,9, mediana 4,4 ≈ 208/47); con otros desfases ≤ 0,39; las filas de tres cuerdas no lo siguen (−0,13). Tres filas de UR268 quedan a 3–12 de los totales de ronda de UR269 (9332 / 9335, 10 385 / 10 379, 8527 / 8515)."
+     "UR268 frente a UR275, filas de cuatro cuerdas en orden: Spearman 0,83 (16 filas; razón 2,8–5,9, mediana 4,4 ≈ 208/47); con otros desfases ≤ 0,39; las filas de tres cuerdas no lo siguen (−0,13). Tres filas de UR268 quedan a 3–12 de los totales de ronda de UR269 (9332 / 9335, 10 385 / 10 379, 8527 / 8515).",
+     "Los totales de ronda de UR269 reaparecen en el bloque final de ternas [bruto, 208, neto] de UR268: de 11 rondas completas, 4 quedan a 3–12 de un valor de UR268 (1,5 esperados con sumas desplazadas, máximo 4 de 24 desplazamientos) y otra exactamente como bruto menos 208: ronda 3 → grupo 20 de UR268 (10 385 / 10 379), ronda 1 → grupo 28 (9332 / 9335), rondas 8, 9 y 10 → grupos 29, 31 y 33 en orden (8527 / 8515; neto 8345 = 8553 − 208; neto 7475 / 7478)."
     ],
     "levels": {
      "numbers": "La deducción es igual al valor de su lugar en 33 de 43 registros (17 al barajar los registros dentro de los bloques; p ≈ 0,0005). Los registros del lugar 1 reaparecen en UR275 con un mismo desfase (5 coincidencias; como máximo 4 en 5000 permutaciones del orden de los bloques; p ≈ 0,0002). Ambos patrones se encontraron explorando los khipus de Inkawasi; una búsqueda en todo el corpus no encuentra en ningún otro lugar la deducción fijada por el lugar.",
