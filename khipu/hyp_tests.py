@@ -1740,6 +1740,86 @@ def h112():
           f"{sum(r > 0 for r in rs)}, negative in {sum(r < 0 for r in rs)}")
 
 
+def h116():
+    """The sum of all pendants of a khipu is a round number (a set amount) more often than the sum shifted ±1…±10."""
+    K = hyp.okr()
+    S = [sum(r["value"] for r in cs) for cs in K.values()]
+    S = [x for x in S if x >= 100]
+    for base in (10, 100):
+        f = lambda d: sum(1 for x in S if (x + d) % base == 0)
+        sh = [f(d) for d in range(-10, 11) if d]
+        print(f"H116: khipu sums ≥ 100 ({len(S)}) that are multiples of {base}: {f(0)}; shifted mean {statistics.mean(sh):.1f}, max {max(sh)}")
+
+
+def h118():
+    """Equal allotments: in khipus with ≥ 4 groups of the same size, group totals vary less than when the cords of those
+    groups are dealt out at random among them (CV of totals)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    real_lo, n, ex = 0, 0, []
+    for k, cs in K.items():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append([r["value"] for r in g])
+        for sz, gs in by.items():
+            if sz < 3 or len(gs) < 4:
+                continue
+            t = [sum(g) for g in gs]
+            if statistics.mean(t) < 20:
+                continue
+            cv = statistics.pstdev(t) / statistics.mean(t)
+            flat = [x for g in gs for x in g]
+            sims = []
+            for _ in range(300):
+                R.shuffle(flat)
+                tt = [sum(flat[i * sz:(i + 1) * sz]) for i in range(len(gs))]
+                sims.append(statistics.pstdev(tt) / statistics.mean(tt))
+            p_ = (1 + sum(x <= cv for x in sims)) / 301
+            n += 1
+            real_lo += p_ < 0.05
+            if p_ < 0.01:
+                ex.append((k, sz, len(gs), round(cv, 3), round(statistics.mean(sims), 3), t[:10]))
+    print(f"H118: sets {n}; group totals more even than random (p < 0.05) in {real_lo} (expected {0.05 * n:.1f})")
+    for e in ex[:20]:
+        print(f"   {e[0]} ({site.get(e[0])}) {e[2]} groups of {e[1]}: CV {e[3]} vs {e[4]}; totals {e[5]}")
+
+
+def h118b():
+    """H118 with the table kept: values permuted across groups within each slot (column), so column sizes stay; row totals
+    more even than that mean the rows were balanced (the columns compensate each other)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    lo, hi, n, ex = 0, 0, 0, []
+    for k, cs in K.items():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append([r["value"] for r in g])
+        for sz, gs in by.items():
+            if sz < 3 or len(gs) < 4:
+                continue
+            t = [sum(g) for g in gs]
+            if statistics.mean(t) < 20:
+                continue
+            cv = statistics.pstdev(t) / statistics.mean(t)
+            cols = [list(c) for c in zip(*gs)]
+            sims = []
+            for _ in range(300):
+                for c in cols:
+                    R.shuffle(c)
+                tt = [sum(row) for row in zip(*cols)]
+                sims.append(statistics.pstdev(tt) / statistics.mean(tt))
+            p_lo = (1 + sum(x <= cv for x in sims)) / 301
+            p_hi = (1 + sum(x >= cv for x in sims)) / 301
+            n += 1
+            lo += p_lo < 0.05
+            hi += p_hi < 0.05
+            if p_lo < 0.01:
+                ex.append((k, sz, len(gs), round(cv, 3), round(statistics.mean(sims), 3), t[:10]))
+    print(f"H118b: sets {n}; rows more even than column-wise shuffles (p < 0.05) in {lo}, less even in {hi} (expected {0.05 * n:.1f} each)")
+    for e in ex[:20]:
+        print(f"   {e[0]} ({site.get(e[0])}) {e[2]} groups of {e[1]}: CV {e[3]} vs {e[4]}; totals {e[5]}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
