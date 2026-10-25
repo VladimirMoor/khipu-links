@@ -2985,6 +2985,26 @@ def h234():
     print("   expected from group sizes: " + " ".join(f"{i / 10:.1f}:{sim[i]:.0f}" for i in range(10)))
 
 
+def h246():
+    """Measured from the top: the units cluster sits at a steadier distance from the main cord than from the cord's free end
+    (intact cords with ≥ 2 clusters; per-khipu sd of the two distances)."""
+    K = hyp.okr()
+    top_better = end_better = 0
+    rt, re_ = [], []
+    for cs in K.values():
+        a, b = [], []
+        for r in cs:
+            ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+            if len(ps) >= 2 and r["length"] > 0 and r["term"] != "B" and r["length"] > max(ps):
+                a.append(max(ps)); b.append(r["length"] - max(ps))
+        if len(a) >= 15:
+            sa, sb = statistics.pstdev(a), statistics.pstdev(b)
+            rt.append(sa); re_.append(sb)
+            top_better += sa < sb; end_better += sb < sa
+    print(f"H246: khipus {len(rt)}; units height steadier from the main cord in {top_better}, from the free end in {end_better}; "
+          f"median sd {statistics.median(rt):.2f} vs {statistics.median(re_):.2f} cm")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
