@@ -2949,6 +2949,19 @@ def h218():
     print("H218: Spearman (cord at a position, rest of its group) across groups — " + ", ".join(f"{k} {statistics.mean(v):.3f} ({len(v)})" for k, v in res.items()))
 
 
+def h230():
+    """Colonial dozens: multiples of 12 (and of 8, the real's pieces) are over-represented among non-round values 24–9999
+    against values shifted ±1…±3 (and ±12/±8, which keep divisibility patterns)."""
+    vals = all_values()
+    for m in (12, 8, 6):
+        def frac(d):
+            xs = [(v + d, c) for v, c in vals.items() if 24 <= v <= 9999 and v % 10]
+            tot = sum(c for _, c in xs)
+            return sum(c for v, c in xs if v % m == 0) / tot
+        print(f"H230: multiples of {m}: {frac(0):.4f}; shifted ±1…±3: " + ", ".join(f"{frac(d):.4f}" for d in (-3, -2, -1, 1, 2, 3))
+              + f"; ±{m}: {frac(-m):.4f}, {frac(m):.4f} (1/{m} = {1 / m:.4f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
