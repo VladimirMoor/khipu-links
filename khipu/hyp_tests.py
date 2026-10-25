@@ -2056,6 +2056,35 @@ def h140():
     print("H140: q: exact vs (±1)/2 — " + ", ".join(f"1/{q}: {ex[q]} vs {near[q] / 2:.1f}" for q in range(2, 11)))
 
 
+def h141():
+    """Counting, not arithmetic, avoids 9: cords that are sums of a group elsewhere in the khipu (computed totals) show no
+    deficit of units digits 7–9, while the summed parts (counts) do. Values ≥ 20 with non-zero units."""
+    K = hyp.okr()
+    tot, parts = Counter(), Counter()
+    for cs in K.values():
+        gs = hyp.groups(cs)
+        sums = {}
+        for gi, g in enumerate(gs):
+            v = [r["value"] for r in g]
+            if len(v) >= 2 and sum(1 for x in v if x) >= 2:
+                sums.setdefault(sum(v), []).append(gi)
+        gid = {id(r): gi for gi, g in enumerate(gs) for r in g}
+        used = set()
+        for r in cs:
+            v = r["value"]
+            if v >= 20 and v % 10 and v in sums and any(gi != gid[id(r)] for gi in sums[v]):
+                tot[v % 10] += 1
+                used |= {gi for gi in sums[v] if gi != gid[id(r)]}
+        for gi in used:
+            for r in gs[gi]:
+                if r["value"] >= 1 and r["value"] % 10:
+                    parts[r["value"] % 10] += 1
+    for name, c in (("computed totals", tot), ("their parts", parts)):
+        n = sum(c.values())
+        base = sum(c[d] for d in range(1, 7)) / 6
+        print(f"H141: {name}: n={n}; " + " ".join(f"{d}:{c[d] / base:.2f}" for d in range(1, 10)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
