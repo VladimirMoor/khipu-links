@@ -1665,6 +1665,81 @@ def h109():
               f"exact sum elsewhere {hit[e + ' exact'] / n:.3f}")
 
 
+def extra():
+    """Pendant id → (fibre, thickness, attachment position on the main cord in cm) from OKR."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    return {cid: ((f or "").strip(), float(t or 0), float(a) if a not in (None, "") else None)
+            for cid, f, t, a in c.execute("select CORD_ID, FIBER, THICKNESS, ATTACH_POS from cord where CORD_LEVEL = 1")}
+
+
+def within_compare(pairs_by_khipu, label_a, label_b, n_sims=500):
+    """pairs_by_khipu: list of lists of (label, value). Counts khipus where median of a > median of b; baseline shuffles labels."""
+    real, sims, n = 0, [0] * n_sims, 0
+    for xs in pairs_by_khipu:
+        a = [v for l, v in xs if l == label_a]
+        b = [v for l, v in xs if l == label_b]
+        if len(a) < 3 or len(b) < 3:
+            continue
+        n += 1
+        real += statistics.median(a) > statistics.median(b)
+        vals = [v for l, v in xs if l in (label_a, label_b)]
+        for i in range(n_sims):
+            R.shuffle(vals)
+            sims[i] += statistics.median(vals[:len(a)]) > statistics.median(vals[len(a):])
+    return n, real, statistics.mean(sims), (1 + sum(x >= real for x in sims)) / (n_sims + 1), (1 + sum(x <= real for x in sims)) / (n_sims + 1)
+
+
+def h110():
+    """Fibre: camelid (CL) cords carry different numbers from cotton (CN) cords of the same khipu."""
+    K, X = hyp.okr(), extra()
+    data = [[(X.get(r["id"], ("",))[0], r["value"]) for r in cs if r["value"] > 0] for cs in K.values()]
+    n, real, m, p_hi, p_lo = within_compare(data, "CL", "CN")
+    print(f"H110: khipus with ≥ 3 camelid and ≥ 3 cotton valued cords: {n}; camelid median larger in {real}; shuffled {m:.1f}; "
+          f"p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
+    col = Counter((X.get(r["id"], ("",))[0], r["colour"][0]) for cs in K.values() for r in cs)
+    for f in ("CN", "CL"):
+        tot = sum(v for (ff, _), v in col.items() if ff == f)
+        print(f"   {f}: " + ", ".join(f"{c}:{v / tot:.2f}" for (ff, c), v in sorted(col.items(), key=lambda kv: -kv[1]) if ff == f and v / tot >= 0.04))
+
+
+def h111():
+    """Thickness: within khipus, thicker cords (above the khipu median) hold larger values."""
+    K, X = hyp.okr(), extra()
+    data = []
+    for cs in K.values():
+        th = [X.get(r["id"], ("", 0))[1] for r in cs]
+        th = [t for t in th if t > 0]
+        if len(set(th)) < 2:
+            continue
+        md = statistics.median(th)
+        data.append([("thick" if X[r["id"]][1] > md else "thin", r["value"]) for r in cs if r["value"] > 0 and X.get(r["id"], ("", 0))[1] > 0 and X[r["id"]][1] != md])
+    n, real, m, p_hi, p_lo = within_compare(data, "thick", "thin")
+    print(f"H111: khipus {n}; thicker cords' median larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
+
+
+def h112():
+    """Spacing on the main cord: within groups, the gap before a cord (attachment positions) correlates with its value;
+    and gaps before cords that are group totals are wider."""
+    K, X = hyp.okr(), extra()
+    rs, sims, n = [], [], 0
+    big, small = [], []
+    for cs in K.values():
+        pos = [X.get(r["id"], ("", 0, None))[2] for r in cs]
+        if sum(p_ is not None for p_ in pos) < len(cs) * 0.8:
+            continue
+        for g in hyp.groups(cs):
+            xs = []
+            for r in g:
+                i = cs.index(r)
+                if i and pos[i] is not None and pos[i - 1] is not None and pos[i] > pos[i - 1]:
+                    xs.append((pos[i] - pos[i - 1], r["value"]))
+            if len(xs) >= 5 and len({v for _, v in xs}) > 2 and len({gp for gp, _ in xs}) > 2:
+                rs.append(spearman([a for a, _ in xs], [b for _, b in xs]))
+    print(f"H112: groups {len(rs)}; mean Spearman (gap before cord, value) {statistics.mean(rs):.3f}; positive in "
+          f"{sum(r > 0 for r in rs)}, negative in {sum(r < 0 for r in rs)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
