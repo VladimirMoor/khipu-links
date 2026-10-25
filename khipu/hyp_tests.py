@@ -1193,6 +1193,164 @@ def h73b():
         print(f"   {k:8} {site.get(k)} cords {a} and {b}, {n} long: {run[:10]}")
 
 
+def copy_pairs():
+    """Aligned cord pairs (pendants) of atlas copy-type links, OKR records: list of (a, b, [(ra, rb)]) with equal values."""
+    sys.path.insert(0, str(hyp.ROOT / "khipu"))
+    import copies_losses
+    K = hyp.okr()
+    D, _, _ = hyp.atlas()
+    out = []
+    for e in D["edges"]:
+        if e["type"] not in ("copy", "excerpt", "details", "fold"):
+            continue
+        a, b = e["from"], e["to"]
+        if a not in K or b not in K:
+            continue
+        A, B = K[a], K[b]
+        pr = copies_losses.align([r["value"] for r in A], [r["value"] for r in B])
+        out.append((a, b, [(A[i], B[j]) for i, j in pr if A[i]["value"] == B[j]["value"]]))
+    return out
+
+
+def h74():
+    """Colour as a code: in copies, each colour of one khipu goes over to one colour of the other (consistent mapping).
+    Consistency = share of matched cords whose colour pair is the most common pair for that source colour; baseline: colours
+    of the target shuffled among matched cords of the pair."""
+    P = copy_pairs()
+    def cons(pairs):
+        by = defaultdict(Counter)
+        for ca, cb in pairs:
+            by[ca][cb] += 1
+        return sum(c.most_common(1)[0][1] for c in by.values()), len(pairs)
+    tot_r, tot_s, n_all = 0, [0] * 300, 0
+    lines = []
+    for a, b, pr in P:
+        cp = [(x["colour"][0], y["colour"][0]) for x, y in pr if x["colour"][0] and y["colour"][0]]
+        if len(cp) < 8:
+            continue
+        r, n = cons(cp)
+        same = sum(x == y for x, y in cp)
+        tb = [y for _, y in cp]
+        sims = []
+        for i in range(300):
+            R.shuffle(tb)
+            s_ = cons(list(zip([x for x, _ in cp], tb)))[0]
+            sims.append(s_); tot_s[i] += s_
+        tot_r += r; n_all += n
+        lines.append(f"   {a}~{b}: matched {n}, same colour {same}, consistent {r} vs {statistics.mean(sims):.1f} "
+                     f"(p {(1 + sum(x >= r for x in sims)) / 301:.3f})")
+    print(f"H74: pairs {len(lines)}; consistent {tot_r}/{n_all} vs shuffled {statistics.mean(tot_s):.1f}; "
+          f"p {(1 + sum(x >= tot_r for x in tot_s)) / 301:.4f}")
+    print("\n".join(lines))
+
+
+def h75():
+    """Totals are marked physically: cords equal to the sum of the other cords of their group (≥ 3 others, total ≥ 10)
+    differ in termination, attachment or twist from the rest of the khipu."""
+    K = hyp.okr()
+    tot, rest = Counter(), Counter()
+    nt = nr = 0
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            s_ = sum(v)
+            for r in g:
+                is_t = len(g) >= 4 and r["value"] >= 10 and r["value"] * 2 == s_
+                C = tot if is_t else rest
+                C["term " + r["term"]] += 1; C["att " + r["att"]] += 1; C["twist " + r["twist"]] += 1
+                if is_t:
+                    nt += 1
+                else:
+                    nr += 1
+    keys = sorted(set(tot) | set(rest))
+    print(f"H75: totals {nt}, other cords {nr}")
+    for k in keys:
+        if tot[k] + rest[k] > 50:
+            print(f"   {k:10} totals {tot[k] / nt:.3f}  others {rest[k] / nr:.3f}")
+
+
+def h77():
+    """Forms: in khipus with ≥ 3 groups of the same size, zero cords stand in the same slots across those groups more than
+    with cords shuffled within each group."""
+    K = hyp.okr()
+    real = sims_t = 0
+    sims = [0] * 200
+    nk = 0
+    for cs in K.values():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append([r["value"] == 0 for r in g])
+        for n, gs in by.items():
+            if n < 4 or len(gs) < 3:
+                continue
+            z = sum(map(sum, gs))
+            if z < 3 or z == n * len(gs):
+                continue
+            nk += 1
+            def agree(gg):
+                return sum(max(c, len(gg) - c) for c in (sum(col) for col in zip(*gg)))
+            real += agree(gs)
+            for i in range(200):
+                sims[i] += agree([R.sample(g, len(g)) for g in gs])
+    print(f"H77: sets of equal-size groups {nk}; slot agreement {real} vs shuffled {statistics.mean(sims):.1f}, max {max(sims)}")
+
+
+def h78():
+    """Ceque numbers: 328 (huacas), 41 (ceques), 365, 12, 30 more common than their neighbours."""
+    vals = all_values()
+    for x in (12, 30, 41, 328, 365, 354, 360):
+        print(f"H78: {x}: {vals.get(x, 0)}; neighbours " + ", ".join(str(vals.get(x + d, 0)) for d in (-2, -1, 1, 2)))
+
+
+def h79():
+    """Round group totals: group sums exactly 100, 1000 (and multiples of 100) more often than sums shifted ±1…±5."""
+    K = hyp.okr()
+    T = [sum(r["value"] for r in g) for cs in K.values() for g in hyp.groups(cs) if len(g) >= 3]
+    for base in (100, 1000):
+        f = lambda d: sum(1 for t in T if t >= base and (t + d) % base == 0)
+        print(f"H79: group sums ≥ {base} that are multiples of {base}: {f(0)}; shifted " + ", ".join(str(f(d)) for d in (-5, -3, -1, 1, 3, 5)))
+    print(f"   exactly 100: {T.count(100)} (99: {T.count(99)}, 101: {T.count(101)}); 1000: {T.count(1000)} (999: {T.count(999)}, 1001: {T.count(1001)})")
+
+
+def h74b():
+    """H74 with block structure kept: target colours shifted circularly along the matched cords (all shifts ≥ 3)."""
+    P = copy_pairs()
+    def cons(pairs):
+        by = defaultdict(Counter)
+        for ca, cb in pairs:
+            by[ca][cb] += 1
+        return sum(c.most_common(1)[0][1] for c in by.values())
+    for a, b, pr in P:
+        cp = [(x["colour"][0], y["colour"][0]) for x, y in pr if x["colour"][0] and y["colour"][0]]
+        if len(cp) < 8:
+            continue
+        xs, ys = [x for x, _ in cp], [y for _, y in cp]
+        r = cons(cp)
+        sims = [cons(list(zip(xs, ys[k:] + ys[:k]))) for k in range(3, len(ys) - 2)]
+        print(f"H74b: {a}~{b}: consistent {r}/{len(cp)}; circular shifts mean {statistics.mean(sims):.1f}, max {max(sims)}; "
+              f"p {(1 + sum(x >= r for x in sims)) / (1 + len(sims)):.3f}")
+
+
+def h79b():
+    """H79 controlled: only groups with ≥ 2 non-round cords (value not a multiple of 10), so a round sum is not automatic."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    T = []
+    for k, cs in K.items():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) >= 3 and sum(1 for x in v if x % 10) >= 2:
+                T.append((sum(v), k, v))
+    for base in (100, 1000):
+        f = lambda d: sum(1 for t, _, _ in T if t >= base and (t + d) % base == 0)
+        print(f"H79b: multiples of {base}: {f(0)}; shifted " + ", ".join(str(f(d)) for d in (-5, -4, -3, -2, -1, 1, 2, 3, 4, 5)))
+    ex = Counter(k for t, k, _ in T if t >= 100 and t % 100 == 0)
+    print("   by khipu: " + ", ".join(f"{k} ({site.get(k)}) {n}" for k, n in ex.most_common(20)))
+    for t, k, v in sorted(T, key=lambda x: -x[0]):
+        if t >= 100 and t % 100 == 0:
+            print(f"   {k:8} {t}: {v[:16]}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
