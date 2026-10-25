@@ -2085,6 +2085,48 @@ def h141():
         print(f"H141: {name}: n={n}; " + " ".join(f"{d}:{c[d] / base:.2f}" for d in range(1, 10)))
 
 
+def h144():
+    """Hidden bases: some khipus never use a digit above k < 9 in any place although they have many digits (a base-(k+1)
+    or quinary habit). Expected count of such khipus from the corpus digit distribution (digits 1–9, all places)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    allc = Counter()
+    per = {}
+    for k, cs in K.items():
+        c = Counter()
+        for r in cs:
+            for cl in r["clusters"]:
+                if 1 <= cl["value"] // (10 ** int(math.log10(cl["value"]))) <= 9 if cl["value"] else False:
+                    d = cl["value"] // (10 ** int(math.log10(cl["value"])))
+                    c[d] += 1
+        per[k] = c
+        allc += c
+    tot = sum(allc.values())
+    pk = {d: allc[d] / tot for d in range(1, 10)}
+    for kmax in (5, 6, 7):
+        q = sum(pk[d] for d in range(1, kmax + 1))
+        cand = [(k, sum(c.values())) for k, c in per.items() if sum(c.values()) >= 40 and max(c) <= kmax]
+        exp = sum(q ** sum(c.values()) for c in per.values() if sum(c.values()) >= 40)
+        print(f"H144: khipus with ≥ 40 digits, none above {kmax}: {len(cand)} (expected {exp:.2f}) " + ", ".join(f"{k} ({site.get(k)}, {n})" for k, n in cand))
+
+
+def h145():
+    """A second long-knot style: khipus whose long knots keep nearly the same number of turns (sd < 1.3) form a distinct
+    group, not the tail of a continuum; listed with site and share of long knots among all clusters."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rows = []
+    for k, cs in K.items():
+        t = [kk[3] for r in cs for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "L" and kk[3] >= 2]
+        ncl = sum(1 for r in cs for cl in r["clusters"])
+        if len(t) >= 40:
+            rows.append((statistics.pstdev(t), statistics.mean(t), len(t), len(t) / max(1, ncl), k))
+    h = Counter(round(sd * 4) / 4 for sd, *_ in rows)
+    print("H145: sd of long-knot turns per khipu (≥ 40 long knots), histogram: " + ", ".join(f"{x}:{h[x]}" for x in sorted(h)))
+    for sd, m, n, sh, k in sorted(rows)[:20]:
+        print(f"   {k:11} {site.get(k)} sd {sd:.2f} mean {m:.1f} long knots {n} ({sh:.0%} of clusters)")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
