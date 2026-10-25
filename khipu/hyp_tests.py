@@ -281,6 +281,127 @@ def h17b():
     print(f"      length vs number of knots and turns: mean Spearman {statistics.mean(kn):.3f} over {len(kn)} khipus")
 
 
+
+def h25():
+    """Tying order shows in knot positions: the position of the units cluster drifts along the khipu (sign test)."""
+    K = hyp.okr()
+    rs = []
+    for k, cs in K.items():
+        xs = [(r["order"], r["clusters"][-1]["pos"]) for r in cs if r["clusters"] and r["clusters"][-1]["pos"] and r["clusters"][-1]["pos"] > 0]
+        if len(xs) >= 20:
+            rs.append(spearman([x[0] for x in xs], [x[1] for x in xs]))
+    big = [r for r in rs if abs(r) >= 0.3]
+    print(f"H25: {len(rs)} khipus; mean Spearman(order, units position) {statistics.mean(rs):.3f}; |rho| ≥ 0.3 in {len(big)} "
+          f"({sum(r > 0 for r in big)} drifting down the cord, {sum(r < 0 for r in big)} up)")
+
+
+def h26():
+    """A copy was knotted lying beside its original: matched cords have their clusters at the same distances.
+    Linked pairs (copy/excerpt/details/fold); per matched cord pair, |difference| of the units-cluster position, against
+    the same cords paired at random within the pair of khipus."""
+    import copies_losses as cl
+    K = hyp.okr()
+    D, _, _ = hyp.atlas()
+    real, sims = [], []
+    for e in D["edges"]:
+        if e["type"] not in ("copy", "excerpt", "details", "fold"):
+            continue
+        A, B = K.get(e["from"]), K.get(e["to"])
+        if not A or not B:
+            continue
+        al = cl.align([r["value"] for r in A], [r["value"] for r in B])
+        pr = [(A[i], B[j]) for i, j in al if A[i]["value"] == B[j]["value"] and A[i]["value"] > 0 and A[i]["clusters"] and B[j]["clusters"]
+              and A[i]["clusters"][-1]["pos"] and B[j]["clusters"][-1]["pos"]]
+        if len(pr) < 5:
+            continue
+        pa = [a["clusters"][-1]["pos"] for a, _ in pr]
+        pb = [b["clusters"][-1]["pos"] for _, b in pr]
+        rho = spearman(pa, pb)
+        sh = []
+        for _ in range(500):
+            q = pb[:]; R.shuffle(q); sh.append(spearman(pa, q))
+        real.append((e["from"], e["to"], len(pr), rho, (1 + sum(x >= rho for x in sh)) / 501))
+    for a, b, n, rho, p in real:
+        print(f"H26: {a} ~ {b}: {n} matched cords; Spearman of units-cluster positions {rho:.2f}; p {p:.3f}")
+
+
+def h27():
+    """Two-colour cords (mottled ':' or barber-pole '-') hold larger values than one-colour cords of the same khipu."""
+    K = hyp.okr()
+    wins = losses = 0
+    for k, cs in K.items():
+        two = [r["value"] for r in cs if r["colour"][1] and r["value"] > 0]
+        one = [r["value"] for r in cs if r["colour"][0] and not r["colour"][1] and r["value"] > 0]
+        if len(two) >= 5 and len(one) >= 5:
+            m2, m1 = statistics.median(two), statistics.median(one)
+            wins += m2 > m1; losses += m2 < m1
+    print(f"H27: khipus with ≥ 5 two-colour and ≥ 5 one-colour cords: two-colour median larger in {wins}, smaller in {losses}")
+
+
+def h28():
+    """Knotless (zero) pendants sit at particular places in their groups: first or last more often than with values
+    shuffled within groups."""
+    K = hyp.okr()
+    cnt = Counter(); sims = Counter(); n = 0
+    for k, cs in K.items():
+        for g in hyp.groups(cs):
+            if len(g) < 4:
+                continue
+            v = [r["value"] for r in g]
+            if 0 < v.count(0) < len(v):
+                n += 1
+                cnt["first"] += v[0] == 0; cnt["last"] += v[-1] == 0
+                for _ in range(20):
+                    q = v[:]; R.shuffle(q)
+                    sims["first"] += (q[0] == 0) / 20; sims["last"] += (q[-1] == 0) / 20
+    print(f"H28: groups (≥ 4) with some zeros: {n}; zero first {cnt['first']} (shuffled {sims['first']:.1f}); zero last {cnt['last']} (shuffled {sims['last']:.1f})")
+
+
+def h31():
+    """Khipus as time series: totals of neighbouring groups are more alike than in shuffled order (lag-1 correlation)."""
+    K = hyp.okr()
+    real, null = [], []
+    for k, cs in K.items():
+        t = [sum(r["value"] for r in g) for g in hyp.groups(cs)]
+        if len(t) >= 8 and len(set(t)) >= 5:
+            lag = spearman(t[:-1], t[1:])
+            real.append(lag)
+            q = t[:]; sh = []
+            for _ in range(100):
+                R.shuffle(q); sh.append(spearman(q[:-1], q[1:]))
+            null.append(statistics.mean(sh))
+    print(f"H31: {len(real)} khipus; mean lag-1 Spearman of group totals {statistics.mean(real):.3f}; shuffled order {statistics.mean(null):.3f}; "
+          f"above its shuffle in {sum(a > b for a, b in zip(real, null))}")
+
+
+def h36():
+    """Modern recorders also slip by one knot: where the KFG release and the OKR read the same khipu differently, the
+    difference is mostly one knot — so some 'copy slips' may be modern."""
+    import csv as _csv
+    import copies_losses as cl
+    K = hyp.okr()
+    kfg = defaultdict(list)
+    for r in _csv.DictReader(open(hyp.ROOT / "extracted/kfg2026_cords.csv")):
+        if not r.get("parent_id"):
+            kfg[r["inv_num"]].append((int(r["order"]), int(r["value"] or 0)))
+    diffs = []; same = tot = 0
+    for k, xs in kfg.items():
+        if k not in K:
+            continue
+        A = [v for _, v in sorted(xs)]
+        B = [r["value"] for r in K[k]]
+        if abs(len(A) - len(B)) > 3:
+            continue
+        al = cl.align(A, B)
+        eq = {(i, j) for i, j in al if A[i] == B[j]}
+        tot += len(al); same += len(eq)
+        for i, j in al:
+            if A[i] != B[j] and A[i] > 0 and B[j] > 0 and ((i - 1, j - 1) in eq or (i + 1, j + 1) in eq):
+                diffs.append((A[i], B[j]))
+    c = Counter(cl.kind(x, y) for x, y in diffs)
+    print(f"H36: KFG vs OKR, same khipus: aligned cords {tot}, equal {same} ({same / max(1, tot):.1%}); differing (both nonzero) {len(diffs)}: {dict(c)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
