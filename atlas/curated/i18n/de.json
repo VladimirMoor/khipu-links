@@ -537,7 +537,8 @@
      "Knoten verkürzen Schnüre: innerhalb der Khipus Länge gegen Knoten und Windungen −0,30; 0,54 cm je einfachem Knoten, 0,64 cm je Windung (18 751 Schnüre). Länge plus Knotenzuschlag: VK 0,159 gegenüber 0,180 gemessen und 0,172 bei zufällig verteiltem Zuschlag; gleichmäßiger in 311 von 392 Khipus.",
      "Medianer Abstand benachbarter Stellen je Khipu (202 Khipus): Varianz innerhalb des Fundorts 2,89 gegenüber 3,95 bei gemischten Fundorten (p = 0,001); Residuen nach Länge und Stellenzahl p = 0,001; nur UR-Khipus p = 0,001.",
      "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122).",
-     "Die Schnüre einer Gruppe wurden als eine Partie geschnitten: Benachbarte Schnüre unterscheiden sich in der Länge innerhalb einer Gruppe um 8,9 %, über eine Gruppengrenze hinweg um 12,8 %, so viel wie zufällige Paare (13,2 %); bei Nur-KFG-Khipus 12,4 %, 16,7 % und 17,4 %."
+     "Die Schnüre einer Gruppe wurden als eine Partie geschnitten: Benachbarte Schnüre unterscheiden sich in der Länge innerhalb einer Gruppe um 8,9 %, über eine Gruppengrenze hinweg um 12,8 %, so viel wie zufällige Paare (13,2 %); bei Nur-KFG-Khipus 12,4 %, 16,7 % und 17,4 %.",
+     "Stellen werden durch die Höhe festgelegt, und damit lassen sich Lesungen prüfen: Ein dreistelliger Wert mit leerer Zehnerstelle hat seine Hunderterknoten in 98 von 100 Fällen auf der Hunderterhöhe seiner Gruppe. Umgekehrt tragen 43 zweistellige Werte in dezimalen Khipus ihre oberen Knoten auf Hunderterhöhe, als wären sie dreistellige Zahlen mit leerer Zehnerstelle (37 statt 307); bei 14 davon liest KFG 2026 genau so (AS209 Schnur 21: 71 → 701; UR046 Schnur 9: 25 → 205; UR085 Schnur 18: 69 → 609, Schnur 21: 13 → 103)."
     ],
     "levels": {
      "numbers": "Die Knotengröße ist in den Schnurlängen messbar.",

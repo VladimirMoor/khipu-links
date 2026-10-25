@@ -517,7 +517,8 @@
    "Knots shorten cords: within khipus, length against knots and turns −0.30; 0.54 cm per single knot, 0.64 cm per turn (18,751 cords). Length plus knot allowance: CV 0.159 against 0.180 measured and 0.172 with the allowance dealt out at random; more even in 311 of 392 khipus.",
    "Median spacing between adjacent place clusters per khipu (202 khipus): within-site variance 2.89 against 3.95 with sites shuffled (p = 0.001); residuals after length and number of places p = 0.001; UR khipus only p = 0.001.",
    "Height of the units cluster by cord colour, within groups and among cords with the same number of places: R² 0.165 against 0.100 with colours shuffled inside groups (max 0.122).",
-   "Cords of a group were cut as one batch: neighbouring cords differ in length by 8.9% within a group but by 12.8% across a group boundary, as much as random pairs (13.2%); on KFG-only khipus 12.4%, 16.7% and 17.4%."
+   "Cords of a group were cut as one batch: neighbouring cords differ in length by 8.9% within a group but by 12.8% across a group boundary, as much as random pairs (13.2%); on KFG-only khipus 12.4%, 16.7% and 17.4%.",
+   "Places are fixed by height, and that can be used to check readings: a three-digit value with an empty tens place keeps its hundreds knots at the group's hundreds height in 98 of 100 cases. Conversely, 43 two-digit values in decimal khipus carry their upper knots at hundreds height, as if they were three-digit numbers with an empty tens place (37 for 307); for 14 of them the KFG 2026 reading is exactly that (AS209 cord 21: 71 → 701; UR046 cord 9: 25 → 205; UR085 cord 18: 69 → 609, cord 21: 13 → 103)."
   ],
   "khipus": [],
   "scripts": [

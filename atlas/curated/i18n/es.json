@@ -537,7 +537,8 @@
      "Los nudos acortan las cuerdas: dentro de los khipus, longitud frente a nudos y vueltas −0,30; 0,54 cm por nudo simple, 0,64 cm por vuelta (18 751 cuerdas). Longitud más el margen de los nudos: CV 0,159 frente a 0,180 medida y 0,172 con el margen repartido al azar; más pareja en 311 de 392 khipus.",
      "Espaciado mediano entre posiciones vecinas por khipu (202 khipus): varianza dentro del sitio 2,89 frente a 3,95 con sitios barajados (p = 0,001); residuos tras longitud y número de posiciones p = 0,001; solo khipus UR p = 0,001.",
      "Altura de las unidades según el color de la cuerda, dentro de grupos y entre cuerdas con el mismo número de posiciones: R² 0,165 frente a 0,100 con colores barajados dentro de los grupos (máx. 0,122).",
-     "Las cuerdas de un grupo se cortaban en una sola tanda: las cuerdas vecinas difieren en longitud un 8,9 % dentro de un grupo, pero un 12,8 % al cruzar el límite de grupo, tanto como pares al azar (13,2 %); en khipus solo de KFG, 12,4 %, 16,7 % y 17,4 %."
+     "Las cuerdas de un grupo se cortaban en una sola tanda: las cuerdas vecinas difieren en longitud un 8,9 % dentro de un grupo, pero un 12,8 % al cruzar el límite de grupo, tanto como pares al azar (13,2 %); en khipus solo de KFG, 12,4 %, 16,7 % y 17,4 %.",
+     "Las posiciones se fijan por la altura, y eso permite comprobar lecturas: un valor de tres cifras con las decenas vacías mantiene sus nudos de centenas a la altura de las centenas de su grupo en 98 de 100 casos. A la inversa, 43 valores de dos cifras en khipus decimales llevan sus nudos superiores a la altura de las centenas, como si fueran números de tres cifras con decenas vacías (37 por 307); en 14 de ellos la lectura de KFG 2026 es exactamente esa (AS209 cuerda 21: 71 → 701; UR046 cuerda 9: 25 → 205; UR085 cuerda 18: 69 → 609, cuerda 21: 13 → 103)."
     ],
     "levels": {
      "numbers": "El tamaño de los nudos se mide en las longitudes de las cuerdas.",
