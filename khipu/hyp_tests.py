@@ -1640,6 +1640,31 @@ def h107():
               f"neighbour |Δ mean| {real:.2f} vs shuffled {statistics.mean(sims):.2f}, p {(1 + sum(x <= real for x in sims)) / 1001:.3f}")
 
 
+def h109():
+    """Rounding up: the sum of a group that ends in 7–9 appears elsewhere in the khipu as the next ten more often than a sum
+    ending in 1–3 appears as the ten below (and than the cross controls)."""
+    K = hyp.okr()
+    hit = Counter()
+    for cs in K.values():
+        vals = Counter(r["value"] for r in cs)
+        for g in hyp.groups(cs):
+            S = sum(r["value"] for r in g)
+            if S < 30 or S % 10 == 0 or len(g) < 2:
+                continue
+            up, down = (S // 10 + 1) * 10, S // 10 * 10
+            inside = Counter(r["value"] for r in g)
+            have = lambda x: vals[x] - inside[x] > 0
+            e = S % 10
+            if e >= 7:
+                hit["7-9 n"] += 1; hit["7-9 up"] += have(up); hit["7-9 down"] += have(down); hit["7-9 exact"] += have(S)
+            elif e <= 3:
+                hit["1-3 n"] += 1; hit["1-3 up"] += have(up); hit["1-3 down"] += have(down); hit["1-3 exact"] += have(S)
+    for e in ("7-9", "1-3"):
+        n = hit[e + " n"]
+        print(f"H109: sums ending {e}: {n}; next ten elsewhere {hit[e + ' up'] / n:.3f}; ten below {hit[e + ' down'] / n:.3f}; "
+              f"exact sum elsewhere {hit[e + ' exact'] / n:.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
