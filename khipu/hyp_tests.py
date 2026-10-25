@@ -2127,6 +2127,63 @@ def h145():
         print(f"   {k:11} {site.get(k)} sd {sd:.2f} mean {m:.1f} long knots {n} ({sh:.0%} of clusters)")
 
 
+GENRE = ["UR039", "UR112", "UR144", "UR050", "UR110", "UR054", "UR055", "UR052", "UR051", "AS090/N2", "UR193"]
+
+
+def h146():
+    """In the long-knot genre, turns depend on cord colour or on the cluster's position on the cord (a code), more than with
+    colours / positions shuffled within the khipu."""
+    K = hyp.okr()
+    for k in GENRE:
+        xs = []
+        for r in K[k]:
+            for i, cl in enumerate(r["clusters"]):
+                if cl["type"] == "L" and len(cl["knots"]) == 1 and r["colour"][0]:
+                    xs.append((r["colour"][0], i, cl["knots"][0][3]))
+        if len(xs) < 30:
+            continue
+        def r2(pairs):
+            ys = [y for _, y in pairs]
+            m = statistics.mean(ys)
+            tot = sum((y - m) ** 2 for y in ys) or 1
+            by = defaultdict(list)
+            for c, y in pairs:
+                by[c].append(y)
+            return sum(len(v) * (statistics.mean(v) - m) ** 2 for v in by.values()) / tot
+        out = []
+        for name, idx in (("colour", 0), ("position", 1)):
+            pairs = [(x[idx], x[2]) for x in xs]
+            if len({p_ for p_, _ in pairs}) < 2:
+                out.append(f"{name} —"); continue
+            real = r2(pairs)
+            labs = [p_ for p_, _ in pairs]
+            ys = [y for _, y in pairs]
+            sims = []
+            for _ in range(300):
+                R.shuffle(labs)
+                sims.append(r2(list(zip(labs, ys))))
+            out.append(f"{name} R² {real:.3f} vs {statistics.mean(sims):.3f} (p {(1 + sum(x >= real for x in sims)) / 301:.3f})")
+        print(f"H146: {k:9} clusters {len(xs)}: " + "; ".join(out))
+
+
+def h147():
+    """Space filling: in the long-knot genre, cords with more knots have fewer turns per knot (the knots share a fixed length
+    of cord), and the lowest knot is shorter than the others."""
+    K = hyp.okr()
+    for k in GENRE:
+        rows = lk_rows(k)
+        if len(rows) < 20:
+            continue
+        n = [len(x) for x in rows]
+        m = [statistics.mean(x) for x in rows]
+        r = spearman(n, m) if len(set(n)) > 1 else float("nan")
+        last = [x[-1] - statistics.mean(x[:-1]) for x in rows if len(x) >= 2]
+        tot = [sum(x) for x in rows]
+        print(f"H147: {k:9} cords {len(rows)}: Spearman (knots on cord, turns per knot) {r:.2f}; lowest knot minus the others "
+              f"{statistics.mean(last):+.2f} turns (lower in {sum(d < 0 for d in last)}, higher in {sum(d > 0 for d in last)}); "
+              f"Spearman (knots, total turns) {spearman(n, tot) if len(set(n)) > 1 else float('nan'):.2f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
