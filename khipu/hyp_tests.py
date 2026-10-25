@@ -2524,6 +2524,32 @@ def h185():
         print(f"   {a} ({site.get(a)}) ← {b} ({site.get(b)}): {sc} vs shuffled max {mx}")
 
 
+def h187():
+    """Odd colour = special entry: within groups (≥ 4 cords with a majority colour), a cord of another colour holds a larger
+    number than its group-mates more often than chance (labels shuffled within khipu)."""
+    K = hyp.okr()
+    data = []
+    pos = Counter()
+    for cs in K.values():
+        xs = []
+        for g in hyp.groups(cs):
+            if len(g) < 4:
+                continue
+            c = Counter(r["colour"] for r in g).most_common(1)[0]
+            if c[1] < len(g) / 2 or c[1] == len(g):
+                continue
+            for i, r in enumerate(g):
+                if r["value"] > 0:
+                    lab = "odd" if r["colour"] != c[0] else "major"
+                    xs.append((lab, r["value"]))
+                    if lab == "odd":
+                        pos["first" if i == 0 else "last" if i == len(g) - 1 else "middle"] += 1
+        data.append(xs)
+    n, real, m, p_hi, p_lo = within_compare(data, "odd", "major")
+    print(f"H187: khipus {n}; odd-coloured cords' median larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}; "
+          f"odd cords at first {pos['first']}, middle {pos['middle']}, last {pos['last']}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
