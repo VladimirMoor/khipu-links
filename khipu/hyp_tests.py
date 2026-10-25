@@ -2348,6 +2348,29 @@ def h168():
     print("H168: near totals above/below the group sum: " + ", ".join(f"±{d}: {up[d]}/{dn[d]}" for d in range(1, 6)))
 
 
+def h169():
+    """Wild: the khipu is read from the far end — the first cords (by OKR order) are the summaries. Within khipus with sum
+    relations (a cord equal to the sum of another group), the total cords stand before their groups more often than after."""
+    K = hyp.okr()
+    before = after = 0
+    for cs in K.values():
+        gs = hyp.groups(cs)
+        gid = {id(r): gi for gi, g in enumerate(gs) for r in g}
+        sums = defaultdict(list)
+        for gi, g in enumerate(gs):
+            v = [r["value"] for r in g]
+            if len(v) >= 3 and sum(1 for x in v if x) >= 3 and sum(v) >= 20 and sum(v) % 10:
+                sums[sum(v)].append(gi)
+        for r in cs:
+            for gi in sums.get(r["value"], []):
+                if gi != gid[id(r)]:
+                    if gid[id(r)] < gi:
+                        before += 1
+                    else:
+                        after += 1
+    print(f"H169: total cords standing before the group they sum: {before}; after: {after}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
