@@ -1059,6 +1059,140 @@ def h61b():
     print("   by site " + "; ".join(f"{s_} S {c['S']} / Z {c['Z']}" for s_, c in sorted(by_s.items(), key=lambda kv: -sum(kv[1].values())) if sum(c.values()) >= 4))
 
 
+def h67():
+    """Self-reference: a group contains a cord whose value equals the number of cords in the group (or of its non-zero
+    cords), more often than size ± 1…3. Groups of ≥ 4 cords; the counted size excludes nothing."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g] for cs in K.values() for g in hyp.groups(cs) if len(g) >= 4]
+    for name, f in (("all cords", len), ("non-zero cords", lambda v: sum(1 for x in v if x))):
+        res = {d: sum(1 for v in G if f(v) + d in v) for d in range(-3, 4)}
+        res2 = {d: sum(1 for v in G if f(v) + d in (v[0], v[-1])) for d in range(-3, 4)}
+        print(f"H67: {name}: anywhere " + ", ".join(f"{d:+d}:{n}" for d, n in res.items()) + " | first/last " + ", ".join(f"{d:+d}:{n}" for d, n in res2.items()))
+    T = []
+    for cs in K.values():
+        n = len(cs)
+        T.append(sum(1 for r in cs if r["value"] == n))
+    sh = {d: sum(1 for cs in K.values() if any(r["value"] == len(cs) + d for r in cs)) for d in range(-3, 4)}
+    print("   khipu size on a cord: " + ", ".join(f"{d:+d}:{n}" for d, n in sh.items()))
+
+
+def h69():
+    """Numbering: runs of ≥ 4 adjacent pendants with consecutive values (v, v+1, v+2, v+3), v ≥ 1, against cords shuffled
+    within group."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g] for cs in K.values() for g in hyp.groups(cs) if len(g) >= 4]
+    def cnt(gs, step):
+        n = 0
+        for v in gs:
+            for i in range(len(v) - 3):
+                if v[i] >= 1 and all(v[i + j + 1] - v[i + j] == step for j in range(3)):
+                    n += 1
+        return n
+    for step in (1, -1):
+        real = cnt(G, step)
+        sims = [cnt([R.sample(v, len(v)) for v in G], step) for _ in range(200)]
+        print(f"H69: step {step:+d}: runs {real}; shuffled mean {statistics.mean(sims):.1f}, max {max(sims)}")
+
+
+def h70():
+    """Progressions: runs of 4 adjacent cords with a constant non-zero difference (|d| ≥ 2), or doubling (x, 2x, 4x), against
+    shuffled cords within group."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g] for cs in K.values() for g in hyp.groups(cs) if len(g) >= 4]
+    def ap(gs):
+        n, ex = 0, []
+        for v in gs:
+            for i in range(len(v) - 3):
+                d = v[i + 1] - v[i]
+                if abs(d) >= 2 and v[i] > 0 and v[i + 2] - v[i + 1] == d and v[i + 3] - v[i + 2] == d:
+                    n += 1; ex.append(v[i:i + 4])
+        return n, ex
+    def dbl(gs):
+        n, ex = 0, []
+        for v in gs:
+            for i in range(len(v) - 2):
+                if v[i] >= 2 and v[i + 1] == 2 * v[i] and v[i + 2] == 4 * v[i]:
+                    n += 1; ex.append(v[i:i + 3])
+                if v[i + 2] >= 2 and v[i + 1] == 2 * v[i + 2] and v[i] == 4 * v[i + 2]:
+                    n += 1; ex.append(v[i:i + 3])
+        return n, ex
+    for name, f in (("arithmetic", ap), ("doubling", dbl)):
+        real, ex = f(G)
+        sims = [f([R.sample(v, len(v)) for v in G])[0] for _ in range(200)]
+        print(f"H70: {name}: {real}; shuffled mean {statistics.mean(sims):.1f}, max {max(sims)}; e.g. {ex[:12]}")
+
+
+def h73():
+    """Internal copies: a khipu repeats a run of ≥ 5 informative values (≥ 10, not round) in another place of itself
+    (non-overlapping), more often than with its cords shuffled."""
+    K = hyp.okr()
+    def longest(v):
+        best, at = 0, None
+        n = len(v)
+        for sh in range(5, n):
+            run = 0
+            for i in range(n - sh):
+                if v[i] == v[i + sh] and v[i] >= 10 and v[i] % 10:
+                    run += 1
+                    if run > best and run <= sh:
+                        best, at = run, (i - run + 2, i + sh - run + 2)
+                elif v[i] == v[i + sh] and v[i] > 0:
+                    pass
+                else:
+                    run = 0
+        return best, at
+    real = {}
+    for k, cs in K.items():
+        v = [r["value"] for r in cs]
+        b, at = longest(v)
+        if b >= 3:
+            real[k] = (b, at, len(v))
+    sims = []
+    for _ in range(5):
+        c = 0
+        for k, cs in K.items():
+            v = [r["value"] for r in cs]
+            R.shuffle(v)
+            c += longest(v)[0] >= 3
+        sims.append(c)
+    print(f"H73: khipus with an internal repeat of ≥ 3 informative values: {len(real)}; shuffled {sims}")
+    for k, (b, at, n) in sorted(real.items(), key=lambda kv: -kv[1][0])[:25]:
+        print(f"   {k:10} run {b} at cords {at[0]} and {at[1]} of {n}")
+
+
+def h73b():
+    """H73 strict: a repeated run of ≥ 4 cords at a shift ≥ 2 (non-overlapping) with ≥ 3 distinct informative values."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    def reps(v):
+        out, n = [], len(v)
+        for sh in range(2, n):
+            i = 0
+            while i < n - sh:
+                j = i
+                while j < n - sh and v[j] == v[j + sh]:
+                    j += 1
+                run = v[i:j]
+                if 4 <= j - i <= sh and len({x for x in run if x >= 10 and x % 10}) >= 3:
+                    out.append((i + 1, i + sh + 1, j - i, run))
+                i = max(j, i + 1)
+        return out
+    real = {k: reps([r["value"] for r in cs]) for k, cs in K.items()}
+    real = {k: v for k, v in real.items() if v}
+    sims = []
+    for _ in range(10):
+        c = 0
+        for cs in K.values():
+            v = [r["value"] for r in cs]
+            R.shuffle(v)
+            c += bool(reps(v))
+        sims.append(c)
+    print(f"H73b: khipus with an internal copy: {len(real)}; shuffled {sims}")
+    for k, v in sorted(real.items()):
+        a, b, n, run = max(v, key=lambda x: x[2])
+        print(f"   {k:8} {site.get(k)} cords {a} and {b}, {n} long: {run[:10]}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
