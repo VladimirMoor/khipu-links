@@ -2634,6 +2634,28 @@ def h197():
           f"ρ ≤ −0.5 {sum(r <= -0.5 for r in rho)}, ρ ≥ 0.5 {sum(r >= 0.5 for r in rho)}")
 
 
+def h198():
+    """Head cords: the first cord of a group (≥ 4 cords, ≥ 3 non-zero) is its largest more often than 1/n; compared with the
+    last cord, and split into heads that are the sum of the rest and those that are not."""
+    K = hyp.okr()
+    first = last = exp = tot_heads = 0
+    n = 0
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) < 4 or sum(1 for x in v if x) < 3:
+                continue
+            m = max(v)
+            if v.count(m) > 1:
+                continue
+            n += 1
+            exp += 1 / len(v)
+            first += v[0] == m
+            last += v[-1] == m
+            tot_heads += v[0] == m and v[0] == sum(v[1:])
+    print(f"H198: groups {n}; first cord largest {first}, last cord largest {last}, expected {exp:.0f}; heads equal to the sum of the rest {tot_heads}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
