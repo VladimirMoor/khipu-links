@@ -2843,6 +2843,54 @@ def h213():
         print(f"   subsidiaries: khipus {len(rs)}, mean Spearman (pendant, subsidiary sum) {statistics.mean(rs):.3f}, positive {sum(r > 0 for r in rs)}")
 
 
+def h214():
+    """Replication on KFG-only khipus: light cords hold larger values than dark ones (H62); zero cords align across equal-size
+    groups (H77); group sums are round hundreds above baseline (H79)."""
+    import csv
+    O = hyp.okr()
+    _, _, dup = hyp.atlas()
+    rows = defaultdict(list)
+    for r in csv.DictReader(open(hyp.ROOT / "extracted/plus2026_cords.csv")):
+        k = r["inv_num"]
+        if r["parent_id"] or k in O or any((k, o) in dup for o in O):
+            continue
+        rows[k].append((int(r["order"]), int(r["value"] or 0), r["group"], (r["color"] or "").split(":")[0] if ":" not in (r["color"] or "")[:3] else "", r["color"]))
+    dark, light = {"KB", "MB", "DB", "B"}, {"W", "AB", "YB"}
+    data = [[("light" if c in light else "dark" if c in dark else "x", v) for _, v, _, c, full in sorted(cs) if v > 0 and "-" not in full and ":" not in full]
+            for cs in rows.values()]
+    n, real, m, p_hi, p_lo = within_compare(data, "light", "dark")
+    print(f"H214: KFG-only: khipus with both {n}; light median larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}")
+    real_a, sims, nk = 0, [0] * 200, 0
+    allT = []
+    for cs in rows.values():
+        cs.sort()
+        G = defaultdict(list)
+        order = []
+        for _, v, g, _, _ in cs:
+            if g not in G:
+                order.append(g)
+            G[g].append(v)
+        gs = [G[g] for g in order]
+        allT += [sum(g) for g in gs if len(g) >= 3 and sum(1 for x in g if x % 10) >= 2]
+        by = defaultdict(list)
+        for g in gs:
+            by[len(g)].append([x == 0 for x in g])
+        for sz, gg in by.items():
+            if sz < 4 or len(gg) < 3:
+                continue
+            z = sum(map(sum, gg))
+            if z < 3 or z == sz * len(gg):
+                continue
+            nk += 1
+            agree = lambda q: sum(max(c, len(q) - c) for c in (sum(col) for col in zip(*q)))
+            real_a += agree(gg)
+            for i in range(200):
+                sims[i] += agree([R.sample(g, len(g)) for g in gg])
+    print(f"   zero-slot agreement: sets {nk}; {real_a} vs shuffled {statistics.mean(sims):.1f}, max {max(sims)}")
+    f = lambda d: sum(1 for t in allT if t >= 100 and (t + d) % 100 == 0)
+    print(f"   round-hundred group sums (≥ 2 non-round parts): {f(0)}; shifted " + ", ".join(str(f(d)) for d in (-5, -3, -1, 1, 3, 5)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
