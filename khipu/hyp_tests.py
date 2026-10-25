@@ -549,6 +549,323 @@ def h44():
           + f"; ±9: {frac(-9):.4f}, {frac(9):.4f} (1/9 = 0.1111)")
 
 
+def kfg_groups():
+    import csv
+    G = defaultdict(lambda: defaultdict(list))
+    for r in csv.DictReader(open(hyp.ROOT / "extracted/plus2026_cords.csv")):
+        if not r["parent_id"]:
+            G[r["inv_num"]][r["group"]].append((int(r["order"]), int(r["value"] or 0)))
+    return {k: [[v for _, v in sorted(g)] for _, g in sorted(d.items(), key=lambda kv: min(o for o, _ in kv[1]))] for k, d in G.items()}
+
+
+def h46():
+    """H45 replicates in the KFG khipus that are not in OKR (and not duplicates of OKR khipus)."""
+    G, O = kfg_groups(), hyp.okr()
+    _, _, dup = hyp.atlas()
+    new = [k for k in G if k not in O and not any((k, o) in dup for o in O)]
+    def scan(d):
+        n = 0
+        for k in new:
+            for v in G[k]:
+                for m in range(2, 7):
+                    for i in range(len(v) - m + 1):
+                        w = v[i:i + m]
+                        if min(w) >= 10 and max(w) - min(w) == 1 and (sum(w) + d) % 10 == 0 and (sum(w) + d) % m:
+                            n += 1
+        return n
+    sh = [scan(d) for d in (-5, -4, -3, -2, -1, 1, 2, 3, 4, 5)]
+    print(f"H46: KFG-only khipus {len(new)}; runs {scan(0)}; shifted mean {statistics.mean(sh):.1f}, max {max(sh)}")
+
+
+def h47():
+    """Tripartition: group sizes 3, 6, 9, 12 are local peaks of the size histogram (more common than both neighbours),
+    more often than sizes 5, 10 (decimal) or 4, 8."""
+    K = hyp.okr()
+    c = Counter(len(g) for cs in K.values() for g in hyp.groups(cs))
+    print("H47: group sizes " + ", ".join(f"{n}:{c[n]}" for n in range(1, 25)))
+    for n in (3, 4, 5, 6, 8, 9, 10, 12, 15, 20):
+        print(f"   size {n}: {c[n]} vs neighbours {c[n - 1]}, {c[n + 1]}; ratio {2 * c[n] / max(1, c[n - 1] + c[n + 1]):.2f}")
+
+
+def h48():
+    """Benford: first digits of khipu values ≥ 10 follow Benford's law (counted quantities); round-number planned
+    quotas would not. Reported per site with chi-square against Benford."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    by = defaultdict(Counter)
+    for k, cs in K.items():
+        for r in cs:
+            if r["value"] >= 10:
+                by[site.get(k) or "?"][int(str(r["value"])[0])] += 1
+                by["ALL"][int(str(r["value"])[0])] += 1
+    ben = [math.log10(1 + 1 / d) for d in range(1, 10)]
+    for s, c in sorted(by.items(), key=lambda kv: -sum(kv[1].values()))[:12]:
+        n = sum(c.values())
+        chi = sum((c[d] - n * ben[d - 1]) ** 2 / (n * ben[d - 1]) for d in range(1, 10))
+        print(f"H48: {s:12} n={n:5} " + " ".join(f"{c[d] / n:.2f}" for d in range(1, 10)) + f"  chi2 {chi:.1f}")
+    print("   Benford       " + " ".join(f"{b:.2f}" for b in ben))
+
+
+def h49():
+    """Heaping: share of values ending in 0 (among 10–999) differs by site — estimated vs counted quantities."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    by = defaultdict(lambda: [0, 0, 0])
+    for k, cs in K.items():
+        for r in cs:
+            v = r["value"]
+            if 10 <= v <= 999:
+                b = by[site.get(k) or "?"]
+                b[0] += 1; b[1] += v % 10 == 0; b[2] += v % 10 == 5
+    for s, (n, z, f) in sorted(by.items(), key=lambda kv: -kv[1][0])[:15]:
+        print(f"H49: {s:12} n={n:5} ends in 0: {z / n:.2f}; in 5: {f / n:.2f}")
+
+
+def h50():
+    """A length standard: spacing (cm) between adjacent place clusters on one cord is more alike among khipus of one
+    site than among khipus overall (site labels shuffled)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    med = {}
+    for k, cs in K.items():
+        d = []
+        for r in cs:
+            ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+            d += [b - a for a, b in zip(ps, ps[1:]) if b > a]
+        if len(d) >= 10 and site.get(k):
+            med[k] = statistics.median(d)
+    ks = list(med)
+    def within(lab):
+        g = defaultdict(list)
+        for k in ks:
+            g[lab[k]].append(med[k])
+        return sum(statistics.pvariance(v) * len(v) for v in g.values() if len(v) >= 3) / sum(len(v) for v in g.values() if len(v) >= 3)
+    lab = {k: site[k] for k in ks}
+    real = within(lab)
+    labs = [lab[k] for k in ks]
+    sims = []
+    for _ in range(1000):
+        R.shuffle(labs)
+        sims.append(within(dict(zip(ks, labs))))
+    print(f"H50: khipus {len(ks)}; median spacing overall {statistics.median(med.values()):.1f} cm; within-site variance "
+          f"{real:.2f} vs shuffled {statistics.mean(sims):.2f}; p {(1 + sum(x <= real for x in sims)) / 1001:.4f}")
+    h = Counter(round(v * 2) / 2 for v in med.values())
+    print("   histogram (0.5 cm): " + ", ".join(f"{x}:{h[x]}" for x in sorted(h) if h[x] >= 3))
+
+
+def h51():
+    """Squares and triangular numbers are over-represented among values 100–9999 against shifted values."""
+    vals = all_values()
+    sq = {i * i for i in range(1, 101)}
+    tri = {i * (i + 1) // 2 for i in range(1, 150)}
+    for name, S in (("squares", sq), ("triangular", tri)):
+        def cnt(d):
+            return sum(c for v, c in vals.items() if 100 <= v <= 9999 and v % 10 and v + d in S)
+        sh = [cnt(d) for d in (-3, -2, -1, 1, 2, 3)]
+        print(f"H51: {name}: {cnt(0)}; shifted {sh}")
+
+
+def h52():
+    """Mirror copies: some khipus copy another read from the other end. Pairs sharing a run of 4 values (non-zero, two
+    ≥ 10) forward vs reversed vs cords shuffled within khipu."""
+    K = {k: [r["value"] for r in cs] for k, cs in hyp.okr().items()}
+    _, _, dup = hyp.atlas()
+    def grams(v):
+        return {tuple(v[i:i + 4]) for i in range(len(v) - 3) if min(v[i:i + 4]) > 0 and sum(x >= 10 for x in v[i:i + 4]) >= 2}
+    idx = defaultdict(set)
+    for k, v in K.items():
+        for g in grams(v):
+            idx[g].add(k)
+    def pairs(tr):
+        out = set()
+        for k, v in K.items():
+            for g in grams(tr(v)):
+                for o in idx.get(g, ()):
+                    if o != k and (k, o) not in dup:
+                        out.add(tuple(sorted((k, o))))
+        return out
+    fw = pairs(lambda v: v)
+    rv = pairs(lambda v: v[::-1])
+    sims = []
+    for _ in range(5):
+        sims.append(len(pairs(lambda v: R.sample(v, len(v)))))
+    print(f"H52: pairs sharing a 4-run forward {len(fw)}; reversed {len(rv)}; shuffled {sims}")
+    print("   reversed only: " + ", ".join(f"{a}~{b}" for a, b in sorted(rv - fw)[:30]))
+
+
+def h52b():
+    """H52 with informative runs only: 4 consecutive values, at least two of them ≥ 10 and not multiples of 10."""
+    K = {k: [r["value"] for r in cs] for k, cs in hyp.okr().items()}
+    _, _, dup = hyp.atlas()
+    def grams(v):
+        return {tuple(v[i:i + 4]) for i in range(len(v) - 3) if sum(x >= 10 and x % 10 for x in v[i:i + 4]) >= 2}
+    idx = defaultdict(set)
+    for k, v in K.items():
+        for g in grams(v):
+            idx[g].add(k)
+    def pairs(tr):
+        out = set()
+        for k, v in K.items():
+            for g in grams(tr(v)):
+                for o in idx.get(g, ()):
+                    if o != k and (k, o) not in dup:
+                        out.add(tuple(sorted((k, o))))
+        return out
+    fw, rv = pairs(lambda v: v), pairs(lambda v: v[::-1])
+    sims = [len(pairs(lambda v: R.sample(v, len(v)))) for _ in range(10)]
+    print(f"H52b: pairs forward {len(fw)}; reversed {len(rv)}; shuffled mean {statistics.mean(sims):.1f}, max {max(sims)}")
+    print("   reversed: " + ", ".join(f"{a}~{b}" for a, b in sorted(rv)))
+
+
+def h50b():
+    """H50 controlled for size: per-khipu median spacing regressed on median cord length and median number of clusters;
+    residuals tested for site clustering."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rows = {}
+    for k, cs in K.items():
+        d, L, nc = [], [], []
+        for r in cs:
+            ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+            d += [b - a for a, b in zip(ps, ps[1:]) if b > a]
+            if r["length"] > 0:
+                L.append(r["length"])
+            nc.append(len(ps))
+        if len(d) >= 10 and site.get(k) and L:
+            rows[k] = (statistics.median(d), statistics.median(L), statistics.mean(nc))
+    ks = list(rows)
+    X = [[1.0, rows[k][1], rows[k][2]] for k in ks]
+    y = [rows[k][0] for k in ks]
+    # least squares via normal equations (3x3)
+    A = [[sum(x[i] * x[j] for x in X) for j in range(3)] for i in range(3)]
+    b = [sum(x[i] * t for x, t in zip(X, y)) for i in range(3)]
+    for i in range(3):
+        for j in range(i + 1, 3):
+            f = A[j][i] / A[i][i]
+            A[j] = [a - f * c for a, c in zip(A[j], A[i])]; b[j] -= f * b[i]
+    w = [0.0] * 3
+    for i in (2, 1, 0):
+        w[i] = (b[i] - sum(A[i][j] * w[j] for j in range(i + 1, 3))) / A[i][i]
+    res = {k: t - sum(wi * xi for wi, xi in zip(w, x)) for k, x, t in zip(ks, X, y)}
+    def within(lab):
+        g = defaultdict(list)
+        for k in ks:
+            g[lab[k]].append(res[k])
+        v = [x for x in g.values() if len(x) >= 3]
+        return sum(statistics.pvariance(x) * len(x) for x in v) / sum(len(x) for x in v)
+    labs = [site[k] for k in ks]
+    real = within(dict(zip(ks, labs)))
+    sims = []
+    for _ in range(1000):
+        R.shuffle(labs)
+        sims.append(within(dict(zip(ks, labs))))
+    print(f"H50b: coefficients (const, length, clusters) {[round(x, 3) for x in w]}; residual within-site variance {real:.2f} "
+          f"vs shuffled {statistics.mean(sims):.2f}; p {(1 + sum(x <= real for x in sims)) / 1001:.4f}")
+    g = defaultdict(list)
+    for k in ks:
+        g[site[k]].append(rows[k][0])
+    for s_, v in sorted(g.items(), key=lambda kv: -len(kv[1])):
+        if len(v) >= 4:
+            print(f"   {s_:12} n={len(v):3} median spacing {statistics.median(v):.1f} cm, IQR {statistics.quantiles(v, n=4)[0]:.1f}–{statistics.quantiles(v, n=4)[2]:.1f}")
+
+
+def h47b():
+    """H47 counted once per khipu: in how many khipus is a size the most common group size."""
+    K = hyp.okr()
+    c, any_ = Counter(), Counter()
+    for cs in K.values():
+        sz = Counter(len(g) for g in hyp.groups(cs) if len(g) > 1)
+        if sz:
+            c[sz.most_common(1)[0][0]] += 1
+            for n in sz:
+                any_[n] += 1
+    print("H47b: modal group size per khipu " + ", ".join(f"{n}:{c[n]}" for n in range(2, 25)))
+    print("   khipus having a group of size " + ", ".join(f"{n}:{any_[n]}" for n in range(2, 25)))
+
+
+def h49b():
+    """Round values by region, one number per khipu (share of values 10–999 ending in 0); central coast (lima, huacho,
+    armatambo, pachacamac) against the rest, Mann–Whitney via permutation."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    cc = {"lima", "huacho", "armatambo", "pachacamac", "huaquerones", "ancon", "chancay"}
+    sh = {}
+    for k, cs in K.items():
+        v = [r["value"] for r in cs if 10 <= r["value"] <= 999]
+        if len(v) >= 10 and site.get(k):
+            sh[k] = sum(x % 10 == 0 for x in v) / len(v)
+    a = [sh[k] for k in sh if site[k] in cc]
+    b = [sh[k] for k in sh if site[k] not in cc]
+    real = statistics.median(a) - statistics.median(b)
+    pool, n = a + b, len(a)
+    sims = []
+    for _ in range(5000):
+        R.shuffle(pool)
+        sims.append(statistics.median(pool[:n]) - statistics.median(pool[n:]))
+    print(f"H49b: central coast khipus {len(a)} median share round {statistics.median(a):.2f}; others {len(b)} {statistics.median(b):.2f}; "
+          f"p {(1 + sum(x >= real for x in sims)) / 5001:.4f}")
+    g = defaultdict(list)
+    for k in sh:
+        g[site[k]].append(sh[k])
+    print("   " + "; ".join(f"{s_} {statistics.median(v):.2f} (n={len(v)})" for s_, v in sorted(g.items(), key=lambda kv: -statistics.median(kv[1])) if len(v) >= 4))
+
+
+def h52c():
+    """Mirror copies, strict: pairs sharing a run of 5 consecutive values with at least 3 of them ≥ 10 and not round,
+    forward against reversed. Known copies should appear forward; mirror copies would appear reversed only."""
+    K = {k: [r["value"] for r in cs] for k, cs in hyp.okr().items()}
+    _, _, dup = hyp.atlas()
+    def grams(v):
+        return {tuple(v[i:i + 5]) for i in range(len(v) - 4) if sum(x >= 10 and x % 10 for x in v[i:i + 5]) >= 3}
+    idx = defaultdict(set)
+    for k, v in K.items():
+        for g in grams(v):
+            idx[g].add(k)
+    def pairs(tr):
+        out = Counter()
+        for k, v in K.items():
+            for g in grams(tr(v)):
+                for o in idx.get(g, ()):
+                    if o != k and (k, o) not in dup:
+                        out[tuple(sorted((k, o)))] += 1
+        return out
+    fw, rv = pairs(lambda v: v), pairs(lambda v: v[::-1])
+    print(f"H52c: pairs forward {len(fw)}; reversed {len(rv)}")
+    print("   forward: " + ", ".join(f"{a}~{b}({n})" for (a, b), n in fw.most_common(40)))
+    print("   reversed: " + ", ".join(f"{a}~{b}({n})" for (a, b), n in rv.most_common(40)))
+
+
+def h50c():
+    """H50 inside one recording team (UR khipus only), so the measuring protocol is the same."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    med = {}
+    for k, cs in K.items():
+        if not k.startswith("UR"):
+            continue
+        d = []
+        for r in cs:
+            ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+            d += [b - a for a, b in zip(ps, ps[1:]) if b > a]
+        if len(d) >= 10 and site.get(k):
+            med[k] = statistics.median(d)
+    ks = list(med)
+    def within(lab):
+        g = defaultdict(list)
+        for k in ks:
+            g[lab[k]].append(med[k])
+        v = [x for x in g.values() if len(x) >= 3]
+        return sum(statistics.pvariance(x) * len(x) for x in v) / sum(len(x) for x in v)
+    labs = [site[k] for k in ks]
+    real = within(dict(zip(ks, labs)))
+    sims = []
+    for _ in range(1000):
+        R.shuffle(labs)
+        sims.append(within(dict(zip(ks, labs))))
+    print(f"H50c: UR khipus {len(ks)}; within-site variance {real:.2f} vs shuffled {statistics.mean(sims):.2f}; "
+          f"p {(1 + sum(x <= real for x in sims)) / 1001:.4f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
