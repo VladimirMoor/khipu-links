@@ -2205,6 +2205,16 @@ def h148():
         print(f"H148: {n} places, n={t}: " + " ".join(f"{d}:{c[d] / base:.2f}" for d in range(1, 10)))
 
 
+def h149():
+    """Just above, not just below: values one or two above a round number are commoner than one or two below it, although the
+    value distribution falls (which favours the values below)."""
+    V = all_values()
+    for d in list(range(20, 100, 10)) + [100, 200, 300, 400, 500, 1000]:
+        b = V.get(d - 2, 0) + V.get(d - 1, 0)
+        a = V.get(d + 1, 0) + V.get(d + 2, 0)
+        print(f"H149: {d}: {d - 2}–{d - 1} {b}, {d}: {V.get(d, 0)}, {d + 1}–{d + 2} {a}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
