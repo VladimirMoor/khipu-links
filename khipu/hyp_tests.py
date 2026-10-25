@@ -3119,6 +3119,30 @@ def h285():
     print("   " + "; ".join(f"{s_} {statistics.median(v):.2f} (n={len(v)})" for s_, v in sorted(g.items(), key=lambda kv: -len(kv[1])) if len(v) >= 4))
 
 
+def h286():
+    """Heads are carried amounts: head values (≥ 100, not round) recur on other khipus more often than non-head values of the
+    same khipus in the same size range (duplicates excluded)."""
+    K = hyp.okr()
+    _, _, dup = hyp.atlas()
+    where = defaultdict(set)
+    for k, cs in K.items():
+        for r in cs:
+            if r["value"] >= 100 and r["value"] % 10:
+                where[r["value"]].add(k)
+    h = [0, 0]; o = [0, 0]
+    for k, cs in K.items():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) < 4 or v.count(max(v)) > 1 or v[0] != max(v):
+                continue
+            for i, x in enumerate(v):
+                if x >= 100 and x % 10:
+                    hit = any(o_ != k and (k, o_) not in dup for o_ in where[x])
+                    t = h if i == 0 else o
+                    t[0] += 1; t[1] += hit
+    print(f"H286: head values found on another khipu {h[1]}/{h[0]} ({h[1] / max(1, h[0]):.3f}); other cords {o[1]}/{o[0]} ({o[1] / max(1, o[0]):.3f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
