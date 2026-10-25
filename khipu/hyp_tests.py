@@ -2656,6 +2656,33 @@ def h198():
     print(f"H198: groups {n}; first cord largest {first}, last cord largest {last}, expected {exp:.0f}; heads equal to the sum of the rest {tot_heads}")
 
 
+def h199():
+    """The head is marked: the first cord of a group has a colour different from the rest of its group more often than the
+    other positions do (each position compared with the colours of the remaining cords of its group)."""
+    K = hyp.okr()
+    by_pos = Counter()
+    n_pos = Counter()
+    big_odd = big_same = 0
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            if len(g) < 4:
+                continue
+            for i, r in enumerate(g):
+                others = [x["colour"] for j, x in enumerate(g) if j != i]
+                odd = r["colour"] not in others
+                key = "first" if i == 0 else "last" if i == len(g) - 1 else "middle"
+                by_pos[key] += odd
+                n_pos[key] += 1
+            v = [r["value"] for r in g]
+            if v[0] == max(v) and v.count(max(v)) == 1:
+                if g[0]["colour"] not in [x["colour"] for x in g[1:]]:
+                    big_odd += 1
+                else:
+                    big_same += 1
+    print("H199: colour unique within the group — " + ", ".join(f"{k} {by_pos[k] / n_pos[k]:.3f} ({n_pos[k]})" for k in ("first", "middle", "last")))
+    print(f"   largest-first groups: head colour unique {big_odd}, shared {big_same}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
