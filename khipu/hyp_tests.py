@@ -2962,6 +2962,29 @@ def h230():
               + f"; ±{m}: {frac(-m):.4f}, {frac(m):.4f} (1/{m} = {1 / m:.4f})")
 
 
+def h234():
+    """Heads are a khipu-level convention: per-khipu share of groups whose first cord is largest is overdispersed against the
+    expectation from group sizes (simulated with each group's own 1/n)."""
+    K = hyp.okr()
+    rows = []
+    for k, cs in K.items():
+        gs = []
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) >= 4 and sum(1 for x in v if x) >= 3 and v.count(max(v)) == 1:
+                gs.append((v[0] == max(v), len(v)))
+        if len(gs) >= 6:
+            rows.append((sum(f for f, _ in gs) / len(gs), [n for _, n in gs]))
+    h = Counter(min(9, int(s_ * 10)) for s_, _ in rows)
+    sim = Counter()
+    for _ in range(50):
+        for _, ns in rows:
+            x = sum(R.random() < 1 / n for n in ns) / len(ns)
+            sim[min(9, int(x * 10))] += 1 / 50
+    print(f"H234: khipus {len(rows)}; share of groups with the head first, by tenths — observed: " + " ".join(f"{i / 10:.1f}:{h[i]}" for i in range(10)))
+    print("   expected from group sizes: " + " ".join(f"{i / 10:.1f}:{sim[i]:.0f}" for i in range(10)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
