@@ -550,7 +550,8 @@
      "Colour order by value between khipus of one site: mean Spearman 0.077 against 0.002 (max 0.114) over 196 pairs — no shared vocabulary.",
      "AS068 (Ascher) against UR281 (Urton), one object: colour equal on 61 of 181 matched cords; YB ↔ AB 56 times.",
      "On the KFG-only khipus light cords are larger in 32 of 63 against 26.9 (p = 0.10): the same direction, not significant on its own.",
-     "Inside khipus colour marks a category with its own size of numbers: within groups (group means removed, colours shuffled only inside groups) colour explains values beyond chance in 52 of 162 khipus (1.6 expected), up to R² 0.93 on AS178; table columns keep one colour in 710 of 1716 cases (267 by chance), and such columns are more uniform in size (sd of log values 0.53 against 0.69). On UR1097 (Pachacamac) white cords with a short coloured top carry 1 under G0/BB tags and 5 under BG/VB/0D tags (R² 0.94)."
+     "Inside khipus colour marks a category with its own size of numbers: within groups (group means removed, colours shuffled only inside groups) colour explains values beyond chance in 52 of 162 khipus (1.6 expected), up to R² 0.93 on AS178; table columns keep one colour in 710 of 1716 cases (267 by chance), and such columns are more uniform in size (sd of log values 0.53 against 0.69). On UR1097 (Pachacamac) white cords with a short coloured top carry 1 under G0/BB tags and 5 under BG/VB/0D tags (R² 0.94).",
+     "Two-colour cords also keep to their own columns (slot agreement 8838 against 7686), without being larger. Single cords separating groups are mostly blank coloured markers (72% of coloured separators are empty) and are coloured unlike the head of the next group (same colour 188 of 763 against 347 for a random cord)."
     ],
     "levels": {
      "numbers": "Large quantities sit on light cords more often than on dark ones.",
@@ -566,7 +567,8 @@
      "Turns on one cord correlate (UR055 0.34; UR052 0.38–0.58); knots per cord against turns per knot: UR144 −0.57, UR050, UR054 and UR055 about −0.3; the lowest knot is shorter on UR144 (38 of 42 cords), UR039 (23 of 26) and UR055 (101 of 147).",
      "Bundle sizes: four cords in 23 of 24 bundles on UR144, 29 of 41 on UR055, 15 of 20 on UR112, 13 of 22 on UR110, 18 of 27 on UR052; six on UR050 (24 of 29); two on UR039 (41 of 45). Cords of one bundle share their number of clusters more often than random cords (UR112 0.75 against 0.45) but are identical in only 17–24%.",
      "Fibre of pendants: canuto khipus camelid 0.66, human hair 0.24, cotton 0.10 (UR039 only); all other khipus cotton 0.53, unrecorded 0.45, camelid 0.009. Human-hair pendants: UR055 178, UR052 39, UR004 9. Wrapped ends (TT, 359 cords) only on UR055, UR050, UR112, UR052 and UR039.",
-     "All eight have long knots of one direction (S in the OKR records; decimal khipus 83 S against 100 Z), no subsidiaries and no knotless cords. A value signature from the KFG data finds no further canuto khipu among the 757. More widely, 51 of 611 OKR khipus (8%) show signs of non-decimal recording (long knots, figure-eights or spirals in upper places, or long knots of 10+ turns), twice as often among khipus without provenance (12%) as among those with a known site (6%)."
+     "All eight have long knots of one direction (S in the OKR records; decimal khipus 83 S against 100 Z), no subsidiaries and no knotless cords. A value signature from the KFG data finds no further canuto khipu among the 757. More widely, 51 of 611 OKR khipus (8%) show signs of non-decimal recording (long knots, figure-eights or spirals in upper places, or long knots of 10+ turns), twice as often among khipus without provenance (12%) as among those with a known site (6%).",
+     "Their knots stand 11.5–19 cm apart on a cord (median spacing of the other khipus: 7 cm), without a shared grid of heights; the cords of one bundle carry their top knot at a similar height (7 of 8 khipus), so a bundle was knotted together."
     ],
     "levels": {
      "numbers": "Turn counts are bunched at 4–7 and do not behave like counted quantities.",
@@ -598,7 +600,8 @@
      "Blank rows (≥ 4 cords, no knots, colour pattern of a filled row of the same khipu): AS074 11, UR1057 5, UR1113 4, AS075 4, AS203 3, UR128 3 and six more khipus; they stand anywhere along the khipu (first third 8, middle 18, last third 12).",
      "Row totals of 200 tables against values permuted within each column: less even in 110, more even in 4 (10 expected each).",
      "Eight subsidiaries per pendant: UR093 on 90 pendants, HP038 on 24; the pendant equals the sum of its eight subsidiaries 19 times on UR093.",
-     "Replicated on KFG-only khipus: empty-slot agreement 3602 against 3491 (max 3513) in 65 sets."
+     "Replicated on KFG-only khipus: empty-slot agreement 3602 against 3491 (max 3513) in 65 sets.",
+     "Rows share one profile: within a table the same columns are large in every row (mean row-to-row Spearman 0.51, positive in 85% of 11,916 row pairs); the first column is the largest in 93 of 242 tables (47.5 expected), and zeros fall in the small columns (Spearman −0.27, negative in 145 tables against 55) — an empty slot means 'none'. Tables of one site share their column-size profile weakly (Spearman 0.15 against 0.02 elsewhere, p = 0.003)."
     ],
     "levels": {
      "numbers": "Row totals differ more than the columns allow; blank rows hold no knots at all.",
