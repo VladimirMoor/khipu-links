@@ -336,7 +336,8 @@
     "summary": "AS143 group 4 equals AS149 groups 1 + 2 in all five positions (17436 = 8653 + 8783, 41883 = 20640 + 21243, …). All shares have the same composition (22.4 : 10.4 : 54.4 : 12.8 %); in ninths of the AS143 total the shares are 2 + 2 + 2 + 2 + 1. The lot 1430, 670, 3410, 820 recurs on AS179.",
     "evidence": [
      "The only exact cross-khipu vector sum in the corpus (offset baseline 0–2, small values only).",
-     "Two 2/9 shares of AS143 are equal within 1 (41062 and 41061) with a substitution between goods (p ≈ 0.005)."
+     "Two 2/9 shares of AS143 are equal within 1 (41062 and 41061) with a substitution between goods (p ≈ 0.005).",
+     "A second, different composition from the same Berlin Ica batch: UR1120 (AS120, VA47083) has four rows of eight cords whose totals (146,087, 49,783, 62,850, 33,455) are divided by the same shares, about 17.6 / 0.7 / 29.3 / 1.3 / 13.2 / 3.8 / 4.5 / 29.7% (rows 1 and 2 proportional within 1–2%: 25,691 / 8,731 = 2.94, 43,372 / 14,701 = 2.95). A corpus-wide search for proportional groups finds only UR1120, AS143 (UR1143) and the Inkawasi nine-part tables."
     ],
     "levels": {
      "numbers": "AS143 group 4 = AS149 groups 1 + 2 in all five positions: the only exact sum between two khipus in a scan of the whole corpus; the same scan with the numbers shifted by 1–7 finds 0–2, all on small values.",
@@ -384,12 +385,13 @@
    },
    "ur269": {
     "title": "Inkawasi UR269: five supply streams, each with its own deduction",
-    "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size. The place-1 records are deliveries of the stream recorded in full on UR275 (deduction 47 throughout) and its copy UR266: 5 of 10 place-1 records reappear on UR275, at one fixed offset (block b of UR269 = entry b + 15 of UR275), while places 2–5 are found on no other khipu. Each block is one round of five streams in a fixed order, each stream with its own fixed deduction. Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268, but no record-level link was found.",
+    "summary": "In blocks of five records [gross, net, deduction] the deduction is 47, 46, 46, 44, 25 by place, whatever the deposit size. The place-1 records are deliveries of the stream recorded in full on UR275 (deduction 47 throughout) and its copy UR266: 5 of 10 place-1 records reappear on UR275, at one fixed offset (block b of UR269 = entry b + 15 of UR275), while places 2–5 are found on no other khipu. Each block is one round of five streams in a fixed order, each stream with its own fixed deduction. Urton & Chu (2015, 2018, 2019) list UR269 as having no repeating value. The five place deductions add up to 208, the fixed deduction of UR268, and UR268 follows UR275 record by record: its 16 four-cord rows rise and fall with the 16 four-cord rows of UR275, in the same order, 3 to 6 times larger (Spearman 0.83, p ≈ 0.0002) — UR268 records whole rounds of the five streams, UR275 the first stream.",
     "evidence": [
      "33 of 43 deductions equal their place value; 17 when records are shuffled within blocks (p ≈ 0.0005).",
      "Place 1 on UR275: 5 of 10 records (0.5 expected); places 2–4: 0, 1, 1. All five at one offset; 5,000 permutations of block order reach at most 4 (p ≈ 0.0002).",
      "UR269 keeps the arithmetic where UR275 slips: 1827 = 1780 + 47 on UR269, 1825 on UR275.",
-     "No other Inkawasi khipu shows a place dependence (all p > 0.8)."
+     "No other Inkawasi khipu shows a place dependence (all p > 0.8).",
+     "UR268 against UR275, four-cord rows in order: Spearman 0.83 (16 rows; ratio 2.8–5.9, median 4.4 ≈ 208/47); the same at other offsets ≤ 0.39; three-cord rows do not follow (−0.13). Three UR268 rows lie within 3–12 of UR269 round totals (9332 / 9335, 10,385 / 10,379, 8527 / 8515)."
     ],
     "levels": {
      "numbers": "The deduction equals the value of its place in 33 of 43 records (17 when records are shuffled within blocks; p ≈ 0.0005). The place-1 records reappear on UR275 at one offset (5 matches; at most 4 in 5,000 permutations of block order; p ≈ 0.0002). Both patterns were found by exploring the Inkawasi khipus; a search of the whole corpus finds the place-set deduction nowhere else.",
