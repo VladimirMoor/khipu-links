@@ -1993,6 +1993,52 @@ def h137():
     print(f"H137: khipus {n}; median with subsidiaries larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
 
 
+def h138():
+    """Subsidiary colour: subsidiaries share their pendant's colour more often than a random pendant of the same khipu does;
+    and their colours are less varied (one attribute colour per khipu)."""
+    K = hyp.okr()
+    same = rnd = n = 0
+    ent_s, ent_p = [], []
+    def H_(xs):
+        c = Counter(xs)
+        t = sum(c.values())
+        return -sum(v / t * math.log2(v / t) for v in c.values())
+    for cs in K.values():
+        cols = [r["colour"][0] for r in cs if r["colour"][0]]
+        subs = [(r["colour"][0], s_["colour"][0]) for r in cs for s_ in r["subs"] if r["colour"][0] and s_["colour"][0]]
+        if len(subs) < 5:
+            continue
+        for pc, sc in subs:
+            n += 1; same += pc == sc; rnd += R.choice(cols) == sc
+        sc_ = [sc for _, sc in subs]
+        ent_s.append(H_(sc_))
+        ent_p.append(statistics.mean(H_(R.sample(cols, len(sc_))) for _ in range(50)) if len(cols) >= len(sc_) else H_(cols))
+    print(f"H138: subsidiaries {n}; same colour as own pendant {same / n:.3f}; as a random pendant {rnd / n:.3f}")
+    print(f"   colour entropy: subsidiaries {statistics.mean(ent_s):.2f} bits; random pendants of the same number {statistics.mean(ent_p):.2f}")
+
+
+def h139():
+    """Proportional subsidiaries: within khipus, the subsidiary sum grows with the pendant value (Spearman over pendants
+    with both ≥ 1), beyond subsidiary sums shuffled among the same pendants."""
+    K = hyp.okr()
+    rs, ss = [], []
+    for cs in K.values():
+        xs = [(r["value"], sum(s_["value"] for s_ in r["subs"])) for r in cs if r["value"] >= 1 and r["subs"]]
+        xs = [x for x in xs if x[1] >= 1]
+        if len(xs) < 8:
+            continue
+        a, b = [x for x, _ in xs], [y for _, y in xs]
+        rs.append(spearman(a, b))
+        q = b[:]
+        sims = []
+        for _ in range(50):
+            R.shuffle(q)
+            sims.append(spearman(a, q))
+        ss.append(statistics.mean(sims))
+    print(f"H139: khipus {len(rs)}; mean Spearman (pendant, subsidiary sum) {statistics.mean(rs):.3f}; shuffled {statistics.mean(ss):.3f}; "
+          f"positive in {sum(r > 0 for r in rs)}, negative in {sum(r < 0 for r in rs)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
