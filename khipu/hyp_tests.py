@@ -2615,6 +2615,25 @@ def h196():
     print(f"   pairs where one side is the other rounded to a ten (|Δ| ≤ 5): {rd}")
 
 
+def h197():
+    """Ranked lists: within groups (≥ 5 non-zero cords) values are in descending (or ascending) order more often than with the
+    cords shuffled; also the mean within-group Spearman between position and value."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g if r["value"] > 0] for cs in K.values() for g in hyp.groups(cs)]
+    G = [v for v in G if len(v) >= 5 and len(set(v)) >= 3]
+    desc = lambda v: all(a >= b for a, b in zip(v, v[1:]))
+    asc = lambda v: all(a <= b for a, b in zip(v, v[1:]))
+    rd, ra = sum(desc(v) for v in G), sum(asc(v) for v in G)
+    sd, sa = [], []
+    for _ in range(200):
+        q = [R.sample(v, len(v)) for v in G]
+        sd.append(sum(desc(v) for v in q)); sa.append(sum(asc(v) for v in q))
+    rho = [spearman(list(range(len(v))), v) for v in G]
+    print(f"H197: groups {len(G)}; descending {rd} (shuffled {statistics.mean(sd):.1f}, max {max(sd)}); ascending {ra} "
+          f"(shuffled {statistics.mean(sa):.1f}, max {max(sa)}); mean ρ(position, value) {statistics.mean(rho):.3f}; "
+          f"ρ ≤ −0.5 {sum(r <= -0.5 for r in rho)}, ρ ≥ 0.5 {sum(r >= 0.5 for r in rho)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
