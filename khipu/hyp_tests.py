@@ -2487,6 +2487,43 @@ def h183():
     print("   ≥ 0.9 round: " + ", ".join(f"{k} ({site.get(k)}, {n})" for s_, n, k in rows if s_ >= 0.9))
 
 
+def h185():
+    """Plan and fact: a rounded khipu (≥ 50% round values) repeats, in order, another khipu's non-round values rounded to the
+    nearest ten. Aligned matches (round value on A = rounded non-round value on B) against B's cords shuffled."""
+    sys.path.insert(0, str(hyp.ROOT / "khipu"))
+    import copies_losses
+    K = {k: [r["value"] for r in cs] for k, cs in hyp.okr().items()}
+    _, site, dup = hyp.atlas()
+    rnd = {k for k, v in K.items() if len([x for x in v if x >= 10]) >= 10 and sum(1 for x in v if x >= 10 and x % 10 == 0) / len([x for x in v if x >= 10]) >= 0.5}
+    def r10(x):
+        return int(round(x / 10.0)) * 10 if x % 10 and x >= 10 else -1 - x
+    def score(A, B):
+        Y = [r10(b) for b in B]
+        pr = copies_losses.align(A, Y)
+        return sum(1 for i, j in pr if A[i] == Y[j] and A[i] >= 20)
+    out = []
+    for a in rnd:
+        A = K[a]
+        setA = {x for x in A if x >= 20 and x % 10 == 0}
+        for b, B in K.items():
+            if b == a or (a, b) in dup:
+                continue
+            if len(setA & {r10(x) for x in B}) < 4:
+                continue
+            sc = score(A, B)
+            if sc >= 4:
+                sims = []
+                for _ in range(20):
+                    q = B[:]
+                    R.shuffle(q)
+                    sims.append(score(A, q))
+                out.append((sc, max(sims), a, b))
+    out.sort(reverse=True)
+    print(f"H185: rounded khipus {len(rnd)}; pairs with ≥ 4 aligned rounded matches {len(out)}; above all 20 shuffles: {sum(1 for sc, mx, _, _ in out if sc > mx)}")
+    for sc, mx, a, b in out[:15]:
+        print(f"   {a} ({site.get(a)}) ← {b} ({site.get(b)}): {sc} vs shuffled max {mx}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
