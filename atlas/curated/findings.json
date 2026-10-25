@@ -506,12 +506,12 @@
   "status": "new",
   "title": "How khipus were made: cords cut to length, a local spacing, colours in passes",
   "place": [],
-  "summary": "Cords were cut to one length before knotting: a single knot takes about 0.54 cm of cord and each turn of a long knot 0.64 cm, and lengths with this taken back are more even in 311 of 392 khipus. The distance between places on a cord is a local habit: about 6.5 cm at Pachacamac, Inkawasi and Huaquerones, 7.5 cm at Ica, about 12 cm at Santa and Chancay; khipus of one site are more alike than with sites shuffled (p = 0.001), also after allowing for cord length and number of places and within one recording team. Inside a group, cords of one colour carry their units at a height of their own, as if each colour was knotted in a separate pass. The units digit 9 is written about 40% less often than 1–6 (7 and 8 also less), in every recording team and at most sites: long knots of many turns were avoided. In khipus made only of long knots (UR050–UR055 and a few others) the turns bunch at 4–7 and are not decimal digits.",
+  "summary": "Cords were cut to one length before knotting: a single knot takes about 0.54 cm of cord and each turn of a long knot 0.64 cm, and lengths with this taken back are more even in 311 of 392 khipus. The distance between places on a cord is a local habit: about 6.5 cm at Pachacamac, Inkawasi and Huaquerones, 7.5 cm at Ica, about 12 cm at Santa and Chancay; khipus of one site are more alike than with sites shuffled (p = 0.001), also after allowing for cord length and number of places and within one recording team. Inside a group, cords of one colour carry their units at a height of their own, as if each colour was knotted in a separate pass. The units digit 9 is written about 40% less often than 1–6 (7 and 8 also less), in every recording team and at most sites; the shortfall fades in large values (9: 0.46 in two-digit, 0.84 in four-digit numbers), so it arises when small amounts were counted, not when knots were tied. In khipus made only of long knots (UR050–UR055 and a few others) the turns bunch at 4–7 and are not decimal digits.",
   "evidence": [
    "Knots shorten cords: within khipus, length against knots and turns −0.30; 0.54 cm per single knot, 0.64 cm per turn (18,751 cords). Length plus knot allowance: CV 0.159 against 0.180 measured and 0.172 with the allowance dealt out at random; more even in 311 of 392 khipus.",
    "Median spacing between adjacent place clusters per khipu (202 khipus): within-site variance 2.89 against 3.95 with sites shuffled (p = 0.001); residuals after length and number of places p = 0.001; UR khipus only p = 0.001.",
    "Height of the units cluster by cord colour, within groups and among cords with the same number of places: R² 0.165 against 0.100 with colours shuffled inside groups (max 0.122).",
-   "Values ≥ 100 with a non-zero units digit, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62 (UR 0.63, AS 0.46, HP 0.69). Long knots by turns: 6 2009, 7 1536, 8 1133, 9 838.",
+   "Values ≥ 100 with a non-zero units digit, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62 (UR 0.63, AS 0.46, HP 0.69). By number of places, digit 9: two 0.46, three 0.55, four 0.84, five 1.24.",
    "Long-knot-only khipus: turns sd 0.9–1.5 at means 4–7 (units of ordinary khipus sd ≈ 2.3); turns on one cord correlate (UR055 0.34, UR052 0.38–0.58)."
   ],
   "khipus": [
@@ -526,7 +526,7 @@
   "levels": {
    "numbers": "Knot size is measurable in the cord lengths; digits 7–9 are rarer in the units place.",
    "structure": "Place spacing differs by site; colours within a group differ in knot height.",
-   "reading": "Cords were prepared to a set length, knotted to a local measure, colour by colour. A count of almost ten was apparently often written as ten."
+   "reading": "Cords were prepared to a set length, knotted to a local measure, colour by colour. A count of almost ten was apparently often recorded as ten when small amounts were counted."
   }
  },
  {
