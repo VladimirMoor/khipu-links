@@ -517,7 +517,8 @@
     "evidence": [
      "Folgen von 2–6 Schnüren einer Gruppe, alle ≥ 10, mit Unterschied genau 1 und einer Summe, die ein Vielfaches von 10, aber nicht durch die Länge teilbar ist: 24 gegenüber einem Mittel von 8,3 (max. 21) bei um ±1…±5 verschobener Summe; Vielfache von 100: 6 gegenüber 0,5 (max. 2).",
      "Gruppensummen als Vielfache von 100, in Gruppen mit ≥ 2 nicht runden Schnüren und ohne Summenschnur: 36 gegenüber 14,9 (max. 26 von 20 Verschiebungen); zum Beispiel UR015 5500 = 500 + 1782 + 1796 + 1422, UR275 4000, UR187 12 600, HP030 7200.",
-     "In den 172 KFG-Khipus, die nicht in OKR sind, nicht gefunden (0 gegenüber 1,0) – die Anteile beruhen auf drei Khipus."
+     "In den 172 KFG-Khipus, die nicht in OKR sind, nicht gefunden (0 gegenüber 1,0) – die Anteile beruhen auf drei Khipus.",
+     "Runde Hunderter als Gruppensummen aus nicht runden Teilen wiederholen sich bei den Nur-KFG-Khipus nicht (6 gegenüber 1–11 bei verschobenen Summen)."
     ],
     "levels": {
      "numbers": "Gleiche Anteile mit einzeln verteiltem Rest; runde Gruppensummen aus nicht runden Teilen.",
@@ -531,7 +532,8 @@
     "evidence": [
      "Knoten verkürzen Schnüre: innerhalb der Khipus Länge gegen Knoten und Windungen −0,30; 0,54 cm je einfachem Knoten, 0,64 cm je Windung (18 751 Schnüre). Länge plus Knotenzuschlag: VK 0,159 gegenüber 0,180 gemessen und 0,172 bei zufällig verteiltem Zuschlag; gleichmäßiger in 311 von 392 Khipus.",
      "Medianer Abstand benachbarter Stellen je Khipu (202 Khipus): Varianz innerhalb des Fundorts 2,89 gegenüber 3,95 bei gemischten Fundorten (p = 0,001); Residuen nach Länge und Stellenzahl p = 0,001; nur UR-Khipus p = 0,001.",
-     "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122)."
+     "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122).",
+     "Die Schnüre einer Gruppe wurden als eine Partie geschnitten: Benachbarte Schnüre unterscheiden sich in der Länge innerhalb einer Gruppe um 8,9 %, über eine Gruppengrenze hinweg um 12,8 %, so viel wie zufällige Paare (13,2 %); bei Nur-KFG-Khipus 12,4 %, 16,7 % und 17,4 %."
     ],
     "levels": {
      "numbers": "Die Knotengröße ist in den Schnurlängen messbar.",
@@ -546,7 +548,8 @@
      "Median heller gegen dunkler Schnüre innerhalb der Khipus: bei hellen größer in 119 von 211 gegenüber 87,0 bei gemischten Farben (p = 0,002); ohne Summen 114 von 203 gegenüber 83,8 (p = 0,002).",
      "Kopien: beständige Farbzuordnung bei 375 von 548 gepaarten Schnüren gegenüber 286,6 (p = 0,003); bei zyklischen Verschiebungen der Kopienfarben p < 0,05 bei UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
      "Rangfolge der Farben nach Wert zwischen Khipus eines Fundorts: mittlerer Spearman 0,077 gegenüber 0,002 (max. 0,114) über 196 Paare – kein gemeinsames Vokabular.",
-     "AS068 (Ascher) gegen UR281 (Urton), ein Objekt: gleiche Farbe bei 61 von 181 gepaarten Schnüren; YB ↔ AB 56-mal."
+     "AS068 (Ascher) gegen UR281 (Urton), ein Objekt: gleiche Farbe bei 61 von 181 gepaarten Schnüren; YB ↔ AB 56-mal.",
+     "Bei den Nur-KFG-Khipus sind helle Schnüre in 32 von 63 größer gegenüber 26,9 (p = 0,10): dieselbe Richtung, für sich nicht signifikant."
     ],
     "levels": {
      "numbers": "Große Mengen stehen häufiger auf hellen als auf dunklen Schnüren.",
@@ -575,7 +578,8 @@
     "evidence": [
      "Werte ≥ 100 mit Einerziffer ungleich null, relativ zum Mittel der Ziffern 1–6: 7 0,81, 8 0,87, 9 0,62; nach Aufnahmeteam UR 0,63, AS 0,46, HP 0,69; nach Fundort Inkawasi 0,73, Pachacamac 0,63, Ica 0,28.",
      "Einerziffer 9 nach Stellenzahl: zwei 0,46, drei 0,55, vier 0,84, fünf 1,24 – der Mangel verschwindet in großen Werten, er rührt also nicht von vollen Schnüren her.",
-     "Endungen 8–9 gegen 1–2 (Werte 20–999): 0,54 insgesamt, unter 1 an jedem Fundort mit genug Daten (Ica 0,35 … Inkawasi 0,72). Es ist kein Runden auf den nächsten Zehner: die Ziffer 1 ist nicht seltener (0,95)."
+     "Endungen 8–9 gegen 1–2 (Werte 20–999): 0,54 insgesamt, unter 1 an jedem Fundort mit genug Daten (Ica 0,35 … Inkawasi 0,72). Es ist kein Runden auf den nächsten Zehner: die Ziffer 1 ist nicht seltener (0,95).",
+     "Wiederholt bei den 172 KFG-Khipus, die nicht in OKR sind: Endungen 8–9 gegen 1–2 sind 376 gegen 569 (0,66). Khipus unterscheiden sich auch darin, wie stark sie runden: 41 Khipus haben 60–100 % runde Werte (nach dem Korpusanteil keines erwartet), 98 haben 0–10 % (20 erwartet)."
     ],
     "levels": {
      "numbers": "Einer 7–9 sind in kleinen Zahlen knapp, und Werte knapp unter runden Zahlen fehlen.",
@@ -590,7 +594,8 @@
      "220 Sätze gleich großer Gruppen: Übereinstimmung leerer Positionen 12 002 gegenüber 11 436 bei innerhalb der Gruppen gemischten Schnüren (max. 11 488).",
      "Leere Zeilen (≥ 4 Schnüre, keine Knoten, Farbmuster einer gefüllten Zeile desselben Khipu): AS074 11, UR1057 5, UR1113 4, AS075 4, AS203 3, UR128 3 und sechs weitere Khipus; sie stehen irgendwo (erstes Drittel 8, Mitte 18, letztes Drittel 12).",
      "Zeilensummen von 200 Tabellen gegenüber innerhalb jeder Spalte permutierten Werten: ungleichmäßiger in 110, gleichmäßiger in 4 (je 10 erwartet).",
-     "Acht Nebenschnüre je Hängeschnur: UR093 an 90 Hängeschnüren, HP038 an 24; bei UR093 entspricht die Hängeschnur 19-mal der Summe ihrer acht Nebenschnüre."
+     "Acht Nebenschnüre je Hängeschnur: UR093 an 90 Hängeschnüren, HP038 an 24; bei UR093 entspricht die Hängeschnur 19-mal der Summe ihrer acht Nebenschnüre.",
+     "Wiederholt bei Nur-KFG-Khipus: Übereinstimmung leerer Positionen 3602 gegenüber 3491 (max. 3513) in 65 Sätzen."
     ],
     "levels": {
      "numbers": "Zeilensummen unterscheiden sich stärker, als die Spalten erlauben; leere Zeilen tragen keinen einzigen Knoten.",
@@ -604,12 +609,29 @@
     "evidence": [
      "Median der Hängeschnüre mit und ohne Nebenschnüre innerhalb der Khipus: größer mit Nebenschnüren in 141 von 251 gegenüber 107,6 bei gemischten Kennzeichen (p = 0,002).",
      "Summe der Nebenschnüre gegen Hängeschnur (Hängeschnüre ≥ 10 mit Nebenschnüren): kleiner 2582, gleich 83, größer 639, leer 542; medianes Verhältnis 0,27 (Dezile 0,02–1,98). Spearman innerhalb der Khipus 0,243 gegenüber 0,000 gemischt.",
-     "Nicht runde Hängeschnüre: Summe der Nebenschnüre genau 1/2 der Hängeschnur 21-mal gegenüber 18,5 für 1/2 der Hängeschnur ± 1; 1/3 19 gegenüber 17; 1/4 20 gegenüber 18; 1/6 27 gegenüber 19."
+     "Nicht runde Hängeschnüre: Summe der Nebenschnüre genau 1/2 der Hängeschnur 21-mal gegenüber 18,5 für 1/2 der Hängeschnur ± 1; 1/3 19 gegenüber 17; 1/4 20 gegenüber 18; 1/6 27 gegenüber 19.",
+     "Wiederholt bei Nur-KFG-Khipus: mittlerer Spearman (Hängeschnur, Summe der Nebenschnüre) 0,32, positiv in 52 von 64 Khipus."
     ],
     "levels": {
      "numbers": "Nebenschnüre hängen an großen Einträgen und wachsen mit ihnen, ohne festen Bruchteil.",
      "structure": "Die meisten Nebenschnüre sind kleiner als ihre Hängeschnur.",
      "reading": "Eine Nebenschnur bestimmt einen Teil des Eintrags, an dem sie hängt – „davon so viele“."
+    }
+   },
+   "heads": {
+    "title": "Eine Gruppe beginnt mit ihrem größten Eintrag",
+    "summary": "Die erste Schnur einer Gruppe ist etwa doppelt so oft die größte wie zufällig: in 710 von 2529 Gruppen gegenüber 375 erwarteten, die letzte dagegen nur in 334. Dasselbe gilt für die 172 KFG-Khipus, die nicht in OKR sind (373 von 890 gegenüber 129). Es ist eine örtliche Regel: Der Kopf steht in Inkawasi 3,3-mal häufiger als zufällig vorn, in Ica und zwischen Ica und Pisco 2- bis 3-mal, in Pachacamac und Leymebamba nur 1,3-mal und in Paracas (60 Gruppen) und Santa (50) nie. Der Kopf ist selten eine Summe (21 Fälle entsprechen der Summe der übrigen): Er ist der Haupteintrag, vor die kleineren gestellt. Farbe markiert eher die Ränder der Gruppen als den Kopf: Eine Farbe, die sonst in der Gruppe nicht vorkommt, trägt die erste Schnur in 28 % und die letzte in 30 % der Gruppen, die Schnüre dazwischen in 17 %. Einzelne Schnüre zwischen Gruppen sind manchmal Summen, meist der folgenden Gruppe (9 von 94 gegenüber 1,7 bei verschobenen Summen).",
+    "evidence": [
+     "Gruppen mit ≥ 4 Schnüren, ≥ 3 ungleich null und einem einzigen Maximum: erste Schnur größte 710, letzte 334, erwartet Σ1/n = 375; Köpfe gleich der Summe der übrigen 21. Nur-KFG-Khipus: 373 und 91 gegenüber 129.",
+     "Farbe einzigartig in der Gruppe: erste Schnur 0,279 (3821 Gruppen), Schnüre dazwischen 0,171, letzte 0,297.",
+     "Einschnurgruppen zwischen Gruppen mit ≥ 3 Schnüren (94): gleich der Summe der folgenden Gruppe 9 (verschobene Summen 1,7), der vorhergehenden 4 (1,5), beider 1 (0,3).",
+     "Nach Fundort, erste Schnur größte gegenüber Erwartung: Inkawasi 141 von 263 Gruppen (3,33), zwischen Ica und Pisco 3,12, Ica 2,09, Nazca 1,83, Pachacamac 1,29, Leymebamba 1,33, Ocucaje 0,32, Paracas 0, Santa 0.",
+     "Köpfe sind eine Konvention des ganzen Khipu: In 31 von 145 Khipus haben 80–100 % der Gruppen ihre größte Schnur vorn (nach den Gruppengrößen keines erwartet); die Köpfe eines Khipu teilen eine Farbe (0,84 gegenüber 0,56 bei anderen Schnüren), meist Weiß (W 0,56 gegenüber 0,30). Wo es keine Köpfe gibt, ist die Reihenfolge umgekehrt: Innerhalb der Gruppen steigen die Werte in Leymebamba, Paracas, Santa und Ocucaje (mittleres ρ +0,11 bis +0,15) und fallen in Inkawasi, Arica und Ica (−0,15 bis −0,18), alle vom selben Team aufgenommen. Die Summen-Khipus von Inkawasi (UR278, UR270) haben keine Köpfe, ihre Detail-Khipus schon."
+    ],
+    "levels": {
+     "numbers": "Der größte Wert einer Gruppe steht bevorzugt vorn; er ist selten die Summe der anderen.",
+     "structure": "Farbe rahmt eine Gruppe an beiden Enden ein.",
+     "reading": "Gruppen wurden vom Haupteintrag abwärts geschrieben – zuerst der wichtigste Posten, die Gemeinschaft oder Kategorie."
     }
    }
   },
@@ -831,6 +853,14 @@
    "Header codes and hidden bases": {
     "title": "Kopfcodes und verborgene Basen",
     "text": "Die erste Gruppe eines Khipu kehrt auf anderen Khipus desselben Fundorts nicht als Ortscode wieder (1 gemeinsame Folge, wie an anderen Positionen), und Khipus, die nie eine Ziffer über 5 oder 6 verwenden, sind Khipus kleiner Zählungen oder Canuto-Khipus, keine Aufzeichnungen in einer anderen Basis."
+   },
+   "Moieties, ranked lists and pairs": {
+    "title": "Hälften, Ranglisten und Paare",
+    "text": "Gruppen kommen nicht in Hälftenpaaren (1–2, 3–4 enger in 147 von 316 Khipus, 2–3, 4–5 in 167), sind keine Ranglisten, wenn man die große erste Schnur beiseitelässt (11 streng fallende Gruppen gegenüber 7,1), und benachbarte Schnüre bilden keine Mann–Frau-Paare."
+   },
+   "Plans and facts; rounding in copies": {
+    "title": "Plan und Ergebnis; Runden in Kopien",
+    "text": "Kein gerundetes Khipu wiederholt die Werte eines anderen auf Zehner gerundet (74 Paare über allen Mischungen gegenüber etwa 150 erwarteten); Kopien wurden nicht gerundet, und sie wiederholen die Schnurlängen des Originals nicht, sobald der Längenverbrauch der Knoten herausgerechnet ist."
    }
   },
   "sources": {
