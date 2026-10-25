@@ -2233,6 +2233,33 @@ def h150():
         print(f"H150: {s_:12} ending 8–9: {b:5}; ending 1–2: {a:5}; ratio {b / max(1, a):.2f}")
 
 
+def h157():
+    """The long-knot genre is the canuto khipus: khipus whose pendants are gathered in wrapped bundles (cord.CANUTO_ID) are
+    the ones with nearly constant long knots. Rank of the canuto khipus among all khipus with ≥ 40 long knots by turn sd."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    inv = {k: (n or "").strip() for k, n in c.execute("select KHIPU_ID, INVESTIGATOR_NUM from khipu_main")}
+    can, tot = Counter(), Counter()
+    for kid, cid in c.execute("select KHIPU_ID, CANUTO_ID from cord where CORD_LEVEL = 1"):
+        tot[inv[kid]] += 1
+        can[inv[kid]] += cid not in (None, "", 0, "0")
+    K = hyp.okr()
+    rows = []
+    for k, cs in K.items():
+        t = [kk[3] for r in cs for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "L" and kk[3] >= 2]
+        if len(t) >= 40:
+            rows.append((statistics.pstdev(t), k, can[k] / max(1, tot[k])))
+    rows.sort()
+    ranks = [i + 1 for i, (_, k, f) in enumerate(rows) if f > 0]
+    n, m = len(rows), len(ranks)
+    # probability that m random khipus all fall within the top max(ranks)
+    top = max(ranks)
+    p_ = math.comb(top, m) / math.comb(n, m)
+    print(f"H157: khipus with canutos {sum(1 for k in tot if can[k])}; among {n} khipus with ≥ 40 long knots their ranks by turn sd: {ranks}; "
+          f"P(all {m} within the lowest {top}) = {p_:.2e}")
+    print("   " + ", ".join(f"{k} sd {sd:.2f} canuto {f:.0%}" for sd, k, f in rows[:14]))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
