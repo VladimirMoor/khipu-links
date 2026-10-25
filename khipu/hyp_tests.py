@@ -2398,6 +2398,36 @@ def h177():
           f"neighbours closer than the 5% shuffle quantile in {nb_real} (expected {0.05 * n:.1f})")
 
 
+def h178():
+    """Planned cutting: groups that were going to carry more knots got longer cords. Between groups of one khipu, measured
+    length falls with knot load less steeply than within groups (where length was fixed and knots only use it up)."""
+    K = hyp.okr()
+    def slope(xs, ys):
+        mx, my = statistics.mean(xs), statistics.mean(ys)
+        den = sum((x - mx) ** 2 for x in xs)
+        return sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / den if den else None
+    within, between = [], []
+    for cs in K.values():
+        gx, gy = [], []
+        for g in hyp.groups(cs):
+            xs, ys = [], []
+            for r in g:
+                if r["length"] > 0 and r["term"] != "B":
+                    load = sum(kk[3] * 0.64 / 0.54 if kk[0] == "L" else 1 for cl in r["clusters"] for kk in cl["knots"])
+                    xs.append(load); ys.append(r["length"])
+            if len(xs) >= 4:
+                s_ = slope(xs, ys)
+                if s_ is not None:
+                    within.append(s_)
+                gx.append(statistics.mean(xs)); gy.append(statistics.mean(ys))
+        if len(gx) >= 5:
+            s_ = slope(gx, gy)
+            if s_ is not None:
+                between.append(s_)
+    print(f"H178: within-group slope of length on knot load (cm per single-knot equivalent): median {statistics.median(within):.2f} "
+          f"({len(within)} groups); between groups of a khipu: median {statistics.median(between):.2f} ({len(between)} khipus)")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
