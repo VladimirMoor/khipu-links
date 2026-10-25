@@ -496,6 +496,65 @@
      "structure": "Only places inside runs where both neighbours agree are counted, so the alignment is certain.",
      "reading": "A copy was made by counting the knots of each place; a broken cord on one khipu can be restored from the other. Values that differ by more are probably separate records rather than slips."
     }
+   },
+   "knot_positions": {
+    "title": "Copies were knotted with the original at hand",
+    "summary": "In linked copies the height of the units knots follows the original cord by cord: after removing the number of places, the knots above and the slow drift along the khipu, the positions still agree in 7 of 11 pairs (p < 0.01), for example AS175 → UR233 (0.81) and → UR232 (0.79), UR1114 ~ UR1123 (0.81). The slips in copies are ancient: the two modern records of the same khipus (KFG and OKR) disagree mostly by a whole place (×10, 123 of 344 differences), while copies disagree by single knots. Some khipus also repeat part of themselves: 7 khipus hold a run of at least four cords a second time, against 1–3 when their cords are shuffled — among them both HP055 and UR1084, and UR085, where 1498, 19, 73, 27 come back 113 cords later on cords of other colours.",
+    "evidence": [
+     "Units height on matched equal cords (same number of places), corrected for places, knots above and an 11-cord running median: permutation p < 0.01 in 7 of 11 pairs — AS175 ~ UR233 0.81, AS175 ~ UR232 0.79, UR1114 ~ UR1123 0.81, UR267A ~ UR255 0.59, UR053C ~ UR053B 0.59, UR266 ~ UR275 0.46, HP055 ~ UR1084 0.44.",
+     "KFG against OKR records of the same khipus: 98.0% of values equal; of the differences 123 of 344 are shifts by a place (×10) and few are one-knot slips — the opposite of copies.",
+     "Internal repeats (a run of ≥ 4 cords with ≥ 3 different non-round values ≥ 10, repeated at a shift ≥ 2): 7 khipus against 1–3 in 10 shuffles."
+    ],
+    "levels": {
+     "numbers": "Copies repeat the knot heights of the original, not only its numbers; modern records differ in another way (whole places).",
+     "structure": "Only matched cords with equal values and the same number of places are compared, after removing what the number itself explains.",
+     "reading": "Whoever knotted the copy had the original (or an exact model) beside them and followed it cord by cord. Single-knot slips between copies were made then, not by modern readers."
+    }
+   },
+   "shares": {
+    "title": "Round amounts divided into equal shares",
+    "summary": "Runs of neighbouring cords that differ by exactly one and add up to a round number not divisible by their count are three times more common than chance: 100 as 33, 33, 34; 140 as 46, 47, 47; 2000 as 666, 667, 667 (24 runs against 8.3 for shifted sums, at most 21; sums of whole hundreds 6 against 0.5). UR190 (Huaca Pérez, Lima) repeats thirds of 100, 140 and 70 in the same places of groups 15–20; UR1161 (Ica) divides 100 into six (16, 16, 17, 17, 17, 17) beside 50 and 50; HP037 (Huacho) holds thirds of 400, 800, 2000 and 4000. The remainder always goes one by one to some of the shares — integer division done the same way at three places. More widely, group sums are whole hundreds about 2.4 times more often than expected even when their parts are not round, as if a set amount was spread out.",
+    "evidence": [
+     "Runs of 2–6 cords in one group, all ≥ 10, differing by exactly 1, sum a multiple of 10 not divisible by the run length: 24 against a mean of 8.3 (max 21) when the sum is shifted by ±1…±5; multiples of 100: 6 against 0.5 (max 2).",
+     "Group sums that are multiples of 100, groups with ≥ 2 non-round cords and no total cord inside: 36 against 14.9 (max 26 of 20 shifts); for example UR015 5500 = 500 + 1782 + 1796 + 1422, UR275 4000, UR187 12,600, HP030 7200.",
+     "Not found in the 172 KFG khipus that are not in OKR (0 against 1.0) — the shares rest on three khipus."
+    ],
+    "levels": {
+     "numbers": "Equal shares with the remainder spread by ones; round group sums made of non-round parts.",
+     "structure": "Shares sit next to each other inside one group and, on UR190, in the same places of consecutive groups.",
+     "reading": "Some khipus record the division of a fixed amount among three or six — this is division, unlike the fractions p/q between groups, which were not found."
+    }
+   },
+   "making": {
+    "title": "How khipus were made: cords cut to length, a local spacing, colours in passes",
+    "summary": "Cords were cut to one length before knotting: a single knot takes about 0.54 cm of cord and each turn of a long knot 0.64 cm, and lengths with this taken back are more even in 311 of 392 khipus. The distance between places on a cord is a local habit: about 6.5 cm at Pachacamac, Inkawasi and Huaquerones, 7.5 cm at Ica, about 12 cm at Santa and Chancay; khipus of one site are more alike than with sites shuffled (p = 0.001), also after allowing for cord length and number of places and within one recording team. Inside a group, cords of one colour carry their units at a height of their own, as if each colour was knotted in a separate pass. The units digit 9 is written about 40% less often than 1–6 (7 and 8 also less), in every recording team and at most sites: long knots of many turns were avoided. In khipus made only of long knots (UR050–UR055 and a few others) the turns bunch at 4–7 and are not decimal digits.",
+    "evidence": [
+     "Knots shorten cords: within khipus, length against knots and turns −0.30; 0.54 cm per single knot, 0.64 cm per turn (18,751 cords). Length plus knot allowance: CV 0.159 against 0.180 measured and 0.172 with the allowance dealt out at random; more even in 311 of 392 khipus.",
+     "Median spacing between adjacent place clusters per khipu (202 khipus): within-site variance 2.89 against 3.95 with sites shuffled (p = 0.001); residuals after length and number of places p = 0.001; UR khipus only p = 0.001.",
+     "Height of the units cluster by cord colour, within groups and among cords with the same number of places: R² 0.165 against 0.100 with colours shuffled inside groups (max 0.122).",
+     "Values ≥ 100 with a non-zero units digit, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62 (UR 0.63, AS 0.46, HP 0.69). Long knots by turns: 6 2009, 7 1536, 8 1133, 9 838.",
+     "Long-knot-only khipus: turns sd 0.9–1.5 at means 4–7 (units of ordinary khipus sd ≈ 2.3); turns on one cord correlate (UR055 0.34, UR052 0.38–0.58)."
+    ],
+    "levels": {
+     "numbers": "Knot size is measurable in the cord lengths; digits 7–9 are rarer in the units place.",
+     "structure": "Place spacing differs by site; colours within a group differ in knot height.",
+     "reading": "Cords were prepared to a set length, knotted to a local measure, colour by colour. A count of almost ten was apparently often written as ten."
+    }
+   },
+   "colours": {
+    "title": "Colour: a category inside a khipu, given new colours in copies",
+    "summary": "Within khipus light cords (W, AB, YB) carry larger numbers than dark ones (KB, MB, DB, B): in 119 of 211 khipus against 87 by chance (p = 0.002), and the same without total cords. In copies the matched cords rarely keep their colour (UR1114 ~ UR1123: 1 of 29), yet each colour of one khipu goes over to one colour of the other (375 of 548 cords against 287; 7 of 8 testable pairs when the colour blocks are kept and only shifted), also for pairs recorded by the same team. Colour marked a category consistently, but the copy gave it a colour of its own; there is no colour vocabulary shared by the khipus of one site. A warning for comparisons: recorders name colours differently — one khipu described by Ascher and by Urton agrees on 61 of 181 cords (Ascher's YB is Urton's AB).",
+    "evidence": [
+     "Median value of light against dark cords within khipus: light larger in 119 of 211 against 87.0 with colours shuffled (p = 0.002); totals removed 114 of 203 against 83.8 (p = 0.002).",
+     "Copies: consistent colour mapping 375 of 548 matched cords against 286.6 (p = 0.003); circular shifts of the target colours p < 0.05 in UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
+     "Colour order by value between khipus of one site: mean Spearman 0.077 against 0.002 (max 0.114) over 196 pairs — no shared vocabulary.",
+     "AS068 (Ascher) against UR281 (Urton), one object: colour equal on 61 of 181 matched cords; YB ↔ AB 56 times."
+    ],
+    "levels": {
+     "numbers": "Large quantities sit on light cords more often than on dark ones.",
+     "structure": "In copies, colour groups map one to one although the colours themselves change.",
+     "reading": "Colour separated kinds of entries within a record; the meaning was kept in copying, the dye was not. Colours from different recorders need a translation table."
+    }
    }
   },
   "timeline": {
@@ -680,6 +739,34 @@
    "Formats and find-places": {
     "title": "Formats and find-places",
     "text": "Khipus that repeat the same unit of group sizes (for example six cords and a separator) come from the same place no more often than chance (19% of pairs against 11%, p = 0.20; 22 khipus with a known place). Column profiles that look alike point to the same place only weakly (20% against 8%, p = 0.06), although they do find second recordings and known links."
+   },
+   "Calendar, ceque and lunar numbers": {
+    "title": "Calendar, ceque and lunar numbers",
+    "text": "365, 360, 354, 328 (shrines of the ceque system) and 41 (ceque lines) occur no more often than their neighbouring numbers; neighbouring cords of 29 and 30 (alternating months) are as rare as 28/29 or 30/31; groups per khipu do not peak at 12, 24, 30 or 36, and no khipu has 360 or 365 pendants."
+   },
+   "Number curiosities": {
+    "title": "Number curiosities",
+    "text": "Golden-ratio neighbours (1.618 ± 1%: 67 against 70–179 for nearby ratios), squares (95 against 80–150 for shifted values), triangular numbers, primes, arithmetic progressions of four cords, doubling runs (x, 2x, 4x) and multiples of 9 are all at the level of their baselines."
+   },
+   "Check digits, running and grand totals": {
+    "title": "Check digits, running and grand totals",
+    "text": "No first or last cord of a group equals the sum of the others modulo 9 or 10 beyond chance (244 against 257); no cord equals the sum of all the cords before it in its group (11 against 17.5); no cord holds the total of the whole khipu (2 khipus against 1–3); the difference between the totals of neighbouring groups is not written down (0.173 against 0.163–0.175 for groups further apart)."
+   },
+   "Mirror copies": {
+    "title": "Mirror copies",
+    "text": "No khipu copies another read from the other end: runs of five informative values shared in reverse are as many as forward ones and come only from repetitive runs, while every known copy runs forward."
+   },
+   "Threes and half-units": {
+    "title": "Threes and half-units",
+    "text": "Group sizes 3, 6, 9 and 12 are not preferred over 4, 5 and 10 when each khipu is counted once; 50, 500 and 5000 are not more frequent than 40 and 60, 400 and 600 — only 100 and 1000 stand out."
+   },
+   "Cords that count cords": {
+    "title": "Cords that count cords",
+    "text": "No cord gives the number of cords of its group or of the khipu more often than that number ± 1–3, and no runs number the cords (v, v + 1, v + 2, v + 3: 4 against 2.4 for shuffled cords)."
+   },
+   "Benford's law and counting in pairs": {
+    "title": "Benford's law and counting in pairs",
+    "text": "First digits do not follow Benford's law anywhere (43% ones against 30%: values sit just above powers of ten), and no khipus count in pairs: khipus with at least 80% even non-round values are 2 against 0.2 expected, one of them because of repeats."
    }
   },
   "sources": {

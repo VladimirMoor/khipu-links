@@ -496,6 +496,65 @@
      "structure": "Gezählt werden nur Stellen innerhalb von Abschnitten, in denen beide Nachbarn übereinstimmen; so ist die Zuordnung sicher.",
      "reading": "Eine Kopie entstand durch Zählen der Knoten jeder Stelle; eine abgerissene Schnur eines Khipus lässt sich aus dem anderen wiederherstellen. Stärker abweichende Werte sind wohl getrennte Aufzeichnungen, keine Versehen."
     }
+   },
+   "knot_positions": {
+    "title": "Kopien wurden mit dem Original vor Augen geknüpft",
+    "summary": "In verknüpften Kopien folgt die Höhe der Einerknoten dem Original Schnur für Schnur: Nach Abzug der Stellenzahl, der Knoten darüber und der langsamen Drift entlang des Khipu stimmen die Positionen noch in 7 von 11 Paaren überein (p < 0,01), etwa AS175 → UR233 (0,81) und → UR232 (0,79), UR1114 ~ UR1123 (0,81). Die Fehler der Kopien sind alt: Die beiden modernen Aufnahmen derselben Khipus (KFG und OKR) weichen meist um eine ganze Stelle ab (×10, 123 von 344 Abweichungen), Kopien dagegen um einzelne Knoten. Manche Khipus wiederholen auch einen Teil von sich selbst: 7 Khipus enthalten eine Folge von mindestens vier Schnüren ein zweites Mal, gegenüber 1–3 bei gemischten Schnüren – darunter HP055 und UR1084 sowie UR085, wo 1498, 19, 73, 27 113 Schnüre später auf Schnüren anderer Farben wiederkehren.",
+    "evidence": [
+     "Höhe der Einer auf gepaarten gleichen Schnüren (gleiche Stellenzahl), bereinigt um Stellen, Knoten darüber und einen gleitenden Median über 11 Schnüre: Permutations-p < 0,01 in 7 von 11 Paaren – AS175 ~ UR233 0,81, AS175 ~ UR232 0,79, UR1114 ~ UR1123 0,81, UR267A ~ UR255 0,59, UR053C ~ UR053B 0,59, UR266 ~ UR275 0,46, HP055 ~ UR1084 0,44.",
+     "KFG- gegen OKR-Aufnahmen derselben Khipus: 98,0 % gleiche Werte; von den Abweichungen sind 123 von 344 Verschiebungen um eine Stelle (×10) und nur wenige Ein-Knoten-Fehler – das Gegenteil der Kopien.",
+     "Innere Wiederholungen (Folge von ≥ 4 Schnüren mit ≥ 3 verschiedenen nicht runden Werten ≥ 10, wiederholt mit Abstand ≥ 2): 7 Khipus gegenüber 1–3 in 10 Mischungen."
+    ],
+    "levels": {
+     "numbers": "Kopien wiederholen die Knotenhöhen des Originals, nicht nur seine Zahlen; moderne Aufnahmen weichen anders ab (ganze Stellen).",
+     "structure": "Verglichen werden nur gepaarte Schnüre mit gleichen Werten und gleicher Stellenzahl, nach Abzug dessen, was die Zahl selbst erklärt.",
+     "reading": "Wer die Kopie knüpfte, hatte das Original (oder eine genaue Vorlage) neben sich und folgte ihm Schnur für Schnur. Ein-Knoten-Fehler zwischen Kopien entstanden damals, nicht bei modernen Lesern."
+    }
+   },
+   "shares": {
+    "title": "Runde Mengen in gleiche Anteile geteilt",
+    "summary": "Folgen benachbarter Schnüre, die sich um genau eins unterscheiden und zusammen eine runde Zahl ergeben, die nicht durch ihre Anzahl teilbar ist, sind dreimal häufiger als zufällig: 100 als 33, 33, 34; 140 als 46, 47, 47; 2000 als 666, 667, 667 (24 Folgen gegenüber 8,3 bei verschobenen Summen, höchstens 21; Summen aus ganzen Hunderten 6 gegenüber 0,5). UR190 (Huaca Pérez, Lima) wiederholt Drittel von 100, 140 und 70 an denselben Stellen der Gruppen 15–20; UR1161 (Ica) teilt 100 in sechs (16, 16, 17, 17, 17, 17) neben 50 und 50; HP037 (Huacho) enthält Drittel von 400, 800, 2000 und 4000. Der Rest wird stets einzeln auf einige Anteile verteilt – ganzzahlige Division, an drei Orten gleich ausgeführt. Allgemeiner sind Gruppensummen etwa 2,4-mal häufiger ganze Hunderter als erwartet, auch wenn ihre Teile nicht rund sind, als würde eine festgesetzte Menge verteilt.",
+    "evidence": [
+     "Folgen von 2–6 Schnüren einer Gruppe, alle ≥ 10, mit Unterschied genau 1 und einer Summe, die ein Vielfaches von 10, aber nicht durch die Länge teilbar ist: 24 gegenüber einem Mittel von 8,3 (max. 21) bei um ±1…±5 verschobener Summe; Vielfache von 100: 6 gegenüber 0,5 (max. 2).",
+     "Gruppensummen als Vielfache von 100, in Gruppen mit ≥ 2 nicht runden Schnüren und ohne Summenschnur: 36 gegenüber 14,9 (max. 26 von 20 Verschiebungen); zum Beispiel UR015 5500 = 500 + 1782 + 1796 + 1422, UR275 4000, UR187 12 600, HP030 7200.",
+     "In den 172 KFG-Khipus, die nicht in OKR sind, nicht gefunden (0 gegenüber 1,0) – die Anteile beruhen auf drei Khipus."
+    ],
+    "levels": {
+     "numbers": "Gleiche Anteile mit einzeln verteiltem Rest; runde Gruppensummen aus nicht runden Teilen.",
+     "structure": "Die Anteile stehen nebeneinander in einer Gruppe und bei UR190 an denselben Stellen aufeinanderfolgender Gruppen.",
+     "reading": "Manche Khipus halten die Aufteilung einer festen Menge auf drei oder sechs fest – das ist Division, anders als Brüche p/q zwischen Gruppen, die nicht gefunden wurden."
+    }
+   },
+   "making": {
+    "title": "Wie Khipus gemacht wurden: Schnüre auf Länge geschnitten, ein örtlicher Abstand, Farben in Durchgängen",
+    "summary": "Die Schnüre wurden vor dem Knüpfen auf eine Länge geschnitten: Ein einfacher Knoten verbraucht etwa 0,54 cm Schnur, jede Windung eines langen Knotens 0,64 cm, und mit diesem Zuschlag sind die Längen in 311 von 392 Khipus gleichmäßiger. Der Abstand zwischen den Stellen auf einer Schnur ist eine örtliche Gewohnheit: etwa 6,5 cm in Pachacamac, Inkawasi und Huaquerones, 7,5 cm in Ica, etwa 12 cm in Santa und Chancay; Khipus eines Fundorts ähneln sich mehr als bei gemischten Fundorten (p = 0,001), auch nach Berücksichtigung von Schnurlänge und Stellenzahl und innerhalb eines Aufnahmeteams. Innerhalb einer Gruppe tragen Schnüre einer Farbe ihre Einer in eigener Höhe, als wäre jede Farbe in einem eigenen Durchgang geknüpft worden. Die Ziffer 9 bei den Einern ist etwa 40 % seltener als 1–6 (auch 7 und 8 seltener), bei allen Aufnahmeteams und an den meisten Fundorten: Lange Knoten mit vielen Windungen wurden gemieden. In Khipus nur aus langen Knoten (UR050–UR055 und wenige weitere) häufen sich die Windungen bei 4–7 und sind keine Dezimalziffern.",
+    "evidence": [
+     "Knoten verkürzen Schnüre: innerhalb der Khipus Länge gegen Knoten und Windungen −0,30; 0,54 cm je einfachem Knoten, 0,64 cm je Windung (18 751 Schnüre). Länge plus Knotenzuschlag: VK 0,159 gegenüber 0,180 gemessen und 0,172 bei zufällig verteiltem Zuschlag; gleichmäßiger in 311 von 392 Khipus.",
+     "Medianer Abstand benachbarter Stellen je Khipu (202 Khipus): Varianz innerhalb des Fundorts 2,89 gegenüber 3,95 bei gemischten Fundorten (p = 0,001); Residuen nach Länge und Stellenzahl p = 0,001; nur UR-Khipus p = 0,001.",
+     "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122).",
+     "Werte ≥ 100 mit Einerziffer ungleich null, relativ zum Mittel der Ziffern 1–6: 7 0,81, 8 0,87, 9 0,62 (UR 0,63, AS 0,46, HP 0,69). Lange Knoten nach Windungen: 6 2009, 7 1536, 8 1133, 9 838.",
+     "Khipus nur aus langen Knoten: Standardabweichung der Windungen 0,9–1,5 bei Mitteln von 4–7 (Einer gewöhnlicher Khipus ≈ 2,3); Windungen einer Schnur korrelieren (UR055 0,34, UR052 0,38–0,58)."
+    ],
+    "levels": {
+     "numbers": "Die Knotengröße ist in den Schnurlängen messbar; die Ziffern 7–9 sind bei den Einern seltener.",
+     "structure": "Der Stellenabstand unterscheidet sich je Fundort; innerhalb einer Gruppe unterscheiden sich Farben in der Knotenhöhe.",
+     "reading": "Schnüre wurden auf eine feste Länge vorbereitet und nach einem örtlichen Maß Farbe für Farbe geknüpft. Fast zehn wurde offenbar oft als zehn geschrieben."
+    }
+   },
+   "colours": {
+    "title": "Farbe: eine Kategorie im Khipu, in Kopien umgefärbt",
+    "summary": "Innerhalb der Khipus tragen helle Schnüre (W, AB, YB) größere Zahlen als dunkle (KB, MB, DB, B): in 119 von 211 Khipus gegenüber 87 zufällig (p = 0,002), ebenso ohne Summenschnüre. In Kopien behalten gepaarte Schnüre selten ihre Farbe (UR1114 ~ UR1123: 1 von 29), doch jede Farbe des einen Khipu geht in eine Farbe des anderen über (375 von 548 Schnüren gegenüber 287; 7 von 8 prüfbaren Paaren, wenn die Farbblöcke erhalten bleiben und nur verschoben werden), auch bei Paaren, die dasselbe Team aufgenommen hat. Farbe markierte eine Kategorie beständig, die Kopie gab ihr aber eine eigene Farbe; ein gemeinsames Farbvokabular der Khipus eines Fundorts gibt es nicht. Vorsicht beim Vergleichen: Aufnehmende benennen Farben verschieden – ein Khipu, beschrieben von Ascher und von Urton, stimmt bei 61 von 181 Schnüren überein (Aschers YB ist Urtons AB).",
+    "evidence": [
+     "Median heller gegen dunkler Schnüre innerhalb der Khipus: bei hellen größer in 119 von 211 gegenüber 87,0 bei gemischten Farben (p = 0,002); ohne Summen 114 von 203 gegenüber 83,8 (p = 0,002).",
+     "Kopien: beständige Farbzuordnung bei 375 von 548 gepaarten Schnüren gegenüber 286,6 (p = 0,003); bei zyklischen Verschiebungen der Kopienfarben p < 0,05 bei UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
+     "Rangfolge der Farben nach Wert zwischen Khipus eines Fundorts: mittlerer Spearman 0,077 gegenüber 0,002 (max. 0,114) über 196 Paare – kein gemeinsames Vokabular.",
+     "AS068 (Ascher) gegen UR281 (Urton), ein Objekt: gleiche Farbe bei 61 von 181 gepaarten Schnüren; YB ↔ AB 56-mal."
+    ],
+    "levels": {
+     "numbers": "Große Mengen stehen häufiger auf hellen als auf dunklen Schnüren.",
+     "structure": "In Kopien entsprechen sich Farbgruppen eins zu eins, obwohl die Farben selbst wechseln.",
+     "reading": "Farbe trennte Arten von Einträgen innerhalb einer Aufzeichnung; beim Kopieren blieb die Bedeutung erhalten, nicht der Farbstoff. Farben verschiedener Aufnehmender brauchen eine Entsprechungstabelle."
+    }
    }
   },
   "timeline": {
@@ -680,6 +739,34 @@
    "Formats and find-places": {
     "title": "Formate und Fundorte",
     "text": "Khipus, die dieselbe Einheit von Gruppengrößen wiederholen (etwa sechs Schnüre und ein Trenner), stammen nicht häufiger als zufällig vom selben Ort (19 % der Paare gegenüber 11 %, p = 0,20; 22 Khipus mit bekanntem Fundort). Ähnliche Spaltenprofile weisen nur schwach auf denselben Ort (20 % gegenüber 8 %, p = 0,06), finden aber Zweitaufnahmen und bekannte Verbindungen."
+   },
+   "Calendar, ceque and lunar numbers": {
+    "title": "Kalender-, Ceque- und Mondzahlen",
+    "text": "365, 360, 354, 328 (Heiligtümer des Ceque-Systems) und 41 (Ceque-Linien) kommen nicht häufiger vor als ihre Nachbarzahlen; benachbarte Schnüre mit 29 und 30 (wechselnde Monate) sind so selten wie 28/29 oder 30/31; die Gruppenzahl je Khipu hebt 12, 24, 30 oder 36 nicht hervor, und kein Khipu hat 360 oder 365 Hängeschnüre."
+   },
+   "Number curiosities": {
+    "title": "Zahlenkuriositäten",
+    "text": "Nachbarn im Goldenen Schnitt (1,618 ± 1 %: 67 gegenüber 70–179 bei nahen Verhältnissen), Quadratzahlen (95 gegenüber 80–150 bei verschobenen Werten), Dreieckszahlen, Primzahlen, arithmetische Folgen aus vier Schnüren, Verdopplungen (x, 2x, 4x) und Vielfache von 9 – alles auf dem Niveau der Vergleichswerte."
+   },
+   "Check digits, running and grand totals": {
+    "title": "Prüfziffern, laufende Summen und Gesamtsummen",
+    "text": "Keine erste oder letzte Schnur einer Gruppe entspricht der Summe der übrigen modulo 9 oder 10 über den Zufall hinaus (244 gegenüber 257); keine Schnur entspricht der Summe aller vorhergehenden ihrer Gruppe (11 gegenüber 17,5); keine Schnur hält die Summe des ganzen Khipu (2 Khipus gegenüber 1–3); die Differenz der Summen benachbarter Gruppen wird nicht notiert (0,173 gegenüber 0,163–0,175 bei weiter entfernten Gruppen)."
+   },
+   "Mirror copies": {
+    "title": "Spiegelkopien",
+    "text": "Kein Khipu kopiert ein anderes, vom anderen Ende gelesen: Rückwärts geteilte Folgen von fünf aussagekräftigen Werten sind so zahlreich wie vorwärts geteilte und stammen nur aus sich wiederholenden Folgen, während jede bekannte Kopie vorwärts läuft."
+   },
+   "Threes and half-units": {
+    "title": "Dreiheiten und halbe Einheiten",
+    "text": "Zählt man jedes Khipu einmal, werden Gruppengrößen 3, 6, 9 und 12 nicht gegenüber 4, 5 und 10 bevorzugt; 50, 500 und 5000 sind nicht häufiger als 40 und 60, 400 und 600 – nur 100 und 1000 heben sich ab."
+   },
+   "Cords that count cords": {
+    "title": "Schnüre, die Schnüre zählen",
+    "text": "Keine Schnur gibt die Zahl der Schnüre ihrer Gruppe oder des Khipu häufiger an als diese Zahl ± 1–3, und keine Folgen nummerieren die Schnüre (v, v + 1, v + 2, v + 3: 4 gegenüber 2,4 bei gemischten Schnüren)."
+   },
+   "Benford's law and counting in pairs": {
+    "title": "Benfordsches Gesetz und Zählen in Paaren",
+    "text": "Die ersten Ziffern folgen nirgends dem Benfordschen Gesetz (43 % Einsen gegenüber 30 %: die Werte liegen knapp über Zehnerpotenzen), und es gibt keine Khipus, die in Paaren zählen: Khipus mit mindestens 80 % geraden nicht runden Werten sind 2 gegenüber 0,2 erwarteten, eines davon wegen Wiederholungen."
    }
   },
   "sources": {

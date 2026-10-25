@@ -496,6 +496,65 @@
      "structure": "Solo se cuentan lugares dentro de tramos donde ambos vecinos coinciden, así la alineación es segura.",
      "reading": "Una copia se hacía contando los nudos de cada lugar; una cuerda rota en un khipu puede restaurarse desde el otro. Los valores que difieren más son probablemente registros distintos, no descuidos."
     }
+   },
+   "knot_positions": {
+    "title": "Las copias se anudaron con el original a la vista",
+    "summary": "En las copias vinculadas, la altura de los nudos de unidades sigue al original cuerda por cuerda: tras descontar el número de posiciones, los nudos superiores y la deriva lenta a lo largo del khipu, las posiciones aún coinciden en 7 de 11 pares (p < 0,01), por ejemplo AS175 → UR233 (0,81) y → UR232 (0,79), UR1114 ~ UR1123 (0,81). Los errores de las copias son antiguos: los dos registros modernos de los mismos khipus (KFG y OKR) difieren sobre todo en una posición entera (×10, 123 de 344 diferencias), mientras que las copias difieren en nudos sueltos. Algunos khipus también repiten parte de sí mismos: 7 khipus contienen una segunda vez una serie de al menos cuatro cuerdas, frente a 1–3 con las cuerdas barajadas; entre ellos HP055 y UR1084, y UR085, donde 1498, 19, 73, 27 vuelven 113 cuerdas después en cuerdas de otros colores.",
+    "evidence": [
+     "Altura de las unidades en cuerdas emparejadas iguales (mismo número de posiciones), corregida por posiciones, nudos superiores y una mediana móvil de 11 cuerdas: p de permutación < 0,01 en 7 de 11 pares — AS175 ~ UR233 0,81, AS175 ~ UR232 0,79, UR1114 ~ UR1123 0,81, UR267A ~ UR255 0,59, UR053C ~ UR053B 0,59, UR266 ~ UR275 0,46, HP055 ~ UR1084 0,44.",
+     "Registros KFG frente a OKR de los mismos khipus: 98,0 % de valores iguales; de las diferencias, 123 de 344 son desplazamientos de una posición (×10) y pocas son errores de un nudo — lo contrario que en las copias.",
+     "Repeticiones internas (serie de ≥ 4 cuerdas con ≥ 3 valores no redondos distintos ≥ 10, repetida con un desplazamiento ≥ 2): 7 khipus frente a 1–3 en 10 barajados."
+    ],
+    "levels": {
+     "numbers": "Las copias repiten la altura de los nudos del original, no solo sus números; los registros modernos difieren de otro modo (posiciones enteras).",
+     "structure": "Solo se comparan cuerdas emparejadas con valores iguales y el mismo número de posiciones, tras quitar lo que explica el propio número.",
+     "reading": "Quien anudó la copia tenía el original (o un modelo exacto) al lado y lo siguió cuerda por cuerda. Los errores de un nudo entre copias se hicieron entonces, no por los lectores modernos."
+    }
+   },
+   "shares": {
+    "title": "Cantidades redondas divididas en partes iguales",
+    "summary": "Las series de cuerdas vecinas que difieren exactamente en uno y suman un número redondo no divisible por su cantidad son tres veces más frecuentes que por azar: 100 como 33, 33, 34; 140 como 46, 47, 47; 2000 como 666, 667, 667 (24 series frente a 8,3 con sumas desplazadas, máximo 21; sumas de centenas enteras 6 frente a 0,5). UR190 (Huaca Pérez, Lima) repite tercios de 100, 140 y 70 en los mismos lugares de los grupos 15–20; UR1161 (Ica) divide 100 en seis (16, 16, 17, 17, 17, 17) junto a 50 y 50; HP037 (Huacho) guarda tercios de 400, 800, 2000 y 4000. El resto siempre se reparte de uno en uno entre algunas partes: división entera hecha del mismo modo en tres lugares. Más en general, las sumas de grupo son centenas enteras unas 2,4 veces más a menudo de lo esperado aunque sus partes no sean redondas, como si se repartiera una cantidad fijada.",
+    "evidence": [
+     "Series de 2–6 cuerdas de un grupo, todas ≥ 10, que difieren exactamente en 1, con suma múltiplo de 10 no divisible por la longitud: 24 frente a una media de 8,3 (máx. 21) al desplazar la suma ±1…±5; múltiplos de 100: 6 frente a 0,5 (máx. 2).",
+     "Sumas de grupo múltiplos de 100, en grupos con ≥ 2 cuerdas no redondas y sin cuerda de total dentro: 36 frente a 14,9 (máx. 26 de 20 desplazamientos); por ejemplo UR015 5500 = 500 + 1782 + 1796 + 1422, UR275 4000, UR187 12 600, HP030 7200.",
+     "No aparece en los 172 khipus de KFG que no están en OKR (0 frente a 1,0): las partes descansan en tres khipus."
+    ],
+    "levels": {
+     "numbers": "Partes iguales con el resto repartido de uno en uno; sumas de grupo redondas hechas de partes no redondas.",
+     "structure": "Las partes están juntas dentro de un grupo y, en UR190, en los mismos lugares de grupos consecutivos.",
+     "reading": "Algunos khipus registran el reparto de una cantidad fija entre tres o seis: es división, a diferencia de las fracciones p/q entre grupos, que no se encontraron."
+    }
+   },
+   "making": {
+    "title": "Cómo se hacían los khipus: cuerdas cortadas a medida, un espaciado local, colores por tandas",
+    "summary": "Las cuerdas se cortaban a una misma longitud antes de anudarlas: un nudo simple consume unos 0,54 cm de cuerda y cada vuelta de un nudo largo 0,64 cm, y las longitudes con esto devuelto son más parejas en 311 de 392 khipus. La distancia entre posiciones en una cuerda es una costumbre local: unos 6,5 cm en Pachacamac, Inkawasi y Huaquerones, 7,5 cm en Ica, unos 12 cm en Santa y Chancay; los khipus de un mismo sitio se parecen más que con los sitios barajados (p = 0,001), también tras corregir por longitud de cuerda y número de posiciones y dentro de un mismo equipo de registro. Dentro de un grupo, las cuerdas de un color llevan sus unidades a una altura propia, como si cada color se anudara en una tanda aparte. El dígito 9 en las unidades se escribe un 40 % menos que 1–6 (7 y 8 también menos), en todos los equipos de registro y en casi todos los sitios: se evitaban los nudos largos de muchas vueltas. En los khipus hechos solo de nudos largos (UR050–UR055 y algunos más) las vueltas se agrupan en 4–7 y no son dígitos decimales.",
+    "evidence": [
+     "Los nudos acortan las cuerdas: dentro de los khipus, longitud frente a nudos y vueltas −0,30; 0,54 cm por nudo simple, 0,64 cm por vuelta (18 751 cuerdas). Longitud más el margen de los nudos: CV 0,159 frente a 0,180 medida y 0,172 con el margen repartido al azar; más pareja en 311 de 392 khipus.",
+     "Espaciado mediano entre posiciones vecinas por khipu (202 khipus): varianza dentro del sitio 2,89 frente a 3,95 con sitios barajados (p = 0,001); residuos tras longitud y número de posiciones p = 0,001; solo khipus UR p = 0,001.",
+     "Altura de las unidades según el color de la cuerda, dentro de grupos y entre cuerdas con el mismo número de posiciones: R² 0,165 frente a 0,100 con colores barajados dentro de los grupos (máx. 0,122).",
+     "Valores ≥ 100 con unidades distintas de cero, respecto a la media de los dígitos 1–6: 7 0,81, 8 0,87, 9 0,62 (UR 0,63, AS 0,46, HP 0,69). Nudos largos por vueltas: 6 2009, 7 1536, 8 1133, 9 838.",
+     "Khipus solo de nudos largos: desviación de las vueltas 0,9–1,5 con medias de 4–7 (unidades de khipus corrientes ≈ 2,3); las vueltas de una misma cuerda se correlacionan (UR055 0,34, UR052 0,38–0,58)."
+    ],
+    "levels": {
+     "numbers": "El tamaño de los nudos se mide en las longitudes de las cuerdas; los dígitos 7–9 son más raros en las unidades.",
+     "structure": "El espaciado de posiciones cambia según el sitio; dentro de un grupo, los colores difieren en la altura de los nudos.",
+     "reading": "Las cuerdas se preparaban a una longitud fija y se anudaban según una medida local, color por color. Una cuenta de casi diez se escribía a menudo como diez."
+    }
+   },
+   "colours": {
+    "title": "El color: una categoría dentro del khipu, recoloreada en las copias",
+    "summary": "Dentro de los khipus, las cuerdas claras (W, AB, YB) llevan números mayores que las oscuras (KB, MB, DB, B): en 119 de 211 khipus frente a 87 por azar (p = 0,002), y lo mismo sin las cuerdas de total. En las copias las cuerdas emparejadas rara vez conservan su color (UR1114 ~ UR1123: 1 de 29), pero cada color de un khipu pasa a un mismo color del otro (375 de 548 cuerdas frente a 287; 7 de 8 pares comprobables cuando se conservan los bloques de color y solo se desplazan), también en pares registrados por el mismo equipo. El color marcaba una categoría de forma constante, pero la copia le daba un color propio; no hay un vocabulario de colores común a los khipus de un sitio. Precaución al comparar: los registradores nombran los colores de distinto modo; un khipu descrito por Ascher y por Urton coincide en 61 de 181 cuerdas (el YB de Ascher es el AB de Urton).",
+    "evidence": [
+     "Mediana de cuerdas claras frente a oscuras dentro de los khipus: mayor en las claras en 119 de 211 frente a 87,0 con colores barajados (p = 0,002); sin totales 114 de 203 frente a 83,8 (p = 0,002).",
+     "Copias: correspondencia de colores constante en 375 de 548 cuerdas emparejadas frente a 286,6 (p = 0,003); con desplazamientos circulares de los colores de la copia p < 0,05 en UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
+     "Orden de los colores por valor entre khipus de un mismo sitio: Spearman medio 0,077 frente a 0,002 (máx. 0,114) en 196 pares: no hay vocabulario común.",
+     "AS068 (Ascher) frente a UR281 (Urton), un mismo objeto: color igual en 61 de 181 cuerdas emparejadas; YB ↔ AB 56 veces."
+    ],
+    "levels": {
+     "numbers": "Las cantidades grandes están en cuerdas claras más a menudo que en oscuras.",
+     "structure": "En las copias, los grupos de color se corresponden uno a uno aunque los colores mismos cambian.",
+     "reading": "El color separaba tipos de asientos dentro de un registro; al copiar se conservaba el sentido, no el tinte. Los colores de distintos registradores necesitan una tabla de equivalencias."
+    }
    }
   },
   "linkTypes": {
@@ -690,6 +749,34 @@
    "Formats and find-places": {
     "title": "Formatos y lugares de hallazgo",
     "text": "Los khipus que repiten la misma unidad de tamaños de grupo (por ejemplo seis cuerdas y un separador) no proceden del mismo lugar más que por azar (19 % de los pares frente a 11 %, p = 0,20; 22 khipus con lugar conocido). Los perfiles de columnas parecidos apuntan al mismo lugar solo débilmente (20 % frente a 8 %, p = 0,06), aunque sí encuentran segundas grabaciones y vínculos conocidos."
+   },
+   "Calendar, ceque and lunar numbers": {
+    "title": "Números de calendario, de ceques y meses lunares",
+    "text": "365, 360, 354, 328 (huacas del sistema de ceques) y 41 (líneas de ceques) no aparecen más que sus números vecinos; las cuerdas vecinas de 29 y 30 (meses alternos) son tan raras como 28/29 o 30/31; el número de grupos por khipu no destaca 12, 24, 30 ni 36, y ningún khipu tiene 360 o 365 colgantes."
+   },
+   "Number curiosities": {
+    "title": "Curiosidades numéricas",
+    "text": "Vecinos en proporción áurea (1,618 ± 1 %: 67 frente a 70–179 para proporciones cercanas), cuadrados (95 frente a 80–150 con valores desplazados), números triangulares, primos, progresiones aritméticas de cuatro cuerdas, duplicaciones (x, 2x, 4x) y múltiplos de 9: todo al nivel de su referencia."
+   },
+   "Check digits, running and grand totals": {
+    "title": "Dígitos de control, totales acumulados y totales generales",
+    "text": "Ninguna primera ni última cuerda de un grupo iguala la suma de las demás módulo 9 o 10 más allá del azar (244 frente a 257); ninguna cuerda iguala la suma de todas las anteriores de su grupo (11 frente a 17,5); ninguna cuerda guarda el total de todo el khipu (2 khipus frente a 1–3); la diferencia entre los totales de grupos vecinos no se anota (0,173 frente a 0,163–0,175 en grupos más alejados)."
+   },
+   "Mirror copies": {
+    "title": "Copias en espejo",
+    "text": "Ningún khipu copia otro leído desde el otro extremo: las series de cinco valores informativos compartidas al revés son tantas como las directas y proceden solo de series repetitivas, mientras que todas las copias conocidas van en sentido directo."
+   },
+   "Threes and half-units": {
+    "title": "Tríadas y medias unidades",
+    "text": "Contando cada khipu una vez, los tamaños de grupo 3, 6, 9 y 12 no se prefieren a 4, 5 y 10; 50, 500 y 5000 no son más frecuentes que 40 y 60, 400 y 600; solo destacan 100 y 1000."
+   },
+   "Cords that count cords": {
+    "title": "Cuerdas que cuentan cuerdas",
+    "text": "Ninguna cuerda da el número de cuerdas de su grupo o del khipu más a menudo que ese número ± 1–3, y no hay series que numeren las cuerdas (v, v + 1, v + 2, v + 3: 4 frente a 2,4 con cuerdas barajadas)."
+   },
+   "Benford's law and counting in pairs": {
+    "title": "Ley de Benford y cuenta por pares",
+    "text": "Los primeros dígitos no siguen la ley de Benford en ningún sitio (43 % de unos frente a 30 %: los valores quedan justo por encima de potencias de diez), y no hay khipus que cuenten por pares: los khipus con al menos 80 % de valores pares no redondos son 2 frente a 0,2 esperados, uno de ellos por repeticiones."
    }
   },
   "sources": {
