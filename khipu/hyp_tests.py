@@ -402,6 +402,153 @@ def h36():
     print(f"H36: KFG vs OKR, same khipus: aligned cords {tot}, equal {same} ({same / max(1, tot):.1%}); differing (both nonzero) {len(diffs)}: {dict(c)}")
 
 
+
+def pos_resid(cs):
+    """units-cluster position per cord, corrected for digit count, knots above the units and the local trend (None if absent)"""
+    rows = [(i, len(r["clusters"]), sum(len(c["knots"]) for c in r["clusters"][:-1]), r["clusters"][-1]["pos"])
+            for i, r in enumerate(cs) if r["clusters"] and r["clusters"][-1]["pos"]]
+    if len(rows) < 10:
+        return [None] * len(cs)
+    by = defaultdict(list)
+    for i, nc, ka, p in rows:
+        by[nc].append((ka, p))
+    fit = {}
+    for nc, xs in by.items():
+        if len(xs) >= 3 and len({a for a, _ in xs}) > 1:
+            ma = statistics.mean(a for a, _ in xs); mp = statistics.mean(p for _, p in xs)
+            fit[nc] = (ma, mp, sum((a - ma) * (p - mp) for a, p in xs) / sum((a - ma) ** 2 for a, _ in xs))
+        else:
+            fit[nc] = (0, statistics.mean(p for _, p in xs), 0)
+    raw = [None] * len(cs)
+    for i, nc, ka, p in rows:
+        ma, mp, b = fit[nc]
+        raw[i] = p - (mp + b * (ka - ma))
+    out = []
+    for i, x in enumerate(raw):
+        if x is None:
+            out.append(None); continue
+        w = [y for y in raw[max(0, i - 5):i + 6] if y is not None]
+        out.append(x - statistics.median(w))
+    return out
+
+
+def h37():
+    """'Blank forms': pairs of khipus linked only by the layout of their knots — corrected knot positions correlate cord by
+    cord although the values differ. Pairs with pendant counts within 5%; index-wise correlation; baseline circular shifts."""
+    K = hyp.okr()
+    _, site, dup = hyp.atlas()
+    res = {k: pos_resid(cs) for k, cs in K.items() if len(cs) >= 20}
+    ks = sorted(res, key=lambda k: len(K[k]))
+    hits = []
+    for a_i, a in enumerate(ks):
+        for b in ks[a_i + 1:]:
+            na, nb = len(K[a]), len(K[b])
+            if nb > na * 1.05:
+                break
+            if (a, b) in dup:
+                continue
+            n = min(na, nb)
+            xa, xb = res[a][:n], res[b][:n]
+            pr = [(x, y) for x, y in zip(xa, xb) if x is not None and y is not None]
+            if len(pr) < 20:
+                continue
+            rho = spearman([x for x, _ in pr], [y for _, y in pr])
+            if rho < 0.4:
+                continue
+            sh = []
+            for d in range(5, n - 5, max(1, (n - 10) // 40)):
+                q = xb[d:] + xb[:d]
+                pp = [(x, y) for x, y in zip(xa, q) if x is not None and y is not None]
+                if len(pp) >= 20:
+                    sh.append(spearman([x for x, _ in pp], [y for _, y in pp]))
+            if sh and rho > max(sh):
+                same = sum(K[a][i]["value"] == K[b][i]["value"] for i in range(n))
+                hits.append((rho, a, b, len(pr), max(sh), same / n, site.get(a), site.get(b)))
+    hits.sort(reverse=True)
+    print(f"H37: pairs with corrected-position correlation ≥ 0.4 above all circular shifts: {len(hits)}")
+    for rho, a, b, n, mx, same, sa, sb in hits[:25]:
+        print(f"     {a:9} ~ {b:9} rho {rho:.2f} (shifts max {mx:.2f}), {n} cords, equal values {same:.0%} · {sa} / {sb}")
+
+
+def h38():
+    """A knotter's 'hand': the spread of corrected knot positions is a signature — linked pairs have more alike spreads
+    than random pairs."""
+    K = hyp.okr()
+    D, _, _ = hyp.atlas()
+    sd = {}
+    for k, cs in K.items():
+        r = [x for x in pos_resid(cs) if x is not None]
+        if len(r) >= 15:
+            sd[k] = statistics.pstdev(r)
+    ks = list(sd)
+    linked = [(e["from"], e["to"]) for e in D["edges"] if e["from"] in sd and e["to"] in sd]
+    real = statistics.mean(abs(math.log(sd[a] / sd[b])) for a, b in linked)
+    sims = [statistics.mean(abs(math.log(sd[a] / sd[b])) for a, b in (R.sample(ks, 2) for _ in linked)) for _ in range(2000)]
+    print(f"H38: linked pairs {len(linked)}: mean |log ratio| of positional spread {real:.3f}; random pairs {statistics.mean(sims):.3f}; "
+          f"p(≤) {(1 + sum(x <= real for x in sims)) / 2001:.4f}")
+
+
+def h40():
+    """Knot direction follows the cord's ply: within khipus that have both S- and Z-plied pendants, Z-plied cords carry the
+    other knot direction more often (2×2 association, permutation of ply labels within khipu)."""
+    K = hyp.okr()
+    real = n = 0
+    sims = [0] * 500
+    for k, cs in K.items():
+        rows = []
+        for r in cs:
+            d = Counter()
+            for c in r["clusters"]:
+                for dd, m in c["dirs"].items():
+                    if dd in ("S", "Z"):
+                        d[dd] += m
+            if r["twist"] in ("S", "Z") and d:
+                rows.append((r["twist"], d.most_common(1)[0][0]))
+        tw = [t for t, _ in rows]
+        if len(set(tw)) < 2 or len(rows) < 10 or min(Counter(tw).values()) < 3:
+            continue
+        n += len(rows)
+        real += sum(t != d for t, d in rows)
+        kd = [d for _, d in rows]
+        for i in range(500):
+            q = tw[:]; R.shuffle(q)
+            sims[i] += sum(t != d for t, d in zip(q, kd))
+    print(f"H40: cords in khipus with both plies: {n}; knot direction opposite to the ply: {real}; shuffled plies {statistics.mean(sims):.1f} "
+          f"(min {min(sims)}, max {max(sims)})")
+
+
+def h43():
+    """Double entry: the two halves of a khipu (by groups) have equal totals more often than random splits."""
+    K = hyp.okr()
+    real = n = 0
+    sims = 0.0
+    for k, cs in K.items():
+        t = [sum(r["value"] for r in g) for g in hyp.groups(cs)]
+        if len(t) < 4 or len(t) % 2 or sum(t) < 100:
+            continue
+        n += 1
+        h = len(t) // 2
+        real += sum(t[:h]) == sum(t[h:])
+        hits = 0
+        for _ in range(200):
+            q = t[:]; R.shuffle(q)
+            hits += sum(q[:h]) == sum(q[h:])
+        sims += hits / 200
+    print(f"H43: khipus with an even number of groups: {n}; halves equal: {real}; random halves {sims:.1f}")
+
+
+def h44():
+    """Multiples of 9 (the Berlin ninths) are over-represented among non-round values 100–9999, against values shifted ±9
+    (which keeps divisibility patterns by 3 the same) and ±1…±3."""
+    vals = all_values()
+    def frac(d):
+        xs = [(v + d, c) for v, c in vals.items() if 100 <= v <= 9999 and v % 10]
+        tot = sum(c for _, c in xs)
+        return sum(c for v, c in xs if v % 9 == 0) / tot
+    print(f"H44: share of multiples of 9: {frac(0):.4f}; shifted ±1…±3: " + ", ".join(f"{frac(d):.4f}" for d in (-3, -2, -1, 1, 2, 3))
+          + f"; ±9: {frac(-9):.4f}, {frac(9):.4f} (1/9 = 0.1111)")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
