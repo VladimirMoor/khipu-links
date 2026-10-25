@@ -1869,6 +1869,54 @@ def h121():
         print(f"   {k} ({site.get(k)}) groups {n}: blank rows {b}")
 
 
+def tables(min_rows=4, min_cols=3):
+    K = hyp.okr()
+    out = []
+    for k, cs in K.items():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append(g)
+        for sz, gs in by.items():
+            if sz >= min_cols and len(gs) >= min_rows:
+                out.append((k, gs))
+    return out
+
+
+def h123():
+    """Red cords (colour code with R: RD, FR, …) hold smaller numbers than the other cords of their khipu (markers)."""
+    K = hyp.okr()
+    data = [[("red" if "R" in r["colour"][0] and r["colour"][0] not in ("BR",) else "other", r["value"]) for r in cs if r["value"] > 0] for cs in K.values()]
+    n, real, m, p_hi, p_lo = within_compare(data, "red", "other")
+    print(f"H123: khipus {n}; red median larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
+
+
+def h126():
+    """Fixed rates: two columns of a table stand in an exact integer ratio k (2–12) in ≥ 3 rows (values ≥ 2), against the
+    second column's rows shuffled."""
+    T = tables()
+    def cnt(shuffle):
+        n, ex = 0, []
+        for k, gs in T:
+            rows = [[r["value"] for r in g] for g in gs]
+            cols = [list(c) for c in zip(*rows)]
+            for i in range(len(cols)):
+                for j in range(len(cols)):
+                    if i == j:
+                        continue
+                    a, b = cols[i], cols[j][:]
+                    if shuffle:
+                        R.shuffle(b)
+                    best = Counter(y // x for x, y in zip(a, b) if x >= 2 and y > x and y % x == 0 and 2 <= y // x <= 12)
+                    if best and best.most_common(1)[0][1] >= 3:
+                        n += 1; ex.append((k, i + 1, j + 1, best.most_common(1)[0]))
+        return n, ex
+    real, ex = cnt(False)
+    sims = [cnt(True)[0] for _ in range(20)]
+    print(f"H126: column pairs with ≥ 3 rows in an exact ratio: {real}; shuffled mean {statistics.mean(sims):.1f}, max {max(sims)}")
+    for e in ex[:20]:
+        print("   ", e)
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
