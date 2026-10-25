@@ -3032,6 +3032,31 @@ def h250():
         print("   " + f"{a:8} " + " ".join(f"{spearman([r[a] for r in rows], [r[b] for r in rows]):+.2f}" for b in keys))
 
 
+def h260():
+    """Sessions: units height jumps between consecutive groups more than within groups (each group knotted at its own
+    sitting) — share of khipus where the mean |Δ height| across group boundaries exceeds the within-group mean by > 50%."""
+    K = hyp.okr()
+    big = n = 0
+    ratios = []
+    for cs in K.values():
+        rows = []
+        for g in hyp.groups(cs):
+            h = []
+            for r in g:
+                ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+                if ps:
+                    h.append(max(ps))
+            rows.append(h)
+        win = [abs(a - b) for h in rows for a, b in zip(h, h[1:])]
+        acr = [abs(a[-1] - b[0]) for a, b in zip(rows, rows[1:]) if a and b]
+        if len(win) >= 15 and len(acr) >= 4 and statistics.mean(win) > 0:
+            n += 1
+            r_ = statistics.mean(acr) / statistics.mean(win)
+            ratios.append(r_)
+            big += r_ > 1.5
+    print(f"H260: khipus {n}; across/within ratio of units-height jumps: median {statistics.median(ratios):.2f}; ratio > 1.5 in {big}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
