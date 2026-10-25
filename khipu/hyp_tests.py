@@ -1605,6 +1605,41 @@ def h106():
     print("   long knots by turns: " + ", ".join(f"{n}:{t[n]}" for n in range(0, 13)))
 
 
+def lk_rows(k):
+    """Cords of khipu k on which every cluster is a single long knot: list of turn lists (by cord order)."""
+    out = []
+    for r in hyp.okr()[k]:
+        cl = r["clusters"]
+        if cl and all(c["type"] == "L" and len(c["knots"]) == 1 for c in cl):
+            out.append([c["knots"][0][3] for c in cl])
+    return out
+
+
+def h107():
+    """Long-knot-only khipus (every cluster one long knot): turn counts are not counted quantities but a knotter's habit —
+    (a) far less spread than units digits of ordinary khipus (sd ≈ 2.6 for 1–9), (b) positions on one cord correlate,
+    (c) neighbouring cords are more alike than distant ones (drift along the khipu), against cords shuffled."""
+    K = hyp.okr()
+    cand = []
+    for k, cs in K.items():
+        rows = lk_rows(k)
+        if len(rows) >= 12 and statistics.mean(len(x) for x in rows) >= 2:
+            cand.append((k, rows))
+    for k, rows in cand:
+        flat = [t for x in rows for t in x]
+        m = [statistics.mean(x) for x in rows]
+        def nb(v):
+            return statistics.mean(abs(a - b) for a, b in zip(v, v[1:]))
+        real = nb(m)
+        sims = []
+        for _ in range(1000):
+            q = m[:]
+            R.shuffle(q)
+            sims.append(nb(q))
+        print(f"H107: {k:11} cords {len(rows):3}, turns mean {statistics.mean(flat):.1f} sd {statistics.pstdev(flat):.2f}; "
+              f"neighbour |Δ mean| {real:.2f} vs shuffled {statistics.mean(sims):.2f}, p {(1 + sum(x <= real for x in sims)) / 1001:.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
