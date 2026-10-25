@@ -3088,6 +3088,37 @@ def h267():
     print("   " + ", ".join(f"{k} ({v[0]:.2f}, {v[2]})" for k, v in sorted(sel.items(), key=lambda kv: -kv[1][0])))
 
 
+def h285():
+    """Pendant spacing on the main cord (main cord length / number of pendants) is a local norm like the place spacing (H50):
+    within-site variance of log spacing against shuffled site labels."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    inv = {k: (n or "").strip() for k, n in c.execute("select KHIPU_ID, INVESTIGATOR_NUM from khipu_main")}
+    pl = {inv[k]: float(l or 0) for k, l in c.execute("select KHIPU_ID, PCORD_LENGTH from primary_cord")}
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    sp = {k: math.log(pl[k] / len(cs)) for k, cs in K.items() if pl.get(k, 0) > 0 and len(cs) >= 10 and site.get(k)}
+    ks = list(sp)
+    def within(lab):
+        g = defaultdict(list)
+        for k in ks:
+            g[lab[k]].append(sp[k])
+        v = [x for x in g.values() if len(x) >= 3]
+        return sum(statistics.pvariance(x) * len(x) for x in v) / sum(len(x) for x in v)
+    labs = [site[k] for k in ks]
+    real = within(dict(zip(ks, labs)))
+    sims = []
+    for _ in range(1000):
+        R.shuffle(labs)
+        sims.append(within(dict(zip(ks, labs))))
+    print(f"H285: khipus {len(ks)}; median spacing {math.exp(statistics.median(sp.values())):.2f} cm per pendant; within-site variance {real:.3f} "
+          f"vs shuffled {statistics.mean(sims):.3f}, p {(1 + sum(x <= real for x in sims)) / 1001:.4f}")
+    g = defaultdict(list)
+    for k in ks:
+        g[site[k]].append(math.exp(sp[k]))
+    print("   " + "; ".join(f"{s_} {statistics.median(v):.2f} (n={len(v)})" for s_, v in sorted(g.items(), key=lambda kv: -len(kv[1])) if len(v) >= 4))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
