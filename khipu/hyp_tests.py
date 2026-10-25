@@ -2703,6 +2703,36 @@ def h201():
     print("   human-hair pendants by khipu: " + ", ".join(f"{k} {v}" for k, v in hair.most_common()))
 
 
+def h202():
+    """Fibre as a marker: in cotton khipus (≥ 90% of pendants cotton), the few non-cotton pendants (hair, wool, camelid) are
+    knotless and stand first in their group more often than the cotton pendants of the same khipus."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    fib = {cid: (f or "").strip() for cid, f in c.execute("select CORD_ID, FIBER from cord where CORD_LEVEL = 1")}
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    st = {"odd": [0, 0, 0], "cotton": [0, 0, 0]}
+    ks = Counter()
+    for k, cs in K.items():
+        f = [fib.get(r["id"], "") for r in cs]
+        cn = sum(1 for x in f if x == "CN")
+        odd = [x for x in f if x and x != "CN"]
+        if not cs or cn / len(cs) < 0.9 or not odd:
+            continue
+        for g in hyp.groups(cs):
+            for i, r in enumerate(g):
+                fr = fib.get(r["id"], "")
+                if not fr:
+                    continue
+                key = "cotton" if fr == "CN" else "odd"
+                st[key][0] += 1; st[key][1] += not r["clusters"]; st[key][2] += i == 0 and len(g) > 1
+                if key == "odd":
+                    ks[k] += 1
+    for key, (n, z, f0) in st.items():
+        print(f"H202: {key} pendants {n}: knotless {z / n:.3f}, first in group {f0 / n:.3f}")
+    print("   khipus: " + ", ".join(f"{k} ({site.get(k)}) {v}" for k, v in ks.most_common(12)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
