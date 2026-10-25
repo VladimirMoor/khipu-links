@@ -2929,6 +2929,26 @@ def h217():
     print("H217: k: exact vs (±1)/2 — " + ", ".join(f"{k}: {ex[k]} vs {near[k] / 2:.1f}" for k in range(2, 11)))
 
 
+def h218():
+    """Heads carry the row scale: across groups of one khipu, the head value tracks the sum of the rest of its group more
+    closely than any other single position does (mean within-khipu Spearman, groups of equal size ≥ 4, ≥ 4 groups)."""
+    K = hyp.okr()
+    res = defaultdict(list)
+    for cs in K.values():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append([r["value"] for r in g])
+        for sz, gs in by.items():
+            if sz < 4 or len(gs) < 4:
+                continue
+            for pos in range(sz):
+                a = [g[pos] for g in gs]
+                b = [sum(g) - g[pos] for g in gs]
+                if len(set(a)) > 1 and len(set(b)) > 1:
+                    res["first" if pos == 0 else "last" if pos == sz - 1 else "middle"].append(spearman(a, b))
+    print("H218: Spearman (cord at a position, rest of its group) across groups — " + ", ".join(f"{k} {statistics.mean(v):.3f} ({len(v)})" for k, v in res.items()))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
