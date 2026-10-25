@@ -2296,6 +2296,33 @@ def h158():
               f"vs {statistics.mean(sims):.3f} (p {(1 + sum(x >= real for x in sims)) / 301:.3f})")
 
 
+def h160():
+    """Canuto bundles as multiple copies: cords of one bundle carry the same knot sequence (number of clusters and turns per
+    cluster) more often than random pairs of cords of the same khipu; also how close the sequences are (mean |Δ turns|)."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    bun = {cid: can for cid, can in c.execute("select CORD_ID, CANUTO_ID from cord where CORD_LEVEL = 1") if can not in (None, "", 0, "0")}
+    K = hyp.okr()
+    for k in ("UR039", "UR050", "UR052", "UR054", "UR055", "UR110", "UR112", "UR144"):
+        seqs = defaultdict(list)
+        allc = []
+        for r in K[k]:
+            if r["id"] in bun:
+                sq = tuple(sum(kk[3] if kk[0] == "L" else 1 for kk in cl["knots"]) for cl in r["clusters"])
+                seqs[bun[r["id"]]].append(sq)
+                allc.append(sq)
+        def stats(pairs):
+            same = sum(a == b for a, b in pairs)
+            close = [statistics.mean(abs(x - y) for x, y in zip(a, b)) for a, b in pairs if len(a) == len(b) and a]
+            samelen = sum(len(a) == len(b) for a, b in pairs)
+            return same / len(pairs), samelen / len(pairs), (statistics.mean(close) if close else float("nan"))
+        within = [(a, b) for v in seqs.values() for i, a in enumerate(v) for b in v[i + 1:]]
+        rnd = [tuple(R.sample(allc, 2)) for _ in range(5000)]
+        w, r_ = stats(within), stats(rnd)
+        print(f"H160: {k}: pairs in bundles {len(within)}; identical {w[0]:.3f} vs random {r_[0]:.3f}; same number of clusters {w[1]:.2f} vs {r_[1]:.2f}; "
+              f"mean |Δ turns| (same length) {w[2]:.2f} vs {r_[2]:.2f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
