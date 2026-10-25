@@ -1351,6 +1351,152 @@ def h79b():
             print(f"   {k:8} {t}: {v[:16]}")
 
 
+def h82():
+    """Colour as a category across khipus of one site: the order of colours by median value agrees between khipus of a site
+    (mean pairwise Spearman over shared colours) more than with colour labels shuffled within each khipu."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    prof = defaultdict(dict)
+    raw = {}
+    for k, cs in K.items():
+        xs = [(r["colour"][0], r["value"]) for r in cs if r["value"] > 0 and r["colour"][0] and not r["colour"][1]]
+        if site.get(k) and len(xs) >= 20:
+            raw[k] = xs
+    def profile(xs):
+        by = defaultdict(list)
+        for c, v in xs:
+            by[c].append(v)
+        return {c: statistics.median(v) for c, v in by.items() if len(v) >= 3}
+    def score(P):
+        by = defaultdict(list)
+        for k, p in P.items():
+            by[site[k]].append(p)
+        rs = []
+        for ps in by.values():
+            for i in range(len(ps)):
+                for j in range(i + 1, len(ps)):
+                    sh = sorted(set(ps[i]) & set(ps[j]))
+                    if len(sh) >= 3:
+                        rs.append(spearman([ps[i][c] for c in sh], [ps[j][c] for c in sh]))
+        return statistics.mean(rs), len(rs)
+    real, n = score({k: profile(x) for k, x in raw.items()})
+    sims = []
+    for _ in range(200):
+        P = {}
+        for k, xs in raw.items():
+            cs_ = [c for c, _ in xs]
+            R.shuffle(cs_)
+            P[k] = profile(list(zip(cs_, [v for _, v in xs])))
+        sims.append(score(P)[0])
+    print(f"H82: khipu pairs within sites sharing ≥ 3 colours: {n}; mean Spearman {real:.3f}; shuffled {statistics.mean(sims):.3f}, "
+          f"max {max(sims):.3f}")
+
+
+def h85():
+    """Two columns: within a khipu the height (cm from the main cord) of the units cluster differs by cord colour more
+    than with colours shuffled (variance explained by colour)."""
+    K = hyp.okr()
+    real_t = 0.0
+    sims_t = [0.0] * 200
+    n = 0
+    for cs in K.values():
+        xs = []
+        for r in cs:
+            ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+            if ps and r["colour"][0] and not r["colour"][1]:
+                xs.append((r["colour"][0], max(ps)))
+        cols = Counter(c for c, _ in xs)
+        xs = [x for x in xs if cols[x[0]] >= 3]
+        if len(xs) < 20 or len({c for c, _ in xs}) < 2:
+            continue
+        def r2(pairs):
+            ys = [y for _, y in pairs]
+            m = statistics.mean(ys)
+            tot = sum((y - m) ** 2 for y in ys) or 1
+            by = defaultdict(list)
+            for c, y in pairs:
+                by[c].append(y)
+            return sum(len(v) * (statistics.mean(v) - m) ** 2 for v in by.values()) / tot
+        n += 1
+        real_t += r2(xs)
+        cl = [c for c, _ in xs]
+        ys = [y for _, y in xs]
+        for i in range(200):
+            R.shuffle(cl)
+            sims_t[i] += r2(list(zip(cl, ys)))
+    print(f"H85: khipus {n}; mean R² of units height on colour {real_t / n:.3f}; shuffled {statistics.mean(sims_t) / n:.3f}, max {max(sims_t) / n:.3f}")
+
+
+def h86():
+    """Calendar counts: numbers of groups per khipu peak at 12, 24, 30, 36 (and pendant counts at 360/365)."""
+    K = hyp.okr()
+    g = Counter(len(hyp.groups(cs)) for cs in K.values())
+    print("H86: groups per khipu " + ", ".join(f"{n}:{g[n]}" for n in range(1, 41)))
+    p = Counter(len(cs) for cs in K.values())
+    print("   pendants per khipu: 12:%d 24:%d 30:%d 36:%d 360:%d 365:%d; multiples of 10: %d of %d" % (
+        p[12], p[24], p[30], p[36], p[360], p[365], sum(c for n, c in p.items() if n % 10 == 0), sum(p.values())))
+
+
+def h92():
+    """A grand total: some cord equals the sum of all other pendants of the khipu (or the sum of all group totals but
+    its own group), against the sum shifted ±1…±5."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    def cnt(d):
+        n, ex = 0, []
+        for k, cs in K.items():
+            v = [r["value"] for r in cs]
+            s_ = sum(v)
+            if s_ < 20:
+                continue
+            for i, x in enumerate(v):
+                if x and x * 2 + d == s_:
+                    n += 1; ex.append((k, i + 1, x)); break
+        return n, ex
+    real, ex = cnt(0)
+    sh = [cnt(d)[0] for d in (-5, -4, -3, -2, -1, 1, 2, 3, 4, 5)]
+    print(f"H92: khipus with a grand-total cord: {real}; shifted {sh}")
+    for k, i, x in ex:
+        print(f"   {k} ({site.get(k)}) cord {i} = {x} of {len(K[k])}")
+
+
+def h85b():
+    """H85 within groups: colours shuffled only inside each group (group heights kept); R² of units height on colour
+    computed within groups (group means removed)."""
+    K = hyp.okr()
+    real_t, sims_t, n = 0.0, [0.0] * 200, 0
+    for cs in K.values():
+        rows = []
+        for gi, g in enumerate(hyp.groups(cs)):
+            ys = []
+            for r in g:
+                ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+                if ps and r["colour"][0] and not r["colour"][1]:
+                    ys.append((r["colour"][0], max(ps)))
+            if len(ys) >= 3 and len({c for c, _ in ys}) >= 2:
+                m = statistics.mean(y for _, y in ys)
+                rows.append([(c, y - m) for c, y in ys])
+        flat = [x for g in rows for x in g]
+        if len(flat) < 20:
+            continue
+        def r2(pairs):
+            tot = sum(y * y for _, y in pairs) or 1
+            by = defaultdict(list)
+            for c, y in pairs:
+                by[c].append(y)
+            return sum(len(v) * statistics.mean(v) ** 2 for v in by.values()) / tot
+        n += 1
+        real_t += r2(flat)
+        for i in range(200):
+            sh = []
+            for g in rows:
+                cl = [c for c, _ in g]
+                R.shuffle(cl)
+                sh += list(zip(cl, [y for _, y in g]))
+            sims_t[i] += r2(sh)
+    print(f"H85b: khipus {n}; within-group R² {real_t / n:.3f}; shuffled within groups {statistics.mean(sims_t) / n:.3f}, max {max(sims_t) / n:.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
