@@ -2891,6 +2891,27 @@ def h214():
     print(f"   round-hundred group sums (≥ 2 non-round parts): {f(0)}; shifted " + ", ".join(str(f(d)) for d in (-5, -3, -1, 1, 3, 5)))
 
 
+def h215():
+    """The head cord is longer: within groups (≥ 4 intact cords), the first cord's prepared length (knot allowance added back)
+    exceeds the group median more often than other positions'."""
+    K = hyp.okr()
+    st = Counter()
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            L = [prep_len(r) if r["length"] > 0 and r["term"] != "B" else None for r in g]
+            ok = [x for x in L if x is not None]
+            if len(g) < 4 or len(ok) < 4:
+                continue
+            md = statistics.median(ok)
+            for i, x in enumerate(L):
+                if x is None or x == md:
+                    continue
+                key = "first" if i == 0 else "last" if i == len(g) - 1 else "middle"
+                st[key + " n"] += 1
+                st[key + " longer"] += x > md
+    print("H215: share longer than the group median — " + ", ".join(f"{k} {st[k + ' longer'] / st[k + ' n']:.3f} ({st[k + ' n']})" for k in ("first", "middle", "last")))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
