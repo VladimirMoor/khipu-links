@@ -1497,6 +1497,114 @@ def h85b():
     print(f"H85b: khipus {n}; within-group R² {real_t / n:.3f}; shuffled within groups {statistics.mean(sims_t) / n:.3f}, max {max(sims_t) / n:.3f}")
 
 
+def h96():
+    """Golden ratio: adjacent cords (both ≥ 10) with ratio within 1% of 1.618 more often than ratios near 1.5 and 1.75."""
+    K = hyp.okr()
+    rs = []
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            for a, b in zip(v, v[1:]):
+                if a >= 10 and b >= 10:
+                    rs.append(max(a, b) / min(a, b))
+    for t in (1.5, 1.55, 1.6, 1.618, 1.65, 1.7, 1.75):
+        print(f"H96: ratio {t}: {sum(1 for x in rs if abs(x - t) / t < 0.01)}")
+
+
+def h98():
+    """Lunar months: adjacent 29/30 pairs (alternating month lengths) against 28/29, 30/31 and 27/28."""
+    K = hyp.okr()
+    c = Counter()
+    for cs in K.values():
+        v = [r["value"] for r in cs]
+        for a, b in zip(v, v[1:]):
+            c[tuple(sorted((a, b)))] += 1
+    for p_ in ((27, 28), (28, 29), (29, 30), (30, 31), (31, 32)):
+        print(f"H98: adjacent {p_}: {c[p_]}")
+
+
+def h101():
+    """Change records: the difference between totals of adjacent groups (≥ 10, not round) is written on a cord of the
+    khipu, more often than differences between non-adjacent group pairs at distance 2–4."""
+    K = hyp.okr()
+    hit = {1: [0, 0], 2: [0, 0], 3: [0, 0], 4: [0, 0]}
+    for cs in K.values():
+        vals = {r["value"] for r in cs}
+        t = [sum(r["value"] for r in g) for g in hyp.groups(cs)]
+        for gap in hit:
+            for a, b in zip(t, t[gap:]):
+                d = abs(a - b)
+                if d >= 10 and d % 10:
+                    hit[gap][0] += 1; hit[gap][1] += d in vals
+    for gap, (n, h) in hit.items():
+        print(f"H101: groups {gap} apart: differences {n}, written on a cord {h} ({h / max(1, n):.3f})")
+
+
+def h102():
+    """Running totals: a cord equals the sum of all preceding cords of its group (≥ 3 preceding, sum ≥ 10), against the
+    same with cords shuffled within group."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g] for cs in K.values() for g in hyp.groups(cs) if len(g) >= 4]
+    def cnt(gs):
+        n = 0
+        for v in gs:
+            run = 0
+            for i, x in enumerate(v):
+                if i >= 3 and run >= 10 and x == run and x % 10:
+                    n += 1
+                run += x
+        return n
+    real = cnt(G)
+    sims = [cnt([R.sample(v, len(v)) for v in G]) for _ in range(200)]
+    print(f"H102: running-total cords {real}; shuffled mean {statistics.mean(sims):.1f}, max {max(sims)}")
+
+
+def h105():
+    """Pairs: some khipus count pairs — almost all their non-round values ≥ 10 are even. Khipus with ≥ 15 such values and
+    ≥ 80% even (or odd), against the binomial expectation from the overall even share."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rows = []
+    for k, cs in K.items():
+        v = [r["value"] for r in cs if r["value"] >= 10 and r["value"] % 10]
+        if len(v) >= 15:
+            rows.append((k, len(v), sum(1 for x in v if x % 2 == 0)))
+    p = sum(e for _, _, e in rows) / sum(n for _, n, _ in rows)
+    def tail(n, k):
+        return sum(math.comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1))
+    exp_even = sum(tail(n, math.ceil(0.8 * n)) for _, n, _ in rows)
+    obs_even = [(k, n, e) for k, n, e in rows if e >= 0.8 * n]
+    q = 1 - p
+    exp_odd = sum(sum(math.comb(n, i) * q ** i * p ** (n - i) for i in range(math.ceil(0.8 * n), n + 1)) for _, n, _ in rows)
+    obs_odd = [(k, n, e) for k, n, e in rows if n - e >= 0.8 * n]
+    print(f"H105: khipus {len(rows)}; overall even share {p:.3f}; ≥ 80% even: {len(obs_even)} (expected {exp_even:.1f}); "
+          f"≥ 80% odd: {len(obs_odd)} (expected {exp_odd:.1f})")
+    for k, n, e in obs_even:
+        print(f"   even {k} ({site.get(k)}) {e}/{n}")
+    for k, n, e in obs_odd:
+        print(f"   odd {k} ({site.get(k)}) {n - e}/{n}")
+
+
+def h106():
+    """Units digit 9 is avoided: among values ≥ 100 with a non-zero units digit, digits 7–9 are rarer than 1–6, by team
+    prefix and by site (values relative to the mean share of 1–6). For values ≥ 100 the smooth fall of the value
+    distribution cannot make the units digit uneven."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    by = defaultdict(Counter)
+    for k, cs in K.items():
+        for r in cs:
+            v = r["value"]
+            if v >= 100 and v % 10:
+                by["ALL"][v % 10] += 1; by["team " + k[:2]][v % 10] += 1; by[str(site.get(k))][v % 10] += 1
+    for g, c in sorted(by.items(), key=lambda kv: -sum(kv[1].values()))[:12]:
+        n = sum(c.values())
+        base = sum(c[d] for d in range(1, 7)) / 6
+        print(f"H106: {g:14} n={n:5} " + " ".join(f"{d}:{c[d] / base:.2f}" for d in range(1, 10)))
+    t = Counter(kk[3] for cs in K.values() for r in cs for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "L")
+    print("   long knots by turns: " + ", ".join(f"{n}:{t[n]}" for n in range(0, 13)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
