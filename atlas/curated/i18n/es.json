@@ -549,7 +549,8 @@
      "Copias: correspondencia de colores constante en 375 de 548 cuerdas emparejadas frente a 286,6 (p = 0,003); con desplazamientos circulares de los colores de la copia p < 0,05 en UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
      "Orden de los colores por valor entre khipus de un mismo sitio: Spearman medio 0,077 frente a 0,002 (máx. 0,114) en 196 pares: no hay vocabulario común.",
      "AS068 (Ascher) frente a UR281 (Urton), un mismo objeto: color igual en 61 de 181 cuerdas emparejadas; YB ↔ AB 56 veces.",
-     "En los khipus solo de KFG las cuerdas claras son mayores en 32 de 63 frente a 26,9 (p = 0,10): la misma dirección, no significativa por sí sola."
+     "En los khipus solo de KFG las cuerdas claras son mayores en 32 de 63 frente a 26,9 (p = 0,10): la misma dirección, no significativa por sí sola.",
+     "Dentro de los khipus el color marca una categoría con su propio tamaño de números: dentro de los grupos (medias de grupo restadas, colores barajados solo dentro del grupo) el color explica los valores más allá del azar en 52 de 162 khipus (1,6 esperados), hasta R² 0,93 en AS178; las columnas de las tablas mantienen un color en 710 de 1716 casos (267 por azar), y esas columnas son más uniformes en tamaño (desviación de log 0,53 frente a 0,69). En UR1097 (Pachacamac) las cuerdas blancas con una corta parte superior de color llevan 1 bajo las etiquetas G0/BB y 5 bajo BG/VB/0D (R² 0,94)."
     ],
     "levels": {
      "numbers": "Las cantidades grandes están en cuerdas claras más a menudo que en oscuras.",

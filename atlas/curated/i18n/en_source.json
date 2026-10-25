@@ -549,7 +549,8 @@
      "Copies: consistent colour mapping 375 of 548 matched cords against 286.6 (p = 0.003); circular shifts of the target colours p < 0.05 in UR1175 ~ UR233, UR1175 ~ UR232, UR266 ~ UR275, UR053C ~ UR053B, HP055 ~ UR1084, UR066 ~ UR067.",
      "Colour order by value between khipus of one site: mean Spearman 0.077 against 0.002 (max 0.114) over 196 pairs — no shared vocabulary.",
      "AS068 (Ascher) against UR281 (Urton), one object: colour equal on 61 of 181 matched cords; YB ↔ AB 56 times.",
-     "On the KFG-only khipus light cords are larger in 32 of 63 against 26.9 (p = 0.10): the same direction, not significant on its own."
+     "On the KFG-only khipus light cords are larger in 32 of 63 against 26.9 (p = 0.10): the same direction, not significant on its own.",
+     "Inside khipus colour marks a category with its own size of numbers: within groups (group means removed, colours shuffled only inside groups) colour explains values beyond chance in 52 of 162 khipus (1.6 expected), up to R² 0.93 on AS178; table columns keep one colour in 710 of 1716 cases (267 by chance), and such columns are more uniform in size (sd of log values 0.53 against 0.69). On UR1097 (Pachacamac) white cords with a short coloured top carry 1 under G0/BB tags and 5 under BG/VB/0D tags (R² 0.94)."
     ],
     "levels": {
      "numbers": "Large quantities sit on light cords more often than on dark ones.",
