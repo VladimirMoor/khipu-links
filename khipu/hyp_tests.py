@@ -2683,6 +2683,26 @@ def h199():
     print(f"   largest-first groups: head colour unique {big_odd}, shared {big_same}")
 
 
+def h201():
+    """Canuto khipus are made of camelid fibre or human hair, unlike the cotton corpus: fibre of pendants on the 8 canuto
+    khipus against all others."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    inv = {k: (n or "").strip() for k, n in c.execute("select KHIPU_ID, INVESTIGATOR_NUM from khipu_main")}
+    can = {"UR039", "UR050", "UR052", "UR054", "UR055", "UR110", "UR112", "UR144"}
+    a, b = Counter(), Counter()
+    hair = Counter()
+    for kid, fib in c.execute("select KHIPU_ID, FIBER from cord where CORD_LEVEL = 1"):
+        f = (fib or "").strip()
+        (a if inv[kid] in can else b)[f] += 1
+        if f == "H":
+            hair[inv[kid]] += 1
+    ta, tb = sum(a.values()), sum(b.values())
+    print("H201: canuto khipus — " + ", ".join(f"{k or '?'} {v / ta:.2f}" for k, v in a.most_common()))
+    print("   all other khipus — " + ", ".join(f"{k or '?'} {v / tb:.3f}" for k, v in b.most_common(6)))
+    print("   human-hair pendants by khipu: " + ", ".join(f"{k} {v}" for k, v in hair.most_common()))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
