@@ -3143,6 +3143,22 @@ def h286():
     print(f"H286: head values found on another khipu {h[1]}/{h[0]} ({h[1] / max(1, h[0]):.3f}); other cords {o[1]}/{o[0]} ({o[1] / max(1, o[0]):.3f})")
 
 
+def h293():
+    """Round column sums: in tables (≥ 4 equal-size groups), column sums are multiples of 10 / 100 more often than the sums
+    shifted ±1…±5 (columns with ≥ 2 non-round entries)."""
+    T = tables()
+    C = []
+    for k, gs in T:
+        rows = [[r["value"] for r in g] for g in gs]
+        for col in zip(*rows):
+            if sum(1 for x in col if x % 10) >= 2 and sum(col) >= 20:
+                C.append(sum(col))
+    for base in (10, 100):
+        f = lambda d: sum(1 for x in C if x >= base and (x + d) % base == 0)
+        sh = [f(d) for d in (-5, -4, -3, -2, -1, 1, 2, 3, 4, 5)]
+        print(f"H293: column sums ({len(C)}) multiples of {base}: {f(0)}; shifted mean {statistics.mean(sh):.1f}, max {max(sh)}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
