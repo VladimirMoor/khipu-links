@@ -1942,6 +1942,33 @@ def h127():
         print(f"H127: {k} totals {n}; parts with units 7–9 {hi} of {tot} non-zero units ({hi / max(1, tot):.3f})")
 
 
+def h132():
+    """Long-knot-only khipus copy each other: per-cord turn sequences of UR050–UR055 and the other long-knot khipus align
+    (best Spearman over shifts, overlap ≥ 15) better than with one sequence shuffled."""
+    names = ["UR050", "UR051", "UR052", "UR054", "UR055", "UR193", "UR120", "AS090/N2"]
+    S = {k: [statistics.mean(x) for x in lk_rows(k)] for k in names}
+    S = {k: v for k, v in S.items() if len(v) >= 12}
+    def best(a, b):
+        out = -1
+        for sh in range(-len(b) + 15, len(a) - 15 + 1):
+            pa = [(a[i], b[i - sh]) for i in range(len(a)) if 0 <= i - sh < len(b)]
+            if len(pa) >= 15:
+                out = max(out, spearman([x for x, _ in pa], [y for _, y in pa]))
+        return out
+    ks = sorted(S)
+    for i in range(len(ks)):
+        for j in range(i + 1, len(ks)):
+            a, b = S[ks[i]], S[ks[j]]
+            r = best(a, b)
+            sims = []
+            for _ in range(100):
+                q = b[:]
+                R.shuffle(q)
+                sims.append(best(a, q))
+            print(f"H132: {ks[i]} ~ {ks[j]}: best ρ {r:.2f}; shuffled max-over-shifts mean {statistics.mean(sims):.2f}, "
+                  f"p {(1 + sum(x >= r for x in sims)) / 101:.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
