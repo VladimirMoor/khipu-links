@@ -506,27 +506,20 @@
   "status": "new",
   "title": "How khipus were made: cords cut to length, a local spacing, colours in passes",
   "place": [],
-  "summary": "Cords were cut to one length before knotting: a single knot takes about 0.54 cm of cord and each turn of a long knot 0.64 cm, and lengths with this taken back are more even in 311 of 392 khipus. The distance between places on a cord is a local habit: about 6.5 cm at Pachacamac, Inkawasi and Huaquerones, 7.5 cm at Ica, about 12 cm at Santa and Chancay; khipus of one site are more alike than with sites shuffled (p = 0.001), also after allowing for cord length and number of places and within one recording team. Inside a group, cords of one colour carry their units at a height of their own, as if each colour was knotted in a separate pass. The units digit 9 is written about 40% less often than 1–6 (7 and 8 also less), in every recording team and at most sites; the shortfall fades in large values (9: 0.46 in two-digit, 0.84 in four-digit numbers), so it arises when small amounts were counted, not when knots were tied. In khipus made only of long knots (UR050–UR055 and a few others) the turns bunch at 4–7 and are not decimal digits.",
+  "summary": "Cords were cut to one length before knotting: a single knot takes about 0.54 cm of cord and each turn of a long knot 0.64 cm, and lengths with this taken back are more even in 311 of 392 khipus. The distance between places on a cord is a local habit: about 6.5 cm at Pachacamac, Inkawasi and Huaquerones, 7.5 cm at Ica, about 12 cm at Santa and Chancay; khipus of one site are more alike than with sites shuffled (p = 0.001), also after allowing for cord length and number of places and within one recording team. Inside a group, cords of one colour carry their units at a height of their own, as if each colour was knotted in a separate pass. Khipus with wrapped bundles (canutos) follow other rules (see that finding).",
   "evidence": [
    "Knots shorten cords: within khipus, length against knots and turns −0.30; 0.54 cm per single knot, 0.64 cm per turn (18,751 cords). Length plus knot allowance: CV 0.159 against 0.180 measured and 0.172 with the allowance dealt out at random; more even in 311 of 392 khipus.",
    "Median spacing between adjacent place clusters per khipu (202 khipus): within-site variance 2.89 against 3.95 with sites shuffled (p = 0.001); residuals after length and number of places p = 0.001; UR khipus only p = 0.001.",
-   "Height of the units cluster by cord colour, within groups and among cords with the same number of places: R² 0.165 against 0.100 with colours shuffled inside groups (max 0.122).",
-   "Values ≥ 100 with a non-zero units digit, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62 (UR 0.63, AS 0.46, HP 0.69). By number of places, digit 9: two 0.46, three 0.55, four 0.84, five 1.24.",
-   "Long-knot-only khipus: turns sd 0.9–1.5 at means 4–7 (units of ordinary khipus sd ≈ 2.3); turns on one cord correlate (UR055 0.34, UR052 0.38–0.58)."
+   "Height of the units cluster by cord colour, within groups and among cords with the same number of places: R² 0.165 against 0.100 with colours shuffled inside groups (max 0.122)."
   ],
-  "khipus": [
-   "UR055",
-   "UR052",
-   "UR050",
-   "UR054"
-  ],
+  "khipus": [],
   "scripts": [
    "hyp_tests.py"
   ],
   "levels": {
-   "numbers": "Knot size is measurable in the cord lengths; digits 7–9 are rarer in the units place.",
+   "numbers": "Knot size is measurable in the cord lengths.",
    "structure": "Place spacing differs by site; colours within a group differ in knot height.",
-   "reading": "Cords were prepared to a set length, knotted to a local measure, colour by colour. A count of almost ten was apparently often recorded as ten when small amounts were counted."
+   "reading": "Cords were prepared to a set length and knotted to a local measure, colour by colour."
   }
  },
  {
@@ -560,6 +553,107 @@
    "numbers": "Large quantities sit on light cords more often than on dark ones.",
    "structure": "In copies, colour groups map one to one although the colours themselves change.",
    "reading": "Colour separated kinds of entries within a record; the meaning was kept in copying, the dye was not. Colours from different recorders need a translation table."
+  }
+ },
+ {
+  "id": "canutos",
+  "status": "new",
+  "title": "Canuto khipus: another system of long knots",
+  "place": [],
+  "summary": "Eight khipus in the OKR database gather their pendants in bundles wrapped with coloured thread (canutos): UR039 (Huari), UR050 and UR054 (Soldi collection), UR052 (Banco Central de Reserva), UR055 (Museo Oro del Perú), UR110 and UR112 (Museo Temple Radicati) and UR144 (Pisco valley). They are exactly the khipus whose long knots keep nearly the same number of turns: among 120 khipus with at least 40 long knots they rank 1, 2, 3, 5, 6, 9, 17 and 18 by the spread of turns (P ≈ 5·10⁻⁸; median sd 0.93 against 2.08). On them almost every cluster is a single long knot of 4–7 turns; the knots of one cord vary together, crowded cords have shorter knots and the lowest knot is often the shortest — the turns behave like a habit of the hand, not like decimal digits. Bundles follow a standard: four cords (pairs on UR039, six on UR050), and the cords of a bundle look alike without being copies.",
+  "evidence": [
+   "Turn sd per khipu (≥ 40 long knots): main mode 2.0–2.25 (73 khipus) and a separate cluster at 0.75–1.25 (12 khipus) holding 6 of the 8 canuto khipus; long knots make up 82–100% of the clusters on canuto khipus.",
+   "Turns on one cord correlate (UR055 0.34; UR052 0.38–0.58); knots per cord against turns per knot: UR144 −0.57, UR050, UR054 and UR055 about −0.3; the lowest knot is shorter on UR144 (38 of 42 cords), UR039 (23 of 26) and UR055 (101 of 147).",
+   "Bundle sizes: four cords in 23 of 24 bundles on UR144, 29 of 41 on UR055, 15 of 20 on UR112, 13 of 22 on UR110, 18 of 27 on UR052; six on UR050 (24 of 29); two on UR039 (41 of 45). Cords of one bundle share their number of clusters more often than random cords (UR112 0.75 against 0.45) but are identical in only 17–24%."
+  ],
+  "khipus": [
+   "UR039",
+   "UR050",
+   "UR052",
+   "UR054",
+   "UR055",
+   "UR110",
+   "UR112",
+   "UR144"
+  ],
+  "scripts": [
+   "hyp_tests.py"
+  ],
+  "levels": {
+   "numbers": "Turn counts are bunched at 4–7 and do not behave like counted quantities.",
+   "structure": "Pendants in wrapped bundles, mostly of four; nearly every cluster is one long knot.",
+   "reading": "Canuto khipus are a separate kind of record (one of them from Huari); reading their knots as decimal numbers would be wrong. What the long knots stand for there is open."
+  }
+ },
+ {
+  "id": "counting",
+  "status": "new",
+  "title": "Almost-round counts were written as round",
+  "place": [],
+  "summary": "In numbers of two and three places the units 7, 8 and 9 are rarer than 1–6 (9 at 0.46 and 0.55 of their mean), in every recording team and at most sites, while numbers of four and five places have even units (9 at 0.84 and 1.24). And although smaller numbers are always the commoner ones, values one or two above a round number outnumber those one or two below it: 98–99 against 101–102 is 30 against 75, 198–199 against 201–202 is 10 against 28, 28–29 against 31–32 is 451 against 604. A count just short of a round number was recorded as the round number (or a target was met with a little to spare); the large numbers, sums of many counts, keep their full units.",
+  "evidence": [
+   "Values ≥ 100 with non-zero units, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62; by recording team UR 0.63, AS 0.46, HP 0.69; by site Inkawasi 0.73, Pachacamac 0.63, Ica 0.28.",
+   "Units digit 9 by number of places: two 0.46, three 0.55, four 0.84, five 1.24 — the shortfall fades in large values, so it is not caused by crowded cords.",
+   "Endings 8–9 against 1–2 (values 20–999): 0.54 overall, below 1 at every site with enough data (Ica 0.35 … Inkawasi 0.72). It is not rounding to the nearest ten: digit 1 is not depleted (0.95)."
+  ],
+  "khipus": [],
+  "scripts": [
+   "hyp_tests.py"
+  ],
+  "levels": {
+   "numbers": "Units 7–9 are scarce in small numbers, and values just below round numbers are missing.",
+   "structure": "The effect fades with the number of places and is shared by all recording teams.",
+   "reading": "Small amounts were counted with a habit of rounding up near a round number; totals made from them were added exactly."
+  }
+ },
+ {
+  "id": "forms",
+  "status": "new",
+  "title": "Tables prepared as forms, rows with a scale of their own",
+  "place": [],
+  "summary": "Many khipus are tables: groups of one size are rows and cord positions are columns. Empty cords stand in the same columns across rows more than by chance, and some tables have rows that were made but never filled: on UR1113 (between Ica and Pisco) six filled rows are followed by four rows of eleven cords with the same colour pattern (W W W W FR MB W W W W W) and no knots at all; 12 khipus have such blank rows, 38 in all. The rows are not equal allotments: against values shuffled within each column, rows are less even in 110 of 200 tables (10 expected) — a large row is large in every column, like a large community in a census. A fixed layout can also sit in the subsidiaries: UR093 (Museo Temple Radicati) and HP038 (Lima) give most pendants exactly eight subsidiaries.",
+  "evidence": [
+   "220 sets of equal-size groups: empty-slot agreement 12,002 against 11,436 when cords are shuffled within groups (max 11,488).",
+   "Blank rows (≥ 4 cords, no knots, colour pattern of a filled row of the same khipu): AS074 11, UR1057 5, UR1113 4, AS075 4, AS203 3, UR128 3 and six more khipus; they stand anywhere along the khipu (first third 8, middle 18, last third 12).",
+   "Row totals of 200 tables against values permuted within each column: less even in 110, more even in 4 (10 expected each).",
+   "Eight subsidiaries per pendant: UR093 on 90 pendants, HP038 on 24; the pendant equals the sum of its eight subsidiaries 19 times on UR093."
+  ],
+  "khipus": [
+   "UR1113",
+   "AS074",
+   "UR1057",
+   "AS075",
+   "UR093",
+   "HP038"
+  ],
+  "scripts": [
+   "hyp_tests.py"
+  ],
+  "levels": {
+   "numbers": "Row totals differ more than the columns allow; blank rows hold no knots at all.",
+   "structure": "Colour patterns and empty slots repeat row by row; cords for rows were prepared in advance.",
+   "reading": "Khipu tables were laid out before they were filled, like a form with one line per unit (community, household, supplier)."
+  }
+ },
+ {
+  "id": "subsidiaries",
+  "status": "new",
+  "title": "Subsidiaries are parts of the larger entries",
+  "place": [],
+  "summary": "Within khipus, pendants that carry subsidiaries hold larger numbers than those without (141 of 251 khipus against 108 by chance, p = 0.002). The subsidiaries usually add up to less than their pendant (2582 of 3846; median 27%), and they grow with it: within khipus the subsidiary sum rises with the pendant value (mean Spearman 0.24, positive in 131 of 176 khipus). They are not fixed fractions: once round numbers are set aside, exact halves, thirds, quarters and sixths are no commoner than near misses. Subsidiaries read like 'of which …' notes to the larger entries.",
+  "evidence": [
+   "Median value of pendants with and without subsidiaries, within khipus: larger with subsidiaries in 141 of 251 against 107.6 with labels shuffled (p = 0.002).",
+   "Subsidiary sum against pendant (pendants ≥ 10 with subsidiaries): smaller 2582, equal 83, larger 639, empty 542; median ratio 0.27 (deciles 0.02–1.98). Within-khipu Spearman 0.243 against 0.000 shuffled.",
+   "Non-round pendants: subsidiary sum exactly 1/2 of the pendant 21 times against 18.5 for 1/2 of the pendant ± 1; 1/3 19 against 17; 1/4 20 against 18; 1/6 27 against 19."
+  ],
+  "khipus": [],
+  "scripts": [
+   "hyp_tests.py"
+  ],
+  "levels": {
+   "numbers": "Subsidiaries hang on large entries and scale with them, without a fixed fraction.",
+   "structure": "Most subsidiaries are smaller than their pendant.",
+   "reading": "A subsidiary specifies part of the entry it hangs from — 'of which so many'."
   }
  }
 ]

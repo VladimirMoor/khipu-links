@@ -527,18 +527,16 @@
    },
    "making": {
     "title": "Wie Khipus gemacht wurden: Schnüre auf Länge geschnitten, ein örtlicher Abstand, Farben in Durchgängen",
-    "summary": "Die Schnüre wurden vor dem Knüpfen auf eine Länge geschnitten: Ein einfacher Knoten verbraucht etwa 0,54 cm Schnur, jede Windung eines langen Knotens 0,64 cm, und mit diesem Zuschlag sind die Längen in 311 von 392 Khipus gleichmäßiger. Der Abstand zwischen den Stellen auf einer Schnur ist eine örtliche Gewohnheit: etwa 6,5 cm in Pachacamac, Inkawasi und Huaquerones, 7,5 cm in Ica, etwa 12 cm in Santa und Chancay; Khipus eines Fundorts ähneln sich mehr als bei gemischten Fundorten (p = 0,001), auch nach Berücksichtigung von Schnurlänge und Stellenzahl und innerhalb eines Aufnahmeteams. Innerhalb einer Gruppe tragen Schnüre einer Farbe ihre Einer in eigener Höhe, als wäre jede Farbe in einem eigenen Durchgang geknüpft worden. Die Ziffer 9 bei den Einern ist etwa 40 % seltener als 1–6 (auch 7 und 8 seltener), bei allen Aufnahmeteams und an den meisten Fundorten; in großen Werten verschwindet der Mangel (9: 0,46 bei zweistelligen, 0,84 bei vierstelligen Zahlen), er entsteht also beim Zählen kleiner Mengen, nicht beim Knüpfen. In Khipus nur aus langen Knoten (UR050–UR055 und wenige weitere) häufen sich die Windungen bei 4–7 und sind keine Dezimalziffern.",
+    "summary": "Die Schnüre wurden vor dem Knüpfen auf eine Länge geschnitten: Ein einfacher Knoten verbraucht etwa 0,54 cm Schnur, jede Windung eines langen Knotens 0,64 cm, und mit diesem Zuschlag sind die Längen in 311 von 392 Khipus gleichmäßiger. Der Abstand zwischen den Stellen auf einer Schnur ist eine örtliche Gewohnheit: etwa 6,5 cm in Pachacamac, Inkawasi und Huaquerones, 7,5 cm in Ica, etwa 12 cm in Santa und Chancay; Khipus eines Fundorts ähneln sich mehr als bei gemischten Fundorten (p = 0,001), auch nach Berücksichtigung von Schnurlänge und Stellenzahl und innerhalb eines Aufnahmeteams. Innerhalb einer Gruppe tragen Schnüre einer Farbe ihre Einer in eigener Höhe, als wäre jede Farbe in einem eigenen Durchgang geknüpft worden. Khipus mit umwickelten Bündeln (Canutos) folgen anderen Regeln (siehe dieses Ergebnis).",
     "evidence": [
      "Knoten verkürzen Schnüre: innerhalb der Khipus Länge gegen Knoten und Windungen −0,30; 0,54 cm je einfachem Knoten, 0,64 cm je Windung (18 751 Schnüre). Länge plus Knotenzuschlag: VK 0,159 gegenüber 0,180 gemessen und 0,172 bei zufällig verteiltem Zuschlag; gleichmäßiger in 311 von 392 Khipus.",
      "Medianer Abstand benachbarter Stellen je Khipu (202 Khipus): Varianz innerhalb des Fundorts 2,89 gegenüber 3,95 bei gemischten Fundorten (p = 0,001); Residuen nach Länge und Stellenzahl p = 0,001; nur UR-Khipus p = 0,001.",
-     "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122).",
-     "Werte ≥ 100 mit Einerziffer ungleich null, relativ zum Mittel der Ziffern 1–6: 7 0,81, 8 0,87, 9 0,62 (UR 0,63, AS 0,46, HP 0,69). Nach Stellenzahl, Ziffer 9: zwei 0,46, drei 0,55, vier 0,84, fünf 1,24.",
-     "Khipus nur aus langen Knoten: Standardabweichung der Windungen 0,9–1,5 bei Mitteln von 4–7 (Einer gewöhnlicher Khipus ≈ 2,3); Windungen einer Schnur korrelieren (UR055 0,34, UR052 0,38–0,58)."
+     "Höhe der Einer nach Schnurfarbe, innerhalb von Gruppen und unter Schnüren gleicher Stellenzahl: R² 0,165 gegenüber 0,100 bei innerhalb der Gruppen gemischten Farben (max. 0,122)."
     ],
     "levels": {
-     "numbers": "Die Knotengröße ist in den Schnurlängen messbar; die Ziffern 7–9 sind bei den Einern seltener.",
+     "numbers": "Die Knotengröße ist in den Schnurlängen messbar.",
      "structure": "Der Stellenabstand unterscheidet sich je Fundort; innerhalb einer Gruppe unterscheiden sich Farben in der Knotenhöhe.",
-     "reading": "Schnüre wurden auf eine feste Länge vorbereitet und nach einem örtlichen Maß Farbe für Farbe geknüpft. Fast zehn wurde beim Zählen kleiner Mengen offenbar oft als zehn notiert."
+     "reading": "Schnüre wurden auf eine feste Länge vorbereitet und nach einem örtlichen Maß Farbe für Farbe geknüpft."
     }
    },
    "colours": {
@@ -554,6 +552,63 @@
      "numbers": "Große Mengen stehen häufiger auf hellen als auf dunklen Schnüren.",
      "structure": "In Kopien entsprechen sich Farbgruppen eins zu eins, obwohl die Farben selbst wechseln.",
      "reading": "Farbe trennte Arten von Einträgen innerhalb einer Aufzeichnung; beim Kopieren blieb die Bedeutung erhalten, nicht der Farbstoff. Farben verschiedener Aufnehmender brauchen eine Entsprechungstabelle."
+    }
+   },
+   "canutos": {
+    "title": "Khipus mit Canutos: ein anderes System langer Knoten",
+    "summary": "Acht Khipus der OKR-Datenbank fassen ihre Hängeschnüre in Bündeln zusammen, die mit farbigem Faden umwickelt sind (Canutos): UR039 (Huari), UR050 und UR054 (Sammlung Soldi), UR052 (Banco Central de Reserva), UR055 (Museo Oro del Perú), UR110 und UR112 (Museo Temple Radicati) und UR144 (Pisco-Tal). Es sind genau die Khipus, deren lange Knoten fast dieselbe Windungszahl behalten: Unter 120 Khipus mit mindestens 40 langen Knoten belegen sie nach der Streuung der Windungen die Ränge 1, 2, 3, 5, 6, 9, 17 und 18 (P ≈ 5·10⁻⁸; mediane Standardabweichung 0,93 gegenüber 2,08). Dort ist fast jede Knotengruppe ein einzelner langer Knoten mit 4–7 Windungen; die Knoten einer Schnur schwanken gemeinsam, auf vollen Schnüren sind die Knoten kürzer und der unterste ist oft der kürzeste – die Windungen verhalten sich wie eine Gewohnheit der Hand, nicht wie Dezimalziffern. Die Bündel folgen einem Standard: vier Schnüre (Paare bei UR039, sechs bei UR050), und die Schnüre eines Bündels ähneln sich, ohne Kopien zu sein.",
+    "evidence": [
+     "Streuung der Windungen je Khipu (≥ 40 lange Knoten): Hauptmodus 2,0–2,25 (73 Khipus) und eine eigene Gruppe bei 0,75–1,25 (12 Khipus) mit 6 der 8 Canuto-Khipus; lange Knoten machen bei Canuto-Khipus 82–100 % der Knotengruppen aus.",
+     "Windungen einer Schnur korrelieren (UR055 0,34; UR052 0,38–0,58); Knoten je Schnur gegen Windungen je Knoten: UR144 −0,57, UR050, UR054 und UR055 etwa −0,3; der unterste Knoten ist kürzer bei UR144 (38 von 42 Schnüren), UR039 (23 von 26) und UR055 (101 von 147).",
+     "Bündelgrößen: vier Schnüre in 23 von 24 Bündeln bei UR144, 29 von 41 bei UR055, 15 von 20 bei UR112, 13 von 22 bei UR110, 18 von 27 bei UR052; sechs bei UR050 (24 von 29); zwei bei UR039 (41 von 45). Schnüre eines Bündels stimmen in der Zahl der Knotengruppen häufiger überein als zufällige Schnüre (UR112 0,75 gegenüber 0,45), sind aber nur zu 17–24 % identisch."
+    ],
+    "levels": {
+     "numbers": "Die Windungszahlen häufen sich bei 4–7 und verhalten sich nicht wie gezählte Mengen.",
+     "structure": "Hängeschnüre in umwickelten Bündeln, meist zu viert; fast jede Knotengruppe ist ein langer Knoten.",
+     "reading": "Canuto-Khipus sind eine eigene Art von Aufzeichnung (eines davon aus Huari); ihre Knoten als Dezimalzahlen zu lesen wäre falsch. Wofür die langen Knoten dort stehen, ist offen."
+    }
+   },
+   "counting": {
+    "title": "Fast runde Zählungen wurden rund notiert",
+    "summary": "In zwei- und dreistelligen Zahlen sind die Einer 7, 8 und 9 seltener als 1–6 (die 9 bei 0,46 und 0,55 ihres Mittels), bei allen Aufnahmeteams und an den meisten Fundorten, während vier- und fünfstellige Zahlen gleichmäßige Einer haben (0,84 und 1,24). Und obwohl kleinere Zahlen stets häufiger sind, übertreffen Werte ein oder zwei über einer runden Zahl die Werte ein oder zwei darunter: 98–99 gegen 101–102 ist 30 gegen 75, 198–199 gegen 201–202 ist 10 gegen 28, 28–29 gegen 31–32 ist 451 gegen 604. Eine Zählung knapp unter einer runden Zahl wurde als die runde Zahl notiert (oder ein Soll wurde mit kleinem Überschuss erfüllt); die großen Zahlen, Summen vieler Zählungen, behalten ihre vollen Einer.",
+    "evidence": [
+     "Werte ≥ 100 mit Einerziffer ungleich null, relativ zum Mittel der Ziffern 1–6: 7 0,81, 8 0,87, 9 0,62; nach Aufnahmeteam UR 0,63, AS 0,46, HP 0,69; nach Fundort Inkawasi 0,73, Pachacamac 0,63, Ica 0,28.",
+     "Einerziffer 9 nach Stellenzahl: zwei 0,46, drei 0,55, vier 0,84, fünf 1,24 – der Mangel verschwindet in großen Werten, er rührt also nicht von vollen Schnüren her.",
+     "Endungen 8–9 gegen 1–2 (Werte 20–999): 0,54 insgesamt, unter 1 an jedem Fundort mit genug Daten (Ica 0,35 … Inkawasi 0,72). Es ist kein Runden auf den nächsten Zehner: die Ziffer 1 ist nicht seltener (0,95)."
+    ],
+    "levels": {
+     "numbers": "Einer 7–9 sind in kleinen Zahlen knapp, und Werte knapp unter runden Zahlen fehlen.",
+     "structure": "Der Effekt schwächt sich mit der Stellenzahl ab und ist allen Aufnahmeteams gemeinsam.",
+     "reading": "Kleine Mengen wurden mit der Gewohnheit gezählt, nahe einer runden Zahl aufzurunden; daraus gebildete Summen wurden genau addiert."
+    }
+   },
+   "forms": {
+    "title": "Tabellen als Formulare angelegt; Zeilen mit eigenem Maßstab",
+    "summary": "Viele Khipus sind Tabellen: Gruppen gleicher Größe sind Zeilen, Schnurpositionen sind Spalten. Leere Schnüre stehen in verschiedenen Zeilen häufiger als zufällig in denselben Spalten, und manche Tabellen haben Zeilen, die angelegt, aber nie gefüllt wurden: Bei UR1113 (zwischen Ica und Pisco) folgen auf sechs gefüllte Zeilen vier Zeilen aus elf Schnüren mit demselben Farbmuster (W W W W FR MB W W W W W) und ohne einen einzigen Knoten; 12 Khipus haben solche leeren Zeilen, insgesamt 38. Die Zeilen sind keine gleichen Zuteilungen: Gegenüber innerhalb jeder Spalte gemischten Werten sind die Zeilen in 110 von 200 Tabellen ungleichmäßiger (10 erwartet) – eine große Zeile ist in jeder Spalte groß, wie eine große Gemeinschaft in einem Zensus. Ein festes Format kann auch in den Nebenschnüren stecken: UR093 (Museo Temple Radicati) und HP038 (Lima) geben den meisten Hängeschnüren genau acht Nebenschnüre.",
+    "evidence": [
+     "220 Sätze gleich großer Gruppen: Übereinstimmung leerer Positionen 12 002 gegenüber 11 436 bei innerhalb der Gruppen gemischten Schnüren (max. 11 488).",
+     "Leere Zeilen (≥ 4 Schnüre, keine Knoten, Farbmuster einer gefüllten Zeile desselben Khipu): AS074 11, UR1057 5, UR1113 4, AS075 4, AS203 3, UR128 3 und sechs weitere Khipus; sie stehen irgendwo (erstes Drittel 8, Mitte 18, letztes Drittel 12).",
+     "Zeilensummen von 200 Tabellen gegenüber innerhalb jeder Spalte permutierten Werten: ungleichmäßiger in 110, gleichmäßiger in 4 (je 10 erwartet).",
+     "Acht Nebenschnüre je Hängeschnur: UR093 an 90 Hängeschnüren, HP038 an 24; bei UR093 entspricht die Hängeschnur 19-mal der Summe ihrer acht Nebenschnüre."
+    ],
+    "levels": {
+     "numbers": "Zeilensummen unterscheiden sich stärker, als die Spalten erlauben; leere Zeilen tragen keinen einzigen Knoten.",
+     "structure": "Farbmuster und leere Positionen wiederholen sich Zeile für Zeile; Schnüre für Zeilen wurden im Voraus vorbereitet.",
+     "reading": "Khipu-Tabellen wurden vor dem Ausfüllen angelegt, wie ein Formular mit einer Zeile je Einheit (Gemeinschaft, Haushalt, Lieferant)."
+    }
+   },
+   "subsidiaries": {
+    "title": "Nebenschnüre sind Teile der größeren Einträge",
+    "summary": "Innerhalb der Khipus tragen Hängeschnüre mit Nebenschnüren größere Zahlen als solche ohne (in 141 von 251 Khipus gegenüber 108 zufällig, p = 0,002). Die Nebenschnüre ergeben zusammen meist weniger als ihre Hängeschnur (2582 von 3846; Median 27 %) und wachsen mit ihr: Innerhalb der Khipus steigt die Summe der Nebenschnüre mit dem Wert der Hängeschnur (mittlerer Spearman 0,24, positiv in 131 von 176 Khipus). Feste Bruchteile sind es nicht: Lässt man runde Zahlen beiseite, sind genaue Hälften, Drittel, Viertel und Sechstel nicht häufiger als knappe Fehltreffer. Nebenschnüre lesen sich wie Vermerke „davon …“ zu den größeren Einträgen.",
+    "evidence": [
+     "Median der Hängeschnüre mit und ohne Nebenschnüre innerhalb der Khipus: größer mit Nebenschnüren in 141 von 251 gegenüber 107,6 bei gemischten Kennzeichen (p = 0,002).",
+     "Summe der Nebenschnüre gegen Hängeschnur (Hängeschnüre ≥ 10 mit Nebenschnüren): kleiner 2582, gleich 83, größer 639, leer 542; medianes Verhältnis 0,27 (Dezile 0,02–1,98). Spearman innerhalb der Khipus 0,243 gegenüber 0,000 gemischt.",
+     "Nicht runde Hängeschnüre: Summe der Nebenschnüre genau 1/2 der Hängeschnur 21-mal gegenüber 18,5 für 1/2 der Hängeschnur ± 1; 1/3 19 gegenüber 17; 1/4 20 gegenüber 18; 1/6 27 gegenüber 19."
+    ],
+    "levels": {
+     "numbers": "Nebenschnüre hängen an großen Einträgen und wachsen mit ihnen, ohne festen Bruchteil.",
+     "structure": "Die meisten Nebenschnüre sind kleiner als ihre Hängeschnur.",
+     "reading": "Eine Nebenschnur bestimmt einen Teil des Eintrags, an dem sie hängt – „davon so viele“."
     }
    }
   },
@@ -767,6 +822,14 @@
    "Benford's law and counting in pairs": {
     "title": "Benfordsches Gesetz und Zählen in Paaren",
     "text": "Die ersten Ziffern folgen nirgends dem Benfordschen Gesetz (43 % Einsen gegenüber 30 %: die Werte liegen knapp über Zehnerpotenzen), und es gibt keine Khipus, die in Paaren zählen: Khipus mit mindestens 80 % geraden nicht runden Werten sind 2 gegenüber 0,2 erwarteten, eines davon wegen Wiederholungen."
+   },
+   "Fixed rates and simple fractions": {
+    "title": "Feste Kurse und einfache Brüche",
+    "text": "Zwei Spalten einer Tabelle stehen Zeile für Zeile in keinem festen ganzzahligen Verhältnis über das hinaus, was runde Zahlen erzeugen (genaue Vielfache gegen Vielfache ± 1: 2,35 zu 1 in derselben Zeile und 2,32 zu 1 zwischen benachbarten Zeilen), und Nebenschnüre sind keine festen Hälften, Drittel oder Zehntel ihrer Hängeschnüre, sobald runde Zahlen beiseitegelassen werden."
+   },
+   "Header codes and hidden bases": {
+    "title": "Kopfcodes und verborgene Basen",
+    "text": "Die erste Gruppe eines Khipu kehrt auf anderen Khipus desselben Fundorts nicht als Ortscode wieder (1 gemeinsame Folge, wie an anderen Positionen), und Khipus, die nie eine Ziffer über 5 oder 6 verwenden, sind Khipus kleiner Zählungen oder Canuto-Khipus, keine Aufzeichnungen in einer anderen Basis."
    }
   },
   "sources": {

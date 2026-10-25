@@ -527,18 +527,16 @@
    },
    "making": {
     "title": "Cómo se hacían los khipus: cuerdas cortadas a medida, un espaciado local, colores por tandas",
-    "summary": "Las cuerdas se cortaban a una misma longitud antes de anudarlas: un nudo simple consume unos 0,54 cm de cuerda y cada vuelta de un nudo largo 0,64 cm, y las longitudes con esto devuelto son más parejas en 311 de 392 khipus. La distancia entre posiciones en una cuerda es una costumbre local: unos 6,5 cm en Pachacamac, Inkawasi y Huaquerones, 7,5 cm en Ica, unos 12 cm en Santa y Chancay; los khipus de un mismo sitio se parecen más que con los sitios barajados (p = 0,001), también tras corregir por longitud de cuerda y número de posiciones y dentro de un mismo equipo de registro. Dentro de un grupo, las cuerdas de un color llevan sus unidades a una altura propia, como si cada color se anudara en una tanda aparte. El dígito 9 en las unidades se escribe un 40 % menos que 1–6 (7 y 8 también menos), en todos los equipos de registro y en casi todos los sitios; el déficit desaparece en los valores grandes (9: 0,46 en números de dos cifras, 0,84 en los de cuatro), así que surge al contar cantidades pequeñas, no al anudar. En los khipus hechos solo de nudos largos (UR050–UR055 y algunos más) las vueltas se agrupan en 4–7 y no son dígitos decimales.",
+    "summary": "Las cuerdas se cortaban a una misma longitud antes de anudarlas: un nudo simple consume unos 0,54 cm de cuerda y cada vuelta de un nudo largo 0,64 cm, y las longitudes con esto devuelto son más parejas en 311 de 392 khipus. La distancia entre posiciones en una cuerda es una costumbre local: unos 6,5 cm en Pachacamac, Inkawasi y Huaquerones, 7,5 cm en Ica, unos 12 cm en Santa y Chancay; los khipus de un mismo sitio se parecen más que con los sitios barajados (p = 0,001), también tras corregir por longitud de cuerda y número de posiciones y dentro de un mismo equipo de registro. Dentro de un grupo, las cuerdas de un color llevan sus unidades a una altura propia, como si cada color se anudara en una tanda aparte. Los khipus con haces envueltos (canutos) siguen otras reglas (véase ese hallazgo).",
     "evidence": [
      "Los nudos acortan las cuerdas: dentro de los khipus, longitud frente a nudos y vueltas −0,30; 0,54 cm por nudo simple, 0,64 cm por vuelta (18 751 cuerdas). Longitud más el margen de los nudos: CV 0,159 frente a 0,180 medida y 0,172 con el margen repartido al azar; más pareja en 311 de 392 khipus.",
      "Espaciado mediano entre posiciones vecinas por khipu (202 khipus): varianza dentro del sitio 2,89 frente a 3,95 con sitios barajados (p = 0,001); residuos tras longitud y número de posiciones p = 0,001; solo khipus UR p = 0,001.",
-     "Altura de las unidades según el color de la cuerda, dentro de grupos y entre cuerdas con el mismo número de posiciones: R² 0,165 frente a 0,100 con colores barajados dentro de los grupos (máx. 0,122).",
-     "Valores ≥ 100 con unidades distintas de cero, respecto a la media de los dígitos 1–6: 7 0,81, 8 0,87, 9 0,62 (UR 0,63, AS 0,46, HP 0,69). Según el número de posiciones, dígito 9: dos 0,46, tres 0,55, cuatro 0,84, cinco 1,24.",
-     "Khipus solo de nudos largos: desviación de las vueltas 0,9–1,5 con medias de 4–7 (unidades de khipus corrientes ≈ 2,3); las vueltas de una misma cuerda se correlacionan (UR055 0,34, UR052 0,38–0,58)."
+     "Altura de las unidades según el color de la cuerda, dentro de grupos y entre cuerdas con el mismo número de posiciones: R² 0,165 frente a 0,100 con colores barajados dentro de los grupos (máx. 0,122)."
     ],
     "levels": {
-     "numbers": "El tamaño de los nudos se mide en las longitudes de las cuerdas; los dígitos 7–9 son más raros en las unidades.",
+     "numbers": "El tamaño de los nudos se mide en las longitudes de las cuerdas.",
      "structure": "El espaciado de posiciones cambia según el sitio; dentro de un grupo, los colores difieren en la altura de los nudos.",
-     "reading": "Las cuerdas se preparaban a una longitud fija y se anudaban según una medida local, color por color. Una cuenta de casi diez se registraba a menudo como diez al contar cantidades pequeñas."
+     "reading": "Las cuerdas se preparaban a una longitud fija y se anudaban según una medida local, color por color."
     }
    },
    "colours": {
@@ -554,6 +552,63 @@
      "numbers": "Las cantidades grandes están en cuerdas claras más a menudo que en oscuras.",
      "structure": "En las copias, los grupos de color se corresponden uno a uno aunque los colores mismos cambian.",
      "reading": "El color separaba tipos de asientos dentro de un registro; al copiar se conservaba el sentido, no el tinte. Los colores de distintos registradores necesitan una tabla de equivalencias."
+    }
+   },
+   "canutos": {
+    "title": "Khipus con canutos: otro sistema de nudos largos",
+    "summary": "Ocho khipus de la base OKR reúnen sus colgantes en haces envueltos con hilo de color (canutos): UR039 (Huari), UR050 y UR054 (colección Soldi), UR052 (Banco Central de Reserva), UR055 (Museo Oro del Perú), UR110 y UR112 (Museo Temple Radicati) y UR144 (valle de Pisco). Son exactamente los khipus cuyos nudos largos mantienen casi el mismo número de vueltas: entre 120 khipus con al menos 40 nudos largos ocupan los puestos 1, 2, 3, 5, 6, 9, 17 y 18 por la dispersión de las vueltas (P ≈ 5·10⁻⁸; desviación mediana 0,93 frente a 2,08). En ellos casi cada grupo de nudos es un solo nudo largo de 4–7 vueltas; los nudos de una cuerda varían juntos, en cuerdas llenas los nudos son más cortos y el más bajo suele ser el más corto: las vueltas se comportan como un hábito de la mano, no como dígitos decimales. Los haces siguen un estándar: cuatro cuerdas (pares en UR039, seis en UR050), y las cuerdas de un haz se parecen sin ser copias.",
+    "evidence": [
+     "Desviación de las vueltas por khipu (≥ 40 nudos largos): moda principal 2,0–2,25 (73 khipus) y un grupo aparte en 0,75–1,25 (12 khipus) con 6 de los 8 khipus con canutos; los nudos largos son el 82–100 % de los grupos de nudos en los khipus con canutos.",
+     "Las vueltas de una cuerda se correlacionan (UR055 0,34; UR052 0,38–0,58); nudos por cuerda frente a vueltas por nudo: UR144 −0,57, UR050, UR054 y UR055 en torno a −0,3; el nudo más bajo es más corto en UR144 (38 de 42 cuerdas), UR039 (23 de 26) y UR055 (101 de 147).",
+     "Tamaño de los haces: cuatro cuerdas en 23 de 24 haces de UR144, 29 de 41 en UR055, 15 de 20 en UR112, 13 de 22 en UR110, 18 de 27 en UR052; seis en UR050 (24 de 29); dos en UR039 (41 de 45). Las cuerdas de un haz coinciden en el número de grupos de nudos más que cuerdas al azar (UR112 0,75 frente a 0,45), pero son idénticas solo en un 17–24 %."
+    ],
+    "levels": {
+     "numbers": "Las vueltas se agrupan en 4–7 y no se comportan como cantidades contadas.",
+     "structure": "Colgantes en haces envueltos, sobre todo de cuatro; casi cada grupo de nudos es un nudo largo.",
+     "reading": "Los khipus con canutos son otro tipo de registro (uno de ellos de Huari); leer sus nudos como números decimales sería un error. Qué representan allí los nudos largos sigue abierto."
+    }
+   },
+   "counting": {
+    "title": "Las cuentas casi redondas se anotaban como redondas",
+    "summary": "En los números de dos y tres cifras las unidades 7, 8 y 9 son más raras que 1–6 (el 9 en 0,46 y 0,55 de su media), en todos los equipos de registro y en casi todos los sitios, mientras que los números de cuatro y cinco cifras tienen unidades parejas (0,84 y 1,24). Y aunque los números pequeños siempre son más comunes, los valores una o dos unidades por encima de un número redondo superan a los que están una o dos por debajo: 98–99 frente a 101–102 es 30 frente a 75, 198–199 frente a 201–202 es 10 frente a 28, 28–29 frente a 31–32 es 451 frente a 604. Una cuenta que se quedaba cerca de un número redondo se anotaba como el número redondo (o se cumplía una meta con un pequeño sobrante); los números grandes, sumas de muchas cuentas, conservan sus unidades completas.",
+    "evidence": [
+     "Valores ≥ 100 con unidades distintas de cero, respecto a la media de los dígitos 1–6: 7 0,81, 8 0,87, 9 0,62; por equipo UR 0,63, AS 0,46, HP 0,69; por sitio Inkawasi 0,73, Pachacamac 0,63, Ica 0,28.",
+     "Dígito 9 en las unidades según el número de cifras: dos 0,46, tres 0,55, cuatro 0,84, cinco 1,24: el déficit desaparece en los valores grandes, así que no lo causa la falta de espacio en la cuerda.",
+     "Terminaciones 8–9 frente a 1–2 (valores 20–999): 0,54 en total, por debajo de 1 en todos los sitios con datos suficientes (Ica 0,35 … Inkawasi 0,72). No es redondeo a la decena más cercana: el dígito 1 no escasea (0,95)."
+    ],
+    "levels": {
+     "numbers": "Las unidades 7–9 escasean en los números pequeños, y faltan los valores justo por debajo de los redondos.",
+     "structure": "El efecto se debilita con el número de cifras y lo comparten todos los equipos de registro.",
+     "reading": "Las cantidades pequeñas se contaban con la costumbre de redondear hacia arriba cerca de un número redondo; los totales hechos con ellas se sumaban con exactitud."
+    }
+   },
+   "forms": {
+    "title": "Tablas preparadas como formularios; las filas tienen escala propia",
+    "summary": "Muchos khipus son tablas: los grupos de un mismo tamaño son filas y las posiciones de las cuerdas son columnas. Las cuerdas vacías ocupan las mismas columnas en distintas filas más que por azar, y algunas tablas tienen filas que se hicieron pero nunca se llenaron: en UR1113 (entre Ica y Pisco) a seis filas llenas siguen cuatro filas de once cuerdas con el mismo patrón de colores (W W W W FR MB W W W W W) y sin un solo nudo; 12 khipus tienen filas vacías así, 38 en total. Las filas no son asignaciones iguales: frente a valores barajados dentro de cada columna, las filas son menos parejas en 110 de 200 tablas (10 esperadas): una fila grande es grande en todas las columnas, como una comunidad grande en un censo. Un formato fijo también puede estar en las subsidiarias: UR093 (Museo Temple Radicati) y HP038 (Lima) dan a la mayoría de los colgantes exactamente ocho subsidiarias.",
+    "evidence": [
+     "220 conjuntos de grupos de igual tamaño: coincidencia de posiciones vacías 12 002 frente a 11 436 con cuerdas barajadas dentro de los grupos (máx. 11 488).",
+     "Filas vacías (≥ 4 cuerdas, sin nudos, con el patrón de colores de una fila llena del mismo khipu): AS074 11, UR1057 5, UR1113 4, AS075 4, AS203 3, UR128 3 y seis khipus más; aparecen en cualquier lugar (primer tercio 8, centro 18, último tercio 12).",
+     "Totales de fila de 200 tablas frente a valores permutados dentro de cada columna: menos parejos en 110, más parejos en 4 (10 esperados en cada caso).",
+     "Ocho subsidiarias por colgante: UR093 en 90 colgantes, HP038 en 24; el colgante iguala la suma de sus ocho subsidiarias 19 veces en UR093."
+    ],
+    "levels": {
+     "numbers": "Los totales de fila difieren más de lo que permiten las columnas; las filas vacías no tienen ningún nudo.",
+     "structure": "Los patrones de color y las posiciones vacías se repiten fila a fila; las cuerdas de las filas se preparaban de antemano.",
+     "reading": "Las tablas de khipu se trazaban antes de llenarse, como un formulario con una línea por unidad (comunidad, casa, proveedor)."
+    }
+   },
+   "subsidiaries": {
+    "title": "Las subsidiarias son partes de los asientos mayores",
+    "summary": "Dentro de los khipus, los colgantes con subsidiarias llevan números mayores que los que no las tienen (141 de 251 khipus frente a 108 por azar, p = 0,002). Las subsidiarias suelen sumar menos que su colgante (2582 de 3846; mediana 27 %) y crecen con él: dentro de los khipus la suma de las subsidiarias aumenta con el valor del colgante (Spearman medio 0,24, positivo en 131 de 176 khipus). No son fracciones fijas: dejando aparte los números redondos, mitades, tercios, cuartos y sextos exactos no son más comunes que los casi aciertos. Las subsidiarias se leen como notas «de ellos …» a los asientos mayores.",
+    "evidence": [
+     "Mediana de los colgantes con y sin subsidiarias, dentro de los khipus: mayor con subsidiarias en 141 de 251 frente a 107,6 con etiquetas barajadas (p = 0,002).",
+     "Suma de las subsidiarias frente al colgante (colgantes ≥ 10 con subsidiarias): menor 2582, igual 83, mayor 639, vacías 542; razón mediana 0,27 (deciles 0,02–1,98). Spearman dentro del khipu 0,243 frente a 0,000 barajado.",
+     "Colgantes no redondos: suma de subsidiarias exactamente 1/2 del colgante 21 veces frente a 18,5 para 1/2 del colgante ± 1; 1/3 19 frente a 17; 1/4 20 frente a 18; 1/6 27 frente a 19."
+    ],
+    "levels": {
+     "numbers": "Las subsidiarias cuelgan de asientos grandes y crecen con ellos, sin una fracción fija.",
+     "structure": "La mayoría de las subsidiarias son menores que su colgante.",
+     "reading": "Una subsidiaria precisa una parte del asiento del que cuelga: «de ellos, tantos»."
     }
    }
   },
@@ -777,6 +832,14 @@
    "Benford's law and counting in pairs": {
     "title": "Ley de Benford y cuenta por pares",
     "text": "Los primeros dígitos no siguen la ley de Benford en ningún sitio (43 % de unos frente a 30 %: los valores quedan justo por encima de potencias de diez), y no hay khipus que cuenten por pares: los khipus con al menos 80 % de valores pares no redondos son 2 frente a 0,2 esperados, uno de ellos por repeticiones."
+   },
+   "Fixed rates and simple fractions": {
+    "title": "Tasas fijas y fracciones simples",
+    "text": "Dos columnas de una tabla no guardan fila a fila una razón entera fija más allá de lo que producen los números redondos (múltiplos exactos frente a múltiplos ± 1: 2,35 a 1 en la misma fila y 2,32 a 1 entre filas vecinas), y las subsidiarias no son mitades, tercios ni décimos fijos de sus colgantes una vez apartados los números redondos."
+   },
+   "Header codes and hidden bases": {
+    "title": "Códigos de encabezado y bases ocultas",
+    "text": "El primer grupo de un khipu no reaparece como código de lugar en otros khipus del mismo sitio (1 secuencia compartida, como en otras posiciones), y los khipus que nunca usan un dígito mayor que 5 o 6 son khipus de cuentas pequeñas o khipus con canutos, no registros en otra base."
    }
   },
   "sources": {
