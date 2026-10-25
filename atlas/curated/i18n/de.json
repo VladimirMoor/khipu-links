@@ -460,13 +460,14 @@
     "summary": "Die 52 Khipus aus dem Inka-Lagerhaus von Inkawasi (Cañete-Tal) lassen sich als ein Buchführungssystem auf drei Ebenen lesen. Tabellen teilen jede Lieferung in neun Teile (UR278, UR270); ihre Gruppensummen sind die Bruttolieferungen, die in derselben Reihenfolge in den Büchern stehen (UR275 und seine Kopie UR266; UR274B). Jedes Buch verzeichnet brutto, netto und einen eigenen festen Abzug: 15 und 10 in den beiden Chili-Büchern, 47 im Erdnussbuch UR275, 47, 46, 46, 44 und 25 je nach Stelle auf UR269, 208 auf UR268. Kopien behalten den Abzug ihres Buchs und wurden an anderer Stelle aufbewahrt: die Chili-Bücher in Sektor A, ihre Kopien in Sektor C. Reine Summenaufzeichnungen liegen neben ihren vollständigen Büchern (Schichten 14 und 15 der Einheit 20N). Kein erhaltenes Khipu enthält die Summen der anderen. Den festen Abzug haben Urton und Chu (2015, 2019) beschrieben; die Neunertabellen und der Aufbau des Archivs als Ganzes sind, soweit wir wissen, neu.",
     "evidence": [
      "In Reihenfolge an den Bruttolieferungen der Bücher ausgerichtet, ergeben die Summen der Neunergruppen von UR278 10 gleiche und 4 um einen Knoten verschiedene auf UR266 (7 und 4 auf UR275), die von UR270 4 gleiche und 1 um einen Knoten verschiedene auf UR274B; mit um 1–10 verschobenen Werten der Bücher findet dieselbe Ausrichtung höchstens 2. Eine Suche nach solchen geordneten Summen in jedem Paar von Inkawasi-Khipus findet nur diese und die bekannten reinen Summenbündel.",
+     "Die neun Spalten behalten ihre Größenordnung von Lieferung zu Lieferung (Spearman 0,59 zwischen aufeinanderfolgenden Zeilen von UR278 und 0,64 auf UR270, gegenüber 0 bei innerhalb der Zeilen gemischten Werten), und beide Tabellen ordnen sie gleich (0,80, p = 0,007): dieselben neun Lieferanten, jeder mit etwa einem Neuntel.",
      "Brutto = netto + Abzug in 15 von 25 Dreiergruppen auf UR267A (Abzug 15), 12 von 14 auf UR267B (10) und 7 von 9 auf UR275 (47); mit innerhalb jedes Khipus gemischten Werten erwartet man 0,3 oder weniger. Jede Kopie behält den Abzug ihres Buchs: UR255 15, UR256 10, UR266 47.",
      "Die großen Werte von UR257 (bis 98 718) stimmen mit Summen anderer Inkawasi-Khipus nicht häufiger überein als verschobene Werte (3 von 10 gegenüber 2,7)."
     ],
     "levels": {
      "numbers": "Neunertabellen, deren Gruppensummen die Bruttolieferungen der Bücher sind, in Reihenfolge; Dreiergruppen, die sich addieren (brutto = netto + Abzug), mit einem Abzug je Buch; jede Kopie hat denselben Abzug wie ihr Buch.",
      "structure": "Drei Ebenen — Teile, Lieferungen, Summen — auf verschiedenen Khipus; die Kopien der Chili-Bücher in einem anderen Sektor, das Summenbündel neben dem vollständigen.",
-     "reading": "Jede Lieferung aus neun Beiträgen; getrennte Bücher für jedes Produkt und jeden Lieferstrom, jedes mit eigener fester Abgabe; Kopien an einem zweiten Ort, vielleicht zur Kontrolle; Zusammenfassungen anderswo oder verloren."
+     "reading": "Jede Lieferung aus Beiträgen derselben neun Lieferanten; getrennte Bücher für jedes Produkt und jeden Lieferstrom, jedes mit eigener fester Abgabe; Kopien an einem zweiten Ort, vielleicht zur Kontrolle; Zusammenfassungen anderswo oder verloren."
     }
    },
    "as104": {
@@ -481,6 +482,19 @@
      "numbers": "Sieben seltene Werte in derselben Reihenfolge, weit über der verschobenen Vergleichslinie; nahe Werte (3102/3012, 2085/2086, 2329/2300) füllen fast den ganzen Rest.",
      "structure": "Auf UR234 sind die Werte die Köpfe seiner Gruppen und zwei kurze Gruppen danach; auf AS104 bilden sie drei seiner vier Gruppen.",
      "reading": "AS104 wirkt wie eine Reinschrift der Zusammenfassung von UR234: die Köpfe vollständig, die auf UR234 verlorene Stelle noch gefüllt. Gruppe 1 von AS104 (18 379–37 076) erklärt sich nicht aus UR234; der Fundort von UR234 ist unbekannt."
+    }
+   },
+   "copies": {
+    "title": "Kopien bewahren, was abriss, und weichen um einzelne Knoten ab",
+    "summary": "Wo ein Khipu eines verbundenen Paares eine abgerissene, als 0 verzeichnete Schnur hat, hat das andere an dieser Stelle fast immer einen Wert: 18 von 21 solchen Schnüren gegenüber 10 von 29 Nullen auf intakten Schnüren. Eine Null auf einer abgerissenen Schnur ist ein verlorener Wert, keine Null, und die Kopie gibt ihn zurück (etwa 142, 223 und 191 auf UR255 aus UR267A; 1545 und 1442 auf UR266 aus UR275; 830 und 3818 auf UR122 aus KH0049). Wo Kopie und Original auf intakten Schnüren abweichen, beträgt der Unterschied meist einen Knoten (21 von 70) oder eine Ziffer an einer Stelle (8): Kopien entstanden Stelle für Stelle, Knoten für Knoten.",
+    "evidence": [
+     "Nullen innerhalb von Abschnitten mit gleichen Nachbarn: abgerissene Schnüre 18 von 21 haben einen Wert auf dem Partner, intakte 10 von 29 (einseitiger Fisher-Test p = 0,0003).",
+     "Abweichende zugeordnete Werte neben gleichen: um einen Knoten 21 gegenüber 1,4, wenn die abweichenden Werte zwischen den Stellen gemischt werden (p < 0,001); eine Ziffer an einer Stelle geändert 8 gegenüber 2,4 (p = 0,004); Ziffern vertauscht 0; um ×10 verschoben 1."
+    ],
+    "levels": {
+     "numbers": "Verlorene Werte auf abgerissenen Schnüren tauchen auf dem Partner viel häufiger auf als an intakten Nullen; Abweichungen häufen sich bei einem Knoten oder einer Ziffer.",
+     "structure": "Gezählt werden nur Stellen innerhalb von Abschnitten, in denen beide Nachbarn übereinstimmen; so ist die Zuordnung sicher.",
+     "reading": "Eine Kopie entstand durch Zählen der Knoten jeder Stelle; eine abgerissene Schnur eines Khipus lässt sich aus dem anderen wiederherstellen. Stärker abweichende Werte sind wohl getrennte Aufzeichnungen, keine Versehen."
     }
    }
   },
@@ -654,6 +668,18 @@
    "Operations beyond addition": {
     "title": "Rechenarten jenseits der Addition",
     "text": "Brüche (eine Gruppe gleich einer anderen mal p/q mit Rundung, q = 2–12), Produkte (a × b = c innerhalb einer Gruppe), Quadrate und Kuben sowie die Kreisfläche (π·r² oder 3·r²) wurden in jedem Khipu gesucht. Gegenüber um 1–5 verschobenen Werten, jede Wertkombination einmal gezählt und ohne runde Zahlen: Brüche 7 gegenüber 11,9, Produkte 228 gegenüber 217, Potenzen 167 gegenüber 142, Kreis 188 gegenüber 245 — nichts über dem Zufall. Neben Summen kommen nur ganzzahlige Vielfache (×8 auf UR271, Halbieren auf AS026B) und proportionale Anteile (die Berliner Neuntel) vor."
+   },
+   "Breakdown tables outside Inkawasi": {
+    "title": "Aufschlüsselungstabellen außerhalb von Inkawasi",
+    "text": "Im ganzen Korpus wurden Gruppensummen eines Khipus gesucht, die in Reihenfolge als erste Schnüre der Gruppen eines anderen wiederkehren (wie die Neunertabellen von Inkawasi): Paare mit vier oder mehr solchen Summen sind 4 gegenüber 0,5 bei verschobenen Werten, und alle vier sind bekannte Inkawasi-Paare. Außerhalb von Inkawasi liegt nichts über der Vergleichslinie."
+   },
+   "Colour of total cords": {
+    "title": "Farbe der Summenschnüre",
+    "text": "Eine Schnur, die der Summe der übrigen ihrer Gruppe gleicht, hat häufiger als zufällig eine eigene Farbe (56 von 134 gegenüber 39), doch der Überschuss stammt aus den Erdnussbüchern von Inkawasi (weiße Bruttoschnüre) und aus UR297; sonst 16 von 50 gegenüber 13,2 (p = 0,16). Die Summe farblich zu kennzeichnen ist eine örtliche Gewohnheit, keine allgemeine Regel."
+   },
+   "Formats and find-places": {
+    "title": "Formate und Fundorte",
+    "text": "Khipus, die dieselbe Einheit von Gruppengrößen wiederholen (etwa sechs Schnüre und ein Trenner), stammen nicht häufiger als zufällig vom selben Ort (19 % der Paare gegenüber 11 %, p = 0,20; 22 Khipus mit bekanntem Fundort). Ähnliche Spaltenprofile weisen nur schwach auf denselben Ort (20 % gegenüber 8 %, p = 0,06), finden aber Zweitaufnahmen und bekannte Verbindungen."
    }
   },
   "sources": {
@@ -817,7 +843,15 @@
    "Rounded list (UR234 g11, g12)": "Gerundete Liste (UR234 G11, G12)",
    "UR234 group heads, its rounded lists, and AS104": "Gruppenköpfe von UR234, seine gerundeten Listen und AS104",
    "broken": "abgerissen",
-   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Die letzten fünf Zeilen stellen die zweite gerundete Gruppe von UR234 (G12) der Gruppe 4 von AS104 gegenüber. Werte aus dem OKR; die KFG-Ausgabe vom Oktober 2026 liest 2010 und 2086 bei den beiden Schnüren, die das OKR als 2100 und 2806 liest (dieselben Knoten an anderen Dezimalstellen)."
+   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Die letzten fünf Zeilen stellen die zweite gerundete Gruppe von UR234 (G12) der Gruppe 4 von AS104 gegenüber. Werte aus dem OKR; die KFG-Ausgabe vom Oktober 2026 liest 2010 und 2086 bei den beiden Schnüren, die das OKR als 2100 und 2806 liest (dieselben Knoten an anderen Dezimalstellen).",
+   "Broken: end recorded as broken, or shorter than 10 cm. Each place lies inside a run where both neighbouring cords agree on the two khipus.": "Abgerissen: Ende als abgerissen verzeichnet oder kürzer als 10 cm. Jede Stelle liegt in einem Abschnitt, in dem beide Nachbarschnüre auf den zwei Khipus übereinstimmen.",
+   "Cord": "Schnur",
+   "Group": "Gruppe",
+   "Its cord": "Seine Schnur",
+   "Length (cm)": "Länge (cm)",
+   "Other khipu": "Anderes Khipu",
+   "Value on the other khipu": "Wert auf dem anderen Khipu",
+   "Values lost on broken cords and kept on the linked khipu": "Auf abgerissenen Schnüren verlorene, auf dem verbundenen Khipu erhaltene Werte"
   }
  }
 }

@@ -460,13 +460,14 @@
     "summary": "Los 52 khipus del depósito inca de Inkawasi (valle de Cañete) se leen como un solo sistema contable en tres niveles. Unas tablas dividen cada entrega en nueve partes (UR278, UR270); los totales de sus grupos son las entregas brutas anotadas, en el mismo orden, en los libros (UR275 y su copia UR266; UR274B). Cada libro registra bruto, neto y una deducción fija propia: 15 y 10 en los dos libros de ají, 47 en el libro de maní UR275, 47, 46, 46, 44 y 25 según el lugar en UR269, 208 en UR268. Las copias conservan la deducción de su libro y se guardaban en otro lugar: los libros de ají en el sector A, sus copias en el sector C. Los registros solo de totales están junto a sus libros completos (capas 14 y 15 de la unidad 20N). Ningún khipu conservado contiene los totales de los demás. La deducción fija fue descrita por Urton y Chu (2015, 2019); las tablas de nueve partes y la disposición del archivo en conjunto son, hasta donde sabemos, nuevas.",
     "evidence": [
      "Alineados en orden con las entregas brutas de los libros, los totales de los grupos de nueve cuerdas de UR278 dan 10 iguales y 4 a un nudo en UR266 (7 y 4 en UR275), los de UR270 4 iguales y 1 a un nudo en UR274B; con los valores de los libros desplazados en 1–10 la misma alineación encuentra como máximo 2. Una búsqueda de tales totales ordenados en cada par de khipus de Inkawasi encuentra solo estos y los atados conocidos solo de totales.",
+     "Las nueve columnas conservan su orden de tamaño de una entrega a otra (Spearman 0,59 entre filas consecutivas de UR278 y 0,64 en UR270, frente a 0 con los valores barajados dentro de las filas), y ambas tablas las ordenan igual (0,80, p = 0,007): los mismos nueve proveedores, cada uno con cerca de un noveno.",
      "Bruto = neto + deducción en 15 de 25 grupos de tres en UR267A (deducción 15), 12 de 14 en UR267B (10) y 7 de 9 en UR275 (47); con los valores barajados dentro de cada khipu se esperan 0,3 o menos. Cada copia conserva la deducción de su libro: UR255 15, UR256 10, UR266 47.",
      "Los valores grandes de UR257 (hasta 98 718) no coinciden con totales de otros khipus de Inkawasi más que valores desplazados (3 de 10 frente a 2,7)."
     ],
     "levels": {
      "numbers": "Tablas de nueve partes cuyos totales de grupo son las entregas brutas de los libros, en orden; grupos de tres que suman (bruto = neto + deducción) con una deducción por libro; cada copia tiene la misma deducción que su libro.",
      "structure": "Tres niveles —partes, entregas, totales— en khipus distintos; las copias de los libros de ají en otro sector, el atado de totales junto al completo.",
-     "reading": "Cada entrega formada por nueve aportes; libros separados para cada producto y flujo de entregas, cada uno con su propia exacción fija; copias guardadas en un segundo lugar, quizá para control; los resúmenes, en otra parte o perdidos."
+     "reading": "Cada entrega formada por nueve aportes de los mismos nueve proveedores; libros separados para cada producto y flujo de entregas, cada uno con su propia exacción fija; copias guardadas en un segundo lugar, quizá para control; los resúmenes, en otra parte o perdidos."
     }
    },
    "as104": {
@@ -481,6 +482,19 @@
      "numbers": "Siete valores raros en el mismo orden, muy por encima de la línea de base desplazada; valores cercanos (3102/3012, 2085/2086, 2329/2300) llenan casi todo lo demás.",
      "structure": "En UR234 los valores son las cabezas de sus grupos y dos grupos cortos tras ellos; en AS104 forman tres de sus cuatro grupos.",
      "reading": "AS104 parece una copia en limpio del resumen de UR234: las cabezas completas, con el lugar perdido en UR234 todavía lleno. El grupo 1 de AS104 (18 379–37 076) no se explica por UR234; el lugar de hallazgo de UR234 es desconocido."
+    }
+   },
+   "copies": {
+    "title": "Las copias conservan lo que se rompió y difieren en nudos sueltos",
+    "summary": "Donde un khipu de un par vinculado tiene una cuerda rota registrada como 0, el otro casi siempre tiene un valor en ese lugar: 18 de 21 cuerdas así, frente a 10 de 29 ceros en cuerdas intactas. Un cero en una cuerda rota es un valor perdido, no un cero, y la copia lo devuelve (por ejemplo 142, 223 y 191 en UR255 desde UR267A; 1545 y 1442 en UR266 desde UR275; 830 y 3818 en UR122 desde KH0049). Donde copia y original discrepan en cuerdas intactas, la diferencia suele ser de un nudo (21 de 70) o de una cifra en un lugar (8): las copias se hacían lugar por lugar, nudo por nudo.",
+    "evidence": [
+     "Ceros dentro de tramos con vecinos iguales: cuerdas rotas 18 de 21 tienen valor en el otro khipu, cuerdas intactas 10 de 29 (Fisher unilateral p = 0,0003).",
+     "Valores emparejados distintos junto a iguales: a un nudo 21 frente a 1,4 si se barajan los valores distintos entre lugares (p < 0,001); una cifra cambiada en un lugar 8 frente a 2,4 (p = 0,004); cifras intercambiadas 0; desplazados ×10 1."
+    ],
+    "levels": {
+     "numbers": "Los valores perdidos en cuerdas rotas reaparecen en el otro khipu mucho más que en los ceros intactos; las discrepancias se concentran en un nudo o una cifra.",
+     "structure": "Solo se cuentan lugares dentro de tramos donde ambos vecinos coinciden, así la alineación es segura.",
+     "reading": "Una copia se hacía contando los nudos de cada lugar; una cuerda rota en un khipu puede restaurarse desde el otro. Los valores que difieren más son probablemente registros distintos, no descuidos."
     }
    }
   },
@@ -664,6 +678,18 @@
    "Operations beyond addition": {
     "title": "Operaciones más allá de la suma",
     "text": "Se buscaron en cada khipu fracciones (un grupo igual a otro por p/q con redondeo, q = 2–12), productos (a × b = c dentro de un grupo), cuadrados y cubos, y el área de un círculo (π·r² o 3·r²). Frente a valores desplazados en 1–5, contando cada combinación una vez y sin números redondos: fracciones 7 frente a 11,9; productos 228 frente a 217; potencias 167 frente a 142; círculo 188 frente a 245: ninguno por encima del azar. Además de las sumas, solo hay múltiplos enteros (×8 en UR271, mitades en AS026B) y partes proporcionales (los novenos de Berlín)."
+   },
+   "Breakdown tables outside Inkawasi": {
+    "title": "Tablas de desglose fuera de Inkawasi",
+    "text": "Se buscaron en todo el corpus totales de grupo de un khipu que reaparecen, en orden, como primeras cuerdas de los grupos de otro (las tablas de nueve partes de Inkawasi): los pares con cuatro o más de tales totales son 4 frente a 0,5 con valores desplazados, y los cuatro son pares conocidos de Inkawasi. Fuera de Inkawasi nada supera la línea de base."
+   },
+   "Colour of total cords": {
+    "title": "Color de las cuerdas de total",
+    "text": "Una cuerda igual a la suma de las demás de su grupo tiene un color propio más que por azar (56 de 134 frente a 39), pero el exceso viene de los libros de maní de Inkawasi (cuerdas brutas blancas) y de UR297; en otros casos 16 de 50 frente a 13,2 (p = 0,16). Marcar el total con color es un hábito local, no una regla general."
+   },
+   "Formats and find-places": {
+    "title": "Formatos y lugares de hallazgo",
+    "text": "Los khipus que repiten la misma unidad de tamaños de grupo (por ejemplo seis cuerdas y un separador) no proceden del mismo lugar más que por azar (19 % de los pares frente a 11 %, p = 0,20; 22 khipus con lugar conocido). Los perfiles de columnas parecidos apuntan al mismo lugar solo débilmente (20 % frente a 8 %, p = 0,06), aunque sí encuentran segundas grabaciones y vínculos conocidos."
    }
   },
   "sources": {
@@ -817,7 +843,15 @@
    "Rounded list (UR234 g11, g12)": "Lista redondeada (UR234 g11, g12)",
    "UR234 group heads, its rounded lists, and AS104": "Cabezas de grupo de UR234, sus listas redondeadas y AS104",
    "broken": "rota",
-   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Las cinco últimas filas comparan el segundo grupo redondeado de UR234 (g12) con el grupo 4 de AS104. Valores del OKR; la edición del KFG de octubre de 2026 lee 2010 y 2086 en las dos cuerdas que el OKR lee 2100 y 2806 (los mismos nudos en otras posiciones decimales)."
+   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Las cinco últimas filas comparan el segundo grupo redondeado de UR234 (g12) con el grupo 4 de AS104. Valores del OKR; la edición del KFG de octubre de 2026 lee 2010 y 2086 en las dos cuerdas que el OKR lee 2100 y 2806 (los mismos nudos en otras posiciones decimales).",
+   "Broken: end recorded as broken, or shorter than 10 cm. Each place lies inside a run where both neighbouring cords agree on the two khipus.": "Rota: extremo registrado como roto, o de menos de 10 cm. Cada lugar está dentro de un tramo donde ambas cuerdas vecinas coinciden en los dos khipus.",
+   "Cord": "Cuerda",
+   "Group": "Grupo",
+   "Its cord": "Su cuerda",
+   "Length (cm)": "Longitud (cm)",
+   "Other khipu": "Otro khipu",
+   "Value on the other khipu": "Valor en el otro khipu",
+   "Values lost on broken cords and kept on the linked khipu": "Valores perdidos en cuerdas rotas y conservados en el khipu vinculado"
   }
  }
 }

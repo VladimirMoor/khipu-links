@@ -346,6 +346,7 @@
   "summary": "The 52 khipus from the Inka storehouse at Inkawasi (Cañete valley) read as one bookkeeping system on three levels. Tables split each delivery into nine parts (UR278, UR270); their group totals are the gross deliveries entered, in the same order, in the ledgers (UR275 and its copy UR266; UR274B). Each ledger records gross, net and a fixed deduction of its own: 15 and 10 on the two chili ledgers, 47 on the peanut ledger UR275, 47, 46, 46, 44 and 25 by place on UR269, 208 on UR268. Copies keep their ledger's deduction and were stored elsewhere: the chili ledgers in sector A, their copies in sector C. Totals-only records lie next to their full ledgers (layers 14 and 15 of unit 20N). No surviving khipu holds the totals of the others. The fixed deduction was described by Urton and Chu (2015, 2019); the nine-part tables and the layout of the archive as a whole are, as far as we know, new.",
   "evidence": [
    "Laid in order against the ledgers' gross deliveries, the nine-cord group totals of UR278 give 10 equal and 4 one knot apart on UR266 (7 and 4 on UR275), those of UR270 4 equal and 1 one knot apart on UR274B; with the ledger values shifted by 1–10 the same alignment finds at most 2. A search of every pair of Inkawasi khipus for such ordered totals finds only these and the known totals-only bundles.",
+   "The nine columns keep their order of size from delivery to delivery (Spearman 0.59 between consecutive rows of UR278 and 0.64 on UR270, against 0 when values are shuffled within rows), and both tables rank them alike (0.80, p = 0.007): the same nine suppliers, each giving about a ninth.",
    "Gross = net + deduction in 15 of 25 groups of three on UR267A (deduction 15), 12 of 14 on UR267B (10) and 7 of 9 on UR275 (47); with the values shuffled within each khipu, 0.3 or fewer are expected. Each copy keeps its ledger's deduction: UR255 15, UR256 10, UR266 47.",
    "The large values of UR257 (up to 98,718) match totals of other Inkawasi khipus no more often than shifted values do (3 of 10 against 2.7)."
   ],
@@ -373,7 +374,7 @@
   "levels": {
    "numbers": "Nine-part tables whose group totals are the gross deliveries of the ledgers, in order; groups of three that add up (gross = net + deduction) with one deduction per ledger; each copy has the same deduction as its ledger.",
    "structure": "Three levels — parts, deliveries, totals — on different khipus; copies of the chili ledgers in another sector, the totals-only bundle next to its full one.",
-   "reading": "Each delivery made up of nine contributions; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
+   "reading": "Each delivery made up of nine contributions from the same nine suppliers; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
   }
  },
  {
@@ -400,6 +401,37 @@
    "numbers": "Seven rare values in the same order, far above the shifted baseline; near values (3102/3012, 2085/2086, 2329/2300) fill most of the rest.",
    "structure": "On UR234 the values are the heads of its groups and two short groups after them; on AS104 they make up three of its four groups.",
    "reading": "AS104 looks like a fair copy of UR234's summary: the heads in full, with the place lost on UR234 still filled. Group 1 of AS104 (18,379–37,076) is not explained by UR234; UR234's find-place is unknown."
+  }
+ },
+ {
+  "id": "copies",
+  "status": "new",
+  "title": "Copies keep what broke off, and differ by single knots",
+  "place": [],
+  "summary": "Where one khipu of a linked pair has a broken cord recorded as 0, the other khipu nearly always has a value in that place: 18 of 21 such cords, against 10 of 29 zeros on intact cords. A zero on a broken cord is a lost value, not a zero, and the copy gives it back (for example 142, 223 and 191 on UR255 from UR267A; 1545 and 1442 on UR266 from UR275; 830 and 3818 on UR122 from KH0049). Where copy and original disagree on intact cords, the difference is most often one knot (21 of 70) or one digit in one place (8): copies were made place by place, knot by knot.",
+  "evidence": [
+   "Zeros inside runs of equal neighbours: broken cords 18 of 21 have a value on the partner, intact cords 10 of 29 (one-sided Fisher p = 0.0003).",
+   "Differing matched values next to equal ones: one knot apart 21 against 1.4 when the differing values are shuffled between places (p < 0.001); one digit changed in one place 8 against 2.4 (p = 0.004); digits swapped 0; shifted by ×10 1."
+  ],
+  "khipus": [
+   "UR255",
+   "UR267A",
+   "UR266",
+   "UR275",
+   "UR122",
+   "KH0049",
+   "HP055",
+   "UR1084",
+   "UR066",
+   "UR067"
+  ],
+  "scripts": [
+   "copies_losses.py"
+  ],
+  "levels": {
+   "numbers": "Lost values on broken cords reappear on the partner far more often than values at intact zeros; disagreements cluster at one knot or one digit.",
+   "structure": "Only places inside runs where both neighbours agree are counted, so the alignment is certain.",
+   "reading": "A copy was made by counting the knots of each place; a broken cord on one khipu can be restored from the other. Values that differ by more are probably separate records rather than slips."
   }
  }
 ]

@@ -185,6 +185,13 @@ def build_compare(pend, kids):
         C["as104"].append({"kind": "table", "title": "UR234 group heads, its rounded lists, and AS104",
                            "head": ["Group of UR234", "Head cord", "Rounded list (UR234 g11, g12)", "AS104 (g2–g4)"], "rows": rows,
                            "note": "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions)."})
+    rest = ROOT / "extracted/restored_from_copies.csv"
+    if rest.exists():
+        rr = list(csv.DictReader(open(rest)))
+        C["copies"].append({"kind": "table", "title": "Values lost on broken cords and kept on the linked khipu",
+                            "head": ["Khipu", "Cord", "Group", "Length (cm)", "Value on the other khipu", "Other khipu", "Its cord"],
+                            "rows": [[r["khipu"], int(r["cord"]), r["group"], float(r["length_cm"]), int(r["value_on_partner"]), r["partner"], int(r["partner_cord"])] for r in rr],
+                            "note": "Broken: end recorded as broken, or shorter than 10 cm. Each place lies inside a run where both neighbouring cords agree on the two khipus."})
     roles = list(csv.DictReader(open(ROOT / "atlas/curated/inkawasi_roles.csv")))
     C["inkawasi_archive"].append({"kind": "table", "title": "The Inkawasi khipus by place",
                                   "head": ["Khipu", "Place", "Product", "Role", "Deduction", "Linked to"],
