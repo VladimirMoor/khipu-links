@@ -2371,6 +2371,33 @@ def h169():
     print(f"H169: total cords standing before the group they sum: {before}; after: {after}")
 
 
+def h177():
+    """Cords cut one after another: intact cord length (knot allowance added back) drifts along the khipu, and neighbouring
+    cords are closer in length than distant ones (cut in sequence from one batch)."""
+    K = hyp.okr()
+    rs, nb_real, nb_sim, n = [], 0, 0, 0
+    for cs in K.values():
+        L = []
+        for r in cs:
+            if r["length"] > 0 and r["term"] != "B":
+                turns = sum(kk[3] if kk[0] == "L" else 0 for cl in r["clusters"] for kk in cl["knots"])
+                single = sum(1 for cl in r["clusters"] for kk in cl["knots"] if kk[0] != "L")
+                L.append(r["length"] + 0.54 * single + 0.64 * turns)
+        if len(L) < 20 or statistics.pstdev(L) == 0:
+            continue
+        n += 1
+        rs.append(spearman(list(range(len(L))), L))
+        d = statistics.mean(abs(a - b) for a, b in zip(L, L[1:]))
+        q = L[:]
+        sims = []
+        for _ in range(100):
+            R.shuffle(q)
+            sims.append(statistics.mean(abs(a - b) for a, b in zip(q, q[1:])))
+        nb_real += d < statistics.quantiles(sims, n=20)[0]
+    print(f"H177: khipus {n}; Spearman (order, length) mean {statistics.mean(rs):.3f}, positive {sum(r > 0 for r in rs)}, negative {sum(r < 0 for r in rs)}; "
+          f"neighbours closer than the 5% shuffle quantile in {nb_real} (expected {0.05 * n:.1f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
