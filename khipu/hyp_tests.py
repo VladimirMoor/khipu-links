@@ -2760,6 +2760,25 @@ def h206():
           f"after {real['next']} ({statistics.mean(s_['next'] for s_ in sims):.1f}), both {real['both']} ({statistics.mean(s_['both'] for s_ in sims):.1f})")
 
 
+def h210():
+    """Male–female pairs: within groups, cords at positions (1,2), (3,4), … are closer in value than pairs (2,3), (4,5), and
+    than random pairs of the group (|log ratio|, values ≥ 1)."""
+    K = hyp.okr()
+    a, b, c = [], [], []
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) < 6 or min(v) < 1:
+                continue
+            L = [math.log(x) for x in v]
+            a += [abs(L[i] - L[i + 1]) for i in range(0, len(L) - 1, 2)]
+            b += [abs(L[i] - L[i + 1]) for i in range(1, len(L) - 1, 2)]
+            for _ in range(len(L) // 2):
+                x, y = R.sample(L, 2)
+                c.append(abs(x - y))
+    print(f"H210: |log ratio| pairs (1,2),(3,4)…: {statistics.mean(a):.3f} (n {len(a)}); (2,3),(4,5)…: {statistics.mean(b):.3f}; random pairs {statistics.mean(c):.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
