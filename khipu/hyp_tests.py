@@ -2550,6 +2550,27 @@ def h187():
           f"odd cords at first {pos['first']}, middle {pos['middle']}, last {pos['last']}")
 
 
+def h189():
+    """Moieties: groups come in pairs (1–2, 3–4, …) — totals within a pair are closer than across pair boundaries (2–3, 4–5),
+    in khipus with ≥ 6 groups. Both phases tested (pairs starting at group 1 or at group 2)."""
+    K = hyp.okr()
+    res = Counter()
+    for cs in K.values():
+        t = [sum(r["value"] for r in g) for g in hyp.groups(cs)]
+        if len(t) < 6 or sum(t) == 0:
+            continue
+        d = [abs(math.log1p(a) - math.log1p(b)) for a, b in zip(t, t[1:])]
+        odd = statistics.mean(d[0::2])
+        even = statistics.mean(d[1::2])
+        res["n"] += 1
+        res["pairs from 1 tighter"] += odd < even
+        res["pairs from 2 tighter"] += even < odd
+        sz = [len(g) for g in hyp.groups(cs)]
+        res["same size within pair from 1"] += sum(a == b for a, b in zip(sz[0::2], sz[1::2]))
+        res["same size across"] += sum(a == b for a, b in zip(sz[1::2], sz[2::2]))
+    print("H189: " + "; ".join(f"{k} {v}" for k, v in res.items()))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
