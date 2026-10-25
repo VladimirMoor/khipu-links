@@ -336,7 +336,8 @@
     "summary": "El grupo 4 de AS143 es igual a los grupos 1 + 2 de AS149 en las cinco posiciones (17436 = 8653 + 8783, 41883 = 20640 + 21243, …). Todas las partes tienen la misma composición (22,4 : 10,4 : 54,4 : 12,8 %); en novenos del total de AS143 las partes son 2 + 2 + 2 + 2 + 1. El lote 1430, 670, 3410, 820 reaparece en AS179.",
     "evidence": [
      "La única suma vectorial exacta entre khipus del corpus (línea de base desplazada 0–2, solo valores pequeños).",
-     "Dos partes de 2/9 de AS143 son iguales con diferencia de 1 (41062 y 41061), con una sustitución entre bienes (p ≈ 0,005)."
+     "Dos partes de 2/9 de AS143 son iguales con diferencia de 1 (41062 y 41061), con una sustitución entre bienes (p ≈ 0,005).",
+     "Una segunda composición, distinta, del mismo lote berlinés de Ica: UR1120 (AS120, VA47083) tiene cuatro filas de ocho cuerdas cuyos totales (146 087, 49 783, 62 850, 33 455) se dividen con las mismas proporciones, cerca de 17,6 / 0,7 / 29,3 / 1,3 / 13,2 / 3,8 / 4,5 / 29,7 % (las filas 1 y 2 son proporcionales con un margen del 1–2 %: 25 691 / 8 731 = 2,94, 43 372 / 14 701 = 2,95). Una búsqueda de grupos proporcionales en todo el corpus solo halla UR1120, AS143 (UR1143) y las tablas de nueve partes de Inkawasi."
     ],
     "levels": {
      "numbers": "Grupo 4 de AS143 = grupos 1 + 2 de AS149 en las cinco posiciones: la única suma exacta entre dos khipus en un barrido de todo el corpus; el mismo barrido con los números desplazados en 1–7 encuentra 0–2, todas con valores pequeños.",
@@ -503,7 +504,8 @@
     "evidence": [
      "Altura de las unidades en cuerdas emparejadas iguales (mismo número de posiciones), corregida por posiciones, nudos superiores y una mediana móvil de 11 cuerdas: p de permutación < 0,01 en 7 de 11 pares — AS175 ~ UR233 0,81, AS175 ~ UR232 0,79, UR1114 ~ UR1123 0,81, UR267A ~ UR255 0,59, UR053C ~ UR053B 0,59, UR266 ~ UR275 0,46, HP055 ~ UR1084 0,44.",
      "Registros KFG frente a OKR de los mismos khipus: 98,0 % de valores iguales; de las diferencias, 123 de 344 son desplazamientos de una posición (×10) y pocas son errores de un nudo — lo contrario que en las copias.",
-     "Repeticiones internas (serie de ≥ 4 cuerdas con ≥ 3 valores no redondos distintos ≥ 10, repetida con un desplazamiento ≥ 2): 7 khipus frente a 1–3 en 10 barajados."
+     "Repeticiones internas (serie de ≥ 4 cuerdas con ≥ 3 valores no redondos distintos ≥ 10, repetida con un desplazamiento ≥ 2): 7 khipus frente a 1–3 en 10 barajados.",
+     "Las copias de Inkawasi del sector C (UR255, UR256) trasladan sus originales a un formulario propio: cada fila tiene una cuerda vacía entre el bruto y la deducción fija (106, 0, 15; 1055, 0, 10 …), donde los originales siguen directamente (106, 15, 91; 660, 10, 74); los brutos de UR267A reaparecen en UR255 en 17 de 23 casos, los netos solo en 9 de 22: la columna reservada para el neto nunca se llenó."
     ],
     "levels": {
      "numbers": "Las copias repiten la altura de los nudos del original, no solo sus números; los registros modernos difieren de otro modo (posiciones enteras).",
@@ -551,7 +553,8 @@
      "AS068 (Ascher) frente a UR281 (Urton), un mismo objeto: color igual en 61 de 181 cuerdas emparejadas; YB ↔ AB 56 veces.",
      "En los khipus solo de KFG las cuerdas claras son mayores en 32 de 63 frente a 26,9 (p = 0,10): la misma dirección, no significativa por sí sola.",
      "Dentro de los khipus el color marca una categoría con su propio tamaño de números: dentro de los grupos (medias de grupo restadas, colores barajados solo dentro del grupo) el color explica los valores más allá del azar en 52 de 162 khipus (1,6 esperados), hasta R² 0,93 en AS178; las columnas de las tablas mantienen un color en 710 de 1716 casos (267 por azar), y esas columnas son más uniformes en tamaño (desviación de log 0,53 frente a 0,69). En UR1097 (Pachacamac) las cuerdas blancas con una corta parte superior de color llevan 1 bajo las etiquetas G0/BB y 5 bajo BG/VB/0D (R² 0,94).",
-     "Las cuerdas de dos colores también se mantienen en sus propias columnas (coincidencia de posiciones 8838 frente a 7686), sin ser mayores. Las cuerdas sueltas que separan grupos son sobre todo marcas de color vacías (72 % de los separadores coloreados están vacíos) y tienen un color distinto de la cabeza del grupo siguiente (mismo color en 188 de 763 frente a 347 para una cuerda al azar)."
+     "Las cuerdas de dos colores también se mantienen en sus propias columnas (coincidencia de posiciones 8838 frente a 7686), sin ser mayores. Las cuerdas sueltas que separan grupos son sobre todo marcas de color vacías (72 % de los separadores coloreados están vacíos) y tienen un color distinto de la cabeza del grupo siguiente (mismo color en 188 de 763 frente a 347 para una cuerda al azar).",
+     "Dos colores que se alternan a lo largo de un grupo (periodo 2: 121 grupos frente a 29 por azar) marcan parejas de asientos distintos: en 9 de 17 casos estrictos los dos colores difieren al menos al doble (14 % en otros grupos), p. ej. UR1145 (Pachacamac) 5, 2, 4 junto a 1000, 1100, 430; en UR1103, UR1150 y HP022 las dos partes de la pareja crecen juntas."
     ],
     "levels": {
      "numbers": "Las cantidades grandes están en cuerdas claras más a menudo que en oscuras.",
@@ -601,7 +604,8 @@
      "Totales de fila de 200 tablas frente a valores permutados dentro de cada columna: menos parejos en 110, más parejos en 4 (10 esperados en cada caso).",
      "Ocho subsidiarias por colgante: UR093 en 90 colgantes, HP038 en 24; el colgante iguala la suma de sus ocho subsidiarias 19 veces en UR093.",
      "Se repite en khipus solo de KFG: coincidencia de posiciones vacías 3602 frente a 3491 (máx. 3513) en 65 conjuntos.",
-     "Las filas comparten un mismo perfil: en una tabla las mismas columnas son grandes en todas las filas (Spearman medio entre filas 0,51, positivo en el 85 % de 11 916 pares); la primera columna es la mayor en 93 de 242 tablas (47,5 esperadas) y los ceros caen en las columnas pequeñas (Spearman −0,27, negativo en 145 tablas frente a 55): una casilla vacía significa «ninguno». Las tablas de un mismo sitio comparten débilmente el perfil de columnas (Spearman 0,15 frente a 0,02 entre sitios distintos, p = 0,003)."
+     "Las filas comparten un mismo perfil: en una tabla las mismas columnas son grandes en todas las filas (Spearman medio entre filas 0,51, positivo en el 85 % de 11 916 pares); la primera columna es la mayor en 93 de 242 tablas (47,5 esperadas) y los ceros caen en las columnas pequeñas (Spearman −0,27, negativo en 145 tablas frente a 55): una casilla vacía significa «ninguno». Las tablas de un mismo sitio comparten débilmente el perfil de columnas (Spearman 0,15 frente a 0,02 entre sitios distintos, p = 0,003).",
+     "La columna fija también cómo se escriben sus asientos: las subsidiarias cuelgan de las mismas columnas de fila en fila (9100 frente a 8624 al barajar dentro de las filas) y en el mismo número (8409 frente a 8057), y una columna es entera redonda, exacta o de una cifra (12 341 frente a 11 474). Algunas columnas se prepararon y quedaron casi vacías en el 80 % de las filas o más: 45 columnas así, diez de ellas en dos tablas de UR006 (Leymebamba); están coloreadas como las llenas."
     ],
     "levels": {
      "numbers": "Los totales de fila difieren más de lo que permiten las columnas; las filas vacías no tienen ningún nudo.",

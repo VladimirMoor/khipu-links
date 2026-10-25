@@ -336,7 +336,8 @@
     "summary": "Gruppe 4 von AS143 ist in allen fünf Positionen gleich den Gruppen 1 + 2 von AS149 (17436 = 8653 + 8783, 41883 = 20640 + 21243, …). Alle Anteile haben dieselbe Zusammensetzung (22,4 : 10,4 : 54,4 : 12,8 %); in Neunteln der Gesamtsumme von AS143 betragen die Anteile 2 + 2 + 2 + 2 + 1. Der Posten 1430, 670, 3410, 820 kehrt auf AS179 wieder.",
     "evidence": [
      "Die einzige exakte khipuübergreifende Vektorsumme im Korpus (Vergleichsbasis mit verschobenen Werten: 0–2, nur kleine Werte).",
-     "Zwei 2/9-Anteile von AS143 sind bis auf 1 gleich (41062 und 41061), mit einem Austausch zwischen Gütern (p ≈ 0,005)."
+     "Zwei 2/9-Anteile von AS143 sind bis auf 1 gleich (41062 und 41061), mit einem Austausch zwischen Gütern (p ≈ 0,005).",
+     "Eine zweite, andere Zusammensetzung aus derselben Berliner Ica-Partie: UR1120 (AS120, VA47083) hat vier Zeilen zu acht Schnüren, deren Summen (146 087, 49 783, 62 850, 33 455) nach denselben Anteilen geteilt sind, etwa 17,6 / 0,7 / 29,3 / 1,3 / 13,2 / 3,8 / 4,5 / 29,7 % (Zeilen 1 und 2 auf 1–2 % proportional: 25 691 / 8 731 = 2,94, 43 372 / 14 701 = 2,95). Eine korpusweite Suche nach proportionalen Gruppen findet nur UR1120, AS143 (UR1143) und die neunteiligen Tabellen von Inkawasi."
     ],
     "levels": {
      "numbers": "Gruppe 4 von AS143 = Gruppen 1 + 2 von AS149 in allen fünf Positionen: die einzige exakte Summe zwischen zwei Khipus in einem Durchlauf über das ganze Korpus; derselbe Durchlauf mit um 1–7 verschobenen Zahlen findet 0–2, alle bei kleinen Werten.",
@@ -503,7 +504,8 @@
     "evidence": [
      "Höhe der Einer auf gepaarten gleichen Schnüren (gleiche Stellenzahl), bereinigt um Stellen, Knoten darüber und einen gleitenden Median über 11 Schnüre: Permutations-p < 0,01 in 7 von 11 Paaren – AS175 ~ UR233 0,81, AS175 ~ UR232 0,79, UR1114 ~ UR1123 0,81, UR267A ~ UR255 0,59, UR053C ~ UR053B 0,59, UR266 ~ UR275 0,46, HP055 ~ UR1084 0,44.",
      "KFG- gegen OKR-Aufnahmen derselben Khipus: 98,0 % gleiche Werte; von den Abweichungen sind 123 von 344 Verschiebungen um eine Stelle (×10) und nur wenige Ein-Knoten-Fehler – das Gegenteil der Kopien.",
-     "Innere Wiederholungen (Folge von ≥ 4 Schnüren mit ≥ 3 verschiedenen nicht runden Werten ≥ 10, wiederholt mit Abstand ≥ 2): 7 Khipus gegenüber 1–3 in 10 Mischungen."
+     "Innere Wiederholungen (Folge von ≥ 4 Schnüren mit ≥ 3 verschiedenen nicht runden Werten ≥ 10, wiederholt mit Abstand ≥ 2): 7 Khipus gegenüber 1–3 in 10 Mischungen.",
+     "Die Inkawasi-Kopien aus Sektor C (UR255, UR256) übertragen ihre Originale in ein eigenes Formular: Jede Zeile hat eine leere Schnur zwischen Bruttobetrag und festem Abzug (106, 0, 15; 1055, 0, 10 …), wo die Originale direkt weitergehen (106, 15, 91; 660, 10, 74); Bruttowerte von UR267A erscheinen auf UR255 in 17 von 23 Fällen wieder, Nettowerte nur in 9 von 22 – die für das Netto vorgesehene Spalte wurde nie gefüllt."
     ],
     "levels": {
      "numbers": "Kopien wiederholen die Knotenhöhen des Originals, nicht nur seine Zahlen; moderne Aufnahmen weichen anders ab (ganze Stellen).",
@@ -551,7 +553,8 @@
      "AS068 (Ascher) gegen UR281 (Urton), ein Objekt: gleiche Farbe bei 61 von 181 gepaarten Schnüren; YB ↔ AB 56-mal.",
      "Bei den Nur-KFG-Khipus sind helle Schnüre in 32 von 63 größer gegenüber 26,9 (p = 0,10): dieselbe Richtung, für sich nicht signifikant.",
      "Innerhalb der Khipus markiert Farbe eine Kategorie mit eigener Zahlengröße: Innerhalb der Gruppen (Gruppenmittel abgezogen, Farben nur innerhalb der Gruppe gemischt) erklärt Farbe die Werte über den Zufall hinaus in 52 von 162 Khipus (1,6 erwartet), bis R² 0,93 bei AS178; Tabellenspalten behalten in 710 von 1716 Fällen eine Farbe (zufällig 267), und solche Spalten sind in der Größe einheitlicher (Streuung der Logwerte 0,53 gegenüber 0,69). Bei UR1097 (Pachacamac) tragen weiße Schnüre mit kurzem farbigem Oberteil unter G0/BB-Markierungen 1 und unter BG/VB/0D-Markierungen 5 (R² 0,94).",
-     "Zweifarbige Schnüre halten sich ebenfalls an eigene Spalten (Positionsübereinstimmung 8838 gegenüber 7686), ohne größer zu sein. Einzelne Trennschnüre zwischen Gruppen sind meist leere farbige Marken (72 % der gefärbten Trenner sind leer) und anders gefärbt als der Kopf der folgenden Gruppe (gleiche Farbe in 188 von 763 gegenüber 347 bei einer zufälligen Schnur)."
+     "Zweifarbige Schnüre halten sich ebenfalls an eigene Spalten (Positionsübereinstimmung 8838 gegenüber 7686), ohne größer zu sein. Einzelne Trennschnüre zwischen Gruppen sind meist leere farbige Marken (72 % der gefärbten Trenner sind leer) und anders gefärbt als der Kopf der folgenden Gruppe (gleiche Farbe in 188 von 763 gegenüber 347 bei einer zufälligen Schnur).",
+     "Zwei entlang einer Gruppe abwechselnde Farben (Periode 2: 121 Gruppen gegenüber 29 zufällig) markieren Paare ungleicher Einträge: In 9 von 17 strengen Fällen unterscheiden sich die beiden Farben mindestens um das Doppelte (14 % in anderen Gruppen), z. B. UR1145 (Pachacamac) 5, 2, 4 neben 1000, 1100, 430; bei UR1103, UR1150 und HP022 wachsen beide Teile eines Paares zusammen."
     ],
     "levels": {
      "numbers": "Große Mengen stehen häufiger auf hellen als auf dunklen Schnüren.",
@@ -601,7 +604,8 @@
      "Zeilensummen von 200 Tabellen gegenüber innerhalb jeder Spalte permutierten Werten: ungleichmäßiger in 110, gleichmäßiger in 4 (je 10 erwartet).",
      "Acht Nebenschnüre je Hängeschnur: UR093 an 90 Hängeschnüren, HP038 an 24; bei UR093 entspricht die Hängeschnur 19-mal der Summe ihrer acht Nebenschnüre.",
      "Wiederholt bei Nur-KFG-Khipus: Übereinstimmung leerer Positionen 3602 gegenüber 3491 (max. 3513) in 65 Sätzen.",
-     "Zeilen teilen ein Profil: In einer Tabelle sind in jeder Zeile dieselben Spalten groß (mittlerer Spearman zwischen Zeilen 0,51, positiv in 85 % von 11 916 Zeilenpaaren); die erste Spalte ist in 93 von 242 Tabellen die größte (47,5 erwartet), und Nullen fallen in die kleinen Spalten (Spearman −0,27, negativ in 145 Tabellen gegenüber 55) – eine leere Zelle bedeutet „keiner“. Tabellen eines Fundorts teilen das Spaltenprofil schwach (Spearman 0,15 gegenüber 0,02 zwischen Fundorten, p = 0,003)."
+     "Zeilen teilen ein Profil: In einer Tabelle sind in jeder Zeile dieselben Spalten groß (mittlerer Spearman zwischen Zeilen 0,51, positiv in 85 % von 11 916 Zeilenpaaren); die erste Spalte ist in 93 von 242 Tabellen die größte (47,5 erwartet), und Nullen fallen in die kleinen Spalten (Spearman −0,27, negativ in 145 Tabellen gegenüber 55) – eine leere Zelle bedeutet „keiner“. Tabellen eines Fundorts teilen das Spaltenprofil schwach (Spearman 0,15 gegenüber 0,02 zwischen Fundorten, p = 0,003).",
+     "Eine Spalte legt auch fest, wie ihre Einträge geschrieben werden: Nebenschnüre hängen von Zeile zu Zeile an denselben Spalten (9100 gegenüber 8624 bei Mischung innerhalb der Zeilen) und in derselben Zahl (8409 gegenüber 8057), und eine Spalte ist durchgehend rund, genau oder einstellig (12 341 gegenüber 11 474). Manche Spalten wurden angelegt und in 80 % der Zeilen oder mehr fast leer gelassen – 45 solche Spalten, zehn davon in zwei Tabellen von UR006 (Leymebamba); sie sind wie die gefüllten gefärbt."
     ],
     "levels": {
      "numbers": "Zeilensummen unterscheiden sich stärker, als die Spalten erlauben; leere Zeilen tragen keinen einzigen Knoten.",
