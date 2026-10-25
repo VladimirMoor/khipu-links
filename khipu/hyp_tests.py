@@ -2184,6 +2184,27 @@ def h147():
               f"Spearman (knots, total turns) {spearman(n, tot) if len(set(n)) > 1 else float('nan'):.2f}")
 
 
+def h148():
+    """Crowding or counting? Units digits by number of places (long-knot genre excluded): if crowded cords squeezed the units
+    knot, the 7–9 deficit would grow with the number of places; if it comes from counting small amounts, it fades in large
+    (aggregated) values."""
+    K = hyp.okr()
+    by = defaultdict(Counter)
+    for k, cs in K.items():
+        if k in GENRE:
+            continue
+        for r in cs:
+            v = r["value"]
+            if v >= 10 and v % 10:
+                by[len(str(v))][v % 10] += 1
+    for n, c in sorted(by.items()):
+        t = sum(c.values())
+        if t < 50:
+            continue
+        base = sum(c[d] for d in range(1, 7)) / 6
+        print(f"H148: {n} places, n={t}: " + " ".join(f"{d}:{c[d] / base:.2f}" for d in range(1, 10)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
