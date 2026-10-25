@@ -3057,6 +3057,37 @@ def h260():
     print(f"H260: khipus {n}; across/within ratio of units-height jumps: median {statistics.median(ratios):.2f}; ratio > 1.5 in {big}")
 
 
+def nondecimal():
+    """Khipus with signs of non-decimal recording: share of upper (non-bottom) clusters that are long knots, figure-eights
+    or spirals, and long knots of ≥ 10 turns. Returns {khipu: (share_upper_odd, n_upper, n_ge10)}."""
+    K = hyp.okr()
+    out = {}
+    for k, cs in K.items():
+        up = odd = ge10 = 0
+        for r in cs:
+            n = len(r["clusters"])
+            for i, cl in enumerate(r["clusters"]):
+                ge10 += sum(1 for kk in cl["knots"] if kk[0] == "L" and kk[3] >= 10)
+                if i < n - 1:
+                    up += 1
+                    odd += cl["type"] in ("L", "E", "SP", "LL", "BL")
+        out[k] = (odd / up if up else 0.0, up, ge10)
+    return out
+
+
+def h267():
+    """How many khipus are non-decimal, and where: upper clusters that are long/figure-eight/spiral in ≥ 30% (≥ 10 upper
+    clusters), or ≥ 3 long knots of ≥ 10 turns."""
+    _, site, _ = hyp.atlas()
+    nd = nondecimal()
+    sel = {k: v for k, v in nd.items() if (v[1] >= 10 and v[0] >= 0.3) or v[2] >= 3}
+    by = Counter(site.get(k) or "?" for k in sel)
+    allby = Counter(site.get(k) or "?" for k in nd)
+    print(f"H267: non-decimal khipus {len(sel)} of {len(nd)}")
+    print("   by site: " + ", ".join(f"{s_} {n}/{allby[s_]}" for s_, n in by.most_common()))
+    print("   " + ", ".join(f"{k} ({v[0]:.2f}, {v[2]})" for k, v in sorted(sel.items(), key=lambda kv: -kv[1][0])))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
