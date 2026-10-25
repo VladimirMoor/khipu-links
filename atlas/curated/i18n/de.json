@@ -468,6 +468,20 @@
      "structure": "Drei Ebenen — Teile, Lieferungen, Summen — auf verschiedenen Khipus; die Kopien der Chili-Bücher in einem anderen Sektor, das Summenbündel neben dem vollständigen.",
      "reading": "Jede Lieferung aus neun Beiträgen; getrennte Bücher für jedes Produkt und jeden Lieferstrom, jedes mit eigener fester Abgabe; Kopien an einem zweiten Ort, vielleicht zur Kontrolle; Zusammenfassungen anderswo oder verloren."
     }
+   },
+   "as104": {
+    "title": "AS104 bewahrt die Gruppenköpfe von UR234, darunter einen, der mit einer abgerissenen Schnur verloren ging",
+    "summary": "UR234 (Berlin VA 66837, Fundort nicht verzeichnet; 98 Hängeschnüre) hat zehn Achtergruppen, jede von einer größeren Schnur angeführt (2007, 2080, 3012, 2247, 2578, —, 3419, 3159, 1407, —), und zwei kurze Gruppen, die eine Liste gerundet wiederholen (2500, 2010, 3000, 3159, 1407; 2000, 2086, 2300, 1385, 0 in der KFG-Lesung). AS104 (Berlin VA 42527, Gretzer, mit der Angabe Pachacamac; 21 Hängeschnüre) enthält dieselbe Liste vollständig: seine Gruppen 2 und 3 sind die Köpfe der Gruppen 1–9 (3102 statt 3012), seine Gruppe 4 (2178, 2085, 2329, 1385, 1501) entspricht der zweiten gerundeten Gruppe. Die Kopfschnur der Gruppe 6 von UR234 ist bei 6,5 cm abgerissen; AS104 hat an dieser Stelle 2016, die gerundete Liste 2010 (so liest es die KFG-Ausgabe vom Oktober 2026; das OKR liest 2100). Das Paar ergab sich aus der Suche nach gemeinsamen seltenen Werten in allen Khipu-Paaren.",
+    "evidence": [
+     "7 gemeinsame seltene Werte (≥ 100, keine Vielfachen von 10) gegenüber 0,10–0,15 erwarteten bei verschobenen Werten; das Paar überschreitet eine Bonferroni-Schwelle über alle 286 146 Khipu-Paare.",
+     "Die sieben Werte stehen auf beiden Khipus in derselben Reihenfolge; auf UR234 sind es die ersten Schnüre der Gruppen 1, 4, 5, 7, 8 und 9 und eine Schnur der zweiten gerundeten Gruppe.",
+     "Die Kopfschnüre der Gruppen 6 und 10 von UR234 sind abgerissen (6,5 und 8 cm, ohne Knoten)."
+    ],
+    "levels": {
+     "numbers": "Sieben seltene Werte in derselben Reihenfolge, weit über der verschobenen Vergleichslinie; nahe Werte (3102/3012, 2085/2086, 2329/2300) füllen fast den ganzen Rest.",
+     "structure": "Auf UR234 sind die Werte die Köpfe seiner Gruppen und zwei kurze Gruppen danach; auf AS104 bilden sie drei seiner vier Gruppen.",
+     "reading": "AS104 wirkt wie eine Reinschrift der Zusammenfassung von UR234: die Köpfe vollständig, die auf UR234 verlorene Stelle noch gefüllt. Gruppe 1 von AS104 (18 379–37 076) erklärt sich nicht aus UR234; der Fundort von UR234 ist unbekannt."
+    }
    }
   },
   "timeline": {
@@ -796,7 +810,14 @@
    "nine parts": "neun Teile",
    "place 1": "Stelle 1",
    "rounds of five": "Fünferrunden",
-   "totals": "Summen"
+   "totals": "Summen",
+   "AS104 (g2–g4)": "AS104 (G2–G4)",
+   "Group of UR234": "Gruppe von UR234",
+   "Head cord": "Kopfschnur",
+   "Rounded list (UR234 g11, g12)": "Gerundete Liste (UR234 G11, G12)",
+   "UR234 group heads, its rounded lists, and AS104": "Gruppenköpfe von UR234, seine gerundeten Listen und AS104",
+   "broken": "abgerissen",
+   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Die letzten fünf Zeilen stellen die zweite gerundete Gruppe von UR234 (G12) der Gruppe 4 von AS104 gegenüber. Werte aus dem OKR; die KFG-Ausgabe vom Oktober 2026 liest 2010 und 2086 bei den beiden Schnüren, die das OKR als 2100 und 2806 liest (dieselben Knoten an anderen Dezimalstellen)."
   }
  }
 }

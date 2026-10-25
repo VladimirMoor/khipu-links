@@ -459,7 +459,7 @@
     "title": "Inkawasi: how the storehouse kept its books",
     "summary": "The 52 khipus from the Inka storehouse at Inkawasi (Cañete valley) read as one bookkeeping system on three levels. Tables split each delivery into nine parts (UR278, UR270); their group totals are the gross deliveries entered, in the same order, in the ledgers (UR275 and its copy UR266; UR274B). Each ledger records gross, net and a fixed deduction of its own: 15 and 10 on the two chili ledgers, 47 on the peanut ledger UR275, 47, 46, 46, 44 and 25 by place on UR269, 208 on UR268. Copies keep their ledger's deduction and were stored elsewhere: the chili ledgers in sector A, their copies in sector C. Totals-only records lie next to their full ledgers (layers 14 and 15 of unit 20N). No surviving khipu holds the totals of the others. The fixed deduction was described by Urton and Chu (2015, 2019); the nine-part tables and the layout of the archive as a whole are, as far as we know, new.",
     "evidence": [
-     "Nine-cord group totals of UR278 equal the gross deliveries of UR266 in order: 10 equal and 3 one knot apart in its first 18 groups; of UR270, five consecutive deliveries of UR274B (groups 17, 20–23) and one kept only on UR273B. Against values shifted by 1–10: 11 of 31 and 9 of 18 group totals found elsewhere in the archive, against 3.0 and 3.1 (at most 6).",
+     "Laid in order against the ledgers' gross deliveries, the nine-cord group totals of UR278 give 10 equal and 4 one knot apart on UR266 (7 and 4 on UR275), those of UR270 4 equal and 1 one knot apart on UR274B; with the ledger values shifted by 1–10 the same alignment finds at most 2. A search of every pair of Inkawasi khipus for such ordered totals finds only these and the known totals-only bundles.",
      "Gross = net + deduction in 15 of 25 groups of three on UR267A (deduction 15), 12 of 14 on UR267B (10) and 7 of 9 on UR275 (47); with the values shuffled within each khipu, 0.3 or fewer are expected. Each copy keeps its ledger's deduction: UR255 15, UR256 10, UR266 47.",
      "The large values of UR257 (up to 98,718) match totals of other Inkawasi khipus no more often than shifted values do (3 of 10 against 2.7)."
     ],
@@ -467,6 +467,20 @@
      "numbers": "Nine-part tables whose group totals are the gross deliveries of the ledgers, in order; groups of three that add up (gross = net + deduction) with one deduction per ledger; each copy has the same deduction as its ledger.",
      "structure": "Three levels — parts, deliveries, totals — on different khipus; copies of the chili ledgers in another sector, the totals-only bundle next to its full one.",
      "reading": "Each delivery made up of nine contributions; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
+    }
+   },
+   "as104": {
+    "title": "AS104 keeps the group heads of UR234, including one lost to a broken cord",
+    "summary": "UR234 (Berlin VA 66837, find-place not recorded; 98 pendants) has ten groups of eight, each headed by a larger cord (2007, 2080, 3012, 2247, 2578, —, 3419, 3159, 1407, —), and two short groups that repeat a list rounded (2500, 2010, 3000, 3159, 1407; 2000, 2086, 2300, 1385, 0). AS104 (Berlin VA 42527, Gretzer, labelled Pachacamac; 21 pendants) holds the same list in full: its groups 2 and 3 are the heads of groups 1–9 (3102 for 3012), and its group 4 (2178, 2085, 2329, 1385, 1501) matches the second rounded group. The head of group 6 on UR234 is broken off at 6.5 cm; AS104 has 2016 in that place, and the rounded list 2010. The pair came out of the scan of all pairs of khipus for shared rare values.",
+    "evidence": [
+     "7 shared rare values (≥ 100, not multiples of 10) against 0.10–0.15 expected from shifted values; the pair passes a Bonferroni threshold over all 286,146 pairs of khipus.",
+     "The seven values stand in the same order on both khipus; on UR234 they are the first cords of groups 1, 4, 5, 7, 8 and 9 and a cord of the second rounded group.",
+     "The head cords of groups 6 and 10 of UR234 are broken (6.5 and 8 cm, no knots)."
+    ],
+    "levels": {
+     "numbers": "Seven rare values in the same order, far above the shifted baseline; near values (3102/3012, 2085/2086, 2329/2300) fill most of the rest.",
+     "structure": "On UR234 the values are the heads of its groups and two short groups after them; on AS104 they make up three of its four groups.",
+     "reading": "AS104 looks like a fair copy of UR234's summary: the heads in full, with the place lost on UR234 still filled. Group 1 of AS104 (18,379–37,076) is not explained by UR234; UR234's find-place is unknown."
     }
    }
   },
@@ -687,6 +701,7 @@
    "9 of 14 cords equal": "9 of 14 cords equal",
    "A 21K · UE 5 (with UR265)": "A 21K · UE 5 (with UR265)",
    "AS003 repeats the summary part of AS215": "AS003 repeats the summary part of AS215",
+   "AS104 (g2–g4)": "AS104 (g2–g4)",
    "AS118 subsidiary": "AS118 subsidiary",
    "AS118's first-cord subsidiaries against the group totals of AS125": "AS118's first-cord subsidiaries against the group totals of AS125",
    "AS125 group total": "AS125 group total",
@@ -709,6 +724,8 @@
    "Deduction": "Deduction",
    "Each fragment pairs the same unit of both khipus": "Each fragment pairs the same unit of both khipus",
    "Fragment": "Fragment",
+   "Group of UR234": "Group of UR234",
+   "Head cord": "Head cord",
    "How the halves of 7 are marked": "How the halves of 7 are marked",
    "KH0049 (Lima) against UR122 (Gothenburg), best-aligned window": "KH0049 (Lima) against UR122 (Gothenburg), best-aligned window",
    "Khipu": "Khipu",
@@ -734,6 +751,7 @@
    "Position": "Position",
    "Product": "Product",
    "Role": "Role",
+   "Rounded list (UR234 g11, g12)": "Rounded list (UR234 g11, g12)",
    "Runs break at the knotless cord UR233 adds to each group and where AS175's totals (part 2) are left out.": "Runs break at the knotless cord UR233 adds to each group and where AS175's totals (part 2) are left out.",
    "Same six values in reverse order; 4 + 14 + 7 + 37 + 10 + 4 = 76 on both.": "Same six values in reverse order; 4 + 14 + 7 + 37 + 10 + 4 = 76 on both.",
    "Sum": "Sum",
@@ -741,11 +759,13 @@
    "The Inkawasi khipus by place": "The Inkawasi khipus by place",
    "The archive on three levels": "The archive on three levels",
    "The knot counts agree as well; five cords are broken on AS118.": "The knot counts agree as well; five cords are broken on AS118.",
+   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4.": "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4.",
    "Top cord": "Top cord",
    "Total": "Total",
    "UR212 unit (counted from its end)": "UR212 unit (counted from its end)",
    "UR212's first group; the Basel copy has one extra cord of 113 at the end.": "UR212's first group; the Basel copy has one extra cord of 113 at the end.",
    "UR218 groups 2–3 against AS118 groups 2–3": "UR218 groups 2–3 against AS118 groups 2–3",
+   "UR234 group heads, its rounded lists, and AS104": "UR234 group heads, its rounded lists, and AS104",
    "UR269: deduction in each place of each block": "UR269: deduction in each place of each block",
    "UR273B group": "UR273B group",
    "UR273B keeps only the totals of UR274B": "UR273B keeps only the totals of UR274B",
@@ -754,6 +774,7 @@
    "a marker, after a two-group preamble (Aschers)": "a marker, after a two-group preamble (Aschers)",
    "a single knotless cord": "a single knotless cord",
    "beans": "beans",
+   "broken": "broken",
    "chili": "chili",
    "copied on UR255": "copied on UR255",
    "copied on UR256": "copied on UR256",

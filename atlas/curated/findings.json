@@ -375,5 +375,31 @@
    "structure": "Three levels — parts, deliveries, totals — on different khipus; copies of the chili ledgers in another sector, the totals-only bundle next to its full one.",
    "reading": "Each delivery made up of nine contributions; separate ledgers for each product and supply stream, each with its own fixed levy; copies kept at a second place, perhaps for checking; summaries kept elsewhere or lost."
   }
+ },
+ {
+  "id": "as104",
+  "status": "new",
+  "title": "AS104 keeps the group heads of UR234, including one lost to a broken cord",
+  "place": [
+   "pachacamac"
+  ],
+  "summary": "UR234 (Berlin VA 66837, find-place not recorded; 98 pendants) has ten groups of eight, each headed by a larger cord (2007, 2080, 3012, 2247, 2578, —, 3419, 3159, 1407, —), and two short groups that repeat a list rounded (2500, 2010, 3000, 3159, 1407; 2000, 2086, 2300, 1385, 0 in the KFG reading). AS104 (Berlin VA 42527, Gretzer, labelled Pachacamac; 21 pendants) holds the same list in full: its groups 2 and 3 are the heads of groups 1–9 (3102 for 3012), and its group 4 (2178, 2085, 2329, 1385, 1501) matches the second rounded group. The head of group 6 on UR234 is broken off at 6.5 cm; AS104 has 2016 in that place, and the rounded list 2010 (as the KFG release of October 2026 reads it; the OKR reads 2100). The pair came out of the scan of all pairs of khipus for shared rare values.",
+  "evidence": [
+   "7 shared rare values (≥ 100, not multiples of 10) against 0.10–0.15 expected from shifted values; the pair passes a Bonferroni threshold over all 286,146 pairs of khipus.",
+   "The seven values stand in the same order on both khipus; on UR234 they are the first cords of groups 1, 4, 5, 7, 8 and 9 and a cord of the second rounded group.",
+   "The head cords of groups 6 and 10 of UR234 are broken (6.5 and 8 cm, no knots)."
+  ],
+  "khipus": [
+   "UR1104",
+   "UR234"
+  ],
+  "scripts": [
+   "globalweb.py"
+  ],
+  "levels": {
+   "numbers": "Seven rare values in the same order, far above the shifted baseline; near values (3102/3012, 2085/2086, 2329/2300) fill most of the rest.",
+   "structure": "On UR234 the values are the heads of its groups and two short groups after them; on AS104 they make up three of its four groups.",
+   "reading": "AS104 looks like a fair copy of UR234's summary: the heads in full, with the place lost on UR234 still filled. Group 1 of AS104 (18,379–37,076) is not explained by UR234; UR234's find-place is unknown."
+  }
  }
 ]

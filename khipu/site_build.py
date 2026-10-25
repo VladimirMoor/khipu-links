@@ -175,6 +175,16 @@ def build_compare(pend, kids):
     shared = [1200, 1249, 1332, 1575, 2142, 2300]
     find = lambda k, v: next((g for g in grp[k] if v in g), [])
     C["inkawasi_archive"].append(inkawasi_diagram())
+    if "UR234" in val and "UR1104" in val:
+        U, A = val["UR234"], val["UR1104"]
+        heads = [U[i] for i in range(0, 80, 8)]                     # first cord of each group of eight
+        r11, r12 = U[80:85], U[85:90]
+        rows = [[n + 1, heads[n] if heads[n] else "broken" , "", A[7 + n]] for n in range(4)]
+        rows += [[n + 1, heads[n] if heads[n] else "broken", r11[n - 4], A[11 + n - 4]] for n in range(4, 9)]
+        rows += [["", "", r12[n], A[16 + n]] for n in range(5)]
+        C["as104"].append({"kind": "table", "title": "UR234 group heads, its rounded lists, and AS104",
+                           "head": ["Group of UR234", "Head cord", "Rounded list (UR234 g11, g12)", "AS104 (g2–g4)"], "rows": rows,
+                           "note": "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions)."})
     roles = list(csv.DictReader(open(ROOT / "atlas/curated/inkawasi_roles.csv")))
     C["inkawasi_archive"].append({"kind": "table", "title": "The Inkawasi khipus by place",
                                   "head": ["Khipu", "Place", "Product", "Role", "Deduction", "Linked to"],

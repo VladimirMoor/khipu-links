@@ -468,6 +468,20 @@
      "structure": "Tres niveles —partes, entregas, totales— en khipus distintos; las copias de los libros de ají en otro sector, el atado de totales junto al completo.",
      "reading": "Cada entrega formada por nueve aportes; libros separados para cada producto y flujo de entregas, cada uno con su propia exacción fija; copias guardadas en un segundo lugar, quizá para control; los resúmenes, en otra parte o perdidos."
     }
+   },
+   "as104": {
+    "title": "AS104 conserva las cabezas de grupo de UR234, incluida una perdida con una cuerda rota",
+    "summary": "UR234 (Berlín VA 66837, lugar de hallazgo no registrado; 98 colgantes) tiene diez grupos de ocho, cada uno encabezado por una cuerda mayor (2007, 2080, 3012, 2247, 2578, —, 3419, 3159, 1407, —), y dos grupos cortos que repiten una lista redondeada (2500, 2010, 3000, 3159, 1407; 2000, 2086, 2300, 1385, 0 en la lectura del KFG). AS104 (Berlín VA 42527, Gretzer, rotulado Pachacamac; 21 colgantes) contiene la misma lista completa: sus grupos 2 y 3 son las cabezas de los grupos 1–9 (3102 por 3012) y su grupo 4 (2178, 2085, 2329, 1385, 1501) corresponde al segundo grupo redondeado. La cabeza del grupo 6 de UR234 está rota a 6,5 cm; AS104 tiene 2016 en ese lugar, y la lista redondeada 2010 (según la edición del KFG de octubre de 2026; el OKR lee 2100). El par salió de la búsqueda de valores raros compartidos en todos los pares de khipus.",
+    "evidence": [
+     "7 valores raros compartidos (≥ 100, no múltiplos de 10) frente a 0,10–0,15 esperados con valores desplazados; el par supera un umbral de Bonferroni sobre los 286 146 pares de khipus.",
+     "Los siete valores están en el mismo orden en ambos khipus; en UR234 son las primeras cuerdas de los grupos 1, 4, 5, 7, 8 y 9 y una cuerda del segundo grupo redondeado.",
+     "Las cuerdas de cabeza de los grupos 6 y 10 de UR234 están rotas (6,5 y 8 cm, sin nudos)."
+    ],
+    "levels": {
+     "numbers": "Siete valores raros en el mismo orden, muy por encima de la línea de base desplazada; valores cercanos (3102/3012, 2085/2086, 2329/2300) llenan casi todo lo demás.",
+     "structure": "En UR234 los valores son las cabezas de sus grupos y dos grupos cortos tras ellos; en AS104 forman tres de sus cuatro grupos.",
+     "reading": "AS104 parece una copia en limpio del resumen de UR234: las cabezas completas, con el lugar perdido en UR234 todavía lleno. El grupo 1 de AS104 (18 379–37 076) no se explica por UR234; el lugar de hallazgo de UR234 es desconocido."
+    }
    }
   },
   "linkTypes": {
@@ -796,7 +810,14 @@
    "nine parts": "nueve partes",
    "place 1": "lugar 1",
    "rounds of five": "rondas de cinco",
-   "totals": "totales"
+   "totals": "totales",
+   "AS104 (g2–g4)": "AS104 (g2–g4)",
+   "Group of UR234": "Grupo de UR234",
+   "Head cord": "Cuerda de cabeza",
+   "Rounded list (UR234 g11, g12)": "Lista redondeada (UR234 g11, g12)",
+   "UR234 group heads, its rounded lists, and AS104": "Cabezas de grupo de UR234, sus listas redondeadas y AS104",
+   "broken": "rota",
+   "The last five rows set the second rounded group of UR234 (g12) against AS104 group 4. Values from the OKR; the KFG release of October 2026 reads 2010 and 2086 for the two cords the OKR reads 2100 and 2806 (the same knots placed in other decimal positions).": "Las cinco últimas filas comparan el segundo grupo redondeado de UR234 (g12) con el grupo 4 de AS104. Valores del OKR; la edición del KFG de octubre de 2026 lee 2010 y 2086 en las dos cuerdas que el OKR lee 2100 y 2806 (los mismos nudos en otras posiciones decimales)."
   }
  }
 }
