@@ -2589,6 +2589,32 @@ def h195():
     print("   empty cords: " + ", ".join(f"{k} {v}" for k, v in zz.items()))
 
 
+def h196():
+    """Copies were made from counts, not re-counted: the 'just above round' habit (8–9 endings rarer than 1–2) is as strong
+    on the copy side as on the original side of copy pairs — compared on matched cords that differ between the two."""
+    P = copy_pairs()
+    sys.path.insert(0, str(hyp.ROOT / "khipu"))
+    import copies_losses
+    K = hyp.okr()
+    D, _, _ = hyp.atlas()
+    diff = []
+    for e in D["edges"]:
+        if e["type"] not in ("copy", "excerpt", "details", "fold"):
+            continue
+        a, b = e["from"], e["to"]
+        if a not in K or b not in K:
+            continue
+        A, B = [r["value"] for r in K[a]], [r["value"] for r in K[b]]
+        for i, j in copies_losses.align(A, B):
+            if A[i] != B[j] and A[i] >= 10 and B[j] >= 10:
+                diff.append((A[i], B[j]))
+    end = lambda x: x % 10
+    print(f"H196: differing matched values {len(diff)}; endings of side A: 8–9 {sum(end(a) in (8, 9) for a, _ in diff)}, 1–2 {sum(end(a) in (1, 2) for a, _ in diff)}, 0 {sum(end(a) == 0 for a, _ in diff)}; "
+          f"side B: 8–9 {sum(end(b) in (8, 9) for _, b in diff)}, 1–2 {sum(end(b) in (1, 2) for _, b in diff)}, 0 {sum(end(b) == 0 for _, b in diff)}")
+    rd = sum(1 for a, b in diff if (a % 10 == 0) != (b % 10 == 0) and abs(a - b) <= 5)
+    print(f"   pairs where one side is the other rounded to a ten (|Δ| ≤ 5): {rd}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
