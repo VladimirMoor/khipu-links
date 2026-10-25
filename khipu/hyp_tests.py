@@ -1820,6 +1820,55 @@ def h118b():
         print(f"   {e[0]} ({site.get(e[0])}) {e[2]} groups of {e[1]}: CV {e[3]} vs {e[4]}; totals {e[5]}")
 
 
+def h120():
+    """Age grades: in tables (≥ 4 groups of the same size ≥ 5), column means fall steadily from the first column to the
+    last (as age grades of a census would); random column order gives a symmetric spread of Spearman around 0."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rs, ex = [], []
+    for k, cs in K.items():
+        by = defaultdict(list)
+        for g in hyp.groups(cs):
+            by[len(g)].append([r["value"] for r in g])
+        for sz, gs in by.items():
+            if sz < 5 or len(gs) < 4:
+                continue
+            means = [statistics.mean(c) for c in zip(*gs)]
+            if len(set(means)) < 3:
+                continue
+            r = spearman(list(range(sz)), means)
+            rs.append(r)
+            if abs(r) >= 0.8:
+                ex.append((k, sz, len(gs), round(r, 2), [round(m) for m in means]))
+    print(f"H120: tables {len(rs)}; mean Spearman (column index, column mean) {statistics.mean(rs):.3f}; ρ ≤ −0.8 in "
+          f"{sum(r <= -0.8 for r in rs)}, ρ ≥ 0.8 in {sum(r >= 0.8 for r in rs)}; negative {sum(r < 0 for r in rs)}, positive {sum(r > 0 for r in rs)}")
+    for e in ex[:25]:
+        print(f"   {e[0]} ({site.get(e[0])}) {e[2]}×{e[1]} ρ {e[3]}: {e[4]}")
+
+
+def h121():
+    """Blank rows: groups of ≥ 4 cords with no knots at all whose colour sequence repeats that of a filled group of the same
+    khipu (a prepared, unfilled row). They stand at the end of the khipu more often than at the start (filled in order)."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    rel, ex = [], []
+    for k, cs in K.items():
+        gs = hyp.groups(cs)
+        if len(gs) < 4:
+            continue
+        pat = lambda g: tuple(r["colour"] for r in g)
+        filled = {pat(g) for g in gs if sum(r["value"] for r in g) > 0}
+        blanks = [i for i, g in enumerate(gs) if len(g) >= 4 and all(not r["clusters"] for r in g) and pat(g) in filled
+                  and len({r["colour"] for r in g}) >= 2]
+        if blanks:
+            ex.append((k, len(gs), [i + 1 for i in blanks]))
+            rel += [i / (len(gs) - 1) for i in blanks]
+    print(f"H121: khipus with blank patterned rows: {len(ex)}; blank rows {len(rel)}; in the last third {sum(x > 2 / 3 for x in rel)}, "
+          f"middle {sum(1 / 3 <= x <= 2 / 3 for x in rel)}, first third {sum(x < 1 / 3 for x in rel)}")
+    for k, n, b in ex:
+        print(f"   {k} ({site.get(k)}) groups {n}: blank rows {b}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
