@@ -1969,6 +1969,30 @@ def h132():
                   f"p {(1 + sum(x >= r for x in sims)) / 101:.3f}")
 
 
+def h134():
+    """Headers: the first group of a khipu (its value sequence, ≥ 2 cords, not all zero) recurs as the first group of another
+    khipu of the same site more often than groups at other positions recur at the same position."""
+    K = hyp.okr()
+    _, site, dup = hyp.atlas()
+    G = {k: [tuple(r["value"] for r in g) for g in hyp.groups(cs)] for k, cs in K.items() if site.get(k)}
+    def cnt(pos):
+        seen = defaultdict(set)
+        for k, gs in G.items():
+            i = pos if pos >= 0 else len(gs) + pos
+            if 0 <= i < len(gs) and len(gs) > 2 and len(gs[i]) >= 2 and sum(gs[i]) > 0:
+                seen[(site[k], gs[i])].add(k)
+        return sum(1 for v in seen.values() if len(v) >= 2 and not all((a, b) in dup for a in v for b in v if a != b))
+    print("H134: shared sequences by group position (same site): " + ", ".join(f"{p_}:{cnt(p_)}" for p_ in (0, 1, 2, 3, -1)))
+
+
+def h137():
+    """Subsidiaries hang on larger numbers: within khipus, pendants with subsidiaries hold larger values than those without."""
+    K = hyp.okr()
+    data = [[("sub" if r["subs"] else "none", r["value"]) for r in cs if r["value"] > 0] for cs in K.values()]
+    n, real, m, p_hi, p_lo = within_compare(data, "sub", "none")
+    print(f"H137: khipus {n}; median with subsidiaries larger in {real}; shuffled {m:.1f}; p(≥) {p_hi:.4f}, p(≤) {p_lo:.4f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
