@@ -1917,6 +1917,31 @@ def h126():
         print("   ", e)
 
 
+def h127():
+    """Miscounted long knots: in groups where one cord equals the sum of the others ± 1 (a near-miss total), the parts carry
+    units digits 7–9 more often than in groups where the total is exact."""
+    K = hyp.okr()
+    st = {"exact": [0, 0, 0], "off1": [0, 0, 0]}
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) < 4:
+                continue
+            S = sum(v)
+            for i, t in enumerate(v):
+                if t < 20:
+                    continue
+                rest = v[:i] + v[i + 1:]
+                d = t - (S - t)
+                kind = "exact" if d == 0 else "off1" if abs(d) == 1 else None
+                if kind:
+                    u = [x % 10 for x in rest if x % 10]
+                    st[kind][0] += 1; st[kind][1] += sum(1 for x in u if x >= 7); st[kind][2] += len(u)
+                    break
+    for k, (n, hi, tot) in st.items():
+        print(f"H127: {k} totals {n}; parts with units 7–9 {hi} of {tot} non-zero units ({hi / max(1, tot):.3f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
