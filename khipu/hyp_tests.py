@@ -2733,6 +2733,33 @@ def h202():
     print("   khipus: " + ", ".join(f"{k} ({site.get(k)}) {v}" for k, v in ks.most_common(12)))
 
 
+def h206():
+    """Separators are totals: a single-cord group standing between two larger groups equals the sum of the group before, the
+    group after, or both — against the same check with the sums shifted by ±1…±3."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    def cnt(d):
+        res = Counter()
+        for cs in K.values():
+            gs = hyp.groups(cs)
+            for i in range(1, len(gs) - 1):
+                if len(gs[i]) != 1 or len(gs[i - 1]) < 3 or len(gs[i + 1]) < 3:
+                    continue
+                x = gs[i][0]["value"]
+                if x < 10:
+                    continue
+                pv, nx = sum(r["value"] for r in gs[i - 1]), sum(r["value"] for r in gs[i + 1])
+                res["n"] += 1
+                res["prev"] += x == pv + d
+                res["next"] += x == nx + d
+                res["both"] += x == pv + nx + d
+        return res
+    real = cnt(0)
+    sims = [cnt(d) for d in (-3, -2, -1, 1, 2, 3)]
+    print(f"H206: separators {real['n']}; = sum of group before {real['prev']} (shifted {statistics.mean(s_['prev'] for s_ in sims):.1f}), "
+          f"after {real['next']} ({statistics.mean(s_['next'] for s_ in sims):.1f}), both {real['both']} ({statistics.mean(s_['both'] for s_ in sims):.1f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
