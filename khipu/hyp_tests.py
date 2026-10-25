@@ -3005,6 +3005,33 @@ def h246():
           f"median sd {statistics.median(rt):.2f} vs {statistics.median(re_):.2f} cm")
 
 
+def h250():
+    """Kinds of khipu: per-khipu traits (share round, heads, subsidiaries, knotless share, mean clusters per cord, group size
+    regularity) are correlated, so khipus fall into kinds rather than varying trait by trait. Spearman matrix over khipus."""
+    K = hyp.okr()
+    rows = []
+    for k, cs in K.items():
+        v = [r["value"] for r in cs if r["value"] >= 10]
+        gs = hyp.groups(cs)
+        hg = [(g[0]["value"] == max(x["value"] for x in g)) for g in gs if len(g) >= 4 and sum(1 for x in g if x["value"]) >= 3
+              and [x["value"] for x in g].count(max(x["value"] for x in g)) == 1]
+        if len(cs) < 20 or len(v) < 10 or len(hg) < 3:
+            continue
+        sz = Counter(len(g) for g in gs)
+        rows.append({
+            "round": sum(1 for x in v if x % 10 == 0) / len(v),
+            "heads": sum(hg) / len(hg),
+            "subs": sum(1 for r in cs if r["subs"]) / len(cs),
+            "blank": sum(1 for r in cs if not r["clusters"]) / len(cs),
+            "places": statistics.mean(len(r["clusters"]) for r in cs),
+            "regular": sz.most_common(1)[0][1] / len(gs),
+        })
+    keys = list(rows[0])
+    print(f"H250: khipus {len(rows)}")
+    for a in keys:
+        print("   " + f"{a:8} " + " ".join(f"{spearman([r[a] for r in rows], [r[b] for r in rows]):+.2f}" for b in keys))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
