@@ -2215,6 +2215,24 @@ def h149():
         print(f"H149: {d}: {d - 2}–{d - 1} {b}, {d}: {V.get(d, 0)}, {d + 1}–{d + 2} {a}")
 
 
+def h150():
+    """H149 by site: values ending in 8–9 against values ending in 1–2 (values 20–999, round tens excluded), per site;
+    the falling distribution alone favours 8–9 of the decade below only slightly at these sizes."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    by = defaultdict(lambda: [0, 0])
+    for k, cs in K.items():
+        for r in cs:
+            v = r["value"]
+            if 20 <= v <= 999:
+                if v % 10 in (8, 9):
+                    by[site.get(k) or "?"][0] += 1; by["ALL"][0] += 1
+                elif v % 10 in (1, 2):
+                    by[site.get(k) or "?"][1] += 1; by["ALL"][1] += 1
+    for s_, (b, a) in sorted(by.items(), key=lambda kv: -(kv[1][0] + kv[1][1]))[:16]:
+        print(f"H150: {s_:12} ending 8–9: {b:5}; ending 1–2: {a:5}; ratio {b / max(1, a):.2f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
