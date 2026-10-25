@@ -2260,6 +2260,42 @@ def h157():
     print("   " + ", ".join(f"{k} sd {sd:.2f} canuto {f:.0%}" for sd, k, f in rows[:14]))
 
 
+def h158():
+    """Canuto bundles are units: cords of one bundle share a turn level (R² of turns on bundle, against bundles shuffled with
+    sizes kept), and bundle sizes are fixed within a khipu."""
+    import sqlite3
+    c = sqlite3.connect(hyp.DB)
+    inv = {k: (n or "").strip() for k, n in c.execute("select KHIPU_ID, INVESTIGATOR_NUM from khipu_main")}
+    bun = {cid: can for cid, can in c.execute("select CORD_ID, CANUTO_ID from cord where CORD_LEVEL = 1") if can not in (None, "", 0, "0")}
+    K = hyp.okr()
+    for k in ("UR039", "UR050", "UR052", "UR054", "UR055", "UR110", "UR112", "UR144"):
+        xs = []
+        for r in K[k]:
+            t = [kk[3] for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "L"]
+            if t and r["id"] in bun:
+                xs.append((bun[r["id"]], statistics.mean(t)))
+        if len(xs) < 20:
+            continue
+        sizes = Counter(Counter(b for b, _ in xs).values())
+        def r2(pairs):
+            ys = [y for _, y in pairs]
+            m = statistics.mean(ys)
+            tot = sum((y - m) ** 2 for y in ys) or 1
+            by = defaultdict(list)
+            for b, y in pairs:
+                by[b].append(y)
+            return sum(len(v) * (statistics.mean(v) - m) ** 2 for v in by.values()) / tot
+        real = r2(xs)
+        labs = [b for b, _ in xs]
+        ys = [y for _, y in xs]
+        sims = []
+        for _ in range(300):
+            R.shuffle(labs)
+            sims.append(r2(list(zip(labs, ys))))
+        print(f"H158: {k}: cords {len(xs)}, bundles {len(set(labs))}, bundle sizes {dict(sorted(sizes.items()))}; R² on bundle {real:.3f} "
+              f"vs {statistics.mean(sims):.3f} (p {(1 + sum(x >= real for x in sims)) / 301:.3f})")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
