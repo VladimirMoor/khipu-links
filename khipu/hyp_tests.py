@@ -866,6 +866,199 @@ def h50c():
           f"p {(1 + sum(x <= real for x in sims)) / 1001:.4f}")
 
 
+def spacing(cs):
+    d = []
+    for r in cs:
+        ps = [c["pos"] for c in r["clusters"] if c["pos"] is not None and c["pos"] >= 0]
+        d += [b - a for a, b in zip(ps, ps[1:]) if b > a]
+    return statistics.median(d) if len(d) >= 10 else None
+
+
+def h53():
+    """Linked khipus (atlas links) share the place spacing more closely than random pairs from the same site."""
+    K = hyp.okr()
+    D, site, _ = hyp.atlas()
+    sp = {k: spacing(cs) for k, cs in K.items()}
+    sp = {k: v for k, v in sp.items() if v is not None}
+    pairs = {tuple(sorted((e["from"], e["to"]))) for e in D["edges"] if e["from"] in sp and e["to"] in sp}
+    real = [abs(sp[a] - sp[b]) for a, b in pairs]
+    by = defaultdict(list)
+    for k in sp:
+        by[site.get(k)].append(k)
+    sims = []
+    for _ in range(2000):
+        x = []
+        for a, b in pairs:
+            pool = by[site.get(a)]
+            o = R.choice(pool) if len(pool) > 1 else None
+            while o == a and len(pool) > 1:
+                o = R.choice(pool)
+            if o:
+                x.append(abs(sp[a] - sp[o]))
+        sims.append(statistics.mean(x))
+    m = statistics.mean(real)
+    print(f"H53: linked pairs with spacing {len(pairs)}; mean |difference| {m:.2f} cm; same-site random {statistics.mean(sims):.2f}; "
+          f"p {(1 + sum(x <= m for x in sims)) / 2001:.4f}; identical spacing in {sum(d == 0 for d in real)} pairs")
+
+
+def h57():
+    """Check digits: in groups with ≥ 4 cords the last cord equals the sum of the others mod 10 (or mod 9), excluding
+    exact sums, more often than with the cords shuffled."""
+    K = hyp.okr()
+    G = [[r["value"] for r in g] for cs in K.values() for g in hyp.groups(cs) if len(g) >= 4]
+    def cnt(gs, m, pos):
+        n = 0
+        for v in gs:
+            i = 0 if pos == "first" else -1
+            t, rest = v[i], (v[1:] if pos == "first" else v[:-1])
+            if t != sum(rest) and t > 0 and t % m == sum(rest) % m:
+                n += 1
+        return n
+    for m in (9, 10):
+        for pos in ("first", "last"):
+            real = cnt(G, m, pos)
+            sims = []
+            for _ in range(200):
+                sims.append(cnt([R.sample(v, len(v)) for v in G], m, pos))
+            print(f"H57: mod {m}, {pos} cord: {real}; shuffled {statistics.mean(sims):.1f}, max {max(sims)} (groups {len(G)})")
+
+
+def h60():
+    """Subsidiaries as adjustments: pendant ± its subsidiaries matches a group total / another cord of the khipu more
+    often than the pendant alone (only pendants that have subsidiaries with values)."""
+    K = hyp.okr()
+    res = Counter()
+    for cs in K.values():
+        tot = {sum(r["value"] for r in g) for g in hyp.groups(cs)} | {r["value"] for r in cs}
+        for r in cs:
+            s = sum(x["value"] for x in r["subs"])
+            if not s or r["value"] < 10:
+                continue
+            others = tot - {r["value"]}
+            res["n"] += 1
+            res["alone"] += r["value"] in others
+            res["plus"] += r["value"] + s in others
+            res["minus"] += r["value"] - s in others
+            res["plus±1"] += (r["value"] + s + 1 in others) + (r["value"] + s - 1 in others)
+    print(f"H60: pendants with valued subsidiaries {res['n']}; value found elsewhere: alone {res['alone']}, plus subs {res['plus']}, "
+          f"minus subs {res['minus']}; plus subs ±1 (baseline, per side) {res['plus±1'] / 2:.1f}")
+
+
+def h61():
+    """Handedness: per-khipu share of S single knots is bimodal with a minority mode near 10% of khipus."""
+    K = hyp.okr()
+    sh = []
+    for cs in K.values():
+        c = Counter(k[1] for r in cs for cl in r["clusters"] for k in cl["knots"] if k[0] == "S" and k[1] in ("S", "Z"))
+        if sum(c.values()) >= 30:
+            sh.append(c["S"] / sum(c.values()))
+    h = Counter(min(9, int(x * 10)) for x in sh)
+    print(f"H61: khipus {len(sh)}; share of S-direction single knots, by tenths: " + " ".join(f"{i / 10:.1f}:{h[i]}" for i in range(10)))
+
+
+def h62():
+    """Colour and magnitude: within khipus, cords of dark colours (KB, MB, DB) hold larger values than white/light (W, AB)."""
+    K = hyp.okr()
+    dark, light = {"KB", "MB", "DB", "B"}, {"W", "AB", "YB"}
+    real, n, sims = 0, 0, [0] * 500
+    for cs in K.values():
+        xs = [(r["colour"][0], r["value"]) for r in cs if r["value"] > 0 and not r["colour"][1]]
+        d = [v for c, v in xs if c in dark]
+        l_ = [v for c, v in xs if c in light]
+        if len(d) < 3 or len(l_) < 3:
+            continue
+        n += 1
+        real += statistics.median(d) > statistics.median(l_)
+        vals = [v for c, v in xs if c in dark | light]
+        for i in range(500):
+            R.shuffle(vals)
+            sims[i] += statistics.median(vals[:len(d)]) > statistics.median(vals[len(d):])
+    print(f"H62: khipus {n}; dark median larger in {real}; shuffled mean {statistics.mean(sims):.1f}, "
+          f"p {(1 + sum(x >= real for x in sims)) / 501:.4f}")
+
+
+def h64():
+    """Inca decimal units with halves: 50, 500, 5000 are over-represented against 40/60, 400/600, 4000/6000."""
+    vals = all_values()
+    for a, b, c in ((40, 50, 60), (400, 500, 600), (4000, 5000, 6000), (90, 100, 110), (900, 1000, 1100), (20, 30, 40), (200, 300, 400)):
+        print(f"H64: {a}:{vals.get(a, 0)}  {b}:{vals.get(b, 0)}  {c}:{vals.get(c, 0)}")
+
+
+def h60b():
+    """H60 with a proper baseline: subsidiary sums shuffled among the pendants of the same khipu that have subsidiaries.
+    Targets: other pendants' values and group totals of other groups."""
+    K = hyp.okr()
+    def run(shuffle):
+        out = Counter()
+        for cs in K.values():
+            rs = [r for r in cs if r["value"] >= 10 and sum(x["value"] for x in r["subs"])]
+            if not rs:
+                continue
+            ss = [sum(x["value"] for x in r["subs"]) for r in rs]
+            if shuffle:
+                R.shuffle(ss)
+            gs = hyp.groups(cs)
+            gid = {id(r): i for i, g in enumerate(gs) for r in g}
+            gt = [sum(r["value"] for r in g) for g in gs]
+            for r, s_ in zip(rs, ss):
+                tgt = {x["value"] for x in cs if x is not r} | {t for i, t in enumerate(gt) if i != gid[id(r)]}
+                out["plus"] += r["value"] + s_ in tgt
+                out["minus"] += r["value"] - s_ in tgt
+        return out
+    real = run(False)
+    sims = [run(True) for _ in range(100)]
+    for k in ("plus", "minus"):
+        v = [x[k] for x in sims]
+        print(f"H60b: pendant {k} its subsidiaries found elsewhere: {real[k]}; shuffled {statistics.mean(v):.1f}, max {max(v)}")
+
+
+def h62b():
+    """H62 reversed: light cords (W, AB, YB) hold larger values than dark (KB, MB, DB, B); also with group totals removed
+    (cords equal to the sum of the rest of their group or of another group)."""
+    K = hyp.okr()
+    dark, light = {"KB", "MB", "DB", "B"}, {"W", "AB", "YB"}
+    for drop in (False, True):
+        real, n, sims = 0, 0, [0] * 500
+        for cs in K.values():
+            tot = set()
+            if drop:
+                for g in hyp.groups(cs):
+                    t = sum(r["value"] for r in g)
+                    for r in g:
+                        if r["value"] and r["value"] * 2 == t:
+                            tot.add(id(r))
+                gts = {sum(r["value"] for r in g) for g in hyp.groups(cs)}
+                tot |= {id(r) for r in cs if r["value"] >= 10 and r["value"] in gts}
+            xs = [(r["colour"][0], r["value"]) for r in cs if r["value"] > 0 and not r["colour"][1] and id(r) not in tot]
+            d = [v for c, v in xs if c in dark]
+            l_ = [v for c, v in xs if c in light]
+            if len(d) < 3 or len(l_) < 3:
+                continue
+            n += 1
+            real += statistics.median(l_) > statistics.median(d)
+            vals = [v for c, v in xs if c in dark | light]
+            for i in range(500):
+                R.shuffle(vals)
+                sims[i] += statistics.median(vals[len(d):]) > statistics.median(vals[:len(d)])
+        print(f"H62b: totals removed {drop}: khipus {n}; light median larger in {real}; shuffled mean {statistics.mean(sims):.1f}, "
+              f"p {(1 + sum(x >= real for x in sims)) / 501:.4f}")
+
+
+def h61b():
+    """H61: is the S-mode a recording artefact? Share of S-mode khipus by recording team (prefix) and by site."""
+    K = hyp.okr()
+    _, site, _ = hyp.atlas()
+    by_t, by_s = defaultdict(Counter), defaultdict(Counter)
+    for k, cs in K.items():
+        c = Counter(kk[1] for r in cs for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "S" and kk[1] in ("S", "Z"))
+        if sum(c.values()) >= 30:
+            m = "S" if c["S"] / sum(c.values()) >= 0.5 else "Z"
+            by_t[k[:2]][m] += 1
+            by_s[site.get(k)][m] += 1
+    print("H61b: by team " + "; ".join(f"{t} S {c['S']} / Z {c['Z']}" for t, c in sorted(by_t.items())))
+    print("   by site " + "; ".join(f"{s_} S {c['S']} / Z {c['Z']}" for s_, c in sorted(by_s.items(), key=lambda kv: -sum(kv[1].values())) if sum(c.values()) >= 4))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
