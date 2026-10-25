@@ -2912,6 +2912,23 @@ def h215():
     print("H215: share longer than the group median — " + ", ".join(f"{k} {st[k + ' longer'] / st[k + ' n']:.3f} ({st[k + ' n']})" for k in ("first", "middle", "last")))
 
 
+def h217():
+    """The head is a share of the group: head × k equals the sum of the rest (k = 2…10, a tithe-like share) more often than
+    head × k = sum ± 1; groups where the head is the largest cord."""
+    K = hyp.okr()
+    ex, near = Counter(), Counter()
+    for cs in K.values():
+        for g in hyp.groups(cs):
+            v = [r["value"] for r in g]
+            if len(v) < 4 or v[0] != max(v) or v[0] < 5:
+                continue
+            rest = sum(v[1:])
+            for k in range(2, 11):
+                ex[k] += v[0] * k == rest
+                near[k] += (v[0] * k == rest + 1) + (v[0] * k == rest - 1)
+    print("H217: k: exact vs (±1)/2 — " + ", ".join(f"{k}: {ex[k]} vs {near[k] / 2:.1f}" for k in range(2, 11)))
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
