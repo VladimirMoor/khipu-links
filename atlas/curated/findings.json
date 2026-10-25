@@ -568,7 +568,8 @@
    "Turn sd per khipu (≥ 40 long knots): main mode 2.0–2.25 (73 khipus) and a separate cluster at 0.75–1.25 (12 khipus) holding 6 of the 8 canuto khipus; long knots make up 82–100% of the clusters on canuto khipus.",
    "Turns on one cord correlate (UR055 0.34; UR052 0.38–0.58); knots per cord against turns per knot: UR144 −0.57, UR050, UR054 and UR055 about −0.3; the lowest knot is shorter on UR144 (38 of 42 cords), UR039 (23 of 26) and UR055 (101 of 147).",
    "Bundle sizes: four cords in 23 of 24 bundles on UR144, 29 of 41 on UR055, 15 of 20 on UR112, 13 of 22 on UR110, 18 of 27 on UR052; six on UR050 (24 of 29); two on UR039 (41 of 45). Cords of one bundle share their number of clusters more often than random cords (UR112 0.75 against 0.45) but are identical in only 17–24%.",
-   "Fibre of pendants: canuto khipus camelid 0.66, human hair 0.24, cotton 0.10 (UR039 only); all other khipus cotton 0.53, unrecorded 0.45, camelid 0.009. Human-hair pendants: UR055 178, UR052 39, UR004 9. Wrapped ends (TT, 359 cords) only on UR055, UR050, UR112, UR052 and UR039."
+   "Fibre of pendants: canuto khipus camelid 0.66, human hair 0.24, cotton 0.10 (UR039 only); all other khipus cotton 0.53, unrecorded 0.45, camelid 0.009. Human-hair pendants: UR055 178, UR052 39, UR004 9. Wrapped ends (TT, 359 cords) only on UR055, UR050, UR112, UR052 and UR039.",
+   "All eight have long knots of one direction (S in the OKR records; decimal khipus 83 S against 100 Z), no subsidiaries and no knotless cords. A value signature from the KFG data finds no further canuto khipu among the 757. More widely, 51 of 611 OKR khipus (8%) show signs of non-decimal recording (long knots, figure-eights or spirals in upper places, or long knots of 10+ turns), twice as often among khipus without provenance (12%) as among those with a known site (6%)."
   ],
   "khipus": [
    "UR039",
@@ -599,7 +600,8 @@
    "Values ≥ 100 with non-zero units, relative to the mean of digits 1–6: 7 0.81, 8 0.87, 9 0.62; by recording team UR 0.63, AS 0.46, HP 0.69; by site Inkawasi 0.73, Pachacamac 0.63, Ica 0.28.",
    "Units digit 9 by number of places: two 0.46, three 0.55, four 0.84, five 1.24 — the shortfall fades in large values, so it is not caused by crowded cords.",
    "Endings 8–9 against 1–2 (values 20–999): 0.54 overall, below 1 at every site with enough data (Ica 0.35 … Inkawasi 0.72). It is not rounding to the nearest ten: digit 1 is not depleted (0.95).",
-   "Replicated on the 172 KFG khipus not in OKR: endings 8–9 against 1–2 are 376 against 569 (0.66). Khipus also differ in how much they round: 41 khipus have 60–100% round values (none expected from the corpus share), 98 have 0–10% (20 expected)."
+   "Replicated on the 172 KFG khipus not in OKR: endings 8–9 against 1–2 are 376 against 569 (0.66). Khipus also differ in how much they round: 41 khipus have 60–100% round values (none expected from the corpus share), 98 have 0–10% (20 expected).",
+   "The surplus over round numbers also appears at thousands, where piece-by-piece counting is unlikely: within 20 of a whole thousand 16 values lie below and 36 above; within 5 of whole hundreds 149 below and 319 above. Part of the effect is therefore 'a target and a little more', not only rounding of small counts."
   ],
   "khipus": [],
   "scripts": [
@@ -674,7 +676,8 @@
    "Colour unique within the group: first cord 0.279 (3821 groups), cords in between 0.171, last cord 0.297.",
    "Single-cord groups between groups of ≥ 3 cords (94): equal to the sum of the following group 9 (shifted sums 1.7), of the preceding one 4 (1.5), of both 1 (0.3).",
    "By site, first cord largest against expected: Inkawasi 141 of 263 groups (3.33), between Ica and Pisco 3.12, Ica 2.09, Nazca 1.83, Pachacamac 1.29, Leymebamba 1.33, Ocucaje 0.32, Paracas 0, Santa 0.",
-   "Heads are a convention of the whole khipu: in 31 of 145 khipus 80–100% of groups have their largest cord first (none expected from group sizes); the heads of one khipu share a colour (0.84 against 0.56 for other cords), mostly white (W 0.56 against 0.30). Where there are no heads the order is reversed: within groups values rise at Leymebamba, Paracas, Santa and Ocucaje (mean ρ +0.11 to +0.15) and fall at Inkawasi, Arica and Ica (−0.15 to −0.18), all recorded by one team. Inkawasi summary khipus (UR278, UR270) lack heads while their detail khipus have them."
+   "Heads are a convention of the whole khipu: in 31 of 145 khipus 80–100% of groups have their largest cord first (none expected from group sizes); the heads of one khipu share a colour (0.84 against 0.56 for other cords), mostly white (W 0.56 against 0.30). Where there are no heads the order is reversed: within groups values rise at Leymebamba, Paracas, Santa and Ocucaje (mean ρ +0.11 to +0.15) and fall at Inkawasi, Arica and Ica (−0.15 to −0.18), all recorded by one team. Inkawasi summary khipus (UR278, UR270) lack heads while their detail khipus have them.",
+   "Leymebamba mirrors the rule: there the largest entry comes last (41 of 172 groups against 21 expected), and the last cords are often white or green (GG 0.16 against 0.05 for other cords)."
   ],
   "khipus": [
    "UR275",
