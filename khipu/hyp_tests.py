@@ -2779,6 +2779,23 @@ def h210():
     print(f"H210: |log ratio| pairs (1,2),(3,4)…: {statistics.mean(a):.3f} (n {len(a)}); (2,3),(4,5)…: {statistics.mean(b):.3f}; random pairs {statistics.mean(c):.3f}")
 
 
+def h212():
+    """H198 replicated on the KFG khipus that are not in OKR: the first cord of a group is its largest more often than 1/n."""
+    G, O = kfg_groups(), hyp.okr()
+    _, _, dup = hyp.atlas()
+    new = [k for k in G if k not in O and not any((k, o) in dup for o in O)]
+    first = last = exp = n = 0
+    for k in new:
+        for v in G[k]:
+            if len(v) < 4 or sum(1 for x in v if x) < 3:
+                continue
+            m = max(v)
+            if v.count(m) > 1:
+                continue
+            n += 1; exp += 1 / len(v); first += v[0] == m; last += v[-1] == m
+    print(f"H212: KFG-only khipus {len(new)}; groups {n}; first largest {first}, last largest {last}, expected {exp:.0f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
