@@ -2428,6 +2428,42 @@ def h178():
           f"({len(within)} groups); between groups of a khipu: median {statistics.median(between):.2f} ({len(between)} khipus)")
 
 
+def h181():
+    """Copies repeat cord lengths: matched equal cords (both intact) of copy pairs have correlated lengths beyond a
+    permutation of lengths among the matched cords; group-level batches are kept by using circular shifts as well."""
+    for a, b, pr in copy_pairs():
+        xs = [(x["length"], y["length"]) for x, y in pr if x["length"] > 0 and y["length"] > 0 and x["term"] != "B" and y["term"] != "B"]
+        if len(xs) < 10:
+            continue
+        A, B = [x for x, _ in xs], [y for _, y in xs]
+        r = spearman(A, B)
+        sims = [spearman(A, B[k:] + B[:k]) for k in range(3, len(B) - 2)]
+        print(f"H181: {a}~{b}: cords {len(xs)}; length Spearman {r:.2f}; circular shifts mean {statistics.mean(sims):.2f}, "
+              f"p {(1 + sum(x >= r for x in sims)) / (1 + len(sims)):.3f}")
+
+
+def prep_len(r):
+    """Cord length with the knot allowance added back (0.54 cm per single or figure-eight knot, 0.64 cm per long-knot turn)."""
+    turns = sum(kk[3] for cl in r["clusters"] for kk in cl["knots"] if kk[0] == "L")
+    single = sum(1 for cl in r["clusters"] for kk in cl["knots"] if kk[0] != "L")
+    return r["length"] + 0.54 * single + 0.64 * turns
+
+
+def h181b():
+    """H181 with knot use removed (prepared length), so equal knots on matched cords cannot make the lengths agree."""
+    tot = []
+    for a, b, pr in copy_pairs():
+        xs = [(prep_len(x), prep_len(y)) for x, y in pr if x["length"] > 0 and y["length"] > 0 and x["term"] != "B" and y["term"] != "B"]
+        if len(xs) < 10:
+            continue
+        A, B = [x for x, _ in xs], [y for _, y in xs]
+        r = spearman(A, B)
+        sims = [spearman(A, B[k:] + B[:k]) for k in range(3, len(B) - 2)]
+        p_ = (1 + sum(x >= r for x in sims)) / (1 + len(sims))
+        tot.append(p_)
+        print(f"H181b: {a}~{b}: cords {len(xs)}; prepared-length Spearman {r:.2f}; circular shifts mean {statistics.mean(sims):.2f}, p {p_:.3f}")
+
+
 # ---- runner (keep last) ----
 if __name__ == "__main__":
     for a in sys.argv[1:]:
