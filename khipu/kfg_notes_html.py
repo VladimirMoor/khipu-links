@@ -162,6 +162,12 @@ SPEC = {
               "either in the 3rd or in the 4th place, the other one being empty); the 6th column gives 413 against 458 with p99 broken, and the "
               "7th 229 against 225. The 4th value of the summary row (601), the row 8–14 and cord 1 (4147) remain unexplained. Automatic searches "
               "for sums missed this because of the floating 3rd/4th column."],
+    "KH0699": ["Three sections of the same plan: two head groups of six cords, then six detail groups. In the third section the head 139–144 "
+               "(204 183 174 173 153 119) holds the sums of the six detail groups 153–206 in order (184 183 174 172 153 119): four exact, one "
+               "off by 1, and the first 20 short with no broken cord in that group. In the first two sections the heads look like round "
+               "set amounts next to the actual sums: groups 77* 86 86 86 73* 70 against heads with 86, 86 and 84 84 84 84; groups 195* 99* 121 "
+               "127 40 71 against 200 128 120 120 100 100 (* = group with broken cords). The second head of section 3 (204 178 160 150 145 134 "
+               "36) is a falling series that we could not explain."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
