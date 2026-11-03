@@ -903,6 +903,10 @@
    "Grand totals, cycles and scales": {
     "title": "Totales generales, ciclos y escalas",
     "text": "Ningún khipu registra el total general de otro khipu de su sitio (45 coincidencias frente a 61 con los totales multiplicados por 0,97–1,03). El libro de maní UR275 tiene una tendencia pero no un ciclo de doce entradas (autocorrelación en el retardo 12: −0,22). Dentro de un khipu los pares a y 10a no son más comunes que los pares a y 10(a ± 1), y 50, 500, 5000 no son más frecuentes que sus vecinos redondos: solo destacan las potencias de diez."
+   },
+   "Cord twist and knot direction": {
+    "title": "Torsión de la cuerda y dirección de los nudos",
+    "text": "La dirección de los nudos no sigue la torsión de la cuerda (colgantes o cuerda principal), y la torsión de los colgantes no es una marca de la manera inca de anudar. El propio campo de torsión no es comparable entre descriptores: en Inkawasi todos los colgantes de los 23 khipus JC están registrados como Z y todos los de los 31 khipus UR255–UR280 como S, de modo que la división sigue la serie de descriptores y no el papel del khipu; probablemente una serie registró la torsión del hilo simple y la otra la del plegado."
    }
   },
   "sources": {

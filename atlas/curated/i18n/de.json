@@ -893,6 +893,10 @@
    "Grand totals, cycles and scales": {
     "title": "Gesamtsummen, Zyklen und Maßstäbe",
     "text": "Kein Khipu verzeichnet die Gesamtsumme eines anderen Khipu seines Fundorts (45 Treffer gegen 61, wenn die Summen mit 0,97–1,03 multipliziert werden). Das Erdnussbuch UR275 hat einen Trend, aber keinen Zyklus von zwölf Einträgen (Autokorrelation bei Verzögerung 12: −0,22). Paare a und 10a sind innerhalb eines Khipu nicht häufiger als Paare a und 10(a ± 1), und 50, 500, 5000 sind nicht häufiger als ihre runden Nachbarn: Nur Zehnerpotenzen fallen auf."
+   },
+   "Cord twist and knot direction": {
+    "title": "Drehung der Schnur und Knotenrichtung",
+    "text": "Die Knotenrichtung folgt nicht der Drehung der Schnur (Anhänger oder Hauptschnur), und die Zwirnung der Anhänger ist kein Merkmal der inkaischen Knüpfweise. Das Feld der Drehung selbst ist zwischen Beschreibern nicht vergleichbar: In Inkawasi sind alle Anhänger der 23 JC-Khipus als Z und alle der 31 Khipus UR255–UR280 als S erfasst; die Trennung folgt also der Beschreiberserie, nicht der Rolle des Khipu. Vermutlich erfasste eine Serie die Drehung des Einzelgarns, die andere die der Zwirnung."
    }
   },
   "sources": {
