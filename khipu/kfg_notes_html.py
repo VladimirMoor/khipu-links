@@ -168,6 +168,11 @@ SPEC = {
                "set amounts next to the actual sums: groups 77* 86 86 86 73* 70 against heads with 86, 86 and 84 84 84 84; groups 195* 99* 121 "
                "127 40 71 against 200 128 120 120 100 100 (* = group with broken cords). The second head of section 3 (204 178 160 150 145 134 "
                "36) is a falling series that we could not explain."],
+    "UR193": ["The earliest date among the Inka-style khipus of Cherkinsky &amp; Urton (2014), VA 42593, 1390–1423 AD (597 ± 18 BP), belongs to this "
+              "khipu, and the paper cites it for decimal khipus by the start of the Late Horizon. Its knotting is not the usual decimal one: 218 of 226 cords "
+              "carry exactly three clusters, long knots of up to 13 turns stand in the top position as well, and there are about 120 spiral knots, the same "
+              "three-slot format as UR050 of the canuto tradition. The date may therefore belong to a local long-knot way of recording (perhaps pre-Inka "
+              "Ychsma, as Frank Salomon has suggested for anomalous Pachacamac khipus) rather than to decimal writing."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
