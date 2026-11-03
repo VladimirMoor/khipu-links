@@ -9,9 +9,13 @@ Output: report/kfg_notes/<KFG code>.html and report/kfg_notes/index.md (list wit
 import csv
 import html
 import json
+import re
 import sqlite3
+import statistics
 from collections import defaultdict
 from pathlib import Path
+
+from xlsx_read import sheets
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "report/kfg_notes"
@@ -178,6 +182,35 @@ SUMS = [
     ("UR268", "p36", 1331, 1335, "KFG: with 1335 the row reads 11,954 = 208 + 1335 + 2620 + 7791."),
 ]
 
+def lower_bounds(code):
+    """Pendants broken above the units zone of their khipu (KFG 2026 file): their units are lost, so the values are lower bounds
+    (hypotheses 493, 507, 642: 92% of such cords end in 0 against 27% of intact ones)."""
+    try:
+        S = sheets(ROOT / "data/kfg_2026/xlsx" / f"{code}.xlsx")
+    except Exception:
+        return None
+    hdr = S["Cords"][0]
+    col = {h: i for i, h in enumerate(hdr)}
+    get = lambda r, h: r[col[h]] if col.get(h) is not None and col[h] < len(r) else ""
+    rows, units = [], []
+    for r in S["Cords"][1:]:
+        if not r or not re.fullmatch(r"p\d+", r[0] or ""):
+            continue
+        try:
+            v, ln = int(float(get(r, "Value") or 0)), float(get(r, "Length") or 0)
+        except ValueError:
+            continue
+        cl = sorted((float(p), int(x)) for p, x in re.findall(r"\d+[A-Z]+\(([\d.]+),[SZU]\),(\d+)", get(r, "Knots") or "") if int(x))
+        if cl and v % 10 and cl[-1][1] == v % 10:
+            units.append(cl[-1][0])
+        rows.append((r[0], v, ln, str(get(r, "Termination")).strip().upper()))
+    if len(units) < 5:
+        return None
+    u = statistics.median(units)
+    cut = [(c, v) for c, v, ln, t in rows if t == "B" and v >= 10 and 0 < ln < u - 1]
+    return (u, cut) if len(cut) >= 2 else None
+
+
 def main():
     c = sqlite3.connect(ROOT / "data/open-khipu-repository/data/khipu.db")
     kfg = {(n or "").strip(): (o or "").strip() for n, o in c.execute("select INVESTIGATOR_NUM, OKR_NUM from khipu_main") if o}
@@ -246,6 +279,15 @@ def main():
                 f"Cord {cord}: Value {v}, Alt_Value {a}. The widest gap between its knot clusters is {gap} times the usual gap "
                 f"between neighbouring places on this khipu, {why}; this supports the Alt_Value {a}.")
     OUT.mkdir(parents=True, exist_ok=True)
+    for k in [k for k in notes if any(notes[k].values())]:
+        lb = lower_bounds(kfg.get(k, "")) if kfg.get(k) else None
+        if lb:
+            u, cut = lb
+            shown = ", ".join(f"{c} ({v})" for c, v in cut[:15]) + (f" and {len(cut) - 15} more" if len(cut) > 15 else "")
+            notes[k]["reading"].append(
+                f"Broken above the units zone: {shown}. These pendants end in a break (B) shorter than the usual height of the units knots "
+                f"on this khipu ({u:g} cm), so their units knots are lost and the values are lower bounds. Over the corpus 92% of such cords "
+                f"end in 0, against 27% of intact ones; the rule holds for subsidiaries too.")
     bycode = defaultdict(list)
     for k in sorted(notes):
         code = kfg.get(k, "")
