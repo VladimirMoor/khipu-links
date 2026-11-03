@@ -156,6 +156,12 @@ SPEC = {
     "AS071": ["A form marked out in colour and filled only here and there: almost all cords are blank, yet each place of a group carries its own "
               "short colour segment at the top (W, BS:DB, W:HB, HB, then W ...; in later groups all BS, DB or W), and the few values (2, 3, 4; "
               "8, 4 ...) fall into a few of these columns. Compare the partly filled blank forms KT004 and UR1121."],
+    "HP039": ["A table with a summary row. After the markers the cords form rows of seven: two head rows (cords 8–14 and 16–22), then five "
+              "white rows (25–63) and five light-brown rows (65–100). The row 16–22 (873 292 353 601 400 458 225) is the column sum of the ten "
+              "rows below it: 873, 292, 353 and 400 exactly, if the 3rd and 4th columns are added together (in the brown rows the value sits "
+              "either in the 3rd or in the 4th place, the other one being empty); the 6th column gives 413 against 458 with p99 broken, and the "
+              "7th 229 against 225. The 4th value of the summary row (601), the row 8–14 and cord 1 (4147) remain unexplained. Automatic searches "
+              "for sums missed this because of the floating 3rd/4th column."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
