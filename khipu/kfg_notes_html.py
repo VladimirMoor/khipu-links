@@ -145,6 +145,13 @@ SPEC = {
     "AS214": ["The five old untied knots noted by Ascher (p5 1S, p9 2L, p13 2L, p14 1E, p15 3L) were, in four cases, the units knot of a "
               "two-cluster cord, so that 12, 12, 11 and 13 became exactly 10; on p5 the tens knot was removed (14 → 4). This looks like a deliberate "
               "change of the record (dropping the units) rather than damage; the group sums before or after the change do not give p1 = 30 or p2 = 13."],
+    "AS170": ["The short colour segments at the top of the cords (above all knots) are labels of columns: in the seven-cord groups the tops G0, MB "
+              "and 0D stand on the 4th, 5th and 6th cords in 11 of 12 groups, whatever the values (67, 33, 133; 150, 50, 50; 0, 0, 0 ...), and "
+              "never on cords 1–3 or 7. Over the corpus such coloured tops are usually not tied to a place in the group (a band of darkening "
+              "along the main cord would look the same); here they are."],
+    "AS071": ["A form marked out in colour and filled only here and there: almost all cords are blank, yet each place of a group carries its own "
+              "short colour segment at the top (W, BS:DB, W:HB, HB, then W ...; in later groups all BS, DB or W), and the few values (2, 3, 4; "
+              "8, 4 ...) fall into a few of these columns. Compare the partly filled blank forms KT004 and UR1121."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
