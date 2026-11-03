@@ -417,7 +417,8 @@
   "summary": "Where one khipu of a linked pair has a broken cord recorded as 0, the other khipu nearly always has a value in that place: 18 of 21 such cords, against 10 of 29 zeros on intact cords. A zero on a broken cord is a lost value, not a zero, and the copy gives it back (for example 142, 223 and 191 on UR255 from UR267A; 1545 and 1442 on UR266 from UR275; 830 and 3818 on UR122 from KH0049). Where copy and original disagree on intact cords, the difference is most often one knot (21 of 70) or one digit in one place (8): copies were made place by place, knot by knot.",
   "evidence": [
    "Zeros inside runs of equal neighbours: broken cords 18 of 21 have a value on the partner, intact cords 10 of 29 (one-sided Fisher p = 0.0003).",
-   "Differing matched values next to equal ones: one knot apart 21 against 1.4 when the differing values are shuffled between places (p < 0.001); one digit changed in one place 8 against 2.4 (p = 0.004); digits swapped 0; shifted by ×10 1."
+   "Differing matched values next to equal ones: one knot apart 21 against 1.4 when the differing values are shuffled between places (p < 0.001); one digit changed in one place 8 against 2.4 (p = 0.004); digits swapped 0; shifted by ×10 1.",
+   "Not only zeros: a cord broken above a place line keeps the places above the break and loses the rest. Pendants broken above the units height of their khipu end in 0 in 92% of cases (27% of intact ones); values of 100 and more broken above the tens height end in 00 in 94% (30% when broken between tens and units, 6% below the units); subsidiaries broken above their units height end in 0 in 96%. Such values are lower bounds, to the place at which the cord broke."
   ],
   "khipus": [
    "UR255",
