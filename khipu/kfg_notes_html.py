@@ -137,6 +137,14 @@ SPEC = {
               "and 20.5 cm), where the top cluster is thousands; with the hundreds left empty the value is 1087, which is what the copy UR1084 "
               "has at this place (its cord 112). Cord p102 reads 78 (knots at 13.5 and 22 cm, no top cluster) where UR1084 has 1078 (cord 100, "
               "a thousands knot at 2 cm): either the knot is lost on HP055 or the copyist added it."],
+    "QU011": ["Two knotters. Cords 1–37 (with their subsidiaries) are tied all in Z, with units at 20–22 cm and few hundreds (values up to 132); "
+              "cords 38–118 are all S (figure-eights stay Z), with hundreds at 1–4 cm and units at 11–14 cm (values up to 2388). The switch falls "
+              "between p37 and p38, one cord before the end of the group 34–38, after the largest gap of the first half (10.5 cm). Such switches "
+              "fall on group boundaries in most khipus where they occur (5 of 8 on the KFG records), and the height of the places changes with "
+              "the hand, as here. No other khipu in the corpus repeats either part."],
+    "AS214": ["The five old untied knots noted by Ascher (p5 1S, p9 2L, p13 2L, p14 1E, p15 3L) were, in four cases, the units knot of a "
+              "two-cluster cord, so that 12, 12, 11 and 13 became exactly 10; on p5 the tens knot was removed (14 → 4). This looks like a deliberate "
+              "change of the record (dropping the units) rather than damage; the group sums before or after the change do not give p1 = 30 or p2 = 13."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
