@@ -118,7 +118,8 @@ SPEC = {
                "It is longer than HP055: cords 1 to about 185 follow the whole of HP055 (189 pendants; HP055's primary cord ends in a knot, so "
                "nothing of it is lost), and cords 181–319 (about 135 pendants, all verso) are not on HP055 but continue with ten or so further "
                "records of the same form (a large number of 950–1600, then 10–14, 100 or 200, and small values 6–45). The knots change "
-               "hand too: simple knots are Z on cords 1–140 (as on HP055) and S from about cord 150 to the end. Reading: the Paris khipu is "
+               "hand too: simple knots are Z on cords 1–140 (as on HP055) and S from about cord 145 to the end, the switch falling on a group "
+               "boundary, and the median gap between places drops there from 8.5 to 6.5 cm. Reading: the Paris khipu is "
                "the Lima storehouse record copied and then continued, by a second knotter, with later entries."],
     "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097).",
               "UR1084 (KH0097) copies all of HP055 and then goes on with about 135 more pendants (ten or so records of the same form) that are "
