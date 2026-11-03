@@ -880,6 +880,14 @@
    "Plans and facts; rounding in copies": {
     "title": "Plan und Ergebnis; Runden in Kopien",
     "text": "Kein gerundetes Khipu wiederholt die Werte eines anderen auf Zehner gerundet (74 Paare über allen Mischungen gegenüber etwa 150 erwarteten); Kopien wurden nicht gerundet, und sie wiederholen die Schnurlängen des Originals nicht, sobald der Längenverbrauch der Knoten herausgerechnet ist."
+   },
+   "Cord thickness and marks of importance": {
+    "title": "Schnurdicke und Zeichen der Wichtigkeit",
+    "text": "Die Dicke (gemessen an 171 KFG-Khipus) markiert keine Wichtigkeit: Sie wächst nicht mit dem Wert (Median-Spearman 0,04 über 72 Khipus), Gruppenköpfe sind nicht dicker als der Rest ihrer Gruppe (dicker in 57 von 162, dünner in 52), und Nebenschnüre sind etwa so dick wie Hängeschnüre. Auch die Summengruppe am Anfang eines Khipu ist nicht durch einen größeren Abstand auf der Hauptschnur abgesetzt (Verhältnis 1,00 zu den übrigen Abständen, wie bei anderen ersten Gruppen)."
+   },
+   "Grand totals, cycles and scales": {
+    "title": "Gesamtsummen, Zyklen und Maßstäbe",
+    "text": "Kein Khipu verzeichnet die Gesamtsumme eines anderen Khipu seines Fundorts (45 Treffer gegen 61, wenn die Summen mit 0,97–1,03 multipliziert werden). Das Erdnussbuch UR275 hat einen Trend, aber keinen Zyklus von zwölf Einträgen (Autokorrelation bei Verzögerung 12: −0,22). Paare a und 10a sind innerhalb eines Khipu nicht häufiger als Paare a und 10(a ± 1), und 50, 500, 5000 sind nicht häufiger als ihre runden Nachbarn: Nur Zehnerpotenzen fallen auf."
    }
   },
   "sources": {

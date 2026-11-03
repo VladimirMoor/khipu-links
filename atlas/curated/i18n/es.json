@@ -890,6 +890,14 @@
    "Plans and facts; rounding in copies": {
     "title": "Plan y hecho; redondeo en las copias",
     "text": "Ningún khipu redondeado repite los valores de otro redondeados a decenas (74 pares por encima de todos los barajados frente a unos 150 esperados); las copias no se redondeaban y no repiten las longitudes de cuerda del original una vez descontada la longitud que consumen los nudos."
+   },
+   "Cord thickness and marks of importance": {
+    "title": "Grosor del cordón y marcas de importancia",
+    "text": "El grosor (medido en 171 khipus del KFG) no marca importancia: no crece con el valor (Spearman mediano 0,04 en 72 khipus), las cabezas de grupo no son más gruesas que el resto del grupo (más gruesas en 57 de 162, más delgadas en 52) y los subsidiarios son casi tan gruesos como los colgantes. Tampoco el grupo resumen al comienzo del khipu está separado por un espacio mayor en el cordón principal (razón 1,00 frente a los demás espacios, como en otros primeros grupos)."
+   },
+   "Grand totals, cycles and scales": {
+    "title": "Totales generales, ciclos y escalas",
+    "text": "Ningún khipu registra el total general de otro khipu de su sitio (45 coincidencias frente a 61 con los totales multiplicados por 0,97–1,03). El libro de maní UR275 tiene una tendencia pero no un ciclo de doce entradas (autocorrelación en el retardo 12: −0,22). Dentro de un khipu los pares a y 10a no son más comunes que los pares a y 10(a ± 1), y 50, 500, 5000 no son más frecuentes que sus vecinos redondos: solo destacan las potencias de diez."
    }
   },
   "sources": {
