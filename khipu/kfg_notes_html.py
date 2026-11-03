@@ -49,7 +49,11 @@ SPEC = {
     "UR269": ["Round totals of its blocks of five records (gross summed over the five places) reappear in the final block of UR268 (KH0505), "
               "4 of 11 rounds within 3–12 (about 1.5 expected) and one more exactly as gross minus 208: round 3 → UR268 group 20 (10,379 / 10,385), "
               "round 1 → group 28 (9335 / 9332), rounds 8–10 → groups 29, 31, 33 in order. Within a round the place-2 gross follows the place-1 "
-              "gross (Spearman 0.68 over 9 rounds); places 2–4 run about 1.4 times place 1, place 5 about 0.4."],
+              "gross (Spearman 0.68 over 9 rounds); places 2–4 run about 1.4 times place 1, place 5 about 0.4.",
+              "Many values of UR269 are lower bounds: 55 of its 75 values ending in 0 sit on cords broken above the units zone (units knots at "
+              "about 22 cm), so their units are lost. This explains two of the small discrepancies above: round 3 includes 2700 and 2810 on cords "
+              "broken at 20 and 15 cm, so its total lies between 10,379 and 10,397 and holds UR268's 10,385; round 8 (2000 and 2100 on broken cords) "
+              "gives 8515–8533 and holds 8527. The cords p154 and p166 are discussed under readings below."],
     "UR274B": ["Candidate link (not proven): its group heads follow those of the chili ledger UR267B (KH0504) at an offset of one row "
                "(Spearman 0.76, p = 0.002 among offsets ±5), 1.5–4.4 times larger; both keep a deduction of 10 in the same slot. It does not follow "
                "UR267A, UR275 or UR268, and the copy UR256 follows it weakly at the same offset. About 1,200 Inkawasi pairs were screened, so this "
