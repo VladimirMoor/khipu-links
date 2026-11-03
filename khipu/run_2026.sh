@@ -9,7 +9,12 @@ import csv
 new = list(csv.DictReader(open("extracted/kfg2026_cords.csv")))
 have = {r["inv_num"] for r in new}
 old = list(csv.DictReader(open("extracted/plus_do_cords.csv")))
-keep = [r for r in old if r["inv_num"] not in have]
+# Old-corpus records of khipus that KFG 2026 holds under another name: KFG 2025 codes (KH0049 = AS038 …), second OKR
+# records merged by KFG (UR043 = AS030, UR083 = AS208 reversed, UR176 = LL01 reversed …) and QU016/QU017/QU019, split into parts.
+SAME = {"AS046", "AS067/MA29", "AS070", "AS086", "BM1", "BM2", "BM3", "HP036", "KH0001", "KH0032", "KH0033", "KH0049", "KH0057",
+        "KH0067", "KH0080", "KH0081", "KH0083", "KH0197", "KH0227", "KH0267", "KH0350", "QU016", "QU017", "QU019", "R4303", "UR043",
+        "UR044", "UR083", "UR126", "UR133", "UR163", "UR176", "UR236", "UR247", "UR281"}
+keep = [r for r in old if r["inv_num"] not in have and r["inv_num"] not in SAME]
 fields = list(old[0].keys())
 with open("extracted/plus2026_cords.csv", "w", newline="") as fh:
     w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
