@@ -134,6 +134,14 @@ for k, t in FIB.items():
     SPEC.setdefault(k, []).extend([CANUTO, t])
 
 
+# group arithmetic as a judge between OKR and KFG 2026 readings (log, hypothesis 506)
+SUMS = [
+    ("UR128", "p2", 15, 105, "OKR: with 15 the group reads 23 = 15 + 8."),
+    ("UR034", "p24", 5, 15, "OKR: with 5 the group reads 20 = 5 + 15."),
+    ("UR269", "p166", 46, 406, "OKR: gross 2362 minus net 2316 is 46, the deduction of this place (KFG also gives 46 as Alt_Value)."),
+    ("UR268", "p36", 1331, 1335, "KFG: with 1335 the row reads 11,954 = 208 + 1335 + 2620 + 7791."),
+]
+
 def main():
     c = sqlite3.connect(ROOT / "data/open-khipu-repository/data/khipu.db")
     kfg = {(n or "").strip(): (o or "").strip() for n, o in c.execute("select INVESTIGATOR_NUM, OKR_NUM from khipu_main") if o}
@@ -186,6 +194,9 @@ def main():
             else:
                 continue
             notes[r["khipu"]]["reading"].append(s)
+    for k, cord, okr_v, kfg_v, rel in SUMS:
+        notes[k]["reading"].append(f"Cord {cord}: the OKR value is {okr_v}, the KFG 2026 value {kfg_v}. Group arithmetic supports the "
+                                   f"{'OKR' if 'OKR' in rel.split(':')[0] else 'KFG'} reading: {rel.split(':', 1)[1].strip()}")
     alt = ROOT / "extracted/alt_supported.txt"
     if alt.exists():
         for line in alt.read_text().splitlines():
