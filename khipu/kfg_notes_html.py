@@ -182,6 +182,18 @@ def main():
             else:
                 continue
             notes[r["khipu"]]["reading"].append(s)
+    alt = ROOT / "extracted/alt_supported.txt"
+    if alt.exists():
+        for line in alt.read_text().splitlines():
+            k, _, cord, v, a, gap, verdict = line.split("\t")
+            long_, short = (a, v) if len(a) > len(v) else (v, a)
+            if verdict != "alt" or long_.rstrip("0") == short.rstrip("0"):
+                continue  # a trailing zero: the gap between clusters cannot decide it
+            why = ("about two place steps, as an empty place in between would give" if float(gap) > 1.6
+                   else "about one place step, so no empty place lies in between")
+            notes[k]["reading"].append(
+                f"Cord {cord}: Value {v}, Alt_Value {a}. The widest gap between its knot clusters is {gap} times the usual gap "
+                f"between neighbouring places on this khipu, {why}; this supports the Alt_Value {a}.")
     OUT.mkdir(parents=True, exist_ok=True)
     bycode = defaultdict(list)
     for k in sorted(notes):
