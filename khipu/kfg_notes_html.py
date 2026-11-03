@@ -125,7 +125,11 @@ SPEC = {
                "records of the same form (a large number of 950–1600, then 10–14, 100 or 200, and small values 6–45). The knots change "
                "hand too: simple knots are Z on cords 1–140 (as on HP055) and S from about cord 145 to the end, the switch falling on a group "
                "boundary, and the median gap between places drops there from 8.5 to 6.5 cm. Reading: the Paris khipu is "
-               "the Lima storehouse record copied and then continued, by a second knotter, with later entries."],
+               "the Lima storehouse record copied and then continued, by a second knotter, with later entries.",
+               "Lost cords can be restored from HP055. The cords Ascher listed as missing (existence implied by colour and spacing) at "
+               "p31, p43, p56, p92, p127 and p138 all fall where every record of HP055 has 222, and broken stubs nearby (e.g. p29, p30, value "
+               "0 on 6–7 cm) where HP055 has 100 and 40. On UR1084 these positions are dark brown (MB, BY), on HP055 white: the copy lost "
+               "them to the dark dye, which is known to weaken the fibre."],
     "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097).",
               "UR1084 (KH0097) copies all of HP055 and then goes on with about 135 more pendants (ten or so records of the same form) that are "
               "not on HP055, tied by another hand (S knots, verso): HP055 looks like the earlier state of a record that was later continued.",
