@@ -99,6 +99,9 @@ SPEC = {
               "part camelid fibre — but its OKR record lists no canutos and the spread of turns is wider (sd 2.06). Worth checking on the object."],
     "AS068": ["Recorded twice, by Ascher (AS068) and by Urton (UR281): colour agrees on only 61 of 181 matched cords, mainly because Ascher's YB "
               "is Urton's AB (56 cases). Colour comparisons between the two sets of records need a translation table."],
+    "CM009": ["Probably the same object as UR068 (KH0305, Puruchuco Museum), recorded by Carol Mackey: aligned with UR068, 47 of 65 values and 57 of 61 colours agree "
+              "(8, 1, 3, 1, 56, 5, 4, 1, 1213, 43, 64, 17 …), and Urton &amp; Brezine's note on UR068 says it 'matches Mackey's #2'. The cord lengths here are all 45.0 "
+              "(not measured). Real copies in the corpus usually change colours, so this is more likely a second recording than the third copy of the UR064 ~ UR068 account."],
     "UR090": ["Place reading: the OKR gives 105, 102, 202, 302, 401 … where the KFG 2026 file gives 15, 12, 22, 32, 41 (51 of 53 such cords). On this khipu the "
               "single knots of two-cluster cords all stand about 8 cm from the main cord and the long knots 16–20 cm, a gap like that between tens and units on other "
               "khipus, so the KFG reading (no empty tens place) is the likely one."],
@@ -132,8 +135,9 @@ def main():
     kfg = {(n or "").strip(): (o or "").strip() for n, o in c.execute("select INVESTIGATOR_NUM, OKR_NUM from khipu_main") if o}
     for r in csv.DictReader(open(ROOT / "atlas/curated/kfg_names.csv")):
         for i in [r["khipu"]] + [a.strip() for a in r["aliases"].split(";") if a.strip()]:
-            if i and r["kfg"].startswith("KH"):
+            if i and r["kfg"]:
                 kfg.setdefault(i, r["kfg"])
+        kfg.setdefault(r["kfg"], r["kfg"])
     kfg.update({"AS068": "KH0081", "UR281": "KH0081", "KH0049": "KH0049", "KH0697": "KH0697"})
     D = json.load(open(ROOT / "site/data.json"))
     card = {}
@@ -182,7 +186,7 @@ def main():
     bycode = defaultdict(list)
     for k in sorted(notes):
         code = kfg.get(k, "")
-        if code.startswith("KH") and any(notes[k].values()):
+        if code and (ROOT / "data/kfg_2026/xlsx" / f"{code}.xlsx").exists() and any(notes[k].values()):
             bycode[code].append(k)
     index = []
     for code, ks in sorted(bycode.items()):

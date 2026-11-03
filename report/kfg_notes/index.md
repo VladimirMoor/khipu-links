@@ -1,5 +1,6 @@
 | KFG | khipu | specific | links | findings | readings | object checks |
 |---|---|---|---|---|---|---|
+| CM009 | CM009 | 1 | 0 | 0 | 0 | 0 |
 | KH0004 | AS003 | 0 | 1 | 1 | 0 | 0 |
 | KH0049 | KH0049 | 0 | 1 | 2 | 0 | 0 |
 | KH0068 | UR1057 | 1 | 0 | 1 | 0 | 0 |
