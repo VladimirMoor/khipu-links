@@ -173,6 +173,12 @@ SPEC = {
               "carry exactly three clusters, long knots of up to 13 turns stand in the top position as well, and there are about 120 spiral knots, the same "
               "three-slot format as UR050 of the canuto tradition. The date may therefore belong to a local long-knot way of recording (perhaps pre-Inka "
               "Ychsma, as Frank Salomon has suggested for anomalous Pachacamac khipus) rather than to decimal writing."],
+    "AS018": ["Provenance suggestion. L. Leland Locke (1923, The Ancient Quipu, Plate XL and p. 29) shows Quipu No. 32 \"from Pachacamac, University of Pennsylvania "
+              "Museum\" and notes that a red thread is wrapped about each strand above the knots. This matches KH0019: all nine pendants are recorded as W with a short RM "
+              "band at 2.5–3.0 cm and each carries 70 (one cluster of seven single knots); no other khipu in the database has this feature on more than two cords. The photograph "
+              "shows about ten strands with a wrapped band at the top and one long run of single knots on each. We suggest Pachacamac as the provenance (probably Uhle's "
+              "excavations, 1896). The museum number may need a check: the Penn Museum lists SA4034 as a ten-cord quipu in two groups from the Nazca district (Farabee 1923), "
+              "which looks like AS020."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
