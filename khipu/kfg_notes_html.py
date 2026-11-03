@@ -114,8 +114,15 @@ SPEC = {
               "whole cord is simply knotted higher, and the KFG reading is supported."],
     "UR085": ["Place readings: OKR and KFG 2026 differ by an empty tens place on 14 cords; by knot spacing the KFG reading is supported on 10 of the judgeable ones.", "A run 1498, 19, 73, 27 on cords 29–32 is repeated on cords 142–145 on cords of other colours, with 101 → 100 on the fifth cord: "
               "an internal copy."],
-    "UR1084": ["It repeats a part of itself (12, 100, 40, 0, 22, 32, 0 at cords 124 and 135), and so does its copy HP055 (KH0586)."],
-    "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097)."],
+    "UR1084": ["It repeats a part of itself (12, 100, 40, 0, 22, 32, 0 at cords 124 and 135), and so does its copy HP055 (KH0586).",
+               "It is longer than HP055: cords 1 to about 185 follow the whole of HP055 (189 pendants; HP055's primary cord ends in a knot, so "
+               "nothing of it is lost), and cords 181–319 (about 135 pendants, all verso) are not on HP055 but continue with ten or so further "
+               "records of the same form (a large number of 950–1600, then 10–14, 100 or 200, and small values 6–45). The knots change "
+               "hand too: simple knots are Z on cords 1–140 (as on HP055) and S from about cord 150 to the end. Reading: the Paris khipu is "
+               "the Lima storehouse record copied and then continued, by a second knotter, with later entries."],
+    "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097).",
+              "UR1084 (KH0097) copies all of HP055 and then goes on with about 135 more pendants (ten or so records of the same form) that are "
+              "not on HP055, tied by another hand (S knots, verso): HP055 looks like the earlier state of a record that was later continued."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
