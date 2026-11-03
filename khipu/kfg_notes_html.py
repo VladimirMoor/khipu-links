@@ -123,7 +123,11 @@ SPEC = {
                "the Lima storehouse record copied and then continued, by a second knotter, with later entries."],
     "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097).",
               "UR1084 (KH0097) copies all of HP055 and then goes on with about 135 more pendants (ten or so records of the same form) that are "
-              "not on HP055, tied by another hand (S knots, verso): HP055 looks like the earlier state of a record that was later continued."],
+              "not on HP055, tied by another hand (S knots, verso): HP055 looks like the earlier state of a record that was later continued.",
+              "Reading to check, cord p114: OKR and KFG read 187, but its knots sit at 3, 12.5 and 21 cm, the heights of cord p126 (1087: 3, 12 "
+              "and 20.5 cm), where the top cluster is thousands; with the hundreds left empty the value is 1087, which is what the copy UR1084 "
+              "has at this place (its cord 112). Cord p102 reads 78 (knots at 13.5 and 22 cm, no top cluster) where UR1084 has 1078 (cord 100, "
+              "a thousands knot at 2 cm): either the knot is lost on HP055 or the copyist added it."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
