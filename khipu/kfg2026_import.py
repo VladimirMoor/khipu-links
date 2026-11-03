@@ -44,6 +44,7 @@ def main():
     norm = lambda x: re.sub(r"[^0-9A-Z]", "", x.upper())
     hn = {norm(h): h for h in have}
     rows, meta, bad = [], {}, []
+    pc = 0
     for f in sorted(SRC.glob("*.xlsx")):
         try:
             S = sheets(f)
@@ -76,6 +77,17 @@ def main():
             if not r or not r[0] or not re.fullmatch(r"p\d+(s\d+)*", r[0]):
                 continue
             get = lambda h: r[col[h]] if col.get(h) is not None and col[h] < len(r) else ""
+            note = str(get("Notes")).lower()
+            try:
+                no_len = float(get("Length") or 0) == 0
+            except ValueError:
+                no_len = False
+            if "primary cord" in note and any(w in note for w in ("marker", "knot", "flag")) and "s" not in r[0] and no_len:
+                # a knot or flag tied on the primary cord itself, entered by the KFG as a cord of length 0
+                # (real pendants that only carry a note about a marker beside them have a length and are kept)
+                pc += 1
+                continue
+                continue
             cname = r[0]
             parts = re.findall(r"[ps](\d+)", cname)
             pn = int(parts[0])
@@ -108,7 +120,8 @@ def main():
     for r in rows:
         if r["parent_id"] == "":
             new[r["inv_num"]].append((r["order"], r["value"]))
-    lines = [f"файлов: {len(list(SRC.glob('*.xlsx')))}; кипу прочитано: {len(meta)}; шнуров: {len(rows)}; ошибок чтения: {len(bad)}"]
+    lines = [f"файлов: {len(list(SRC.glob('*.xlsx')))}; кипу прочитано: {len(meta)}; шнуров: {len(rows)}; ошибок чтения: {len(bad)}; "
+             f"пропущено узлов и меток на основном шнуре (записаны у KFG как шнуры): {pc}"]
     lines += [f"  ошибка: {b}" for b in bad]
     fresh = sorted(k for k in new if k not in old)
     lines.append(f"новые кипу (нет в прежнем корпусе): {len(fresh)}: " + ", ".join(f"{k} ({len(new[k])} подв.)" for k in fresh))
