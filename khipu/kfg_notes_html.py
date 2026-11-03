@@ -114,6 +114,11 @@ SPEC = {
               "whole cord is simply knotted higher, and the KFG reading is supported."],
     "UR085": ["Place readings: OKR and KFG 2026 differ by an empty tens place on 14 cords; by knot spacing the KFG reading is supported on 10 of the judgeable ones.", "A run 1498, 19, 73, 27 on cords 29–32 is repeated on cords 142–145 on cords of other colours, with 101 → 100 on the fifth cord: "
               "an internal copy."],
+    "UR211": ["Its values look like marks rather than numbers: each place holds either one tufted knot (TF) or none (1111, 110, 1001, 1101, "
+              "11 ...). Of its values of 10 and more, 18 of 20 are written with the digits 0 and 1 only (not counting 10, 100, 1000), against a "
+              "median of 3% over the corpus. The Alt_Value reading (the lowest cluster read as tens: 1120, 1010 ...) keeps the same pattern. "
+              "Reading: a table of presence and absence by position, or some count that is not decimal; its values should not be compared "
+              "with numbers on other khipus."],
     "UR1084": ["It repeats a part of itself (12, 100, 40, 0, 22, 32, 0 at cords 124 and 135), and so does its copy HP055 (KH0586).",
                "It is longer than HP055: cords 1 to about 185 follow the whole of HP055 (189 pendants; HP055's primary cord ends in a knot, so "
                "nothing of it is lost), and cords 181–319 (about 135 pendants, all verso) are not on HP055 but continue with ten or so further "
