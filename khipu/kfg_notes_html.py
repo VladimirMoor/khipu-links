@@ -99,7 +99,13 @@ SPEC = {
               "part camelid fibre — but its OKR record lists no canutos and the spread of turns is wider (sd 2.06). Worth checking on the object."],
     "AS068": ["Recorded twice, by Ascher (AS068) and by Urton (UR281): colour agrees on only 61 of 181 matched cords, mainly because Ascher's YB "
               "is Urton's AB (56 cases). Colour comparisons between the two sets of records need a translation table."],
-    "UR085": ["A run 1498, 19, 73, 27 on cords 29–32 is repeated on cords 142–145 on cords of other colours, with 101 → 100 on the fifth cord: "
+    "UR090": ["Place reading: the OKR gives 105, 102, 202, 302, 401 … where the KFG 2026 file gives 15, 12, 22, 32, 41 (51 of 53 such cords). On this khipu the "
+              "single knots of two-cluster cords all stand about 8 cm from the main cord and the long knots 16–20 cm, a gap like that between tens and units on other "
+              "khipus, so the KFG reading (no empty tens place) is the likely one."],
+    "UR235": ["Place reading: the OKR gives 505, 109, 203, 207 … where the KFG 2026 file gives 55, 19, 23, 27 (22 of 22). Cords 1–3 put hundreds, tens and units at "
+              "6.5, 15 and 28 cm; the disputed cords have their upper knots at 7.5 cm and units at 20–22 cm, a gap of about 13.5 cm, the tens-to-units distance: the "
+              "whole cord is simply knotted higher, and the KFG reading is supported."],
+    "UR085": ["Place readings: OKR and KFG 2026 differ by an empty tens place on 14 cords; by knot spacing the KFG reading is supported on 10 of the judgeable ones.", "A run 1498, 19, 73, 27 on cords 29–32 is repeated on cords 142–145 on cords of other colours, with 101 → 100 on the fifth cord: "
               "an internal copy."],
     "UR1084": ["It repeats a part of itself (12, 100, 40, 0, 22, 32, 0 at cords 124 and 135), and so does its copy HP055 (KH0586)."],
     "HP055": ["It repeats a part of itself (12, 0, 100, 40, 222, 22, 32, 76, 0 at cords 115 and 127), and so does its copy UR1084 (KH0097)."],
