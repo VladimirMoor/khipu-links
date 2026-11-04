@@ -619,6 +619,46 @@
   }
  },
  {
+  "id": "limacoast",
+  "status": "new",
+  "title": "Lima coast: non-decimal khipus older than the Inka",
+  "place": [
+   "pachacamac",
+   "cajamarquilla",
+   "chancay",
+   "chuquitanta"
+  ],
+  "summary": "Around Lima — Pachacamac, Cajamarquilla, Ancon, Chancay — a few khipus are not written in the Inka decimal way, and the oldest radiocarbon date among Inka-style khipus belongs to one of them. UR193 (Berlin VA42593, 'Pachacamac'), dated 1390–1423 AD by Cherkinsky & Urton (2014), carries exactly three clusters on 218 of 226 cords, long knots of up to 13 turns in the upper clusters and 120 spiral knots; that paper cites the date as evidence for early decimal khipus. The khipus of Cajamarquilla are a type found nowhere else in the corpus: three to five single knots spaced along each cord, of a form the recorders could not agree on (Locke 1923 called them 'hardly possible to count'; Urton coded them A, B and C). Spiral knots, rare in the corpus, sit almost entirely on Lima-coast khipus. This fits Frank Salomon's suggestion (lecture, 2023) that the pre-Inka Ychsma of this coast made 'anomalous' khipus; it is not yet a proof.",
+  "evidence": [
+   "UR193: 218 of 226 cords with three clusters; long knots or figure-eights above the lowest cluster on 191 cords; 120 spiral knots; 29 long knots of 10–13 turns. Radiocarbon 597 ± 18 BP, 1390–1423 AD (0.91) or 1325–1341 AD (0.09).",
+   "Fixed number of clusters per cord (≥ 3 on ≥ 80% of cords) occurs on 8 of 535 khipus; those with long knots above the units are UR193 (Pachacamac), KH0676 (Ancon), LL01 (Chuquitanta; Locke 1923: 'probably not arranged in decimal orders') and UR050 (canuto tradition).",
+   "Cajamarquilla (Rímac valley): on all four KFG khipus every cluster is one knot, three to five per cord, 4–6 cm apart — a format found on no other khipu among 573 (Locke 1923, Nos. 11–25: 'a decidedly inferior type', knots 'pulled at both ends'); Urton recorded the form of each knot as A, B or C on UR179 and UR180, and C never stands first or last on a cord (7 of 8; p ≈ 0.01).",
+   "Spiral knots: 204 of 218 in the corpus are on UR193 and UR203 (Pachacamac), UR215 (Chancay) and KH0676 (Ancon); of the five khipus with five or more, four are from the Lima coast (p ≈ 0.002).",
+   "Split units (two clusters at the units level), the mark of non-decimal recording, are frequent on UR193, UR203 and HP020 (Pachacamac), UR284 (Armatambo) and UR120 (Huacho), besides the canuto khipus."
+  ],
+  "khipus": [
+   "UR193",
+   "UR203",
+   "UR215",
+   "KH0676",
+   "LL01",
+   "UR178",
+   "UR179",
+   "UR180",
+   "KH0419",
+   "HP020",
+   "UR284"
+  ],
+  "scripts": [
+   "hyp_tests.py"
+  ],
+  "levels": {
+   "numbers": "One fixed-format khipu dated 1390–1423; a format unique to Cajamarquilla on 4 of 573 khipus; spiral knots 204 of 218 on Lima-coast khipus (p ≈ 0.002).",
+   "structure": "Non-decimal records on the Lima coast use a set number of places per cord (three at Pachacamac and Ancon, three to five single knots at Cajamarquilla), long knots or spirals above the units, and knot forms that recorders read differently.",
+   "reading": "A local, probably pre-Inka (Ychsma) way of recording that continued beside the Inka decimal khipu; the radiocarbon date of UR193 dates this manner rather than the start of decimal khipus. Dates for UR203, KH0676 and the Cajamarquilla khipus would test it."
+  }
+ },
+ {
   "id": "counting",
   "status": "new",
   "title": "Almost-round counts were written as round",

@@ -660,6 +660,22 @@
      "structure": "Farbe rahmt eine Gruppe an beiden Enden ein.",
      "reading": "Gruppen wurden vom Haupteintrag abwärts geschrieben – zuerst der wichtigste Posten, die Gemeinschaft oder Kategorie."
     }
+   },
+   "limacoast": {
+    "title": "Küste von Lima: nichtdezimale Khipus, älter als die Inka",
+    "summary": "Rund um Lima — Pachacamac, Cajamarquilla, Ancón, Chancay — sind einige Khipus nicht in der dezimalen Inka-Weise geschrieben, und das älteste Radiokarbondatum unter den Khipus «im Inka-Stil» gehört zu einem von ihnen. UR193 (Berlin VA42593, «Pachacamac»), von Cherkinsky & Urton (2014) auf 1390–1423 n. Chr. datiert, trägt auf 218 von 226 Schnüren genau drei Knotengruppen, lange Knoten bis zu 13 Windungen auch in den oberen Gruppen und 120 Spiralknoten; jener Aufsatz führt das Datum als Beleg für frühe Dezimal-Khipus an. Die Khipus von Cajamarquilla sind ein Typ, den es sonst nirgends im Korpus gibt: drei bis fünf einzelne Knoten in Abständen auf jeder Schnur, deren Form die Bearbeiter unterschiedlich bestimmten (Locke 1923: Windungen «kaum zu zählen»; Urton kodierte sie A, B und C). Spiralknoten, im Korpus selten, sitzen fast alle auf Khipus der Küste von Lima. Das passt zu Frank Salomons Vermutung (Vortrag, 2023), dass die vorinkaischen Ychsma dieser Küste «anomale» Khipus machten; ein Beweis ist es noch nicht.",
+    "evidence": [
+     "UR193: 218 von 226 Schnüren mit drei Gruppen; lange Knoten oder Achterknoten über der untersten Gruppe auf 191 Schnüren; 120 Spiralknoten; 29 lange Knoten mit 10–13 Windungen. Radiokarbon 597 ± 18 BP, 1390–1423 n. Chr. (0,91) oder 1325–1341 n. Chr. (0,09).",
+     "Eine feste Zahl von Gruppen je Schnur (≥ 3 auf ≥ 80 % der Schnüre) kommt auf 8 von 535 Khipus vor; mit langen Knoten über den Einern sind es UR193 (Pachacamac), KH0676 (Ancón), LL01 (Chuquitanta; Locke 1923: «wahrscheinlich nicht in Dezimalstellen angeordnet») und UR050 (Canuto-Tradition).",
+     "Cajamarquilla (Rímac-Tal): Auf allen vier KFG-Khipus ist jede Gruppe ein einzelner Knoten, drei bis fünf je Schnur im Abstand von 4–6 cm — ein Format, das keines der übrigen 573 Khipus hat (Locke 1923, Nr. 11–25: «ein entschieden einfacherer Typ», Knoten «an beiden Enden gezogen»); Urton hielt die Form jedes Knotens auf UR179 und UR180 als A, B oder C fest, und C steht nie als erster oder letzter auf einer Schnur (7 von 8; p ≈ 0,01).",
+     "Spiralknoten: 204 von 218 im Korpus sitzen auf UR193 und UR203 (Pachacamac), UR215 (Chancay) und KH0676 (Ancón); von den fünf Khipus mit fünf oder mehr stammen vier von der Küste von Lima (p ≈ 0,002).",
+     "«Geteilte» Einer (zwei Gruppen auf Einerhöhe), das Zeichen nichtdezimaler Aufzeichnung, sind häufig auf UR193, UR203 und HP020 (Pachacamac), UR284 (Armatambo) und UR120 (Huacho), neben den Canuto-Khipus."
+    ],
+    "levels": {
+     "numbers": "Ein Khipu mit festem Format auf 1390–1423 datiert; ein nur in Cajamarquilla vorkommendes Format auf 4 von 573 Khipus; Spiralknoten 204 von 218 auf Khipus der Küste von Lima (p ≈ 0,002).",
+     "structure": "Nichtdezimale Aufzeichnungen der Küste von Lima nutzen eine feste Zahl von Plätzen je Schnur (drei in Pachacamac und Ancón, drei bis fünf Einzelknoten in Cajamarquilla), lange Knoten oder Spiralen über den Einern und Knotenformen, die die Bearbeiter verschieden lesen.",
+     "reading": "Eine örtliche, wahrscheinlich vorinkaische (Ychsma-)Aufzeichnungsweise, die neben dem dezimalen Inka-Khipu weiterlief; das Radiokarbondatum von UR193 datiert diese Weise, nicht den Beginn der Dezimal-Khipus. Daten für UR203, KH0676 und die Cajamarquilla-Khipus würden das prüfen."
+    }
    }
   },
   "timeline": {

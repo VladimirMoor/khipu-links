@@ -660,6 +660,22 @@
      "structure": "El color enmarca el grupo por ambos extremos.",
      "reading": "Los grupos se escribían desde el asiento principal hacia abajo: primero el elemento, la comunidad o la categoría principal."
     }
+   },
+   "limacoast": {
+    "title": "Costa de Lima: khipus no decimales anteriores a los incas",
+    "summary": "En torno a Lima —Pachacamac, Cajamarquilla, Ancón, Chancay— hay khipus que no están escritos a la manera decimal inca, y la fecha radiocarbónica más antigua entre los khipus de «estilo inca» pertenece a uno de ellos. UR193 (Berlín VA42593, «Pachacamac»), fechado en 1390–1423 d. C. por Cherkinsky y Urton (2014), lleva exactamente tres grupos de nudos en 218 de 226 cuerdas, nudos largos de hasta 13 vueltas también en los grupos superiores y 120 nudos en espiral; ese artículo cita la fecha como prueba de khipus decimales tempranos. Los khipus de Cajamarquilla son un tipo que no aparece en ningún otro lugar del corpus: tres a cinco nudos sueltos espaciados en cada cuerda, de una forma en la que los registradores no coinciden (Locke 1923: «casi imposible contar las vueltas»; Urton los codificó A, B y C). Los nudos en espiral, raros en el corpus, están casi todos en khipus de la costa de Lima. Esto concuerda con la idea de Frank Salomon (conferencia, 2023) de que los ychsma preincaicos de esta costa hicieron khipus «anómalos»; aún no es una prueba.",
+    "evidence": [
+     "UR193: 218 de 226 cuerdas con tres grupos; nudos largos u ochos por encima del grupo inferior en 191 cuerdas; 120 nudos en espiral; 29 nudos largos de 10–13 vueltas. Radiocarbono 597 ± 18 AP, 1390–1423 d. C. (0,91) o 1325–1341 d. C. (0,09).",
+     "Un número fijo de grupos por cuerda (≥ 3 en ≥ 80 % de las cuerdas) aparece en 8 de 535 khipus; los que tienen nudos largos por encima de las unidades son UR193 (Pachacamac), KH0676 (Ancón), LL01 (Chuquitanta; Locke 1923: «probablemente no dispuesto en órdenes decimales») y UR050 (tradición de canutos).",
+     "Cajamarquilla (valle del Rímac): en los cuatro khipus de KFG cada grupo es un solo nudo, de tres a cinco por cuerda, a 4–6 cm: un formato que no tiene ningún otro de 573 khipus (Locke 1923, núms. 11–25: «un tipo decididamente inferior», nudos «tirados por ambos extremos»); Urton registró la forma de cada nudo como A, B o C en UR179 y UR180, y C nunca está primero ni último en la cuerda (7 de 8; p ≈ 0,01).",
+     "Nudos en espiral: 204 de 218 del corpus están en UR193 y UR203 (Pachacamac), UR215 (Chancay) y KH0676 (Ancón); de los cinco khipus con cinco o más, cuatro son de la costa de Lima (p ≈ 0,002).",
+     "Las unidades «partidas» (dos grupos al nivel de las unidades), señal de registro no decimal, son frecuentes en UR193, UR203 y HP020 (Pachacamac), UR284 (Armatambo) y UR120 (Huacho), además de los khipus con canutos."
+    ],
+    "levels": {
+     "numbers": "Un khipu de formato fijo fechado en 1390–1423; un formato propio de Cajamarquilla en 4 de 573 khipus; nudos en espiral 204 de 218 en khipus de la costa de Lima (p ≈ 0,002).",
+     "structure": "Los registros no decimales de la costa de Lima usan un número fijo de lugares por cuerda (tres en Pachacamac y Ancón, tres a cinco nudos sueltos en Cajamarquilla), nudos largos o espirales por encima de las unidades y formas de nudo que los registradores leen de modo distinto.",
+     "reading": "Una manera local, probablemente preincaica (ychsma), de registrar que siguió junto al khipu decimal inca; la fecha radiocarbónica de UR193 data esta manera y no el comienzo de los khipus decimales. Fechas de UR203, KH0676 y los khipus de Cajamarquilla lo pondrían a prueba."
+    }
    }
   },
   "linkTypes": {
