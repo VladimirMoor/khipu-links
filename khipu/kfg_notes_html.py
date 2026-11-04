@@ -179,6 +179,14 @@ SPEC = {
               "shows about ten strands with a wrapped band at the top and one long run of single knots on each. We suggest Pachacamac as the provenance (probably Uhle's "
               "excavations, 1896). The museum number may need a check: the Penn Museum lists SA4034 as a ten-cord quipu in two groups from the Nazca district (Farabee 1923), "
               "which looks like AS020."],
+    "AS207A": ["Census form. Nine of the six-pendant groups (each with its own blank top cord) follow the household form of the Santa census khipu UR087 (Medrano &amp; Urton 2018): "
+               "the first cord holds 1 and the fourth is the largest, here 9 in eleven of sixteen six-cord groups (the Aschers already noted that 9 and 1 dominate this khipu). The group "
+               "p78–p83 sums these nine households column by column, as the Aschers found (Databook II, 1988): 9, 0, 11, 74, 0, 13 against 9, 0, 11, 79, 0, 13, and its subsidiary 9 "
+               "equals the sum of the households' subsidiaries. Read as a census, this is a community of nine tributary households with a fixed quota in the fourth column. "
+               "Among 37 khipus with at least five complete six-cord groups only UR087, UR198, this khipu and Locke's B-8703 (AMNH) have this form."],
+    "UR198": ["Census form. Its six-pendant groups have the household form of the Santa census khipu UR087 (Medrano &amp; Urton 2018): first cord 1 in 0.89 of groups, fourth cord the "
+              "largest in all; its four-pendant groups [1, x, large, small] are a shorter version of the same form, and the 12- and 18-cord groups are two or three such households in a row. "
+              "This khipu is not one of the six Santa khipus (Temple Radicati); it came through Gaffron (VA63039, 'Santa Clara, Nazca'), so the form was used beyond Santa."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
