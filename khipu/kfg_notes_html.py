@@ -187,6 +187,14 @@ SPEC = {
     "UR198": ["Census form. Its six-pendant groups have the household form of the Santa census khipu UR087 (Medrano &amp; Urton 2018): first cord 1 in 0.89 of groups, fourth cord the "
               "largest in all; its four-pendant groups [1, x, large, small] are a shorter version of the same form, and the 12- and 18-cord groups are two or three such households in a row. "
               "This khipu is not one of the six Santa khipus (Temple Radicati); it came through Gaffron (VA63039, 'Santa Clara, Nazca'), so the form was used beyond Santa."],
+    "UR1087": ["Provenance 'Peru' could be narrowed: Berlin VA G3304 sits in the G series next to G3297 (UR1088, 'Huacho u. Pachacamac'), G3299 (UR1095) and G3300 (UR1096, both Pachacamac). "
+               "Like UR1095 it is non-decimal (half of its cords with more than one long-knot cluster or simple knots below a long knot; 15 long knots of 10+ turns), "
+               "the manner of the Lima coast khipus (Pachacamac, Ancon, Chuquitanta). Worth checking in the museum's acquisition records."],
+    "AS090/N2": ["Provenance 'Peru' could be narrowed: Berlin VA G3319 belongs to the same G series as the Pachacamac khipus G3299–G3300 and is non-decimal (0.72 of cords), "
+                 "the manner of the Lima coast khipus; Nordenskiöld's N2, like UR1095 (his N4). Worth checking in the museum's acquisition records."],
+    "UR006": ["Urton's (2001) count is reproduced: 24 large groups of 20–22 pendants, each followed by a marker pendant with 8–9 subsidiaries; pendants plus marker subsidiaries "
+              "give 29–31 per part, 729 in all (730 in Urton 2001). The parts behave as rows of one table (fixed columns, p = 0.001), neighbouring rows are alike, "
+              "row totals fall in the second half, and from row 9 the rows gain a 22nd column; the markers come in a near-regular A A S S cycle, the large ones after fuller rows."],
 }
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
