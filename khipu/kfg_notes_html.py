@@ -201,6 +201,19 @@ TR_SOUTH = ("Probably not from Santa, although the Temple Radicati numbers 1–6
             "(Arica 4 of 4, Nazca 3 of 8, Ica 7 of 29; none at Pachacamac or Inkawasi).")
 for _k in ("UR085", "UR093", "UR094", "UR097", "UR102", "UR104"):
     SPEC.setdefault(_k, []).append(TR_SOUTH)
+SPEC.update({
+    "UR1166": ["Rows alternate strictly: a filled row of 11 pendants (white, later brown) and a blank row of 11 in light blue, later yellow-green, which keeps the two W:BB marker cords "
+               "in places 3–4. The blank rows look like a second column of the account, made from the same template and never filled. The habit appears in Berlin khipus from Ica and Nazca "
+               "(UR231, UR1176, UR1166, AS128, UR1109, UR1032) and hardly elsewhere."],
+    "UR1176": ["Filled DB rows (8–11 pendants, RB at the ends) alternate with white rows of 8; only the first white row is filled (554, 184, 291, 170, 320, 262, 153, 0 = 1934), "
+               "the other eleven are blank, as if a second column was begun and dropped. Same blank-row habit as UR1166 and UR231."],
+    "UR058A": ["Under small pendant values (0–6) hang the same number and one or two round tens (4 → 4, 20, 20; 5 → 5, 70, 30): the parent value recurs among its subsidiaries "
+               "in 23 of 50 parents against 15 with parents shuffled (p = 0.001). Most of the round values of this khipu are these subsidiary tens."],
+    "UR017": ["Of 23 pendants with a single subsidiary, 15 have a subsidiary equal to the pendant (19 → 19, 16 → 16, 11 → 11) against 2.6 expected: a copy or check mark. "
+              "Also seen in UR271, MM019, UR204, UR1130, JC011 and others."],
+    "AS050": ["A strict table: 17 rows of 18–20 pendants; places 2 and 3 are filled in almost every row (100 / 232, 100 / 240, 80 / 231 …) and place 18 often holds a large value "
+              "(1000, 113, 113, 100); fill by place against shuffling within rows p = 0.001."],
+})
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
        "UR052": "Pendants of camelid fibre (59) and human hair (39); 52 wrapped ends; bundles mostly of four (18 of 27); knots about 17 cm apart; "
