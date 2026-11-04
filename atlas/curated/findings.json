@@ -635,7 +635,7 @@
    "Cajamarquilla (Rímac valley): on all four KFG khipus every cluster is one knot, three to five per cord, 4–6 cm apart — a format found on no other khipu among 573 (Locke 1923, Nos. 11–25: 'a decidedly inferior type', knots 'pulled at both ends'); Urton recorded the form of each knot as A, B or C on UR179 and UR180, and C never stands first or last on a cord (7 of 8; p ≈ 0.01).",
    "Spiral knots: 204 of 218 in the corpus are on UR193 and UR203 (Pachacamac), UR215 (Chancay) and KH0676 (Ancon); of the five khipus with five or more, four are from the Lima coast (p ≈ 0.002).",
    "Split units (two clusters at the units level), the mark of non-decimal recording, are frequent on UR193, UR203 and HP020 (Pachacamac), UR284 (Armatambo) and UR120 (Huacho), besides the canuto khipus.",
-   "The densest cluster of non-decimal khipus is north of Lima: all four khipus from Ancon (AS076, AS077, KH0676 and one more; the place of AS076 and AS077 is recorded as 'Nazca Valley; Ancon') have long knots or spirals above the lowest cluster on 80–92% of cords, as do UR177 (0.94) and LL01 (0.75) from Chuquitanta, against about 11% of khipus corpus-wide (p ≈ 0.0002 for Ancon)."
+   "Non-decimal khipus cluster north of Lima: AS076 and KH0676 from Ancon (the place of AS076 is recorded as 'Nazca Valley; Ancon') and UR177 and LL01 from Chuquitanta have long knots of two or more turns, or spirals, above the lowest cluster on 72–92% of cords, as do UR193 (0.86) and UR203 (0.59) at Pachacamac and UR284 (0.87) at Armatambo; a third Ancon khipu, AS077, only pairs figure-eights at the units."
   ],
   "khipus": [
    "UR193",
@@ -650,7 +650,6 @@
    "HP020",
    "UR284",
    "AS076",
-   "AS077",
    "UR177"
   ],
   "scripts": [
