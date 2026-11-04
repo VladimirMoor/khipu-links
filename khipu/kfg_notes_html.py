@@ -196,6 +196,11 @@ SPEC = {
               "give 29–31 per part, 729 in all (730 in Urton 2001). The parts behave as rows of one table (fixed columns, p = 0.001), neighbouring rows are alike, "
               "row totals fall in the second half, and from row 9 the rows gain a 22nd column; the markers come in a near-regular A A S S cycle, the large ones after fuller rows."],
 }
+TR_SOUTH = ("Probably not from Santa, although the Temple Radicati numbers 1–6 are the Santa census khipus: this khipu is knotted in the SSZ manner "
+            "(simple and long knots S, figure-eights Z), while the Santa khipus are ZZZ (5 of 5), and its place spacing is shorter. SSZ is a southern-coast habit in the corpus "
+            "(Arica 4 of 4, Nazca 3 of 8, Ica 7 of 29; none at Pachacamac or Inkawasi).")
+for _k in ("UR085", "UR093", "UR094", "UR097", "UR102", "UR104"):
+    SPEC.setdefault(_k, []).append(TR_SOUTH)
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
        "UR052": "Pendants of camelid fibre (59) and human hair (39); 52 wrapped ends; bundles mostly of four (18 of 27); knots about 17 cm apart; "
