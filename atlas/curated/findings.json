@@ -655,7 +655,8 @@
    "Eight subsidiaries per pendant: UR093 on 90 pendants, HP038 on 24; the pendant equals the sum of its eight subsidiaries 19 times on UR093.",
    "Replicated on KFG-only khipus: empty-slot agreement 3602 against 3491 (max 3513) in 65 sets.",
    "Rows share one profile: within a table the same columns are large in every row (mean row-to-row Spearman 0.51, positive in 85% of 11,916 row pairs); the first column is the largest in 93 of 242 tables (47.5 expected), and zeros fall in the small columns (Spearman −0.27, negative in 145 tables against 55) — an empty slot means 'none'. Tables of one site share their column-size profile weakly (Spearman 0.15 against 0.02 elsewhere, p = 0.003).",
-   "A column also fixes how its entries are written: subsidiaries hang on the same columns from row to row (9100 against 8624 when shuffled within rows) and in the same number (8409 against 8057), and a column is either round or exact or single-digit throughout (12,341 against 11,474). Some columns were prepared and left almost empty in 80% of rows or more — 45 such columns, ten of them in two tables of UR006 (Leymebamba); they are coloured like the filled columns."
+   "A column also fixes how its entries are written: subsidiaries hang on the same columns from row to row (9100 against 8624 when shuffled within rows) and in the same number (8409 against 8057), and a column is either round or exact or single-digit throughout (12,341 against 11,474). Some columns were prepared and left almost empty in 80% of rows or more — 45 such columns, ten of them in two tables of UR006 (Leymebamba); they are coloured like the filled columns.",
+   "The colonial census khipus of Santa (Medrano & Urton 2018) have a recognisable six-cord group: the first cord holds 1 and the fourth is the largest (UR087 0.97 and 0.88 of groups, UR198 0.89 and 1.00). Among the 37 khipus with at least five complete six-cord groups only two others show it: AS207A (Boston Museum of Science, provenance unknown; 0.75 and 0.94) and B-8703 ('Medialima', AMNH, transcribed from Locke 1928, absent from KFG and OKR; 0.79 and 0.93; Locke already called it a census quipu). Elsewhere the first cord is 1 in at most 0.42 of groups."
   ],
   "khipus": [
    "UR1113",
@@ -663,7 +664,10 @@
    "UR1057",
    "AS075",
    "UR093",
-   "HP038"
+   "HP038",
+   "UR087",
+   "UR198",
+   "AS207A"
   ],
   "scripts": [
    "hyp_tests.py"
