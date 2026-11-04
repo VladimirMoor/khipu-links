@@ -694,9 +694,14 @@
    "Median value of pendants with and without subsidiaries, within khipus: larger with subsidiaries in 141 of 251 against 107.6 with labels shuffled (p = 0.002).",
    "Subsidiary sum against pendant (pendants ≥ 10 with subsidiaries): smaller 2582, equal 83, larger 639, empty 542; median ratio 0.27 (deciles 0.02–1.98). Within-khipu Spearman 0.243 against 0.000 shuffled.",
    "Non-round pendants: subsidiary sum exactly 1/2 of the pendant 21 times against 18.5 for 1/2 of the pendant ± 1; 1/3 19 against 17; 1/4 20 against 18; 1/6 27 against 19.",
-   "Replicated on KFG-only khipus: mean Spearman (pendant, subsidiary sum) 0.32, positive in 52 of 64 khipus."
+   "Replicated on KFG-only khipus: mean Spearman (pendant, subsidiary sum) 0.32, positive in 52 of 64 khipus.",
+   "Group totals leave subsidiaries out: where a top cord holds the sum of a group whose pendants carry subsidiaries, it equals the sum of the pendants alone 43 times and the sum with the subsidiaries 3 times (AS006, AS007, AS044, UR118, UR119, QU009, KH0695 and others). On the Chancay khipu B-8715 (Locke 1923, not in the databases) the subsidiaries of a group have a top cord of their own (sums 1, 2, 4). Subsidiaries were kept beside the count, not inside it."
   ],
-  "khipus": [],
+  "khipus": [
+   "UR118",
+   "UR119",
+   "AS044"
+  ],
   "scripts": [
    "hyp_tests.py"
   ],
