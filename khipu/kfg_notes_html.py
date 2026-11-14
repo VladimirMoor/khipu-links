@@ -214,6 +214,14 @@ SPEC.update({
     "AS050": ["A strict table: 17 rows of 18–20 pendants; places 2 and 3 are filled in almost every row (100 / 232, 100 / 240, 80 / 231 …) and place 18 often holds a large value "
               "(1000, 113, 113, 100); fill by place against shuffling within rows p = 0.001."],
 })
+_FORMA = "A nine-cord row form shared by khipus from four places: the first pendant is the largest, the second small (0.05–0.15 of the first), the third and fourth marked by another colour. It occurs on UR1136, UR1140 (Nazca, Berlin VA16635–6), UR223 (Ica), KH0698, HP030 (Pachacamac) and AS038 (Lima), and on only 6 of 280 nine-cord rows elsewhere; the hands differ (Z and S knots)."
+for _k in ("UR1136", "UR1140", "UR223", "KH0698", "HP030", "AS038"):
+    SPEC.setdefault(_k, []).append(_FORMA)
+SPEC.setdefault("UR1140", []).append("Besides form A it carries a second nine-cord form (pendants 6–7 marked, the eighth small, the ninth largest), also found on UR1136 and HP056: the two Berlin khipus, "
+    "with neighbouring museum numbers, are two copies of one two-part document filled with different numbers (no sums link them). The ninth column here is 79–98 in all ten rows, never 100.")
+SPEC.setdefault("UR1136", []).append("Its second part (rows 12–20) is form B: pendants 6–7 marked, the ninth the largest; the same two-part layout as UR1140 (Berlin VA16636).")
+SPEC.setdefault("HP056", []).append("Rows of nine pendants on form B (pendants 6–7 in two colours, the ninth the largest in 9 of 10 rows), the form of the second parts of UR1136 and UR1140 (Nazca); "
+    "the ninth is not a sum of the others. Rows alternate dark and white base colour.")
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
        "UR052": "Pendants of camelid fibre (59) and human hair (39); 52 wrapped ends; bundles mostly of four (18 of 27); knots about 17 cm apart; "
