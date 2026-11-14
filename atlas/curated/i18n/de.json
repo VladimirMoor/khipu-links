@@ -926,6 +926,18 @@
    "Cord twist and knot direction": {
     "title": "Drehung der Schnur und Knotenrichtung",
     "text": "Die Knotenrichtung folgt nicht der Drehung der Schnur (Anhänger oder Hauptschnur), und die Zwirnung der Anhänger ist kein Merkmal der inkaischen Knüpfweise. Das Feld der Drehung selbst ist zwischen Beschreibern nicht vergleichbar: In Inkawasi sind alle Anhänger der 23 JC-Khipus als Z und alle der 31 Khipus UR255–UR280 als S erfasst; die Trennung folgt also der Beschreiberserie, nicht der Rolle des Khipu. Vermutlich erfasste eine Serie die Drehung des Einzelgarns, die andere die der Zwirnung."
+   },
+   "Forms and their totals": {
+    "title": "Formulare und ihre Summen",
+    "text": "Khipus mit dem Neun-Schnur-Formular summieren einander nicht: keine Zeile der großen Khipus aus Pachacamac und Lima (HP030, AS038) gleicht den Spaltensummen irgendeiner Kombination der kleineren aus Nazca und Ica, keine Zeile summiert eine Folge anderer Zeilen ihres Khipus, und die Zeilensummen kommen auf anderen Khipus seltener als Schnüre vor als verschobene Summen (846 gegen 900–1015). Der Kopf ist nicht die Summe der übrigen Spalten, die kleine zweite Spalte kein fester Anteil des Kopfes, die markierte dritte und vierte Spalte weder Anteil noch Summe. Vom anderen Ende her geschriebene Zeilen gibt es nur auf UR1136, UR1140 und HP056."
+   },
+   "Hands within a row": {
+    "title": "Hände innerhalb einer Zeile",
+    "text": "Den Kopf einer Zeile knüpfte dieselbe Hand wie die übrigen Schnüre: in 33 Tabellen mit Kopf unterscheidet sich der Anteil der Z-Knoten an Köpfen und übrigen Schnüren im Mittel um 0,05, nie um 0,5. Die beiden gegeneinander geschriebenen Hälften von UR1136 und UR1140 haben dieselbe Knotenrichtung und dieselben Stellenhöhen."
+   },
+   "Calendar numbers on Nordenskiöld's quipu 9": {
+    "title": "Kalenderzahlen auf Nordenskiölds Quipu 9",
+    "text": "Die Zeilensummen von UR1140, Nordenskiölds Quipu Nr. 9, den er kalendarisch las, sind nicht häufiger als zufällig Vielfache von 7, 12, 30, 360 oder 365 (2, 1, 0, 0, 0 von 20 Zeilen gegen erwartete 2,9, 1,7, 0,7, 0,1, 0,1)."
    }
   },
   "sources": {

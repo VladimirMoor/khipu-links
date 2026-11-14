@@ -936,6 +936,18 @@
    "Cord twist and knot direction": {
     "title": "Torsión de la cuerda y dirección de los nudos",
     "text": "La dirección de los nudos no sigue la torsión de la cuerda (colgantes o cuerda principal), y la torsión de los colgantes no es una marca de la manera inca de anudar. El propio campo de torsión no es comparable entre descriptores: en Inkawasi todos los colgantes de los 23 khipus JC están registrados como Z y todos los de los 31 khipus UR255–UR280 como S, de modo que la división sigue la serie de descriptores y no el papel del khipu; probablemente una serie registró la torsión del hilo simple y la otra la del plegado."
+   },
+   "Forms and their totals": {
+    "title": "Formularios y sus totales",
+    "text": "Los khipus que comparten el formulario de nueve cuerdas no se suman entre sí: ninguna fila de los khipus grandes de Pachacamac y Lima (HP030, AS038) iguala las sumas de columnas de alguna combinación de los menores de Nazca e Ica, ninguna fila suma un tramo de otras filas de su khipu, y los totales de fila aparecen como cuerdas en otros khipus con menos frecuencia que los totales desplazados (846 frente a 900–1015). La cabeza no es el total de las demás columnas, la segunda columna pequeña no es una parte fija de la cabeza y la tercera y cuarta marcadas no son ni parte ni total. Filas escritas desde el otro extremo solo hay en UR1136, UR1140 y HP056."
+   },
+   "Hands within a row": {
+    "title": "Manos dentro de una fila",
+    "text": "La cabeza de una fila la anudó la misma mano que el resto: en 33 tablas con cabeza la proporción de nudos Z en las cabezas y en las demás cuerdas difiere en 0,05 de media y nunca en 0,5. Las dos mitades de UR1136 y UR1140, escritas una hacia la otra, tienen la misma dirección de nudos y las mismas alturas de posición."
+   },
+   "Calendar numbers on Nordenskiöld's quipu 9": {
+    "title": "Números calendáricos en el quipu 9 de Nordenskiöld",
+    "text": "Los totales de fila de UR1140, el quipu n.º 9 de Nordenskiöld, que él leyó como calendario, no son múltiplos de 7, 12, 30, 360 o 365 más de lo que permite el azar (2, 1, 0, 0, 0 de 20 filas frente a 2,9, 1,7, 0,7, 0,1, 0,1 esperados)."
    }
   },
   "sources": {
