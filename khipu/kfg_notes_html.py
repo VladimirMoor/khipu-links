@@ -219,15 +219,15 @@ _FORMA = ("A nine-cord row form shared by khipus from four places: the first pen
           "the same columns are large and small on all of them, though the hands differ (Z and S knots).")
 for _k in ("UR1136", "UR1140", "UR223", "UR194", "UR085", "UR235", "KH0698", "HP030", "AS038"):
     SPEC.setdefault(_k, []).append(_FORMA)
-_BACK = ("Part of the rows carry the same form written from the other end (pendants 6–7 marked, the eighth small, the ninth largest): UR1136 has it after its forward rows, UR1140 before them. "
-         "UR194 (Ica) copies a reversed row of UR1140 (group 5) in forward order, so the form was read from either end. The two Berlin khipus, with neighbouring museum numbers, "
-         "are filled with different numbers and are not linked by sums.")
+_BACK = ("Ascher & Ascher (1978) described UR1136 (AS136) and UR1140 (AS140) as hung over carved bars with ten groups of nine on each side, the first pendant of each group the largest "
+         "and the colours dividing the group 2 + 2 + 5; the records list the far side in reverse. UR194 (Ica) copies rows from both sides; the two Berlin khipus are filled with different "
+         "numbers and are not linked by sums.")
 SPEC.setdefault("UR1136", []).append(_BACK)
-SPEC.setdefault("UR1140", []).append(_BACK + " The ninth column of its reversed rows is 79–98 in all ten rows, never 100.")
-SPEC.setdefault("HP056", []).append("Rows of nine pendants on the nine-cord form of UR1136, UR1140, UR223, HP030 and others, written from the other end: pendants 6–7 in two colours, "
+SPEC.setdefault("UR1140", []).append(_BACK + " The heads of the groups on the far side are 79–98 in all ten groups, never 100.")
+SPEC.setdefault("HP056", []).append("Rows of nine pendants on the nine-cord form of UR1136, UR1140, UR223, HP030 and others, recorded in the reverse order: pendants 6–7 in two colours, "
     "the eighth small, the ninth the largest in 9 of 10 rows (not a sum of the others). Rows alternate dark and white base colour.")
 SPEC.setdefault("UR194", []).append("A copy of rows of the Nazca khipus UR1136 and UR1140: group 1 = UR1136 group 5 (100, 5, 16/14, 19, 19/20, 20, 27, 11), group 2 = UR1140 group 16 "
-    "(53, 8, 11, 19/17, 25, 24, 12, 21/20), group 3 = UR1140 group 6 read backwards (79/80, 9, 23/21, 15/14, 10, 26/25, 26, 36, 32), group 4 = the nine values of UR1140 group 16 "
+    "(53, 8, 11, 19/17, 25, 24, 12, 21/20), group 3 = UR1140 group 6 (far side of its bar, listed in reverse; 79/80, 9, 23/21, 15/14, 10, 26/25, 26, 36, 32), group 4 = the nine values of UR1140 group 16 "
     "in another order, with the marked W:KB cords holding 19 and 11 as the marked cords of UR1140 do. Each match is unique among 1612 rows of 7–11 pendants in the corpus. "
     "Knotted SSZ, the Nazca khipus ZZZ. Urton (1994, p. 298) discussed this khipu in his study of knot direction; we have not seen whether he noted the copy.")
 SPEC.setdefault("KH0698", []).append("Provenance hint: apart from HP030 (Pachacamac), every khipu with a recorded place that uses this nine-cord form comes from the south coast "
