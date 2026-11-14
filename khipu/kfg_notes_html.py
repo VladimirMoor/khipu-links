@@ -229,7 +229,7 @@ SPEC.setdefault("HP056", []).append("Rows of nine pendants on the nine-cord form
 SPEC.setdefault("UR194", []).append("A copy of rows of the Nazca khipus UR1136 and UR1140: group 1 = UR1136 group 5 (100, 5, 16/14, 19, 19/20, 20, 27, 11), group 2 = UR1140 group 16 "
     "(53, 8, 11, 19/17, 25, 24, 12, 21/20), group 3 = UR1140 group 6 read backwards (79/80, 9, 23/21, 15/14, 10, 26/25, 26, 36, 32), group 4 = the nine values of UR1140 group 16 "
     "in another order, with the marked W:KB cords holding 19 and 11 as the marked cords of UR1140 do. Each match is unique among 1612 rows of 7–11 pendants in the corpus. "
-    "Knotted SSZ, the Nazca khipus ZZZ.")
+    "Knotted SSZ, the Nazca khipus ZZZ. Urton (1994, p. 298) discussed this khipu in his study of knot direction; we have not seen whether he noted the copy.")
 FIB = {"UR055": "Its pendants are human hair (178 of 180 recorded); 167 have ends wrapped with coloured thread. Bundles mostly of four cords "
                 "(29 of 41); knots about 13.5 cm apart; turns per long knot sd 1.43.",
        "UR052": "Pendants of camelid fibre (59) and human hair (39); 52 wrapped ends; bundles mostly of four (18 of 27); knots about 17 cm apart; "
