@@ -215,9 +215,9 @@ SPEC.update({
               "(1000, 113, 113, 100); fill by place against shuffling within rows p = 0.001."],
 })
 _FORMA = ("A nine-cord row form shared by khipus from four places: the first pendant is the largest, the second small (0.05–0.15 of the first), the third and fourth marked by another colour. "
-          "It occurs on UR1136, UR1140 (Nazca, Berlin VA16635–6), UR223 and UR194 (Ica), KH0698, HP030 (Pachacamac) and AS038 (Lima), and on only 6 of 280 nine-cord rows elsewhere; "
+          "It occurs on UR1136, UR1140 (Nazca, Berlin VA16635–6), UR223 and UR194 (Ica), UR085 (Museo Temple Radicati), UR235 (Berlin VA66830), KH0698, HP030 (Pachacamac) and AS038 (Lima); "
           "the same columns are large and small on all of them, though the hands differ (Z and S knots).")
-for _k in ("UR1136", "UR1140", "UR223", "UR194", "KH0698", "HP030", "AS038"):
+for _k in ("UR1136", "UR1140", "UR223", "UR194", "UR085", "UR235", "KH0698", "HP030", "AS038"):
     SPEC.setdefault(_k, []).append(_FORMA)
 _BACK = ("Part of the rows carry the same form written from the other end (pendants 6–7 marked, the eighth small, the ninth largest): UR1136 has it after its forward rows, UR1140 before them. "
          "UR194 (Ica) copies a reversed row of UR1140 (group 5) in forward order, so the form was read from either end. The two Berlin khipus, with neighbouring museum numbers, "
